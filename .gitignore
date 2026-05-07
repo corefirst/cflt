@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+node_modules/
+
+# mkdocs build output
+site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

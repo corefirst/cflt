@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{#
+  Translation-fallback warning banner.
+  Triggered when mkdocs-static-i18n falls back to default-language content
+  because the requested locale does not have this page translated yet.
+
+  The plugin sets `page.file.locale` to the source file's language. When it
+  differs from the rendered site language, this page is a fallback.
+#}
+
+{% block content %}
+{% set source_locale = page.file.locale | default(none) if page and page.file else none %}
+{% set site_locale = config.theme.language | default(none) %}
+{% if source_locale and site_locale and source_locale != site_locale %}
+  <div class="admonition warning">
+    <p class="admonition-title">
+      {% if site_locale == 'zh' %}
+        本页面尚未翻译为中文，显示英文原文。
+        <a href="https://github.com/corefirst/cflt/edit/main/docs/{{ site_locale }}/{{ page.file.src_path }}" target="_blank" rel="noopener">协助翻译 →</a>
+      {% else %}
+        This page has not yet been translated; showing default-language content.
+        <a href="https://github.com/corefirst/cflt/edit/main/docs/{{ site_locale }}/{{ page.file.src_path }}" target="_blank" rel="noopener">Help translate →</a>
+      {% endif %}
+    </p>
+  </div>
+{% endif %}
+{{ super() }}
+{% endblock %}
