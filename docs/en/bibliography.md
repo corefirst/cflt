@@ -7,6 +7,20 @@
 
 ---
 
+## Contents
+
+- [Linguistics](#linguistics)
+- [Phonetics](#phonetics)
+- [Sociolinguistics](#sociolinguistics)
+- [Logic and Philosophy of Language](#logic-and-philosophy-of-language)
+- [Mathematics and Information Theory](#mathematics-and-information-theory)
+- [Large Language Models and NLP](#large-language-models-and-nlp)
+- [Pedagogy and Second-Language Acquisition](#pedagogy-and-second-language-acquisition)
+- [Neuroscience](#neuroscience)
+- [Adjacent (cited for distinction in `manifesto.md` §4)](#adjacent-cited-for-distinction-in-manifestomd-4)
+
+---
+
 ## Linguistics
 
 - **Ariel, M.** (1990). *Accessing Noun-Phrase Antecedents.* London: Routledge.

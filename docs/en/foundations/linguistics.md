@@ -20,7 +20,7 @@ CFLT defines a normative sequence — `[Core Action/Result] → [Condition/Reaso
 
 Verb-First is a **syntactic** category that classifies languages by their default constituent order. Core-First is a **cognitive-pragmatic** principle that orders the speaker's commitments. The two operate at different levels and make different predictions.
 
-The "Core" in CFLT is a **salience anchor** — the constituent the speaker is fundamentally committing to. It may be a verb phrase ("I went out"), a copular complement ("That girl is my sister"), a state ("I'm exhausted"), or a speech act ("Could you help me"). See [`core-concept.md`](./core-concept.md) for the precise definition.
+The "Core" in CFLT is a **salience anchor** — the constituent the speaker is fundamentally committing to. It may be a verb phrase ("I went out"), a copular complement ("That girl is my sister"), a state ("I'm exhausted"), or a speech act ("Could you help me"). See [`core-concept.md`](./core-concept.md) §1 for the canonical definition; this section adopts that definition without re-stating it.
 
 ### 1.2 What this means for the typological literature
 
@@ -39,6 +39,8 @@ The linguistic case for CFLT is drawn primarily from **cognitive linguistics, in
 ## 2. Cognitive Linguistics: Figure-Ground and Profile
 
 ### 2.1 Talmy's Figure-Ground in Language
+> **Canonical introduction.** This section is the canonical treatment of the Figure-Ground asymmetry in CFLT. Refracted through other lenses in `neuroscience.md` §2 (neural correlates), `core-concept.md` §1 (generalization to "salience anchor"), and `manifesto.md` §2.2 (top-level framing).
+
 Talmy (2000, *Toward a Cognitive Semantics*) argues that linguistic structure systematically reflects the cognitive distinction between **Figure** (the salient, foregrounded entity or event) and **Ground** (the backgrounded reference frame providing context).
 
 > "The Figure is a moving or conceptually movable entity whose path or location is at issue; the Ground is a reference entity with respect to which the Figure's path or location is characterized." (Talmy 2000:312)
@@ -57,6 +59,8 @@ In Cognitive Grammar (Langacker 1987, 2008), every linguistic expression has a *
 ---
 
 ## 3. Parsing Efficiency: Early Immediate Constituents (EIC)
+
+> **Canonical introduction.** This section is the canonical psycholinguistic statement of EIC in CFLT. Refracted in `mathematics.md` §3 (CRD ratio formalism), `neuroscience.md` §4 (BA 44 / lpSTG dependency-length effects), and `pedagogy.md` §4.1 (the "Modifier Trap" as the pedagogical face of EIC).
 
 Beyond conceptual salience, CFLT is supported by the psycholinguistic requirement for parsing efficiency. John Hawkins (1994, 2004) proposes the **Early Immediate Constituents (EIC)** principle: the human processor prefers word orders that allow it to identify the major building blocks (ICs) of a phrase within the shortest possible window.
 
@@ -186,3 +190,14 @@ A rigorous foundation must list what CFLT does *not* claim and where its linguis
 ## 12. Cited Works
 
 See [`bibliography.md`](../bibliography.md) for full references.
+
+---
+
+## See Also
+
+- [`core-concept.md`](./core-concept.md) — Canonical disambiguation of "Core" as salience anchor; read first if confused about scope.
+- [`phonetics.md`](./phonetics.md) — Phonetic transfer and articulatory bridges, the surface-form complement to syntactic linearization.
+- [`sociolinguistics.md`](./sociolinguistics.md) — How register and politeness wrap around the Core without disturbing its position.
+- [`pedagogy.md`](./pedagogy.md) §7 — Levelt's speech-production model as the pedagogical hinge for §5 here.
+- [`mathematics.md`](./mathematics.md) §3 — EIC re-derived in terms of CRD ratio.
+- [`neuroscience.md`](./neuroscience.md) §4 — EIC's neural correlates (BA 44, lpSTG dependency-length effects).

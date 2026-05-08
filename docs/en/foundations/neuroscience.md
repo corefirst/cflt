@@ -18,6 +18,8 @@ The human brain does not process information as a flat sequence. It uses a speci
 
 ## 2. Figure-Ground and the Attention Network
 
+> See [`linguistics.md`](./linguistics.md) §2.1 for the canonical Figure-Ground introduction; this section gives the neural-correlates refraction.
+
 CFLT’s "Core-First" principle is a linguistic implementation of the **Figure-Ground** distinction (Talmy, 2000). The neural correlates of this distinction are found in the **posterior parietal cortex (PPC)** and the **fronto-parietal attention network**.
 
 - **Windowing of Attention:** The brain uses "windowing" to foreground a specific entity (the Figure) against a reference frame (the Ground).
@@ -41,6 +43,8 @@ By providing a **fixed conceptual scaffold**, CFLT lowers the "Prefrontal Tax," 
 ---
 
 ## 4. Early Immediate Constituents (EIC) and Neural Efficiency
+
+> See [`linguistics.md`](./linguistics.md) §3 for the canonical EIC introduction; this section gives the neural-efficiency refraction.
 
 The **Early Immediate Constituents (EIC)** principle (Hawkins, 1994) suggests that the brain prefers structures that allow it to recognize the phrasal head as early as possible.
 
@@ -78,8 +82,17 @@ Language mastery is the transition from **Declarative Memory** (knowing that —
 
 ## 8. Cited Works
 
-See [`bibliography.md`](../bibliography.md) for full references. Relevant neuroscientific works include:
+See [`bibliography.md`](../bibliography.md) (§ Neuroscience) for full references. Relevant neuroscientific works include:
 - **Yokoyama et al. (2006)** on brain activation in SVO vs. SOV languages. DOI: [10.1016/j.neuroimage.2005.09.064](https://doi.org/10.1016/j.neuroimage.2005.09.064)
 - **Pliatsikas (2020)** on the neurobiology of L2 restructuring. DOI: [10.1017/S1366728919000130](https://doi.org/10.1017/S1366728919000130)
 - **Seeley et al. (2007)** on the Salience Network. DOI: [10.1523/JNEUROSCI.5587-06.2007](https://doi.org/10.1523/JNEUROSCI.5587-06.2007)
 - **Friederici (2011)** on the hierarchy of language in the brain. DOI: [10.1152/physrev.00006.2011](https://doi.org/10.1152/physrev.00006.2011)
+
+---
+
+## See Also
+
+- [`linguistics.md`](./linguistics.md) §2, §3 — The Figure-Ground asymmetry and EIC at the cognitive-linguistic level; this doc gives their neural correlates.
+- [`pedagogy.md`](./pedagogy.md) §4, §5 — Cognitive Load Theory and Skill Acquisition Theory, the educational corollaries of §3 and §6 here.
+- [`llm.md`](./llm.md) §2 — Transformer attention sinks; §5 here draws the brain-vs-Transformer parallel.
+- [`mathematics.md`](./mathematics.md) §6 — Markov / autoregressive view of the same early-token dominance described neurally in §1 here.

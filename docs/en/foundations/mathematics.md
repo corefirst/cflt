@@ -39,6 +39,8 @@ Conditional entropy $H(\text{rest} \mid \text{core})$ is significantly lower tha
 
 ## 3. Parsing Efficiency: Early Immediate Constituents (EIC)
 
+> See [`linguistics.md`](./linguistics.md) §3 for the canonical EIC introduction; this section gives the information-theoretic refraction (CRD ratios, branching direction).
+
 John Hawkins (1994, 2004) proposes the **Early Immediate Constituents (EIC)** principle as a fundamental driver of word-order typology. It posits that the human parser prefers linear orders that allow for the identification of a phrase's **Immediate Constituents (ICs)** within the shortest possible window.
 
 ### 3.1 Constituent Recognition Domain (CRD)
@@ -174,4 +176,13 @@ with the gap maximized when the speaker is novice (high baseline branching facto
 
 ## 13. Cited Works
 
-See [`bibliography.md`](../bibliography.md) for full references.
+See [`bibliography.md`](../bibliography.md) (§ Mathematics and Information Theory; § Large Language Models and NLP for autoregressive references) for full references.
+
+---
+
+## See Also
+
+- [`linguistics.md`](./linguistics.md) §3 — EIC at the linguistic level; §3 here gives its information-theoretic counterpart.
+- [`logic.md`](./logic.md) §3 — Lambda-calculus framing, dual to the autoregressive Markov chain of §6 here.
+- [`llm.md`](./llm.md) §4, §6 — Prompt steering and token economy, the production-engineering corollaries of §7 and §8 here.
+- [`neuroscience.md`](./neuroscience.md) §3 — The "Prefrontal Tax," the neural cost function whose abstract form §10 here models.

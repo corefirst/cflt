@@ -56,7 +56,9 @@ Sweller (1988, 2011) identifies three types of cognitive load on working memory:
 That's at least five concurrent demands on working memory. CFLT collapses (1)+(2)+(3) into a single fixed-order operation: linearize the preverbal message into Core-First, then perform vocabulary substitution.
 
 ### 4.1 Solving the "Modifier Trap" (EIC in Pedagogy)
-A specific source of cognitive load is the **Modifier Trap** (derived from Hawkins' EIC principle, see `linguistics.md` §3). For learners from head-final backgrounds (like Chinese), the L1 habit of placing modifiers before the noun creates a high **look-ahead buffer** demand: the speaker must plan the entire noun phrase before uttering the head. 
+> See [`linguistics.md`](./linguistics.md) §3 for the canonical EIC introduction; this subsection gives the pedagogical refraction (the "Modifier Trap" as the learner-side face of EIC).
+
+A specific source of cognitive load is the **Modifier Trap** (derived from Hawkins' EIC principle). For learners from head-final backgrounds (like Chinese), the L1 habit of placing modifiers before the noun creates a high **look-ahead buffer** demand: the speaker must plan the entire noun phrase before uttering the head. 
 
 CFLT's **head-initial discourse protocol** eliminates this buffer. By asserting the Core first, the learner "unloads" the most important information immediately, freeing up working memory to append modifiers (Reason, Space, Time) incrementally. This is the pedagogical application of incremental processing.
 
@@ -152,4 +154,14 @@ Several reasons CFLT may be especially well-suited to early learners — contrar
 
 ## 12. Cited Works
 
-See [`bibliography.md`](../bibliography.md) for full references.
+See [`bibliography.md`](../bibliography.md) (§ Pedagogy and Second-Language Acquisition) for full references.
+
+---
+
+## See Also
+
+- [`linguistics.md`](./linguistics.md) §5 — Levelt's speech-production model, the cognitive substrate for §7 here.
+- [`neuroscience.md`](./neuroscience.md) §3, §6 — The "Prefrontal Tax" and proceduralization; neural mechanism behind §4 and §5 here.
+- [`mathematics.md`](./mathematics.md) §10 — Decision-theoretic bound on per-token cognitive cost, formalizing the cognitive-load argument of §4 here.
+- [`../methodology/human-learning.md`](../methodology/human-learning.md) — The learner-facing operational guide that this foundations doc grounds theoretically.
+- [`../methodology/curriculum-engineering.md`](../methodology/curriculum-engineering.md) — TBLT scaling via token packs, derived from §6 here.

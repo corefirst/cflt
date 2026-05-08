@@ -149,4 +149,13 @@ This is an **operator-stacking** reading: $C$ is the innermost commitment; reaso
 
 ## 11. Cited Works
 
-See [`bibliography.md`](../bibliography.md) for full references.
+See [`bibliography.md`](../bibliography.md) (§ Logic and Philosophy of Language) for full references.
+
+---
+
+## See Also
+
+- [`core-concept.md`](./core-concept.md) §1 — Why "Core" is salience anchor, *not* predicate; the misreading that §1 here explicitly disclaims.
+- [`mathematics.md`](./mathematics.md) §6, §7 — Markov-chain and KL-divergence views that complement the lambda-application story of §3 here.
+- [`linguistics.md`](./linguistics.md) §4 — Information structure and end-focus, the Gricean-Manner counterweight discussed in §6, §7 here.
+- [`llm.md`](./llm.md) §4 — Autoregressive prediction as the engineering manifestation of "early commitment."

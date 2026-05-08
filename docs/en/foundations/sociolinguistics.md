@@ -71,3 +71,12 @@ CFLT acts as a **Social Buffer**. By providing a standardized "Global Interlingu
 ## 7. Cited Works
 
 See [`bibliography.md`](../bibliography.md) (§ Sociolinguistics) for full references. Key works grounding this document include Brown & Levinson (1987) on politeness universals, Hofstede (2001) on cultural dimensions, and Scollon & Scollon (2001) on intercultural discourse.
+
+---
+
+## See Also
+
+- [`linguistics.md`](./linguistics.md) §7 — Linguistic relativity and "thinking-for-speaking," the linguistic backdrop to §5 here.
+- [`logic.md`](./logic.md) §5 — Speech-act theory; politeness wrappers as illocutionary mitigators.
+- [`core-concept.md`](./core-concept.md) §2 — The Request core type, central to the politeness discussion in §2 here.
+- [`../methodology/curriculum-engineering.md`](../methodology/curriculum-engineering.md) — How register levels (§4 here) plug into industry token packs.

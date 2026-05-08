@@ -55,4 +55,13 @@ Phonetic mastery in CFLT is not taught in isolation; it is tightly coupled with 
 
 ## 6. Cited Works
 
-See [`bibliography.md`](../bibliography.md) for full references.
+See [`bibliography.md`](../bibliography.md) (§ Phonetics) for full references.
+
+---
+
+## See Also
+
+- [`linguistics.md`](./linguistics.md) — Syntactic linearization, the cognitive complement to articulatory transfer.
+- [`pedagogy.md`](./pedagogy.md) §5 — Skill Acquisition Theory, the proceduralization framework that motivates §3 here.
+- [`neuroscience.md`](./neuroscience.md) §6 — Basal-ganglia proceduralization of motor skills.
+- [`../manifesto.md`](../manifesto.md) §9 — The high-level Pinyin-to-IPA bridge framing.
