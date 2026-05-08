@@ -1,6 +1,9 @@
 # CFLT Bibliography
 
-> Unified reference list for all theory documents. Citations follow author-date format; full bibliographic details below.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -17,6 +20,8 @@
 - **Goldberg, A. E.** (2006). *Constructions at Work: The Nature of Generalization in Language.* Oxford: Oxford University Press.
 - **Greenberg, J. H.** (1963). "Some Universals of Grammar with Particular Reference to the Order of Meaningful Elements." In *Universals of Language*, Greenberg (ed). Cambridge, MA: MIT Press.
 - **Gundel, J. K., Hedberg, N. & Zacharski, R.** (1993). "Cognitive Status and the Form of Referring Expressions in Discourse." *Language* 69(2), 274–307.
+- **Hawkins, J. A.** (1994). *A Performance Theory of Order and Constituency.* Cambridge: Cambridge University Press. DOI: [10.1017/CBO9780511554285](https://doi.org/10.1017/CBO9780511554285)
+- **Hawkins, J. A.** (2004). *Efficiency and Complexity in Grammars.* Oxford: Oxford University Press. DOI: [10.1093/acprof:oso/9780199252688.001.0001](https://doi.org/10.1093/acprof:oso/9780199252688.001.0001)
 - **Lambrecht, K.** (1994). *Information Structure and Sentence Form: Topic, Focus, and the Mental Representations of Discourse Referents.* Cambridge: Cambridge University Press.
 - **Langacker, R. W.** (1987). *Foundations of Cognitive Grammar, Vol. 1: Theoretical Prerequisites.* Stanford: Stanford University Press.
 - **Langacker, R. W.** (2008). *Cognitive Grammar: A Basic Introduction.* Oxford: Oxford University Press.
@@ -29,6 +34,18 @@
 - **Talmy, L.** (2000). *Toward a Cognitive Semantics, Vol. 1: Concept Structuring Systems.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/6847.001.0001](https://doi.org/10.7551/mitpress/6847.001.0001)
 - **Wierzbicka, A.** (1996). *Semantics: Primes and Universals.* Oxford: Oxford University Press.
 
+## Phonetics
+
+- **Best, C. T.** (1995). "A Direct Realist View of Cross-Language Speech Perception." In *Speech Perception and Linguistic Experience*, Strange (ed). Baltimore: York Press.
+- **Flege, J. E.** (1995). "Second Language Speech Learning: Theory, Findings, and Problems." In *Speech Perception and Linguistic Experience*, Strange (ed). Baltimore: York Press.
+- **Flege, J. E.** (2007). "Language Contact in Bilingualism: Phonetic System Interactions." In *Laboratory Phonology 9*, Cole & Hualde (eds). Berlin: Mouton de Gruyter.
+
+## Sociolinguistics
+
+- **Brown, P. & Levinson, S. C.** (1987). *Politeness: Some Universals in Language Usage.* Cambridge: Cambridge University Press.
+- **Hofstede, G.** (2001). *Culture's Consequences: Comparing Values, Behaviors, Institutions and Organizations Across Nations.* Thousand Oaks, CA: Sage.
+- **Scollon, R. & Scollon, S. W.** (2001). *Intercultural Communication: A Discourse Approach* (2nd ed). Oxford: Blackwell.
+
 ## Logic and Philosophy of Language
 
 - **Austin, J. L.** (1962). *How to Do Things with Words.* Oxford: Clarendon Press.
@@ -38,6 +55,7 @@
 - **Kamp, H.** (1981). "A Theory of Truth and Semantic Representation." In *Formal Methods in the Study of Language*, Groenendijk et al. (eds). Amsterdam: Mathematical Centre Tracts.
 - **Russell, B.** (1905). "On Denoting." *Mind* 14(56), 479–493.
 - **Searle, J. R.** (1969). *Speech Acts: An Essay in the Philosophy of Language.* Cambridge: Cambridge University Press.
+- **Searle, J. R.** (1975). "A Taxonomy of Illocutionary Acts." In *Language, Mind and Knowledge*, Gunderson (ed). Minneapolis: University of Minnesota Press.
 - **Sperber, D. & Wilson, D.** (1986/1995). *Relevance: Communication and Cognition.* Oxford: Blackwell.
 - **Steedman, M.** (2000). *The Syntactic Process.* Cambridge, MA: MIT Press.
 
@@ -51,11 +69,10 @@
 ## Large Language Models and NLP
 
 - **Habba, E., Arviv, O., Itzhak, I., Perlitz, Y., Bandel, E., Choshen, L., Shmueli-Scheuer, M. & Stanovsky, G.** (2025). "DOVE: A Large-Scale Multi-Dimensional Predictions Dataset Towards Meaningful LLM Evaluation." *Findings of ACL*. DOI: [10.18653/v1/2025.findings-acl.611](https://doi.org/10.18653/v1/2025.findings-acl.611)
-- **Hawkins, J. A.** (1994). *A Performance Theory of Order and Constituency.* Cambridge: Cambridge University Press. DOI: [10.1017/CBO9780511554285](https://doi.org/10.1017/CBO9780511554285)
-- **Hawkins, J. A.** (2004). *Efficiency and Complexity in Grammars.* Oxford: Oxford University Press. DOI: [10.1093/acprof:oso/9780199252688.001.0001](https://doi.org/10.1093/acprof:oso/9780199252688.001.0001)
 - **Hokamp, C. & Liu, Q.** (2017). "Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search." *ACL*. DOI: [10.18653/v1/P17-1141](https://doi.org/10.18653/v1/P17-1141)
 - **Kojima, T., Gu, S. S., Reid, M., Matsuo, Y. & Iwasawa, Y.** (2022). "Large Language Models are Zero-Shot Reasoners." *NeurIPS*. DOI: [10.48550/arXiv.2205.11916](https://doi.org/10.48550/arXiv.2205.11916)
 - **Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F. & Liang, P.** (2023). "Lost in the Middle: How Language Models Use Long Contexts." *Transactions of the Association for Computational Linguistics*. DOI: [10.1162/tacl_a_00638](https://doi.org/10.1162/tacl_a_00638)
+- **LMSYS Org.** (2024). "SGLang: Efficient Execution of Structured Language Model Programs." *LMSYS Blog*. [Link](https://lmsys.org/blog/2024-01-17-sglang/)
 - **Lu, Y., Bartolo, M., Moore, A., Riedel, S. & Stenetorp, P.** (2022). "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity." *ACL*. DOI: [10.18653/v1/2022.acl-long.556](https://doi.org/10.18653/v1/2022.acl-long.556)
 - **Maynez, J., Narayan, S., Bohnet, B. & McDonald, R.** (2020). "On Faithfulness and Factuality in Abstractive Summarization." *ACL*. DOI: [10.18653/v1/2020.acl-main.173](https://doi.org/10.18653/v1/2020.acl-main.173)
 - **Min, S., Lyu, X., Holtzman, A., Artetxe, M., Lewis, M., Hajishirzi, H. & Zettlemoyer, L.** (2022). "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?" *EMNLP*. DOI: [10.18653/v1/2022.emnlp-main.759](https://doi.org/10.18653/v1/2022.emnlp-main.759)
@@ -75,13 +92,10 @@
 
 - **Anderson, J. R.** (1982). "Acquisition of Cognitive Skill." *Psychological Review* 89(4), 369–406.
 - **Anderson, J. R.** (1993). *Rules of the Mind.* Hillsdale, NJ: Erlbaum.
-- **Best, C. T.** (1995). "A Direct Realist View of Cross-Language Speech Perception." In *Speech Perception and Linguistic Experience*, Strange (ed). Baltimore: York Press.
 - **Birdsong, D.** (2006). "Age and Second Language Acquisition and Processing: A Selective Overview." *Language Learning* 56(s1), 9–49.
 - **DeKeyser, R. M.** (2007). *Practice in a Second Language: Perspectives from Applied Linguistics and Cognitive Psychology.* Cambridge: Cambridge University Press.
 - **DeKeyser, R. M.** (2015). "Skill Acquisition Theory." In *Theories in Second Language Acquisition: An Introduction* (2nd ed), VanPatten & Williams (eds). New York: Routledge.
 - **Ellis, R.** (2003). *Task-Based Language Learning and Teaching.* Oxford: Oxford University Press.
-- **Flege, J. E.** (1995). "Second Language Speech Learning: Theory, Findings, and Problems." In *Speech Perception and Linguistic Experience*, Strange (ed). Baltimore: York Press.
-- **Flege, J. E.** (2007). "Language Contact in Bilingualism: Phonetic System Interactions." In *Laboratory Phonology 9*, Cole & Hualde (eds). Berlin: Mouton de Gruyter.
 - **Hartshorne, J. K., Tenenbaum, J. B. & Pinker, S.** (2018). "A Critical Period for Second Language Acquisition: Evidence from 2/3 Million English Speakers." *Cognition* 177, 263–277.
 - **Kormos, J.** (2006). *Speech Production and Second Language Acquisition.* Mahwah, NJ: Erlbaum.
 - **Kormos, J.** (2014). "Speech Production and Second Language Acquisition." In *The Routledge Handbook of Second Language Acquisition*, Gass & Mackey (eds). New York: Routledge.

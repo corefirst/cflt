@@ -1,8 +1,9 @@
 # LLM Foundations of CFLT
 
-> Companion to: [`manifesto.md`](../manifesto.md)
-> Read first: [`core-concept.md`](./core-concept.md) — defines "Core" as the salience anchor (action, state, identity, or request), not as a syntactic verb or predicate.
-> Purpose: Frame Large Language Models (LLMs) as the primary "execution engine" for the **CFLT Protocol**, and explain why the protocol's sequencing aligns with Transformer-based attention mechanisms.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -32,9 +33,13 @@ Recent research into "StreamingLLM" (Xiao et al. 2024) identifies that the first
 
 The **CFLT Protocol** strategically aligns the **Core Action** with these attention sinks. By placing the most discriminating semantic payload in position 0, CFLT ensures that the model's inherent computational bias (the sink effect) reinforces the speaker's primary intent rather than wasting attention on a semantically light temporal or spatial adjunct.
 
-- Distant tokens are attended to less effectively, especially in the middle of long contexts.
+CFLT exploits this: **the Core Action at position 0 is over-attended by construction**, biasing the model's early state toward the asserted event. (For the complementary effect — that *middle-of-sequence* tokens are systematically under-attended — see §3 below on the Lost-in-the-Middle phenomenon.)
 
-CFLT exploits this: **the Core Action at position 0 is over-attended by construction**, biasing the model's early state toward the asserted event.
+### 2.4 Anchoring Non-Action Cores
+The sink effect applies to any high-salience constituent, not just verbs:
+
+- **Identity Cores:** Placing the "Subject-Identity" (e.g., "The solution is...") in position 0 creates a **definitional sink**. Subsequent modifiers (the *how* and *why*) are then interpreted through this fixed predicate, preventing the model from losing the "Identity" of the subject during long descriptions.
+- **Request Cores:** Placing the directive (e.g., "Please summarize...") at the start ensures the **task-operator** is the most stable element in the KV cache. This prevents the "Instruction Drift" commonly seen in middle-heavy prompts where the model starts describing the text instead of performing the requested action.
 
 ---
 
@@ -73,12 +78,14 @@ Because the `[Core] → [Modifiers]` sequence is a subset of the natural-languag
 
 ## 6. Token Economy and Computational Cost
 
-Recent research into structured prompts (TOON, CSV, etc.) shows that flattening information into a linear, non-nested format can reduce token consumption by **30%–50%** compared to verbose natural language or dense JSON (Habba et al. 2025).
+Recent research into structured prompts (TOON, CSV, etc.) reports that flattening information into a linear, non-nested format can reduce token consumption substantially compared to verbose natural language or dense JSON. Reported magnitudes vary by domain — published structured-data benchmarks land in the 30%–50% range for tabular content. **The CFLT-specific magnitude is not yet measured** and should not be assumed to match the structured-data literature directly: CFLT operates over discourse semantics, not tabular fields, and its reductions come from a different source (eliminating syntactic-coordination overhead rather than serializing rows).
 
-CFLT achieves this economy by:
+CFLT plausibly contributes to token economy by:
 1.  **Linearization:** Removing the need for complex syntactic markers (relative pronouns, nested subordinate clauses).
 2.  **Explicit Nulls:** Using a "NULL" token for missing slots prevents the model from generating "filler" text to preserve grammatical flow.
 3.  **Prefix Caching:** High reusability of the `[System Prompt] + [Core]` prefix in inference engines (vLLM, SGLang) reduces compute cost (see `methodology/llm-prompting.md`).
+
+The actual reduction must be quantified by the ablation specified in [`methodology/evaluation-metrics.md`](../methodology/evaluation-metrics.md) §4.1.
 
 ---
 

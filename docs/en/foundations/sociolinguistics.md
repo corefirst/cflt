@@ -1,0 +1,73 @@
+# Sociolinguistic Foundations of CFLT
+
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+> Companion to: [`manifesto.md`](../manifesto.md)
+> Purpose: Address how the **CFLT Protocol** manages social variables including politeness, honorifics, register, and the tension between "Core Salience" and "Social Face."
+
+---
+
+## 1. The Sociolinguistic Challenge: Face vs. Salience
+
+A potential conflict exists between the **CFLT Protocol** (which mandates early commitment to the semantic Core) and many cultural norms of communication. In "high-context" or "collectivist" cultures, asserting a direct request or result at the start of an utterance can be perceived as aggressive, rude, or "face-threatening" (Brown & Levinson, 1987).
+
+CFLT does not ignore these social realities. It treats **Politeness** and **Register** as explicit logical modifiers that wrap the Core, rather than as forces that should obscure it.
+
+## 2. Politeness as a Logical Wrapper
+
+In the CFLT framework, a "polite" request is modeled as a **Request Core** wrapped in an illocutionary mitigator.
+
+| Element | Direct Form | Polite (CFLT) Form | Logical Role |
+|---|---|---|---|
+| **Core** | "Give me the salt." | "Could you pass the salt, **please**" | Illocutionary Act + Mitigator |
+| **Reason** | "I need it." | "because I'm seasoning my food" | Contextual Justification |
+| **Space** | "On the table." | "on the table" | Spatial Reference |
+| **Time** | "Now." | "right now" | Temporal Reference |
+
+**CFLT Strategy:** Place the "Speech-Act Core" (the request) at position 0, but ensure the *form* of that Core includes the necessary cultural tokens for politeness. By doing so, the listener receives the "social signal" (politeness) and the "task signal" (the request) simultaneously, without the task being buried in a long preamble.
+
+## 3. Honorifics and Social Indexing (Japanese/Korean)
+
+Languages with complex honorific systems (e.g., Japanese *keigo*) often use verb inflections and specific lexical choices to index the relationship between speaker and hearer.
+
+- **Positioning:** In Japanese (SOV), honorific markers typically cluster at the end of the sentence (the verb). 
+- **CFLT Transformation:** When a Japanese speaker uses CFLT to produce L2 English, the "Social Index" is moved to the **Core**. Instead of waiting for a sentence-final verb to signal respect, the learner selects a "High-Register Core" (e.g., "I would appreciate your assistance" instead of "Help me").
+
+This aligns the **Social Salience** (who am I talking to?) with the **Semantic Salience** (what am I asking for?).
+
+## 4. Register Scaling: From "Efficiency" to "Elegance"
+
+CFLT methodology defines three levels of **Social Register**:
+
+1.  **Level 1: Minimalist CFLT (Emergency/Technical)** 
+    - *Goal:* Maximum speed.
+    - *Form:* "Deploy the code, because of the bug, in production, now."
+2.  **Level 2: Standard CFLT (Professional/Neutral)**
+    - *Goal:* Cooperative communication.
+    - *Form:* "I am deploying the code, to fix the bug, on the production server, immediately."
+3.  **Level 3: Elegant CFLT (Diplomatic/Formal)**
+    - *Goal:* Face-saving and nuance.
+    - *Form:* "I would like to inform you that I am deploying a fix, for the critical bug, in the production environment, at this time."
+
+Across all three levels, the **logical sequence remains identical**. The only variable that changes is the **Token Density** and **Lexical Sophistication** within each slot. This allows learners to "dial up" their politeness without ever having to restructure their underlying cognitive protocol.
+
+## 5. Cultural Relativity: The "Topic-Prominent" Trap
+
+As discussed in [`linguistics.md`](./linguistics.md), many Asian languages are "Topic-Prominent." Sociolinguistically, this often manifests as "circular communication"—circling the context before hitting the point to avoid appearing blunt.
+
+CFLT acts as a **Social Buffer**. By providing a standardized "Global Interlingua" logic, it gives speakers from circular-communication backgrounds a "Permission to be Direct." In an international professional setting (e.g., IT English), the CFLT Protocol serves as a neutral ground where directness is interpreted as **Efficiency** rather than **Rudeness**.
+
+## 6. Honest Limitations
+
+1.  **Cultural Friction:** In extremely traditional or hierarchical settings, strict adherence to Core-First sequencing may still be perceived as culturally "foreign." CFLT is optimized for **Global Functional Fluency**, not for perfect cultural assimilation.
+2.  **Irony and Sarcasm:** These complex social signals often rely on violating expected word-order or prosodic patterns. A rigid 4-slot protocol makes "natural" irony difficult to execute.
+3.  **Gender and Power Dynamics:** The "Directness" encouraged by CFLT may be socially penalized differently depending on the gender or status of the speaker. This is a broader social issue that a linguistic protocol cannot solve alone.
+
+---
+
+## 7. Cited Works
+
+See [`bibliography.md`](../bibliography.md) (§ Sociolinguistics) for full references. Key works grounding this document include Brown & Levinson (1987) on politeness universals, Hofstede (2001) on cultural dimensions, and Scollon & Scollon (2001) on intercultural discourse.

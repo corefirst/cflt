@@ -1,6 +1,9 @@
 # Methodology: LLM System Prompting (Engineering Protocol)
 
-> **Purpose:** To provide AI developers with a standardized discourse protocol that reduces output variance, mitigates "Lost-in-the-Middle" effects, and improves instruction-following in complex LLM systems.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -64,11 +67,14 @@ When a user's query is passed to a vector database for RAG, embedding models oft
 
 CFLT's effectiveness is supported by both established industry benchmarks for inference engines and theoretical projections aligned with recent prompt-engineering research.
 
-### 5.1 Established Industry Benchmarks (Empirical)
-Modern inference frameworks (e.g., vLLM's APC, SGLang's RadixAttention) provide verified performance gains for fixed prompt prefixes:
+### 5.1 Established Industry Benchmarks (Empirical, Generic)
+Modern inference frameworks (e.g., vLLM's APC, SGLang's RadixAttention) provide verified performance gains for **any** workload that supplies a fixed, reusable prompt prefix. The numbers below are **generic prefix-cache gains**, not CFLT-specific results — CFLT's contribution is that it makes prompts *eligible* for these gains by enforcing a stable, reusable prefix shape:
+
 - **TTFT (Time-To-First-Token) Reduction:** Benchmarks for **SGLang (2024)** ([NeurIPS 2024](https://openreview.net/forum?id=VqkAKQibpq)) show an **80%–95% reduction** in TTFT for cached prefixes, as the "prefill" phase is bypassed for the shared structure.
 - **Throughput Gain:** In agentic reasoning and multi-turn workloads, **RadixAttention** achieves **2x–5x higher throughput** compared to baseline vLLM by maximizing prefix reuse ([LMSYS 2024](https://lmsys.org/blog/2024-01-17-sglang/)).
-- **Linearization Impact:** The **DOVE Study (2025)** ([Findings of ACL 2025](https://doi.org/10.18653/v1/2025.findings-acl.611)) found that prompt linearization (the order of information) can cause an absolute accuracy gap of **10%–15%** on reasoning benchmarks like MMLU, confirming that structure is not neutral.
+- **Linearization Impact:** The **DOVE Study (2025)** ([Findings of ACL 2025](https://doi.org/10.18653/v1/2025.findings-acl.611)) found that prompt linearization (the order of information) can cause an absolute accuracy gap of **10%–15%** on reasoning benchmarks like MMLU, confirming that prompt structure materially affects model behavior — which is the *necessary precondition* for CFLT's design choice to matter, not evidence that CFLT specifically captures this gap.
+
+In short: §5.1 establishes that *some* fixed-prefix protocol pays. §5.2 specifies what CFLT must demonstrate to claim it is *the right one*.
 
 ### 5.2 CFLT-Specific Projections (Subject to Validation)
 We propose the following metrics for future **Ablation Studies** to validate CFLT's specific increments:

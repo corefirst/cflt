@@ -1,5 +1,10 @@
 # CFLT Reference Implementations
 
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 This document tracks projects that implement, embed, or substantively reference the **Core-First Language Theory** framework.
 
 CFLT itself is theory and specification — the implementations are where the protocol meets running code. Adding your project here helps researchers and practitioners discover working examples and avoid duplicating work.

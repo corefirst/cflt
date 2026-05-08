@@ -1,8 +1,9 @@
 # Mathematical Foundations of CFLT
 
-> Companion to: [`manifesto.md`](../manifesto.md)
-> Read first: [`core-concept.md`](./core-concept.md) — defines "Core" as the salience anchor, not as a verb or predicate.
-> Purpose: Frame the **CFLT Protocol** in terms of information theory, optimal coding, sequence modeling, and the linearization problem on partial orders.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -15,6 +16,12 @@ Different languages choose different deterministic linearization functions over 
 $$L_{\text{CFLT}}(G) = [\,\text{root}(G),\ \text{cause}(G),\ \text{location}(G),\ \text{time}(G)\,]$$
 
 where $\text{root}(G)$ is the Core. By fixing this function across all languages, CFLT reduces the **computational complexity** of translation from structural transformation to lexical substitution.
+
+### 1.1 Modeling Identity and Request Cores
+To prove CFLT is not merely "verb-first," we model the Core as the **highest-salience node** in the semantic DAG, regardless of its part-of-speech.
+
+- **Identity Core (Copular/Stative):** In "That girl is my sister," the semantic root is the identity relation $\{A=B\}$. The linearization remains $L([A=B], \text{modifier}) = [A=B, \text{modifier}]$. The mathematical benefit is the immediate resolution of the **reference frame** before any descriptive attributes are processed.
+- **Request Core (Illocutionary Force):** In a request, the illocutionary operator (e.g., `REQUEST(action)`) is the root. CFLT linearizes this as $[\text{Operator}, \text{Action}, \text{Context}]$. This minimizes the **illocutionary ambiguity** — the listener knows *why* they are listening before they hear *what* the task is.
 
 ---
 
@@ -105,7 +112,9 @@ This is independent of word-order choice — but the **search space at productio
 - For free-order natural language: $|L_{\text{CFLT}}| \times 4!$ permutations the speaker must choose among.
 - For CFLT-constrained language: $|L_{\text{CFLT}}| \times 1$ — the linearization is fixed.
 
-CFLT thus eliminates a factor of $4! = 24$ from the production search space, reducing planning load by more than an order of magnitude in the linearization sub-task. This is a clear computational argument for pedagogical use.
+CFLT thus eliminates a factor of $4! = 24$ from the **protocol-level** search space, fixing the linearization sub-task to a single canonical schedule.
+
+> **Caveat.** This is an upper-bound argument about the *space* the speaker is permitted to choose from, not a claim that natural-language production literally enumerates 24 permutations at runtime. Empirical models of speech production (Levelt 1989; Kormos 2006) treat linearization as guided by incremental, heuristically constrained choice rather than combinatorial search. The pedagogical force of the $4! \to 1$ collapse is therefore that it removes an *axis of choice* the learner would otherwise have to resolve under cognitive load — not that it shortcuts a literal 24-way decision per utterance.
 
 ---
 
@@ -123,7 +132,9 @@ CFLT short-circuits both by introducing a **canonical intermediate linearization
 
 $$\sigma_2 \circ \sigma_C^{-1} \circ \sigma_C \circ \sigma_1^{-1}(G)$$
 
-This appears longer, but the trick is that $\sigma_C$ is **the same in every language**. Once a learner internalizes $\sigma_C$, both $\sigma_C \circ \sigma_1^{-1}$ and $\sigma_2 \circ \sigma_C^{-1}$ are simple token-level remappings, not structural reorganizations. Mathematically, CFLT converts a structural transformation into a lexical substitution.
+This appears longer, but the trick is that $\sigma_C$ is **the same in every language**. Once a learner internalizes $\sigma_C$, both $\sigma_C \circ \sigma_1^{-1}$ and $\sigma_2 \circ \sigma_C^{-1}$ are simple token-level remappings, not structural reorganizations. CFLT converts a structural transformation into a lexical substitution.
+
+> **Caveat — this section is heuristic, not a proof.** Formally, $\sigma_C^{-1} \circ \sigma_C$ is just the identity, so the four-arrow form is *equivalent* to $\sigma_2 \circ \sigma_1^{-1}$ in pure cost-function terms. The substantive claim is **cognitive**, not algebraic: a learner who has *internalized* $\sigma_C$ can amortize its decoding/encoding cost across millions of utterances, so the *per-utterance* effort drops from one structural transformation to two lexical substitutions over a shared scaffold. The math here illustrates the decomposition; it does not prove the cost reduction. Empirical validation is listed in [`methodology/evaluation-metrics.md`](../methodology/evaluation-metrics.md) §2 (Articulation Onset Latency, Cognitive Load Index).
 
 ---
 

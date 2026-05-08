@@ -1,7 +1,9 @@
 # Neuroscience Foundations of CFLT
 
-> Companion to: [`manifesto.md`](../manifesto.md)
-> Purpose: Ground the **CFLT Protocol** in the neurobiology of language, attention, and executive function. Explain how "Core-First" sequencing aligns with the brain's internal priority systems and minimizes metabolic costs during L2 production.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -19,7 +21,7 @@ The human brain does not process information as a flat sequence. It uses a speci
 CFLT’s "Core-First" principle is a linguistic implementation of the **Figure-Ground** distinction (Talmy, 2000). The neural correlates of this distinction are found in the **posterior parietal cortex (PPC)** and the **fronto-parietal attention network**.
 
 - **Windowing of Attention:** The brain uses "windowing" to foreground a specific entity (the Figure) against a reference frame (the Ground).
-- **Neural Cost of Reversal:** Studies show that when a stationary object is forced into the Figure role (e.g., "The house is near the bike"), it triggers increased activity in the **left prefrontal cortex** as the brain struggles with the salience mismatch.
+- **Neural Cost of Reversal:** Cross-linguistic neuroimaging (Yokoyama et al. 2006; Hashimoto, Yokoyama & Kawashima 2012) shows that processing non-canonical Figure–Ground assignments and non-canonical word orders elicits increased activity in left frontal regions (LIFG / DLPFC), consistent with the additional working-memory and conflict-monitoring load required when default salience expectations are violated. We interpret these findings as a *neural signature* of salience-mismatch cost, not as a direct measurement of CFLT's intervention; a CFLT-targeted fMRI study is listed as an open question in §7.
 - **CFLT Strategy:** By asserting the Core (Figure) first and modifiers (Ground) later, CFLT follows the path of least resistance for the brain's spatial and attentional processing.
 
 ---

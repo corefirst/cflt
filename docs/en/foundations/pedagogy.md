@@ -117,7 +117,6 @@ This is consistent with NSM's role (manifesto §2.5): semantic primes are the la
 
 Children are typically **better L2 acquirers** than adults; they are just worse at *explaining what they have learned*. The right question is therefore not "does CFLT work for children?" but **"what is the right delivery mechanism for each developmental stage?"**
 
-### 9.1 CFLT works at all ages — what differs is the delivery
 The Core-First protocol operates at the **cognitive-conceptual level**, not at the metalinguistic level. A child internalizing the protocol does not need to *know* they are applying a four-element protocol; they only need to absorb the pattern through repeated exposure to conformant input. This is exactly how children acquire grammar in the first place — without rule lectures.
 
 | Learner Type | Delivery Method | Theoretical Basis |
@@ -128,8 +127,10 @@ The Core-First protocol operates at the **cognitive-conceptual level**, not at t
 The manifesto's §8.1 Cross-Age Adaptation already encodes this differentiation. The CoreFirst v1 PRD scopes the initial product to adult learners — but this is a **v1 product-scope decision** (UI/UX adaptation, content-moderation infrastructure, and child-appropriate courseware require significant additional investment), **not a theoretical claim that CFLT is unsuitable for children**.
 
 Several reasons CFLT may be especially well-suited to early learners — contrary to what an "adults learn explicitly" framing might naively suggest:
+
 1.  **Statistical-learning advantage.** Children are powerful pattern extractors (Saffran et al. 1996; Lany & Saffran 2010). CFLT-conformant input gives them a clean, consistent statistical signal to internalize, free of the variance that natural-language input usually carries.
 2.  **No L1-interference plateau.** Adults often plateau because entrenched L1 habits resist restructuring. Children acquiring L2 alongside or shortly after L1 can absorb the protocol directly, with less interference to overcome.
+3.  **Critical-period evidence is graded, not absolute.** Hartshorne, Tenenbaum & Pinker (2018) find that the L2 grammar-learning curve declines gradually with age of onset rather than dropping off a cliff at puberty. CFLT, by externalizing the linearization decision, narrows the part of the gap that is most age-sensitive (the structural-restructuring sub-task) while leaving age-neutral skills (vocabulary, pragmatics) to be developed normally.
 
 ---
 

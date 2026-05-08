@@ -1,7 +1,9 @@
 # Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles
 
-> Project home: corefirst.world
-> Status: theory layer locked
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## 1. Executive Summary
 
@@ -23,9 +25,12 @@ The project uses **CFLT** as the primary designation for both its scientific fou
 
 ## 2. Theoretical Foundations
 
-> The summaries in §2.1–§2.3 below are deliberately compact. For deep treatments — including honest limitations and citations — see the companion documents:
+> The summaries in §2.1–§2.5 below are deliberately compact. For deep treatments — including honest limitations and citations — see the companion documents:
 > - **[`foundations/core-concept.md`](foundations/core-concept.md) — Read this first.** Defines what "Core" means: a salience anchor, not a verb or predicate. Prevents mis-reading the analogies in the other foundation docs.
 > - [`foundations/linguistics.md`](foundations/linguistics.md) — UG, information structure, cognitive linguistics, speech production
+> - [`foundations/phonetics.md`](foundations/phonetics.md) — cross-linguistic phonetic transfer, muscular intelligence
+> - [`foundations/sociolinguistics.md`](foundations/sociolinguistics.md) — politeness, register, honorifics
+> - [`foundations/pedagogy.md`](foundations/pedagogy.md) — Krashen, Vygotsky, Cognitive Load Theory, TBLT, skill acquisition
 > - [`foundations/neuroscience.md`](foundations/neuroscience.md) — salience network, PFC metabolic costs, EIC, proceduralization
 > - [`foundations/logic.md`](foundations/logic.md) — predicate logic, lambda calculus, CCG, speech acts, Relevance Theory
 > - [`foundations/mathematics.md`](foundations/mathematics.md) — information theory, UID, optimal coding, linearization
@@ -63,9 +68,9 @@ CFLT mandates a standardized information sequence to unify human expression:
 
 **`[Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]`**
 
-All four elements are mandatory in the **canonical (unmarked) sequence**. Implementations and teaching materials must preserve this four-element ordering when teaching the default form; partial sequences (e.g., dropping `[Space/Context]`) are **non-conformant** for the canonical form.
+All four elements are present in the **canonical (unmarked) sequence**. Implementations and teaching materials should preserve this four-element ordering when teaching the default form; partial sequences (e.g., dropping `[Space/Context]`) are treated as **reduced forms** of the canonical sequence rather than as alternative protocols, and the slot-order rule still applies to whichever slots are present.
 
-> **Important scope clarification.** The four-element canonical sequence defines CFLT's **unmarked default** — the form a fluent speaker produces when no special rhetorical purpose applies. It does **not** prohibit marked deviations (topicalization, fronting, clefts, end-weight repackaging) that mature fluency requires. Every natural language has multiple expressive forms for the same propositional content, and CFLT accommodates this by treating itself as the *baseline* from which deliberate marked deviations are learned later. See [`foundations/core-concept.md`](foundations/core-concept.md) §7 for the full unmarked/marked distinction.
+> **Important scope clarification.** The four-element canonical sequence defines CFLT's **unmarked default** — the form a fluent speaker produces when no special rhetorical purpose applies. It does **not** prohibit marked deviations (topicalization, fronting, clefts, end-weight repackaging) that mature fluency requires, nor does it require every utterance to surface all four slots. Every natural language has multiple expressive forms for the same propositional content, and CFLT accommodates this by treating itself as the *baseline* from which deliberate marked deviations are learned later. See [`foundations/core-concept.md`](foundations/core-concept.md) §6 for the unmarked/marked distinction and §7 for the misreading-refutation matrix.
 
 ### 3.2 Demonstrating the CFLT Pivot
 
@@ -130,8 +135,15 @@ Once functional fluency is achieved via CFLT, the AI introduces culture-specific
 ## 6. Global Vision: Any-to-Any Bilingualism
 
 CFLT is not limited to Chinese-to-English. It is designed as a **Universal Protocol for Human Communication**. By adopting the Core-First sequence as the "Global Interlingua," we can scale bilingual education across any linguistic pair:
-*   **Japanese to French:** Using `[Core Action]` as the pivot.
-*   **Arabic to Spanish:** Using `[NSM Primes]` as the semantic bridge.
+
+*   **Japanese (SOV) ↔ German (V2):** 
+    - *Japanese habit:* [Modifiers] → [Object] → [Verb]. 
+    - *CFLT Pivot (scaffold form):* "Ich esse einen Apfel (Core), weil ich Hunger habe (Reason), im Park (Space), jetzt (Time)." 
+    - By forcing the Japanese brain to output the Action (Verb) immediately, we bypass the "waiting for the verb" processing delay in German V2 main clauses. The Grammar Overlay layer subsequently polishes the appended adverbials into idiomatic German positioning.
+*   **Arabic (VSO) ↔ Spanish (SVO):**
+    - *Arabic habit:* [Verb] → [Subject] → [Object]. 
+    - *CFLT Pivot:* "Como una manzana (Core) ... porque tengo hambre (Reason) ... en la cocina (Space)." 
+    - CFLT aligns the Arabic V-first tendency with the Spanish SVO core, using **Natural Semantic Metalanguage (NSM) Primes** as the semantic bridge to ensure the *intent* of the verb is preserved across divergent conjugation systems.
 
 The project home and canonical reference is **corefirst.world**.
 

@@ -1,11 +1,9 @@
 # CFLT Strategic Vision: Human-AI Synchronized Logic
 
-> **Scope note (2026-05-07):** This document describes the cross-project vision of the CFLT framework, which has two distinct strategic pillars. CFLT itself is the theoretical framework hosted in this repository; its concrete applications live in separate projects:
->
-> - **Pillar I — Human Bilingual Education** is implemented in [**CoreFirst**](https://github.com/corefirst/corefirst) (corefirst.world), a Next.js learning application.
-> - **Pillar II — Standardizing LLM Thinking** is not yet built. Its natural home is the [**apcore ecosystem**](https://github.com/apcore) (a separate framework family: `apcore-mcp`, `apcore-cli`, `apcore-sdk`). When concrete work begins, it will land as a dedicated module (e.g., `apcore-cflt`) in that ecosystem.
->
-> Treat this document as a unifying theoretical roadmap. The CFLT framework itself is independent of any single product; CoreFirst is the first reference implementation, not the framework's owner.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## 1. Executive Summary
 
@@ -41,9 +39,11 @@ In the era of Agentic Workflows, the lack of a standardized logical protocol bet
 
 ---
 
-## 4. The Apcore Ecosystem: The Neural Infrastructure
+## 4. The Apcore Ecosystem: The Neural Infrastructure (Planned)
 
-To realize this dual vision, we integrate the **Apcore** library suite to provide the necessary "Neural Links" across different environments:
+> **Status:** The components in this section are **planned, not yet implemented**. Tracked in [`reference-implementations.md`](./reference-implementations.md) under the *Planned* heading.
+
+To realize this dual vision, we plan to integrate the **Apcore** library suite to provide the necessary "Neural Links" across different environments:
 
 | Library | Role | Strategic Impact |
 |:--- |:--- |:--- |
@@ -60,6 +60,6 @@ The ultimate goal of CFLT is to build a **Human-AI Isomorphic Logic Field**.
 When humans train their minds to be "Core-First" and LLMs adopt "Core-First" as their reasoning standard, the bandwidth of human-machine collaboration will grow exponentially. We are moving beyond "Prompt Engineering" toward a future of **Deep Cognitive Alignment**, where the way we think and the way we compute are one and the same.
 
 ---
-*Document Version: 1.0.1*
+*Document Version: 1.0.0 (Internal Draft)*
 *Status: Strategic Roadmap*
 *Author: CFLT Core Team*

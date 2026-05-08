@@ -1,7 +1,9 @@
 # What "Core" Means in CFLT — Salience, Not Syntax
 
-> Companion to: [`manifesto.md`](../manifesto.md)
-> Purpose: Define the operational meaning of "Core" in the **CFLT Protocol** precisely. Distinguish it from verb-first, predicate-first, and other syntactic notions that have been informally conflated with it. **This document takes precedence wherever the other foundation documents appear to reduce "Core" to a syntactic category.**
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 

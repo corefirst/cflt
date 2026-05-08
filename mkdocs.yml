@@ -64,12 +64,19 @@ plugins:
             Core Concept: 核心概念
             Pedagogy: 教育学基础
             Linguistics: 语言学基础
+            Neuroscience: 神经科学基础
             Logic: 逻辑学基础
             Mathematics: 数学基础
             LLM & AI: 大语言模型基础
+            Phonetics: 语音学基础
+            Sociolinguistics: 社会语言学基础
             Methodology: 实践指南
             Human Learning: 人类学习
             LLM Prompting: LLM 提示词工程
+            Complex Structures: 复杂句式与递归
+            Software Architecture: 软件架构实现
+            Curriculum Engineering: 课程工程开发
+            Evaluation & Metrics: 评估与量化指标
             Reference Implementations: 参考实现
             Bibliography: 参考文献
 
@@ -94,15 +101,21 @@ nav:
   - Strategic Vision: vision.md
   - Foundations:
       - Core Concept: foundations/core-concept.md
-      - Pedagogy: foundations/pedagogy.md
       - Linguistics: foundations/linguistics.md
+      - Phonetics: foundations/phonetics.md
+      - Sociolinguistics: foundations/sociolinguistics.md
+      - Pedagogy: foundations/pedagogy.md
       - Neuroscience: foundations/neuroscience.md
       - Logic: foundations/logic.md
       - Mathematics: foundations/mathematics.md
       - LLM & AI: foundations/llm.md
   - Methodology:
       - Human Learning: methodology/human-learning.md
+      - Complex Structures: methodology/complex-structures.md
       - LLM Prompting: methodology/llm-prompting.md
+      - Software Architecture: methodology/software-architecture.md
+      - Curriculum Engineering: methodology/curriculum-engineering.md
+      - Evaluation & Metrics: methodology/evaluation-metrics.md
   - Reference Implementations: reference-implementations.md
   - Bibliography: bibliography.md
 

@@ -1,7 +1,9 @@
 # Linguistic Foundations of CFLT
 
-> Companion to: [`manifesto.md`](../manifesto.md)
-> Purpose: Establish which linguistic traditions support the Core-First sequencing claim, and honestly acknowledge where typological reality diverges from the **CFLT Protocol**.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 

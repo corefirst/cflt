@@ -27,10 +27,12 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 
 ## Foundations
 
-CFLT integrates research across six core disciplines:
+CFLT integrates research across eight disciplines, anchored by a single conceptual disambiguation document:
 
-- **[Pedagogy](foundations/pedagogy.md)** — Krashen, Vygotsky, Cognitive Load Theory, TBLT, bilingual lexical access.
 - **[Linguistics](foundations/linguistics.md)** — Universal Grammar, information structure, cognitive linguistics, NSM.
+- **[Phonetics](foundations/phonetics.md)** — Cross-linguistic phonetic transfer, muscular intelligence, Pinyin-to-IPA bridge.
+- **[Sociolinguistics](foundations/sociolinguistics.md)** — Politeness, register, honorifics as logical wrappers around the Core.
+- **[Pedagogy](foundations/pedagogy.md)** — Krashen, Vygotsky, Cognitive Load Theory, TBLT, bilingual lexical access.
 - **[Neuroscience](foundations/neuroscience.md)** — Salience Network, PFC metabolic costs, EIC, proceduralization.
 - **[Logic](foundations/logic.md)** — Predicate logic, lambda calculus, CCG, Speech Act Theory.
 - **[Mathematics](foundations/mathematics.md)** — Information theory, UID, optimal coding, linearization.

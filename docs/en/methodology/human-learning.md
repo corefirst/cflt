@@ -1,6 +1,9 @@
 # Methodology: Human Cognitive Reshaping (L2 Fluency)
 
-> **Purpose:** To provide a step-by-step mental protocol for achieving real-time spoken fluency in a second language by bypassing the native language's structural interference using the **CFLT Protocol**.
+> **Version:** 1.0.0 (Internal Draft)
+> **Author:** CFLT Core Team
+> **Organization:** [CFLT.center](https://cflt.center)
+> **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -31,6 +34,14 @@ At this stage, do not worry about "perfect" grammar. Use the **Atomic Vocabulary
 - **CFLT Form:** "I didn't go out, because it rained, at home, yesterday."
 
 As you become more comfortable, the **Grammar Overlay** (provided by AI or natural acquisition) will polish this into idiomatic L2 (e.g., "It rained yesterday, so I stayed home"). However, in the heat of real-time conversation, **stick to the CFLT Form**—it is 100% comprehensible and costs 0% restructuring effort.
+
+### 2.1 Time Tokens vs. Tense: The Backward Constraint
+In traditional L2 learning, "tense" is a forward-planning nightmare. You must know the time of the event *before* you choose the verb form. 
+
+CFLT reverses this through **Backward Temporal Constraints**:
+1.  **Core-First:** Speak the action in its base/atomic form immediately.
+2.  **Time-Last:** Append the "Time Token" at the end.
+3.  **Muscle Memory Training:** Learners are trained to treat the final Time Token as a "trigger" that retroactively validates the core. In the "Grammar Overlay" stage, the brain begins to *pre-echo* the time token into the core verb, transforming "I go... yesterday" into "I went... yesterday" via a subconscious feedback loop. This mimics how native speakers handle long-distance dependencies, building muscle memory for inflection without the planning cost.
 
 ---
 
@@ -88,7 +99,18 @@ To validate these claims, we propose the following **Psycholinguistic Experiment
 
 ---
 
-## 7. Summary
+## 7. The Proficiency Arc: From Protocol to Mastery
+
+CFLT is a training wheels system, not a cage. The **Grammar Overlay** acts as the bridge from strict linearization to native-level expression:
+
+1.  **Stage 1: The Strict Protocol (0-20% Proficiency):** The learner uses the 4-slot sequence exclusively. Output is "robotic" but perfectly clear.
+2.  **Stage 2: Implicit Overlay (20-60% Proficiency):** Through AI feedback and exposure, the learner begins to "clot" slots together (e.g., merging Reason and Core).
+3.  **Stage 3: Marked Deviations (60-90% Proficiency):** The learner begins to intentionally break the protocol for rhetorical effect (e.g., "Yesterday, I stayed home"). Because they have mastered the **unmarked baseline (CFLT)**, these deviations are now deliberate choices rather than "Modifier Trap" errors.
+4.  **Stage 4: Transparent Fluency (90%+ Proficiency):** The protocol becomes an invisible cognitive skeleton. The speaker can produce any L2 structure, but when they encounter cognitive stress, they default back to the high-efficiency CFLT core to maintain the flow of speech.
+
+---
+
+## 8. Summary
 
 The goal of CFLT is not to speak "perfectly," but to speak **instantly**. By fixing the order of your thoughts, you free your brain to focus on what matters: **communication.** 
 
