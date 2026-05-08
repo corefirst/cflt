@@ -48,6 +48,7 @@ CFLT 集成了以下六个核心学科的研究成果：
 
 - **[教育学基础](foundations/pedagogy.md)**
 - **[语言学基础](foundations/linguistics.md)**
+- **[脑科学基础](foundations/neuroscience.md)**
 - **[逻辑学基础](foundations/logic.md)**
 - **[数学基础](foundations/mathematics.md)**
 - **[大语言模型基础](foundations/llm.md)**

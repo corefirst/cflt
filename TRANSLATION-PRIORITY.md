@@ -15,7 +15,7 @@ When translating into any language, follow this priority order:
 | Priority | Pages | Rationale |
 |----------|-------|-----------|
 | **P0** — Must be translated | `index.md`, `manifesto.md`, `vision.md` | Site landing + theoretical centerpiece. Visitors who land on `/{lang}/` see English fallback as a quality signal — these must be parallel from day one. |
-| **P1** — Important | `foundations/core-concept.md`, `foundations/llm.md`, `reference-implementations.md` | Core concept disambiguates the most common mis-readings; LLM is the highest-traffic foundation; reference-implementations is short and high-value. |
+| **P1** — Important | `foundations/core-concept.md`, `foundations/llm.md`, `foundations/neuroscience.md`, `reference-implementations.md` | Core concept disambiguates; LLM is high-traffic; Neuroscience is a critical new pillar; reference-implementations is short. |
 | **P2** — Progressive | `foundations/pedagogy.md`, `foundations/linguistics.md`, `foundations/logic.md`, `foundations/mathematics.md` | Discipline-specific foundations. Translate as resources allow. |
 | **P3** — Single-source acceptable | `bibliography.md` | Citation list is language-neutral (DOI / authors / journals). Maintaining one canonical English version is acceptable; translators may skip this file. |
 

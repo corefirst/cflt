@@ -35,6 +35,7 @@ For first-time readers:
 3. **Pick the foundation closest to your background:**
    - **[`docs/en/foundations/pedagogy.md`](./docs/en/foundations/pedagogy.md)** — Krashen's Input Hypothesis, Vygotsky's ZPD, Cognitive Load Theory, Skill Acquisition Theory, Task-Based Language Teaching, Kroll's bilingual lexical access, motor-skill transfer in phonetics. Most directly relevant for educators and SLA researchers.
    - **[`docs/en/foundations/linguistics.md`](./docs/en/foundations/linguistics.md)** — Universal Grammar, information structure (Theme-Rheme, Topic-Comment), cognitive linguistics (Talmy's Figure, Langacker's profile), speech production (Levelt), Natural Semantic Metalanguage. Explicitly distinguishes Core-First from VSO word order.
+   - **[`docs/en/foundations/neuroscience.md`](./docs/en/foundations/neuroscience.md)** — Salience Network, PFC metabolic costs (restructuring delay), Early Immediate Constituents (EIC) neural efficiency, Attention Sinks vs. Primal Tokens, proceduralization (Basal Ganglia).
    - **[`docs/en/foundations/logic.md`](./docs/en/foundations/logic.md)** — Predicate logic, lambda calculus, CCG, speech-act theory, Relevance Theory, Gricean maxims, DRT. Frames these as inspirations for the *early-commitment principle*, not as the surface form CFLT emits.
    - **[`docs/en/foundations/mathematics.md`](./docs/en/foundations/mathematics.md)** — Information theory, Uniform Information Density, optimal coding, Markov chains, KL divergence, the linearization problem on partial orders, search-space reduction in production planning.
    - **[`docs/en/foundations/llm.md`](./docs/en/foundations/llm.md)** — Transformer attention, positional biases, lost-in-the-middle, prompt-order variance, chain-of-thought, hallucination dynamics. Why CFLT aligns with LLM behavior precisely because it stays inside the natural-language manifold the model was trained on.
@@ -55,16 +56,14 @@ For first-time readers:
                  unmarked default; comprehensible
                  human language manifold)
                                 │
-            ┌───────────┬───────┼────────┬───────────┐
-            ▼           ▼       ▼        ▼           ▼
-        pedagogy   linguistics  logic   math       llm
-       (SLA, ZPD,  (cognitive  (formal  (info-     (transformer
-       cognitive   linguistics, logic   theory,    biases, prompt
-       load,       information  inspires linearization) engineering)
-       skill       structure,  early-
-       acquisition, speech     commit-
-       TBLT)       production) ment)
-            └───────────┴───────┴────────┴───────────┘
+            ┌───────┬───────┬───────┬───────┬───────┬───────┐
+            ▼       ▼       ▼       ▼       ▼       ▼
+            pedagogy linguis  neuro   logic   math     llm
+            (SLA,    (cogni-  (SN,    (formal (info-   (trans-
+            ZPD,     tive     PFC,    logic,  theory,  former,
+            cog-     ling,    EIC,    speech  linear-  prompt
+            load)    info)    BG)     acts)   izing)   eng)
+            └───────┴───────┴───────┴───────┴───────┴───────┘
                                 │
                                 ▼
                          bibliography.md

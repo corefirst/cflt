@@ -33,6 +33,7 @@ description: 从第一性原理重构全球双语教育的统一理论框架。
 > §2.1–§2.3 的概述刻意保持简洁。如需深入论述（含诚实的局限性与引用），请参阅配套文档：
 > - **[`foundations/core-concept.md`](foundations/core-concept.md) — 请先阅读此篇。** 定义"Core"的含义：**显著性锚点 (salience anchor)**，而不是动词或谓词。可避免误读其他基础文档中的类比。
 > - [`foundations/linguistics.md`](foundations/linguistics.md) — 普遍语法、信息结构、认知语言学、言语生成
+> - [`foundations/neuroscience.md`](foundations/neuroscience.md) — 显著性网络、前额叶代谢成本、EIC、程序化
 > - [`foundations/logic.md`](foundations/logic.md) — 谓词逻辑、λ 演算、组合范畴语法 (CCG)、言语行为、关联理论
 > - [`foundations/mathematics.md`](foundations/mathematics.md) — 信息论、均匀信息密度 (UID)、最优编码、线性化
 > - [`foundations/llm.md`](foundations/llm.md) — Transformer 注意力偏差、提示词顺序、思维链 (CoT)

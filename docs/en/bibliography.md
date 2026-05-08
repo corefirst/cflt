@@ -83,7 +83,6 @@
 - **Flege, J. E.** (1995). "Second Language Speech Learning: Theory, Findings, and Problems." In *Speech Perception and Linguistic Experience*, Strange (ed). Baltimore: York Press.
 - **Flege, J. E.** (2007). "Language Contact in Bilingualism: Phonetic System Interactions." In *Laboratory Phonology 9*, Cole & Hualde (eds). Berlin: Mouton de Gruyter.
 - **Hartshorne, J. K., Tenenbaum, J. B. & Pinker, S.** (2018). "A Critical Period for Second Language Acquisition: Evidence from 2/3 Million English Speakers." *Cognition* 177, 263–277.
-- **Hashimoto, Y., Yokoyama, S. & Kawashima, R.** (2012). "Neuro-typology of sentence comprehension: Cross-linguistic difference in canonical word order affects brain responses during sentence comprehension." *The Open Medical Imaging Journal* 6, 62–69. DOI: [10.2174/1874347101206010062](https://doi.org/10.2174/1874347101206010062)
 - **Kormos, J.** (2006). *Speech Production and Second Language Acquisition.* Mahwah, NJ: Erlbaum.
 - **Kormos, J.** (2014). "Speech Production and Second Language Acquisition." In *The Routledge Handbook of Second Language Acquisition*, Gass & Mackey (eds). New York: Routledge.
 - **Krashen, S. D.** (1982). *Principles and Practice in Second Language Acquisition.* Oxford: Pergamon.
@@ -92,14 +91,21 @@
 - **Kroll, J. F., van Hell, J. G., Tokowicz, N. & Green, D. W.** (2010). "The Revised Hierarchical Model: A Critical Review and Assessment." *Bilingualism: Language and Cognition* 13(3), 373–381.
 - **Lany, J. & Saffran, J. R.** (2010). "From Statistics to Meaning: Infants' Acquisition of Lexical Categories." *Psychological Science* 21(2), 284–291.
 - **Lenneberg, E. H.** (1967). *Biological Foundations of Language.* New York: Wiley.
-- **Saffran, J. R., Aslin, R. N. & Newport, E. L.** (1996). "Statistical Learning by 8-Month-Old Infants." *Science* 274(5294), 1926–1928.
 - **Long, M. H.** (1985). "A Role for Instruction in Second Language Acquisition: Task-Based Language Teaching." In *Modelling and Assessing Second Language Acquisition*, Hyltenstam & Pienemann (eds). Clevedon: Multilingual Matters.
 - **Long, M. H.** (2015). *Second Language Acquisition and Task-Based Language Teaching.* Malden, MA: Wiley-Blackwell.
 - **Quirk, R., Greenbaum, S., Leech, G. & Svartvik, J.** (1985). *A Comprehensive Grammar of the English Language.* London: Longman.
+- **Saffran, J. R., Aslin, R. N. & Newport, E. L.** (1996). "Statistical Learning by 8-Month-Old Infants." *Science* 274(5294), 1926–1928.
 - **Sweller, J.** (1988). "Cognitive Load During Problem Solving: Effects on Learning." *Cognitive Science* 12(2), 257–285.
 - **Sweller, J., Ayres, P. & Kalyuga, S.** (2011). *Cognitive Load Theory.* New York: Springer.
 - **Vygotsky, L. S.** (1978). *Mind in Society: The Development of Higher Psychological Processes.* Cambridge, MA: Harvard University Press.
-- **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159. DOI: [10.1016/S1053-8119(06)00001-X](https://doi.org/10.1016/S1053-8119(06)00001-X)
+
+## Neuroscience
+
+- **Friederici, A. D.** (2011). "The brain basis of language processing: from structure to function." *Physiological Reviews*, 91(4), 1357–1392. DOI: [10.1152/physrev.00006.2011](https://doi.org/10.1152/physrev.00006.2011)
+- **Hashimoto, Y., Yokoyama, S. & Kawashima, R.** (2012). "Neuro-typology of sentence comprehension: Cross-linguistic difference in canonical word order affects brain responses during sentence comprehension." *The Open Medical Imaging Journal* 6, 62–69. DOI: [10.2174/1874347101206010062](https://doi.org/10.2174/1874347101206010062)
+- **Pliatsikas, C.** (2020). "Understanding structural plasticity in the bilingual brain: The Dynamic Restructuring Model." *Bilingualism: Language and Cognition*, 23(2), 459-471. DOI: [10.1017/S1366728919000130](https://doi.org/10.1017/S1366728919000130)
+- **Seeley, W. W., Menon, V., Schatzberg, A. F., Keller, J., Glover, G. H., Kenna, H., Reiss, A. L., & Greicius, M. D.** (2007). "Dissociable Intrinsic Connectivity Networks for Salience Processing and Executive Control." *The Journal of Neuroscience*, 27(9), 2349–2356. DOI: [10.1523/JNEUROSCI.5587-06.2007](https://doi.org/10.1523/JNEUROSCI.5587-06.2007)
+- **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159. DOI: [10.1016/j.neuroimage.2005.09.064](https://doi.org/10.1016/j.neuroimage.2005.09.064)
 
 ## Adjacent (cited for distinction in `manifesto.md` §4)
 

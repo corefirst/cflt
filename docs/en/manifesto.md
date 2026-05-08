@@ -26,6 +26,7 @@ The project uses **CFLT** as the primary designation for both its scientific fou
 > The summaries in §2.1–§2.3 below are deliberately compact. For deep treatments — including honest limitations and citations — see the companion documents:
 > - **[`foundations/core-concept.md`](foundations/core-concept.md) — Read this first.** Defines what "Core" means: a salience anchor, not a verb or predicate. Prevents mis-reading the analogies in the other foundation docs.
 > - [`foundations/linguistics.md`](foundations/linguistics.md) — UG, information structure, cognitive linguistics, speech production
+> - [`foundations/neuroscience.md`](foundations/neuroscience.md) — salience network, PFC metabolic costs, EIC, proceduralization
 > - [`foundations/logic.md`](foundations/logic.md) — predicate logic, lambda calculus, CCG, speech acts, Relevance Theory
 > - [`foundations/mathematics.md`](foundations/mathematics.md) — information theory, UID, optimal coding, linearization
 > - [`foundations/llm.md`](foundations/llm.md) — Transformer attention biases, prompt order, CoT

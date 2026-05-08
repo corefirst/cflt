@@ -31,7 +31,8 @@ CFLT integrates research across six core disciplines:
 
 - **[Pedagogy](foundations/pedagogy.md)** — Krashen, Vygotsky, Cognitive Load Theory, TBLT, bilingual lexical access.
 - **[Linguistics](foundations/linguistics.md)** — Universal Grammar, information structure, cognitive linguistics, NSM.
-- **[Logic](foundations/logic.md)** — Predicate logic, lambda calculus, CCG, Relevance Theory, DRT.
+- **[Neuroscience](foundations/neuroscience.md)** — Salience Network, PFC metabolic costs, EIC, proceduralization.
+- **[Logic](foundations/logic.md)** — Predicate logic, lambda calculus, CCG, Speech Act Theory.
 - **[Mathematics](foundations/mathematics.md)** — Information theory, UID, optimal coding, linearization.
 - **[LLM & AI](foundations/llm.md)** — Transformer attention, lost-in-the-middle, prompt-order variance, hallucination dynamics.
 
