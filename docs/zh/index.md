@@ -5,65 +5,50 @@ hide:
   - navigation
 ---
 
-# 核心优先语言理论 (CFLT)
-
-> **CFLT** 是关于跨语言通信、第二语言教学与大语言模型协议对齐的统一理论框架。
-
-!!! info "关于中文版"
-
-    CFLT 的权威理论文档目前以**英文为基准版本**。中文版正在分阶段翻译中：
-
-    - **优先级 P0**（必须双语对齐）：宣言、战略愿景、本页
-    - **优先级 P1**（重要）：核心概念、大语言模型基础、参考实现
-    - **优先级 P2**（逐步翻译）：教育学、语言学、逻辑学、数学基础
-    - **优先级 P3**（可单源）：参考文献
-
-    未翻译的页面会自动显示英文原文，并在顶部标注。希望协助翻译？请访问 [GitHub 仓库](https://github.com/corefirst/cflt)。
-
----
-
-## 核心命题
+# 核心优先语言理论 (Core-First Language Theory)
 
 > *话语的认知核心，也是其在任何语言中被普遍优先排列的线性位置。*
 
-由此定义出 **CFLT 协议** 的四元素排序规则：
+**CFLT** 提出了一个话语层级的原则，并由此推导出 **CFLT 协议** —— 一套四元素排序规则，旨在以最小认知摩擦衔接任意两种自然语言，并作为大语言模型的结构化提示词协议：
 
 ```
 [核心动作/结果] → [条件/原因] → [空间/语境] → [时间]
 ```
 
-这一排序既是连接两种自然语言的最小认知摩擦桥梁，也可作为面向大语言模型的结构化提示协议。
+CFLT 是**理论 + 方法**，而非单一产品。该理论属于开放公共领域 (CC BY 4.0)。参考实现则位于独立的各个项目中。
 
 ---
 
-## 阅读路径
+## 从何处开始
 
-- **[宣言 (Manifesto)](manifesto.md)** — 理论的核心陈述。
-- **[核心概念](foundations/core-concept.md)** — "Core" 的定义（显著性锚点，**不是**动词或谓词）。
-- **[战略愿景](vision.md)** — 横跨人类双语教育（支柱一）与大语言模型协议标准化（支柱二）的路线图。
+- **[宣言 (Manifesto)](manifesto.md)** — 权威理论陈述。
+- **[核心概念](foundations/core-concept.md)** — "Core" 的定义（显著性锚点，**不是**动词或谓词）。请在阅读宣言后立即阅读此篇。
+- **[战略愿景](vision.md)** — 横跨人类双语教育（支柱一）与大语言模型协议标准化（支柱二）的跨项目路线图。
 
-## 理论基础（六大学科支撑）
+## 理论基础 (Foundations)
 
-CFLT 集成了以下六个核心学科的研究成果：
+CFLT 集成了八个学科的研究成果，并由一篇核心概念澄清文档作为锚点：
 
-- **[教育学基础](foundations/pedagogy.md)**
-- **[语言学基础](foundations/linguistics.md)**
-- **[脑科学基础](foundations/neuroscience.md)**
-- **[逻辑学基础](foundations/logic.md)**
-- **[数学基础](foundations/mathematics.md)**
-- **[大语言模型基础](foundations/llm.md)**
+- **[语言学](foundations/linguistics.md)** — 普遍语法、信息结构、认知语言学、NSM。
+- **[语音学](foundations/phonetics.md)** — 跨语言语音迁移、肌肉智能、拼音-IPA 桥梁。
+- **[社会语言学](foundations/sociolinguistics.md)** — 礼貌、语体、敬语作为核心的逻辑包装。
+- **[教育学](foundations/pedagogy.md)** — Krashen、Vygotsky、认知负荷理论、TBLT、双语词汇访问。
+- **[神经科学](foundations/neuroscience.md)** — 显著性网络、前额叶代谢成本、EIC、程序化。
+- **[逻辑学](foundations/logic.md)** — 谓词逻辑、lambda 演算、CCG、言语行为理论。
+- **[数学](foundations/mathematics.md)** — 信息论、UID、最优编码、线性化。
+- **[大语言模型与 AI](foundations/llm.md)** — Transformer 注意力、迷失在中间、提示词顺序方差、幻觉动态。
 
-## 实践指南
+## 方法论 (Methodology)
 
 学习如何在真实场景中应用 CFLT：
 
-- **[人类学习](methodology/human-learning.md)** — 通过重塑认知肌肉记忆实现二语口语流利度的指南。
-- **[LLM 提示词工程](methodology/llm-prompting.md)** — 将 CFLT 协议作为标准化工程协议以减少模型方差。
+- **[人类学习](methodology/human-learning.md)** — 通过重构认知肌肉记忆实现 L2 口语流利度的指南。
+- **[LLM 提示词](methodology/llm-prompting.md)** — 将 CFLT 协议作为标准化工程协议以减少模型方差。
 
-## 参考资料
+## 参考 (Reference)
 
-- **[参考实现](reference-implementations.md)** — 采用 CFLT 的项目列表。
-- **[参考文献](bibliography.md)** — 跨语言学、语言哲学、数学、LLM/NLP、SLA 的约 80 条引用。
+- **[参考实现](reference-implementations.md)** — 基于 CFLT 构建的项目。
+- **[参考文献](bibliography.md)** — 跨语言学、语言哲学、数学、LLM/NLP 和 SLA 教学法的约 80 条引用。
 
 ---
 
@@ -73,4 +58,4 @@ CFLT 集成了以下六个核心学科的研究成果：
 
 ## 许可
 
-本站理论内容采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 协议。源码：[github.com/corefirst/cflt](https://github.com/corefirst/cflt)。
+本站理论内容采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议。源码：[github.com/corefirst/cflt](https://github.com/corefirst/cflt)。
