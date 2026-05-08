@@ -9,7 +9,7 @@ hide:
 
 > *The cognitive core of an utterance is also its universally-prioritized linear position.*
 
-**CFLT** proposes a single discourse-level principle from which the **Core-First Language Method (CFLM)** derives a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction — and serves as a structured prompt protocol for Large Language Models:
+**CFLT** proposes a single discourse-level principle from which the **CFLT Protocol** derives a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction — and serves as a structured prompt protocol for Large Language Models:
 
 ```
 [Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]
@@ -27,7 +27,7 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 
 ## Foundations
 
-CFLT is built on six disciplinary foundations. Pick the one closest to your background:
+CFLT integrates research across six core disciplines:
 
 - **[Pedagogy](foundations/pedagogy.md)** — Krashen, Vygotsky, Cognitive Load Theory, TBLT, bilingual lexical access.
 - **[Linguistics](foundations/linguistics.md)** — Universal Grammar, information structure, cognitive linguistics, NSM.
@@ -35,9 +35,16 @@ CFLT is built on six disciplinary foundations. Pick the one closest to your back
 - **[Mathematics](foundations/mathematics.md)** — Information theory, UID, optimal coding, linearization.
 - **[LLM & AI](foundations/llm.md)** — Transformer attention, lost-in-the-middle, prompt-order variance, hallucination dynamics.
 
+## Methodology
+
+Learn how to apply CFLT in real-world scenarios:
+
+- **[Human Learning](methodology/human-learning.md)** — A guide to achieving spoken L2 fluency by rebuilding cognitive muscle memory.
+- **[LLM Prompting](methodology/llm-prompting.md)** — Using the CFLT Protocol as a standardized engineering protocol to reduce model variance.
+
 ## Reference
 
-- **[Reference Implementations](reference-implementations.md)** — Projects building on CFLM.
+- **[Reference Implementations](reference-implementations.md)** — Projects building on CFLT.
 - **[Bibliography](bibliography.md)** — ~80 citations across linguistics, philosophy of language, mathematics, LLM/NLP, and SLA pedagogy.
 
 ---

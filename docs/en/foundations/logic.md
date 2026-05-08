@@ -1,172 +1,131 @@
-# Logical Foundations of CFLT/CFLM
+# Logical Foundations of CFLT
 
 > Companion to: [`manifesto.md`](../manifesto.md)
-> Read first: [`core-concept.md`](./core-concept.md) — defines "Core" as a salience anchor, not a syntactic predicate.
-> Purpose: Show how formal logic, lambda calculus, categorial grammar, speech-act theory, and Relevance Theory motivate CFLM's *early-commitment* principle. **None of these formalisms is the surface form CFLM produces — they are inspirations for why early commitment to the salience anchor is computationally well-formed.**
+> Purpose: Show how formal logic, lambda calculus, categorial grammar, speech-act theory, and Relevance Theory motivate the **CFLT Protocol's** *early-commitment* principle. **None of these formalisms is the surface form CFLT produces — they are inspirations for why early commitment to the salience anchor is computationally well-formed.**
 
 ---
 
-## 1. The Through-Line: Early Commitment to the Salience Anchor
+## 1. Scope: Formal Logic as a Functional Analog
 
-Across multiple formal traditions, the same pattern recurs: **the central commitment of an expression should be made early, and modifiers should attach to it after the commitment is in place.**
+Formal logic systems share a deep property with the **CFLT Protocol**: they prioritize the "function" (the action or relation) over its "arguments" (the entities or context) in their underlying representation.
 
-- In **predicate logic**, the predicate is the outer functor; arguments are bound after.
-- In **lambda calculus**, the function exists before the arguments it consumes.
-- In **categorial grammar**, the head functor combines with arguments in a fixed schedule.
-- In **speech-act theory**, the illocutionary force is the act being performed; everything else conditions it.
-- In **Relevance Theory**, the highest-relevance item should be processed first to maximize cognitive effects per unit effort.
+- **Predicate Logic:** $P(a, b, c)$ — the predicate symbol $P$ (the Core) opens the expression.
+- **Computer Science:** `function(arg1, arg2)` — the operation is identified before the data.
 
-CFLM borrows this convergent pattern and applies it to natural language. The Core (salience anchor) is committed to early; `[Reason] → [Space] → [Time]` modifiers attach afterward. **The output is natural language**, not formal notation — but the conceptual order is the same one formal logic has used for over a century.
+CFLT borrows this convergent pattern and applies it to natural language. The Core (salience anchor) is committed to early; `[Reason] → [Space] → [Time]` modifiers attach afterward. **The output is natural language**, not formal notation — but the conceptual order is the same one formal logic has used for over a century.
 
-> **What this document is not:** This document does not claim that CFLM produces formal-logic notation, that CFLM is verb-first, or that CFLM is predicate-first in the syntactic sense. It claims that the *abstract principle of early commitment*, which formal logic articulates clearly, is one of CFLM's intellectual ancestors — and that the resulting natural-language form is computationally well-formed for the reasons formal logic makes precise.
+> **What this document is not:** This document does not claim that CFLT produces formal-logic notation, that CFLT is verb-first, or that it is predicate-first in the syntactic sense. It claims that the *abstract principle of early commitment*, which formal logic articulates clearly, is one of CFLT's intellectual ancestors — and that the resulting natural-language form is computationally well-formed for the reasons formal logic makes precise.
 
 ---
 
-## 2. Predicate Logic (Frege, Russell)
+## 2. Predicate Logic and the "Early Commitment" Principle
 
-Frege (1879, *Begriffsschrift*) introduced predicate logic precisely to disambiguate natural-language thought. In Frege's notation:
+In standard first-order logic, an event is represented by a predicate applied to terms:
+$$\text{Go}(\text{me}, \text{store}, \text{yesterday})$$
 
-$$
-P(a, b, c)
-$$
+**What CFLT borrows from this tradition:**
+1. **The order of disambiguation.** Identifying the predicate first reduces the ambiguity of the following terms. "Eat" restricts the likely arguments to edible things; "Go" restricts them to locations or paths.
+2. **The "Head" status.** The predicate is the logical head of the expression.
 
-The predicate $P$ — the function symbol — appears outermost; the arguments $a, b, c$ are bound to it. Russell (1905, "On Denoting") later argued that English surface forms systematically disguise this underlying logical structure.
-
-**What CFLM borrows from this tradition:**
-- The principle that *the central commitment of a proposition is the function-like component, and arguments are bound to it.*
-- The discipline of making the commitment **explicit and early**, rather than letting it emerge implicitly from word order.
-
-**What CFLM does *not* borrow:**
-- The **notation** $P(a, b, c)$. CFLM produces "I went out, because it rained, at home, yesterday." — comprehensible English with structured ordering.
-- The reduction of "Core" to "predicate symbol." A copular construction ("That girl is my sister") has no obvious "predicate" in the action-verb sense, but it has a clear Core (the identity assertion). CFLM handles this; bare predicate logic does not.
-
-The lesson from Frege/Russell is **structural**, not notational: organize the utterance around its central commitment, then bind the modifiers.
+**What CFLT does *not* borrow:**
+- The **notation** $P(a, b, c)$. CFLT produces "I went out, because it rained, at home, yesterday." — comprehensible English with structured ordering.
+- The reduction of "Core" to "predicate symbol." A copular construction ("That girl is my sister") has no obvious "predicate" in the action-verb sense, but it has a clear Core (the identity assertion). CFLT handles this; bare predicate logic does not.
 
 ---
 
-## 3. Lambda Calculus and Function Application Order
+## 3. Lambda Calculus and Function Application
 
-Church (1936) lambda calculus represents computation as function application. A function $\lambda x.\,f(x)$ is *applied* to arguments — the function exists prior to the arguments it consumes.
+Lambda calculus ($\lambda$-calculus) models computation as function application. 
 
-In semantic composition, an event $e$ predicated of participants and modifiers is built by successive application:
+**CFLT mapping:** the Core is the outermost commitment; Reason, Space, and Time are successively applied modifiers. Linearizing the application schedule outward-to-inward gives Core-First in surface form.
 
-$$
-((((\lambda e. \, \text{COMMIT}(e)) \, a_1) \, a_2) \dots ) \, m_1 \, \dots \, m_k
-$$
-
-Here `COMMIT` is the speaker's salience commitment — what the utterance is fundamentally about. The applications $a_i, m_j$ progressively refine the commitment with arguments and modifiers.
-
-**CFLM mapping:** the Core is the outermost commitment; Reason, Space, and Time are successively applied modifiers. Linearizing the application schedule outward-to-inward gives Core-First in surface form.
-
-**Note on generality:** Lambda calculus is type-agnostic — the function $\lambda e.\,\text{COMMIT}(e)$ can wrap an action, a state, an identity, or a speech act. This generality is exactly why the function-application metaphor extends naturally to CFLM's four core types.
+**Note on generality:** Lambda calculus is type-agnostic — the function $\lambda e.\,\text{COMMIT}(e)$ can wrap an action, a state, an identity, or a speech act. This generality is exactly why the function-application metaphor extends naturally to CFLT's four core types.
 
 ---
 
 ## 4. Combinatory Categorial Grammar (CCG)
 
-Steedman (2000, *The Syntactic Process*) develops CCG, in which lexical items carry **syntactic categories** (functors and arguments) and combine via formal combinators. A transitive verb has category `(S\NP)/NP` — a function awaiting two NP arguments.
+CCG (Steedman 2000) is a highly lexicalized grammar formalism where the "syntax" is largely contained within the lexical categories themselves. CCG is unique in allowing multiple equivalent derivations (linearizations) for the same semantic result.
 
-Crucially, CCG admits *multiple equivalent derivations* for the same surface string. Speakers (and parsers) must select one schedule among many.
+**CFLT as a CCG schedule choice:** CFLT does not invent a new combinatory grammar. It selects one canonical schedule from CCG's flexible space:
+1. The **Core** is the primary functor.
+2. It "looks" for its arguments in a fixed, predictable direction.
 
-**CFLM as a CCG schedule choice:** CFLM does not invent a new combinatory grammar. It selects one canonical schedule from CCG's flexible space:
-
-$$
-\text{Core} \succ \text{Cause} \succ \text{Place} \succ \text{Time}
-$$
-
-This is a **deterministic linearization** — the same combinatory machinery, but with a fixed processing order. The benefit is **predictability**: both human learners and machine parsers know which derivation to expect, reducing planning cost (see `mathematics.md` §7 for the search-space collapse argument).
+By fixing the derivation path, the CFLT Protocol eliminates the "spurious ambiguity" that usually complicates CCG parsing, making it an ideal bridge for AI agents.
 
 ---
 
-## 5. Speech Act Theory: Illocutionary Force at the Anchor
+## 5. Speech Act Theory (Austin, Searle)
 
-Austin (1962, *How to Do Things with Words*) and Searle (1969, *Speech Acts*) established that every utterance performs an act — assertion, request, promise, question, etc. — characterized by its **illocutionary force**.
+Language does not just describe the world; it performs actions (*illocutionary acts*).
 
-Searle's analysis (1969:30–31) decomposes a speech act into:
-1. The **illocutionary force indicator** — what kind of act this is
-2. The **propositional content** — what the act is about
-3. The **conditions of satisfaction** — when the act has been successfully performed
+**CFLT mapping:** the Core, in CFLT, is the linguistic realization of the illocutionary commitment. For each speech-act type:
+- **Assertive:** The core claim ("I went out").
+- **Directive:** The core request ("Could you pass the salt").
+- **Expressive:** The core state ("I'm exhausted").
+- **Declarative:** The core identity ("That girl is my sister").
 
-**CFLM mapping:** the Core, in CFLM, is the linguistic realization of the illocutionary commitment. For each speech-act type:
-
-| Act type | Core takes the form of | Example |
-|----------|------------------------|---------|
-| Assertion | Action verb / predicate complement | "I went out, because…" |
-| Identification | Copular complement | "That girl is my sister, wearing…" |
-| Description | Stative predicate | "I'm exhausted, because…" |
-| Request | Imperative or modal verb | "Could you help me, because…" |
-
-Note that this list maps directly onto the four core types defined in [`core-concept.md`](./core-concept.md). Speech act theory provides the philosophical grounding for treating these four cases under a single linearization rule: each commits the speaker to a different *kind* of act, but each commits **early**.
+CFLT ensures that the **illocutionary force** of the utterance is identified first, aligning with the listener's need to know whether they are being informed, requested, or addressed.
 
 ---
 
 ## 6. Relevance Theory (Sperber & Wilson)
 
-Relevance Theory (Sperber & Wilson 1986/1995) holds that human cognition tends to maximize **relevance** — the ratio of cognitive effects to processing effort.
+Relevance Theory posits that human communication is governed by the search for **optimal relevance**: achieving maximum cognitive effect with minimum processing effort.
 
-The Communicative Principle of Relevance:
+**CFLT as a relevance-maximizing strategy:** placing the Core at position 0 puts the highest-effect token where the listener's attention is greatest. The listener (or LLM, see `llm.md`) can begin computing inferences from the Core onward, rather than waiting through modifiers to discover what the utterance is about.
 
-> Every act of ostensive communication communicates a presumption of its own optimal relevance.
+Native English's end-weight tendency (Quirk et al. 1985) competes with this principle: heavy NPs and given/new structuring often delay the new information. CFLT resolves the tension by treating end-weight as a **stylistic refinement** applied at the polishing stage (the Grammar Overlay in the product implementation), not at the conceptual scaffold stage.
 
-**CFLM as a relevance-maximizing strategy:** placing the Core at position 0 puts the highest-effect token where the listener's attention is greatest. The listener (or LLM, see `llm.md`) can begin computing inferences from the Core onward, rather than waiting through modifiers to discover what the utterance is about.
-
-Native English's end-weight tendency (Quirk et al. 1985) competes with this principle: heavy NPs and given/new structuring often delay the new information. CFLM resolves the tension by treating end-weight as a **stylistic refinement** applied at the polishing stage (the Grammar Overlay in the product implementation), not at the conceptual scaffold stage.
-
-This is consistent with the broader lesson: CFLM optimizes **conceptual order**; native idiom optimizes **surface flow**. The Grammar Overlay layer reconciles them.
+This is consistent with the broader lesson: CFLT optimizes **conceptual order**; native idiom optimizes **surface flow**. The Grammar Overlay layer reconciles them.
 
 ---
 
 ## 7. Gricean Maxims
 
-Grice (1975) proposed the Cooperative Principle and four maxims:
+Grice (1975) proposed four maxims for cooperative conversation: Quality, Quantity, Relation, and Manner.
 
-| Maxim | Statement | CFLM correspondence |
-|-------|-----------|---------------------|
-| Quantity | Be informative, not over-informative | Four-slot template enforces minimum sufficient information |
-| Quality | Be truthful | Orthogonal to CFLM (a content concern) |
-| Relation | Be relevant | Core-First places the most relevant token at position 0 |
-| **Manner** | **Be clear, brief, orderly** | **CFLM's fixed slot order is the orderliness condition** |
+| Maxim | Statement | CFLT correspondence |
+|---|---|---|
+| Quality | Be truthful | Orthogonal to CFLT (a content concern) |
+| Quantity | Be informative | Handled by the four-slot completeness rule |
+| Relation | Be relevant | Handled by selecting a salient Core |
+| **Manner** | **Be clear, brief, orderly** | **The fixed slot order is the orderliness condition** |
 
-The Maxim of Manner — *"Be orderly"* — explicitly requests predictable linearization. CFLM provides exactly one canonical order, fully satisfying this maxim. This makes CFLM unusually *Gricean-aligned*: native speakers improvise orderliness through context-sensitive heuristics; CFLM provides a single rule that achieves the same goal deterministically.
-
----
-
-## 8. Discourse Representation Theory (Kamp)
-
-Kamp (1981) introduced Discourse Representation Theory (DRT) to handle **incremental** semantic interpretation: each new clause updates a structured discourse representation, with referents introduced and conditions accumulated over time.
-
-DRT formalizes the intuition that meaning is built **left to right**, with each utterance contributing to a growing representation.
-
-**CFLM mapping:** if the Core is introduced first, it instantly establishes the central discourse referent — the event variable, identity claim, state, or speech act — against which all subsequent contributions are anchored. Modifiers attach to a referent that already exists in the discourse representation, eliminating the temporary ambiguity that would arise if modifiers appeared before their target.
-
-This is exactly the property that modern autoregressive language models (causal/left-to-right) also exploit (see `llm.md`).
+The Maxim of Manner — *"Be orderly"* — explicitly requests predictable linearization. CFLT provides exactly one canonical order, fully satisfying this maxim. This makes the protocol unusually *Gricean-aligned*: native speakers improvise orderliness through context-sensitive heuristics; CFLT provides a single rule that achieves the same goal deterministically.
 
 ---
 
-## 9. Modal and Temporal Logic Under CFLM
+## 8. Discourse Representation Theory (DRT)
 
-The four CFLM slots align with operators in standard logical extensions:
+DRT (Kamp 1981) models how listeners build mental "maps" of a conversation as it unfolds.
 
-| CFLM slot | Logical operator | Reading |
-|-----------|------------------|---------|
-| Core | The asserted commitment $C$ | Whatever the speaker fundamentally commits to |
-| Condition/Reason | $\Box(\phi \to C)$ or $\text{BECAUSE}(\phi, C)$ | Causal/conditional grounding |
-| Space/Context | Spatial operator $\text{AT}_l(C)$ | Spatial location of $C$ |
-| Time | Temporal operator $\text{AT}_t(C)$ | Temporal location of $C$ |
+**CFLT mapping:** if the Core is introduced first, it instantly establishes the central discourse referent — the event variable, identity claim, state, or speech act — against which all subsequent contributions are anchored. Modifiers attach to a referent that already exists in the discourse representation, eliminating the temporary ambiguity that would arise if modifiers appeared before their target.
 
-This is an **operator-stacking** reading: $C$ is the innermost commitment; reason, space, and time are progressively more "outer" modal-temporal operators wrapping it. Linearizing them outward-from-core gives exactly CFLM's order.
+---
 
-The advantage of this framing is that it works regardless of *what kind* of commitment $C$ is. Whether $C$ is an action ("went out"), a state ("exhausted"), an identity ("is my sister"), or a request ("help me"), the operator stacking is the same.
+## 9. Modal and Temporal Logic Under CFLT
+
+The four CFLT slots align with operators in standard logical extensions:
+
+| CFLT slot | Logical operator | Reading |
+|---|---|---|
+| [Core] | $C$ | Core Proposition |
+| [Reason] | $\text{CAUSE}(C)$ | Causal logic |
+| [Space] | $\diamond_{\text{loc}} C$ | Modal logic of location |
+| [Time] | $\diamond_{\text{time}} C$ | Temporal logic ($G, F, H, P$) |
+
+This is an **operator-stacking** reading: $C$ is the innermost commitment; reason, space, and time are progressively more "outer" modal-temporal operators wrapping it. Linearizing them outward-from-core gives exactly the protocol's order.
 
 ---
 
 ## 10. Honest Limitations
 
-1. **Formal notation is the analogy, not the surface form.** Predicate-logic notation (`P(a,b,c)`), lambda terms, and CCG categories are inspirations for *why early commitment is computationally well-formed*. CFLM's actual output is natural language. A reader concluding "CFLM is formal-logic notation" has misread; see [`core-concept.md`](./core-concept.md).
-2. **Logical priority ≠ pragmatic priority.** Formal logic places the function outermost, but human conversation is governed by pragmatics where given information often precedes new (Topic-Comment, Theme-Rheme). CFLM optimizes for *clarity of salience commitment*, which can conflict with native idiomaticity — the Grammar Overlay layer reconciles them.
-3. **Categorial flexibility is sacrificed.** CCG explicitly admits multiple equivalent derivations; CFLM picks one canonical schedule. This trades flexibility for predictability — a fair exchange for pedagogy and machine processing, but a real loss for fully native idiomatic production.
-4. **Negation and quantifier scope** are underspecified in the four-slot template. Complex utterances (negative existentials, generic statements, counterfactuals) may need slot extensions or escape hatches; this is a known open problem.
-5. **Nested speech acts.** Performatives like "I promise to leave tomorrow" embed a verb that *is* the speech act and a complement that *names* a future action. Which slot does each fill? CFLM needs a meta-rule for nested acts — likely the outer act is the Core and the inner content fills the modifier slots.
+1. **Formal notation is the analogy, not the surface form.** Predicate-logic notation (`P(a,b,c)`), lambda terms, and CCG categories are inspirations for *why early commitment is computationally well-formed*. CFLT's actual output is natural language. A reader concluding "CFLT is formal-logic notation" has misread; see [`core-concept.md`](./core-concept.md).
+2. **Logical priority ≠ pragmatic priority.** Formal logic places the function outermost, but human conversation is governed by pragmatics where given information often precedes new (Topic-Comment, Theme-Rheme). CFLT optimizes for *clarity of salience commitment*, which can conflict with native idiomaticity — the Grammar Overlay layer reconciles them.
+3. **Categorial flexibility is sacrificed.** CCG explicitly admits multiple equivalent derivations; CFLT picks one canonical schedule. This trades flexibility for predictability — a fair exchange for pedagogy and machine processing, but a real loss for fully native idiomatic production.
+4. **Non-compositional idioms.** Idiomatic expressions like "kick the bucket" do not easily decompose into Core + Modifiers. CFLT works best for compositional, literal discourse.
+5. **Nested speech acts.** Performatives like "I promise to leave tomorrow" embed a verb that *is* the speech act and a complement that *names* a future action. Which slot does each fill? CFLT needs a meta-rule for nested acts — likely the outer act is the Core and the inner content fills the modifier slots.
 
 ---
 

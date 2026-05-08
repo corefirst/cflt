@@ -26,7 +26,7 @@ hide:
 
 > *话语的认知核心，也是其在任何语言中被普遍优先排列的线性位置。*
 
-由此推导出 **核心优先语言方法 (CFLM)** 的四元素排序规则：
+由此定义出 **CFLT 协议** 的四元素排序规则：
 
 ```
 [核心动作/结果] → [条件/原因] → [空间/语境] → [时间]
@@ -44,7 +44,7 @@ hide:
 
 ## 理论基础（六大学科支撑）
 
-按你的学科背景选择：
+CFLT 集成了以下六个核心学科的研究成果：
 
 - **[教育学基础](foundations/pedagogy.md)**
 - **[语言学基础](foundations/linguistics.md)**
@@ -52,9 +52,16 @@ hide:
 - **[数学基础](foundations/mathematics.md)**
 - **[大语言模型基础](foundations/llm.md)**
 
+## 实践指南
+
+学习如何在真实场景中应用 CFLT：
+
+- **[人类学习](methodology/human-learning.md)** — 通过重塑认知肌肉记忆实现二语口语流利度的指南。
+- **[LLM 提示词工程](methodology/llm-prompting.md)** — 将 CFLT 协议作为标准化工程协议以减少模型方差。
+
 ## 参考资料
 
-- **[参考实现](reference-implementations.md)** — 采用 CFLM 的项目列表。
+- **[参考实现](reference-implementations.md)** — 采用 CFLT 的项目列表。
 - **[参考文献](bibliography.md)** — 跨语言学、语言哲学、数学、LLM/NLP、SLA 的约 80 条引用。
 
 ---

@@ -14,7 +14,7 @@
 
 > *The cognitive core of an utterance is also its universally-prioritized linear position.*
 
-From this principle, the **Core-First Language Method (CFLM)** derives a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction, while also serving as a structured prompt protocol for Large Language Models:
+From this principle, the **CFLT Protocol** defines a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction, while also serving as a structured prompt protocol for Large Language Models:
 
 ```
 [Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]
@@ -28,16 +28,16 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 
 For first-time readers:
 
-1. **[`docs/en/manifesto.md`](./docs/en/manifesto.md)** — Start here. The canonical theoretical statement: what CFLT claims, why, and how the four-element Core-First sequence is operationalized as CFLM.
+1. **[`docs/en/manifesto.md`](./docs/en/manifesto.md)** — Start here. The canonical theoretical statement: what CFLT claims, why, and how the four-element Core-First sequence is operationalized as CFLT.
 
-2. **[`docs/en/foundations/core-concept.md`](./docs/en/foundations/core-concept.md)** — Read this *immediately after the manifesto*. It defines what "Core" means in CFLM (a salience anchor — action, state, identity, or request — **not** a verb or predicate) and refutes the most common mis-readings. Also addresses how CFLM is the unmarked default, not the only permitted form. Without this, the formal-logic and information-theoretic analogies in the other foundation docs can be misread.
+2. **[`docs/en/foundations/core-concept.md`](./docs/en/foundations/core-concept.md)** — Read this *immediately after the manifesto*. It defines what "Core" means in CFLT (a salience anchor — action, state, identity, or request — **not** a verb or predicate) and refutes the most common mis-readings. Also addresses how CFLT is the unmarked default, not the only permitted form. Without this, the formal-logic and information-theoretic analogies in the other foundation docs can be misread.
 
 3. **Pick the foundation closest to your background:**
    - **[`docs/en/foundations/pedagogy.md`](./docs/en/foundations/pedagogy.md)** — Krashen's Input Hypothesis, Vygotsky's ZPD, Cognitive Load Theory, Skill Acquisition Theory, Task-Based Language Teaching, Kroll's bilingual lexical access, motor-skill transfer in phonetics. Most directly relevant for educators and SLA researchers.
    - **[`docs/en/foundations/linguistics.md`](./docs/en/foundations/linguistics.md)** — Universal Grammar, information structure (Theme-Rheme, Topic-Comment), cognitive linguistics (Talmy's Figure, Langacker's profile), speech production (Levelt), Natural Semantic Metalanguage. Explicitly distinguishes Core-First from VSO word order.
-   - **[`docs/en/foundations/logic.md`](./docs/en/foundations/logic.md)** — Predicate logic, lambda calculus, CCG, speech-act theory, Relevance Theory, Gricean maxims, DRT. Frames these as inspirations for the *early-commitment principle*, not as the surface form CFLM emits.
+   - **[`docs/en/foundations/logic.md`](./docs/en/foundations/logic.md)** — Predicate logic, lambda calculus, CCG, speech-act theory, Relevance Theory, Gricean maxims, DRT. Frames these as inspirations for the *early-commitment principle*, not as the surface form CFLT emits.
    - **[`docs/en/foundations/mathematics.md`](./docs/en/foundations/mathematics.md)** — Information theory, Uniform Information Density, optimal coding, Markov chains, KL divergence, the linearization problem on partial orders, search-space reduction in production planning.
-   - **[`docs/en/foundations/llm.md`](./docs/en/foundations/llm.md)** — Transformer attention, positional biases, lost-in-the-middle, prompt-order variance, chain-of-thought, hallucination dynamics. Why CFLM aligns with LLM behavior precisely because it stays inside the natural-language manifold the model was trained on.
+   - **[`docs/en/foundations/llm.md`](./docs/en/foundations/llm.md)** — Transformer attention, positional biases, lost-in-the-middle, prompt-order variance, chain-of-thought, hallucination dynamics. Why CFLT aligns with LLM behavior precisely because it stays inside the natural-language manifold the model was trained on.
 
 4. **[`docs/en/bibliography.md`](./docs/en/bibliography.md)** — Unified citations (~80 references across linguistics, philosophy of language, mathematics, LLM/NLP research, and SLA pedagogy).
 
@@ -77,7 +77,7 @@ For first-time readers:
 
 CFLT itself is theory and specification. Concrete implementations live in independent projects. See [`docs/en/reference-implementations.md`](./docs/en/reference-implementations.md) for the up-to-date list.
 
-The first reference implementation is [**CoreFirst**](https://github.com/corefirst/corefirst) ([corefirst.world](https://corefirst.world)) — an open-source Next.js application implementing CFLM for human L2 learners (Pillar I).
+The first reference implementation is [**CoreFirst**](https://github.com/corefirst/corefirst) ([corefirst.world](https://corefirst.world)) — an open-source Next.js application implementing CFLT for human L2 learners (Pillar I).
 
 ---
 
@@ -87,7 +87,7 @@ The theory documents follow four rules:
 
 1. **Cite real scholarship.** Every named author and work is verifiable.
 2. **Acknowledge limits.** Each foundation document contains an "Honest Limitations" section. CFLT is partly normative (a pedagogical/computational protocol), not purely descriptive — and we say so.
-3. **Connect explicitly to CFLM claims.** Theory exists to support specific operational claims, not to decorate them.
+3. **Connect explicitly to CFLT claims.** Theory exists to support specific operational claims, not to decorate them.
 4. **Keep "Core" defined consistently.** Core = salience anchor (action / state / identity / request). Not a verb. Not a predicate symbol. The core-concept document is the canonical reference.
 
 ---
@@ -100,7 +100,7 @@ If you cite CFLT in academic or technical writing, please use:
 
 Specific foundation documents may be cited as:
 
-> CFLT Core Team. (2026). *Pedagogical Foundations of CFLT/CFLM.* In *Core-First Language Theory.* https://cflt.center/foundations/pedagogy
+> CFLT Core Team. (2026). *Pedagogical Foundations of CFLT.* In *Core-First Language Theory.* https://cflt.center/foundations/pedagogy
 
 ---
 
@@ -110,8 +110,8 @@ Contributions are welcome — open an issue or pull request:
 
 - Refinements to the foundations (additional citations, counter-arguments, new disciplines)
 - Translations of any document to other languages
-- New entries to `reference-implementations.md` for projects that adopt CFLM
-- Empirical evidence supporting or challenging CFLM's claims
+- New entries to `reference-implementations.md` for projects that adopt CFLT
+- Empirical evidence supporting or challenging CFLT's claims
 
 ---
 

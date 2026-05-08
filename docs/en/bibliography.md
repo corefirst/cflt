@@ -1,4 +1,4 @@
-# CFLT/CFLM Bibliography
+# CFLT Bibliography
 
 > Unified reference list for all theory documents. Citations follow author-date format; full bibliographic details below.
 
@@ -10,27 +10,23 @@
 - **Boroditsky, L.** (2001). "Does Language Shape Thought? Mandarin and English Speakers' Conceptions of Time." *Cognitive Psychology* 43(1), 1–22.
 - **Chomsky, N.** (1981). *Lectures on Government and Binding.* Dordrecht: Foris.
 - **Chomsky, N.** (1986). *Knowledge of Language: Its Nature, Origin, and Use.* New York: Praeger.
-- **Dryer, M. S.** (2013). "Order of Subject, Object and Verb." In *The World Atlas of Language Structures Online*, Dryer & Haspelmath (eds). Leipzig: Max Planck Institute for Evolutionary Anthropology.
+- **Dryer, M. S.** (2013). "Determiner precedes noun." In *The World Atlas of Language Structures Online*, Dryer & Haspelmath (eds). Leipzig: Max Planck Institute for Evolutionary Anthropology.
 - **Firbas, J.** (1992). *Functional Sentence Perspective in Written and Spoken Communication.* Cambridge: Cambridge University Press.
-- **Goddard, C. & Wierzbicka, A.** (eds.) (2002). *Meaning and Universal Grammar: Theory and Empirical Findings.* Amsterdam: John Benjamins.
+- **Goddard, C. & Wierzbicka, A.** (2002). *Meaning and Universal Grammar: Theory and Empirical Case Studies.* Amsterdam: John Benjamins.
 - **Goldberg, A. E.** (1995). *Constructions: A Construction Grammar Approach to Argument Structure.* Chicago: University of Chicago Press.
 - **Goldberg, A. E.** (2006). *Constructions at Work: The Nature of Generalization in Language.* Oxford: Oxford University Press.
-- **Croft, W.** (1990). *Typology and Universals.* Cambridge: Cambridge University Press.
-- **Givón, T.** (2001). *Syntax: An Introduction* (Vols. 1–2). Amsterdam: John Benjamins.
 - **Greenberg, J. H.** (1963). "Some Universals of Grammar with Particular Reference to the Order of Meaningful Elements." In *Universals of Language*, Greenberg (ed). Cambridge, MA: MIT Press.
-- **Greenberg, J. H.** (1966). *Language Universals, with Special Reference to Feature Hierarchies.* The Hague: Mouton.
 - **Gundel, J. K., Hedberg, N. & Zacharski, R.** (1993). "Cognitive Status and the Form of Referring Expressions in Discourse." *Language* 69(2), 274–307.
-- **Halliday, M. A. K.** (1985). *An Introduction to Functional Grammar.* London: Arnold.
-- **Lambrecht, K.** (1994). *Information Structure and Sentence Form.* Cambridge: Cambridge University Press.
-- **Langacker, R. W.** (1987). *Foundations of Cognitive Grammar, Vol. 1.* Stanford: Stanford University Press.
+- **Lambrecht, K.** (1994). *Information Structure and Sentence Form: Topic, Focus, and the Mental Representations of Discourse Referents.* Cambridge: Cambridge University Press.
+- **Langacker, R. W.** (1987). *Foundations of Cognitive Grammar, Vol. 1: Theoretical Prerequisites.* Stanford: Stanford University Press.
 - **Langacker, R. W.** (2008). *Cognitive Grammar: A Basic Introduction.* Oxford: Oxford University Press.
 - **Levelt, W. J. M.** (1989). *Speaking: From Intention to Articulation.* Cambridge, MA: MIT Press.
 - **Li, C. N. & Thompson, S. A.** (1976). "Subject and Topic: A New Typology of Language." In *Subject and Topic*, Li (ed). New York: Academic Press.
-- **Lucy, J. A.** (1992). *Language Diversity and Thought.* Cambridge: Cambridge University Press.
+- **Lucy, J. A.** (1992). *Language Diversity and Thought: A Reformulation of the Linguistic Relativity Hypothesis.* Cambridge: Cambridge University Press.
 - **Mathesius, V.** (1929). "Functional Linguistics." Republished in *Praguiana* (1983), Vachek (ed). Amsterdam: John Benjamins.
 - **Pinker, S.** (1994). *The Language Instinct.* New York: William Morrow.
 - **Slobin, D. I.** (1996). "From 'Thought and Language' to 'Thinking for Speaking'." In *Rethinking Linguistic Relativity*, Gumperz & Levinson (eds). Cambridge: Cambridge University Press.
-- **Talmy, L.** (2000). *Toward a Cognitive Semantics, Vol. 1: Concept Structuring Systems.* Cambridge, MA: MIT Press.
+- **Talmy, L.** (2000). *Toward a Cognitive Semantics, Vol. 1: Concept Structuring Systems.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/6847.001.0001](https://doi.org/10.7551/mitpress/6847.001.0001)
 - **Wierzbicka, A.** (1996). *Semantics: Primes and Universals.* Oxford: Oxford University Press.
 
 ## Logic and Philosophy of Language
@@ -49,27 +45,31 @@
 
 - **Huffman, D. A.** (1952). "A Method for the Construction of Minimum-Redundancy Codes." *Proceedings of the IRE* 40(9), 1098–1101.
 - **Jaeger, T. F.** (2010). "Redundancy and Reduction: Speakers Manage Syntactic Information Density." *Cognitive Psychology* 61(1), 23–62.
-- **Levy, R. & Jaeger, T. F.** (2007). "Speakers Optimize Information Density Through Syntactic Reduction." *Advances in Neural Information Processing Systems* 19.
-- **Shannon, C. E.** (1948). "A Mathematical Theory of Communication." *Bell System Technical Journal* 27, 379–423, 623–656.
+- **Levy, R. & Jaeger, T. F.** (2007). "Speakers Optimize Information Density Through Syntactic Reduction." *Advances in Neural Information Processing Systems* 19. DOI: [10.7551/mitpress/7503.003.0111](https://doi.org/10.7551/mitpress/7503.003.0111)
+- **Shannon, C. E.** (1948). "A Mathematical Theory of Communication." *Bell System Technical Journal* 27, 379–423, 623–656. DOI: [10.1002/j.1538-7305.1948.tb01338.x](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x)
 
 ## Large Language Models and NLP
 
-- **Hokamp, C. & Liu, Q.** (2017). "Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search." *ACL*.
-- **Kojima, T., Gu, S. S., Reid, M., Matsuo, Y. & Iwasawa, Y.** (2022). "Large Language Models are Zero-Shot Reasoners." *NeurIPS*.
-- **Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F. & Liang, P.** (2023). "Lost in the Middle: How Language Models Use Long Contexts." arXiv:2307.03172.
-- **Lu, Y., Bartolo, M., Moore, A., Riedel, S. & Stenetorp, P.** (2022). "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity." *ACL*.
-- **Maynez, J., Narayan, S., Bohnet, B. & McDonald, R.** (2020). "On Faithfulness and Factuality in Abstractive Summarization." *ACL*.
-- **Min, S., Lyu, X., Holtzman, A., Artetxe, M., Lewis, M., Hajishirzi, H. & Zettlemoyer, L.** (2022). "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?" *EMNLP*.
-- **Ouyang, L. et al.** (2022). "Training Language Models to Follow Instructions with Human Feedback." *NeurIPS* (InstructGPT).
-- **Post, M. & Vilar, D.** (2018). "Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation." *NAACL*.
-- **Sclar, M., Choi, Y., Tsvetkov, Y. & Suhr, A.** (2024). "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design." *ICLR*.
-- **Shaw, P., Uszkoreit, J. & Vaswani, A.** (2018). "Self-Attention with Relative Position Representations." *NAACL*.
-- **Su, J., Lu, Y., Pan, S., Wen, B. & Liu, Y.** (2021). "RoFormer: Enhanced Transformer with Rotary Position Embedding." arXiv:2104.09864.
-- **Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł. & Polosukhin, I.** (2017). "Attention Is All You Need." *NeurIPS*.
-- **Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q. & Zhou, D.** (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *NeurIPS*.
-- **Xiao, G., Tian, Y., Chen, B., Han, S. & Lewis, M.** (2024). "Efficient Streaming Language Models with Attention Sinks." *ICLR*.
-- **Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y. & Narasimhan, K.** (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." *NeurIPS*.
-- **Zhang, T. et al.** (2023). "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models." arXiv:2309.01219.
+- **Habba, E., Arviv, O., Itzhak, I., Perlitz, Y., Bandel, E., Choshen, L., Shmueli-Scheuer, M. & Stanovsky, G.** (2025). "DOVE: A Large-Scale Multi-Dimensional Predictions Dataset Towards Meaningful LLM Evaluation." *Findings of ACL*. DOI: [10.18653/v1/2025.findings-acl.611](https://doi.org/10.18653/v1/2025.findings-acl.611)
+- **Hawkins, J. A.** (1994). *A Performance Theory of Order and Constituency.* Cambridge: Cambridge University Press. DOI: [10.1017/CBO9780511554285](https://doi.org/10.1017/CBO9780511554285)
+- **Hawkins, J. A.** (2004). *Efficiency and Complexity in Grammars.* Oxford: Oxford University Press. DOI: [10.1093/acprof:oso/9780199252688.001.0001](https://doi.org/10.1093/acprof:oso/9780199252688.001.0001)
+- **Hokamp, C. & Liu, Q.** (2017). "Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search." *ACL*. DOI: [10.18653/v1/P17-1141](https://doi.org/10.18653/v1/P17-1141)
+- **Kojima, T., Gu, S. S., Reid, M., Matsuo, Y. & Iwasawa, Y.** (2022). "Large Language Models are Zero-Shot Reasoners." *NeurIPS*. DOI: [10.48550/arXiv.2205.11916](https://doi.org/10.48550/arXiv.2205.11916)
+- **Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F. & Liang, P.** (2023). "Lost in the Middle: How Language Models Use Long Contexts." *Transactions of the Association for Computational Linguistics*. DOI: [10.1162/tacl_a_00638](https://doi.org/10.1162/tacl_a_00638)
+- **Lu, Y., Bartolo, M., Moore, A., Riedel, S. & Stenetorp, P.** (2022). "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity." *ACL*. DOI: [10.18653/v1/2022.acl-long.556](https://doi.org/10.18653/v1/2022.acl-long.556)
+- **Maynez, J., Narayan, S., Bohnet, B. & McDonald, R.** (2020). "On Faithfulness and Factuality in Abstractive Summarization." *ACL*. DOI: [10.18653/v1/2020.acl-main.173](https://doi.org/10.18653/v1/2020.acl-main.173)
+- **Min, S., Lyu, X., Holtzman, A., Artetxe, M., Lewis, M., Hajishirzi, H. & Zettlemoyer, L.** (2022). "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?" *EMNLP*. DOI: [10.18653/v1/2022.emnlp-main.759](https://doi.org/10.18653/v1/2022.emnlp-main.759)
+- **Ouyang, L. et al.** (2022). "Training Language Models to Follow Instructions with Human Feedback." *NeurIPS*. [Official Link](https://papers.nips.cc/paper_files/paper/2022/hash/b1efde53be36b95607451731cfad1409-Abstract-Conference.html)
+- **Post, M. & Vilar, D.** (2018). "Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation." *NAACL*. DOI: [10.18653/v1/N18-1119](https://doi.org/10.18653/v1/N18-1119)
+- **Sclar, M., Choi, Y., Tsvetkov, Y. & Suhr, A.** (2024). "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design." *ICLR*. [OpenReview Link](https://openreview.net/forum?id=9M2V6nB1e3)
+- **Shaw, P., Uszkoreit, J. & Vaswani, A.** (2018). "Self-Attention with Relative Position Representations." *NAACL*. DOI: [10.18653/v1/N18-2074](https://doi.org/10.18653/v1/N18-2074)
+- **Su, J., Lu, Y., Pan, S., Wen, B. & Liu, Y.** (2021). "RoFormer: Enhanced Transformer with Rotary Position Embedding." *Neurocomputing*. DOI: [10.1016/j.neucom.2022.10.031](https://doi.org/10.1016/j.neucom.2022.10.031)
+- **Vaswani, A. et al.** (2017). "Attention Is All You Need." *NeurIPS*. [Official Link](https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+- **Wei, J. et al.** (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *NeurIPS*. [Official Link](https://papers.nips.cc/paper_files/paper/2022/hash/8bb0d291acd4acf06ef112099c16f326-Abstract-Conference.html)
+- **Xiao, G., Tian, Y., Chen, B., Han, S. & Lewis, M.** (2024). "Efficient Streaming Language Models with Attention Sinks." *ICLR*. DOI: [10.48550/arXiv.2309.17453](https://doi.org/10.48550/arXiv.2309.17453)
+- **Yao, S. et al.** (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." *NeurIPS*. [Official Link](https://papers.nips.cc/paper_files/paper/2023/hash/271db403056345464197479758782aee-Abstract-Conference.html)
+- **Zhang, T. et al.** (2023). "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models." *arXiv*:2309.01219. [Link](https://arxiv.org/abs/2309.01219)
+- **Zheng, L. et al.** (2024). "SGLang: Efficient Execution of Structured Language Model Programs." *NeurIPS*. [OpenReview Link](https://openreview.net/forum?id=VqkAKQibpq)
 
 ## Pedagogy and Second-Language Acquisition
 
@@ -83,6 +83,7 @@
 - **Flege, J. E.** (1995). "Second Language Speech Learning: Theory, Findings, and Problems." In *Speech Perception and Linguistic Experience*, Strange (ed). Baltimore: York Press.
 - **Flege, J. E.** (2007). "Language Contact in Bilingualism: Phonetic System Interactions." In *Laboratory Phonology 9*, Cole & Hualde (eds). Berlin: Mouton de Gruyter.
 - **Hartshorne, J. K., Tenenbaum, J. B. & Pinker, S.** (2018). "A Critical Period for Second Language Acquisition: Evidence from 2/3 Million English Speakers." *Cognition* 177, 263–277.
+- **Hashimoto, Y., Yokoyama, S. & Kawashima, R.** (2012). "Neuro-typology of sentence comprehension: Cross-linguistic difference in canonical word order affects brain responses during sentence comprehension." *The Open Medical Imaging Journal* 6, 62–69. DOI: [10.2174/1874347101206010062](https://doi.org/10.2174/1874347101206010062)
 - **Kormos, J.** (2006). *Speech Production and Second Language Acquisition.* Mahwah, NJ: Erlbaum.
 - **Kormos, J.** (2014). "Speech Production and Second Language Acquisition." In *The Routledge Handbook of Second Language Acquisition*, Gass & Mackey (eds). New York: Routledge.
 - **Krashen, S. D.** (1982). *Principles and Practice in Second Language Acquisition.* Oxford: Pergamon.
@@ -98,6 +99,7 @@
 - **Sweller, J.** (1988). "Cognitive Load During Problem Solving: Effects on Learning." *Cognitive Science* 12(2), 257–285.
 - **Sweller, J., Ayres, P. & Kalyuga, S.** (2011). *Cognitive Load Theory.* New York: Springer.
 - **Vygotsky, L. S.** (1978). *Mind in Society: The Development of Higher Psychological Processes.* Cambridge, MA: Harvard University Press.
+- **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159. DOI: [10.1016/S1053-8119(06)00001-X](https://doi.org/10.1016/S1053-8119(06)00001-X)
 
 ## Adjacent (cited for distinction in `manifesto.md` §4)
 

@@ -11,8 +11,8 @@ CFLT itself is theory and specification — the implementations are where the pr
 ### CoreFirst (Pillar I — Human Bilingual Education)
 - **Domain:** [corefirst.world](https://corefirst.world)
 - **Repository:** [github.com/corefirst/corefirst](https://github.com/corefirst/corefirst)
-- **Purpose:** Reference implementation of CFLM for human L2 learners. Next.js web application providing a Logic Transformer, AI Courseware Generator, Voice Challenge with phonetic scoring, gamified CFLM Builder, and progress analytics.
-- **Audience:** Adult L2 learners (initial v1 target), with planned expansion to all age groups via the Visual CFLM delivery model.
+- **Purpose:** Reference implementation of CFLT for human L2 learners. Next.js web application providing a Logic Transformer, AI Courseware Generator, Voice Challenge with phonetic scoring, gamified CFLT Builder, and progress analytics.
+- **Audience:** Adult L2 learners (initial v1 target), with planned expansion to all age groups via the Visual CFLT delivery model.
 - **License:** MIT (code) / CC BY 4.0 (in-app educational content where applicable)
 - **Status:** Active development
 
@@ -20,9 +20,9 @@ CFLT itself is theory and specification — the implementations are where the pr
 
 ## Planned
 
-### apcore-cflm (Pillar II — LLM Protocol Layer)
+### apcore-cflt (Pillar II — LLM Protocol Layer)
 - **Repository:** TBD (will live in the [apcore](https://github.com/apcore) ecosystem)
-- **Purpose:** CFLM as a standardized reasoning protocol for LLMs and AI agents. Will provide CFLM-aware MCP server, CLI tooling for corpus-level CFLM transformation, and SDKs for major language frameworks.
+- **Purpose:** CFLT as a standardized reasoning protocol for LLMs and AI agents. Will provide CFLT-aware MCP server, CLI tooling for corpus-level CFLT transformation, and SDKs for major language frameworks.
 - **Audience:** LLM/Agent developers, framework builders.
 - **Status:** Not yet started — see [`vision.md`](./vision.md) §3 for the strategic case.
 
@@ -30,12 +30,12 @@ CFLT itself is theory and specification — the implementations are where the pr
 
 ## Adding Your Implementation
 
-Implementations following the canonical CFLM protocol are welcome. Open a pull request adding a section under "Active" with:
+Implementations following the canonical CFLT protocol are welcome. Open a pull request adding a section under "Active" with:
 
 - **Project name**
 - **Domain** (if any)
 - **Repository URL**
-- **Purpose** — what CFLM-related functionality the project provides
+- **Purpose** — what CFLT-related functionality the project provides
 - **Audience** — who the project is for
 - **License**
 - **Status** — Active / Planned / Archived
@@ -44,8 +44,8 @@ Implementations following the canonical CFLM protocol are welcome. Open a pull r
 
 A project qualifies if it:
 
-1. Operationalizes the CFLM four-element sequence (`[Core] → [Reason] → [Space] → [Time]`) as a structural component of its functionality, OR
-2. Provides tooling that explicitly produces, validates, or transforms CFLM-conformant content, OR
+1. Operationalizes the CFLT four-element sequence (`[Core] → [Reason] → [Space] → [Time]`) as a structural component of its functionality, OR
+2. Provides tooling that explicitly produces, validates, or transforms CFLT-conformant content, OR
 3. Builds a substantial educational or analytical workflow around the Core-First sequencing principle.
 
 Projects that merely cite CFLT as background reading do not qualify; this list is for active operational use.

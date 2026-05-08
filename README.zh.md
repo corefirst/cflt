@@ -22,13 +22,13 @@
 
 > *话语的认知核心，也是其在任何语言中被普遍优先排列的线性位置。*
 
-由此推导出 **核心优先语言方法 (CFLM)** 的四元素排序规则，既是连接两种自然语言的最小认知摩擦桥梁，也可作为面向大语言模型的结构化提示协议：
+由此推导出 **CFLT 协议 (CFLT Protocol)** 的四元素排序规则，既是连接两种自然语言的最小认知摩擦桥梁，也可作为面向大语言模型的结构化提示协议：
 
 ```
 [核心动作/结果] → [条件/原因] → [空间/语境] → [时间]
 ```
 
-CFLT 是**理论 + 方法**，而不是产品。理论内容属于开放共享领域（CC BY 4.0）。具体的参考实现位于独立项目中 —— 见 [docs/en/reference-implementations.md](./docs/en/reference-implementations.md)。
+CFLT 是**理论与方法协议的统一体**，而不是产品。理论内容属于开放共享领域（CC BY 4.0）。具体的参考实现位于独立项目中 —— 见 [docs/en/reference-implementations.md](./docs/en/reference-implementations.md)。
 
 ---
 
@@ -53,7 +53,7 @@ docs/
 
 CFLT 本身是理论与规范。具体实现位于独立项目中。详见 [docs/en/reference-implementations.md](./docs/en/reference-implementations.md)。
 
-第一个参考实现是 [**CoreFirst**](https://github.com/corefirst/corefirst)（[corefirst.world](https://corefirst.world)）—— 一个开源 Next.js 应用，为人类二语学习者实现 CFLM（支柱一）。
+第一个参考实现是 [**CoreFirst**](https://github.com/corefirst/corefirst)（[corefirst.world](https://corefirst.world)）—— 一个开源 Next.js 应用，为人类二语学习者实现 CFLT（支柱一）。
 
 ---
 
@@ -71,8 +71,8 @@ CFLT 本身是理论与规范。具体实现位于独立项目中。详见 [docs
 
 - 完善理论基础（补充引用、反驳论证、新学科视角）
 - **翻译任意文档**（中文优先；其他语言也欢迎，参见 `docs/{语言代码}/`）
-- 在 `reference-implementations.md` 添加采用 CFLM 的项目
-- 提供支持或挑战 CFLM 主张的实证证据
+- 在 `reference-implementations.md` 添加采用 CFLT 的项目
+- 提供支持或挑战 CFLT 主张的实证证据
 
 ---
 

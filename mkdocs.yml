@@ -67,6 +67,9 @@ plugins:
             Logic: 逻辑学基础
             Mathematics: 数学基础
             LLM & AI: 大语言模型基础
+            Methodology: 实践指南
+            Human Learning: 人类学习
+            LLM Prompting: LLM 提示词工程
             Reference Implementations: 参考实现
             Bibliography: 参考文献
 
@@ -96,6 +99,9 @@ nav:
       - Logic: foundations/logic.md
       - Mathematics: foundations/mathematics.md
       - LLM & AI: foundations/llm.md
+  - Methodology:
+      - Human Learning: methodology/human-learning.md
+      - LLM Prompting: methodology/llm-prompting.md
   - Reference Implementations: reference-implementations.md
   - Bibliography: bibliography.md
 
