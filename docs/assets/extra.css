@@ -5,30 +5,25 @@
   filter: brightness(0) invert(1);
 }
 
-/* Footer brand: inject the full CFLT logo into the meta row so it sits on the
-   same line as the social (GitHub) icon. The mono variant has white-on-
-   transparent strokes/fills, which read cleanly on the dark footer bg. */
+/* Footer brand: pin the CFLT logo to the LEFT of the meta row (occupying the
+   space that would otherwise be empty since neither `copyright` nor
+   `generator` is set), GitHub icon stays on the RIGHT. */
 .md-footer-meta__inner {
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
+/* Empty copyright container would otherwise reserve flex space — collapse it. */
 .md-footer-meta__inner > .md-copyright {
-  order: 1;
-  flex: 1 1 auto;
+  display: none;
 }
 
-.md-footer-meta__inner::after {
+.md-footer-meta__inner::before {
   content: "";
-  order: 2;
   flex: 0 0 auto;
-  height: 3.6rem;
-  aspect-ratio: 1 / 1;
-  background: url("cflt-logo-mono.svg") center / contain no-repeat;
+  height: 4rem;
+  aspect-ratio: 512 / 320;
+  background: url("cflt-logo-mono.svg") left center / contain no-repeat;
+  margin-right: auto;
   opacity: 0.92;
-}
-
-.md-footer-meta__inner > .md-social {
-  order: 3;
 }
