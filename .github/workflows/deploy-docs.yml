@@ -24,29 +24,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - run: pip install mkdocs-material
+      - run: pip install -r requirements.txt
 
-      - name: Prepare docs for MkDocs
-        run: |
-          mkdir -p docs/assets
-          mkdir -p docs/foundations
-          
-          # Copy root files to docs/
-          cp README.md docs/index.md
-          cp manifesto.md docs/
-          cp vision.md docs/
-          cp reference-implementations.md docs/
-          cp bibliography.md docs/
-          cp cflt-logo.svg docs/assets/
-          
-          # Copy foundations
-          cp foundations/*.md docs/foundations/
-
-          # Surgical link adjustment: fix relative links to docs/ folder in markdown files
-          # Since we are flattening everything into docs/, links like [text](./foundations/x.md) 
-          # will still work if foundations/ is preserved. 
-          # Root README links to foundations/X.md work as index.md -> foundations/X.md.
-          
       - run: mkdocs build
 
       - uses: actions/upload-pages-artifact@v3
