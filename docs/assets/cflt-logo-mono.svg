@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Connector line representing linearization -->
+  <line x1="120" y1="220" x2="400" y2="220" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="8,8" opacity="0.35" />
+
+  <!-- 1. The Core (solid node) -->
+  <rect x="100" y="180" width="80" height="80" fill="#FFFFFF" />
+
+  <!-- 2. Condition/Reason (outlined node) -->
+  <rect x="230" y="195" width="50" height="50" fill="none" stroke="#FFFFFF" stroke-width="4" />
+
+  <!-- 3. Space/Context (outlined node) -->
+  <rect x="320" y="205" width="30" height="30" fill="none" stroke="#FFFFFF" stroke-width="3" />
+
+  <!-- 4. Time (outlined node) -->
+  <circle cx="395" cy="220" r="10" fill="none" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- CFLT wordmark -->
+  <text x="256" y="420" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#FFFFFF" letter-spacing="12px">CFLT</text>
+
+  <!-- Subtitle -->
+  <text x="256" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="middle" fill="#FFFFFF" opacity="0.7" letter-spacing="2px">CORE-FIRST LANGUAGE THEORY</text>
+</svg>

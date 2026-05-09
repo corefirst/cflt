@@ -1,23 +1,34 @@
-.cflt-footer-brand {
-  display: flex;
-  justify-content: flex-end;
+/* Header logo: cflt-mark.svg uses currentColor but renders via <img> (isolated
+   document, no inheritance) — force it white so it's visible on the indigo /
+   black primary header. */
+.md-header__button.md-logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* Footer brand: inject the full CFLT logo into the meta row so it sits on the
+   same line as the social (GitHub) icon. The mono variant has white-on-
+   transparent strokes/fills, which read cleanly on the dark footer bg. */
+.md-footer-meta__inner {
   align-items: center;
-  max-width: 61rem;
-  margin: 0 auto;
-  padding: 0.6rem 1.2rem 1.2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.cflt-footer-brand a {
-  display: inline-flex;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
+.md-footer-meta__inner > .md-copyright {
+  order: 1;
+  flex: 1 1 auto;
 }
 
-.cflt-footer-brand a:hover {
-  opacity: 1;
+.md-footer-meta__inner::after {
+  content: "";
+  order: 2;
+  flex: 0 0 auto;
+  height: 3.6rem;
+  aspect-ratio: 1 / 1;
+  background: url("cflt-logo-mono.svg") center / contain no-repeat;
+  opacity: 0.92;
 }
 
-.cflt-footer-brand img {
-  height: 2.4rem;
-  width: auto;
+.md-footer-meta__inner > .md-social {
+  order: 3;
 }
