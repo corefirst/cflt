@@ -46,6 +46,8 @@
 - **Pinker, S.** (1994). *The Language Instinct.* New York: William Morrow.
 - **Slobin, D. I.** (1996). "From 'Thought and Language' to 'Thinking for Speaking'." In *Rethinking Linguistic Relativity*, Gumperz & Levinson (eds). Cambridge: Cambridge University Press.
 - **Talmy, L.** (2000). *Toward a Cognitive Semantics, Vol. 1: Concept Structuring Systems.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/6847.001.0001](https://doi.org/10.7551/mitpress/6847.001.0001)
+- **Cinque, G.** (1999). *Adverbs and Functional Heads: A Cross-Linguistic Perspective.* Oxford: Oxford University Press.
+- **Van Valin, R. D. Jr. & LaPolla, R. J.** (1997). *Syntax: Structure, Meaning, and Function.* Cambridge: Cambridge University Press. DOI: [10.1017/CBO9781139166799](https://doi.org/10.1017/CBO9781139166799)
 - **Wierzbicka, A.** (1996). *Semantics: Primes and Universals.* Oxford: Oxford University Press.
 
 ## 语音学
@@ -82,11 +84,16 @@
 
 ## 大语言模型与自然语言处理
 
+- **Bang, Y. et al.** (2023). "A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity." *arXiv*:2302.04023. [Link](https://arxiv.org/abs/2302.04023)
 - **Habba, E., Arviv, O., Itzhak, I., Perlitz, Y., Bandel, E., Choshen, L., Shmueli-Scheuer, M. & Stanovsky, G.** (2025). "DOVE: A Large-Scale Multi-Dimensional Predictions Dataset Towards Meaningful LLM Evaluation." *Findings of ACL*. DOI: [10.18653/v1/2025.findings-acl.611](https://doi.org/10.18653/v1/2025.findings-acl.611)
+- **Hendrycks, D. et al.** (2021). "Measuring Massive Multitask Language Understanding (MMLU)." *ICLR*. [Link](https://openreview.net/forum?id=d7KBjmI3GmQ)
 - **Hokamp, C. & Liu, Q.** (2017). "Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search." *ACL*. DOI: [10.18653/v1/P17-1141](https://doi.org/10.18653/v1/P17-1141)
 - **Kojima, T., Gu, S. S., Reid, M., Matsuo, Y. & Iwasawa, Y.** (2022). "Large Language Models are Zero-Shot Reasoners." *NeurIPS*. DOI: [10.48550/arXiv.2205.11916](https://doi.org/10.48550/arXiv.2205.11916)
 - **Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F. & Liang, P.** (2023). "Lost in the Middle: How Language Models Use Long Contexts." *Transactions of the Association for Computational Linguistics*. DOI: [10.1162/tacl_a_00638](https://doi.org/10.1162/tacl_a_00638)
+- **Lai, V. D., Ngo, N. T., Ben Veyseh, A. P., Man, H., Dernoncourt, F., Bui, T. & Nguyen, T. H.** (2023). "ChatGPT Beyond English: Towards a Comprehensive Evaluation of Large Language Models in Multilingual Learning." *Findings of EMNLP*. [Link](https://aclanthology.org/2023.findings-emnlp.878/)
+- **Lewis, P. et al.** (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)." *NeurIPS*. DOI: [10.48550/arXiv.2005.11401](https://doi.org/10.48550/arXiv.2005.11401)
 - **LMSYS Org.** (2024). "SGLang: Efficient Execution of Structured Language Model Programs." *LMSYS Blog*. [Link](https://lmsys.org/blog/2024-01-17-sglang/)
+- **Zhang, R., Yang, T. et al.** (2023). "Don't Trust ChatGPT when Your Question Is Not in English: A Study of Multilingual Abilities and Types of LLMs." *EMNLP*. [Link](https://aclanthology.org/2023.emnlp-main.491/)
 - **Lu, Y., Bartolo, M., Moore, A., Riedel, S. & Stenetorp, P.** (2022). "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity." *ACL*. DOI: [10.18653/v1/2022.acl-long.556](https://doi.org/10.18653/v1/2022.acl-long.556)
 - **Maynez, J., Narayan, S., Bohnet, B. & McDonald, R.** (2020). "On Faithfulness and Factuality in Abstractive Summarization." *ACL*. DOI: [10.18653/v1/2020.acl-main.173](https://doi.org/10.18653/v1/2020.acl-main.173)
 - **Min, S., Lyu, X., Holtzman, A., Artetxe, M., Lewis, M., Hajishirzi, H. & Zettlemoyer, L.** (2022). "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?" *EMNLP*. DOI: [10.18653/v1/2022.emnlp-main.759](https://doi.org/10.18653/v1/2022.emnlp-main.759)
@@ -107,6 +114,8 @@
 - **Anderson, J. R.** (1982). "Acquisition of Cognitive Skill." *Psychological Review* 89(4), 369–406.
 - **Anderson, J. R.** (1993). *Rules of the Mind.* Hillsdale, NJ: Erlbaum.
 - **Birdsong, D.** (2006). "Age and Second Language Acquisition and Processing: A Selective Overview." *Language Learning* 56(s1), 9–49.
+- **Cenoz, J.** (2003). "The additive effect of bilingualism on third language acquisition: A review." *International Journal of Bilingualism* 7(1), 71–87. DOI: [10.1177/13670069030070010501](https://doi.org/10.1177/13670069030070010501)
+- **De Angelis, G.** (2007). *Third or Additional Language Acquisition.* Clevedon: Multilingual Matters.
 - **DeKeyser, R. M.** (2007). *Practice in a Second Language: Perspectives from Applied Linguistics and Cognitive Psychology.* Cambridge: Cambridge University Press.
 - **DeKeyser, R. M.** (2015). "Skill Acquisition Theory." In *Theories in Second Language Acquisition: An Introduction* (2nd ed), VanPatten & Williams (eds). New York: Routledge.
 - **Ellis, R.** (2003). *Task-Based Language Learning and Teaching.* Oxford: Oxford University Press.
@@ -129,11 +138,14 @@
 
 ## 神经科学
 
+- **Bemis, D. K. & Pylkkänen, L.** (2013). "Basic Linguistic Composition Recruits the Left Anterior Temporal Lobe and Left Angular Gyrus During Both Listening and Reading." *Cerebral Cortex* 23(8), 1859–1873. DOI: [10.1093/cercor/bhs170](https://doi.org/10.1093/cercor/bhs170)
 - **Friederici, A. D.** (2011). "The brain basis of language processing: from structure to function." *Physiological Reviews*, 91(4), 1357–1392. DOI: [10.1152/physrev.00006.2011](https://doi.org/10.1152/physrev.00006.2011)
+- **Friederici, A. D.** (2017). *Language in Our Brain: The Origins of a Uniquely Human Capacity.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/11173.001.0001](https://doi.org/10.7551/mitpress/11173.001.0001)
 - **Hashimoto, Y., Yokoyama, S. & Kawashima, R.** (2012). "Neuro-typology of sentence comprehension: Cross-linguistic difference in canonical word order affects brain responses during sentence comprehension." *The Open Medical Imaging Journal* 6, 62–69. DOI: [10.2174/1874347101206010062](https://doi.org/10.2174/1874347101206010062)
 - **Pliatsikas, C.** (2020). "Understanding structural plasticity in the bilingual brain: The Dynamic Restructuring Model." *Bilingualism: Language and Cognition*, 23(2), 459-471. DOI: [10.1017/S1366728919000130](https://doi.org/10.1017/S1366728919000130)
+- **Pylkkänen, L.** (2019). "The neural basis of combinatory syntax and semantics." *Science* 366, 62–66. DOI: [10.1126/science.aax0050](https://doi.org/10.1126/science.aax0050)
 - **Seeley, W. W., Menon, V., Schatzberg, A. F., Keller, J., Glover, G. H., Kenna, H., Reiss, A. L., & Greicius, M. D.** (2007). "Dissociable Intrinsic Connectivity Networks for Salience Processing and Executive Control." *The Journal of Neuroscience*, 27(9), 2349–2356. DOI: [10.1523/JNEUROSCI.5587-06.2007](https://doi.org/10.1523/JNEUROSCI.5587-06.2007)
-- **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159. DOI: [10.1016/j.neuroimage.2005.09.064](https://doi.org/10.1016/j.neuroimage.2005.09.064)
+- **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159 —— **会议摘要**（OHBM）。该实验室关于词序处理的正式同行评审论文是上方的 Hashimoto, Yokoyama & Kawashima 2012，那是 CFLT 文档的主引。
 
 ## 相关领域 (在 `manifesto.md` §4 中用于区分引用)
 

@@ -22,7 +22,24 @@ Krashen's (1982, 1985) model posits that humans acquire language through **compr
 - The fixed protocol *lowers the affective filter*: by making "what comes next" predictable, the protocol reduces the anxiety of having to plan a sentence in real time.
 - **CFLT Form** outputs are designed to be comprehensible (the +1 over the learner's current state) but not yet fully native — which is precisely the i+1 zone Krashen identifies.
 
-**CFLT departure:** Krashen's strong form is skeptical of explicit rules. CFLT uses an explicit protocol but treats it as a *conceptual scaffold* internalized through use, not as a rule recited before each utterance. This is closer to a usage-based interpretation of Krashen than to his strongest formulation.
+```mermaid
+graph LR
+    Input[Input i+1] --> Filter{Affective Filter}
+    Filter -- "Low" --> LAD[Language Acquisition Device]
+    Filter -- "High" --> Block[Block]
+    LAD --> Competence[Acquired Competence]
+    Monitor[Monitor: Conscious Learning] --> Output
+    Competence --> Output[Spoken Output]
+```
+
+**CFLT departure (honest positioning):** Krashen's strong form (1982; reaffirmed 2003) holds that **explicit form instruction does not become acquisition** — the Monitor can only *edit* output under restrictive conditions, never produce native-like fluency. Under this view, CFLT's explicit protocol is incompatible with Krashen orthodoxy.
+
+CFLT therefore does **not** claim Krashen-compatibility. The closer theoretical kin is:
+- **Long's (1991) Focus-on-Form** — task-driven, but allows explicit form attention when learner difficulty signals it
+- **Ellis's (2008) interface position** — explicit knowledge can transfer to implicit knowledge via practice, given proceduralization
+- **VanPatten's processing instruction** — explicit training on form-meaning mappings before communicative use
+
+CFLT operationalizes the interface position: the protocol is the explicit scaffold (declarative), repeated use across tasks proceduralizes it (procedural), and eventual stylistic deviation marks expressive mastery (automatic + flexible). See §5 for the skill-acquisition arc.
 
 ---
 
@@ -31,6 +48,19 @@ Krashen's (1982, 1985) model posits that humans acquire language through **compr
 Vygotsky's (1978) **Zone of Proximal Development (ZPD)** is the distance between what a learner can do alone and what they can do with guidance.
 
 **CFLT as scaffold within the ZPD:** the four-element protocol is exactly a Vygotskyan **scaffold** — it gives the learner support to operate in the ZPD without doing the cognitive work for them. The learner still selects the Core, still chooses appropriate L2 vocabulary, still binds modifiers — but the *linearization decision* is offloaded to the protocol.
+
+```mermaid
+graph LR
+    A[Inner zone:<br/>What I can do alone]
+    B[ZPD:<br/>What I can do with help]
+    C[Outer zone:<br/>What I cannot do yet]
+
+    A --- B --- C
+    B --- S[CFLT Protocol: 4 Slots]
+
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+```
+*Three nested zones around the learner; ZPD is the middle band (per Vygotsky 1978). Connections are non-directional — these are bounded zones, not a progression.*
 
 **Operational implication:** as learners advance, the scaffold should be progressively withdrawn (Vygotsky's "fading"). Strict four-slot enforcement is appropriate at early stages; the system should relax constraints as the learner masters the protocol, eventually allowing native-idiomatic deviations as deliberate stylistic choices.
 
@@ -46,7 +76,7 @@ Sweller (1988, 2011) identifies three types of cognitive load on working memory:
 | **Extraneous** | Distraction from the learning goal | CFLT reduces this by eliminating structural choices |
 | **Germane** | Load directed at building schemas | CFLT aims to convert extraneous load into germane load by giving learners one schema (the four-slot protocol) instead of dozens of rules |
 
-**The CFLT cognitive-load argument:** in a traditional curriculum, an adult learner producing an L2 sentence performs roughly:
+**CFLT cognitive-load argument:** in a traditional curriculum, an adult learner producing an L2 sentence performs roughly:
 1. L1 thought formation
 2. L1→L2 translation
 3. L2 grammar rule application (tense, articles, agreement, word order)
@@ -55,7 +85,28 @@ Sweller (1988, 2011) identifies three types of cognitive load on working memory:
 
 That's at least five concurrent demands on working memory. CFLT collapses (1)+(2)+(3) into a single fixed-order operation: linearize the preverbal message into Core-First, then perform vocabulary substitution.
 
+```mermaid
+graph TD
+    subgraph "Traditional L2 Production"
+    T1[L1 Thought] --- T2[Translation]
+    T2 --- T3[Grammar Rules]
+    T3 --- T4[Vocab]
+    T4 --- T5[Pronunciation]
+    noteT["WM elements interacting: ~5 (CFLT's framing)"]
+    end
+
+    subgraph "CFLT Production"
+    C1[CFLT Scaffold: Linearization Handled] --- C2[Vocab Substitution]
+    C2 --- C3[Pronunciation]
+    noteC["WM elements interacting: ~2-3"]
+    end
+
+    style T1 fill:#fee
+    style C1 fill:#efe
+```
+
 ### 4.1 Solving the "Modifier Trap" (EIC in Pedagogy)
+
 > See [`linguistics.md`](./linguistics.md) §3 for the canonical EIC introduction; this subsection gives the pedagogical refraction (the "Modifier Trap" as the learner-side face of EIC).
 
 A specific source of cognitive load is the **Modifier Trap** (derived from Hawkins' EIC principle). For learners from head-final backgrounds (like Chinese), the L1 habit of placing modifiers before the noun creates a high **look-ahead buffer** demand: the speaker must plan the entire noun phrase before uttering the head. 
@@ -78,15 +129,17 @@ DeKeyser (2007, 2015) applied Anderson's ACT-R skill acquisition model (1982, 19
 
 ---
 
-## 6. Task-Based Language Teaching (TBLT)
+## 6. Task-Based Language Teaching (TBLT) — Honest Positioning
 
-TBLT (Long 1985, 2015; Ellis 2003) argues that language learning should be organized around communicative tasks rather than linguistic structures.
+TBLT (Long 1985, 2015; Ellis 2003) argues that language learning should be organized around communicative tasks rather than linguistic structures. The TBLT literature is internally divided between **strong-TBLT** (Long 2015) and **weak-TBLT** (Ellis 2003), and CFLT's relationship to each is different.
 
-**CFLT Courseware Generator as a TBLT engine:** the Generator takes inputs `topic`, `industry_context`, `age_group`, `difficulty_level` and produces a sequence of scenario-based tasks. Each task is a protocol-compliant communicative scenario with embedded vocabulary focus and audio-visual context.
+**CFLT is *not* compatible with strong-TBLT.** Long (2015) explicitly rejects *synthetic syllabus* — any pre-defined sequence of linguistic items used as the spine of instruction — and treats *focus on form* (incidental, task-driven attention to form) as the only acceptable form-focus strategy. The CFLT Protocol, which prescribes a fixed `[Core] → [Reason] → [Space] → [Time]` template *before* tasks are encountered, is exactly the kind of synthetic / focus-on-forms scaffolding Long opposes.
 
-This is exactly the TBLT prescription: meaningful tasks (not "fill in the blank") + embedded form focus (the protocol enforces structure throughout) + scaffolded complexity (parameterized difficulty).
+**CFLT *is* compatible with weak-TBLT (Ellis 2003) and with VanPatten's structured input.** Ellis treats explicit form-focused instruction and task-based practice as complementary; VanPatten's processing instruction explicitly trains learners on form-meaning mappings prior to communicative use. CFLT operationalizes both: the protocol is the explicit scaffold, the courseware delivers tasks.
 
-The IT-English module (manifesto §8.2) is a TBLT specialization for technical scenarios: tasks like "deploy a service, debug a latency issue, refactor a module" with industry-appropriate vocabulary all fit the same scaffold.
+**CFLT Courseware Generator as a weak-TBLT engine:** the Generator takes inputs `topic`, `industry_context`, `age_group`, `difficulty_level` and produces a sequence of scenario-based tasks where each task is a protocol-compliant communicative scenario with embedded vocabulary focus and audio-visual context. The IT-English module (manifesto §8.2) is the canonical example: tasks like "deploy a service, debug a latency issue, refactor a module" carry industry-appropriate vocabulary while the protocol provides the structural skeleton.
+
+**Honest summary**: CFLT positions itself as an *interface-position* (Ellis 2008) framework — explicit protocol + task practice → procedural automaticity — rather than as TBLT in Long's strict sense.
 
 ---
 

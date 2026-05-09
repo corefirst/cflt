@@ -38,6 +38,8 @@ Languages with complex honorific systems (e.g., Japanese *keigo*) often use verb
 
 This aligns the **Social Salience** (who am I talking to?) with the **Semantic Salience** (what am I asking for?).
 
+> **Honest scope: "orthogonal" overstates the relationship.** CFLT documentation sometimes describes the honorific layer as **orthogonal** to the four-slot protocol. The more accurate framing is **partially dissociable**: neuroimaging (Momma et al. 2008 *Brain & Language*; Tomita et al. 2021) shows honorific processing shares left IFG with syntactic processing while *additionally* recruiting dmPFC and the insula (the social-cognitive network). Honorific morphology also has known interactions with embedded-clause syntax (e.g., -masu cannot appear in certain embedded contexts; relative clauses host honorifics differently from main clauses). The CFLT pedagogical guidance — apply slot work first, honorific layer second — remains valid as a **cognitive workflow** for managing complexity, but should not be over-claimed as full neural or syntactic independence.
+
 ## 4. Register Scaling: From "Efficiency" to "Elegance"
 
 CFLT methodology defines three levels of **Social Register**:

@@ -12,7 +12,7 @@ hide:
 **CFLT** proposes a single discourse-level principle from which the **CFLT Protocol** derives a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction — and serves as a structured prompt protocol for Large Language Models:
 
 ```
-[Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]
+[Core] → [Reason] → [Space] → [Time]
 ```
 
 CFLT is **theory + method**, not a product. The theory belongs to the open commons (CC BY 4.0). Reference implementations live in independent projects.

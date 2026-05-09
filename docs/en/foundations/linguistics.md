@@ -9,9 +9,11 @@
 
 ## 1. Scope: "Core-First" Is Not "Verb-First"
 
-CFLT defines a normative sequence — `[Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]` — for both pedagogy and machine reasoning. One disambiguation belongs at the very top of any linguistic discussion of CFLT, because conflating the two concepts leads to wrong predictions about everything that follows.
+CFLT defines a normative sequence — `[Core] → [Reason] → [Space] → [Time]` — for both pedagogy and machine reasoning. One disambiguation belongs at the very top of any linguistic discussion of CFLT, because conflating the two concepts leads to wrong predictions about everything that follows.
 
 ### 1.1 Two different concepts that are easily confused
+
+> **Notation.** This document and the rest of the project use the standard typological abbreviations **S = Subject, V = Verb, O = Object**, combined into the six possible permutations: SOV, SVO, VSO, VOS, OVS, OSV. They denote the *default surface order* of these three constituents in a transitive declarative clause. Example: "I (S) ate (V) rice (O)" — English is SVO. "I-rice-ate" — Japanese is SOV. "Ate-I-rice" — Welsh is VSO. Cross-linguistically, SOV (~45%) and SVO (~42%) dominate; VSO (~9%) is third; VOS / OVS / OSV are rare. (Greenberg 1963; Dryer 2013.) These abbreviations describe **syntax**, not the cognitive linearization CFLT prescribes.
 
 | Concept | Level | What it claims | Example |
 |---------|-------|---------------|---------|
@@ -46,8 +48,8 @@ Talmy (2000, *Toward a Cognitive Semantics*) argues that linguistic structure sy
 > "The Figure is a moving or conceptually movable entity whose path or location is at issue; the Ground is a reference entity with respect to which the Figure's path or location is characterized." (Talmy 2000:312)
 
 **CFLT Protocol mapping:**
-- `[Core Action/Result]` = the Figure (what happened)
-- `[Condition/Reason] → [Space/Context] → [Time]` = the Ground (under what circumstances)
+- `[Core]` = the Figure (what happened)
+- `[Reason] → [Space] → [Time]` = the Ground (under what circumstances)
 
 CFLT thus codifies a **Figure-First** linearization of the Figure-Ground asymmetry. While natural languages distribute Figure and Ground across multiple word-order strategies, the cognitive primacy of the Figure is robust. Talmy's **Contingency Principle** further suggests that humans prioritize the event that is contingent on the frame; in the CFLT Protocol, the Core (contingent event) is placed first, followed by the frame-providing Ground modifiers.
 
@@ -70,6 +72,23 @@ The CRD is the word-count required to identify all ICs of a phrase. Efficiency i
 By placing the Core in position 0, CFLT ensures that the "anchoring" constituent of the main clause is identified immediately. This results in an **EIC ratio approaching 100%** for core recognition, drastically reducing the "look-ahead" load on working memory. This is particularly beneficial for L2 learners who have limited cognitive resources for managing incomplete syntactic trees.
 
 ### 3.2 Incremental Processing vs. the Modifier Trap
+
+```mermaid
+graph TD
+    subgraph "Scenario A: Topic-First (Modifier Trap)"
+    A1[Time] --> A2[Space] --> A3[Reason] --> A4[Core]
+    style A4 fill:#f96,stroke:#333,stroke-width:2px
+    end
+    
+    subgraph "Scenario B: Core-First (CFLT)"
+    B1[Core] --> B2[Reason] --> B3[Space] --> B4[Time]
+    style B1 fill:#f96,stroke:#333,stroke-width:2px
+    end
+    
+    A4 --- NoteA[High Working Memory Load: holding descriptors until the end]
+    B1 --- NoteB[Low Working Memory Load: incremental attachment to anchor]
+```
+
 CFLT creates a **head-initial** structure at the discourse level. This enables **incremental processing**: the brain can "attach" details to a known core as they arrive. In contrast, head-final (Topic-First) languages like Chinese often place complex modifiers before the head, forcing the listener to hold a string of descriptors in memory before knowing what is being described — the "modifier trap." CFLT eliminates this trap for the L2 learner.
 
 ---
@@ -86,6 +105,53 @@ Mathesius (1929), Firbas (1992), and the Prague School developed the concept of 
 ### 4.2 Givenness Hierarchy and Accessibility
 Gundel, Hedberg & Zacharski (1993) and Ariel (1990) describe how speakers manage referent accessibility: more accessible (given) referents take shorter, earlier-mentioned forms. CFLT intersects with accessibility theory in that the Core Action, once fronted, becomes the accessible "given" against which all subsequent modifiers are interpreted.
 
+### 4.3 R-S-T Inner Order: Convention with Rationale (Not Derivation)
+
+CFLT's claim that **Core occupies position 0** is a *multiply-motivated convergence* — it is supported by seven independent strands of evidence (Talmy's Figure-Ground, Hawkins' EIC, Salience Network, Levelt's Conceptualizer, early-prefix conditional-entropy stability, Transformer **primacy effect** — note that attention sinks are a separate softmax-stability artifact, see `llm.md` §2.3, and Gricean Relevance). See `core-concept.md` §1, this document §2-3, `neuroscience.md` §1, `mathematics.md` §2, `llm.md` §2. ("Derivation" is loose here — the seven strands jointly motivate the claim but do not individually compose a formal proof.)
+
+The internal order of the three ground-frame slots — **Reason → Space → Time** — is a different matter. It is a *convention* selected from $3! = 6$ permutations of the modifier slots. CFLT does not claim to derive this specific permutation from first principles; it claims only that **fixing some consistent order is better than letting the order float**.
+
+The convention rests on three rationale arguments, none of which is a proof of optimality:
+
+1. **Listener-question priority (Gricean Relevance).** After receiving the Core ("what happened"), the listener's most discourse-coherent next question is "why?" — the *cause* makes the event interpretable. *Where* and *when* are scene-locators that the listener can usually defer or infer from context. Reason therefore sits closest to Core.
+
+2. **Concreteness ladder.** Spatial information is more concrete (visualizable, perceptible) than temporal information (which is more deictic and abstract). Working memory benefits from a concrete-to-abstract progression: hearing *where* helps the listener mentally place the event before the more abstract *when* binding closes the scene.
+
+3. **Deictic recoverability.** In conversational contexts, time often has a recoverable default ("now" or "the time being discussed") — placing it last allows omission without information loss in many contexts. *Honest scope*: Levinson (1983) treats speaker / time / place as the three primary deictic axes without arguing one is more recoverable than another; the claim that time is *more* recoverable than space is a CFLT empirical observation about non-co-present L2 discourse, not a theorem of deixis theory. Spatial defaults ("here") exist too but tend to be weaker in classroom or remote-collaboration contexts, which is the most common L2 use case.
+
+These are **engineering arguments**, not derivations. A protocol with order Core → Reason → Time → Space could be defended by competing arguments (e.g., "time is the discourse anchor, place it second"). CFLT chooses R-S-T because its three reasons jointly outweigh the alternatives in the targeted use cases (L2 pedagogy, LLM prompt stability), but the choice remains an **open optimization question** (see `mathematics.md` §12.2).
+
+**Operational consequence.** CFLT's strong claim ("Core in position 0") is fully derivable; CFLT's weaker claim ("R then S then T") is a documented convention with stated reasons. This distinction matters for anyone proposing extensions or alternatives — Core-first is not negotiable; R-S-T may be revised if empirical evaluation (see `methodology/evaluation-metrics.md`) shows another permutation outperforms it for a given language pair.
+
+### 4.4 Coverage Boundary: Comparison with Halliday's Circumstance Roles
+
+Systemic Functional Linguistics (Halliday & Matthiessen 2014) decomposes circumstantial adjuncts into nine semantic roles. CFLT's three ground-frame slots are a deliberate compression of this taxonomy. The compression is honest only if we list which Halliday roles map to which CFLT location:
+
+| Halliday Circumstance Role | CFLT Location | Notes |
+|---|---|---|
+| **Extent** (duration, frequency) | Slot 3 [Time] | All temporal extents collapse here |
+| **Location: place** | Slot 2 [Space] | Physical location |
+| **Location: time** | Slot 3 [Time] | Time-point |
+| **Manner: quality** (e.g., *slowly*) | **Inside Core** (event nucleus) | Manner adverbial bound to predicate |
+| **Manner: means** (e.g., *by phone*) | **Inside Core** (instrument) | Treated as instrument, valence-bound |
+| **Manner: comparison** (e.g., *like X*) | **Inside Core** (manner sub-type) | Adverbial of comparison |
+| **Cause: reason** | Slot 1 [Reason] | Primary mapping |
+| **Cause: purpose** | Slot 1 [Reason] | Sub-type with functional word *in order to* |
+| **Cause: behalf** (beneficiary, e.g., *for X*) | **Inside Core** (beneficiary) | Valence-bound participant |
+| **Contingency: condition** (e.g., *if X*) | Slot 1 [Reason] | Sub-type with functional word *if* |
+| **Contingency: concession** (e.g., *despite X*) | Slot 1 [Reason] | Sub-type with functional word *although* |
+| **Contingency: default** (e.g., *in the absence of X*) | Slot 1 [Reason] | Conditional sub-type |
+| **Accompaniment** (comitative, e.g., *with John*) | **Inside Core** (accompaniment) | Valence-extension of predicate |
+| **Role** (e.g., *as a teacher*) | Slot 2 [Space] (role-as-domain) or **Inside Core** | Marginal; usually role-as-identity goes inside Core when it's the Core type itself |
+| **Matter** (e.g., *about X*, *concerning X*) | Slot 2 [Space] (matter-as-domain) | Sub-type of abstract domain |
+| **Angle** (e.g., *according to X*) | Slot 2 [Space] (angle-as-domain) | Source-of-information sub-type |
+
+**Summary**: of Halliday's 9 categories with their sub-types, **6 map to ground-frame slots** (Extent, Location, all four Cause/Contingency sub-types except behalf, Matter, Angle), and **4 belong inside the event nucleus** (the three Manner sub-types and Accompaniment, plus Cause:behalf as beneficiary).
+
+This is a **structured compression**, not an arbitrary one: the compression follows the two-tier model (event nucleus vs ground frame) defined in `core-concept.md` §2.1–§2.2. Roles internal to the event (how, with-what, with-whom, for-whom) collapse into the event nucleus; roles framing the event (why, where, when, in-what-respect) populate the ground frame.
+
+**Honest residual**: Halliday's *Role* (e.g., *acting as a teacher*) does not have a clean home and is treated case-by-case (often dissolving into either Identity-Core or a Space-as-domain reading). This is acknowledged as a boundary case in `methodology/slot-disambiguation.md` §8.
+
 ---
 
 ## 5. Speech Production: Levelt's Model
@@ -101,6 +167,25 @@ Crucially, the Conceptualizer's output is **language-neutral**. The semantic cor
 **CFLT's pedagogical claim is grounded here:**
 
 > If the preverbal message is language-neutral, then training learners to *linearize the preverbal message* in a fixed Core-First order before entering the Formulator stage decouples conceptual structuring from L1 surface grammar.
+
+```mermaid
+graph TD
+    subgraph "1. Conceptualizer (Language Neutral)"
+    Intent[Intent / Event Structure]
+    end
+    
+    Intent --> Linear[CFLT Linearization: Core -> R -> S -> T]
+    
+    subgraph "2. Formulator"
+    Linear --> L1[L1 Encoding]
+    Linear --> L2[L2 Encoding]
+    end
+    
+    L1 --> A1[3. Articulator: L1 Speech]
+    L2 --> A2[3. Articulator: L2 Speech]
+    
+    style Linear fill:#bbf,stroke:#333,stroke-width:2px
+```
 
 Once the message is pre-linearized as `[Core] → [Reason] → [Space] → [Time]`, both L1 and L2 formulation become token-substitution exercises over the same linearized scaffold. This is the cognitive mechanism by which CFLT reduces L1→L2 restructuring cost.
 
@@ -158,9 +243,9 @@ This makes CFLT compatible with the modern, usage-based mainstream of cognitive 
 The NSM program (Wierzbicka 1996; Goddard & Wierzbicka 2002) identifies a small inventory (~65) of **semantic primes** — concepts hypothesized to be lexicalized in all human languages (e.g., I, YOU, DO, GOOD, BECAUSE, BEFORE). NSM uses these primes as a metalanguage for cross-linguistic semantic description.
 
 **CFLT application:** the four-element sequencing protocol corresponds closely to NSM primes:
-- `[Core Action]` ↔ DO, HAPPEN, FEEL
-- `[Condition/Reason]` ↔ BECAUSE
-- `[Space/Context]` ↔ WHERE, IN, AT
+- `[Core]` ↔ DO, HAPPEN, FEEL
+- `[Reason]` ↔ BECAUSE
+- `[Space]` ↔ WHERE, IN, AT
 - `[Time]` ↔ WHEN, BEFORE, AFTER
 
 NSM thus provides CFLT with a **language-independent vocabulary of slot fillers**. A learner moving between any two languages can use NSM-decomposed thoughts as the bridge.

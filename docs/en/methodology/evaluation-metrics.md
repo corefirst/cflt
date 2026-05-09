@@ -33,13 +33,31 @@ To move from "Theory" to "Standard," CFLT must provide empirical proof of its cl
 - **Definition:** Based on Hawkins' EIC (see `linguistics.md`), the ratio of identified constituents to words in the "Constituent Recognition Domain."
 - **Benchmark:** Target 1.0 (100%) for the initial 2 tokens of every CFLT sentence.
 
+```mermaid
+graph TD
+    subgraph "Human AOL (Latency)"
+    H1[Traditional: 500ms]
+    H2[CFLT: 350ms]
+    H1 -- "-30% Reduction Goal" --> H2
+    end
+    
+    subgraph "Cognitive Load (CLI)"
+    C1[Traditional: High Tax]
+    C2[CFLT: Low Tax]
+    C1 -- "Residual Memory Boost" --> C2
+    end
+    
+    style H2 fill:#efe
+    style C2 fill:#efe
+```
+
 ---
 
 ## 3. Pillar II Metrics: AI System Stability
 
 ### 3.1 Intent Preservation Score (IPS)
-- **Definition:** A metric (calculated via cosine similarity or LLM-eval) measuring how well the output preserve's the user's initial Core intent.
-- **CFLT Claim:** CFLT's "Attention Sink" alignment at Position 0 prevents intent drift.
+- **Definition:** A metric (calculated via cosine similarity or LLM-eval) measuring how well the output preserves the user's initial Core intent.
+- **CFLT Claim:** CFLT's primacy alignment at Position 0 (placing the salience anchor in the high-attention prefix region) prevents intent drift. See [`../foundations/llm.md`](../foundations/llm.md) §2.3 for primacy-vs-sink disambiguation.
 - **Benchmark:** IPS > 0.95 for complex 4-slot requests.
 
 ### 3.2 TTFT (Time-To-First-Token) Reduction
@@ -51,6 +69,19 @@ To move from "Theory" to "Standard," CFLT must provide empirical proof of its cl
 - **Definition:** The percentage of generated tokens that contradict the provided context or core action.
 - **CFLT Claim:** Anchoring the core action at Position 0 reduces model "drifting."
 - **Benchmark:** A 2x reduction in HR compared to free-form natural language prompts.
+
+```mermaid
+graph LR
+    subgraph "AI System Stability Goals"
+    IPS[Intent Preservation Score > 0.95]
+    TTFT[TTFT Reduction: 50-80%]
+    HR[Hallucination Rate: 1/2 Reduction]
+    end
+    
+    CFLT[CFLT PROTOCOL] --> IPS
+    CFLT --> TTFT
+    CFLT --> HR
+```
 
 ---
 
@@ -67,6 +98,18 @@ To move from "Theory" to "Standard," CFLT must provide empirical proof of its cl
 2.  **Task:** Rapid translation of complex L1 sentences into L2.
 3.  **Variable:** Free translation vs. CFLT-scaffolded translation.
 4.  **Metric:** Average pauses per 100 words.
+
+```mermaid
+graph LR
+    Input[Semantic Intent] --> A[Group A: Natural Language]
+    Input --> B[Group B: CFLT Protocol]
+    
+    A --> EvalA[Performance Metric]
+    B --> EvalB[Performance Metric]
+    
+    EvalA --- Delta{Ablation Gap}
+    EvalB --- Delta
+```
 
 ---
 

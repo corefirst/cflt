@@ -87,10 +87,18 @@ plugins:
             Human Learning: 人类学习
             LLM Prompting: LLM 提示词工程
             Complex Structures: 复杂句式与递归
+            Slot Disambiguation: 槽位消歧参考
+            Language-Pair Guides: 语言对指南
+            Overview: 总览
+            Chinese ↔ Japanese: 汉语 ↔ 日语
+            English ↔ Chinese: 英语 ↔ 汉语
+            Chinese ↔ English: 汉语 ↔ 英语
+            English ↔ Japanese: 英语 ↔ 日语
             Software Architecture: 软件架构实现
             Curriculum Engineering: 课程工程开发
             Evaluation & Metrics: 评估与量化指标
             Reference Implementations: 参考实现
+            Glossary: 术语索引
             Bibliography: 参考文献
 
 extra_css:
@@ -100,7 +108,11 @@ markdown_extensions:
   - tables
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -108,6 +120,7 @@ markdown_extensions:
       alternate_style: true
   - toc:
       permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   - attr_list
   - md_in_html
 
@@ -128,11 +141,19 @@ nav:
   - Methodology:
       - Human Learning: methodology/human-learning.md
       - Complex Structures: methodology/complex-structures.md
+      - Slot Disambiguation: methodology/slot-disambiguation.md
+      - Language-Pair Guides:
+          - Overview: methodology/language-pair-guides/index.md
+          - Chinese ↔ Japanese: methodology/language-pair-guides/zh-ja.md
+          - English ↔ Chinese: methodology/language-pair-guides/en-zh.md
+          - Chinese ↔ English: methodology/language-pair-guides/zh-en.md
+          - English ↔ Japanese: methodology/language-pair-guides/en-ja.md
       - LLM Prompting: methodology/llm-prompting.md
       - Software Architecture: methodology/software-architecture.md
       - Curriculum Engineering: methodology/curriculum-engineering.md
       - Evaluation & Metrics: methodology/evaluation-metrics.md
   - Reference Implementations: reference-implementations.md
+  - Glossary: glossary.md
   - Bibliography: bibliography.md
 
 extra:

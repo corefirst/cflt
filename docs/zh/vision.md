@@ -9,7 +9,9 @@
 
 **CFLT（核心优先语言理论）** 不仅仅是一种语言教学理论；它是一种**认知协议 (Cognitive Protocol)**，旨在通过统一的逻辑框架 —— **CFLT 协议** —— 使人类智能与人工智能同步。
 
-通过强制采用普适排序原则 —— `[核心动作/结果] → [条件/原因] → [空间/语境] → [时间]` —— 我们旨在达成两个战略目标：
+> **定位说明。** CFLT 被构想为**学术与研究导向的框架** —— 其主要产出是理论、规范、评估方法与参考数据。实现、产品化、工具链与生态集成显式属于**其他组织与社区**的范畴（如 [CoreFirst](https://corefirst.world) 参考项目、[apcore](https://github.com/aiperceivable/apcore) 库生态，以及任何采用本协议的独立团体）。CFLT 不绑定也不依赖任何特定实现栈。
+
+通过强制采用普适排序原则 —— `[核心] → [理由] → [空间] → [时间]` —— 我们旨在达成两个战略目标：
 1. **人类赋能：** 通过重塑认知处理模式，加速双语习得。
 2. **机器对齐：** 标准化大语言模型 (LLM) 底层的 "思维" 与 "推理" 逻辑，提升互操作性与效率。
 
@@ -33,23 +35,21 @@
 在智能体工作流 (Agentic Workflows) 时代，不同 LLM 之间（以及人类与 LLM 之间）缺乏标准化的逻辑协议，导致信息丢失与 "注意力衰减 (Attention Decay)"。
 
 ### 为何 CFLT 协议是理想的 LLM 协议：
-- **注意力效率：** 通过将 `[核心动作]` 置于序列开头，最大化 Transformer 架构中的注意力权重，降低长上下文生成中的 "幻觉 (hallucination)" 与逻辑漂移。
+- **注意力效率：** 通过将 `[核心]` 置于序列开头，最大化 Transformer 架构中的注意力权重，降低长上下文生成中的 "幻觉 (hallucination)" 与逻辑漂移。
 - **智能体互操作性：** CFLT 协议作为跨智能体通信的 **"逻辑通用语 (Logical Lingua Franca)"**。一个中文核心智能体与一个英文核心智能体，只要双方都遵循 CFLT 序列，就能以零语义损失交换复杂意图。
 - **思维链 (CoT) 优化：** CFLT 线性、非嵌套的特性与现代 AI 的迭代推理步骤完美对齐，将复杂的递归思维简化为可管理的、可加的逻辑积木。
 
 ---
 
-## 4. Apcore 生态：神经基础设施 (规划中)
+## 4. 实现路径（CFLT 自身范围之外）
 
-> **状态：** 本节中的组件处于**规划中，尚未实现**。在 [`reference-implementations.md`](./reference-implementations.md) 的 *Planned* 标题下进行跟踪。
+CFLT 不规定也不维护实现工具链。把两大支柱在生产系统中落地是独立组织与开源社区的工作。当前可见的路径包括：
 
-为实现这一双重愿景，我们计划集成 **Apcore** 库套件，在不同环境间提供必要的 "神经链接"：
+- **[CoreFirst](https://corefirst.world)** —— 支柱 I（人类双语教育）的官方参考实验项目，构建为 Next.js 应用。详见 [`reference-implementations.md`](./reference-implementations.md)。
+- **[apcore](https://github.com/aiperceivable/apcore) 生态** —— 一套库套件（apcore-mcp、apcore-cli、apcore-sdk 等），可用于将 CFLT 集成进 AI 助手、批量处理语料或跨平台同步学习状态。apcore 与 CFLT 独立；我们把它列为一种可用工具链，而不是 CFLT 的交付物。
+- **独立第三方实现** —— 任何采用 CFLT 规范的团队都可以自建栈。我们在 [`reference-implementations.md`](./reference-implementations.md) 跟踪在用与规划中的实现，欢迎贡献。
 
-| 库 | 角色 | 战略影响 |
-|:--- |:--- |:--- |
-| **apcore-mcp** | **认知器官** | 将 CFLT 逻辑直接集成进 AI 助手 (Claude, Cursor)。AI 在交互中变为 "核心优先原生"。 |
-| **apcore-cli** | **工业化扩展** | 实现既有数据集的批量处理，转化为 CFLT 标准化语料，用于 LLM 微调。 |
-| **apcore-sdk** | **神经接口** | 跨平台同步人类学习进度与 LLM 行为偏好，形成连续的 "上下文环路 (Context Loop)"。 |
+CFLT 的角色是保持**规范、评估方法与参考语料**严谨、语种无关，使得尽可能广泛的实现能在协议层互操作。
 
 ---
 

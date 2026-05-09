@@ -15,6 +15,21 @@ Different languages choose different deterministic linearization functions over 
 
 $$L_{\text{CFLT}}(G) = [\,\text{root}(G),\ \text{cause}(G),\ \text{location}(G),\ \text{time}(G)\,]$$
 
+```mermaid
+graph TD
+    subgraph "Semantic DAG (Partial Order)"
+    G[Core] --> R[Reason]
+    G --> S[Space]
+    G --> T[Time]
+    end
+    
+    subgraph "CFLT Total Order"
+    L1[Core] --> L2[Reason] --> L3[Space] --> L4[Time]
+    end
+    
+    G -- "Flattening Function" --> L1
+```
+
 where $\text{root}(G)$ is the Core. By fixing this function across all languages, CFLT reduces the **computational complexity** of translation from structural transformation to lexical substitution.
 
 ### 1.1 Modeling Identity and Request Cores
@@ -31,9 +46,30 @@ From the perspective of a sequence predictor (human or LLM), the conditional ent
 
 $$H(t_i \mid t_{i-1}, \dots, t_1)$$
 
+```mermaid
+graph LR
+    subgraph "High Uncertainty (Entropy)"
+    S1[?] --> S2[?] --> S3[?] --> S4[?]
+    end
+    
+    subgraph "CFLT Uncertainty Reduction"
+    C[Core] --> R[Reduced ?] --> S[Reduced ?] --> T[Reduced ?]
+    end
+    
+    C -- "Constraint" --> R
+    C -- "Constraint" --> S
+    C -- "Constraint" --> T
+```
+
 In the **CFLT Protocol**, the Core occupies $t_1$. Because the Core is the highest-information constituent (the salience anchor), it provides the strongest constraint on the probability distribution of all subsequent slots.
 
-Conditional entropy $H(\text{rest} \mid \text{core})$ is significantly lower than $H(\text{rest} \mid \text{context})$, which means the listener/model achieves **earlier disambiguation**.
+> **Important caveat — chain rule and joint entropy.** By the chain rule of entropy (Cover & Thomas 2006, Ch. 2), the *joint* entropy $H(t_1, t_2, \dots, t_n)$ is **invariant** under permutation of the tokens — the total uncertainty of a sequence does not depend on the order in which we factor it. So CFLT does **not** claim to reduce total joint entropy by placing Core first.
+>
+> What CFLT does claim is weaker but still useful: under autoregressive decoding, **placing the highest-information constituent in the early prefix region maximizes the early conditional-distribution stability** $H(t_i \mid t_{<i})$ for the *first few* steps. This benefits (a) human listeners who do not buffer the entire utterance before starting to interpret, and (b) LLMs whose generation is sampled left-to-right and thus depend on early conditional distributions being well-shaped.
+>
+> Mathematically: CFLT optimizes for **early prefix informativeness**, not total entropy. The right framing is "Core in $t_1$ minimizes the uncertainty of *what kind of utterance this is* by step 1," not "Core in $t_1$ minimizes joint entropy."
+
+Conditional entropy $H(\text{rest} \mid \text{core})$ is significantly lower than $H(\text{rest} \mid \text{some-modifier})$, which means the listener/model achieves **earlier disambiguation** even though total joint entropy is unchanged. This is the precise sense in which Core-first is information-theoretically motivated.
 
 ---
 
@@ -114,6 +150,24 @@ This is independent of word-order choice — but the **search space at productio
 - For free-order natural language: $|L_{\text{CFLT}}| \times 4!$ permutations the speaker must choose among.
 - For CFLT-constrained language: $|L_{\text{CFLT}}| \times 1$ — the linearization is fixed.
 
+```mermaid
+graph TD
+    subgraph "Natural Language (Free Order)"
+    P1[C R S T]
+    P2[T S R C]
+    P3[S C T R]
+    P4[...]
+    Note1[4! = 24 Permutations]
+    end
+    
+    subgraph "CFLT Protocol (Fixed Order)"
+    F1[C R S T]
+    Note2[1 Permutation]
+    end
+    
+    style F1 fill:#efe,stroke:#333,stroke-width:2px
+```
+
 CFLT thus eliminates a factor of $4! = 24$ from the **protocol-level** search space, fixing the linearization sub-task to a single canonical schedule.
 
 > **Caveat.** This is an upper-bound argument about the *space* the speaker is permitted to choose from, not a claim that natural-language production literally enumerates 24 permutations at runtime. Empirical models of speech production (Levelt 1989; Kormos 2006) treat linearization as guided by incremental, heuristically constrained choice rather than combinatorial search. The pedagogical force of the $4! \to 1$ collapse is therefore that it removes an *axis of choice* the learner would otherwise have to resolve under cognitive load — not that it shortcuts a literal 24-way decision per utterance.
@@ -158,7 +212,7 @@ with the gap maximized when the speaker is novice (high baseline branching facto
 
 ## 11. Honest Limitations
 
-1. **UID tension.** As noted in §3, native idiomatic English aims for flat information density (often via end-weight); strict CFLT produces lumpy density profiles. Idiomatic polishing must be applied at the surface stage.
+1. **UID tension.** As noted in §4, native idiomatic English aims for flat information density (often via end-weight); strict CFLT produces lumpy density profiles. Idiomatic polishing must be applied at the surface stage.
 2. **Empirical estimation of $c_i$.** The decision-theoretic argument depends on cognitive cost functions that are hard to measure directly; experimental validation is needed (eye tracking, articulation onset latency).
 3. **Non-eventive clauses.** The CFLT template assumes an event-denoting clause with a clear core action. Stative descriptions, generic statements, and identification clauses ("This is a chair") fit awkwardly and may need a separate template family.
 4. **Long-range dependencies.** When semantic modifiers depend on each other (nested causes, conditional times), the four-slot template flattens what is logically a tree. The Grammar Overlay must reconstruct nesting at the surface level.
@@ -167,8 +221,10 @@ with the gap maximized when the speaker is novice (high baseline branching facto
 
 ## 12. Open Mathematical Questions
 
-1. **Optimal slot count.** Why four? Can the cognitive cost function justify exactly four slots, or is this an empirically motivated heuristic?
-2. **Slot order proof.** Is `Core → Reason → Space → Time` provably optimal under any natural cost function, or is it one of several local optima?
+> **Epistemic status.** The four points below are deliberately listed as *open* — they are not background limitations of the framework but unresolved formal questions. The first two are particularly important: CFLT does **not** claim mathematical optimality for either the slot count or the inner R-S-T order. The "Core in position 0" claim is multiply derived (see `core-concept.md` §1, `linguistics.md` §2-3, `neuroscience.md` §1, this document §2); the **R-S-T inner order is a documented convention with three rationale arguments** (see `linguistics.md` §4.3), not a derivation. This section is the canonical record of that distinction at the mathematical layer.
+
+1. **Optimal slot count.** Why four? Can the cognitive cost function justify exactly four slots (Core + R + S + T), or is this an empirically motivated heuristic? Note that the two-tier model (event nucleus + ground frame; see `core-concept.md` §2.1) places manner / instrument / beneficiary / accompaniment / modal / negation **inside** Core rather than as additional slots, so "four" refers to the *circumstantial frame* dimensionality, not the total number of modifier categories.
+2. **Slot order proof.** Is `Core → Reason → Space → Time` provably optimal under any natural cost function, or is it one of several local optima? CFLT currently treats R-S-T as a chosen permutation among $3! = 6$ alternatives, defended on Gricean Relevance + concreteness ladder + deictic recoverability arguments (`linguistics.md` §4.3). A formal proof — or counterexample — would tighten the foundation considerably.
 3. **Recursive CFLT.** When a slot filler is itself a clause, the recursion needs a closure rule; does the recursive variant preserve the linearization-cost theorem?
 4. **Cross-linguistic equivalence classes.** Two languages share a "CFLT equivalence class" if their $\sigma$ functions agree under permutation of the four slots. What is the algebraic structure of this equivalence relation?
 

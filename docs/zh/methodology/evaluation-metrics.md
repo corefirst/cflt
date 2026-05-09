@@ -33,13 +33,31 @@
 - **定义：** 基于 Hawkins 的 EIC（参见 `linguistics.md`），即“成分识别域”中识别出的成分与单词的比率。
 - **基准：** 每个 CFLT 句子的前 2 个 token 目标值为 1.0 (100%)。
 
+```mermaid
+graph TD
+    subgraph "人类 AOL (延迟)"
+    H1[传统方式：500ms]
+    H2[CFLT 方式：350ms]
+    H1 -- "-30% 缩减目标" --> H2
+    end
+    
+    subgraph "认知负荷 (CLI)"
+    C1[传统方式：高前额叶税]
+    C2[CFLT 方式：低前额叶税]
+    C1 -- "剩余记忆力提升" --> C2
+    end
+    
+    style H2 fill:#efe
+    style C2 fill:#efe
+```
+
 ---
 
 ## 3. 第二支柱指标：人工智能系统稳定性
 
 ### 3.1 意图保留得分 (Intent Preservation Score, IPS)
 - **定义：** 衡量输出在多大程度上保留了用户初始核心意图的指标（通过余弦相似度或 LLM 评估计算）。
-- **CFLT 主张：** CFLT 在位置 0 的“注意汇 (Attention Sink)”对齐防止了意图漂移。
+- **CFLT 主张：** CFLT 在位置 0 的首因对齐（把显著性锚点放在高注意力前缀区）防止了意图漂移。首因 vs 汇点的消歧参见 [`../foundations/llm.md`](../foundations/llm.md) §2.3。
 - **基准：** 复杂 4 插槽请求的 IPS > 0.95。
 
 ### 3.2 TTFT (首个 Token 时间) 降低
@@ -51,6 +69,19 @@
 - **定义：** 生成的 token 中与提供的上下文或核心动作相矛盾的百分比。
 - **CFLT 主张：** 将核心动作锚定在位置 0 减少了模型的“漂移”。
 - **基准：** 与自由格式的自然语言提示相比，幻觉率降低 2 倍。
+
+```mermaid
+graph LR
+    subgraph "AI 系统稳定性目标"
+    IPS[意图保留得分 > 0.95]
+    TTFT[TTFT 缩减：50-80%]
+    HR[幻觉率：缩减至 1/2]
+    end
+    
+    CFLT[CFLT 协议] --> IPS
+    CFLT --> TTFT
+    CFLT --> HR
+```
 
 ---
 
@@ -67,6 +98,18 @@
 2.  **任务：** 将复杂的 L1 句子快速翻译成 L2。
 3.  **变量：** 自由翻译 vs. CFLT 支架式翻译。
 4.  **指标：** 每 100 个单词的平均停顿次数。
+
+```mermaid
+graph LR
+    Input[语义意图] --> A[A 组：自然语言]
+    Input --> B[B 组：CFLT 协议]
+    
+    A --> EvalA[性能指标]
+    B --> EvalB[性能指标]
+    
+    EvalA --- Delta{消融差距}
+    EvalB --- Delta
+```
 
 ---
 

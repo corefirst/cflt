@@ -9,14 +9,16 @@
 
 ## 1. The Problem: Prompt Variance and Attention Decay
 
-Natural language is high-entropy and high-variance. In production AI systems, a minor change in the user's word order can lead to significantly different model behaviors (the **Order Sensitivity** problem). Furthermore, LLMs suffer from **Attention Sinks** at position 0 and **Recency Effects** at the end, often ignoring critical information buried in the middle of a long prompt.
+Natural language is high-entropy and high-variance. In production AI systems, a minor change in the user's word order can lead to significantly different model behaviors (the **Order Sensitivity** problem). Furthermore, LLMs exhibit strong **Primacy** at position 0 and **Recency** at the end, often ignoring critical information buried in the middle of a long prompt. (Note: position-0 over-attention is the joint effect of primacy and the softmax-stability artifact known as "attention sinks"; see [`../foundations/llm.md`](../foundations/llm.md) §2.3 for the disambiguation.)
 
 ## 2. The Solution: The CFLT Protocol as a "Wire Format"
 
 The **CFLT Protocol** acts as a **structural stabilizer**. By enforcing a fixed sequence (`[Core] → [Reason] → [Space] → [Time]`), you align the model's computation with its inherent positional biases.
 
-### 2.1 The Attention-Sink Alignment
-LLMs disproportionately attend to the first few tokens (Position 0). CFLT ensures that the **Core Action** (the most discriminating semantic payload) occupies this "Attention Sink," ensuring the model anchors its reasoning on the primary intent immediately.
+> **Caveat — multi-language LLM stability.** CFLT is designed as a *language-agnostic protocol* — its slot semantics and order claims are intended to apply regardless of surface language. However, current LLMs are **not equally capable across languages**: empirical work (Lai et al. 2023 *ChatGPT Beyond English*; Bang et al. 2023; "Don't Trust ChatGPT when your Question is not in English", EMNLP 2023) shows substantial degradation on non-English inputs, including instruction-following, reasoning, and safety. CFLT cannot eliminate this gap — it can only reduce *protocol-level* drift in the cross-language transfer. Do not interpret CFLT's universality as a claim that an LLM rendered CFLT-prompt in Vietnamese or Swahili will perform like the English version.
+
+### 2.1 Position-0 Attention
+LLMs disproportionately attend to the first few tokens (Position 0). This is the joint effect of **primacy** (causal masking compounds early tokens' influence) and **attention sinks** (Xiao et al. 2024 — a softmax-stability artifact). CFLT exploits primacy: placing the **Core Action** in the high-attention prefix region ensures the model's early state is conditioned on the primary intent. See [`../foundations/llm.md`](../foundations/llm.md) §2.3 for the careful disambiguation between primacy and sink.
 
 ---
 
@@ -31,7 +33,7 @@ Use a fast model (e.g., GPT-3.5, Haiku, Llama-3-8B) to flatten the user's input 
 ```markdown
 You are a CFLT Logic Transformer. 
 Your task is to convert any user input into the following strict discourse sequence:
-[CORE ACTION/STATE] -> [REASON/CONDITION] -> [SPACE/CONTEXT] -> [TIME]
+[Core/STATE] -> [REASON/CONDITION] -> [SPACE/CONTEXT] -> [TIME]
 
 Rules:
 1. Identify the most salient action or assertion. This is the CORE.
@@ -41,6 +43,16 @@ Rules:
 
 ### Step 2: The Main Reasoning Agent (Large/Powerful Model)
 Pass the cleaned CFLT string to your primary model. Because the input is now low-variance and core-anchored, the model's generation will be more stable and faithful to the intent.
+
+```mermaid
+graph LR
+    Input[Raw User Input] --> T[Step 1: Logic Transformer]
+    T -- "Strict CFLT Form" --> M[Step 2: Main Reasoning Agent]
+    M --> Output[Stable Output]
+    
+    style T fill:#bbf,stroke:#333,stroke-width:2px
+    style M fill:#f96,stroke:#333,stroke-width:2px
+```
 
 ---
 
@@ -54,14 +66,33 @@ Natural language often uses complex nesting (relative clauses, parentheticals) t
 - **Result:** Lower per-request token count without sacrificing semantic density.
 
 ### 4.2 KV Cache Reusability and Inference Speed
-In modern LLM inference (especially with frameworks like vLLM), the **KV Cache** can be reused for requests that share an identical prefix.
-- **CFLT Solution:** Because CFLT enforces a fixed prefix order (starting with the system prompt followed by the `[Core]`), multiple requests with the same intent or from the same "Intent Category" can benefit from prefix caching.
-- **Result:** Significant reduction in Time-To-First-Token (TTFT) and lower compute costs.
+In modern LLM inference (vLLM Automatic Prefix Caching, SGLang RadixAttention), the **KV Cache** can be reused for requests sharing an identical prefix.
+
+- **What can be cached.** vLLM APC works at **block granularity** (default 16 tokens per block, requires byte-exact match aligned to block boundaries); SGLang RadixAttention works at **token-level radix tree** (finer-grained but token-exact match required).
+- **What CFLT contributes.** The cacheable prefix is the **stable wrapper** — i.e., (a) the system prompt template, and (b) the *static schema* of the CFLT structure (the slot-tag tokens themselves, e.g., `[Core]:`, `[Reason]:` markers if you serialize them lexically). The Core *content* itself is the **variable payload** of each request and **does not benefit from caching directly** — different tasks have different Core actions. So the precise mechanism is: CFLT's stable schema enables a longer cacheable prefix than free-form natural language; the Core's variability limits where the cache cutoff lands.
+- **Result:** Reduced Time-To-First-Token (TTFT) on the wrapper portion; the Core onwards still requires fresh prefill. Real-world benefit is highest in agentic / multi-turn flows where the system prompt + schema is the dominant share of prompt length.
 
 ### 4.3 Improved Hit Efficiency in RAG (Retrieval-Augmented Generation)
 When a user's query is passed to a vector database for RAG, embedding models often distribute weight across the entire sentence.
 - **CFLT Solution:** By placing the **Core Action** at the start of the query, the embedding vector is more strongly influenced by the actual "intent" rather than the "contextual noise" (time/space).
 - **Result:** Higher top-K retrieval accuracy, ensuring the most relevant documents are retrieved based on the action required.
+
+```mermaid
+graph TD
+    subgraph "Query: Natural Language"
+    Q1[Since the server is down, check the logs...]
+    E1[Vector Weight: Scattered]
+    end
+    
+    subgraph "Query: CFLT Protocol"
+    Q2[Check the logs, because...]
+    E2[Vector Weight: Concentrated on ACTION]
+    end
+    
+    DB[(Vector Database)]
+    E1 -- "Diffuse Match" --> DB
+    E2 -- "Precise Match" --> DB
+```
 
 ## 5. Data & Benchmarks: Empirical Evidence vs. Projections
 
@@ -79,7 +110,7 @@ In short: §5.1 establishes that *some* fixed-prefix protocol pays. §5.2 specif
 ### 5.2 CFLT-Specific Projections (Subject to Validation)
 We propose the following metrics for future **Ablation Studies** to validate CFLT's specific increments:
 - **Token Economy:** By converting natural language into linear CFLT slots, we project a **30%–50% reduction** in "syntactic fluff" tokens (based on structured prompt benchmarks like TOON and CSV).
-- **Accuracy Boost:** We anticipate a **15%–20% improvement** in instruction-following for long-context tasks by aligning the Core Action with Position-0 **"Attention Sinks"** ([Xiao et al. 2024](https://doi.org/10.48550/arXiv.2309.17453)).
+- **Accuracy Boost:** We anticipate a **15%–20% improvement** in instruction-following for long-context tasks by aligning the Core with the high-attention prefix region (driven by primacy; see [`../foundations/llm.md`](../foundations/llm.md) §2.3 for the careful disambiguation between primacy and the softmax-stability sink artifact, [Xiao et al. 2024](https://doi.org/10.48550/arXiv.2309.17453)).
 
 ---
 
@@ -113,6 +144,19 @@ When multiple Agents coordinate, using CFLT as the communication protocol provid
 - The model starts processing "Check the logs" immediately (Primacy Effect).
 - The reason (server down) provides the immediate causal context.
 - The constraints (production, now) act as the final steering tokens.
+
+```mermaid
+graph LR
+    Raw["Raw: Since the server is down... check logs"]
+    CFLT["CFLT: Check logs... because server down"]
+    
+    subgraph "Model Focus"
+    Raw --> F1[Focus: server, down, since]
+    CFLT --> F2[Focus: CHECK, LOGS]
+    end
+    
+    style F2 fill:#f96,stroke:#333,stroke-width:2px
+```
 
 ---
 

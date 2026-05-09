@@ -28,12 +28,30 @@ LLMs consistently exhibit a **Primacy Effect**: information at the very beginnin
 ### 2.2 Positional Encodings
 Whether absolute (Vaswani 2017), relative (Shaw et al. 2018), or rotary (Su et al. 2021), positional encodings ensure the model knows where a token sits. Recent benchmarks suggest that "Absolute position 0" receives disproportionate attention ("attention sinks", Xiao et al. 2024).
 
-### 2.3 Attention Sinks and Softmax Stability
-Recent research into "StreamingLLM" (Xiao et al. 2024) identifies that the first few tokens in a sequence act as **attention sinks**. Regardless of their semantic value, these initial tokens accumulate high attention scores to maintain the numerical stability of the Softmax distribution.
+### 2.3 Position-0 Attention: Two Distinct Phenomena
 
-The **CFLT Protocol** strategically aligns the **Core Action** with these attention sinks. By placing the most discriminating semantic payload in position 0, CFLT ensures that the model's inherent computational bias (the sink effect) reinforces the speaker's primary intent rather than wasting attention on a semantically light temporal or spatial adjunct.
+Position 0 in modern LLMs is over-attended for **two separate reasons** that must not be conflated:
 
-CFLT exploits this: **the Core Action at position 0 is over-attended by construction**, biasing the model's early state toward the asserted event. (For the complementary effect — that *middle-of-sequence* tokens are systematically under-attended — see §3 below on the Lost-in-the-Middle phenomenon.)
+1. **Attention Sinks (Xiao et al. 2024)** — a *softmax-stability artifact*. Because the softmax denominator must sum to 1, attention "leaks" into early tokens whose semantic content is **not** especially relevant. Xiao et al. explicitly note these tokens are *"not being semantically important"* — the sink is a mathematical consequence of softmax + windowed attention, not a signal of semantic priority.
+2. **Primacy / Positional Bias** — early tokens are also attended more by virtue of being seen first by every later token's queries (causal masking compounds over depth). This is independent of the sink mechanism and *does* favor semantically rich content placed first.
+
+**What CFLT actually exploits.** CFLT's Core-first claim rests on **(2) primacy**, not (1) sink. Because the listener / model conditions all subsequent processing on the first tokens, placing the salience anchor there compounds its influence over the rest of the generation. The sink phenomenon is a separate engineering finding about *why models stay stable in long contexts* — it does not on its own argue for putting semantic content at position 0.
+
+It is also worth noting: putting the Core at position 0 does **not** "consume" the sink — most modern systems reserve the very first token (often `<bos>`) as a dedicated sink slot, and CFLT's Core would occupy positions immediately after that. The relevant claim is simply that *the high-attention prefix region is best occupied by high-information content.*
+
+```mermaid
+graph BT
+    subgraph "Transformer Attention Weights"
+    P0[Pos 0: CORE] --- W0((High Weight))
+    P1[Pos 1: Reason] --- W1(.)
+    P2[Pos 2: Space] --- W2(.)
+    P3[Pos 3: Time] --- W3(.)
+    end
+    style W0 fill:#f96,stroke:#333,stroke-width:2px
+    Note[High-attention prefix region: primacy + sink, jointly]
+```
+
+(For the complementary effect — that *middle-of-sequence* tokens are systematically under-attended — see §3 below on the Lost-in-the-Middle phenomenon.)
 
 ### 2.4 Anchoring Non-Action Cores
 The sink effect applies to any high-salience constituent, not just verbs:
@@ -45,9 +63,29 @@ The sink effect applies to any high-salience constituent, not just verbs:
 
 ## 3. The Lost-in-the-Middle Phenomenon
 
-Liu et al. (2023) demonstrated that LLM performance follows a U-shaped curve: accuracy is high for information at the start or end of a prompt but drops significantly for information in the middle.
+Liu et al. (2023, *Lost in the Middle*) demonstrated that LLM performance follows a U-shaped curve: accuracy is high for information at the start or end of a prompt but drops significantly for information in the middle.
 
-By placing the **Core Action** at the very beginning, CFLT ensures that the most critical part of the message never falls into the "middle" where it might be ignored or mis-indexed. The modifiers (Reason, Space, Time) occupy the subsequent slots, which are still within the high-attention early window for typical sentence-length inputs.
+> **Important — scale of the original finding.** Liu et al.'s experiment used **multi-document QA and key-value retrieval** with documents/keys placed at varying positions across a long context (10–30 documents). "Position" in their setup refers to *document position in a long context*, not *token position within a single sentence*. Extrapolating directly from "lost in the middle at document scale" to "core action at sentence scale" is a *cross-scale analogy* and should be treated as such.
+
+CFLT applies the lost-in-the-middle finding at **two distinct scales**, and the strength of the inference differs:
+
+1. **Document/prompt scale (well-supported).** When CFLT-structured content sits inside a long agentic prompt or RAG context, placing the most critical Core block near the start of the prompt directly mitigates Liu et al.'s phenomenon. This is the direct application.
+2. **Sentence/token scale (analogical).** Within a single sentence, the relevant phenomenon is *primacy* + *attention sinks* (see §2.3), not lost-in-the-middle. The U-shaped curve has not been experimentally established at intra-sentence token granularity in modern LLMs. Treat the sentence-level claim as motivated by, but not proved by, the document-level finding.
+
+By placing the **Core Action** at the very beginning, CFLT ensures the most critical part of the message occupies the high-attention prefix region. The modifiers (Reason, Space, Time) occupy subsequent slots, which for typical sentence-length inputs are still within the early-attention window.
+
+```mermaid
+graph LR
+    subgraph "U-Shape Information Retention"
+    Start[Start of Prompt] -- "High Accuracy" --> High1((.))
+    Middle[Middle of Prompt] -- "Low Accuracy" --> Low((.))
+    End[End of Prompt] -- "High Accuracy" --> High2((.))
+    end
+    
+    Start --- Middle --- End
+    
+    Note[CFLT places the Core at 'Start' to ensure maximum focus]
+```
 
 ---
 
@@ -85,6 +123,26 @@ CFLT plausibly contributes to token economy by:
 2.  **Explicit Nulls:** Using a "NULL" token for missing slots prevents the model from generating "filler" text to preserve grammatical flow.
 3.  **Prefix Caching:** High reusability of the `[System Prompt] + [Core]` prefix in inference engines (vLLM, SGLang) reduces compute cost (see `methodology/llm-prompting.md`).
 
+```mermaid
+graph TD
+    subgraph "Request A"
+    S1[System Prompt] --> C1[Core] --> M1[Modifier X]
+    end
+    
+    subgraph "Request B"
+    S2[System Prompt] --> C2[Core] --> M2[Modifier Y]
+    end
+    
+    Cache[KV CACHE: System + Core]
+    S1 --- Cache
+    C1 --- Cache
+    S2 --- Cache
+    C2 --- Cache
+    
+    Cache -- "Reused: Skip Compute" --> M1
+    Cache -- "Reused: Skip Compute" --> M2
+```
+
 The actual reduction must be quantified by the ablation specified in [`methodology/evaluation-metrics.md`](../methodology/evaluation-metrics.md) §4.1.
 
 ---
@@ -93,7 +151,7 @@ The actual reduction must be quantified by the ablation specified in [`methodolo
 
 Hallucinations often occur when the model loses track of the primary assertion (the Core) and begins generating plausible-sounding but irrelevant context. 
 
-By forcing the **Core Action** into position 0 and anchoring it with Attention Sinks, CFLT provides a permanent "semantic anchor" in the KV cache. This reduces the risk of the model "drifting" away from the user's intent as the sequence grows.
+By placing the **Core** at position 0, CFLT exploits primacy (see §2.3) to provide a stable "semantic anchor" in the early KV cache. This reduces the risk of the model "drifting" away from the user's intent as the sequence grows. (Note: this is a primacy argument; the attention-sink artifact discussed in §2.3 is a *separate* phenomenon and is not the basis of this claim.)
 
 ---
 
@@ -110,7 +168,7 @@ CFLT targets this latent space by using a **language-agnostic sequence**. Whethe
 1.  **Strictness vs. Flow:** Forcing a strict sequence can sometimes lead to "stilted" output from smaller models. The Grammar Overlay layer is essential to restore natural flow.
 2.  **Instruction Following:** Very small models (e.g., <3B parameters) may struggle to maintain the strict CFLT Protocol without fine-tuning.
 3.  **Reasoning vs. Linearization:** While CFLT improves discourse structure, it is not a replacement for Chain-of-Thought (CoT) reasoning for complex math or logic problems (Wei et al. 2022). It should be used *alongside* CoT.
-4.  **Long-context drift:** Even with attention sinks, extremely long modifiers can still cause the model to lose the core. Modularization (breaking thoughts into multiple CFLT sentences) is recommended.
+4.  **Long-context drift:** Even with primacy-based prefix anchoring, extremely long modifiers can still cause the model to lose the core. Modularization (breaking thoughts into multiple CFLT sentences) is recommended.
 
 ---
 

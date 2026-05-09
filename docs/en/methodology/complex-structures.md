@@ -11,7 +11,7 @@
 
 ## 1. The Limits of the Base Protocol
 
-The base CFLT sequence—`[Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]`—is highly optimized for single, discrete thoughts. It embodies "Flattened Logic." 
+The base CFLT sequence—`[Core] → [Reason] → [Space] → [Time]`—is highly optimized for single, discrete thoughts. It embodies "Flattened Logic." 
 
 However, natural human communication frequently involves **recursion** and **dependency**. What happens when a "Reason" is an entire event itself? What happens when a sentence contains multiple conditional dependencies?
 
@@ -30,6 +30,24 @@ The primary rule of CFLT-Complex is that **any slot in the CFLT sequence can con
 - **Outer Time:** today.
 - **Outer Reason:** [Because the flight will be canceled, if it rains, tomorrow.] *(This is a nested CFLT block)*
 
+```mermaid
+graph LR
+    subgraph "Outer CFLT Sequence"
+    C[Core] --> R[REASON]
+    R --> S[Space]
+    S --> T[Time]
+    end
+    
+    subgraph "Inner CFLT (Recursive)"
+    R --- C2[Inner Core]
+    C2 --> R2[Inner Reason]
+    R2 --> S2[Inner Space]
+    S2 --> T2[Inner Time]
+    end
+    
+    style R fill:#bbf,stroke:#333,stroke-width:2px
+```
+
 **CFLT-Complex Output:**
 > "I decided to leave, today, because [the flight will be canceled, if it rains, tomorrow]."
 
@@ -40,6 +58,24 @@ The primary rule of CFLT-Complex is that **any slot in the CFLT sequence can con
 When narrating a series of events, forcing everything into a single four-slot sentence causes the "Modifier Trap" to re-emerge. 
 
 **Rule:** Break long narratives into independent CFLT blocks joined by explicit logical connectors (`AND`, `BUT`, `THEN`, `SO`).
+
+```mermaid
+graph LR
+    subgraph "Block 1"
+    B1[CFLT Slot 0-3]
+    end
+    
+    subgraph "Block 2"
+    B2[CFLT Slot 0-3]
+    end
+    
+    subgraph "Block 3"
+    B3[CFLT Slot 0-3]
+    end
+    
+    B1 -- "AND/SO/THEN" --> B2
+    B2 -- "AND/SO/THEN" --> B3
+```
 
 ### 3.1 Chronological Chaining
 *Raw Input:* 昨天我在办公室开了一下午会，然后去餐厅吃了晚饭，最后回家睡觉了。
@@ -52,7 +88,7 @@ When narrating a series of events, forcing everything into a single four-slot se
 ### 3.2 Conditional Chaining (If-Then)
 Conditionals are inherently tricky because the *condition* (If) often precedes the *result* (Then) in time, but the *result* is usually the semantic Core.
 
-**The CFLT-Complex Rule for Conditionals:** Always assert the **Result (Core)** first, then append the **Condition** in the `[Condition/Reason]` slot. 
+**The CFLT-Complex Rule for Conditionals:** Always assert the **Result (Core)** first, then append the **Condition** in the `[Reason]` slot. 
 
 *Raw Input:* 如果你完成报告，我明天就在办公室请你喝咖啡。
 *(If you finish the report, I will buy you coffee in the office tomorrow.)*
@@ -88,12 +124,30 @@ For LLM Prompting and multi-agent communication, passing massive contexts in the
 }
 ```
 
+```mermaid
+graph TD
+    subgraph "AI Execution Framework"
+    GC[GLOBAL CONTEXT BLOCK]
+    
+    subgraph "CFLT Execution Chain"
+    E1["Sentence 1: C → R → S → T"]
+    E2["Sentence 2: C → R → S → T"]
+    E3["Sentence 3: C → R → S → T"]
+    end
+    
+    GC -- "Anchors" --> E1
+    GC -- "Anchors" --> E2
+    GC -- "Anchors" --> E3
+    end
+```
+
 ## 5. Honest Limitations
 
 1.  **Idiomaticity ceiling for nested forms.** A nested CFLT block such as *"I decided to leave, today, because [the flight will be canceled, if it rains, tomorrow]"* is the **scaffold form**, not the target idiomatic English. The Grammar Overlay layer is expected to polish this into *"I decided to leave today, because the flight will be canceled if it rains tomorrow."* CFLT-Complex defines the recursion rule, not the surface output.
 2.  **Connector inventory is open.** §3 lists `AND / BUT / THEN / SO` as canonical connectors; real chained discourse uses a much wider set (concessive, adversative, temporal-precedence, etc.). The minimal inventory should be treated as a starting point, not a closed set.
 3.  **No formal bound on nesting depth.** §2 permits arbitrary recursive embedding, but human working memory and LLM attention both degrade at deep nesting. A practical depth limit (likely 1–2 levels for spoken production, 2–3 for written/agentic use) requires its own empirical bound.
 4.  **Tense propagation across blocks.** When chained CFLT blocks share an implicit time frame, the protocol does not yet specify how the Grammar Overlay should propagate tense, aspect, and reference across blocks (e.g., shared subject ellipsis, sequence-of-tenses agreement). This is an open extension.
+5.  **Modifier-role coverage is restricted to the ground frame.** The R/S/T trio addresses circumstantial modifiers of cause, location, and time. Manner, instrument, beneficiary, accompaniment, modal, and negation do **not** receive separate slot positions in the unmarked sequence — they live inside the Core as part of the event nucleus (see [`../foundations/core-concept.md`](../foundations/core-concept.md) §2.1–§2.2 and [`./slot-disambiguation.md`](./slot-disambiguation.md)). The four-slot protocol is therefore a **typicality optimum for the circumstantial frame**, not a coverage universal for all modifier types.
 
 ---
 

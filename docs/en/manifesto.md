@@ -15,11 +15,10 @@ By identifying the common cognitive "hardware" shared by all humans (Chomsky's U
 
 | Layer | Name | Role |
 |---|---|---|
-| Project / Brand | **CoreFirst** (corefirst.world) | Umbrella name covering the theory and application |
-| Framework | **CFLT — Core-First Language Theory** | The unified brand for both the academic theory and the operational protocol |
+| Framework | **CFLT — Core-First Language Theory** | The unified name for both the academic theory and the operational protocol |
 | Implementation | **CFLT Protocol** | The specific `[Core] → [Modifiers]` sequencing rule |
 
-The project uses **CFLT** as the primary designation for both its scientific foundations and its practical methods. The term **CFLT Protocol** specifically refers to the operational sequencing rules.
+**CFLT** is the primary designation for both its scientific foundations and its practical methods. The term **CFLT Protocol** specifically refers to the operational sequencing rules. **CFLT is an open framework**: any team is welcome to research, implement, or extend it independently. **CoreFirst** ([corefirst.world](https://corefirst.world)) is the official reference experimental project for CFLT, but is not a required dependency or licensing gate — it exists alongside any other implementations the community may build.
 
 ---
 
@@ -43,13 +42,38 @@ The project uses **CFLT** as the primary designation for both its scientific fou
 **CFLT Extension:** Where Chomsky's *core grammar* is a structural category, CFLT introduces a **dynamic linearization** principle: *the cognitive core is also the universally-prioritized utterance-initial position*.
 
 ### 2.2 Cognitive Foundations: Figure-Ground and EIC
+
+```mermaid
+graph LR
+    subgraph "Cognitive Asymmetry (Talmy 2000)"
+    F[Figure: Salient/Moving] -- "is located/characterized by" --> G[Ground: Stable/Reference]
+    end
+    subgraph "CFLT Linearization"
+    C[Core] -- "followed by" --> M[Modifiers/Context]
+    end
+    F -.-> C
+    G -.-> M
+```
+
 **Figure-Ground (Talmy):** CFLT codifies a **Figure-First** linearization. The Core (Figure) is the salient event, while modifiers (Ground) provide the reference frame. This aligns with the cognitive expectation to locate salient events relative to stable frames.
 
 **Early Immediate Constituents (Hawkins):** CFLT optimizes for **parsing efficiency**. By placing the Core at position 0, it minimizes the "Constituent Recognition Domain," achieving an efficiency ratio near 100% and reducing the look-ahead buffer for both humans and machines.
 
 ### 2.3 Computational Foundations: Attention Sinks (Xiao et al.)
-**Concept:** Transformer-based LLMs exhibit **Attention Sinks** at position 0—initial tokens accumulate disproportionate attention weights to maintain computational stability.
-**CFLT Application:** CFLT strategically aligns the **Core Action** with these attention sinks, ensuring the most discriminating semantic payload is processed with maximum model focus.
+
+```mermaid
+graph BT
+    subgraph "Transformer Attention Weights"
+    P0[Pos 0: Core] --- W0((High Weight))
+    P1[Pos 1: Reason] --- W1(.)
+    P2[Pos 2: Space] --- W2(.)
+    P3[Pos 3: Time] --- W3(.)
+    end
+    style W0 fill:#f96,stroke:#333,stroke-width:2px
+```
+
+**Concept:** Transformer-based LLMs over-attend to the prefix region for two distinct reasons — (1) **Attention Sinks** (Xiao et al. 2024), a softmax-stability artifact in which initial tokens absorb attention regardless of semantic content, and (2) **Primacy / positional bias**, where causal masking compounds the influence of early tokens over later ones.
+**CFLT Application:** CFLT exploits (2), not (1). Placing the Core in the high-attention prefix region (typically positions just after `<bos>`) compounds its influence over generation — but this is a primacy argument, not a claim that attention sinks "prefer" semantic content. See [`foundations/llm.md`](foundations/llm.md) §2.3 for the careful disambiguation.
 
 ### 2.4 The Sapir-Whorf Hypothesis (Linguistic Relativity)
 **Concept:** Language structure influences habitual cognitive patterns.
@@ -66,9 +90,21 @@ The project uses **CFLT** as the primary designation for both its scientific fou
 ### 3.1 The Principle: "Core First, Supplement Later"
 CFLT mandates a standardized information sequence to unify human expression:
 
-**`[Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]`**
+**`[Core] → [Reason] → [Space] → [Time]`**
 
-All four elements are present in the **canonical (unmarked) sequence**. Implementations and teaching materials should preserve this four-element ordering when teaching the default form; partial sequences (e.g., dropping `[Space/Context]`) are treated as **reduced forms** of the canonical sequence rather than as alternative protocols, and the slot-order rule still applies to whichever slots are present.
+```mermaid
+graph LR
+    A[Core] --> B[Reason] --> C[Space] --> D[Time]
+    style A fill:#f96,stroke:#333,stroke-width:2px
+```
+
+All four elements are present in the **canonical (unmarked) sequence**. Implementations and teaching materials should preserve this four-element ordering when teaching the default form; partial sequences (e.g., dropping `[Space]`) are treated as **reduced forms** of the canonical sequence rather than as alternative protocols, and the slot-order rule still applies to whichever slots are present.
+
+> **Coverage scope of the four slots.** The protocol governs only the **ground frame** — the world frame around the event. Modifiers that belong to the event itself (manner *slowly*, instrument *with butter*, beneficiary *for my mom*, accompaniment, modal, negation) live **inside the Core** as part of the event nucleus, not as separate slots. Each language assembles the event nucleus internally using its own native syntax (case marking, prepositions, particles, coverbs); CFLT does not prescribe that internal assembly. The four slots therefore are **not** an exhaustive taxonomy of all modifiers — they are an exhaustive taxonomy of the *circumstantial frame* that the unmarked default places after the Core. See [`foundations/core-concept.md`](foundations/core-concept.md) §2.1–§2.2 for the two-tier model and [`methodology/slot-disambiguation.md`](methodology/slot-disambiguation.md) for the operational decision tree.
+
+> **The role of English in this documentation.** Because English is the most documented L2 and the strongest LLM-supported language, this documentation uses English as the **default illustrative language** and as a **verification anchor** when checking slot assignments across languages. English is **not**, however, a required intermediate hop for cross-language learning (a Mandarin↔Japanese learner does not have to route through English), nor is it the judge of where Core boundaries lie in non-English target languages.
+>
+> CFLT's universality is a **protocol-layer claim**: the schema (Core-first, R→S→T) and slot-semantics (functional WHY/WHERE/WHEN questions) are language-agnostic. **It is not a claim that English is unnecessary in practice.** The L3 / additional-language acquisition literature (Cenoz 2003; De Angelis 2007) supports the theoretical position that L1↔L2 transfer can be direct, but the *ecological reality* is that English serves as a resource and metalinguistic medium in most learning contexts globally. Specific language-pair courses may legitimately use the learner's existing L2 (often English) as a metalinguistic explanation language without contradicting CFLT's protocol-layer universality. The event-nucleus internal assembly and language-specific edge cases are delegated to each language's native syntax. See [`foundations/core-concept.md`](foundations/core-concept.md) §2.3 for the layer-by-layer breakdown, and the [language-pair guides](methodology/language-pair-guides/index.md) for operationalization in specific pairs.
 
 > **Important scope clarification.** The four-element canonical sequence defines CFLT's **unmarked default** — the form a fluent speaker produces when no special rhetorical purpose applies. It does **not** prohibit marked deviations (topicalization, fronting, clefts, end-weight repackaging) that mature fluency requires, nor does it require every utterance to surface all four slots. Every natural language has multiple expressive forms for the same propositional content, and CFLT accommodates this by treating itself as the *baseline* from which deliberate marked deviations are learned later. See [`foundations/core-concept.md`](foundations/core-concept.md) §6 for the unmarked/marked distinction and §7 for the misreading-refutation matrix.
 
@@ -93,8 +129,8 @@ The Core in CFLT is a **salience anchor**, not a verb (see [`foundations/core-co
 
 #### Example 4 — Request / Speech-Act Core
 **L1 (Chinese):** *现在能在桌上帮我递一下盐吗？* — Time → Space → Request
-**CFLT Reconstruction:** *能帮我递一下盐吗，请，在桌上，现在？* — Core (request) → Polite marker → Space → Time
-**English (CFLT-L2):** *Could you pass the salt, please, on the table, now?*
+**CFLT Reconstruction:** *请帮我递一下盐，在桌上，现在。* — Core (request) → Polite marker → Space → Time
+**English (CFLT-L2):** *Could you please pass the salt, on the table, now?*
 
 **The CFLT Advantage:** Across all four core types, once the learner adopts Core-First sequencing in their native mind, producing the target language becomes a **token replacement** exercise rather than a structural reorganization. The protocol is uniform; what fills position 0 varies with the speaker's intent.
 
@@ -145,11 +181,13 @@ CFLT is not limited to Chinese-to-English. It is designed as a **Universal Proto
     - *CFLT Pivot:* "Como una manzana (Core) ... porque tengo hambre (Reason) ... en la cocina (Space)." 
     - CFLT aligns the Arabic V-first tendency with the Spanish SVO core, using **Natural Semantic Metalanguage (NSM) Primes** as the semantic bridge to ensure the *intent* of the verb is preserved across divergent conjugation systems.
 
-The project home and canonical reference is **corefirst.world**.
+The official reference implementation is hosted at **corefirst.world**; the framework itself is open for any team to implement independently.
 
 ---
 
-## 7. Product Implementation: CoreFirst
+## 7. Reference Implementation: CoreFirst
+
+The section below describes **CoreFirst**, the official reference implementation of CFLT. It illustrates how the protocol can be operationalized as a product; it is **not** a prescription that all CFLT implementations must look this way.
 
 ### 7.1 The "Semantic Lego" Philosophy
 Instead of teaching grammar as rigid rules, CoreFirst treats language as a set of functional blocks. The goal is **Maximum Communicative Efficiency** with **Minimum Cognitive Load**.
@@ -161,6 +199,8 @@ Grammatical terms (nouns, verbs) are replaced by intuitive functional categories
 *   **`[Who/What]`** (Subject/Object)
 *   **`[Action]`** (Predicate)
 *   **`[Context]`** (Adverbials of time, place, etc.)
+
+> *Note: `[Context]` here is a grouping label used at the teaching layer (textbooks, courseware, and product UI alike), covering CFLT's modifier slots — typically `[Space]` + `[Time]` from §3.1. It is not a fifth CFLT slot.*
 
 #### B. Tense → Semantic Time Tokens
 To solve the complexity of English tenses, CFLT uses "Time Tokens."
@@ -194,7 +234,7 @@ The CFLT framework is uniquely suited for technical communication. In the **IT s
 The same modular vocabulary-injection pattern extends to medical, financial, technical, and hospitality sectors without altering the underlying cognitive protocol.
 
 ### 8.3 Multimodal Delivery (Audio-Visual Synthesis)
-- **Audio-Primary:** Voice output is prioritized, with prosody and stress patterns emphasizing the `[Core Action]` of the CFLT block.
+- **Audio-Primary:** Voice output is prioritized, with prosody and stress patterns emphasizing the `[Core]` of the CFLT block.
 - **Visual-Support:** AI-generated images or short clips provide immediate visual feedback for the core concept, bypassing the need for native language translation.
 
 ### 8.4 Automated Courseware Generation
@@ -215,16 +255,4 @@ Language learning is a physical skill. By identifying the "Muscle Overlap" betwe
 
 ---
 
-## 10. Naming Decision: Why Not "Meta-Language Logic"?
-
-During early framing of this project, the candidate name **"MLL — Meta-Language Logic"** was considered as the umbrella term. It was rejected before publication for three reasons, recorded here so that the choice of CFLT can be evaluated on its merits rather than assumed:
-
-1. **Terminological precision.** "Meta-language" in linguistics and computer science denotes a language used to describe another language (BNF, XML Schema, Tarski-style truth definitions). The framework described in this document is not a meta-language in this technical sense — it is a discourse-sequencing protocol. Adopting "Meta-Language Logic" would have constituted a misuse of established terminology that any peer reviewer with a linguistics or formal-language background would flag.
-2. **Same-domain acronym collision.** "MLL" is occupied in adjacent biomedical-AI literature (Mixed Lineage Leukemia); "MLM" is the canonical AI/NLP abbreviation for Masked Language Modeling (BERT and successors). Both collisions would have impaired discoverability and risked mis-classification of this work by search engines and academic indexes in its target domain.
-3. **Self-explanatory naming.** "Meta-Language Logic" does not communicate the framework's central operational rule. **Core-First Language Theory** names that rule directly: the core is always first. The §3.1 principle ("Core First, Supplement Later") and the umbrella term now point at the same idea.
-
-This section is preserved as a design-decision record so future contributors do not re-litigate the question.
-
----
-
-*Created by CoreFirst AI Project, 2026. Project home: corefirst.world.*
+*Authored by the CFLT Core Team, 2026. Project home: cflt.center.*

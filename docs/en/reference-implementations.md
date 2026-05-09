@@ -23,13 +23,15 @@ CFLT itself is theory and specification — the implementations are where the pr
 
 ---
 
-## Planned
+## Possible Future Directions
 
-### apcore-cflt (Pillar II — LLM Protocol Layer)
-- **Repository:** TBD (will live in the [apcore](https://github.com/apcore) ecosystem)
-- **Purpose:** CFLT as a standardized reasoning protocol for LLMs and AI agents. Will provide CFLT-aware MCP server, CLI tooling for corpus-level CFLT transformation, and SDKs for major language frameworks.
+The entries below are **directional sketches** of where third-party implementations could plausibly emerge. They are not commitments by the CFLT project — CFLT itself is a research/specification body and does not maintain implementation tooling. Any team is welcome to start work on these directions and register their project in the "Active" section above.
+
+### LLM Protocol Layer (Pillar II) — possible host: [apcore](https://github.com/aiperceivable/apcore) ecosystem or independent
+- **Indicative scope:** CFLT as a standardized reasoning protocol for LLMs and AI agents. Could provide CFLT-aware MCP server, CLI tooling for corpus-level CFLT transformation, and SDKs for major language frameworks.
 - **Audience:** LLM/Agent developers, framework builders.
-- **Status:** Not yet started — see [`vision.md`](./vision.md) §3 for the strategic case.
+- **Status:** No active implementation registered. The apcore library suite is one plausible host (CFLT does not commit to it), as are independent open-source efforts.
+- See [`vision.md`](./vision.md) §3 for the strategic case for this layer.
 
 ---
 

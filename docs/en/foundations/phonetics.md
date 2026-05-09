@@ -29,6 +29,23 @@ For Chinese learners, the existing mastery of Hanyu Pinyin provides a highly gra
 - **Direct Overlap (1:1 Mapping):** Consonants like /b/, /p/, /m/, /f/ share nearly identical articulation points in both Pinyin and English.
 - **Relative Adjustments (Delta Mapping):** Instead of teaching a sound from scratch, CFLT uses the L1 anchor. 
   - *Example:* To teach the English voiced labiodental fricative /v/, the instruction is not "place your top teeth on your bottom lip and voice it." It is: "Form the Pinyin 'f' mouth shape, but vibrate your vocal cords."
+
+```mermaid
+graph LR
+    subgraph "L1 Muscle Memory (Anchor)"
+    A[Pinyin 'f' Position]
+    end
+    
+    A -- "+ Vocal Cord Vibration (Delta)" --> B[English /v/ Sound]
+    
+    subgraph "L2 Target"
+    B
+    end
+    
+    style A fill:#bbf,stroke:#333,stroke-width:2px
+    style B fill:#f96,stroke:#333,stroke-width:2px
+```
+
 - **Approximating Zero-to-One Phonemes:** For sounds entirely absent in the L1 (e.g., the English interdental fricatives /θ/ and /ð/), CFLT creates kinesthetic analogies. 
 
 ## 3. Proceduralization of Articulation
@@ -44,6 +61,22 @@ Phonetic mastery in CFLT is not taught in isolation; it is tightly coupled with 
 
 - **Prosodic Anchoring:** The `[Core]` slot is not just the semantic anchor; it is also the **prosodic anchor**. In CFLT vocal training, learners are taught to place the primary phrasal stress on the Core token. 
 - **Chunking:** The four-slot protocol naturally segments speech into breathable phonetic chunks. This prevents the learner from running out of breath, a common issue when trying to parse and pronounce complex, head-final sentences in real-time.
+
+```mermaid
+graph TD
+    subgraph "Prosodic & Chunking Structure"
+    C[Core] --> R[Reason]
+    R --> S[Space]
+    S --> T[Time]
+    end
+    
+    C --- P1[Primary Stress / Breath Anchor]
+    R --- P2[Breath Pause]
+    S --- P3[Breath Pause]
+    T --- P4[Sentence Final]
+    
+    style C fill:#f96,stroke:#333,stroke-width:2px
+```
 
 ## 5. Honest Limitations
 

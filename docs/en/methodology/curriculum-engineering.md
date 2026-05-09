@@ -7,7 +7,7 @@
 
 > **Purpose:** To provide a systematic engineering framework for generating high-quality, CFLT-compliant educational content at scale using Large Language Models.
 >
-> **Theoretical anchors.** This document operationalizes [`foundations/pedagogy.md`](../foundations/pedagogy.md) §6 (Task-Based Language Teaching) and §8 (bilingual lexical access), and depends on [`foundations/linguistics.md`](../foundations/linguistics.md) §8 (Construction Grammar slot-filling) and §9 (NSM as the slot-filler vocabulary). Token-pack design is the engineering surface of those theoretical commitments.
+> **Theoretical anchors.** This document operationalizes [`foundations/pedagogy.md`](../foundations/pedagogy.md) §6 (**weak-TBLT** — Ellis 2003; CFLT is *not* compatible with Long's strong-TBLT, see pedagogy §6 for the honest positioning) and §8 (bilingual lexical access), and depends on [`foundations/linguistics.md`](../foundations/linguistics.md) §8 (Construction Grammar slot-filling) and §9 (NSM as the slot-filler vocabulary). Token-pack design is the engineering surface of those theoretical commitments.
 
 ---
 
@@ -39,6 +39,20 @@ Combine scenarios and tokens into valid `[Core] → [Reason] → [Space] → [Ti
 - **Audio:** Text-to-Speech (TTS) with emphasis on the Core prosody.
 - **Visual:** AI-generated images or icons representing the atomic tokens.
 
+```mermaid
+graph TD
+    In[Industry / Domain] --> S1[1. Scenario Selection]
+    S1 --> S2[2. Atomic Token Extraction]
+    S2 --> S3[3. CFLT Template Synthesis]
+    S3 --> S4[4. Multi-Modal Asset Gen]
+    
+    subgraph "Output Assets"
+    S4 --> T[Text: CFLT Form]
+    S4 --> A[Audio: Prosodic TTS]
+    S4 --> V[Visual: AI Icons]
+    end
+```
+
 ---
 
 ## 3. The "IT English" Module Case Study
@@ -58,6 +72,15 @@ The IT sector is the primary target for CFLT due to its logical affinity with en
 2.  **Level 2 (The Voice):** Speak the sequence: "Scale the database, because of traffic spike, in AWS, tonight."
 3.  **Level 3 (The Reflex):** Real-time roleplay responding to an AI "Senior Architect" using strict CFLT.
 
+```mermaid
+graph LR
+    L1[Level 1: UI Builder] -- "Slot Filling" --> L2[Level 2: Voice Challenge]
+    L2 -- "Prosodic Reflex" --> L3[Level 3: AI Roleplay]
+    L3 -- "Fluency" --> Mastery((L2 Mastery))
+    
+    style Mastery fill:#f96,stroke:#333,stroke-width:2px
+```
+
 ---
 
 ## 4. Validating Content Quality
@@ -70,6 +93,21 @@ All AI-generated content must pass the **CFLT Validator**:
 ## 5. Scaling: Any-to-Any Content Generation
 
 Because the CFLT logic is universal, once an "IT English" module is engineered, the system can automatically generate an "IT Japanese" or "IT French" module by simply swapping the token pack and the Grammar Overlay configuration. This is the path to **Global Any-to-Any Bilingualism**.
+
+```mermaid
+graph TD
+    Logic["CFLT Universal Logic: C → R → S → T"]
+    
+    subgraph "Scaling Target"
+    Logic --> EN[English Token Pack]
+    Logic --> JP[Japanese Token Pack]
+    Logic --> FR[French Token Pack]
+    end
+    
+    EN --> M1[English Module]
+    JP --> M2[Japanese Module]
+    FR --> M3[French Module]
+```
 
 ---
 

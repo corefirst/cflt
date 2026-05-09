@@ -43,7 +43,108 @@ Every well-formed CFLT utterance commits to one of these four core types in posi
 | **State** | *I'm exhausted*, because... | The condition / quality |
 | **Request** | *Could you pass the salt*, please... | The speech act / desired outcome |
 
+```mermaid
+graph TD
+    subgraph "Speaker Intents"
+    I1[Action: Event/Change]
+    I2[Identity: Classify/Name]
+    I3[State: Quality/Condition]
+    I4[Request: Speech Act]
+    end
+    
+    I1 -- "Protocol" --> P0[Pos 0: Core]
+    I2 -- "Protocol" --> P0
+    I3 -- "Protocol" --> P0
+    I4 -- "Protocol" --> P0
+    
+    P0 --> P1[Pos 1: Reason]
+    P1 --> P2[Pos 2: Space]
+    P2 --> P3[Pos 3: Time]
+    
+    style P0 fill:#f96,stroke:#333,stroke-width:2px
+```
+
 The selection of Core is a **semantic decision** the speaker makes ("what am I really trying to say?"). The placement of Core in position 0 is the **protocol** CFLT enforces.
+
+### 2.1 The Event Nucleus: Core's Internal Structure
+
+The Core occupies position 0 as a single attention unit, but **what fills that unit is not necessarily a single word**. It is the **event nucleus** — the predicate together with the participants and manner that are inseparable from the event itself.
+
+CFLT operates as a **two-tier model**:
+
+| Tier | Contents | Listener question it answers | Position |
+|---|---|---|---|
+| **Tier 1: Event Nucleus** | Predicate (Action/Identity/State/Request) + valence-bound participants (subject, object, instrument, beneficiary, recipient) + manner adverbials | *What happened?* (including who, to-whom, with-what, how) | Slot 0 (Core) |
+| **Tier 2: Ground Frame** | Reason / Space / Time | *Why? Where? When?* | Slots 1–3 |
+
+The event nucleus is a single salience unit because the listener processes it as one foregrounded chunk: *"I baked the cake with butter, slowly, for my mom"* presents **one event**, not five. Whereas *"in the kitchen, yesterday"* are scene-setters that are conceptually independent of the event.
+
+**Why this is cross-linguistically rigorous:**
+
+- The **internal assembly** of the event nucleus uses each language's native syntax — case marking in Japanese/Korean/Turkish, prepositions in English/Romance/Chinese, coverbs in Chinese, particles in Japanese. CFLT does **not** mandate how to assemble it. Each language's "hardware" handles this.
+- CFLT only governs the **boundary between event nucleus (Slot 0) and ground frame (Slots 1–3)**, plus the order within the ground frame. This is the protocol layer.
+
+**Theoretical kin (alignment with existing frameworks):**
+
+- **Role and Reference Grammar (Van Valin & LaPolla 1997)** distinguishes Nucleus (predicate) / Core (predicate + arguments) / Periphery (circumstantial adjuncts). CFLT's two-tier model can be viewed as a **functional merging of RRG's Nucleus and Core** into a single "event nucleus," with RRG's Periphery corresponding to CFLT's ground frame. This is a documentation-layer compression for pedagogical clarity, not a theoretical disagreement.
+- **LFG c-structure / f-structure separation** and **HPSG linearization theory** independently realize the same "protocol layer + implementation layer" split: f-structure (functional, cross-linguistically aligned) and c-structure (constituent, language-specific surface order) match CFLT's "protocol layer + event-nucleus assembly" decomposition.
+- **Cinque (1999)** places manner adverbs at the **lowest (most VP-internal)** functional projections in the cartographic adverb hierarchy — closest to the predicate. CFLT's placement of manner inside the event nucleus is consistent with Cinque's positioning, though Cinque treats manner as Spec-of-FP rather than valence-bound; CFLT's "manner inside Core" is best read as "manner adjacent to the predicate in the linearization, not necessarily syntactically valence-bound."
+
+Below the protocol layer, each language uses its own machinery; above it, all languages share one ordering. This is what makes CFLT a **protocol** rather than a syntactic prescription, and what makes it **universally applicable** without violating any language's typology.
+
+> **Honest caveat — fluency vs complexity trade-off.** CFLT's two-tier model reduces working-memory load by externalizing the linearization decision (Sweller's Cognitive Load Theory). This benefit is strongest at **early-to-intermediate** proficiency. Skehan's (1998) Trade-off Hypothesis warns that formulaic templates can plateau learners on *fluency* at the cost of *complexity* and *accuracy* — i.e., learners stay safe inside the template instead of pushing for restructuring. CFLT therefore should be paired with progressive task-complexity escalation (see `pedagogy.md` §6 on weak-TBLT) so that intermediate-and-above learners are pushed beyond the unmarked default into marked deviations (see §6 here on the proficiency arc).
+
+### 2.2 The Boundary Rule: What Goes In Core vs The Ground Frame
+
+A modifier belongs **inside the event nucleus** (Slot 0) if it answers an internal question about the action itself:
+
+- **How** was it done? → manner (*slowly, carefully, in a hurry*)
+- **With what** instrument or means? → instrument (*with butter, by phone, by car, via API*)
+- **For / to whom**? → beneficiary, recipient (*for my mom, to my friend*)
+- **Together with whom**? → accompaniment (*with John, with the team*)
+- **In what mood**? → modal (*probably, certainly, maybe*) — attaches to predicate
+- **Negated**? → negation (*didn't, never, hardly*) — attaches to predicate
+
+A modifier belongs **in the ground frame** (Slots 1, 2, or 3) if it answers a question about the world frame around the event:
+
+- **Why?** (cause / purpose / condition) → Slot 1 [Reason]
+- **Where?** (physical location, abstract domain, medium) → Slot 2 [Space]
+- **When? How often? How long?** → Slot 3 [Time]
+
+**Diagnostic — the substitution test**: *"Can the modifier change without the event changing?"*
+
+| Modifier change | Same event? | Verdict |
+|---|---|---|
+| *slowly* baked → *quickly* baked | No (different action quality) | Inside Core (manner) |
+| *with butter* → *with margarine* | No (different recipe = different event) | Inside Core (instrument) |
+| *in the kitchen* → *in the garden* | Yes (same event, different scene) | Ground frame (Space) |
+| *yesterday* → *today* | Yes (same event, different time) | Ground frame (Time) |
+| *because tired* → *because curious* | Yes (same event, different motivation) | Ground frame (Reason) |
+
+**If still ambiguous — the listener-question test**: which question does the listener naturally ask first?
+- *"what + how + with-what + for-whom"* → inside Core (the event itself)
+- *"why / where / when"* → ground frame (the world around the event)
+
+For comprehensive boundary cases and a 50-example reference table, see [`../methodology/slot-disambiguation.md`](../methodology/slot-disambiguation.md).
+
+### 2.3 Layer-by-Layer Universality: What's Universal, What's Language-Specific
+
+A common confusion is whether CFLT prescribes the *same form* across all languages, or merely the *same protocol*. The answer differs by layer. The table below is the canonical reference.
+
+| Layer | Content | Universal? | Role of any specific language (incl. English) |
+|---|---|---|---|
+| **L1: Protocol** | Core in position 0; ground frame in order Reason → Space → Time | **Yes — universal** | No language is privileged. The protocol is language-agnostic. |
+| **L2: Slot semantics** | Which functional question each slot answers (Why → Reason; Where → Space; When → Time) | **Yes — universal** | These are functional categories, not surface syntax. |
+| **L3: Event-nucleus internal assembly** | How predicate + valence + manner are arranged inside Core (case marking, particles, prepositions, coverbs, word order within the nucleus) | **No — fully language-specific** | Each language uses its own native syntax. CFLT does not prescribe internal Core structure. |
+| **L4: Boundary edge cases** | Whether *"with X"* / *"in X"* / etc. attach inside Core or to a ground-frame slot | **Mostly universal, with language-specific edge cases** | English may serve as a *verification anchor* but is not the judge. Each language's functional analysis governs. |
+
+**Principled implication for English's role.** English is used in this documentation as the **default illustrative language** because English-language docs reach the broadest audience and English-trained LLMs understand it best. English can also serve as a **verification anchor** (translate a contested slot assignment into English to check whether the same answer survives the round-trip). But English **must not** become:
+
+- The judge of where Core boundaries lie in non-English target languages
+- A required intermediate hop for cross-language pairs (e.g., a Mandarin↔Japanese learner does not have to route through English)
+- The implicit referent of "L1" or "L2" — those terms are *learner-relative*, not English-relative
+
+CFLT's universality claim is restricted to L1 and L2 above. The other two layers explicitly delegate to language-specific machinery, and that delegation is what makes the universality claim defensible. For practical operationalization of L4 in specific language pairs, see the [language-pair guides](../methodology/language-pair-guides/index.md).
 
 ---
 
@@ -76,7 +177,7 @@ This is the deeper reason CFLT aligns with LLM behavior: not because LLMs love f
 
 The core-concept document defines the "unmarked" middle ground between thought and speech.
 
-1. **Reduced restructuring cost.** L1 thought no longer needs to be re-parsed into L2 surface order; both languages share the CFLT intermediate scaffold (see `mathematics.md` §8).
+1. **Reduced restructuring cost.** L1 thought no longer needs to be re-parsed into L2 surface order; both languages share the CFLT intermediate scaffold (see `mathematics.md` §9).
 2. **Stable attention anchor.** LLMs focus most heavily on position 0; the protocol ensures that position 0 is always the most important word (see `llm.md` §2).
 3. **Foundation for stylistic flexibility.** Once the Core-First habit is automatic, learners can deliberately depart from it for rhetorical effect (foregrounding time, hedging, etc.). CFLT is a *base case*, not a ceiling.
 
@@ -109,6 +210,23 @@ The problem for adult L2 learners is not "how to emphasize time"; the problem is
 CFLT accelerates the learner's progression by giving them the unmarked default first, **then** introducing marked deviations as the next learning layer. This is consistent with how native speakers acquire grammar (default first, exceptions later), with skill acquisition theory (declarative→procedural→automatic with deliberate variation), and with cognitive load theory (build a single schema, then specialize).
 
 ### The Proficiency Arc:
+
+```mermaid
+graph TD
+    A[Level 1: Declarative] -->|Internalization| B[Level 2: Procedural]
+    B -->|Stylistic Choice| C[Level 3: Expressive]
+    
+    subgraph "Output Characteristics"
+    A1[Strict Core-First Unmarked]
+    B1[Automatic Default + Marked Recognition]
+    C1[Deliberate Departure for Style]
+    end
+    
+    A --- A1
+    B --- B1
+    C --- C1
+```
+
 1. **Declarative stage.** Learner explicitly applies the CFLT Protocol. Output is consistently unmarked Core-First. The default is being installed.
 2. **Procedural stage.** The protocol becomes automatic. The learner can produce the unmarked default without thinking. They begin to **recognize** marked deviations in input — *"why did the speaker put 'yesterday' first there?"*
 3. **Expressive stage.** Learner has internalized both the default and a growing inventory of marked deviations. Choices among orderings are deliberate stylistic decisions. CFLT becomes a fallback when cognitive load is high (under stress, in unfamiliar topics) or precision is required.
@@ -150,9 +268,11 @@ CFLT is therefore best characterized as: **an unmarked default that can be delib
 
 For the Logic Transformer engine and for any future AI agent extending the CFLT Protocol:
 
-> **The Core is the minimal set of words required to identify the speaker's primary intent (Action, Identity, State, or Request), such that if those words are uttered alone, the message remains functionally useful even if contextually incomplete.**
+> **The Core is the event nucleus — the predicate together with all participants and manner inseparable from the event itself.** Formally: it is the smallest constituent that, uttered alone, identifies the speaker's primary intent (Action, Identity, State, or Request) **including any valence-bound participants** (subject, object, instrument, beneficiary, recipient) **and manner adverbials**, such that the message remains functionally useful even if contextually incomplete.
 
-This definition is **language-agnostic** and **constituent-type-agnostic** — exactly the properties CFLT needs to be both human-pedagogical and LLM-compatible.
+The Core may be lexically simple (one verb) or structurally rich (a predicate with multiple valence slots filled and manner adverbials attached), but it functions as **one salience unit at position 0**. The CFLT Protocol does not prescribe how the event nucleus is internally assembled — that is delegated to each language's native syntax. The protocol governs only the **boundary** between event nucleus and ground frame (slots 1–3) and the **order** within the ground frame.
+
+This definition is **language-agnostic** (no language is privileged in event-nucleus assembly), **constituent-type-agnostic** (the four core types Action/Identity/State/Request all unify under "predicate + valence + manner"), and **operationally testable** via the substitution and listener-question diagnostics in §2.2.
 
 ---
 
@@ -169,5 +289,5 @@ Crucially, CFLT defines the **unmarked default**, not the only permitted form. H
 - [`linguistics.md`](./linguistics.md) §2 — Talmy's Figure-Ground and Langacker's profile-base, the cognitive-linguistic kin of "salience anchor."
 - [`logic.md`](./logic.md) §5 — How the four core types map onto Searle's illocutionary classes.
 - [`mathematics.md`](./mathematics.md) §1.1 — Formal modeling of Identity / Request / State Cores beyond action verbs.
-- [`llm.md`](./llm.md) §2.4 — How non-action Cores (Identity, Request) interact with attention sinks.
+- [`llm.md`](./llm.md) §2.4 — How non-action Cores (Identity, Request) interact with the high-attention prefix region (primacy and sink combined).
 - [`../methodology/human-learning.md`](../methodology/human-learning.md) §2 — The 3-step protocol that operationalizes "extract the Core."

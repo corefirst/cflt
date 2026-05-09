@@ -9,7 +9,9 @@
 
 **CFLT (Core-First Language Theory)** is not merely a language-pedagogy theory; it is a **Cognitive Protocol** designed to synchronize human and artificial intelligence through a unified logical framework: the **CFLT Protocol**.
 
-By enforcing the universal sequencing principle — `[Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]` — we aim to achieve two strategic objectives:
+> **Positioning.** CFLT is conceived as an **academic and research-oriented framework** — its primary outputs are theory, specifications, evaluation methodology, and reference data. Implementation, productization, tooling, and ecosystem integration are explicitly the domain of **other organizations and communities** (e.g., the [CoreFirst](https://corefirst.world) reference project, the [apcore](https://github.com/aiperceivable/apcore) library ecosystem, and any other independent groups that adopt the protocol). CFLT does not commit to or depend on any specific implementation stack.
+
+By enforcing the universal sequencing principle — `[Core] → [Reason] → [Space] → [Time]` — we aim to achieve two strategic objectives:
 1. **Human Empowerment:** Accelerating bilingual acquisition by reshaping cognitive processing patterns.
 2. **Machine Alignment:** Standardizing the underlying "thinking" and "reasoning" logic of Large Language Models (LLMs) to enhance interoperability and efficiency.
 
@@ -33,23 +35,21 @@ Traditional Second Language Acquisition (SLA) suffers from high "mental context-
 In the era of Agentic Workflows, the lack of a standardized logical protocol between different LLMs (and between humans and LLMs) leads to information loss and "Attention Decay."
 
 ### Why the CFLT Protocol is the Ideal LLM Protocol:
-- **Attention Efficiency:** By placing the `[Core Action]` at the beginning of the sequence, we maximize the attention weights in Transformer-based architectures, reducing "hallucinations" and logical drift in long-context generations.
+- **Attention Efficiency:** By placing the `[Core]` at the beginning of the sequence, we maximize the attention weights in Transformer-based architectures, reducing "hallucinations" and logical drift in long-context generations.
 - **Agentic Interoperability:** The CFLT Protocol serves as a **"Logical Lingua Franca"** for cross-agent communication. A Chinese-core agent and an English-core agent can exchange complex intents with zero semantic loss if both adhere to the CFLT sequence.
 - **Chain-of-Thought (CoT) Optimization:** The linear, non-nested nature of CFLT aligns perfectly with the iterative reasoning steps of modern AI, simplifying complex recursive thoughts into manageable, additive logic blocks.
 
 ---
 
-## 4. The Apcore Ecosystem: The Neural Infrastructure (Planned)
+## 4. Implementation Pathways (Out of Scope for CFLT Itself)
 
-> **Status:** The components in this section are **planned, not yet implemented**. Tracked in [`reference-implementations.md`](./reference-implementations.md) under the *Planned* heading.
+CFLT does not specify or maintain implementation tooling. Realizing the two pillars in production systems is the work of independent organizations and open-source communities. The currently visible pathways include:
 
-To realize this dual vision, we plan to integrate the **Apcore** library suite to provide the necessary "Neural Links" across different environments:
+- **[CoreFirst](https://corefirst.world)** — official reference experimental project for Pillar I (human bilingual education), built as a Next.js application. See [`reference-implementations.md`](./reference-implementations.md).
+- **[apcore](https://github.com/aiperceivable/apcore) ecosystem** — a library suite (apcore-mcp, apcore-cli, apcore-sdk, etc.) that some teams may use to integrate CFLT into AI assistants, batch-process corpora, or synchronize learning state across platforms. apcore is independent of CFLT; we mention it as one available toolchain, not as a CFLT deliverable.
+- **Independent third-party implementations** — any team adopting the CFLT specification is welcome to build its own stack. We track active and planned implementations in [`reference-implementations.md`](./reference-implementations.md) and welcome contributions.
 
-| Library | Role | Strategic Impact |
-|:--- |:--- |:--- |
-| **apcore-mcp** | **Cognitive Organ** | Integrates CFLT logic directly into AI assistants (Claude, Cursor). AI becomes "Core-First native" in its interactions. |
-| **apcore-cli** | **Industrial Scaling** | Enables mass-processing of existing datasets into CFLT-standardized corpora for LLM fine-tuning. |
-| **apcore-sdk** | **Neural Interface** | Synchronizes human learning progress and LLM behavioral preferences across platforms, creating a continuous "Context Loop." |
+CFLT's role is to keep the **specification, evaluation methodology, and reference corpora** rigorous and language-agnostic so that the broadest possible set of implementations can interoperate at the protocol layer.
 
 ---
 
