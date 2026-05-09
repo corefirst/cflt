@@ -14,15 +14,13 @@ theme:
   logo: assets/cflt-logo.svg
   favicon: assets/cflt-logo.svg
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: black
       accent: indigo
       toggle:
