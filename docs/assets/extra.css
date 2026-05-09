@@ -1,0 +1,23 @@
+.cflt-footer-brand {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem 1.2rem;
+}
+
+.cflt-footer-brand a {
+  display: inline-flex;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.cflt-footer-brand a:hover {
+  opacity: 1;
+}
+
+.cflt-footer-brand img {
+  height: 2.4rem;
+  width: auto;
+}

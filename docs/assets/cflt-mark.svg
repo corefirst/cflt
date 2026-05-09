@@ -1,0 +1,16 @@
+<svg width="330" height="90" viewBox="-5 -5 330 90" xmlns="http://www.w3.org/2000/svg">
+  <!-- Connector line representing linearization -->
+  <line x1="20" y1="40" x2="300" y2="40" stroke="currentColor" stroke-width="4" stroke-dasharray="8,8" opacity="0.35" />
+
+  <!-- 1. The Core (Solid Node - Salience Anchor) -->
+  <rect x="0" y="0" width="80" height="80" fill="currentColor" />
+
+  <!-- 2. Condition/Reason (Outlined Node) -->
+  <rect x="130" y="15" width="50" height="50" fill="none" stroke="currentColor" stroke-width="4" />
+
+  <!-- 3. Space/Context (Outlined Node) -->
+  <rect x="220" y="25" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" />
+
+  <!-- 4. Time (Outlined Node) -->
+  <circle cx="295" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+</svg>

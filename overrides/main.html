@@ -9,6 +9,15 @@
   differs from the rendered site language, this page is a fallback.
 #}
 
+{% block footer %}
+{{ super() }}
+<div class="cflt-footer-brand">
+  <a href="{{ config.site_url or '/' }}" aria-label="CFLT">
+    <img src="{{ 'assets/cflt-logo.svg' | url }}" alt="CFLT — Core-First Language Theory" />
+  </a>
+</div>
+{% endblock %}
+
 {% block content %}
 {% set source_locale = page.file.locale | default(none) if page and page.file else none %}
 {% set site_locale = config.theme.language | default(none) %}

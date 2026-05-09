@@ -11,7 +11,7 @@ theme:
   name: material
   custom_dir: overrides
   language: en
-  logo: assets/cflt-logo.svg
+  logo: assets/cflt-mark.svg
   favicon: assets/cflt-logo.svg
   palette:
     - scheme: default
@@ -92,6 +92,9 @@ plugins:
             Evaluation & Metrics: 评估与量化指标
             Reference Implementations: 参考实现
             Bibliography: 参考文献
+
+extra_css:
+  - assets/extra.css
 
 markdown_extensions:
   - tables
