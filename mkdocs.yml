@@ -100,6 +100,7 @@ plugins:
             Reference Implementations: 参考实现
             Glossary: 术语索引
             Bibliography: 参考文献
+            Contributors: 贡献者
 
 extra_css:
   - assets/extra.css
@@ -155,6 +156,7 @@ nav:
   - Reference Implementations: reference-implementations.md
   - Glossary: glossary.md
   - Bibliography: bibliography.md
+  - Contributors: contributors.md
 
 extra:
   social:
