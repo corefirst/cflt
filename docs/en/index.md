@@ -54,6 +54,10 @@ Learn how to apply CFLT in real-world scenarios:
 
 ---
 
+## Contributors
+
+CFLT is a collaborative effort. We are grateful to all the [contributors](contributors.md) who have helped refine the theory and its implementations.
+
 ## How to cite
 
 > CFLT Core Team. (2026). *Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles.* Retrieved from https://cflt.center

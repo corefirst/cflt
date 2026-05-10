@@ -27,3 +27,21 @@
 {% endif %}
 {{ super() }}
 {% endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <div class="md-footer-meta md-typeset" style="background-color: transparent; padding-top: 0;">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright" style="padding-top: 0.5rem;">
+        {% set site_locale = config.theme.language | default('en') %}
+        <a href="{{ '/zh/contributors/' if site_locale == 'zh' else '/contributors/' }}" title="Contributors" style="opacity: 0.7; font-size: 0.75rem;">
+          {% if site_locale == 'zh' %}
+            <span class="twemoji">{% include ".icons/material/account-group.svg" %}</span> 贡献者名单 (Contributors)
+          {% else %}
+            <span class="twemoji">{% include ".icons/material/account-group.svg" %}</span> Contributors
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
