@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./docs/assets/cflt-logo.svg" alt="CFLT" width="200"/>
+</div>
+
 # CFLT — Core-First Language Theory
 
 > **A unified theoretical framework for cross-linguistic communication, second-language pedagogy, and human-AI cognitive alignment.**

@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./docs/assets/cflt-logo.svg" alt="CFLT" width="200"/>
+</div>
+
 # CFLT — 核心优先语言理论
 
 > **跨语言通信、第二语言教学与人机认知对齐的统一理论框架。**
