@@ -1,14 +1,5 @@
 {% extends "base.html" %}
 
-{#
-  Translation-fallback warning banner.
-  Triggered when mkdocs-static-i18n falls back to default-language content
-  because the requested locale does not have this page translated yet.
-
-  The plugin sets `page.file.locale` to the source file's language. When it
-  differs from the rendered site language, this page is a fallback.
-#}
-
 {% block content %}
 {% set source_locale = page.file.locale | default(none) if page and page.file else none %}
 {% set site_locale = config.theme.language | default(none) %}
@@ -26,34 +17,4 @@
   </div>
 {% endif %}
 {{ super() }}
-{% endblock %}
-
-{% block footer %}
-  {{ super() }}
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <!-- Copyright and License -->
-      <div class="md-copyright">
-        <div class="md-copyright__highlight">
-          {% set site_locale = config.theme.language | default('en') %}
-          {% if site_locale == 'zh' %}
-            © 2026 <a href="https://cflt.center" target="_blank" rel="noopener">CFLT 核心团队</a> · 
-            采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> 许可协议
-          {% else %}
-            © 2026 <a href="https://cflt.center" target="_blank" rel="noopener">CFLT Core Team</a> · 
-            Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
-          {% endif %}
-        </div>
-      </div>
-      
-      <!-- Contributors Quick Link -->
-      <div class="md-social">
-        {% set site_locale = config.theme.language | default('en') %}
-        <a href="{{ '/zh/contributors/' if site_locale == 'zh' else '/contributors/' }}" class="md-social__link" style="font-size: 0.8rem;">
-          <span class="twemoji">{% include ".icons/material/account-group.svg" %}</span>
-          {% if site_locale == 'zh' %} 贡献者名单 (Contributors) {% else %} Contributors {% endif %}
-        </a>
-      </div>
-    </div>
-  </div>
 {% endblock %}

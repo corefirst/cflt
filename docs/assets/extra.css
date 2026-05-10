@@ -5,25 +5,54 @@
   filter: brightness(0) invert(1);
 }
 
-/* Footer brand: pin the CFLT logo to the LEFT of the meta row (occupying the
-   space that would otherwise be empty since neither `copyright` nor
-   `generator` is set), GitHub icon stays on the RIGHT. */
+/* Footer brand layout: pin the Logo to the LEFT, Copyright in the MIDDLE, GitHub on the RIGHT. */
 .md-footer-meta__inner {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
-/* Empty copyright container would otherwise reserve flex space — collapse it. */
+/* Ensure copyright text is visible and stylish */
 .md-footer-meta__inner > .md-copyright {
-  display: none;
+  display: block;
+  flex: 1 1 auto;
+  font-size: 0.65rem;
+  line-height: 1.4;
+}
+
+/* Allow links to wrap on mobile */
+.md-copyright__highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  align-items: center;
+}
+
+/* Force each item to a new line on mobile */
+@media screen and (max-width: 76.24em) {
+  .md-copyright__highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  
+  .md-copyright__highlight span:not(:first-child)::before {
+    display: none; /* Hide the dot separator on mobile since we're vertical */
+  }
+}
+
+.md-copyright__highlight a {
+  color: var(--md-typeset-a-color);
+  font-weight: 700;
+  white-space: nowrap; /* Keep individual links together but allow the group to wrap */
 }
 
 .md-footer-meta__inner::before {
   content: "";
   flex: 0 0 auto;
-  height: 4rem;
+  height: 2.5rem;
   aspect-ratio: 512 / 320;
   background: url("cflt-logo-mono.svg") left center / contain no-repeat;
-  margin-right: auto;
   opacity: 0.92;
 }

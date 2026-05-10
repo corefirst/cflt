@@ -64,11 +64,13 @@ plugins:
           build: true
           link: /
           site_name: CFLT — Core-First Language Theory
+          copyright: '<span>© 2026 <a href="https://cflt.center">CFLT Core Team</a></span> <span>· Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span> <span>· <a href="/contributors/">Contributors</a></span>'
         - locale: zh
           name: 简体中文
           build: true
           link: /zh/
           site_name: CFLT — 核心优先语言理论
+          copyright: '<span>© 2026 <a href="https://cflt.center">CFLT 核心团队</a></span> <span>· 采用 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 许可协议</span> <span>· <a href="/zh/contributors/">贡献者名单</a></span>'
           nav_translations:
             Home: 首页
             Theory: 理论核心
