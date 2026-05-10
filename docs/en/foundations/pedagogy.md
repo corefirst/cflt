@@ -92,7 +92,7 @@ graph TD
     T2 --- T3[Grammar Rules]
     T3 --- T4[Vocab]
     T4 --- T5[Pronunciation]
-    noteT["WM elements interacting: ~5 (CFLT's framing)"]
+    noteT["WM elements interacting: ~5 (theoretical estimate; awaiting empirical calibration)"]
     end
 
     subgraph "CFLT Production"

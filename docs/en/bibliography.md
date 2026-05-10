@@ -69,6 +69,9 @@
 - **Frege, G.** (1879). *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens.* Halle: Louis Nebert.
 - **Grice, H. P.** (1975). "Logic and Conversation." In *Syntax and Semantics, Vol. 3: Speech Acts*, Cole & Morgan (eds). New York: Academic Press.
 - **Kamp, H.** (1981). "A Theory of Truth and Semantic Representation." In *Formal Methods in the Study of Language*, Groenendijk et al. (eds). Amsterdam: Mathematical Centre Tracts.
+- **Landman, F.** (2000). *Events and Plurality: The Jerusalem Lectures.* Dordrecht: Kluwer Academic Publishers.
+- **Levinson, S. C.** (1983). *Pragmatics.* Cambridge: Cambridge University Press.
+- **Parsons, T.** (1990). *Events in the Semantics of English: A Study in Subatomic Semantics.* Cambridge, MA: MIT Press.
 - **Russell, B.** (1905). "On Denoting." *Mind* 14(56), 479–493.
 - **Searle, J. R.** (1969). *Speech Acts: An Essay in the Philosophy of Language.* Cambridge: Cambridge University Press.
 - **Searle, J. R.** (1975). "A Taxonomy of Illocutionary Acts." In *Language, Mind and Knowledge*, Gunderson (ed). Minneapolis: University of Minnesota Press.
@@ -119,7 +122,10 @@
 - **DeKeyser, R. M.** (2007). *Practice in a Second Language: Perspectives from Applied Linguistics and Cognitive Psychology.* Cambridge: Cambridge University Press.
 - **DeKeyser, R. M.** (2015). "Skill Acquisition Theory." In *Theories in Second Language Acquisition: An Introduction* (2nd ed), VanPatten & Williams (eds). New York: Routledge.
 - **Ellis, R.** (2003). *Task-Based Language Learning and Teaching.* Oxford: Oxford University Press.
+- **Ellis, R.** (2008). *The Study of Second Language Acquisition* (2nd ed). Oxford: Oxford University Press.
+- **Goad, H. & White, L.** (2006). "Ultimate attainment in L2 inflection: Separating morphological encoding from phonological realization." *Studia Linguistica* 60(3), 220–243.
 - **Hartshorne, J. K., Tenenbaum, J. B. & Pinker, S.** (2018). "A Critical Period for Second Language Acquisition: Evidence from 2/3 Million English Speakers." *Cognition* 177, 263–277.
+- **Hawkins, R. & Liszka, S.** (2003). "Locating the source of defective past tense marking in advanced L2 English speakers." In van Hout, R., Hulk, A., Kuiken, F. & Towell, R. (eds.) *The Lexicon-Syntax Interface in Second Language Acquisition*, pp. 35–54. Amsterdam: John Benjamins.
 - **Kormos, J.** (2006). *Speech Production and Second Language Acquisition.* Mahwah, NJ: Erlbaum.
 - **Kormos, J.** (2014). "Speech Production and Second Language Acquisition." In *The Routledge Handbook of Second Language Acquisition*, Gass & Mackey (eds). New York: Routledge.
 - **Krashen, S. D.** (1982). *Principles and Practice in Second Language Acquisition.* Oxford: Pergamon.
@@ -127,17 +133,21 @@
 - **Kroll, J. F. & Stewart, E.** (1994). "Category Interference in Translation and Picture Naming: Evidence for Asymmetric Connections Between Bilingual Memory Representations." *Journal of Memory and Language* 33(2), 149–174.
 - **Kroll, J. F., van Hell, J. G., Tokowicz, N. & Green, D. W.** (2010). "The Revised Hierarchical Model: A Critical Review and Assessment." *Bilingualism: Language and Cognition* 13(3), 373–381.
 - **Lany, J. & Saffran, J. R.** (2010). "From Statistics to Meaning: Infants' Acquisition of Lexical Categories." *Psychological Science* 21(2), 284–291.
+- **Lardiere, D.** (1998). "Case and Tense in the 'Fossilized' Steady State." *Second Language Research* 14(1), 1–26. DOI: [10.1191/026765898672365514](https://doi.org/10.1191/026765898672365514)
 - **Lenneberg, E. H.** (1967). *Biological Foundations of Language.* New York: Wiley.
 - **Long, M. H.** (1985). "A Role for Instruction in Second Language Acquisition: Task-Based Language Teaching." In *Modelling and Assessing Second Language Acquisition*, Hyltenstam & Pienemann (eds). Clevedon: Multilingual Matters.
 - **Long, M. H.** (2015). *Second Language Acquisition and Task-Based Language Teaching.* Malden, MA: Wiley-Blackwell.
 - **Quirk, R., Greenbaum, S., Leech, G. & Svartvik, J.** (1985). *A Comprehensive Grammar of the English Language.* London: Longman.
 - **Saffran, J. R., Aslin, R. N. & Newport, E. L.** (1996). "Statistical Learning by 8-Month-Old Infants." *Science* 274(5294), 1926–1928.
+- **Skehan, P.** (1998). *A Cognitive Approach to Language Learning.* Oxford: Oxford University Press.
 - **Sweller, J.** (1988). "Cognitive Load During Problem Solving: Effects on Learning." *Cognitive Science* 12(2), 257–285.
 - **Sweller, J., Ayres, P. & Kalyuga, S.** (2011). *Cognitive Load Theory.* New York: Springer.
+- **VanPatten, B.** (2004). *Processing Instruction: Theory, Research, and Commentary.* Mahwah, NJ: Lawrence Erlbaum.
 - **Vygotsky, L. S.** (1978). *Mind in Society: The Development of Higher Psychological Processes.* Cambridge, MA: Harvard University Press.
 
 ## Neuroscience
 
+- **Baddeley, A. D.** (1986). *Working Memory.* Oxford: Oxford University Press.
 - **Bemis, D. K. & Pylkkänen, L.** (2013). "Basic Linguistic Composition Recruits the Left Anterior Temporal Lobe and Left Angular Gyrus During Both Listening and Reading." *Cerebral Cortex* 23(8), 1859–1873. DOI: [10.1093/cercor/bhs170](https://doi.org/10.1093/cercor/bhs170)
 - **Friederici, A. D.** (2011). "The brain basis of language processing: from structure to function." *Physiological Reviews*, 91(4), 1357–1392. DOI: [10.1152/physrev.00006.2011](https://doi.org/10.1152/physrev.00006.2011)
 - **Friederici, A. D.** (2017). *Language in Our Brain: The Origins of a Uniquely Human Capacity.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/11173.001.0001](https://doi.org/10.7551/mitpress/11173.001.0001)
@@ -145,6 +155,7 @@
 - **Pliatsikas, C.** (2020). "Understanding structural plasticity in the bilingual brain: The Dynamic Restructuring Model." *Bilingualism: Language and Cognition*, 23(2), 459-471. DOI: [10.1017/S1366728919000130](https://doi.org/10.1017/S1366728919000130)
 - **Pylkkänen, L.** (2019). "The neural basis of combinatory syntax and semantics." *Science* 366, 62–66. DOI: [10.1126/science.aax0050](https://doi.org/10.1126/science.aax0050)
 - **Seeley, W. W., Menon, V., Schatzberg, A. F., Keller, J., Glover, G. H., Kenna, H., Reiss, A. L., & Greicius, M. D.** (2007). "Dissociable Intrinsic Connectivity Networks for Salience Processing and Executive Control." *The Journal of Neuroscience*, 27(9), 2349–2356. DOI: [10.1523/JNEUROSCI.5587-06.2007](https://doi.org/10.1523/JNEUROSCI.5587-06.2007)
+- **Murdock, B. B., Jr.** (1962). "The Serial Position Effect of Free Recall." *Journal of Experimental Psychology* 64(5), 482–488. DOI: [10.1037/h0045106](https://doi.org/10.1037/h0045106)
 - **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159 — **conference abstract** (Organization for Human Brain Mapping). The full peer-reviewed treatment of word-order processing from this lab is Hashimoto, Yokoyama & Kawashima 2012 (above), which is the primary citation throughout CFLT documentation.
 
 ## Adjacent (cited for distinction in `manifesto.md` §4)

@@ -186,8 +186,8 @@ CFLT is not limited to Chinese-to-English. It is designed as a **Universal Proto
     - By forcing the Japanese brain to output the Action (Verb) immediately, we bypass the "waiting for the verb" processing delay in German V2 main clauses. The Grammar Overlay layer subsequently polishes the appended adverbials into idiomatic German positioning.
 *   **Arabic (VSO) ↔ Spanish (SVO):**
     - *Arabic habit:* [Verb] → [Subject] → [Object]. 
-    - *CFLT Pivot:* "Como una manzana (Core) ... porque tengo hambre (Reason) ... en la cocina (Space)." 
-    - CFLT aligns the Arabic V-first tendency with the Spanish SVO core, using **Natural Semantic Metalanguage (NSM) Primes** as the semantic bridge to ensure the *intent* of the verb is preserved across divergent conjugation systems.
+    - *CFLT Pivot (scaffold form):* "Como una manzana (Core), porque tengo hambre (Reason), en la cocina (Space), ahora (Time)." 
+    - CFLT aligns the Arabic V-first tendency with the Spanish SVO core; **Natural Semantic Metalanguage (NSM) Primes** serve as the semantic bridge at the interlingual mediation layer to ensure the *intent* of the verb is preserved across divergent conjugation systems. The example above shows the Spanish L2 CFLT scaffold form (parallel to the Japanese ↔ German example above), not NSM notation itself.
 
 The official reference implementation is hosted at **corefirst.world**; the framework itself is open for any team to implement independently.
 
