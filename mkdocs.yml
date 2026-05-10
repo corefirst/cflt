@@ -71,36 +71,40 @@ plugins:
           site_name: CFLT — 核心优先语言理论
           nav_translations:
             Home: 首页
+            Theory: 理论核心
             Manifesto: 宣言
             Strategic Vision: 战略愿景
-            Foundations: 理论基础
-            Core Concept: 核心概念
-            Pedagogy: 教育学基础
-            Linguistics: 语言学基础
-            Neuroscience: 神经科学基础
-            Logic: 逻辑学基础
-            Mathematics: 数学基础
-            LLM & AI: 大语言模型基础
-            Phonetics: 语音学基础
-            Sociolinguistics: 社会语言学基础
-            Methodology: 实践指南
-            Human Learning: 人类学习
-            LLM Prompting: LLM 提示词工程
-            Complex Structures: 复杂句式与递归
-            Slot Disambiguation: 槽位消歧参考
-            Language-Pair Guides: 语言对指南
+            Science (Foundations): 科学基础
             Overview: 总览
+            Core Disambiguation: 核心消歧
+            Linguistics: 语言学
+            Pedagogy: 教育学
+            Neuroscience: 神经科学
+            Logic & Speech Acts: 逻辑与言语行为
+            Mathematics & Info Theory: 数学与信息论
+            LLM & AI: 大语言模型
+            Phonetics: 语音学
+            Sociolinguistics: 社会语言学
+            Practice (Methodology): 实践方法
+            Human Learning: 人类学习
+            LLM Prompting: LLM 提示工程
+            Empirical Agenda: 实证研究议程
+            Slot Disambiguation: 槽位消歧参考
+            Complex Structures: 复杂句式与递归
+            Curriculum Engineering: 课程工程
+            Software Architecture: 软件架构
+            Evaluation & Metrics: 评估与量化指标
+            Language Pair Guides: 语言对指南
             Chinese ↔ Japanese: 汉语 ↔ 日语
             English ↔ Chinese: 英语 ↔ 汉语
             Chinese ↔ English: 汉语 ↔ 英语
             English ↔ Japanese: 英语 ↔ 日语
-            Software Architecture: 软件架构实现
-            Curriculum Engineering: 课程工程开发
-            Evaluation & Metrics: 评估与量化指标
+            Ecosystem: 生态
             Reference Implementations: 参考实现
-            Glossary: 术语索引
-            Bibliography: 参考文献
             Contributors: 贡献者
+            Appendix: 附录
+            Glossary: 术语表
+            Bibliography: 参考文献
 
 extra_css:
   - assets/extra.css
@@ -127,36 +131,41 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Manifesto: manifesto.md
-  - Strategic Vision: vision.md
-  - Foundations:
-      - Core Concept: foundations/core-concept.md
+  - Theory:
+      - Manifesto: manifesto.md
+      - Strategic Vision: vision.md
+  - Science (Foundations):
+      - Overview: foundations/core-concept.md
+      - Core Disambiguation: foundations/core-disambiguation.md
       - Linguistics: foundations/linguistics.md
-      - Phonetics: foundations/phonetics.md
-      - Sociolinguistics: foundations/sociolinguistics.md
       - Pedagogy: foundations/pedagogy.md
       - Neuroscience: foundations/neuroscience.md
-      - Logic: foundations/logic.md
-      - Mathematics: foundations/mathematics.md
+      - Logic & Speech Acts: foundations/logic.md
+      - Mathematics & Info Theory: foundations/mathematics.md
       - LLM & AI: foundations/llm.md
-  - Methodology:
+      - Phonetics: foundations/phonetics.md
+      - Sociolinguistics: foundations/sociolinguistics.md
+  - Practice (Methodology):
       - Human Learning: methodology/human-learning.md
-      - Complex Structures: methodology/complex-structures.md
+      - LLM Prompting: methodology/llm-prompting.md
+      - Empirical Agenda: methodology/empirical-agenda.md
       - Slot Disambiguation: methodology/slot-disambiguation.md
-      - Language-Pair Guides:
+      - Complex Structures: methodology/complex-structures.md
+      - Curriculum Engineering: methodology/curriculum-engineering.md
+      - Software Architecture: methodology/software-architecture.md
+      - Evaluation & Metrics: methodology/evaluation-metrics.md
+      - Language Pair Guides:
           - Overview: methodology/language-pair-guides/index.md
           - Chinese ↔ Japanese: methodology/language-pair-guides/zh-ja.md
           - English ↔ Chinese: methodology/language-pair-guides/en-zh.md
           - Chinese ↔ English: methodology/language-pair-guides/zh-en.md
           - English ↔ Japanese: methodology/language-pair-guides/en-ja.md
-      - LLM Prompting: methodology/llm-prompting.md
-      - Software Architecture: methodology/software-architecture.md
-      - Curriculum Engineering: methodology/curriculum-engineering.md
-      - Evaluation & Metrics: methodology/evaluation-metrics.md
-  - Reference Implementations: reference-implementations.md
-  - Glossary: glossary.md
-  - Bibliography: bibliography.md
-  - Contributors: contributors.md
+  - Ecosystem:
+      - Reference Implementations: reference-implementations.md
+      - Contributors: contributors.md
+  - Appendix:
+      - Bibliography: bibliography.md
+      - Glossary: glossary.md
 
 extra:
   social:
