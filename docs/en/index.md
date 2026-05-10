@@ -30,6 +30,7 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 CFLT integrates research across eight disciplines, anchored by a single conceptual disambiguation document:
 
 - **[Linguistics](foundations/linguistics.md)** — Universal Grammar, information structure, cognitive linguistics, NSM.
+- **[Core Disambiguation](foundations/core-disambiguation.md)** — A normative reference for isolating the Core boundary in complex sentences.
 - **[Phonetics](foundations/phonetics.md)** — Cross-linguistic phonetic transfer, muscular intelligence, Pinyin-to-IPA bridge.
 - **[Sociolinguistics](foundations/sociolinguistics.md)** — Politeness, register, honorifics as logical wrappers around the Core.
 - **[Pedagogy](foundations/pedagogy.md)** — Krashen, Vygotsky, Cognitive Load Theory, TBLT, bilingual lexical access.
@@ -44,6 +45,7 @@ Learn how to apply CFLT in real-world scenarios:
 
 - **[Human Learning](methodology/human-learning.md)** — A guide to achieving spoken L2 fluency by rebuilding cognitive muscle memory.
 - **[LLM Prompting](methodology/llm-prompting.md)** — Using the CFLT Protocol as a standardized engineering protocol to reduce model variance.
+- **[Empirical Research Agenda](methodology/empirical-agenda.md)** — The scientific roadmap for validating CFLT's claims in AI and pedagogy.
 
 ## Reference
 

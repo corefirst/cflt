@@ -44,6 +44,7 @@ CFLT 集成了八个学科的研究成果，并由一篇核心概念澄清文档
 
 - **[人类学习](methodology/human-learning.md)** — 通过重构认知肌肉记忆实现 L2 口语流利度的指南。
 - **[LLM 提示词](methodology/llm-prompting.md)** — 将 CFLT 协议作为标准化工程协议以减少模型方差。
+- **[实证研究议程](methodology/empirical-agenda.md)** — 验证 CFLT 在 AI 和教学法中主张的科学路线图。
 
 ## 参考 (Reference)
 

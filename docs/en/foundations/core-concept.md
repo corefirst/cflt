@@ -125,7 +125,9 @@ A modifier belongs **in the ground frame** (Slots 1, 2, or 3) if it answers a qu
 - *"what + how + with-what + for-whom"* → inside Core (the event itself)
 - *"why / where / when"* → ground frame (the world around the event)
 
-For comprehensive boundary cases and a 50-example reference table, see [`../methodology/slot-disambiguation.md`](../methodology/slot-disambiguation.md).
+For a strict decision tree, 20+ "stress test" boundary cases, and the rules for handling epistemic hedges (e.g., "I think..."), see the companion normative reference: **[`core-disambiguation.md`](./core-disambiguation.md)**.
+
+For a 50-example reference table covering common slot assignments across the ground frame, see [`../methodology/slot-disambiguation.md`](../methodology/slot-disambiguation.md).
 
 ### 2.3 Layer-by-Layer Universality: What's Universal, What's Language-Specific
 

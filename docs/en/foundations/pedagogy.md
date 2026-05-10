@@ -197,7 +197,31 @@ Several reasons CFLT may be especially well-suited to early learners — contrar
 
 ---
 
-## 11. Open Research Questions
+## 11. The Advanced Frontier: Skehan’s Trade-off & Scaffold Fading
+
+A common criticism of fixed-sequence protocols is that they might lead to "linguistic fossilization" or "template-rigidity." To address this, CFLT incorporates **Skehan's Trade-off Hypothesis** (1998).
+
+### 11.1 The Fluency-Accuracy-Complexity (FAC) Triad
+Skehan posits that learners have limited attentional resources that must be divided between:
+- **Fluency:** Ease of production.
+- **Accuracy:** Grammatical correctness.
+- **Complexity:** Structural variety and use of marked forms.
+
+**CFLT’s Strategic Choice:**
+- **At A1–B1 levels**, CFLT prioritizes **Fluency** and **Accuracy** by fixing the sequence, thereby reducing the "Complexity" (planning) load. This allows the learner to achieve communicative success early.
+- **At B2+ levels**, the objective shifts. The learner has achieved automaticity in the unmarked sequence and must now re-introduce **Complexity**.
+
+### 11.2 De-scaffolding (Scaffold Fading)
+Mastery is defined not by strict adherence to the protocol, but by the ability to deviate from it *intentionally*. Advanced modules in CFLT (Phase 3) explicitly teach:
+- **Topicalization:** Moving the [Time] or [Space] to the front for thematic emphasis.
+- **End-Focus:** Repackaging the Core to place new information at the end.
+- **Clefting:** For focus and contrast.
+
+In this view, the CFLT protocol is a **survival scaffold** that is eventually "submerged" into the learner's subconscious, serving as the default logic from which they can deviate for stylistic nuance.
+
+---
+
+## 12. Open Research Questions
 
 1.  **Affective Filter Measurement.** Does the predictability of the protocol measurably reduce foreign language speaking anxiety (FLSA)?
 2.  **Fading Schedule.** What is the optimal time to introduce "marked" forms (e.g., fronted temporal adjuncts) to avoid stunting a learner's stylistic development?
@@ -205,7 +229,7 @@ Several reasons CFLT may be especially well-suited to early learners — contrar
 
 ---
 
-## 12. Cited Works
+## 13. Cited Works
 
 See [`bibliography.md`](../bibliography.md) (§ Pedagogy and Second-Language Acquisition) for full references.
 

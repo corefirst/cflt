@@ -10,11 +10,13 @@
 
 ## What is CFLT?
 
-**Core-First Language Theory (CFLT)** proposes a single discourse-level principle:
+**Core-First Language Theory (CFLT)** is a normative cognitive protocol designed to bridge the logical gap between the world's heterogeneous language families. 
+
+CFLT posits that the primary barrier to cross-linguistic communication is the **Structural Restructuring Tax** — the metabolic cost of reshaping one language's logic template into another's. To eliminate this tax, CFLT provides a **Neutral Logic Buffer** based on a single discourse-level principle:
 
 > *The cognitive core of an utterance is also its universally-prioritized linear position.*
 
-From this principle, the **CFLT Protocol** defines a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction, while also serving as a structured prompt protocol for Large Language Models:
+By mapping intent directly to the **CFLT Protocol**, both humans and AI can bypass complex grammatical restructuring and achieve **Instant Fluency** through simple token replacement:
 
 ```
 [Core Action/Result] → [Condition/Reason] → [Space/Context] → [Time]
