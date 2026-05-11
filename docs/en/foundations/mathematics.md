@@ -30,7 +30,7 @@ graph TD
     G -- "Flattening Function" --> L1
 ```
 
-where $\text{root}(G)$ is the Core. By fixing this function across all languages, CFLT reduces the **computational complexity** of translation from structural transformation to lexical substitution.
+where $\text{root}(G)$ is the Core. By fixing this function across the surveyed typology (see §9 line 191 below for the formal restatement of the "within CFLT's surveyed typology" scope), CFLT is designed to reduce the **computational complexity** of translation from structural transformation to lexical substitution. For the typological evidence supporting the "same flattening function across the surveyed typology" claim — five languages spanning four families with reference-grammar citations for each Core internal-assembly mechanism — see [`core-concept.md`](./core-concept.md) §2.5.
 
 ### 1.1 Modeling Identity and Request Cores
 To prove CFLT is not merely "verb-first," we model the Core as the **highest-salience node** in the semantic DAG, regardless of its part-of-speech.
@@ -188,7 +188,7 @@ CFLT short-circuits both by introducing a **canonical intermediate linearization
 
 $$\sigma_2 \circ \sigma_C^{-1} \circ \sigma_C \circ \sigma_1^{-1}(G)$$
 
-This appears longer, but the trick is that $\sigma_C$ is **the same in every language**. Once a learner internalizes $\sigma_C$, both $\sigma_C \circ \sigma_1^{-1}$ and $\sigma_2 \circ \sigma_C^{-1}$ are simple token-level remappings, not structural reorganizations. CFLT converts a structural transformation into a lexical substitution.
+This appears longer, but the trick is **order-invariance at the protocol layer**: $\sigma_C$ is the same in every language within CFLT's surveyed typology — meaning the Core / R / S / T sequence ordering is preserved when going from L1 through $\sigma_C$ to L2, even though each language's *internal* assembly of the Core (case marking, particles, prepositions) is language-specific (see [`core-concept.md`](./core-concept.md) §2.3 for the L1/L2/L3/L4 layer split, §2.5 for the five-language / four-family worked demonstration, and §12.4 below for the open formal question on the equivalence-class definition that makes "same" precise across surface morphosyntax). Once a learner internalizes $\sigma_C$, both $\sigma_C \circ \sigma_1^{-1}$ and $\sigma_2 \circ \sigma_C^{-1}$ are simple token-level remappings, not structural reorganizations. CFLT converts a structural transformation into a lexical substitution.
 
 > **Caveat — this section is heuristic, not a proof.** Formally, $\sigma_C^{-1} \circ \sigma_C$ is just the identity, so the four-arrow form is *equivalent* to $\sigma_2 \circ \sigma_1^{-1}$ in pure cost-function terms. The substantive claim is **cognitive**, not algebraic: a learner who has *internalized* $\sigma_C$ can amortize its decoding/encoding cost across millions of utterances, so the *per-utterance* effort drops from one structural transformation to two lexical substitutions over a shared scaffold. The math here illustrates the decomposition; it does not prove the cost reduction. Empirical validation is listed in [`methodology/evaluation-metrics.md`](../methodology/evaluation-metrics.md) §2 (Articulation Onset Latency, Cognitive Load Index).
 

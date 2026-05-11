@@ -32,12 +32,16 @@
 ## 3. 战略支柱 II：标准化 LLM 思维
 *目标：智能体的逻辑汇编语言 (Assembly Language for Agents)*
 
-在智能体工作流 (Agentic Workflows) 时代，不同 LLM 之间（以及人类与 LLM 之间）缺乏标准化的逻辑协议，导致信息丢失与 "注意力衰减 (Attention Decay)"。
+在智能体工作流 (Agentic Workflows) 时代，不同 LLM 之间（以及人类与 LLM 之间）缺乏标准化的逻辑协议，被假设会导致长上下文生成中的信息漂移。
 
-### 为何 CFLT 协议是理想的 LLM 协议：
-- **注意力效率：** 通过将 `[核心]` 置于序列开头，最大化 Transformer 架构中的注意力权重，降低长上下文生成中的 "幻觉 (hallucination)" 与逻辑漂移。
-- **智能体互操作性：** CFLT 协议作为跨智能体通信的 **"逻辑通用语 (Logical Lingua Franca)"**。一个中文核心智能体与一个英文核心智能体，只要双方都遵循 CFLT 序列，就能以零语义损失交换复杂意图。
-- **思维链 (CoT) 优化：** CFLT 线性、非嵌套的特性与现代 AI 的迭代推理步骤完美对齐，将复杂的递归思维简化为可管理的、可加的逻辑积木。
+> **如何阅读本节。** 下面的要点使用高层战略性语言；具体的机制性主张以及哪些是有实证支持、哪些是预测，请参见基础文档——尤其是 [`foundations/llm.md`](foundations/llm.md) §2.3（首因 vs 注意力汇点的消歧）、§7（幻觉动力学）、§10（开放的实证问题）；以及 [`foundations/mathematics.md`](foundations/mathematics.md) §2（明确的链式法则告诫——CFLT **不**主张降低总联合熵）。
+>
+> 真实 LLM 中的推理是随机的（自回归采样），且下文所列效应的量级是开放的实证问题，而非已测量的结果。
+
+### CFLT 协议为何是有前景的 LLM 协议：
+- **预测的注意力前缀效益：** 将 `[核心]` 置于序列开头，使显著性锚点位于高注意力前缀区域。依据 [`foundations/llm.md`](foundations/llm.md) §2.3 的首因效应论证——**而非** Xiao et al. (2024) 中已被明确排除的 softmax 稳定性注意力汇点伪影——我们预期这能降低长序列中模型与用户意图的漂移。量级是开放问题（`llm.md` §10.1）。
+- **智能体互操作性（设计目标）：** CFLT 协议**被设计为**跨智能体通信的 **"逻辑通用语 (Logical Lingua Franca)"**，使中文核心智能体与英文核心智能体在双方都遵循 CFLT 序列时，能以最小的协议层语义漂移交换复杂意图。这是**协议层**的次序不变性属性（见 [`foundations/mathematics.md`](foundations/mathematics.md) §9），**而非**零联合熵 / 无损编码主张——`mathematics.md` §2 明确否定了那种更强的解读。残余损失是一个开放的实证问题。
+- **思维链 (CoT) 兼容性：** CFLT 线性、非嵌套的特性旨在与现代 AI 的迭代推理方法互操作；我们把 CFLT 与 CoT 视为互补的支架（参见 [`foundations/llm.md`](foundations/llm.md) §9 的诚实范围声明：在复杂的数学 / 逻辑推理上，CFLT 不是 CoT 的替代品）。
 
 ---
 

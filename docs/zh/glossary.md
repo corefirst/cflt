@@ -144,7 +144,7 @@
 | **MLM** | Masked Language Modeling（掩码语言建模） | BERT 使用的预训练目标（预测被掩盖的 token）。 |
 | **ICL** | In-Context Learning（上下文学习） | LLM 通过提示词中的示例学习任务，无需更新参数。 |
 | **RAG** | Retrieval-Augmented Generation（检索增强生成） | 将检索得到的文档作为上下文提供给 LLM 的工作流（Lewis et al. 2020）。 |
-| **注意力槽（Attention Sink）** | — | 初始 token 累积不成比例的注意力权重（Xiao et al. 2024）；CFLT "核心居首" 主张在 LLM 层的基础。 |
+| **注意力汇点（Attention Sink）** | — | 初始 token 累积不成比例的注意力权重（Xiao et al. 2024）；CFLT "核心居首" 主张在 LLM 层的基础。 |
 | **Lost-in-the-Middle（迷失在中部）** | — | 长上下文任务中的 U 型准确率曲线：开头与结尾的信息比中间的信息恢复得更好（Liu et al. 2023）。 |
 | **前缀缓存（Prefix caching）** | — | LLM 推理优化：复用共享提示词前缀的计算（vLLM APC、SGLang RadixAttention）。 |
 | **APC** | Automatic Prefix Caching（自动前缀缓存） | vLLM 的前缀缓存机制。 |
@@ -189,7 +189,7 @@
 | **Baddeley** | Alan | 认知心理学 | 工作记忆模型 |
 | **Menon & Uddin** | — | 神经科学 | 显著性网络作为 DMN 与 CEN 之间的开关 |
 | **Liu 等** | — | NLP | "Lost in the Middle"（2023） |
-| **Xiao 等** | — | NLP | StreamingLLM、注意力槽（2024） |
+| **Xiao 等** | — | NLP | StreamingLLM、注意力汇点（2024） |
 
 ---
 
@@ -204,5 +204,5 @@
 - **信息论、熵、KL** → [`foundations/mathematics.md`](./foundations/mathematics.md)
 - **PFC、BG、SN、DMN、CEN、P600** → [`foundations/neuroscience.md`](./foundations/neuroscience.md)
 - **Krashen、Vygotsky、Sweller、TBLT** → [`foundations/pedagogy.md`](./foundations/pedagogy.md)
-- **注意力槽、RAG、前缀缓存** → [`foundations/llm.md`](./foundations/llm.md)
+- **注意力汇点、RAG、前缀缓存** → [`foundations/llm.md`](./foundations/llm.md)
 - **槽位消歧表与判定树** → [`methodology/slot-disambiguation.md`](./methodology/slot-disambiguation.md)

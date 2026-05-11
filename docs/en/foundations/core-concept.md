@@ -47,7 +47,7 @@ Two adjacent concepts are routinely conflated with CFLT's Core. Both readings ar
 
 A consequence: in *"I went out, because the house was on fire"* the **most newsworthy / important** information to the listener is "the house was on fire" — yet the **Core is "I went out"**, because that is the speaker's primary commitment and the parsing anchor for everything that follows. CFLT places Core first not because it is most important, but because **it is the variable on which the ground frame is predicated**.
 
-Across the literature reviewed for the CFLT terminology audit (see the internal survey [`/docs/_research/importance-terminology-survey.md`](../../_research/importance-terminology-survey.md) for the full bibliography), **the word "important" never appears as a defined technical term** in linguistics, cognitive science, NLP interpretability, or vendor prompt-engineering documentation. Wherever the meaning is approached, the literature consistently uses *focus*, *salience*, *prominence*, *theme / topic*, *figure*, or *high-surprisal* — each of which separates evaluative importance from structural anchoring. Adopting "Important" as the CFLT term would conflate the four cognitively independent dimensions (focus / salience / accessibility / surprisal) that mainstream information-structure theory deliberately distinguishes (Krifka 2008; Gundel, Hedberg & Zacharski 1993).
+Across the literature reviewed for the CFLT terminology audit, **the word "important" never appears as a defined technical term** in linguistics, cognitive science, NLP interpretability, or vendor prompt-engineering documentation. Wherever the meaning is approached, the literature consistently uses *focus*, *salience*, *prominence*, *theme / topic*, *figure*, or *high-surprisal* — each of which separates evaluative importance from structural anchoring. Adopting "Important" as the CFLT term would conflate the four cognitively independent dimensions (focus / salience / accessibility / surprisal) that mainstream information-structure theory deliberately distinguishes (Krifka 2008; Gundel, Hedberg & Zacharski 1993).
 
 #### Disambiguation B — Core ≠ RRG Nucleus
 
@@ -61,7 +61,7 @@ predicate    predicate +     predicate + arguments +
              arguments       circumstantial adjuncts
 ```
 
-CFLT's position-0 unit contains the predicate, its **valence-bound participants** (subject, object, instrument, beneficiary, recipient), and **manner adverbials**. By RRG's stratification this corresponds to RRG's *Core* layer plus a small portion of the *Periphery* (manner). The terminological choice "Core" in CFLT is therefore deliberate — it inherits from RRG's Core layer, *not* from RRG's Nucleus. A reader who silently identifies CFLT's Core with RRG's Nucleus will incorrectly conclude that arguments live in the ground frame.
+CFLT's position-0 unit contains the predicate, its **valence-bound participants** (subject, object, instrument, beneficiary, recipient, accompaniment), **nuclear / core-level manner adverbials**, and **scope-internal operators** (negation, modality, aspect, degree) — see §9 for the canonical four-group enumeration that this prose summarizes. By RRG's stratification this corresponds to RRG's *Core* layer plus a small portion of the *Periphery* (manner) plus the scope-internal operator hierarchy (Cinque 1999). The terminological choice "Core" in CFLT is therefore deliberate — it inherits from RRG's Core layer, *not* from RRG's Nucleus. A reader who silently identifies CFLT's Core with RRG's Nucleus will incorrectly conclude that arguments live in the ground frame.
 
 | Term | RRG content | CFLT content |
 |---|---|---|
@@ -115,7 +115,7 @@ CFLT operates as a **two-tier model**:
 
 | Tier | Contents | Listener question it answers | Position |
 |---|---|---|---|
-| **Tier 1: Event Nucleus** | Predicate (Action/Identity/State/Request) + valence-bound participants (subject, object, instrument, beneficiary, recipient) + manner adverbials | *What happened?* (including who, to-whom, with-what, how) | Slot 0 (Core) |
+| **Tier 1: Event Nucleus** | Predicate (Action/Identity/State/Request) + valence-bound participants (subject, object, instrument, beneficiary, recipient, accompaniment) + nuclear / core-level manner adverbials + scope-internal operators (negation, modality, aspect, degree) — see §9 for the canonical enumeration | *What happened?* (including who, to-whom, with-what, how, in-what-mood, negated, when-internal) | Slot 0 (Core) |
 | **Tier 2: Ground Frame** | Reason / Space / Time | *Why? Where? When?* | Slots 1–3 |
 
 The event nucleus is a single salience unit because the listener processes it as one foregrounded chunk: *"I baked the cake with butter, slowly, for my mom"* presents **one event**, not five. Whereas *"in the kitchen, yesterday"* are scene-setters that are conceptually independent of the event.
@@ -182,7 +182,7 @@ CFLT requires that negation, modality, and aspect markers attach **inside the ev
 | **Aspect** (perfective) | *-ed / have V-en* | *了 le* (post-verbal) | *-ta* | *-었-* | Perfective stem | Preterite | Inside event nucleus |
 | **Aspect** (progressive) | *be V-ing* | *在 zài / 着 zhe* | *-te iru* | *-고 있다* | imperfective form (no dedicated progressive — *yaf'al* covers habitual + progressive) | *estar V-ndo* | Inside event nucleus |
 
-**Universal claim**: negation, modality, and aspect always **scope over the event nucleus** and therefore live inside Slot 0. They are never relegated to the ground frame, even when they are morphologically detachable from the verb (e.g., English modal auxiliaries, Arabic *lam*). This is consistent with Cinque's (1999) finding that mood, modality, and aspect occupy functional projections higher than the lexical verb but lower than CP — a region that maps to CFLT's Core, not its ground frame.
+**Strong cross-linguistic regularity (Cinque 1999 cartographic hierarchy)**: negation, modality, and aspect *typically* scope over the event nucleus and therefore live inside Slot 0 in the languages surveyed in the table above (English, Mandarin, Japanese, Korean, Arabic MSA, Spanish). This is consistent with Cinque's (1999) finding that mood, modality, and aspect occupy functional projections higher than the lexical verb but lower than CP — a region that maps to CFLT's Core, not its ground frame. Cinque's hierarchy is itself contested (Bobaljik 2003 treats it as a set of preferences rather than strict syntax; Croft 2001 resists universal functional-projection hierarchies in the Radical Construction Grammar tradition), and apparent counterexamples — e.g., Mandarin sentence-final 了 *le* — require the discourse-particle analysis below to be reconciled with this rule. CFLT therefore treats the inside-the-event-nucleus placement as the **unmarked default in the surveyed typology**, not as an absolute universal across all languages; principled deviations in languages outside the survey (e.g., Salish, Hopi, and Australian languages with sentence-final negation) remain an open empirical question.
 
 **Language-specific note on Mandarin**: the perfective *了 le* is famously sentence-final in many surface positions (*我吃了 / 我吃饭了*), which can superficially look like it has exited the event nucleus. The Li & Thompson (1981) analysis treats sentence-final *了* as a discourse particle conveying currently relevant state — it remains an aspect/discourse operator over the event, not a circumstantial modifier of cause/location/time. CFLT therefore counts it inside Core.
 
@@ -285,11 +285,11 @@ The protocol-layer claim that "position 0 should carry the speaker's primary com
 
 1. **Positional bias — "Lost in the Middle" (Liu et al. 2023).** Across multiple-document question answering and key-value retrieval tasks, decoder-only LLMs show a **U-shaped accuracy curve** as a function of where the answer-bearing context appears: highest at the beginning of the prompt, lowest in the middle, second-highest at the end. The beginning-of-prompt advantage is robust across GPT-3.5-Turbo, Claude, MPT, and LongChat. CFLT's prescription "put the speaker's commitment first" matches the model architecture's *empirically measured* preferred input position.
 
-2. **Attention sinks (Xiao et al. 2023, *Efficient Streaming LLMs with Attention Sinks*).** The first few tokens of a sequence accumulate disproportionate attention mass — a softmax-stability artifact rather than semantic prioritization, but the *consequence* is that signal placed at the prefix is more reliably preserved across long contexts. Note: attention sinks are an architecture-level phenomenon distinct from the cognitive primacy effect in §1.1 of `llm.md`; CFLT benefits from both, but they are independent mechanisms.
+2. **Attention sinks (Xiao et al. 2024, *Efficient Streaming LLMs with Attention Sinks*, ICLR).** The first few tokens of a sequence accumulate disproportionate attention mass — a softmax-stability artifact rather than semantic prioritization, but the *consequence* is that signal placed at the prefix is more reliably preserved across long contexts. Note: attention sinks are an architecture-level phenomenon distinct from the cognitive primacy effect in §1.1 of `llm.md`; CFLT benefits from both, but they are independent mechanisms.
 
 3. **Prompt-order sensitivity (Lu et al. 2022, *Fantastically Ordered Prompts*).** Few-shot prompt accuracy varies by tens of percentage points as a function of example ordering, with the variance large enough that Lu et al. propose an entropy-based heuristic to select among orderings without a labeled validation set. Sclar et al. (2024) extended the order-sensitivity finding to spurious surface features (separators, formatting). The relevance to CFLT is not "which order is best" but the more basic claim: **order is a first-class variable that meaningfully affects LLM output**. CFLT's invariant Core-first ordering eliminates this variance source for the *content* of the prompt — there is exactly one canonical place for the speaker's commitment.
 
-**Synthesis**: three independent literatures (positional bias in long context, softmax-stability attention sinks, in-context-learning order sensitivity) converge on the same operational rule: **what you put first matters disproportionately**. CFLT's protocol-layer claim is therefore not a typological universal about natural language; it is a **production rule that exploits a measurable property of both human cognition (Salience Network, PFC restructuring cost) and Transformer attention dynamics**. The full treatment of these LLM-side phenomena is in `llm.md` §2–§3; this section is the cognitive-protocol-side summary.
+**Synthesis**: across the tested model families and tasks in these three literatures, three independent mechanisms (positional bias in long context, softmax-stability attention sinks, in-context-learning order sensitivity) converge on the same operational tendency: **what you put first matters disproportionately for tested decoder-only LLMs on tested task families**. CFLT's protocol-layer claim is therefore not a typological universal about natural language; it is a **production rule that exploits a measurable property of both human cognition (Salience Network, PFC restructuring cost) and Transformer attention dynamics**. The scope-creep caveat for Liu et al. 2023 (document-scale finding → sentence-scale extrapolation) is treated explicitly in `llm.md` §3 — readers using the Liu et al. citation in support of a sentence-scale claim should consult that disambiguation. The full treatment of these LLM-side phenomena is in `llm.md` §2–§3; this section is the cognitive-protocol-side summary.
 
 ---
 
@@ -298,7 +298,7 @@ The protocol-layer claim that "position 0 should carry the speaker's primary com
 The core-concept document defines the "unmarked" middle ground between thought and speech.
 
 1. **Reduced restructuring cost.** L1 thought no longer needs to be re-parsed into L2 surface order; both languages share the CFLT intermediate scaffold (see `mathematics.md` §9).
-2. **Stable attention anchor.** LLMs focus most heavily on position 0; the protocol ensures that position 0 is always the most important word (see `llm.md` §2).
+2. **Stable attention anchor.** LLMs over-attend to the prefix region; the protocol ensures that position 0 carries the **speaker's salience anchor** — the Core (see §1.2 Disambiguation A for the warning that *important* is not a CFLT technical term; see `llm.md` §2.3 for the careful primacy-vs-sink disambiguation that this property rests on).
 3. **Foundation for stylistic flexibility.** Once the Core-First habit is automatic, learners can deliberately depart from it for rhetorical effect (foregrounding time, hedging, etc.). CFLT is a *base case*, not a ceiling.
 
 The Grammar Overlay layer (in the product) is what polishes CFLT-L2 into native-idiomatic L2 — and over time, the learner internalizes both layers and chooses naturally between them.
@@ -375,7 +375,7 @@ CFLT does not prohibit marked deviations, but it does require them to be **princ
 
 This view does not weaken CFLT's central claim — it strengthens it:
 
-> **The cognitive core of an utterance is its universally-prioritized position.**
+> **The cognitive core of an utterance is its universally-prioritized position** *(as CFLT's normative protocol-layer claim — an unmarked default within the surveyed typology, not a descriptive universal of natural-language word order; see §2.3 layer table and §2.5 typological evidence).*
 
 CFLT is therefore best characterized as: **an unmarked default that can be deliberately departed from, with the departure itself becoming meaningful.**
 
@@ -429,9 +429,9 @@ CFLT is partly **normative** (a pedagogical / computational protocol) and partly
 
 **Adjacent evidence already available**:
 - **Liu et al. (2023) "Lost in the Middle"** — directly shows U-shaped positional accuracy curve favoring beginning-of-prompt. Strong indirect evidence for P2.
-- **Xiao et al. (2023) "Attention Sinks"** — shows first-token attention concentration as a softmax-stability phenomenon. Provides the *mechanism* by which CFLT position 0 receives disproportionate model attention.
+- **Xiao et al. (2024) "Attention Sinks"** (ICLR) — shows first-token attention concentration as a softmax-stability phenomenon. Provides the *mechanism* by which CFLT position 0 receives disproportionate model attention.
 - **Lu et al. (2022) "Fantastically Ordered Prompts"** — shows large accuracy swings as a function of example ordering; proposes an entropy-based ordering heuristic. Replicated and extended in Sclar et al. (2024).
-- **Min et al. (2022) "Rethinking the Role of Demonstrations"** — order matters more than content correctness for in-context learning. Consistent with CFLT's "position-0 carries disproportionate signal" claim.
+- **Min et al. (2022) "Rethinking the Role of Demonstrations"** — find that demonstration *content* correctness matters surprisingly little for in-context learning, while demonstration *format* and *order* are first-order variables. CFLT's contribution operates on the format/order axis (the dimension Min et al. show to be active); CFLT's *content-order* claim should not lean on Min as primary support — see `llm.md` §9 for the honest engagement with the partial-counter-evidence reading of this paper.
 
 #### P3 — Bilingual PFC Cost Reduction Under CFLT Scaffolding
 
@@ -493,7 +493,7 @@ flowchart TD
     C4 --> D
 
     D --> E{Step 3: For each modifier,<br/>apply the substitution test §2.2}
-    E -->|"Modifier change → event identity changes"| F[Include in Core<br/>manner / instrument / beneficiary /<br/>accompaniment / modal / negation / aspect]
+    E -->|"Modifier change → event identity changes"| F[Include in Core<br/>manner / instrument / beneficiary /<br/>accompaniment / modal / negation /<br/>aspect / degree]
     E -->|"Modifier change → same event,<br/>different setting"| G{Which question<br/>does it answer?}
 
     G -->|Why?| H1[Slot 1: Reason]

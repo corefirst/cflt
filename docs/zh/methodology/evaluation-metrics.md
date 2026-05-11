@@ -121,4 +121,4 @@ graph LR
 
 ## 6. 参考文献
 
-参见 [`bibliography.md`](../bibliography.md)。用于定义本文档中指标的关键方法论锚点：Hawkins (1994, 2004) 关于 EIC；Levelt (1989) 和 Kormos (2006) 关于生成潜伏期基线；Liu 等人 (2023) 关于大海捞针方法论；Xiao 等人 (2024) 关于 IPS 背后的注意汇机制；Sclar 等人 (2024) 和 Lu 等人 (2022) 关于提示词顺序敏感性基线。
+参见 [`bibliography.md`](../bibliography.md)。用于定义本文档中指标的关键方法论锚点：Hawkins (1994, 2004) 关于 EIC；Levelt (1989) 和 Kormos (2006) 关于生成潜伏期基线；Liu 等人 (2023) 关于大海捞针方法论；Xiao 等人 (2024) 关于 IPS 背后的注意力汇点机制；Sclar 等人 (2024) 和 Lu 等人 (2022) 关于提示词顺序敏感性基线。

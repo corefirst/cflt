@@ -8,8 +8,9 @@ hide:
 # Core-First Language Theory
 
 > *The cognitive core of an utterance is also its universally-prioritized linear position.*
+> — CFLT's normative protocol-layer claim (an unmarked default, not a descriptive universal of natural-language word order). See [`manifesto.md`](manifesto.md) §1.1 for the protocol-vs-description distinction; see [`foundations/core-concept.md`](foundations/core-concept.md) §2.3 for the layer-by-layer scoping and §2.5 for the typological evidence.
 
-**CFLT** proposes a single discourse-level principle from which the **CFLT Protocol** derives a four-element sequencing rule that bridges any two natural languages with minimum cognitive friction — and serves as a structured prompt protocol for Large Language Models:
+**CFLT** proposes a single discourse-level principle from which the **CFLT Protocol** derives a four-element sequencing rule that bridges language pairs within the surveyed typological range with minimum cognitive friction — and serves as a structured prompt protocol for Large Language Models:
 
 ```
 [Core] → [Reason] → [Space] → [Time]

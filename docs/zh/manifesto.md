@@ -7,7 +7,7 @@
 
 ## 1. 摘要
 
-**核心优先语言理论 (Core-First Language Theory, CFLT)** 是一个面向跨语言通信与双语教育的统一理论与操作框架。它提出一条话语层级 (discourse-level) 的原则 —— *话语的认知核心，也是其在任何语言中被普遍优先排列的线性位置* —— 并由此定义出一套可教学、可被 AI 支持的排序协议（**CFLT 协议**），用以最小化任意两种自然语言之间的认知摩擦。
+**核心优先语言理论 (Core-First Language Theory, CFLT)** 是一个面向跨语言通信与双语教育的统一理论与操作框架。它提出一条话语层级 (discourse-level) 的原则 —— *话语的认知核心，也是其在所调查类型范围内、作为无标记默认而被优先排列的线性位置*（参见 [`foundations/core-concept.md`](foundations/core-concept.md) §2.5，给出跨印欧、汉藏、日语族、韩语族、亚非语系的五语言示例）—— 并由此定义出一套可教学、可被 AI 支持的排序协议（**CFLT 协议**），用以最小化所调查类型范围内的语言对之间的认知摩擦。
 
 ### 1.1 CFLT 的性质：协议 vs 描述
 
@@ -17,7 +17,9 @@
 
 CFLT 之于语言，正如 **TCP/IP** 之于网络：它是一种标准化的思想“数据包头”格式。通过采用“核心优先”的中介语协议，学习者可以避开结构重构（如在德语中等待动词，或在日语中先构思 10 个词的修饰语再产出名词）所带来的巨大代谢成本。它是**无标记的默认值**，而非描述性的普适规律。
 
-通过识别全人类共享的认知“硬件”（乔姆斯基的普遍语法，并经由 *核心语法 (core grammar)* ↦ *核心优先排序 (core-first sequencing)* 的扩展）同时中和文化“软件”层面的偏差（萨丕尔-沃尔夫假说），CFLT 借助 AI 在任意两种语言之间构建无缝桥梁。
+CFLT 针对人类语言使用者广泛共享的认知能力（Levelt 的前言语信息阶段（preverbal-message stage）所涉及的信息构造层面普遍机制——参见 [`foundations/linguistics.md`](foundations/linguistics.md) §5–§6，以及 [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 横跨印欧、汉藏、日语族、韩语族、亚非语系的类型多样化工作示例），并**减弱**（而非消除）跨语言结构重组的认知成本（即弱版本萨丕尔-沃尔夫——见 [`foundations/linguistics.md`](foundations/linguistics.md) §7），借助 AI 在所调查类型范围内的语言对之间构建桥梁。
+
+> **关于"普遍语法"的说明。** 早期草案把 CFLT 框定为乔姆斯基普遍语法 (UG) 的扩展。当前的措辞有意更弱：核心承重主张是**信息构造**（Levelt 1989）在人类语言使用者中被广泛共享，而*不是*需要先天的、语言专属的 UG。这使 CFLT 兼容于以用法为基础的 / 构式语法传统（Goldberg 1995, 2006; Tomasello 2003）以及强 UG 立场——参见 [`foundations/linguistics.md`](foundations/linguistics.md) §6 关于不依赖 UG 的明确表述，以及 §6.2 关于与反 UG 立场（Christiansen & Chater 2008; Evans & Levinson 2009）的对话。
 
 **分层命名：**
 
@@ -67,7 +69,7 @@ graph LR
 
 **早期立即成分 (Hawkins):** CFLT 为了**解析效率**进行了优化。通过将核心置于位置 0，它最小化了“成分识别域”，使效率比接近 100%，并减少了人类和机器的前瞻缓冲区。
 
-### 2.3 计算基础：注意力槽 (Xiao 等)
+### 2.3 计算基础：注意力汇点 (Xiao 等)
 
 ```mermaid
 graph BT
@@ -275,12 +277,13 @@ CFLT 主张在 L1 和 L2 之间存在一个**语言中性逻辑层**。通过将
 - **L1 兼容性：** 它捕捉说话者的意图，而无需过早进行句法承诺。
 - **L2 友好性：** 它为目标语言令牌提供了一个一致的落地信标。
 
-### 10.3 终极效益：即时流利 (Instant Fluency)
-通过采用 CFLT 协议，学习第二语言的任务从**复杂的结构重组**转变为**简单的令牌置换**。
-- **对于人类：** 它消除了重组延迟，实现了**即时流利 (Instant Fluency)** 并减少了言语焦虑。
-- **对于 AI：** 它使信息密度与 Transformer 的注意力架构对齐，实现了**无损逻辑对齐 (Lossless Logic Alignment)** 和确定性推理。
+### 10.3 预测的效益：降低重组成本
+通过采用 CFLT 协议，学习第二语言的任务从**复杂的结构重组**重新框定为**针对稳定支架的令牌置换**。CFLT 预测两项战略性结果（每项都在 [`foundations/core-concept.md`](foundations/core-concept.md) §8.5 中操作化为可证伪的预测）：
 
-CFLT 是桥梁。通过标准化思想序列，我们将人类与机器智能统一为一个高保真的通信网络。
+- **对人类（预测，参见 §8.5 P1）：** 协议设计上旨在减少 L2 产出的重组延迟及随之而来的言语焦虑。在控制对比下流利度收益的量级是一个开放的实证问题（`pedagogy.md` §12.1 *情感过滤量度*）。
+- **对 AI（预测，参见 §8.5 P2）：** 协议设计上旨在把显著性锚点放入 Transformer 模型的高注意力前缀区域，利用的是**首因效应**（而非注意力汇点伪影——见 [`foundations/llm.md`](foundations/llm.md) §2.3）。该机制预计会改善早期前缀的条件分布稳定性和指令遵循可靠性，**而非**让自回归推理变得确定，**也非**降低总联合熵。[`foundations/mathematics.md`](foundations/mathematics.md) §2 明确否定了上述两种更强的解读。具体的准确率与延迟差异是开放的实证问题（`llm.md` §10.1）。
+
+CFLT 是桥梁。通过在协议层标准化思想序列，框架旨在拓宽人机协作带宽；对该目标的实证评估见 [`methodology/empirical-agenda.md`](methodology/empirical-agenda.md)。
 
 ---
 

@@ -32,12 +32,16 @@ Traditional Second Language Acquisition (SLA) suffers from high "mental context-
 ## 3. Strategic Pillar II: Standardizing LLM Thinking
 *Goal: A Logical Assembly Language for Agents*
 
-In the era of Agentic Workflows, the lack of a standardized logical protocol between different LLMs (and between humans and LLMs) leads to information loss and "Attention Decay."
+In the era of Agentic Workflows, the lack of a standardized logical protocol between different LLMs (and between humans and LLMs) is hypothesized to contribute to information drift across long-context generations.
 
-### Why the CFLT Protocol is the Ideal LLM Protocol:
-- **Attention Efficiency:** By placing the `[Core]` at the beginning of the sequence, we maximize the attention weights in Transformer-based architectures, reducing "hallucinations" and logical drift in long-context generations.
-- **Agentic Interoperability:** The CFLT Protocol serves as a **"Logical Lingua Franca"** for cross-agent communication. A Chinese-core agent and an English-core agent can exchange complex intents with zero semantic loss if both adhere to the CFLT sequence.
-- **Chain-of-Thought (CoT) Optimization:** The linear, non-nested nature of CFLT aligns perfectly with the iterative reasoning steps of modern AI, simplifying complex recursive thoughts into manageable, additive logic blocks.
+> **How to read this section.** The bullets below use high-level strategic language; for the precise mechanistic claims and what is empirically supported vs. predicted, see the foundations — in particular [`foundations/llm.md`](foundations/llm.md) §2.3 (primacy vs. attention-sink disambiguation), §7 (hallucination dynamics), and §10 (open empirical questions); and [`foundations/mathematics.md`](foundations/mathematics.md) §2 (explicit chain-rule caveat — CFLT does **not** claim to reduce total joint entropy).
+>
+> Reasoning in real LLMs is stochastic (autoregressive sampling), and the magnitudes of the effects below are open empirical questions, not measured outcomes.
+
+### Why the CFLT Protocol is a Promising LLM Protocol:
+- **Predicted attention-prefix benefit:** Placing the `[Core]` at the beginning of the sequence locates the salience anchor in the high-attention prefix region. By the primacy argument in [`foundations/llm.md`](foundations/llm.md) §2.3 — **not** the softmax-stability attention-sink artifact (Xiao et al. 2024), which is explicitly disclaimed there — we expect this to reduce drift away from the user's intent as the sequence grows. Magnitude is an open question (`llm.md` §10.1).
+- **Agentic interoperability (design goal):** The CFLT Protocol is **designed to** serve as a **"Logical Lingua Franca"** for cross-agent communication, so that a Chinese-core agent and an English-core agent can exchange complex intents with minimal protocol-layer semantic drift if both adhere to the CFLT sequence. This is an order-invariance property at the protocol layer (see [`foundations/mathematics.md`](foundations/mathematics.md) §9), **not** a zero-joint-entropy / lossless-coding claim — `mathematics.md` §2 explicitly retracts that stronger reading. Residual loss is an open empirical question.
+- **Chain-of-Thought (CoT) compatibility:** The linear, non-nested nature of CFLT is intended to interoperate with iterative reasoning approaches in modern AI; we treat CFLT and CoT as complementary scaffolds (see [`foundations/llm.md`](foundations/llm.md) §9 for the honest scope statement: CFLT is not a replacement for CoT on complex math/logic reasoning).
 
 ---
 

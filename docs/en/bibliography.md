@@ -23,20 +23,25 @@
 
 ## Linguistics
 
+- **Aikhenvald, A. Y.** (2004). *Evidentiality.* Oxford: Oxford University Press.
 - **Ariel, M.** (1990). *Accessing Noun-Phrase Antecedents.* London: Routledge.
 - **Benmamoun, E.** (2000). *The Feature Structure of Functional Categories: A Comparative Study of Arabic Dialects.* New York: Oxford University Press.
 - **Birner, B. J. & Ward, G.** (1998). *Information Status and Noncanonical Word Order in English.* Amsterdam: John Benjamins.
+- **Bobaljik, J. D.** (2003). "Floating Quantifiers: Handle with Care." In *The Second Glot International State-of-the-Article Book*, Cheng & Sybesma (eds). Berlin: Mouton de Gruyter, 107–148. *(Cited in `core-concept.md` §2.2 for the position that Cinque's (1999) hierarchy is better read as a set of preferences than as strict universal syntax.)*
 - **Boroditsky, L.** (2001). "Does Language Shape Thought? Mandarin and English Speakers' Conceptions of Time." *Cognitive Psychology* 43(1), 1–22.
 - **Bresnan, J.** (2001). *Lexical-Functional Syntax.* Oxford: Blackwell.
 - **Büring, D.** (1997). *The Meaning of Topic and Focus: The 59th Street Bridge Accent.* London: Routledge.
 - **Carlson, G. N.** (1977). *Reference to Kinds in English.* PhD dissertation, University of Massachusetts Amherst.
 - **Chomsky, N.** (1981). *Lectures on Government and Binding.* Dordrecht: Foris.
 - **Chomsky, N.** (1986). *Knowledge of Language: Its Nature, Origin, and Use.* New York: Praeger.
+- **Christiansen, M. H. & Chater, N.** (2008). "Language as Shaped by the Brain." *Behavioral and Brain Sciences* 31(5), 489–509. DOI: [10.1017/S0140525X08004998](https://doi.org/10.1017/S0140525X08004998)
+- **Cinque, G.** (1999). *Adverbs and Functional Heads: A Cross-Linguistic Perspective.* Oxford: Oxford University Press.
 - **Croft, W.** (1991). *Syntactic Categories and Grammatical Relations: The Cognitive Organization of Information.* Chicago: University of Chicago Press.
 - **Croft, W.** (2001). *Radical Construction Grammar: Syntactic Theory in Typological Perspective.* Oxford: Oxford University Press.
 - **Dowty, D. R.** (1979). *Word Meaning and Montague Grammar.* Dordrecht: Reidel.
 - **Dryer, M. S.** (2013). "Determiner precedes noun." In *The World Atlas of Language Structures Online*, Dryer & Haspelmath (eds). Leipzig: Max Planck Institute for Evolutionary Anthropology.
 - **Erteschik-Shir, N.** (2007). *Information Structure: The Syntax-Discourse Interface.* Oxford: Oxford University Press.
+- **Evans, N. & Levinson, S. C.** (2009). "The Myth of Language Universals: Language Diversity and Its Importance for Cognitive Science." *Behavioral and Brain Sciences* 32(5), 429–448. DOI: [10.1017/S0140525X0999094X](https://doi.org/10.1017/S0140525X0999094X)
 - **Firbas, J.** (1992). *Functional Sentence Perspective in Written and Spoken Communication.* Cambridge: Cambridge University Press.
 - **Goddard, C. & Wierzbicka, A.** (2002). *Meaning and Universal Grammar: Theory and Empirical Case Studies.* Amsterdam: John Benjamins.
 - **Goldberg, A. E.** (1995). *Constructions: A Construction Grammar Approach to Argument Structure.* Chicago: University of Chicago Press.
@@ -46,15 +51,18 @@
 - **Gundel, J. K., Hedberg, N. & Zacharski, R.** (1993). "Cognitive Status and the Form of Referring Expressions in Discourse." *Language* 69(2), 274–307.
 - **Haiman, J.** (1978). "Conditionals are Topics." *Language* 54(3), 564–589.
 - **Halliday, M. A. K.** (1967). "Notes on Transitivity and Theme in English. Part 2." *Journal of Linguistics* 3(2), 199–244.
+- **Halliday, M. A. K. & Matthiessen, C. M. I. M.** (2014). *Halliday's Introduction to Functional Grammar* (4th ed.). London: Routledge. DOI: [10.4324/9780203431269](https://doi.org/10.4324/9780203431269)
 - **Hawkins, J. A.** (1994). *A Performance Theory of Order and Constituency.* Cambridge: Cambridge University Press. DOI: [10.1017/CBO9780511554285](https://doi.org/10.1017/CBO9780511554285)
 - **Hawkins, J. A.** (2004). *Efficiency and Complexity in Grammars.* Oxford: Oxford University Press. DOI: [10.1093/acprof:oso/9780199252688.001.0001](https://doi.org/10.1093/acprof:oso/9780199252688.001.0001)
 - **Hengeveld, K.** (1992). *Non-verbal Predication: Theory, Typology, Diachrony.* Berlin: Mouton de Gruyter.
+- **Heycock, C.** (2008). "Japanese *-wa*, *-ga*, and Information Structure." In *The Oxford Handbook of Japanese Linguistics*, Miyagawa & Saito (eds), pp. 54–83. Oxford: Oxford University Press.
 - **Higgins, F. R.** (1979). *The Pseudo-cleft Construction in English.* New York: Garland.
 - **Horn, L. R.** (1989). *A Natural History of Negation.* Chicago: University of Chicago Press.
 - **Huang, C.-T. J., Li, Y.-H. A. & Li, Y.** (2009). *The Syntax of Chinese.* Cambridge: Cambridge University Press.
 - **Kennedy, C.** (1999). *Projecting the Adjective: The Syntax and Semantics of Gradability and Comparison.* New York: Garland.
 - **Krifka, M.** (2008). "Basic Notions of Information Structure." *Acta Linguistica Hungarica* 55(3–4), 243–276.
 - **Kuno, S.** (1973). *The Structure of the Japanese Language.* Cambridge, MA: MIT Press.
+- **Kuroda, S.-Y.** (2005). "Focusing on the Matter of Topic: A Study of *Wa* and *Ga* in Japanese." *Journal of East Asian Linguistics* 14(1), 1–58. DOI: [10.1007/s10831-004-2335-2](https://doi.org/10.1007/s10831-004-2335-2) *(Verify exact pagination; OpenAlex metadata is the primary source for this entry.)*
 - **Lambrecht, K.** (1994). *Information Structure and Sentence Form: Topic, Focus, and the Mental Representations of Discourse Referents.* Cambridge: Cambridge University Press.
 - **Langacker, R. W.** (1987). *Foundations of Cognitive Grammar, Vol. 1: Theoretical Prerequisites.* Stanford: Stanford University Press.
 - **Langacker, R. W.** (2008). *Cognitive Grammar: A Basic Introduction.* Oxford: Oxford University Press.
@@ -66,13 +74,16 @@
 - **Maienborn, C.** (2005). "On the Limits of the Davidsonian Approach: The Case of Copula Sentences." *Theoretical Linguistics* 31(3), 275–316.
 - **Mathesius, V.** (1929). "Functional Linguistics." Republished in *Praguiana* (1983), Vachek (ed). Amsterdam: John Benjamins.
 - **Miestamo, M.** (2005). *Standard Negation: The Negation of Declarative Verbal Main Clauses in a Typological Perspective.* Berlin: Mouton de Gruyter.
+- **Mithun, M.** (1992). "Is Basic Word Order Universal?" In *Pragmatics of Word Order Flexibility*, Payne (ed). Amsterdam: John Benjamins, 15–61. *(Yup'ik and other examples of discourse-driven, non-event-anchored fronting.)*
 - **Mohammad, M. A.** (2000). *Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic.* Amsterdam: John Benjamins.
+- **Newmeyer, F. J.** (2005). *Possible and Probable Languages: A Generative Perspective on Linguistic Typology.* Oxford: Oxford University Press.
 - **Palmer, F. R.** (2001). *Mood and Modality* (2nd ed). Cambridge: Cambridge University Press.
 - **Pawley, A. & Syder, F. H.** (1983). "Two Puzzles for Linguistic Theory: Nativelike Selection and Nativelike Fluency." In *Language and Communication*, Richards & Schmidt (eds). London: Longman.
 - **Pinker, S.** (1994). *The Language Instinct.* New York: William Morrow.
 - **Pollock, J.-Y.** (1989). "Verb Movement, Universal Grammar, and the Structure of IP." *Linguistic Inquiry* 20(3), 365–424.
 - **Prince, E. F.** (1981). "Toward a Taxonomy of Given-New Information." In *Radical Pragmatics*, Cole (ed). New York: Academic Press, 223–255.
 - **Reape, M.** (1994). "Domain Union and Word Order Variation in German." In *German in Head-Driven Phrase Structure Grammar*, Nerbonne, Netter & Pollard (eds). Stanford: CSLI Publications, 151–197.
+- **Reinhart, T.** (1984). "Principles of Gestalt Perception in the Temporal Organization of Narrative Texts." *Linguistics* 22(6), 779–809. DOI: [10.1515/ling.1984.22.6.779](https://doi.org/10.1515/ling.1984.22.6.779)
 - **Rizzi, L.** (1997). "The Fine Structure of the Left Periphery." In *Elements of Grammar*, Haegeman (ed). Dordrecht: Kluwer, 281–337.
 - **Ryding, K. C.** (2005). *A Reference Grammar of Modern Standard Arabic.* Cambridge: Cambridge University Press.
 - **Sadock, J. M. & Zwicky, A. M.** (1985). "Speech Act Distinctions in Syntax." In *Language Typology and Syntactic Description*, Shopen (ed), Vol. 1, 155–196. Cambridge: Cambridge University Press.
@@ -80,10 +91,10 @@
 - **Slobin, D. I.** (1996). "From 'Thought and Language' to 'Thinking for Speaking'." In *Rethinking Linguistic Relativity*, Gumperz & Levinson (eds). Cambridge: Cambridge University Press.
 - **Sohn, H.-M.** (1999). *The Korean Language.* Cambridge: Cambridge University Press.
 - **Talmy, L.** (2000). *Toward a Cognitive Semantics, Vol. 1: Concept Structuring Systems.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/6847.001.0001](https://doi.org/10.7551/mitpress/6847.001.0001)
+- **Tomasello, M.** (2003). *Constructing a Language: A Usage-Based Theory of Language Acquisition.* Cambridge, MA: Harvard University Press.
 - **Tsao, F.-F.** (1979). *A Functional Study of Topic in Chinese: The First Step Towards Discourse Analysis.* Taipei: Student Book Co.
 - **Tsujimura, N.** (2014). *An Introduction to Japanese Linguistics* (3rd ed). Malden, MA: Wiley-Blackwell.
 - **van der Auwera, J. & Plungian, V. A.** (1998). "Modality's Semantic Map." *Linguistic Typology* 2, 79–124.
-- **Cinque, G.** (1999). *Adverbs and Functional Heads: A Cross-Linguistic Perspective.* Oxford: Oxford University Press.
 - **Van Valin, R. D. Jr. & LaPolla, R. J.** (1997). *Syntax: Structure, Meaning, and Function.* Cambridge: Cambridge University Press. DOI: [10.1017/CBO9781139166799](https://doi.org/10.1017/CBO9781139166799)
 - **Van Valin, R. D. Jr.** (2005). *Exploring the Syntax-Semantics Interface.* Cambridge: Cambridge University Press.
 - **Vendler, Z.** (1957). "Verbs and Times." *The Philosophical Review* 66(2), 143–160.
@@ -109,6 +120,7 @@
 - **Frege, G.** (1879). *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens.* Halle: Louis Nebert.
 - **Grice, H. P.** (1975). "Logic and Conversation." In *Syntax and Semantics, Vol. 3: Speech Acts*, Cole & Morgan (eds). New York: Academic Press.
 - **Kamp, H.** (1981). "A Theory of Truth and Semantic Representation." In *Formal Methods in the Study of Language*, Groenendijk et al. (eds). Amsterdam: Mathematical Centre Tracts.
+- **Kamp, H. & Reyle, U.** (1993). *From Discourse to Logic: Introduction to Modeltheoretic Semantics of Natural Language, Formal Logic and Discourse Representation Theory.* Dordrecht: Kluwer Academic Publishers.
 - **Landman, F.** (2000). *Events and Plurality: The Jerusalem Lectures.* Dordrecht: Kluwer Academic Publishers.
 - **Levinson, S. C.** (1983). *Pragmatics.* Cambridge: Cambridge University Press.
 - **Parsons, T.** (1990). *Events in the Semantics of English: A Study in Subatomic Semantics.* Cambridge, MA: MIT Press.
@@ -121,6 +133,7 @@
 
 ## Mathematics and Information Theory
 
+- **Cover, T. M. & Thomas, J. A.** (2006). *Elements of Information Theory* (2nd ed.). Hoboken, NJ: Wiley-Interscience. DOI: [10.1002/047174882X](https://doi.org/10.1002/047174882X)
 - **Huffman, D. A.** (1952). "A Method for the Construction of Minimum-Redundancy Codes." *Proceedings of the IRE* 40(9), 1098–1101.
 - **Jaeger, T. F.** (2010). "Redundancy and Reduction: Speakers Manage Syntactic Information Density." *Cognitive Psychology* 61(1), 23–62.
 - **Levy, R.** (2008). "Expectation-based Syntactic Comprehension." *Cognition* 106(3), 1126–1177. DOI: [10.1016/j.cognition.2007.05.006](https://doi.org/10.1016/j.cognition.2007.05.006)
@@ -180,12 +193,14 @@
 - **Kroll, J. F. & Stewart, E.** (1994). "Category Interference in Translation and Picture Naming: Evidence for Asymmetric Connections Between Bilingual Memory Representations." *Journal of Memory and Language* 33(2), 149–174.
 - **Kroll, J. F., van Hell, J. G., Tokowicz, N. & Green, D. W.** (2010). "The Revised Hierarchical Model: A Critical Review and Assessment." *Bilingualism: Language and Cognition* 13(3), 373–381.
 - **Lany, J. & Saffran, J. R.** (2010). "From Statistics to Meaning: Infants' Acquisition of Lexical Categories." *Psychological Science* 21(2), 284–291.
-- **Lardiere, D.** (1998). "Case and Tense in the 'Fossilized' Steady State." *Second Language Research* 14(1), 1–26. DOI: [10.1191/026765898672365514](https://doi.org/10.1191/026765898672365514)
+- **Lardiere, D.** (1998). "Case and Tense in the 'Fossilized' Steady State." *Second Language Research* 14(1), 1–26. DOI: [10.1191/026765898674105303](https://doi.org/10.1191/026765898674105303)
 - **Lenneberg, E. H.** (1967). *Biological Foundations of Language.* New York: Wiley.
 - **Long, M. H.** (1985). "A Role for Instruction in Second Language Acquisition: Task-Based Language Teaching." In *Modelling and Assessing Second Language Acquisition*, Hyltenstam & Pienemann (eds). Clevedon: Multilingual Matters.
+- **Long, M. H.** (1991). "Focus on Form: A Design Feature in Language Teaching Methodology." In *Foreign Language Research in Cross-Cultural Perspective*, de Bot, Ginsberg & Kramsch (eds), 39–52. Amsterdam: John Benjamins. DOI: [10.1075/sibil.2.07lon](https://doi.org/10.1075/sibil.2.07lon)
 - **Long, M. H.** (2015). *Second Language Acquisition and Task-Based Language Teaching.* Malden, MA: Wiley-Blackwell.
 - **Quirk, R., Greenbaum, S., Leech, G. & Svartvik, J.** (1985). *A Comprehensive Grammar of the English Language.* London: Longman.
 - **Saffran, J. R., Aslin, R. N. & Newport, E. L.** (1996). "Statistical Learning by 8-Month-Old Infants." *Science* 274(5294), 1926–1928.
+- **Schmidt, R. W.** (1983). "Interaction, Acculturation, and the Acquisition of Communicative Competence: A Case Study of an Adult." In *Sociolinguistics and Language Acquisition*, Wolfson & Judd (eds), 137–174. Rowley, MA: Newbury House. *(The "Wes" case study cited in `core-concept.md` §2.1 and `pedagogy.md` §10 on the limits of communicative competence without form-focus.)*
 - **Skehan, P.** (1998). *A Cognitive Approach to Language Learning.* Oxford: Oxford University Press.
 - **Sturt, P.** (2003). "The Time-Course of the Application of Binding Constraints in Reference Resolution." *Journal of Memory and Language* 48(3), 542–562.
 - **Sweller, J.** (1988). "Cognitive Load During Problem Solving: Effects on Learning." *Cognitive Science* 12(2), 257–285.
@@ -200,9 +215,11 @@
 - **Abutalebi, J. & Green, D. W.** (2007). "Bilingual Language Production: The Neurocognition of Language Representation and Control." *Journal of Neurolinguistics* 20(3), 242–275. DOI: [10.1016/j.jneuroling.2006.10.003](https://doi.org/10.1016/j.jneuroling.2006.10.003)
 - **Abutalebi, J. & Green, D. W.** (2016). "Neuroimaging of Language Control in Bilinguals: Neural Adaptation and Reserve." *Bilingualism: Language and Cognition* 19(4), 689–698. DOI: [10.1017/S1366728916000225](https://doi.org/10.1017/S1366728916000225)
 - **Bemis, D. K. & Pylkkänen, L.** (2013). "Basic Linguistic Composition Recruits the Left Anterior Temporal Lobe and Left Angular Gyrus During Both Listening and Reading." *Cerebral Cortex* 23(8), 1859–1873. DOI: [10.1093/cercor/bhs170](https://doi.org/10.1093/cercor/bhs170)
+- **Cui, H., Jeong, H., Okamoto, K., Takahashi, D., Kawashima, R. & Sugiura, M.** (2022). "Neural correlates of Japanese honorific agreement processing mediated by socio-pragmatic factors: An fMRI study." *Journal of Neurolinguistics* 62, 101041. DOI: [10.1016/j.jneuroling.2021.101041](https://doi.org/10.1016/j.jneuroling.2021.101041)
 - **Friederici, A. D.** (2011). "The brain basis of language processing: from structure to function." *Physiological Reviews*, 91(4), 1357–1392. DOI: [10.1152/physrev.00006.2011](https://doi.org/10.1152/physrev.00006.2011)
 - **Hernandez, A. E.** (2009). *The Bilingual Brain.* Oxford: Oxford University Press.
 - **Friederici, A. D.** (2017). *Language in Our Brain: The Origins of a Uniquely Human Capacity.* Cambridge, MA: MIT Press. DOI: [10.7551/mitpress/11173.001.0001](https://doi.org/10.7551/mitpress/11173.001.0001)
+- **Momo, K., Sakai, H. & Sakai, K. L.** (2008). "Syntax in a native language still continues to develop in adults: Honorification judgment in Japanese." *Brain and Language* 107(1), 81–89. DOI: [10.1016/j.bandl.2007.12.003](https://doi.org/10.1016/j.bandl.2007.12.003)
 - **Hashimoto, Y., Yokoyama, S. & Kawashima, R.** (2012). "Neuro-typology of sentence comprehension: Cross-linguistic difference in canonical word order affects brain responses during sentence comprehension." *The Open Medical Imaging Journal* 6, 62–69. DOI: [10.2174/1874347101206010062](https://doi.org/10.2174/1874347101206010062)
 - **Pliatsikas, C.** (2020). "Understanding structural plasticity in the bilingual brain: The Dynamic Restructuring Model." *Bilingualism: Language and Cognition*, 23(2), 459-471. DOI: [10.1017/S1366728919000130](https://doi.org/10.1017/S1366728919000130)
 - **Pylkkänen, L.** (2019). "The neural basis of combinatory syntax and semantics." *Science* 366, 62–66. DOI: [10.1126/science.aax0050](https://doi.org/10.1126/science.aax0050)

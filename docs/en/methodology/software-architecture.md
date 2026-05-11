@@ -34,7 +34,7 @@ The LT is a specialized AI agent tasked with **intent extraction** and **lineari
 - **Handling Ambiguity:** If the input is missing a core, the LT must prompt the user or inject a `[NULL]` token to maintain protocol stability.
 
 ### 2.2 Logic Extraction Prompt Pattern
-The LT uses a "Salience-First" prompt that ignores syntactic sugar:
+The LT uses a **salience-anchor-first** prompt (see [`../foundations/core-concept.md`](../foundations/core-concept.md) §1 for the definition of *salience anchor*) that ignores syntactic sugar:
 ```json
 {
   "instruction": "Extract the action/identity, reason, space, and time.",

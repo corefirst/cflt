@@ -15,7 +15,7 @@ This leads to the **Modifier Trap**: your working memory overflows as you try to
 
 ## 2. The Solution: Semantic Lego (The 3-Step Protocol)
 
-CFLT solves this by treating language as "Semantic Lego"—functional blocks that are always assembled in the same cognitive order, regardless of the target language's grammar.
+CFLT addresses this by treating language as "Semantic Lego" — the **protocol-layer** sequence (Core → Reason → Space → Time) is the same regardless of target language, while the **internal assembly** of the Core (case marking, particles, prepositions, word order within the nucleus) is delegated to each language's native syntax. See [`../foundations/core-concept.md`](../foundations/core-concept.md) §2.3 for the layer-by-layer split.
 
 ### Step 1: Extract the Core (The Salience Anchor)
 Ignore the context, the time, and the reasons. Ask yourself: **"What is the one thing I am fundamentally asserting?"** 
@@ -59,7 +59,7 @@ CFLT reverses this through **Backward Temporal Constraints**:
 2.  **Time-Last:** Append the "Time Token" at the end.
 3.  **Muscle Memory Training:** Learners are trained to treat the final Time Token as a "trigger" that retroactively validates the core. In the "Grammar Overlay" stage, the brain begins to *pre-echo* the time token into the core verb, transforming "I go... yesterday" into "I went... yesterday" via a subconscious feedback loop. This mimics how native speakers handle long-distance dependencies, building muscle memory for inflection without the planning cost.
 
-> **Honest scope of this mechanism.** Backward Temporal Constraint is a **selection scaffold** — it helps learners decide *which* tense to use by anchoring on the temporal adverb. It does **not** automatically solve the *production* of tense morphology itself. Lardiere's (1998, 2003) "Patty" case study showed a Chinese-L1 advanced learner produced past-tense suppliance at only ~6%, attributed to a combination of (a) Mandarin phonotactic constraints (no syllable-final consonant clusters) limiting *-ed* production, and (b) the well-known "Missing Surface Inflection" challenge (Hawkins & Liszka 2003 *Prosodic Transfer Hypothesis*; Goad & White 2006). CFLT's backward-temporal scaffold helps learners *know* the tense to aim for; it does not by itself overcome the morpho-phonological mapping bottleneck. Effective Chinese→English tense pedagogy combines CFLT's temporal scaffolding with explicit phonological training on inflectional morphology.
+> **Honest scope of this mechanism.** Backward Temporal Constraint is a **selection scaffold** — it helps learners decide *which* tense to use by anchoring on the temporal adverb. It does **not** automatically solve the *production* of tense morphology itself. Lardiere's (1998) "Patty" case study (DOI 10.1191/026765898674105303) showed a Chinese-L1 advanced learner produced past-tense suppliance at only ~6%, attributed to a combination of (a) Mandarin phonotactic constraints (no syllable-final consonant clusters) limiting *-ed* production, and (b) the well-known "Missing Surface Inflection" challenge (Hawkins & Liszka 2003 *Prosodic Transfer Hypothesis*; Goad & White 2006). CFLT's backward-temporal scaffold helps learners *know* the tense to aim for; it does not by itself overcome the morpho-phonological mapping bottleneck. Effective Chinese→English tense pedagogy combines CFLT's temporal scaffolding with explicit phonological training on inflectional morphology.
 
 ```mermaid
 graph LR

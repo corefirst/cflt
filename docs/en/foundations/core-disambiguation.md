@@ -9,13 +9,15 @@
 
 In CFLT, the **Core** (Slot 0) is the **Salience Anchor** of the utterance. It represents the primary event, state, identity, or request the speaker intends to assert. 
 
-**Formal Boundary Rule:** 
+**Formal Boundary Rule** (canonical taxonomy mirrors [`core-concept.md`](./core-concept.md) §9 — the canonical Formal Definition for Implementers; this section is the operational restatement):
+
 The Core consists of:
 1.  **The Predicate** (Action, Identity, State, or Request).
-2.  **Valence-Bound Participants** (Subject, Object, Indirect Object).
-3.  **Internal Modifiers** (Manner, Instrument, Beneficiary, Modal, Negation).
+2.  **Valence-Bound Participants** licensed by the predicate (Subject, Object, Instrument, Beneficiary, Recipient, Accompaniment). Following Levin & Rappaport Hovav (2005) event-structure theory and the substitution test in [`core-concept.md`](./core-concept.md) §2.2, an argument is *valence-bound* when changing it changes event identity — Instrument and Beneficiary are valence-bound participants, not "internal modifiers", whenever they are licensed by the verb.
+3.  **Nuclear / Core-Level Manner Adverbials** (manner-of-action, manner-of-motion).
+4.  **Scope-Internal Operators** that take the event as argument: Negation, Modality, Aspect, Degree.
 
-Any modifier that answers **"How?"**, **"With what?"**, or **"To what degree?"** is fused into the Core. Any modifier that answers **"Why?"**, **"Where?"**, or **"When?"** is stripped into Slots 1, 2, or 3.
+Any modifier that answers **"How?"**, **"With what?"**, **"For/to whom?"**, **"Together with whom?"**, **"In what mood?"**, **"Negated?"**, or **"To what degree?"** is fused into the Core (group 2–4 above). Any modifier that answers **"Why?"**, **"Where?"**, or **"When?"** is stripped into Slots 1, 2, or 3.
 
 ---
 

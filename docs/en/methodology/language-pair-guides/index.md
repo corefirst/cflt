@@ -28,7 +28,7 @@ These guides are not duplicates of `slot-disambiguation.md` — that document gi
 
 | Pair | Direction | Focus |
 |---|---|---|
-| [Chinese ↔ Japanese](./zh-ja.md) | bidirectional | No-English-bridge pivot. SOV-meets-SVO without Indo-European intermediate. The proof-of-universality case. |
+| [Chinese ↔ Japanese](./zh-ja.md) | bidirectional | The English-independent pivot case — demonstrates that CFLT operates on a non-Indo-European pair without an English intermediate. (Two-family demonstration; the full universality argument is in [`../../foundations/core-concept.md`](../../foundations/core-concept.md) §2.5.) |
 | [English ↔ Chinese](./en-zh.md) | bidirectional | Largest learner population worldwide. Topic-prominent vs subject-prominent contrast. |
 | [Chinese ↔ English](./zh-en.md) | bidirectional | Most common learner direction (Chinese → English). Highest commercial relevance. |
 | [English ↔ Japanese](./en-ja.md) | bidirectional | Classic SVO ↔ SOV typological contrast. Test case for verb-final / particle-rich syntax. |

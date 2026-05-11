@@ -9,10 +9,12 @@
 
 ## 1. The Salience Network and the "Core"
 
-The human brain does not process information as a flat sequence. It uses a specialized **Salience Network (SN)** — centered in the **Anterior Insula** and **dorsal Anterior Cingulate Cortex (dACC)** — to identify which stimuli are behaviorally relevant.
+The human brain does not process information as a flat sequence. It uses a specialized **Salience Network (SN)** — centered in the **Anterior Insula** and **dorsal Anterior Cingulate Cortex (dACC)** — to identify which stimuli are behaviorally relevant (Seeley et al. 2007).
 
 - **The Dynamic Switch:** The SN acts as a switch between the Default Mode Network (internal thought) and the Central Executive Network (task focus).
-- **CFLT Alignment:** The "Core" in CFLT is the linguistic realization of the most salient event or intent. By placing the Core at **Position 0**, the CFLT Protocol aligns the linear utterance with the brain's internal "priority queue." This reduces the latency between conceptualization and articulation.
+- **CFLT Alignment:** The "Core" in CFLT is the linguistic realization of the speaker's salience anchor. By placing the Core at **Position 0**, the CFLT Protocol aligns the linear utterance with the brain's internal "priority queue" — we **predict** this reduces the latency between conceptualization and articulation; the corresponding empirical test (PFC Activation Delta) is listed as an open question in §7.1.
+
+> **Concept-import scope (T2 partial equivalence).** *We borrow the **Salience Network** (Seeley et al. 2007) only for its prioritization-detection function — the brain's capacity to flag behaviorally relevant stimuli. We do **not** claim that producing CFLT-formatted utterances activates the same anterior-insula / dACC nodes as the SN literature describes; the SN name denotes the **cognitive role**, not the **neural substrate**. A direct CFLT-targeted fMRI study designed to test the substrate claim is listed as an open question in §7. This caveat parallels the LATL caveat in §2 and the EIC "honest scope" caveat in §4.*
 
 ```mermaid
 graph TD
@@ -47,13 +49,15 @@ CFLT’s "Core-First" principle is a linguistic implementation of the **Figure-G
 
 Adult L2 production is bottlenecked by the **Prefrontal Cortex (PFC)**. Producing a sentence in a new language requires high metabolic and computational costs in the **Dorsolateral PFC (DLPFC)** and **Broca's Area (LIFG)**.
 
-| Source of Cost | Neural Mechanism | CFLT Solution |
+| Source of Cost | Neural Mechanism | Predicted CFLT Effect |
 |---|---|---|
-| **Inhibitory Control** | DLPFC must suppress automatic L1 habits. | The fixed 4-slot scaffold reduces the need for real-time structural decisions. |
-| **Selection Demand** | LIFG must choose between competing L1 and L2 rules. | The protocol eliminates linearization choices ($4! \to 1$), freeing resources for vocabulary retrieval. |
-| **Conflict Monitoring** | ACC detects "prediction errors" between L1 and L2. | The predictable pattern creates a stable "mental template" that reduces prediction error. |
+| **Inhibitory Control** | DLPFC must suppress automatic L1 habits. | The fixed 4-slot scaffold is predicted to reduce the need for real-time structural decisions. |
+| **Selection Demand** | LIFG must choose between competing L1 and L2 rules. | The protocol eliminates linearization choices ($4! \to 1$); predicted to free resources for vocabulary retrieval. |
+| **Conflict Monitoring** | ACC detects "prediction errors" between L1 and L2. | The predictable pattern is predicted to create a stable "mental template" that reduces prediction error. |
 
-By providing a **fixed conceptual scaffold**, CFLT lowers the "Prefrontal Tax," allowing learners to achieve higher fluency even before L2 grammar is fully internalized.
+All three predicted effects are subject to the open empirical question of §7.1 *PFC Activation Delta*; the neural-cost framework cited (DLPFC / LIFG / ACC roles; Friederici 2011; Hashimoto et al. 2012) is well-established, but the *CFLT-specific* reductions are predictions, not measurements.
+
+By providing a **fixed conceptual scaffold**, CFLT is engineered to lower the "Prefrontal Tax." Whether this translates into measurably higher fluency before L2 grammar is fully internalized is the empirical content of P3 (`foundations/core-concept.md` §8.5).
 
 ```mermaid
 graph TD

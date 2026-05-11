@@ -54,10 +54,13 @@ graph BT
 (For the complementary effect — that *middle-of-sequence* tokens are systematically under-attended — see §3 below on the Lost-in-the-Middle phenomenon.)
 
 ### 2.4 Anchoring Non-Action Cores
-The sink effect applies to any high-salience constituent, not just verbs:
 
-- **Identity Cores:** Placing the "Subject-Identity" (e.g., "The solution is...") in position 0 creates a **definitional sink**. Subsequent modifiers (the *how* and *why*) are then interpreted through this fixed predicate, preventing the model from losing the "Identity" of the subject during long descriptions.
-- **Request Cores:** Placing the directive (e.g., "Please summarize...") at the start ensures the **task-operator** is the most stable element in the KV cache. This prevents the "Instruction Drift" commonly seen in middle-heavy prompts where the model starts describing the text instead of performing the requested action.
+> **Section status.** The two bullets below are **architectural predictions consistent with §2.3 (primacy), extrapolated to Identity- and Request-Cores; they have not been directly measured for non-Action cores.** The published literature cited in §2.3 (Liu et al. 2023; Xiao et al. 2024; Lu et al. 2022) uses retrieval and classification tasks, not Identity / Request decompositions. The mechanism is the same primacy effect, but the *outcome magnitude* on non-Action cores is open empirical content (see §10.1). The term "definitional anchor" is a project-internal coinage — we deliberately avoid "definitional sink" because the attention-sink artifact (Xiao et al. 2024) is, by their own analysis, semantically indifferent (§2.3); re-using "sink" for a semantic-content claim would re-import the very framing §2.3 disclaims.
+
+The primacy effect motivates the following predictions for any high-salience constituent at position 0, not just verbs:
+
+- **Identity Cores (predicted):** Placing the "Subject-Identity" (e.g., "The solution is...") in position 0 is expected to create a **definitional anchor in the high-attention prefix region**. Subsequent modifiers (the *how* and *why*) are then interpreted against this anchored predicate, which we predict reduces the model's tendency to lose the subject-identity during long descriptions. This is a primacy-derived prediction, not a measured result.
+- **Request Cores (predicted):** Placing the directive (e.g., "Please summarize...") at the start is expected to make the **task operator** more stable in the early KV cache. We predict this reduces the kind of *task-drift* (a project-internal label, not a literature term) in which middle-heavy prompts cause the model to begin describing the text instead of performing the requested action. Again, primacy-derived prediction, not measured.
 
 ---
 
@@ -99,7 +102,7 @@ $$
 
 If $t_1, t_2, \dots$ (the prefix) are high-entropy, low-relevance tokens (like a long "Yesterday while I was walking..."), the model's state for the core action is poorly constrained. If the prefix is the **Core Action** itself, the probability distribution for all subsequent slots is immediately narrowed.
 
-CFLT acts as a **steering protocol** that collapses the model's branching factor early in the generation process, leading to more factual and less hallucinated continuations.
+CFLT acts as a **steering protocol** that collapses the model's branching factor early in the generation process. We **predict** this contributes to more constrained continuations and reduced hallucination drift; the magnitude is the open empirical question of §10.1, and the §9 *Honest Limitations* item 5 engages the counter-positions (Min 2022 / Sclar 2024 / end-to-end-baseline) under which this prediction may be smaller than expected.
 
 ---
 
@@ -151,7 +154,7 @@ The actual reduction must be quantified by the ablation specified in [`methodolo
 
 Hallucinations often occur when the model loses track of the primary assertion (the Core) and begins generating plausible-sounding but irrelevant context. 
 
-By placing the **Core** at position 0, CFLT exploits primacy (see §2.3) to provide a stable "semantic anchor" in the early KV cache. This reduces the risk of the model "drifting" away from the user's intent as the sequence grows. (Note: this is a primacy argument; the attention-sink artifact discussed in §2.3 is a *separate* phenomenon and is not the basis of this claim.)
+By placing the **Core** at position 0, CFLT exploits primacy (see §2.3) to provide a stable "semantic anchor" in the early KV cache. **We expect** this to reduce the risk of the model "drifting" away from the user's intent as the sequence grows; the magnitude of the reduction is an open empirical question (see §10.1 *Specific Accuracy Delta*). (Note: this is a primacy argument; the attention-sink artifact discussed in §2.3 is a *separate* phenomenon and is not the basis of this claim.)
 
 ---
 
@@ -159,7 +162,7 @@ By placing the **Core** at position 0, CFLT exploits primacy (see §2.3) to prov
 
 Because LLMs are trained on massive multilingual corpora, they develop a **language-neutral latent space** for semantic concepts.
 
-CFLT targets this latent space by using a **language-agnostic sequence**. Whether the surface tokens are Chinese, English, or Arabic, the *order of the concepts* hitting the attention heads is the same. This makes LLMs the ideal tool for implementing the "Neutral Buffer" that human learners use to bridge languages.
+CFLT targets this latent space by using a **language-agnostic sequence**. Whether the surface tokens are Chinese, English, or Arabic, the *order of the concepts* hitting the attention heads is the same. For the typological evidence supporting this cross-language invariance — five languages across four families with reference-grammar citations for each Core internal-assembly mechanism — see [`core-concept.md`](./core-concept.md) §2.5. This makes LLMs an apt tool for implementing the "Neutral Buffer" that human learners use to bridge languages.
 
 ---
 
@@ -167,8 +170,13 @@ CFLT targets this latent space by using a **language-agnostic sequence**. Whethe
 
 1.  **Strictness vs. Flow:** Forcing a strict sequence can sometimes lead to "stilted" output from smaller models. The Grammar Overlay layer is essential to restore natural flow.
 2.  **Instruction Following:** Very small models (e.g., <3B parameters) may struggle to maintain the strict CFLT Protocol without fine-tuning.
-3.  **Reasoning vs. Linearization:** While CFLT improves discourse structure, it is not a replacement for Chain-of-Thought (CoT) reasoning for complex math or logic problems (Wei et al. 2022). It should be used *alongside* CoT.
+3.  **Reasoning vs. Linearization:** While CFLT improves discourse structure, it is not a replacement for Chain-of-Thought (CoT) reasoning for complex math or logic problems (Wei et al. 2022). It should be used *alongside* CoT — CFLT contributes stable position-0 anchoring for tasks where the reasoning chain itself is not the Core (only the final action / decision is); CoT contributes the intermediate-step structure CFLT does not specify.
 4.  **Long-context drift:** Even with primacy-based prefix anchoring, extremely long modifiers can still cause the model to lose the core. Modularization (breaking thoughts into multiple CFLT sentences) is recommended.
+5.  **What if content order matters less than we claim?** Three serious counter-positions threaten the LLM-side argument; we engage each here rather than only in the foundations literature.
+    - **Min et al. (2022) "Rethinking the Role of Demonstrations"** find that in in-context learning, *content correctness* of demonstrations matters surprisingly little — what drives accuracy is the *format and order* of demonstrations and the *label space distribution*. This is a partial counter-result for any naive "position-0 content matters" claim. CFLT's response is that CFLT operates on the *format and order* axis (the dimension Min et al. show to be active), not primarily on content correctness — the prescription is "fix the schema and the linear order of the speaker's commitment", not "make sure the Core token is the most accurate fact in the prompt." Earlier citations of Min in `core-concept.md` §4.1 / §8.5 should be read in light of this.
+    - **Sclar et al. (2024) "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design"** find that LM accuracy varies enormously with separators, formatting, and *non-semantic* features. This is a threat: if spurious surface formatting can dominate over content order, the marginal benefit of CFLT's content-order discipline is unclear. CFLT's response is that fixing *both* the schema (formatting) *and* the content order is the contribution — the two axes are complementary, and CFLT is most defensible as a joint format-and-content discipline rather than a pure content-order claim.
+    - **End-to-end instruction-tuned baseline.** As frontier instruction-tuned models (GPT-4o, Claude 3.5/4-class, Gemini 1.5+) scale, the marginal benefit of explicit linearization scaffolds may shrink — for many tasks, a one-line "answer in the form [Core, Reason, Space, Time]" instruction to a frontier model may match a separate CFLT-preprocessing pass. CFLT's response is the **falsification clause of P2** (`foundations/core-concept.md` §8.5): if across ≥ 3 frontier model families the CFLT-formatted prompt does not show measurable attention-or-accuracy advantage at position 0, the LLM-side claim is refuted. We accept this falsification condition.
+6.  **Predicted-vs-measured status.** Several mechanistic claims in this document (e.g., §2.4 Identity / Request Core predictions, §7 hallucination-drift reduction) are extrapolations from §2.3's primacy framework, not measured CFLT-specific results. The empirical agenda for measuring these is in [`../methodology/empirical-agenda.md`](../methodology/empirical-agenda.md).
 
 ---
 

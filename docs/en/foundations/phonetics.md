@@ -21,7 +21,7 @@ We term this **Muscular Intelligence**. Just as the CFLT syntax protocol reduces
 
 When adult learners attempt to produce sounds in an L2 that do not exist in their L1, they often experience "articulatory freezing." Their vocal tract lacks the proceduralized muscle memory for the target phoneme.
 
-CFLT solves this by utilizing **Phonetic Bridges**—identifying the overlapping articulatory postures between the learner's native phonology and the target language.
+CFLT proposes to address this by utilizing **Phonetic Bridges** — identifying the overlapping articulatory postures between the learner's native phonology and the target language. The motor-learning effectiveness of bridge-based instruction vs. abstract-articulatory instruction is an open empirical question (see §5 *Honest Limitations* for the L1-specificity caveat).
 
 ### 2.1 The Pinyin-to-IPA Bridge (Chinese to English)
 For Chinese learners, the existing mastery of Hanyu Pinyin provides a highly granular map of mouth positions that can be repurposed for English IPA.

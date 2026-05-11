@@ -98,7 +98,7 @@ graph TD
     subgraph "CFLT Production"
     C1[CFLT Scaffold: Linearization Handled] --- C2[Vocab Substitution]
     C2 --- C3[Pronunciation]
-    noteC["WM elements interacting: ~2-3"]
+    noteC["WM elements interacting: ~2-3 (theoretical estimate; awaiting empirical calibration via Cognitive Load Index — methodology/evaluation-metrics.md §2)"]
     end
 
     style T1 fill:#fee
@@ -111,7 +111,7 @@ graph TD
 
 A specific source of cognitive load is the **Modifier Trap** (derived from Hawkins' EIC principle). For learners from head-final backgrounds (like Chinese), the L1 habit of placing modifiers before the noun creates a high **look-ahead buffer** demand: the speaker must plan the entire noun phrase before uttering the head. 
 
-CFLT's **head-initial discourse protocol** eliminates this buffer. By asserting the Core first, the learner "unloads" the most important information immediately, freeing up working memory to append modifiers (Reason, Space, Time) incrementally. This is the pedagogical application of incremental processing.
+CFLT's **head-initial discourse protocol** is **predicted to** eliminate this buffer. By asserting the Core first, the learner "unloads" the most important information immediately, predicted to free working memory to append modifiers (Reason, Space, Time) incrementally. This is the pedagogical application of incremental processing; the working-memory magnitude is an open empirical question (see §12.1 *Affective Filter Measurement* for the corresponding measurement protocol).
 
 ---
 
@@ -191,7 +191,7 @@ Several reasons CFLT may be especially well-suited to early learners — contrar
 
 ## 10. Honest Limitations
 
-1.  **Pedagogical "Artificiality."** Strict four-slot sentences can feel artificial to advanced learners. The system must manage the **transition to marked deviations** (manifesto §3.1) to avoid a fluency ceiling.
+1.  **Pedagogical "Artificiality" / fossilization risk.** Strict four-slot sentences can feel artificial to advanced learners. This is the precise risk Skehan's (1998) Trade-off Hypothesis warns about — formulaic templates can plateau learners on *fluency* at the cost of *complexity* and *accuracy* (the "Wes" case study tradition; Schmidt 1983). CFLT's response is the de-scaffolding path in §11.2 below: the system must manage the **transition to marked deviations** (manifesto §3.1) to avoid a fluency ceiling. The §11 scaffold-fading curriculum is CFLT-specific engagement with this risk, not a generic acknowledgment.
 2.  **Motivation vs. Method.** No protocol can solve for a lack of learner motivation. CFLT is a high-efficiency engine, but it still requires the learner to engage with the input.
 3.  **Vocabulary Breadth.** The protocol focuses on structure. Vocabulary acquisition remains a separate, though related, challenge that requires specialized modules.
 

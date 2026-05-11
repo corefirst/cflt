@@ -3,7 +3,7 @@
 > **Version:** 1.0.0 (Internal Draft)
 > **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-> **Why this guide matters.** Most Chinese learners of Japanese (and vice versa) detour through English: 中文 → 英语 → 日语. This is a 2-hop translation with two layers of friction and two layers of error accumulation. CFLT lets the learner pivot **directly** through the protocol layer, no English required. This guide proves CFLT's universality claim is not English-dependent.
+> **Why this guide matters.** Most Chinese learners of Japanese (and vice versa) detour through English: 中文 → 英语 → 日语. This is a 2-hop translation with two layers of friction and two layers of error accumulation. CFLT lets the learner pivot **directly** through the protocol layer, no English required. This guide demonstrates that CFLT operates on a non-Indo-European pair without an English intermediate; the *full universality argument* — five languages, four families with reference-grammar citations — is in [`../../foundations/core-concept.md`](../../foundations/core-concept.md) §2.5. The narrower English-independence claim is what the zh↔ja pair actually demonstrates.
 
 ---
 

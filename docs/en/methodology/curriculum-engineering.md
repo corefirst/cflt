@@ -92,7 +92,7 @@ All AI-generated content must pass the **CFLT Validator**:
 
 ## 5. Scaling: Any-to-Any Content Generation
 
-Because the CFLT logic is universal, once an "IT English" module is engineered, the system can automatically generate an "IT Japanese" or "IT French" module by simply swapping the token pack and the Grammar Overlay configuration. This is the path to **Global Any-to-Any Bilingualism**.
+Because the CFLT logic is universal **at the protocol layer** (see [`../foundations/core-concept.md`](../foundations/core-concept.md) §2.3 for the L1/L2/L3/L4 split, and §2.5 for the five-language / four-family typological evidence), once an "IT English" module is engineered, the system can — in principle, with non-trivial language-specific engineering — generate an "IT Japanese" or "IT French" module by swapping the token pack and the Grammar Overlay configuration. The protocol-layer pivot is genuinely language-agnostic; the *automation* is conditional on the items listed in §7 below.
 
 ```mermaid
 graph TD
@@ -113,4 +113,16 @@ graph TD
 
 ## 6. Summary
 
-Curriculum Engineering in CFLT moves from "writing books" to "engineering systems." By automating the synthesis of industry logic and the CFLT protocol, we can provide personalized, relevant, and logically consistent learning material for every industry in the world.
+Curriculum Engineering in CFLT moves from "writing books" to "engineering systems." By automating the synthesis of industry logic and the CFLT protocol, we aim to provide personalized, relevant, and logically consistent learning material across a wide range of professional domains, beginning with the four named in [`../manifesto.md`](../manifesto.md) §8.2 (IT, medical, financial, hospitality) and extensible to further domains via token-pack engineering. The cross-domain extension is conditional on the limitations below.
+
+---
+
+## 7. Honest Limitations
+
+The "swap the token pack, get a new module" story above is the protocol-layer ideal. The following caveats apply in practice and should temper any claim of a fully automated cross-language / cross-industry rollout:
+
+1. **Cross-language LLM capability is uneven.** Modern LLMs do not perform equally across languages (Lai et al. 2023; Bang et al. 2023). A CFLT-formatted Vietnamese or Swahili curriculum running on the same LLM as an English curriculum will not have the same fluency, error rate, or factuality envelope. CFLT cannot close this gap; it can only reduce protocol-level drift. See [`./llm-prompting.md`](./llm-prompting.md) §2 for the cross-language LLM caveat.
+2. **Phonetic bridges are L1-specific, not universal.** The pronunciation-pedagogy components of any module (Pinyin-to-IPA mapping, articulatory-overlap analyses) are anchored to the *learner's L1* and must be re-engineered for each L1 group, not just each target language. See [`../foundations/phonetics.md`](../foundations/phonetics.md) §5 for the L1-specificity warning.
+3. **Token-pack engineering still requires domain expertise.** Generating an "IT Japanese" module is not "swap the tokens" — it requires a Japanese-IT lexicon curated by someone who knows both the technical domain and the target-language register conventions. The CFLT protocol is the framing; the token pack is the *content*, and content requires expertise.
+4. **Edge-case calibration is language-pair-specific.** The boundary rules for what goes inside Core vs. into the ground frame have L4 (edge-case) variation across languages — see [`../foundations/core-concept.md`](../foundations/core-concept.md) §2.3 and the [language-pair guides](./language-pair-guides/index.md). Each new pair needs at least light L4 calibration; this is not automatable from the protocol alone.
+5. **Empirical validation is per-domain.** The benchmark numbers in [`./evaluation-metrics.md`](./evaluation-metrics.md) are projected targets, not measured outcomes; each industry / language module must be empirically validated independently before its benefits can be advertised.

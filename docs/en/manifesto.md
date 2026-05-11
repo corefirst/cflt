@@ -7,7 +7,7 @@
 
 ## 1. Executive Summary
 
-**Core-First Language Theory (CFLT)** is a unified theoretical and operational framework for cross-linguistic communication and bilingual education. It posits a single discourse-level principle — *the cognitive core of an utterance is also its universally-prioritized linear position* — and defines a teachable, AI-supportable sequencing protocol (**CFLT Protocol**) that bridges any two natural languages with minimum cognitive friction.
+**Core-First Language Theory (CFLT)** is a unified theoretical and operational framework for cross-linguistic communication and bilingual education. It posits a single discourse-level principle — *the cognitive core of an utterance is also its universally-prioritized linear position, as an unmarked default within the surveyed typology* (see [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 for a five-language worked demonstration spanning Indo-European, Sino-Tibetan, Japonic, Koreanic, and Afro-Asiatic) — and defines a teachable, AI-supportable sequencing protocol (**CFLT Protocol**) that bridges language pairs within that typological range with minimum cognitive friction.
 
 ### 1.1 The Nature of CFLT: Protocol vs. Description
 
@@ -17,7 +17,9 @@ It is critical to distinguish between two levels of linguistic claim:
 
 CFLT is to language what **TCP/IP** is to networking: it is a standardized packet-header format for human thought. By adopting a "Core-First" interlanguage protocol, learners bypass the massive metabolic cost of structural restructuring (e.g., waiting for the verb in German or planning a 10-word modifier in Japanese before uttering the noun). It is an **unmarked default**, not a descriptive universal.
 
-By identifying the common cognitive "hardware" shared by all humans (Chomsky's Universal Grammar, extended via *core grammar* ↦ *core-first sequencing*) and neutralizing cultural "software" biases (Sapir-Whorf Hypothesis), CFLT leverages AI to create a seamless bridge between any two languages.
+By targeting cognitive capacities widely shared across human language users (the universals of message-formation in Levelt's preverbal-message stage; see [`foundations/linguistics.md`](foundations/linguistics.md) §5–§6, and the typologically-distinct worked examples in [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 spanning Indo-European, Sino-Tibetan, Japonic, Koreanic, and Afro-Asiatic) and attenuating cross-linguistic structural-restructuring cost (a weak-Whorf scope, **not** a Whorf-elimination claim — see [`foundations/linguistics.md`](foundations/linguistics.md) §7), CFLT provides an AI-supported bridge between language pairs within that surveyed typological range.
+
+> **A note on Universal Grammar.** Earlier drafts framed CFLT as an extension of Chomsky's Universal Grammar. The current framing is deliberately weaker: the load-bearing claim is that *message-formation* (Levelt 1989) is broadly shared, not that an innate language-specific UG is required. This makes CFLT compatible with the usage-based / construction-grammar tradition (Goldberg 1995, 2006; Tomasello 2003) as well as with strong-UG positions — see [`foundations/linguistics.md`](foundations/linguistics.md) §6 for the explicit non-dependence on UG and §6.2 for the engagement with the anti-UG opposition (Christiansen & Chater 2008; Evans & Levinson 2009).
 
 **Nomenclature:**
 
@@ -45,9 +47,9 @@ By identifying the common cognitive "hardware" shared by all humans (Chomsky's U
 > - [`bibliography.md`](./bibliography.md) — unified reference list
 
 ### 2.1 Universal Grammar and *Core Grammar* (Noam Chomsky)
-**Concept:** The human brain possesses an innate, biological "Language Acquisition Device" (LAD). Chomsky distinguishes the *core grammar* (universal principles) from its *periphery* (idiosyncratic, learned).
+**Concept:** Chomsky's framework posits an innate "Language Acquisition Device" (LAD) and distinguishes the *core grammar* (universal principles) from its *periphery* (idiosyncratic, learned). The strong UG reading is contested by usage-based / construction-grammar alternatives (Tomasello 2003; Goldberg 1995, 2006; Christiansen & Chater 2008; Evans & Levinson 2009).
 
-**CFLT Extension:** Where Chomsky's *core grammar* is a structural category, CFLT introduces a **dynamic linearization** principle: *the cognitive core is also the universally-prioritized utterance-initial position*.
+**Relationship to CFLT:** CFLT does **not** depend on the strong UG reading. The load-bearing claim is a **dynamic linearization** discipline — *the cognitive core is also the unmarked-default, prioritized utterance-initial position for declarative communicative acts within the typological range surveyed in [`foundations/core-concept.md`](foundations/core-concept.md) §2.5*. This protocol-layer claim is compatible with Chomsky's core/periphery distinction, but it does not require an innate UG: the same regularity can be motivated from usage-based / emergentist accounts (see [`foundations/linguistics.md`](foundations/linguistics.md) §6 for the non-dependence and §6.2 for the engagement with anti-UG positions).
 
 ### 2.2 Cognitive Foundations: Figure-Ground and EIC
 
@@ -183,7 +185,7 @@ CFLT is not limited to Chinese-to-English. It is designed as a **Universal Proto
 *   **Japanese (SOV) ↔ German (V2):** 
     - *Japanese habit:* [Modifiers] → [Object] → [Verb]. 
     - *CFLT Pivot (scaffold form):* "Ich esse einen Apfel (Core), weil ich Hunger habe (Reason), im Park (Space), jetzt (Time)." 
-    - By forcing the Japanese brain to output the Action (Verb) immediately, we bypass the "waiting for the verb" processing delay in German V2 main clauses. The Grammar Overlay layer subsequently polishes the appended adverbials into idiomatic German positioning.
+    - By forcing the Japanese brain to output the Action (Verb) immediately, the protocol is predicted to bypass the "waiting for the verb" processing delay in German V2 main clauses (predicted by the EIC analysis in [`foundations/linguistics.md`](foundations/linguistics.md) §3 — Hawkins 1994; the magnitude is an open empirical question). The Grammar Overlay layer subsequently polishes the appended adverbials into idiomatic German positioning.
 *   **Arabic (VSO) ↔ Spanish (SVO):**
     - *Arabic habit:* [Verb] → [Subject] → [Object]. 
     - *CFLT Pivot (scaffold form):* "Como una manzana (Core), porque tengo hambre (Reason), en la cocina (Space), ahora (Time)." 
@@ -237,7 +239,7 @@ CFLT serves as the foundation for educational content across all age groups:
 The CFLT framework is uniquely suited for technical communication. In the **IT sector**, the logic of "Action-Result First" aligns perfectly with engineering documentation and collaborative coding.
 - **Example Tokens:** *deploy, refactor, debug, latency, endpoint, scalability.*
 - **Logic Mapping:** Instead of "If we have high latency, we should refactor the code," CFLT encourages: "**Refactor the code**, because of **high latency**, in the **backend**, now."
-- **Benefit:** IT professionals can communicate critical technical decisions instantly and accurately across cultures.
+- **Predicted benefit:** the module is designed to support IT-professional communication of critical technical decisions across cultures, by reducing the clarification round-trips required when free-form English memo prose interacts with non-native readers. The magnitude of the reduction against a free-form-prose baseline is an open empirical question — see [`methodology/evaluation-metrics.md`](methodology/evaluation-metrics.md) for the projected operationalization.
 
 The same modular vocabulary-injection pattern extends to medical, financial, technical, and hospitality sectors without altering the underlying cognitive protocol.
 
@@ -268,19 +270,20 @@ Language learning is a physical skill. By identifying the "Muscle Overlap" betwe
 CFLT is not merely a word-order rule; it is a **Neutral Logic Protocol** designed to solve the cognitive heterogeneous gap between the world's linguistic regions.
 
 ### 10.1 The Core Discovery
-The barrier to global communication is the **Structural Restructuring Tax**. When moving between heterogeneous language families (e.g., Mandarin ↔ English, Japanese ↔ German), the brain spends its finite metabolic resources "re-shaping" the L1 logic template into an L2 surface form. This constant background processing is the root of disfluency in humans and logical variance in AI.
+A central barrier to cross-linguistic communication is the **Structural Restructuring Tax**. When moving between heterogeneous language families (e.g., Mandarin ↔ English, Japanese ↔ German), the brain spends finite metabolic resources "re-shaping" the L1 logic template into an L2 surface form (see [`foundations/neuroscience.md`](foundations/neuroscience.md) §3 for the DLPFC / LIFG / ACC cost framework, and [`foundations/pedagogy.md`](foundations/pedagogy.md) §7 on the Formulator-stage bottleneck). This background processing is a **major contributor** to L2 disfluency in humans and to logical-sequencing variance in AI — not the sole cause; lexical access, prosody, affective filter, and model-specific tokenization all contribute independently.
 
 ### 10.2 The Solution: An Interlanguage Buffer
 CFLT proposes that between L1 and L2, there exists a **language-neutral logic layer**. By mapping raw intent directly to the Core-First sequence, we create a standardized "thought packet" (TCP/IP for Thought). This protocol is:
 - **L1-Compatible:** It captures the speaker's intent without premature syntactic commitment.
 - **L2-Friendly:** It provides a consistent landing zone for target language tokens.
 
-### 10.3 The Ultimate Benefit: Instant Fluency
-By adopting the CFLT Protocol, the task of speaking a second language is transformed from **Complex Restructuring** into **Simple Token Replacement**. 
-- **For Humans:** It eliminates the restructuring delay, achieving **Instant Fluency** and reducing speaking anxiety.
-- **For AI:** It aligns information density with the transformer's attention architecture, achieving **Lossless Logic Alignment** and deterministic reasoning.
+### 10.3 The Predicted Benefit: Reduced Restructuring Cost
+By adopting the CFLT Protocol, the task of speaking a second language is reframed from **complex restructuring** into **token replacement against a stable scaffold**. CFLT predicts two strategic outcomes (each operationalized as a falsifiable prediction in [`foundations/core-concept.md`](foundations/core-concept.md) §8.5):
 
-CFLT is the bridge. By standardizing the sequence of thought, we unify human and machine intelligence into a single, high-fidelity communication network.
+- **For humans (predicted, see §8.5 P1):** the protocol is engineered to reduce the L2-production restructuring delay and the associated speaking anxiety. *Predicted direction:* positive effect on fluency rate (words-per-minute) and reduced hesitation-pause rate under controlled comparison. *Predicted magnitude:* unmeasured — `pedagogy.md` §12.1 *Affective Filter Measurement* specifies the protocol that would settle this; CFLT does **not** commit to a specific effect size.
+- **For AI (predicted, see §8.5 P2):** the protocol is engineered to place the salience anchor in the high-attention prefix region of Transformer-based models, exploiting **primacy** (not the attention-sink artifact — see [`foundations/llm.md`](foundations/llm.md) §2.3). *Predicted direction:* higher position-0 attention mass and higher downstream task accuracy on tasks where the Core constituent is the answer-bearing element. *Predicted magnitude:* unmeasured; specific accuracy and latency deltas across ≥3 model families are the open empirical content of P2 (`llm.md` §10.1). The mechanism is expected to improve early-prefix conditional-distribution stability and instruction-following reliability, **not** to make autoregressive reasoning deterministic and **not** to reduce total joint entropy. [`foundations/mathematics.md`](foundations/mathematics.md) §2 explicitly retracts both stronger readings.
+
+CFLT is the bridge. By standardizing the sequence of thought at the protocol layer, the framework aims to widen the bandwidth of human-machine collaboration; the empirical evaluation of that aim is laid out in [`methodology/empirical-agenda.md`](methodology/empirical-agenda.md).
 
 ---
 

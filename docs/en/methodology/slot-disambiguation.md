@@ -42,7 +42,7 @@ For any word or phrase in an utterance, ask in order:
 graph TD
     Start[Modifier to classify] --> Q1{Predicate or essential argument?}
     Q1 -- Yes --> Core[Inside Core]
-    Q1 -- No --> Q2{Modifies HOW the action is performed?<br/>manner/instrument/beneficiary/modal/negation}
+    Q1 -- No --> Q2{Modifies HOW the action is performed?<br/>manner/instrument/beneficiary/accompaniment/modal/negation}
     Q2 -- Yes --> Core
     Q2 -- No --> Q3{Answers WHY?<br/>cause/purpose/condition}
     Q3 -- Yes --> R[Slot 1: Reason]

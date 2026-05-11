@@ -119,7 +119,7 @@ The convention rests on three rationale arguments, none of which is a proof of o
 
 3. **Deictic recoverability.** In conversational contexts, time often has a recoverable default ("now" or "the time being discussed") — placing it last allows omission without information loss in many contexts. *Honest scope*: Levinson (1983) treats speaker / time / place as the three primary deictic axes without arguing one is more recoverable than another; the claim that time is *more* recoverable than space is a CFLT empirical observation about non-co-present L2 discourse, not a theorem of deixis theory. Spatial defaults ("here") exist too but tend to be weaker in classroom or remote-collaboration contexts, which is the most common L2 use case.
 
-These are **engineering arguments**, not derivations. A protocol with order Core → Reason → Time → Space could be defended by competing arguments (e.g., "time is the discourse anchor, place it second"). CFLT chooses R-S-T because its three reasons jointly outweigh the alternatives in the targeted use cases (L2 pedagogy, LLM prompt stability), but the choice remains an **open optimization question** (see `mathematics.md` §12.2).
+These are **engineering arguments**, not derivations. A protocol with order Core → Reason → Time → Space could be defended by competing arguments. The strongest such competitor in the discourse-analysis literature is the **temporal-anchor-first** position: Reinhart (1984, "Principles of Gestalt Perception in the Temporal Organization of Narrative Texts") argues that in narrative discourse, temporal location is the primary structural anchor — readers organize event sequences by *when* before *why*. Under that argument, a Core → Time → Reason → Space order would be defensible for narrative-genre L2 production. CFLT chooses R-S-T (over R-T-S, T-R-S, or any other permutation of the three) because in the project's two targeted use cases (L2 conversational/expository pedagogy and LLM prompt stability), the listener-question priority and concreteness-ladder rationales above jointly outweigh narrative-temporal-anchoring; narrative L2 production is a recognized boundary where the R-T-S alternative may perform better and remains an **open optimization question** (see `mathematics.md` §12.2 and `methodology/evaluation-metrics.md` for the empirical protocol that would settle it).
 
 **Operational consequence.** CFLT's strong claim ("Core in position 0") is fully derivable; CFLT's weaker claim ("R then S then T") is a documented convention with stated reasons. This distinction matters for anyone proposing extensions or alternatives — Core-first is not negotiable; R-S-T may be revised if empirical evaluation (see `methodology/evaluation-metrics.md`) shows another permutation outperforms it for a given language pair.
 
@@ -210,6 +210,29 @@ CFLT's contribution is orthogonal to Chomsky's core/periphery distinction. CFLT 
 
 The terminological coincidence is unfortunate but harmless once the distinction is made explicit.
 
+### 6.1 CFLT Does Not Depend on Universal Grammar
+
+Earlier framings of CFLT (e.g., the older draft of `manifesto.md` §2.1) read as if CFLT *extends* Chomsky's UG. That framing was rhetorical, not load-bearing. The actual load-bearing claim is much weaker: that *message formation* (the Conceptualizer stage of Levelt 1989, §5 above) is broadly shared across human language users, and that a fixed Core-First linearization at the *protocol layer* reduces L1→L2 restructuring cost. Neither sub-claim requires an innate, language-specific UG.
+
+In particular:
+
+- The **conceptual primacy of the speaker's salience anchor** (the "Core") can be motivated equally well from Construction Grammar (Goldberg 1995, 2006) — where the [salience-anchor + frame] arrangement is itself a learned discourse construction — or from Cognitive Grammar (Langacker 1987, 2008) — where the profile-base relation is a domain-general perceptual asymmetry — without invoking a language-specific innate device.
+- The **cross-linguistic regularity** of negation/modality/aspect scoping inside the event nucleus (`core-concept.md` §2.2) is consistent with cartographic UG analyses (Cinque 1999) but is also consistent with the **typological-functional view** (Croft 2001 *Radical Construction Grammar*) that this regularity is grounded in cognitive scope-of-operator preferences rather than in a universal functional hierarchy.
+
+We therefore treat the UG-extension framing as **one available motivation among several**, not as a dependency. Sections 5 (Levelt) and 8 (Construction Grammar) state the load-bearing case.
+
+### 6.2 Engagement with the Anti-UG Opposition
+
+The strong UG reading — that humans possess an innate, language-specific Language Acquisition Device — is contested by a well-developed usage-based / emergentist tradition that CFLT documentation must engage with, given its central claim of cross-linguistic regularity.
+
+- **Tomasello (2003) *Constructing a Language*** argues that grammar is learned through general cognitive mechanisms (intention-reading, pattern-finding, analogy) over usage data — not from an innate UG. If Tomasello is right, CFLT's protocol-layer regularity must be re-grounded as an *emergent* outcome of shared message-formation pressures rather than as a manifestation of an underlying UG core grammar. We accept this re-grounding: CFLT does not depend on the innateness premise (§6.1), and the linearization-discipline benefit accrues to the *learner* on a usage-based account just as well as on a UG account.
+- **Christiansen & Chater (2008) "Language as Shaped by the Brain" (*BBS*)** argues that the apparent universals of language are explained by the cognitive constraints under which language is *learned* and *transmitted*, not by an innate grammar module. This is again compatible with CFLT: the Core-first protocol can be read as a learning-and-transmission-friendly linearization (low CRD, early salience commitment) rather than as a UG-encoded universal.
+- **Evans & Levinson (2009) "The Myth of Language Universals" (*BBS*)** argues that putative universals are typically statistical tendencies grounded in functional pressures, not absolute cognitive constraints. CFLT explicitly inherits this conclusion: see `core-concept.md` §2.2 (the negation/modality/aspect regularity is described as a "strong cross-linguistic regularity in the surveyed typology", not as an absolute), and `manifesto.md` §1.1 (CFLT is "an unmarked default, not a descriptive universal").
+- **Newmeyer (2005) *Possible and Probable Languages*** argues that universalist claims about cognitive primacy routinely fail under rigorous typological scrutiny, and that the appropriate domain for absolutist claims is much narrower than universals literature often assumes. CFLT engages this critique by (a) scoping its universality to the **protocol layer** (`core-concept.md` §2.3 L1/L2 layers — not L3/L4), and (b) listing the four-layer split explicitly so the boundary of the claim is auditable.
+- **Counterexamples from non-event-prominent typologies.** Mithun (1992) on Yup'ik discourse-driven fronting and Aikhenvald (2004) on evidential-first languages show that natural-language information packaging does *not* always foreground an event-anchored Core. CFLT's response is the **protocol-vs-description distinction** at `manifesto.md` §1.1 and the explicit non-claim at `core-concept.md` §8.5 item 1 ("CFLT does not claim that all natural languages exhibit Core-First as their dominant word order"). The CFLT protocol is a normative scaffold for L2 production and AI prompting; it is not a typological universal about how natural languages package their information.
+
+**Bottom line.** The anti-UG opposition does not refute CFLT; it *narrows* the version of CFLT one is committed to. The narrower, opposition-compatible version is the version stated in this document and in `core-concept.md` §2.3 / §8.5. The earlier, broader UG-extension framing is retracted to the rhetorical-motivation layer.
+
 ---
 
 ## 7. Linguistic Relativity (Sapir-Whorf) and L2 Acquisition Friction
@@ -220,9 +243,11 @@ The strong Whorfian claim — that language determines thought — is largely re
 ### 7.2 Application to CFLT
 For learners moving between languages with strongly divergent information packaging (e.g., Mandarin's topic-prominent + time-initial structures vs. English's subject-prominent + tense-marked structures), the cognitive friction of restructuring is real and measurable (Slobin 1996, "Thinking for Speaking").
 
-CFLT proposes a **neutral buffer sequence** — the Core-First linearization — that bypasses both L1 and L2 surface idiosyncrasies. Once the learner habitually produces preverbal messages in the buffer order, L2 surface formulation becomes mechanical token substitution.
+CFLT proposes a **neutral buffer sequence** — the Core-First linearization — that **attenuates** (does not eliminate) L1- and L2-shaped cognitive habits at the production-protocol layer. Once the learner habitually produces preverbal messages in the buffer order, L2 surface formulation becomes more mechanical token substitution against a stable scaffold.
 
 This is consistent with Slobin's "Thinking for Speaking" framework, which holds that what differs across languages is not deep cognition but the language-specific patterns of *organizing* cognition for verbal expression.
+
+> **Honest scope (weak-Whorf engagement).** If weak Whorf is correct, the learner's L1-shaped habitus does **not** disappear when they adopt the CFLT protocol — habitual cognitive patterns (Lucy 1992; Boroditsky 2001) persist as background tendencies that the protocol overrides for the duration of a CFLT-formatted production. CFLT's claim is therefore the narrower one: the protocol provides a *deliberate-attention* scaffold that an L1-shaped speaker can use to *temporarily neutralize* the L1 organizational habit at message-formation time. Whether sustained use of the protocol weakens the underlying habit (i.e., produces a durable cognitive change) or only its production-time expression is an **open empirical question**.
 
 ---
 

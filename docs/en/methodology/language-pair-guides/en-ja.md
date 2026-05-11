@@ -87,7 +87,8 @@ Japanese has rich verbal periphrasis encoding aspect/result/preparation. These a
 
 Japanese honorifics modify the entire utterance morphologically. English has no direct equivalent; politeness is achieved lexically (*could you*, *would you mind*) or modally.
 
-**Rule**: Honorifics are **partially dissociable** from the four-slot protocol — they do not change Core or ground-frame *assignments*, but neuroimaging (Momma et al. 2008; Tomita et al. 2021) shows honorific processing shares left IFG with syntactic processing while additionally recruiting dmPFC and insula (social-cognitive network). The CFLT teaching guidance — apply slot work first, honorific layer second — is therefore valid as a *cognitive workflow* but should not be over-claimed as full neural independence. See [`../../foundations/sociolinguistics.md`](../../foundations/sociolinguistics.md) for the full discussion.
+**Rule**: Honorifics are **partially dissociable** from the four-slot protocol — they do not change Core or ground-frame *assignments*, but neuroimaging shows Japanese-honorific processing engages the left IFG (Momo, Sakai & Sakai 2008, *Brain and Language* 107(1), 81–89) and, in socio-pragmatic agreement contexts, additionally recruits bilateral insula and dorsal medial prefrontal cortex when the addressee status varies (Cui, Jeong, Okamoto, Takahashi, Kawashima & Sugiura 2022, *Journal of Neurolinguistics* 62, 101041). The CFLT teaching guidance — apply slot work first, honorific layer second — is therefore valid as a *cognitive workflow* but should not be over-claimed as full neural independence; the social-cognitive network recruitment is sensitive to addressee status as well as form. See [`../../foundations/sociolinguistics.md`](../../foundations/sociolinguistics.md) for the full discussion.
+
 
 For learners: keep CFLT slot work and honorific work as separate cognitive tasks. CFLT structure first, honorific layer second.
 

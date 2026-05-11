@@ -54,6 +54,26 @@ graph LR
     style M fill:#f96,stroke:#333,stroke-width:2px
 ```
 
+### 3.1 When NOT to use the two-step workflow
+
+The two-step Sanitization Workflow is *not* universally preferable. The strongest opposing position is: **modern frontier instruction-tuned LLMs (GPT-4o, Claude 3.5/4-class, Gemini 1.5+) may not need an explicit preprocessor**. Adding a separate Logic Transformer pass introduces (a) extra latency, (b) extra failure surfaces (the transformer can misclassify the Core), and (c) information loss if the transformer drops contextual cues the main model could have used. For many tasks, prompting the main model directly with a one-line CFLT instruction (*"answer in the form [Core, Reason, Space, Time]"*) may match or beat the two-step pipeline.
+
+Use the two-step workflow when:
+
+- The main model is small / mid-tier and benefits from cleaned, pre-structured input.
+- The pipeline runs many requests per session and the transformer's output is reused or audited (so the latency cost is amortized).
+- Reliability / auditability matters more than absolute latency (e.g., regulated industries; agentic workflows with downstream tool calls keyed on the Core structure).
+
+**Prefer a single-call prompt** with an inline CFLT instruction when:
+
+- The model is frontier-tier and already strong at instruction following.
+- Latency is the dominant cost.
+- The user's input is short enough that the main model can extract the Core itself without a separate pass.
+
+The choice between the two architectures is **empirical, not doctrinal** — settle it for your stack with the ablation specified in [`./evaluation-metrics.md`](./evaluation-metrics.md) §4.1. We treat the two-step workflow as a *recommended pattern for reliability-sensitive flows*, not as a CFLT-mandated architecture.
+
+> **Open empirical question.** Across ≥ 3 frontier models, does the two-step workflow show a measurable advantage over a single-call CFLT-instructed prompt on the same downstream task? The CFLT-specific P2 falsification clause (`foundations/core-concept.md` §8.5) sets up the controlled comparison.
+
 ---
 
 ## 4. Computational Efficiency: Token & Cache Optimization
@@ -102,7 +122,7 @@ CFLT's effectiveness is supported by both established industry benchmarks for in
 Modern inference frameworks (e.g., vLLM's APC, SGLang's RadixAttention) provide verified performance gains for **any** workload that supplies a fixed, reusable prompt prefix. The numbers below are **generic prefix-cache gains**, not CFLT-specific results — CFLT's contribution is that it makes prompts *eligible* for these gains by enforcing a stable, reusable prefix shape:
 
 - **TTFT (Time-To-First-Token) Reduction:** Benchmarks for **SGLang (2024)** ([NeurIPS 2024](https://openreview.net/forum?id=VqkAKQibpq)) show an **80%–95% reduction** in TTFT for cached prefixes, as the "prefill" phase is bypassed for the shared structure.
-- **Throughput Gain:** In agentic reasoning and multi-turn workloads, **RadixAttention** achieves **2x–5x higher throughput** compared to baseline vLLM by maximizing prefix reuse ([LMSYS 2024](https://lmsys.org/blog/2024-01-17-sglang/)).
+- **Throughput Gain:** In agentic reasoning and multi-turn workloads, **RadixAttention** achieves **2x–5x higher throughput** compared to baseline vLLM by maximizing prefix reuse ([LMSYS Org. 2024](https://lmsys.org/blog/2024-01-17-sglang/)).
 - **Linearization Impact:** The **DOVE Study (2025)** ([Findings of ACL 2025](https://doi.org/10.18653/v1/2025.findings-acl.611)) found that prompt linearization (the order of information) can cause an absolute accuracy gap of **10%–15%** on reasoning benchmarks like MMLU, confirming that prompt structure materially affects model behavior — which is the *necessary precondition* for CFLT's design choice to matter, not evidence that CFLT specifically captures this gap.
 
 In short: §5.1 establishes that *some* fixed-prefix protocol pays. §5.2 specifies what CFLT must demonstrate to claim it is *the right one*.
