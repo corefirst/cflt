@@ -109,13 +109,10 @@
 - **Frege, G.** (1879). *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens.* Halle: Louis Nebert.
 - **Grice, H. P.** (1975). "Logic and Conversation." In *Syntax and Semantics, Vol. 3: Speech Acts*, Cole & Morgan (eds). New York: Academic Press.
 - **Kamp, H.** (1981). "A Theory of Truth and Semantic Representation." In *Formal Methods in the Study of Language*, Groenendijk et al. (eds). Amsterdam: Mathematical Centre Tracts.
-<<<<<<< Updated upstream
 - **Landman, F.** (2000). *Events and Plurality: The Jerusalem Lectures.* Dordrecht: Kluwer Academic Publishers.
 - **Levinson, S. C.** (1983). *Pragmatics.* Cambridge: Cambridge University Press.
 - **Parsons, T.** (1990). *Events in the Semantics of English: A Study in Subatomic Semantics.* Cambridge, MA: MIT Press.
-=======
 - **Popper, K. R.** (1959). *The Logic of Scientific Discovery.* London: Hutchinson. (1934 年 *Logik der Forschung* 的英文译本。)
->>>>>>> Stashed changes
 - **Russell, B.** (1905). "On Denoting." *Mind* 14(56), 479–493.
 - **Searle, J. R.** (1969). *Speech Acts: An Essay in the Philosophy of Language.* Cambridge: Cambridge University Press.
 - **Searle, J. R.** (1975). "A Taxonomy of Illocutionary Acts." In *Language, Mind and Knowledge*, Gunderson (ed). Minneapolis: University of Minnesota Press.
@@ -210,12 +207,8 @@
 - **Pliatsikas, C.** (2020). "Understanding structural plasticity in the bilingual brain: The Dynamic Restructuring Model." *Bilingualism: Language and Cognition*, 23(2), 459-471. DOI: [10.1017/S1366728919000130](https://doi.org/10.1017/S1366728919000130)
 - **Pylkkänen, L.** (2019). "The neural basis of combinatory syntax and semantics." *Science* 366, 62–66. DOI: [10.1126/science.aax0050](https://doi.org/10.1126/science.aax0050)
 - **Seeley, W. W., Menon, V., Schatzberg, A. F., Keller, J., Glover, G. H., Kenna, H., Reiss, A. L., & Greicius, M. D.** (2007). "Dissociable Intrinsic Connectivity Networks for Salience Processing and Executive Control." *The Journal of Neuroscience*, 27(9), 2349–2356. DOI: [10.1523/JNEUROSCI.5587-06.2007](https://doi.org/10.1523/JNEUROSCI.5587-06.2007)
-<<<<<<< Updated upstream
 - **Murdock, B. B., Jr.** (1962). "The Serial Position Effect of Free Recall." *Journal of Experimental Psychology* 64(5), 482–488. DOI: [10.1037/h0045106](https://doi.org/10.1037/h0045106)
-- **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159 —— **会议摘要**（OHBM）。该实验室关于词序处理的正式同行评审论文是上方的 Hashimoto, Yokoyama & Kawashima 2012，那是 CFLT 文档的主引。
-=======
 - **Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R.** (2006). "Is there a difference in the brain activation patterns between SVO and SOV languages?" *NeuroImage* 31(S1), S159 —— **会议摘要** (OHBM)。该实验室关于词序处理的完整同行评审论文是上方的 Hashimoto, Yokoyama & Kawashima 2012，这是整个 CFLT 文档中的主要引用。
->>>>>>> Stashed changes
 
 ## 相关领域 (在 `manifesto.md` §4 中用于区分引用)
 
