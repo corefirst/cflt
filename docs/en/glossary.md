@@ -14,13 +14,13 @@
 | Term | Expansion | Definition |
 |---|---|---|
 | **CFLT** | Core-First Language Theory | The umbrella name for the framework — both the academic theory and the operational protocol. See [`manifesto.md`](./manifesto.md). |
-| **CFLT Protocol** | — | The specific operational sequencing rule: `[Core] → [Reason] → [Space] → [Time]`. |
-| **CFLT Form** | — | Output produced under the CFLT Protocol — comprehensible (not yet idiomatic) target-language utterance. |
-| **CFLT-L2** | — | The CFLT Form rendered in the learner's L2 (target language). |
-| **Event Nucleus** | — | The Core slot's internal structure: predicate + valence-bound participants + manner. See [`foundations/core-concept.md`](./foundations/core-concept.md) §2.1. |
-| **Ground Frame** | — | The three circumstantial slots (Reason / Space / Time) that frame the event. |
-| **Grammar Overlay** | — | The post-CFLT polish layer that converts a CFLT Form into idiomatic L2. |
-| **Salience anchor** | — | The cognitive object that occupies position 0; what the speaker is "committing to." See [`foundations/core-concept.md`](./foundations/core-concept.md) §1. |
+| **CFLT Protocol** | Core-First Language Protocol | The specific operational sequencing rule: `[Core] → [Reason] → [Space] → [Time]`. |
+| **CFLT Form** | Core-First Language Form | Output produced under the CFLT Protocol — comprehensible (not yet idiomatic) target-language utterance. |
+| **CFLT-L2** | Core-First Language Form in L2 | The CFLT Form rendered in the learner's L2 (target language). |
+| **Event Nucleus** | Nucleus of the Event (Structural) | The Core slot's internal structure: predicate + valence-bound participants + manner. See [`foundations/core-concept.md`](./foundations/core-concept.md) §2.1. |
+| **Ground Frame** | Circumstantial Ground Frame | The three circumstantial slots (Reason / Space / Time) that frame the event. |
+| **Grammar Overlay** | Post-CFLT Idiomatic Layer | The post-CFLT polish layer that converts a CFLT Form into idiomatic L2. |
+| **Salience anchor** | Cognitive Salience Anchor | The cognitive object that occupies position 0; what the speaker is "committing to." See [`foundations/core-concept.md`](./foundations/core-concept.md) §1. |
 | **L1 / L2** | First / Second Language | L1 = the learner's native language; L2 = the target language being learned. **Both are learner-relative, not English-relative** — for a Chinese-speaking learner of Japanese, L1 = Chinese and L2 = Japanese; English is not in the pair. CFLT supports any-to-any language pairs without requiring English as an intermediate. See [`foundations/core-concept.md`](./foundations/core-concept.md) §2.3 for layer-by-layer universality. |
 
 ### Related projects (independent of CFLT itself)
@@ -54,9 +54,9 @@
 | **OVS** | Object–Verb–Subject | Hixkaryana (very rare) |
 | **OSV** | Object–Subject–Verb | Warao, Yoda's English (very rare) |
 | **V2** | Verb-Second | The finite verb is always in the second position of a main clause. German, Dutch, Yiddish. |
-| **head-final** | — | Modifier precedes head (e.g., adjective-noun in English: "*red* car"); typical of SOV languages. |
-| **head-initial** | — | Head precedes modifier (e.g., noun-adjective in French: "voiture *rouge*"); typical of SVO and VSO languages. |
-| **topic-prominent** | — | The clause is structured around topic-comment rather than subject-predicate. Mandarin, Japanese, Korean. (Li & Thompson 1976) |
+| **head-final** | Head-Final Construction | Modifier precedes head (e.g., adjective-noun in English: "*red* car"); typical of SOV languages. |
+| **head-initial** | Head-Initial Construction | Head precedes modifier (e.g., noun-adjective in French: "voiture *rouge*"); typical of SVO and VSO languages. |
+| **topic-prominent** | Topic-Prominent Typology | The clause is structured around topic-comment rather than subject-predicate. Mandarin, Japanese, Korean. (Li & Thompson 1976) |
 
 ---
 
@@ -75,12 +75,12 @@
 | **SFL** | Systemic Functional Linguistics | Halliday's grammar tradition organized around meaning-making functions (ideational/interpersonal/textual). |
 | **CD** | Communicative Dynamism | Prague School concept: degree of "newness" or informational push carried by each clause element (Firbas 1992). |
 | **IPA** | International Phonetic Alphabet | The standardized phonetic notation used to represent sounds across languages. |
-| **Figure-Ground** | — | Talmy's (2000) cognitive distinction: Figure is the salient/foregrounded entity; Ground is the reference frame. |
-| **profile/base** | — | Langacker's (1987) cognitive grammar pair: the *profile* is the entity foregrounded by an expression against its conceptual *base*. |
-| **Theme/Rheme** | — | Prague School information structure: Theme is what the message is about; Rheme is what is said about the Theme. |
-| **Topic-Comment** | — | Like Theme/Rheme but specifically applied to topic-prominent languages (Li & Thompson 1976). |
-| **illocutionary act** | — | Searle's term for what a speaker *does* by uttering — assert, request, promise, etc. |
-| **speech act** | — | Synonym for illocutionary act (Austin, Searle). |
+| **Figure-Ground** | Figure-Ground Perception | Talmy's (2000) cognitive distinction: Figure is the salient/foregrounded entity; Ground is the reference frame. |
+| **profile/base** | Profile and Base (Cognitive) | Langacker's (1987) cognitive grammar pair: the *profile* is the entity foregrounded by an expression against its conceptual *base*. |
+| **Theme/Rheme** | Theme and Rheme (Functional) | Prague School information structure: Theme is what the message is about; Rheme is what is said about the Theme. |
+| **Topic-Comment** | Topic and Comment (Information Structure) | Like Theme/Rheme but specifically applied to topic-prominent languages (Li & Thompson 1976). |
+| **illocutionary act** | Illocutionary Act (Speech Act) | Searle's term for what a speaker *does* by uttering — assert, request, promise, etc. |
+| **speech act** | Speech Act Theory | Synonym for illocutionary act (Austin, Searle). |
 
 ---
 
@@ -91,7 +91,7 @@
 | **SLA** | Second Language Acquisition | The field studying how non-native languages are learned. |
 | **TBLT** | Task-Based Language Teaching | Pedagogical approach using meaningful tasks as the unit of instruction (Long, Ellis, Skehan). |
 | **ZPD** | Zone of Proximal Development | Vygotsky's (1978) zone between what a learner can do alone and what they cannot do even with help. |
-| ***i+1*** | — | Krashen's notation for input slightly above the learner's current level *i*. |
+| ***i+1*** | Input Hypothesis (Krashen) | Krashen's notation for input slightly above the learner's current level *i*. |
 | **Affective Filter** | — | Krashen's hypothesized emotional barrier (anxiety, low motivation) that blocks input from reaching the LAD. |
 | **Monitor Model** | — | Krashen's (1982) five-hypothesis model of L2 acquisition: Acquisition-Learning, Monitor, Natural Order, Input, Affective Filter. |
 | **Skill Acquisition Theory** | — | DeKeyser's account of L2 mastery as moving from declarative → procedural → automatic knowledge. |
@@ -115,7 +115,7 @@
 | **BA** | Brodmann Area | The classical numbered regions of the cerebral cortex (e.g., BA 44, BA 45 = Broca's area). |
 | **WM** | Working Memory | Short-term active memory used during cognitive tasks (Baddeley; Cowan). |
 | **ERP** | Event-Related Potential | Electrophysiological signal time-locked to a stimulus, measured via EEG. |
-| **P600** | — | A specific ERP component peaking ~600 ms after a stimulus, associated with syntactic reanalysis. |
+| **P600** | Syntactic P600 ERP Component | A specific ERP component peaking ~600 ms after a stimulus, associated with syntactic reanalysis. |
 
 ---
 
@@ -126,8 +126,8 @@
 | **KL divergence** | Kullback-Leibler divergence | An asymmetric measure of difference between two probability distributions. |
 | **DAG** | Directed Acyclic Graph | A graph with directed edges and no cycles; used here for semantic structures. |
 | **conditional entropy** | $H(Y \mid X)$ | Uncertainty about $Y$ given knowledge of $X$. |
-| **Markov chain** | — | A stochastic process where the next state depends only on the current state. |
-| **σ function** | — | The linearization function that maps a semantic graph to a surface order. See [`foundations/mathematics.md`](./foundations/mathematics.md) §1. |
+| **Markov chain** | Markov Chain Model | A stochastic process where the next state depends only on the current state. |
+| **σ function** | Linearization Sigma Function | The linearization function that maps a semantic graph to a surface order. See [`foundations/mathematics.md`](./foundations/mathematics.md) §1. |
 
 ---
 
@@ -144,9 +144,9 @@
 | **MLM** | Masked Language Modeling | Pre-training objective used by BERT (predict masked tokens). |
 | **ICL** | In-Context Learning | The ability of LLMs to learn a task from examples placed in the prompt without parameter updates. |
 | **RAG** | Retrieval-Augmented Generation | Workflow where an LLM is given retrieved documents as context (Lewis et al. 2020). |
-| **Attention Sink** | — | Phenomenon where initial tokens accumulate disproportionate attention weight (Xiao et al. 2024); fundamental to CFLT's Core-first claim at the LLM level. |
-| **Lost-in-the-Middle** | — | U-shaped accuracy curve in long-context tasks: information at start and end is recovered better than information in the middle (Liu et al. 2023). |
-| **Prefix caching** | — | LLM inference optimization: reusing computation for shared prompt prefixes (vLLM APC, SGLang RadixAttention). |
+| **Attention Sink** | Attention Sink Mechanism | Phenomenon where initial tokens accumulate disproportionate attention weight (Xiao et al. 2024); fundamental to CFLT's Core-first claim at the LLM level. |
+| **Lost-in-the-Middle** | Lost-in-the-Middle Phenomenon | U-shaped accuracy curve in long-context tasks: information at start and end is recovered better than information in the middle (Liu et al. 2023). |
+| **Prefix caching** | Prompt Prefix Caching | — | LLM inference optimization: reusing computation for shared prompt prefixes (vLLM APC, SGLang RadixAttention). |
 | **APC** | Automatic Prefix Caching | vLLM's prefix-caching mechanism. |
 | **TTFT** | Time To First Token | Latency metric: time from request submission to first generated token. |
 | **KV cache** | Key-Value cache | The Transformer attention key/value tensors stored across decoding steps; main target of prefix caching. |

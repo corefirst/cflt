@@ -14,13 +14,13 @@
 | 术语 | 展开 | 定义 |
 |---|---|---|
 | **CFLT** | Core-First Language Theory（核心优先语言理论） | 该框架的伞名 —— 同时涵盖学术理论与操作协议。参见 [`manifesto.md`](./manifesto.md)。 |
-| **CFLT 协议** | — | 具体的操作排序规则：`[核心] → [理由] → [空间] → [时间]`。 |
-| **CFLT 形式** | — | 在 CFLT 协议下产出的输出 —— 可理解（尚未地道）的目标语言话语。 |
-| **CFLT-L2** | — | 用学习者 L2（目标语言）渲染的 CFLT 形式。 |
-| **事件核（Event Nucleus）** | — | 核心槽的内部结构：谓词 + 价位绑定参与者 + 方式状语。参见 [`foundations/core-concept.md`](./foundations/core-concept.md) §2.1。 |
-| **场景框架（Ground Frame）** | — | 三个情境槽位（理由 / 空间 / 时间），为事件提供框架。 |
-| **语法叠加层（Grammar Overlay）** | — | CFLT 之后的润色层，将 CFLT 形式转换为地道 L2。 |
-| **显著性锚点（Salience anchor）** | — | 占据位置 0 的认知对象；说话者所"承诺"的内容。参见 [`foundations/core-concept.md`](./foundations/core-concept.md) §1。 |
+| **CFLT 协议** | 核心优先语言协议 | 具体的操作排序规则：`[核心] → [理由] → [空间] → [时间]`。 |
+| **CFLT 形式** | 核心优先语言形式 | 在 CFLT 协议下产出的输出 —— 可理解（尚未地道）的目标语言话语。 |
+| **CFLT-L2** | L2 核心优先语言形式 | 用学习者 L2（目标语言）渲染的 CFLT 形式。 |
+| **事件核（Event Nucleus）** | 事件核 (结构化) | 核心槽的内部结构：谓词 + 价位绑定参与者 + 方式状语。参见 [`foundations/core-concept.md`](./foundations/core-concept.md) §2.1。 |
+| **场景框架（Ground Frame）** | 情境场景框架 | 三个情境槽位（理由 / 空间 / 时间），为事件提供框架。 |
+| **语法叠加层（Grammar Overlay）** | CFLT 后地道层 | CFLT 之后的润色层，将 CFLT 形式转换为地道 L2。 |
+| **显著性锚点（Salience anchor）** | 认知显著性锚点 | 占据位置 0 的认知对象；说话者所"承诺"的内容。参见 [`foundations/core-concept.md`](./foundations/core-concept.md) §1。 |
 | **L1 / L2** | First / Second Language | L1 = 学习者的母语；L2 = 正在学习的目标语言。**两者都相对于学习者，不相对于英语** —— 对于母语汉语、目标日语的学习者，L1 = 汉语、L2 = 日语，英语不在该对中。CFLT 支持任意对任意的语言对，不强制英语作为中介。分层普适性参见 [`foundations/core-concept.md`](./foundations/core-concept.md) §2.3。 |
 
 ### 相关项目（独立于 CFLT 自身）
@@ -54,9 +54,9 @@
 | **OVS** | 宾语–动词–主语 | Hixkaryana 语（极罕见） |
 | **OSV** | 宾语–主语–动词 | Warao 语、Yoda 式英语（极罕见） |
 | **V2** | 动词第二位（Verb-Second） | 主句中定式动词总位于第二位置。德语、荷兰语、意第绪语。 |
-| **head-final（中心语在后）** | — | 修饰语在中心语之前（如英语形容词在名词前："*red* car"）；SOV 语言典型。 |
-| **head-initial（中心语在前）** | — | 中心语在修饰语之前（如法语名词在形容词前："voiture *rouge*"）；SVO 与 VSO 语言典型。 |
-| **topic-prominent（主题优先）** | — | 子句围绕主题-评论而非主语-谓语组织。汉语普通话、日语、韩语。（Li & Thompson 1976） |
+| **head-final（中心语在后）** | 中心词在后结构 | 修饰语在中心语之前（如英语形容词在名词前："*red* car"）；SOV 语言典型。 |
+| **head-initial（中心语在前）** | 中心词在前结构 | 中心词在修饰语之前（如法语名词在形容词前："voiture *rouge*"）；SVO 与 VSO 语言典型。 |
+| **topic-prominent（主题优先）** | 话题突出类型学 | 子句围绕主题-评论而非主语-谓语组织。汉语普通话、日语、韩语。（Li & Thompson 1976） |
 
 ---
 
@@ -75,12 +75,12 @@
 | **SFL** | Systemic Functional Linguistics（系统功能语言学） | Halliday 围绕意义生成功能（概念/人际/语篇）组织的语法传统。 |
 | **CD** | Communicative Dynamism（交际动态性） | 布拉格学派概念：每个子句成分携带的"新颖性"或信息推力程度（Firbas 1992）。 |
 | **IPA** | International Phonetic Alphabet（国际音标） | 跨语言表示音素的标准化语音符号系统。 |
-| **图形-背景（Figure-Ground）** | — | Talmy (2000) 的认知区分：图形是显著/前景化的实体；背景是参考框架。 |
-| **profile/base（轮廓/基础）** | — | Langacker (1987) 认知语法的一对：*轮廓*是表达式相对于其概念*基础*所前景化的实体。 |
-| **主题/述题（Theme/Rheme）** | — | 布拉格学派信息结构：主题是信息所谈论的对象；述题是关于主题所说的内容。 |
-| **主题-评论（Topic-Comment）** | — | 类似主题/述题，但专门用于主题优先语言（Li & Thompson 1976）。 |
-| **言外行为（illocutionary act）** | — | Searle 用语 —— 说话者通过话语*所做*的事（断言、请求、承诺等）。 |
-| **言语行为（speech act）** | — | 言外行为的同义词（Austin、Searle）。 |
+| **图形-背景（Figure-Ground）** | 图形-背景知觉 | Talmy (2000) 的认知区分：图形是显著/前景化的实体；背景是参考框架。 |
+| **profile/base（轮廓/基础）** | 轮廓与基础 (认知) | Langacker (1987) 认知语法的一对：*轮廓*是表达式相对于其概念*基础*所前景化的实体。 |
+| **主题/述题（Theme/Rheme）** | 主位与述位 (功能) | 布拉格学派信息结构：主题是信息所谈论的对象；述题是关于主题所说的内容。 |
+| **主题-评论（Topic-Comment）** | 话题与说明 (信息结构) | 类似主题/述题，但专门用于主题优先语言（Li & Thompson 1976）。 |
+| **言外行为（illocutionary act）** | 言外行为 (言语行为) | Searle 用语 —— 说话者通过话语*所做*的事（断言、请求、承诺等）。 |
+| **言语行为（speech act）** | 言语行为理论 | 言外行为的同义词（Austin、Searle）。 |
 
 ---
 
@@ -91,11 +91,11 @@
 | **SLA** | Second Language Acquisition（第二语言习得） | 研究非母语如何被学习的领域。 |
 | **TBLT** | Task-Based Language Teaching（任务型语言教学） | 以有意义的任务为教学单元的方法（Long、Ellis、Skehan）。 |
 | **ZPD** | Zone of Proximal Development（最近发展区） | Vygotsky (1978) 关于学习者独立能做与即便有助也做不到之间的区间。 |
-| ***i+1*** | — | Krashen 用以表示略高于学习者当前水平 *i* 的输入。 |
-| **情感过滤（Affective Filter）** | — | Krashen 假设的情感屏障（焦虑、低动机），阻止输入到达 LAD。 |
-| **监控模型（Monitor Model）** | — | Krashen (1982) 的 L2 习得五假设模型：习得-学习、监控、自然顺序、输入、情感过滤。 |
-| **技能习得理论（Skill Acquisition Theory）** | — | DeKeyser 关于 L2 掌握的解释 —— 从陈述性 → 程序性 → 自动化知识的过渡。 |
-| **认知负荷理论（Cognitive Load Theory）** | — | Sweller (1988, 2011) 区分内在 / 外在 / 关联负荷的工作记忆框架。 |
+| ***i+1*** | 输入假说 (Krashen) | Krashen 用以表示略高于学习者当前水平 *i* 的输入。 |
+| **情感过滤（Affective Filter）** | 情感过滤假说 (Krashen) | Krashen 假设的情感屏障（焦虑、低动机），阻止输入到达 LAD。 |
+| **监控模型（Monitor Model）** | L2 习得监控模型 | Krashen (1982) 的 L2 习得五假设模型：习得-学习、监控、自然顺序、输入、情感过滤。 |
+| **技能习得理论（Skill Acquisition Theory）** | 技能习得理论 (SAT) | DeKeyser 关于 L2 掌握的解释 —— 从陈述性 → 程序性 → 自动化知识的过渡。 |
+| **认知负荷理论（Cognitive Load Theory）** | 认知负荷理论 (CLT) | Sweller (1988, 2011) 区分内在 / 外在 / 关联负荷的工作记忆框架。 |
 
 ---
 
@@ -103,19 +103,19 @@
 
 | 术语 | 展开 | 定义 |
 |---|---|---|
-| **PFC** | Prefrontal Cortex（前额叶皮层） | 大脑的"执行控制"区；制约成人 L2 产出。 |
-| **DLPFC** | Dorsolateral Prefrontal Cortex（背外侧前额叶皮层） | 涉及工作记忆与冲突监测的特定 PFC 子区。 |
-| **BG** | Basal Ganglia（基底神经节） | 支持程序性 / 自动化技能执行的皮层下结构。 |
-| **SN** | Salience Network（显著性网络） | 锚定于前岛叶与 dACC 的脑网络，检测并优先处理显著刺激。 |
+| **PFC** | 前额叶皮层 | 大脑的"执行控制"区；制约成人 L2 产出。 |
+| **DLPFC** | 背外侧前额叶皮层 | 涉及工作记忆与冲突监测的特定 PFC 子区。 |
+| **BG** | 基底神经节 | 支持程序性 / 自动化技能执行的皮层下结构。 |
+| **SN** | 显著性网络 | 锚定于前岛叶与 dACC 的脑网络，检测并优先处理显著刺激。 |
 | **DMN** | Default Mode Network（默认模式网络） | 在内向思维（走神、自传体回忆）期间活跃的脑网络。 |
 | **CEN** | Central Executive Network（中央执行网络） | 支持目标导向任务聚焦的脑网络（亦称额顶控制网络）。 |
-| **dACC** | Dorsal Anterior Cingulate Cortex（背侧前扣带皮层） | 冲突监测与显著性检测的核心区（SN 的一部分）。 |
-| **AI**（神经科学语境下） | Anterior Insula（前岛叶） | 整合内感觉与显著性信号的脑区（SN 的一部分）。**不是**人工智能。 |
+| **dACC** | 背侧前扣带皮层 | 冲突监测与显著性检测的核心区（SN 的一部分）。 |
+| **AI**（神经科学语境下） | 前岛叶 (神经科学) | 整合内感觉与显著性信号的脑区（SN 的一部分）。**不是**人工智能。 |
 | **LIFG** | Left Inferior Frontal Gyrus（左下额回） | 包含 Broca 区、对句法处理至关重要的脑区。 |
 | **BA** | Brodmann Area（Brodmann 分区） | 大脑皮层的经典编号分区（如 BA 44、BA 45 = Broca 区）。 |
 | **WM** | Working Memory（工作记忆） | 认知任务期间使用的短时活跃记忆（Baddeley；Cowan）。 |
 | **ERP** | Event-Related Potential（事件相关电位） | 通过 EEG 测量的、与刺激时间锁定的电生理信号。 |
-| **P600** | — | 刺激后约 600 毫秒达到峰值的特定 ERP 成分，与句法重新分析相关。 |
+| **P600** | 句法 P600 ERP 成分 | 刺激后约 600 毫秒达到峰值的特定 ERP 成分，与句法重新分析相关。 |
 
 ---
 
@@ -126,8 +126,8 @@
 | **KL 散度** | Kullback-Leibler divergence | 两个概率分布之间的非对称差异度量。 |
 | **DAG** | Directed Acyclic Graph（有向无环图） | 边有方向且无环的图；本文用于语义结构。 |
 | **条件熵** | $H(Y \mid X)$ | 在已知 $X$ 的情况下对 $Y$ 的不确定性。 |
-| **马尔可夫链（Markov chain）** | — | 下一状态只依赖于当前状态的随机过程。 |
-| **σ 函数** | — | 把语义图映射到表面语序的线性化函数。参见 [`foundations/mathematics.md`](./foundations/mathematics.md) §1。 |
+| **马尔可夫链（Markov chain）** | 马尔可夫链模型 | 下一状态只依赖于当前状态的随机过程。 |
+| **σ 函数** | 线性化 σ 函数 | 把语义图映射到表面语序的线性化函数。参见 [`foundations/mathematics.md`](./foundations/mathematics.md) §1。 |
 
 ---
 
@@ -144,9 +144,9 @@
 | **MLM** | Masked Language Modeling（掩码语言建模） | BERT 使用的预训练目标（预测被掩盖的 token）。 |
 | **ICL** | In-Context Learning（上下文学习） | LLM 通过提示词中的示例学习任务，无需更新参数。 |
 | **RAG** | Retrieval-Augmented Generation（检索增强生成） | 将检索得到的文档作为上下文提供给 LLM 的工作流（Lewis et al. 2020）。 |
-| **注意力汇点（Attention Sink）** | — | 初始 token 累积不成比例的注意力权重（Xiao et al. 2024）；CFLT "核心居首" 主张在 LLM 层的基础。 |
-| **Lost-in-the-Middle（迷失在中部）** | — | 长上下文任务中的 U 型准确率曲线：开头与结尾的信息比中间的信息恢复得更好（Liu et al. 2023）。 |
-| **前缀缓存（Prefix caching）** | — | LLM 推理优化：复用共享提示词前缀的计算（vLLM APC、SGLang RadixAttention）。 |
+| **注意力汇点（Attention Sink）** | 注意力汇点机制 | 初始 token 累积不成比例的注意力权重（Xiao et al. 2024）；CFLT "核心居首" 主张在 LLM 层的基础。 |
+| **Lost-in-the-Middle（迷失在中部）** | 迷失在中部现象 | 长上下文任务中的 U 型准确率曲线：开头与结尾的信息比中间的信息恢复得更好（Liu et al. 2023）。 |
+| **前缀缓存（Prefix caching）** | 提示词前缀缓存 | LLM 推理优化：复用共享提示词前缀的计算（vLLM APC、SGLang RadixAttention）。 |
 | **APC** | Automatic Prefix Caching（自动前缀缓存） | vLLM 的前缀缓存机制。 |
 | **TTFT** | Time To First Token（首个 token 时间） | 延迟指标：从请求提交到首个生成 token 的时间。 |
 | **KV 缓存** | Key-Value cache | 解码步骤间存储的 Transformer 注意力键 / 值张量；前缀缓存的主要对象。 |
