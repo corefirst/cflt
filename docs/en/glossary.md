@@ -92,10 +92,10 @@
 | **TBLT** | Task-Based Language Teaching | Pedagogical approach using meaningful tasks as the unit of instruction (Long, Ellis, Skehan). |
 | **ZPD** | Zone of Proximal Development | Vygotsky's (1978) zone between what a learner can do alone and what they cannot do even with help. |
 | ***i+1*** | Input Hypothesis (Krashen) | Krashen's notation for input slightly above the learner's current level *i*. |
-| **Affective Filter** | — | Krashen's hypothesized emotional barrier (anxiety, low motivation) that blocks input from reaching the LAD. |
-| **Monitor Model** | — | Krashen's (1982) five-hypothesis model of L2 acquisition: Acquisition-Learning, Monitor, Natural Order, Input, Affective Filter. |
-| **Skill Acquisition Theory** | — | DeKeyser's account of L2 mastery as moving from declarative → procedural → automatic knowledge. |
-| **Cognitive Load Theory** | — | Sweller's (1988, 2011) framework distinguishing intrinsic / extraneous / germane load on working memory. |
+| **Affective Filter** | Affective Filter Hypothesis (Krashen) | Krashen's hypothesized emotional barrier (anxiety, low motivation) that blocks input from reaching the LAD. |
+| **Monitor Model** | Monitor Model of L2 Acquisition | Krashen's (1982) five-hypothesis model of L2 acquisition: Acquisition-Learning, Monitor, Natural Order, Input, Affective Filter. |
+| **Skill Acquisition Theory** | Skill Acquisition Theory (SAT) | DeKeyser's account of L2 mastery as moving from declarative → procedural → automatic knowledge. |
+| **Cognitive Load Theory** | Cognitive Load Theory (CLT) | Sweller's (1988, 2011) framework distinguishing intrinsic / extraneous / germane load on working memory. |
 
 ---
 
@@ -110,7 +110,7 @@
 | **DMN** | Default Mode Network | A brain network active during internally-directed thought (mind-wandering, autobiographical recall). |
 | **CEN** | Central Executive Network | A brain network (a.k.a. fronto-parietal control network) supporting goal-directed task focus. |
 | **dACC** | Dorsal Anterior Cingulate Cortex | A region central to conflict monitoring and salience detection (part of the SN). |
-| **AI** *(in neuroscience)* | Anterior Insula | A brain region integrating interoceptive and salience signals (part of the SN). **Not** Artificial Intelligence in this context. |
+| **AI** *(in neuroscience)* | Anterior Insula (Neuroscience) | A brain region integrating interoceptive and salience signals (part of the SN). **Not** Artificial Intelligence in this context. |
 | **LIFG** | Left Inferior Frontal Gyrus | A region (encompassing Broca's area) central to syntactic processing. |
 | **BA** | Brodmann Area | The classical numbered regions of the cerebral cortex (e.g., BA 44, BA 45 = Broca's area). |
 | **WM** | Working Memory | Short-term active memory used during cognitive tasks (Baddeley; Cowan). |
@@ -146,7 +146,7 @@
 | **RAG** | Retrieval-Augmented Generation | Workflow where an LLM is given retrieved documents as context (Lewis et al. 2020). |
 | **Attention Sink** | Attention Sink Mechanism | Phenomenon where initial tokens accumulate disproportionate attention weight (Xiao et al. 2024); fundamental to CFLT's Core-first claim at the LLM level. |
 | **Lost-in-the-Middle** | Lost-in-the-Middle Phenomenon | U-shaped accuracy curve in long-context tasks: information at start and end is recovered better than information in the middle (Liu et al. 2023). |
-| **Prefix caching** | Prompt Prefix Caching | — | LLM inference optimization: reusing computation for shared prompt prefixes (vLLM APC, SGLang RadixAttention). |
+| **Prefix caching** | Prompt Prefix Caching | LLM inference optimization: reusing computation for shared prompt prefixes (vLLM APC, SGLang RadixAttention). |
 | **APC** | Automatic Prefix Caching | vLLM's prefix-caching mechanism. |
 | **TTFT** | Time To First Token | Latency metric: time from request submission to first generated token. |
 | **KV cache** | Key-Value cache | The Transformer attention key/value tensors stored across decoding steps; main target of prefix caching. |
