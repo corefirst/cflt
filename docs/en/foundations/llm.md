@@ -200,4 +200,3 @@ See [`bibliography.md`](../bibliography.md) (§ Large Language Models and NLP) f
 - [`neuroscience.md`](./neuroscience.md) §5 — The brain-vs-Transformer attention-sink parallel that §2.3 here exploits.
 - [`logic.md`](./logic.md) §6 — Relevance Theory; cognitive justification for the engineering choice in §4 here.
 - [`../methodology/llm-prompting.md`](../methodology/llm-prompting.md) — The engineering surface of this foundations doc; sanitization workflow, prefix caching, RAG.
-- [`../methodology/software-architecture.md`](../methodology/software-architecture.md) — Two-stage Logic Transformer / Grammar Overlay pipeline introduced in §1 here.
