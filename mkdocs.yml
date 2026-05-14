@@ -111,6 +111,9 @@ plugins:
 extra_css:
   - assets/extra.css
 
+extra_javascript:
+  - javascripts/resume.js
+
 markdown_extensions:
   - tables
   - admonition
