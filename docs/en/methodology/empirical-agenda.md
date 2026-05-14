@@ -78,4 +78,4 @@ Does CFLT training lead to faster fluency and higher accuracy?
 
 We invite researchers in Cognitive Linguistics, AI, and Applied Linguistics to design and execute these experiments. CFLT is an open framework, and independent verification is the path toward broad academic and engineering adoption as a community standard for cross-linguistic protocol design.
 
-For inquiries regarding data collection via the **CoreFirst** reference project, contact research@cflt.center.
+For inquiries regarding data collection via the **CoreFirst** reference project, contact theory@cflt.center.
