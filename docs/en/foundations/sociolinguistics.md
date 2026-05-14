@@ -56,11 +56,20 @@ CFLT methodology defines three levels of **Social Register**:
 
 Across all three levels, the **logical sequence remains identical**. The only variable that changes is the **Token Density** and **Lexical Sophistication** within each slot. This allows learners to "dial up" their politeness without ever having to restructure their underlying cognitive protocol.
 
-## 5. Cultural Relativity: The "Topic-Prominent" Trap
+## 5. Cultural Relativity and the Social Context Buffer
 
 As discussed in [`linguistics.md`](./linguistics.md), many Asian languages are "Topic-Prominent." Sociolinguistically, this often manifests as "circular communication"—circling the context before hitting the point to avoid appearing blunt.
 
-CFLT is **proposed** to act as a **Social Buffer** in international professional registers: we hypothesize that the standardized "Global Interlingua" logic creates a neutral context in which directness can be interpreted as **Efficiency** rather than **Rudeness** for speakers from circular-communication backgrounds. The proposed warrant: Hofstede's (2001) finding that low-context professional cultures rate directness positively predicts that, in such settings, CFLT-formatted production will be read through the local interpretive frame as Efficiency rather than Rudeness — but Hofstede's cultural-dimensions evidence is *background* for the prediction, not direct evidence for *this specific* CFLT-as-Buffer effect, which has not yet been measured. The neighboring §6.1 *Cultural Friction* honestly acknowledges the opposite risk: in extremely traditional or hierarchical settings, the same directness may still be penalized. The Social-Buffer prediction is therefore scoped to **international professional registers**, not to all cross-cultural communication.
+CFLT addresses this conflict through the **Social Context Buffer**, an optional pragmatic shell that prepends the core protocol: **`[Social Buffer] + [CRST]`**.
+
+- **Function:** The buffer houses greetings, empathy markers, disclaimers, and social framing. It contains no core task logic but serves to "soften" the communication channel.
+- **Neural/Cognitive Basis:** This physically separates *emotional labor* (mPFC-driven social indexing) from *logical expression* (CEN-driven task execution).
+
+**Example Transformation:**
+- *Pure CRST (Potentially blunt):* "Review this code, because it has bugs, in the main branch, now."
+- *With Social Buffer:* "**I know you are super busy today, but** [could you review this code] (Core)..."
+
+CFLT is **proposed** to act as a **Social Buffer** in international professional registers: we hypothesize that the standardized "Global Interlingua" logic creates a neutral context in which directness can be interpreted as **Efficiency** rather than **Rudeness** for speakers from circular-communication backgrounds. The proposed warrant: Hofstede's (2001) finding that low-context professional cultures rate directness positively predicts that, in such settings, CFLT-formatted production will be read through the local interpretive frame as Efficiency rather than Rudeness.
 
 ## 6. Honest Limitations
 

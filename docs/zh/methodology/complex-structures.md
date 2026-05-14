@@ -5,21 +5,21 @@
 > **组织：** [CFLT.center](https://cflt.center)
 > **许可：** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-> **目的：** 扩展基础 CFLT 协议，以处理嵌套从句、条件句和复杂的叙述结构，同时不违反“核心优先 (Core-First)”的指令。
+> **目的：** 扩展基础 CFLT 协议，以处理嵌套从句、条件句和复杂的叙述结构，同时不违反"核心优先 (Core-First)"的指令。
 
 ---
 
 ## 1. 基础协议的局限性
 
-基础 CFLT 序列 —— `[核心] → [理由] → [空间] → [时间]` —— 针对单一、离散的思想进行了高度优化。它体现了“扁平化逻辑”。
+基础 CFLT 序列 —— `[核心] → [理由] → [空间] → [时间]` —— 针对单一、离散的思想进行了高度优化。它体现了"扁平化逻辑"。
 
-然而，人类的自然交流经常涉及 **递归 (Recursion)** 和 **依赖 (Dependency)**。当一个“原因”本身就是一个完整的事件时会发生什么？当一个句子包含多个条件依赖时又会发生什么？
+然而，人类的自然交流经常涉及 **递归 (Recursion)** 和 **依赖 (Dependency)**。当一个"原因"本身就是一个完整的事件时会发生什么？当一个句子包含多个条件依赖时又会发生什么？
 
 CFLT-Complex 提供了 **从句堆叠 (Clause Stacking)** 和 **递归槽位填充 (Recursive Slot-filling)** 的规则。
 
 ## 2. 递归槽位填充
 
-CFLT-Complex 的首要规则是：**CFLT 序列中的任何槽位都可以包含一个嵌入式 CFLT 序列**，前提是内部序列也遵守“核心优先”规则。
+CFLT-Complex 的首要规则是：**CFLT 序列中的任何槽位都可以包含一个嵌入式 CFLT 序列**，前提是内部序列也遵守"核心优先"规则。
 
 ### 示例：嵌套原因
 *原始输入 (中文)：* 因为如果明天下雨航班会取消，所以我决定今天走。
@@ -54,7 +54,7 @@ graph LR
 
 ## 3. 从句堆叠 (按时间及逻辑链条)
 
-在叙述一系列事件时，强行将所有内容挤进一个四槽位句子会导致“修饰语陷阱”再次出现。
+在叙述一系列事件时，强行将所有内容挤进一个四槽位句子会导致"修饰语陷阱"再次出现。
 
 **规则：** 将长叙述分解为独立的 CFLT 块，并通过明确的逻辑连接词 (`AND`, `BUT`, `THEN`, `SO`) 进行连接。
 
@@ -76,27 +76,37 @@ graph LR
     B2 -- "AND/SO/THEN" --> B3
 ```
 
-### 3.1 时间链条 (Chronological Chaining)
+### 3.1 时间链条 (Chronological Chaining — 叙事型 T-CRS 变体)
+在叙述一系列事件时，强行将所有内容挤进一个四槽位句子会导致"修饰语陷阱"再次出现。对于此类**叙事模式**的话语，CFLT 启用了 **T-CRS** 变体，其中时间充当宏观的主题锚点。
+
+**规则 (T-CRS)：** 在叙事序列中，`[时间]` 槽位可以前置到位置 0，以为后续事件建立参考框架。
+
 *原始输入：* 昨天我在办公室开了一下午会，然后去餐厅吃了晚饭，最后回家睡觉了。
 
-**CFLT-Complex 输出：**
-1. "I had a meeting, in the office, all afternoon, yesterday."
-2. `THEN` "I ate dinner, at the restaurant."
-3. `THEN` "I went to sleep, at home."
+**CFLT-Complex 输出 (叙事模式)：**
+1. "[Yesterday] (Time), [I had a meeting] (Core), [in the office] (Space), [all afternoon] (Time)."
+2. `THEN` "[I ate dinner] (Core), [at the restaurant] (Space)."
+3. `THEN` "[I went to sleep] (Core), [at home] (Space)."
 
-### 3.2 条件链条 (Conditional Chaining / If-Then)
-条件句天生具有复杂性，因为“条件 (If)”在时间上往往先于“结果 (Then)”，但“结果”通常才是语义上的核心 (Core)。
+*注：第一个块建立全局时间锚点；链条中的后续块继承该锚点或提供相对更新。*
+
+### 3.2 条件链条与理由层级
+条件句天生具有复杂性，因为"条件 (If)"在时间上往往先于"结果 (Then)"，但"结果"通常才是语义上的核心 (Core)。
 
 **条件句的 CFLT-Complex 规则：** 始终先断言 **结果 (核心/Core)**，然后在 `[理由]` 槽位中追加 **条件**。
 
-*原始输入：* 如果你完成报告，我明天就在办公室请你喝咖啡。
+当多个逻辑修饰语（条件、原因、目的）在 `[理由]` 槽位中同时出现时，CFLT 执行严格的**辖域层级**：
+
+**`[条件] → [原因] → [目的]`**
+
+*为什么？* 条件建立可能世界；原因是物理/逻辑驱动因素；目的是主观意图。它们的逻辑辖域决定了这一顺序（条件 > 原因 > 目的）。
+
+*原始输入：* 如果你完成报告，因为我很忙，为了节省时间，我明天就在办公室请你喝咖啡。
 
 **CFLT-Complex 输出：**
-> "I will buy you coffee, if you finish the report, in the office, tomorrow."
+> "[I will buy you coffee] (Core), [if you finish the report] (Condition), [because I am busy] (Cause), [to save time] (Purpose), [in the office] (Space), [tomorrow] (Time)."
 
-*为什么？* 听者的脑部会立即锚定在主要的奖励/动作 (“buy coffee”) 上。条件则作为修饰语起作用。
-
-## 4. 多 Agent 上下文：“上下文块”
+## 4. 多 Agent 上下文："上下文块"
 
 对于 LLM 提示词 (Prompting) 和多 Agent 通信，在 `[理由]` 或 `[空间]` 槽位中传递大量上下文会破坏解析器的效率。
 

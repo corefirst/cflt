@@ -77,26 +77,35 @@ graph LR
     B2 -- "AND/SO/THEN" --> B3
 ```
 
-### 3.1 Chronological Chaining
+### 3.1 Chronological Chaining (The Narrative T-CRS Variant)
+When narrating a series of events, forcing everything into a single four-slot sentence causes the "Modifier Trap" to re-emerge. For such **Narrative Mode** discourse, CFLT enables the **T-CRS** variant where Time serves as the macro-thematic anchor.
+
+**Rule (T-CRS):** In narrative sequences, the `[Time]` slot may be fronted to position 0 to establish the reference frame for the upcoming events.
+
 *Raw Input:* 昨天我在办公室开了一下午会，然后去餐厅吃了晚饭，最后回家睡觉了。
 
-**CFLT-Complex Output:**
-1. "I had a meeting, in the office, all afternoon, yesterday."
-2. `THEN` "I ate dinner, at the restaurant."
-3. `THEN` "I went to sleep, at home."
+**CFLT-Complex Output (Narrative Mode):**
+1. "[Yesterday] (Time), [I had a meeting] (Core), [in the office] (Space), [all afternoon] (Time)."
+2. `THEN` "[I ate dinner] (Core), [at the restaurant] (Space)."
+3. `THEN` "[I went to sleep] (Core), [at home] (Space)."
 
-### 3.2 Conditional Chaining (If-Then)
-Conditionals are inherently tricky because the *condition* (If) often precedes the *result* (Then) in time, but the *result* is usually the semantic Core.
+*Note: The first block establishes the global time anchor; subsequent blocks in the chain inherit it or provide relative updates.*
+
+### 3.2 Conditional Chaining and the Reason Hierarchy
+Conditionals are inherently tricky because the *condition* (If) often precedes the *result* (Then) in time, but the *result* is usually the semantic Core. 
 
 **The CFLT-Complex Rule for Conditionals:** Always assert the **Result (Core)** first, then append the **Condition** in the `[Reason]` slot. 
 
-*Raw Input:* 如果你完成报告，我明天就在办公室请你喝咖啡。
-*(If you finish the report, I will buy you coffee in the office tomorrow.)*
+When multiple logical modifiers (Condition, Cause, Purpose) co-occur within the `[Reason]` slot, CFLT enforces a strict **Scope Hierarchy**: 
+
+**`[Condition] → [Cause] → [Purpose]`**
+
+*Why?* Conditions establish possible worlds; causes are physical/logical drivers; purposes are subjective intents. Their logical scope dictates this order (Condition > Cause > Purpose).
+
+*Raw Input:* 如果你完成报告，因为我很忙，为了节省时间，我明天就在办公室请你喝咖啡。
 
 **CFLT-Complex Output:**
-> "I will buy you coffee, if you finish the report, in the office, tomorrow."
-
-*Why?* The listener's brain is immediately anchored to the primary reward/action ("buy coffee"). The condition acts as a modifier.
+> "[I will buy you coffee] (Core), [if you finish the report] (Condition), [because I am busy] (Cause), [to save time] (Purpose), [in the office] (Space), [tomorrow] (Time)."
 
 ## 4. Multi-Agent Context: The "Context Block"
 

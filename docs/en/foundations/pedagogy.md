@@ -211,13 +211,17 @@ Skehan posits that learners have limited attentional resources that must be divi
 - **At A1–B1 levels**, CFLT prioritizes **Fluency** and **Accuracy** by fixing the sequence, thereby reducing the "Complexity" (planning) load. This allows the learner to achieve communicative success early.
 - **At B2+ levels**, the objective shifts. The learner has achieved automaticity in the unmarked sequence and must now re-introduce **Complexity**.
 
-### 11.2 De-scaffolding (Scaffold Fading)
-Mastery is defined not by strict adherence to the protocol, but by the ability to deviate from it *intentionally*. Advanced modules in CFLT (Phase 3) explicitly teach:
-- **Topicalization:** Moving the [Time] or [Space] to the front for thematic emphasis.
-- **End-Focus:** Repackaging the Core to place new information at the end.
-- **Clefting:** For focus and contrast.
+### 11.2 De-scaffolding (The Cleft / Shift Mechanism)
+Mastery is defined not by strict adherence to the protocol, but by the ability to deviate from it *intentionally* based on **Information Structure** (Theme-Rheme). Advanced modules in CFLT (Phase 3: Expressive Mastery) explicitly teach the **Focus-Driven Shift**:
 
-In this view, the CFLT protocol is a **survival scaffold** that is eventually "submerged" into the learner's subconscious, serving as the default logic from which they can deviate for stylistic nuance.
+- **Topicalization:** Moving the [Time] or [Space] to the front for macro-thematic emphasis.
+- **End-Focus Repackaging:** Utilizing cleft sentences (*"It is [X] that..."*) to highlight a ground-frame slot when it is the specific Rheme (the new info) of the discourse.
+
+*Example:*
+- **Unmarked (Stage 2):** "I wrote the code, at home, yesterday."
+- **Marked (Stage 3 Focus on Space):** "**It was AT HOME** that I wrote the code, yesterday."
+
+In this view, the CFLT protocol is a **survival scaffold** that is eventually "submerged" into the learner's subconscious, serving as the default logic from which they can perform precision deviations for rhetorical effect. This marks the transition to native-like fluency, where the protocol acts as the cognitive "fail-safe" rather than a rigid constraint.
 
 ---
 

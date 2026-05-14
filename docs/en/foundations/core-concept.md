@@ -462,22 +462,22 @@ These non-claims circumscribe the falsifiability frontier: P1–P3 are the subst
 
 For the Logic Transformer engine and for any future AI agent extending the CFLT Protocol:
 
-> **The Core is the event nucleus — the predicate together with all participants and scope-internal operators inseparable from the event itself.** Formally: it is the smallest constituent that, uttered alone, identifies the speaker's primary intent (Action, Identity, State, or Request), comprising:
+> **The Core is the event nucleus — the predicate together with all participants and scope-internal operators inseparable from the event itself.** Formally: it is the smallest constituent that, uttered alone, identifies the speaker's primary intent (Action, Identity, State, or Request).
 >
-> 1. The **predicate** (verb, copula + complement, stative predicate, or directive predicate)
-> 2. **Valence-bound participants** licensed by the predicate (subject, object, instrument, beneficiary, recipient, accompaniment)
-> 3. **Nuclear / core-level manner adverbials** (manner-of-action, manner-of-motion)
-> 4. **Scope-internal operators** that take the event as argument: negation, modality, aspect, degree
+> To resolve the "internal modifier trap," the assembly of Slot 0 follows a deterministic **4-step Micro-Assembly Line**:
+>
+> 1.  **Step 0.1 Intent & Modal:** `[Must/Might/Not/Please]` (Cognitive attitude and illocutionary mitigators)
+> 2.  **Step 0.2 Predicate:** `[Action/State/Identity]` (The anchor itself: verb, copula + complement, or stative head)
+> 3.  **Step 0.3 Valence-Bound Participants:** `[Patient/Recipient/Beneficiary]` (Entities licensed directly by the predicate)
+> 4.  **Step 0.4 Core-Adjuncts:** `[Manner/Instrument]` (The immediate mechanism/quality of the action)
 >
 > such that the message remains functionally useful even if contextually incomplete.
 
-The Core may be lexically simple (one verb) or structurally rich (a predicate with multiple valence slots filled, manner adverbials attached, and modal/negation/aspect markers in place), but it functions as **one salience unit at position 0**. The CFLT Protocol does not prescribe how the event nucleus is internally assembled — that is delegated to each language's native syntax (see §2.5). The protocol governs only the **boundary** between event nucleus and ground frame (slots 1–3) and the **order** within the ground frame.
-
-This definition is **language-agnostic** (no language is privileged in event-nucleus assembly), **constituent-type-agnostic** (the four core types Action/Identity/State/Request all unify under the layered structure above), and **operationally testable** via the substitution and listener-question diagnostics in §2.2.
+The Core functions as **one salience unit at position 0**. The CFLT Protocol does not prescribe how these steps are mapped to surface syntax (e.g., Japanese SOV vs English SVO) — that is delegated to each language's native hardware (see §2.5). The protocol governs the **internal sequence of planning** and the **boundary** between the event nucleus and ground frame.
 
 ### 9.1 Core-Extraction Decision Flowchart
 
-For implementers (LLM prompt designers, pedagogical material authors, parsing engines) needing a procedural recipe to extract the Core from an arbitrary input utterance:
+For implementers needing a procedural recipe to extract and assemble the Core:
 
 ```mermaid
 flowchart TD
@@ -487,43 +487,48 @@ flowchart TD
     B -->|Describing a condition/quality| C3[State Core]
     B -->|Performing a speech act / request| C4[Request Core]
 
-    C1 --> D[Step 2: Anchor on the predicate]
+    C1 --> D[Step 2: Assemble Slot 0 via Micro-Line]
     C2 --> D
     C3 --> D
     C4 --> D
 
-    D --> E{Step 3: For each modifier,<br/>apply the substitution test §2.2}
-    E -->|"Modifier change → event identity changes"| F[Include in Core<br/>manner / instrument / beneficiary /<br/>accompaniment / modal / negation /<br/>aspect / degree]
+    subgraph "Slot 0 Micro-Assembly Line"
+    D --> D1[0.1 Intent/Modal]
+    D1 --> D2[0.2 Predicate]
+    D2 --> D3[0.3 Valence-Bound]
+    D3 --> D4[0.4 Core-Adjunct]
+    end
+
+    D4 --> E{Step 3: For each remaining modifier,<br/>apply the substitution test §2.2}
     E -->|"Modifier change → same event,<br/>different setting"| G{Which question<br/>does it answer?}
 
-    G -->|Why?| H1[Slot 1: Reason]
+    G -->|Condition / Cause / Purpose| H1[Slot 1: Reason]
     G -->|Where?| H2[Slot 2: Space]
-    G -->|When? How long? How often?| H3[Slot 3: Time]
+    G -->|When?| H3[Slot 3: Time]
 
-    F --> I[Slot 0: Core<br/>complete]
     H1 --> J[Emit: Core → R → S → T]
     H2 --> J
     H3 --> J
-    I --> J
+    D4 --> J
 
-    style I fill:#f96,stroke:#333,stroke-width:2px
+    style D4 fill:#f96,stroke:#333,stroke-width:2px
     style J fill:#9f6,stroke:#333,stroke-width:2px
 ```
 
-**Worked example** — *"I baked the cake with butter for my mom in the kitchen yesterday because she was sick."*
+**Worked example** — *"I definitely baked the cake for Mom slowly with a knife in the kitchen yesterday because it was her birthday."*
 
-| Step | Action | Result |
+| Step | Component | Result |
 |---|---|---|
-| 1 | Identify intent | Action Core (asserting an event of baking) |
-| 2 | Anchor on predicate | *baked the cake* |
-| 3a | Test *with butter* — substitute *with margarine* → different recipe → different event | Inside Core (instrument) |
-| 3b | Test *for my mom* — substitute *for my dad* → different beneficiary → arguably different event | Inside Core (beneficiary) |
-| 3c | Test *in the kitchen* — substitute *in the garden* → same event, different scene | Slot 2 (Space) |
-| 3d | Test *yesterday* — substitute *today* → same event, different time | Slot 3 (Time) |
-| 3e | Test *because she was sick* — answers *why?* | Slot 1 (Reason) |
-| Emit | Assemble | *I baked the cake with butter for my mom* \| *because she was sick* \| *in the kitchen* \| *yesterday* |
+| 0.1 | Intent/Modal | *definitely* |
+| 0.2 | Predicate | *baked* |
+| 0.3 | Valence | *the cake for Mom* |
+| 0.4 | Core-Adjunct | *slowly with a knife* |
+| **Slot 0** | **CORE** | **I definitely baked the cake for Mom slowly with a knife** |
+| 1 | Reason | *because it was her birthday* |
+| 2 | Space | *in the kitchen* |
+| 3 | Time | *yesterday* |
 
-For a 50-example reference table covering edge cases (instrument vs comitative, source vs path, abstract vs physical location), see [`../methodology/slot-disambiguation.md`](../methodology/slot-disambiguation.md).
+For a 50-example reference table covering edge cases, see [`../methodology/slot-disambiguation.md`](../methodology/slot-disambiguation.md).
 
 ---
 
