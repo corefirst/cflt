@@ -1,33 +1,45 @@
-// Optimized reading progress recovery script
+// Optimized reading progress recovery and last-page memory script
 (function() {
-    const STORAGE_KEY_PREFIX = "cflt-scroll-";
+    const SCROLL_KEY_PREFIX = "cflt-scroll-";
+    const LAST_PATH_KEY = "cflt-last-path";
 
-    function savePosition() {
-        localStorage.setItem(STORAGE_KEY_PREFIX + window.location.pathname, window.scrollY);
+    function saveState() {
+        const path = window.location.pathname;
+        localStorage.setItem(SCROLL_KEY_PREFIX + path, window.scrollY);
+        localStorage.setItem(LAST_PATH_KEY, path);
     }
 
-    // 1. Handle page leaving for both mobile and desktop
-    window.addEventListener("pagehide", savePosition);
-    window.addEventListener("beforeunload", savePosition);
+    // 1. Handle page leaving
+    window.addEventListener("pagehide", saveState);
+    window.addEventListener("beforeunload", saveState);
     
-    // 2. Add scroll listener with debouncing to prevent progress loss during crashes
+    // 2. Add scroll listener with debouncing
     let timeout;
     window.addEventListener("scroll", () => {
         clearTimeout(timeout);
-        timeout = setTimeout(savePosition, 500);
+        timeout = setTimeout(saveState, 500);
     });
 
-    // 3. Restore position
-    function restorePosition() {
-        // If the URL has a hash (e.g., #section-1), let the browser handle anchor navigation
+    // 3. Restore URL and Position
+    function restoreState() {
+        const currentPath = window.location.pathname;
+        const savedPath = localStorage.getItem(LAST_PATH_KEY);
+
+        // Redirect to last visited page if landing on root and a deeper path was saved
+        // We only redirect if the user is at the root "/" and we have a more specific saved path
+        if (currentPath === "/" && savedPath && savedPath !== "/" && !window.location.hash && !window.location.search) {
+            window.location.replace(savedPath);
+            return;
+        }
+
+        // Restore scroll position
         if (window.location.hash) return;
 
-        const savedPos = localStorage.getItem(STORAGE_KEY_PREFIX + window.location.pathname);
+        const savedPos = localStorage.getItem(SCROLL_KEY_PREFIX + currentPath);
         if (savedPos) {
             const pos = parseInt(savedPos, 10);
             if (isNaN(pos) || pos === 0) return;
 
-            // Small delay to ensure dynamic content (Mermaid, images) is sufficiently loaded
             setTimeout(() => {
                 window.scrollTo({
                     top: pos,
@@ -37,10 +49,9 @@
         }
     }
 
-    // Support for standard page load and potential SPA-like transitions
     if (document.readyState === "complete" || document.readyState === "interactive") {
-        restorePosition();
+        restoreState();
     } else {
-        window.addEventListener("DOMContentLoaded", restorePosition);
+        window.addEventListener("DOMContentLoaded", restoreState);
     }
 })();

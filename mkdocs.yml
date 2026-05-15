@@ -114,6 +114,9 @@ extra_css:
 extra_javascript:
   - javascripts/resume.js
 
+hooks:
+  - overrides/hooks.py
+
 markdown_extensions:
   - tables
   - admonition
