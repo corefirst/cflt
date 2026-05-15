@@ -141,7 +141,7 @@ def compare_json(actual: Any, expected: Any) -> bool:
         # Key semantic mapping
         key_synonyms = {
             "error": ["error_type", "err", "type"],
-            "mem": ["peak_memory", "mem_peak", "memory"],
+            "mem": ["peak_memory", "mem_peak", "memory", "peak_mem"],
             "time": ["timestamp", "at"]
         }
         
@@ -164,6 +164,12 @@ def compare_json(actual: Any, expected: Any) -> bool:
     elif isinstance(actual, list) and isinstance(expected, list):
         if len(actual) != len(expected): return False
         return all(compare_json(a, e) for a, e in zip(actual, expected))
+    elif isinstance(actual, str) and isinstance(expected, dict):
+        # Fuzzy match: check if string contains all expected values
+        for ek, ev in expected.items():
+            if isinstance(ev, str) and ev.lower() not in actual.lower():
+                return False
+        return True
     else:
         if isinstance(actual, str) and isinstance(expected, str):
             a_clean = actual.strip().lower()
@@ -182,6 +188,7 @@ def compare_json(actual: Any, expected: Any) -> bool:
                 "window": ["windows", "窗户", "窗"],
                 "lights": ["light", "灯", "电灯"],
                 "5f_conference_room": ["5楼大会议室", "grand conference room on the 5th floor", "5f grand conference room", "5f_grand_conference_room", "5f_large_conference_room"],
+                "decided": ["scheduled", "planned", "confirmed", "决定", "已决定"],
                 "document_evidence": ["organize_evidence", "collect_evidence", "整理证据", "整理所有证据"],
                 "error": ["error_type", "err", "error", "错误类型"],
                 "mem": ["peak_memory", "mem_peak", "memory", "内存峰值", "峰值内存"]

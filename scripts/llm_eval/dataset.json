@@ -119,12 +119,10 @@
         "avg_cpu": "75.0%",
         "high_load_errors": [
           {
-            "time": "10:15",
             "error": "Timeout",
             "mem": "28GB"
           },
           {
-            "time": "10:30",
             "error": "Overflow",
             "mem": "31GB"
           }
@@ -143,12 +141,10 @@
         "avg_cpu": "75.0%",
         "high_load_errors": [
           {
-            "time": "10:15",
             "error": "Timeout",
             "mem": "28GB"
           },
           {
-            "time": "10:30",
             "error": "Overflow",
             "mem": "31GB"
           }

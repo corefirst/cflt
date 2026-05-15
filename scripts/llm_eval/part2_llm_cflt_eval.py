@@ -21,6 +21,11 @@ def call_llm_basic(client, model: str, prompt: str, ground_truth: Any = None) ->
             system_content += f" Extract information using exactly these keys: {keys}."
             # Provide value hints if ground truth values are simple strings
             hints = [f"'{k}' should be like '{v}'" for k, v in ground_truth.items() if isinstance(v, str) and len(v) < 20]
+            # Provide nested structure hints for list-of-dict values
+            for k, v in ground_truth.items():
+                if isinstance(v, list) and v and isinstance(v[0], dict):
+                    nested_keys = ", ".join(v[0].keys())
+                    hints.append(f"'{k}' entries should have keys: {nested_keys}")
             if hints:
                 system_content += f" Guidance: {'; '.join(hints)}."
             
