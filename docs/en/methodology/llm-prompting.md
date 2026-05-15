@@ -27,7 +27,7 @@ LLMs disproportionately attend to the first few tokens (Position 0). This is the
 For high-reliability Agentic workflows, do not pass raw user input directly to your main reasoning model. Instead, use a two-step **Sanitization Workflow**:
 
 ### Step 1: The CFLT Transformer (Small/Cheap Model)
-Use a fast model (e.g., GPT-3.5, Haiku, Llama-3-8B) to flatten the user's input into a strict CFLT JSON or text structure.
+Use a fast model (e.g., GPT-5.4-Nano, Haiku 4.5, Llama-3-8B) to flatten the user's input into a strict CFLT JSON or text structure.
 
 **System Prompt for Transformer Agent:**
 ```markdown
@@ -56,7 +56,7 @@ graph LR
 
 ### 3.1 When NOT to use the two-step workflow
 
-The two-step Sanitization Workflow is *not* universally preferable. The strongest opposing position is: **modern frontier instruction-tuned LLMs (GPT-4o, Claude 3.5/4-class, Gemini 1.5+) may not need an explicit preprocessor**. Adding a separate Logic Transformer pass introduces (a) extra latency, (b) extra failure surfaces (the transformer can misclassify the Core), and (c) information loss if the transformer drops contextual cues the main model could have used. For many tasks, prompting the main model directly with a one-line CFLT instruction (*"answer in the form [Core, Reason, Space, Time]"*) may match or beat the two-step pipeline.
+The two-step Sanitization Workflow is *not* universally preferable. The strongest opposing position is: **modern frontier instruction-tuned LLMs (GPT-5.5, Claude 4.7-class, Gemini 3.1+) may not need an explicit preprocessor**. Adding a separate Logic Transformer pass introduces (a) extra latency, (b) extra failure surfaces (the transformer can misclassify the Core), and (c) information loss if the transformer drops contextual cues the main model could have used. For many tasks, prompting the main model directly with a one-line CFLT instruction (*"answer in the form [Core, Reason, Space, Time]"*) may match or beat the two-step pipeline.
 
 Use the two-step workflow when:
 

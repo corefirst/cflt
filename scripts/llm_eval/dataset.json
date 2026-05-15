@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "version": "1.1.0",
+    "description": "Multilingual tiered difficulty dataset for CFLT (Core-First Language Theory) verification.",
+    "levels": 5,
+    "total_cases": 12
+  },
+  "test_cases": [
+    {
+      "id": "EN_L1_01",
+      "level": 1,
+      "language": "en",
+      "category": "Home Automation",
+      "control": "Please close the window because it is raining outside.",
+      "experimental": "[CORE] Close window, [REASON] because raining.",
+      "ground_truth": {
+        "action": "close",
+        "target": "window"
+      }
+    },
+    {
+      "id": "ZH_L1_01",
+      "level": 1,
+      "language": "zh",
+      "category": "Home Automation",
+      "control": "外面下雨了，请把窗户关上。",
+      "experimental": "[CORE] 关窗户, [REASON] 下雨.",
+      "ground_truth": {
+        "action": "close",
+        "target": "window"
+      }
+    },
+    {
+      "id": "EN_L2_01",
+      "level": 2,
+      "language": "en",
+      "category": "Office Management",
+      "control": "Since the meeting has concluded, please turn off all the lights in the grand conference room on the 5th floor at 6:00 PM today.",
+      "experimental": "[CORE] Turn off lights, [REASON] meeting concluded, [SPACE] 5F Grand Conference Room, [TIME] Today 18:00.",
+      "ground_truth": {
+        "action": "off",
+        "target": "lights",
+        "location": "5F_conference_room",
+        "time": "18:00"
+      }
+    },
+    {
+      "id": "ZH_L2_01",
+      "level": 2,
+      "language": "zh",
+      "category": "Office Management",
+      "control": "会议已经结束了，请在今天下午6点把5楼大会议室的所有灯都关掉。",
+      "experimental": "[CORE] 关灯, [REASON] 会议结束, [SPACE] 5楼大会议室, [TIME] 今天 18:00.",
+      "ground_truth": {
+        "action": "off",
+        "target": "lights",
+        "location": "5F_conference_room",
+        "time": "18:00"
+      }
+    },
+    {
+      "id": "EN_L3_01",
+      "level": 3,
+      "language": "en",
+      "category": "IT Operations",
+      "control": "We've been seeing some weird temperature spikes in the server room all week. Even though the HVAC guys are working on it, the East Wing sensor just hit red at 14:15. To stop any hardware from frying and losing our data, we need to shut down every single backup node immediately.",
+      "experimental": "[CORE] Shutdown backup nodes, [REASON] prevent hardware damage, [SPACE] East Wing Server Room, [TIME] 14:15.",
+      "ground_truth": {
+        "action": "shutdown",
+        "target": "backup_nodes",
+        "priority": "high"
+      }
+    },
+    {
+      "id": "ZH_L3_01",
+      "level": 3,
+      "language": "zh",
+      "category": "IT Operations",
+      "control": "这周服务器机房温度一直异常波动。虽然空调维修工正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
+      "experimental": "[CORE] 关闭备份节点, [REASON] 防止硬件损坏, [SPACE] 东翼服务器机房, [TIME] 14:15.",
+      "ground_truth": {
+        "action": "shutdown",
+        "target": "backup_nodes",
+        "priority": "high"
+      }
+    },
+    {
+      "id": "EN_L4_01",
+      "level": 4,
+      "language": "en",
+      "category": "Decision Logic",
+      "control": "I was thinking about calling the police to report the break-in, but then I figured it might be too much hassle. So I've decided I'm just going to stay home and organize all the evidence myself tonight, and then maybe I'll go to the insurance company tomorrow to fill out a claim form, because I really don't want to escalate things right now.",
+      "experimental": "[CORE] Organize evidence, [REASON] avoid escalation, [SPACE] home, [TIME] tonight.",
+      "ground_truth": {
+        "primary_action": "document_evidence",
+        "status": "decided"
+      }
+    },
+    {
+      "id": "ZH_L4_01",
+      "level": 4,
+      "language": "zh",
+      "category": "Decision Logic",
+      "control": "我本来想报警报案的，但后来觉得太麻烦了。所以我决定今晚留在家里自己整理所有证据，明天再去保险公司填索赔单，因为我现在真的不想把事情闹大。",
+      "experimental": "[CORE] 整理证据, [REASON] 避免扩大事态, [SPACE] 家里, [TIME] 今晚.",
+      "ground_truth": {
+        "primary_action": "document_evidence",
+        "status": "decided"
+      }
+    },
+    {
+      "id": "EN_L5_01",
+      "level": 5,
+      "language": "en",
+      "category": "Data Analysis",
+      "control": "Here are the server logs from the last hour: [10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]. Since memory over 30GB triggers a hard reset, I need you to calculate the average CPU load for this period and find if any entries have both CPU > 80% and a non-None error. If found, list the error type and the peak memory for those specific logs.",
+      "experimental": "[CORE] Calculate avg CPU & extract high-load error logs (ERR!=None & CPU>80%), [REASON] prevent memory reset (Limit:30GB), [SPACE] Log Data, [TIME] past hour. Source: [10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]",
+      "ground_truth": {
+        "avg_cpu": "75.0%",
+        "high_load_errors": [
+          {
+            "time": "10:15",
+            "error": "Timeout",
+            "mem": "28GB"
+          },
+          {
+            "time": "10:30",
+            "error": "Overflow",
+            "mem": "31GB"
+          }
+        ],
+        "reset_triggered": true
+      }
+    },
+    {
+      "id": "ZH_L5_01",
+      "level": 5,
+      "language": "zh",
+      "category": "Data Analysis",
+      "control": "这是过去一小时的服务器日志：[10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]。由于内存超过30GB会触发硬重启，我需要你计算这段时间的平均CPU负载，并找出CPU > 80%且错误不为None的条目。如果找到了，列出错误类型和对应的内存峰值。",
+      "experimental": "[CORE] 计算平均CPU并提取高负载错误日志 (ERR!=None & CPU>80%), [REASON] 防止内存重启 (限制:30GB), [SPACE] 日志数据, [TIME] 过去一小时. 数据源: [10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]",
+      "ground_truth": {
+        "avg_cpu": "75.0%",
+        "high_load_errors": [
+          {
+            "time": "10:15",
+            "error": "Timeout",
+            "mem": "28GB"
+          },
+          {
+            "time": "10:30",
+            "error": "Overflow",
+            "mem": "31GB"
+          }
+        ],
+        "reset_triggered": true
+      }
+    },
+    {
+      "id": "EN_L5_02",
+      "level": 5,
+      "language": "en",
+      "category": "Financial Logic",
+      "control": "Transaction list: [ID:001 AMT:$500 CAT:Travel, ID:002 AMT:$1200 CAT:Tech, ID:003 AMT:$300 CAT:Travel]. Our policy flags Travel expenses over $400 or any Tech over $1000 for manual audit. Please sum the total amount of flagged transactions and tell me how many items need an audit.",
+      "experimental": "[CORE] Sum flagged transactions & count audit items (Travel>$400 or Tech>$1000), [REASON] compliance policy, [SPACE] Transaction List, [TIME] current period. Source: [ID:001 AMT:$500 CAT:Travel, ID:002 AMT:$1200 CAT:Tech, ID:003 AMT:$300 CAT:Travel]",
+      "ground_truth": {
+        "flagged_total": 1700,
+        "audit_count": 2,
+        "flagged_ids": [
+          "001",
+          "002"
+        ]
+      }
+    }
+  ]
+}
