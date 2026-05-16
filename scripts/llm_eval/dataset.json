@@ -1,9 +1,69 @@
 {
   "metadata": {
-    "version": "1.1.0",
-    "description": "Multilingual tiered difficulty dataset for CFLT (Core-First Language Theory) verification.",
-    "levels": 5,
-    "total_cases": 12
+    "version": "2.0.0",
+    "description": "CFLT extraction benchmark. Control vs experimental utterances share identical lexical content; only clause ordering differs (reason-first natural language vs core-first CFLT). Tests primacy hypothesis from llm-prompting.md §5.2.",
+    "schema_keys": ["action", "target", "location", "time"],
+    "instructions": {
+      "en": "You are an extraction assistant. Read the user's message and output a single JSON object with these keys: action (the requested verb), target (the primary object of the action), location (the place, omit the field if not mentioned), time (the moment, omit the field if not mentioned). Output JSON only, no commentary.",
+      "zh": "你是信息抽取助手。请阅读用户的请求，输出单一 JSON 对象，使用以下英文 key：action（请求的动作动词）、target（动作的主要对象）、location（地点，若未提及则省略该字段）、time（时间，若未提及则省略该字段）。仅输出 JSON，不要任何解释。"
+    },
+    "key_aliases": {
+      "action": ["action", "act", "verb", "operation", "动作", "操作"],
+      "target": ["target", "object", "subject", "对象", "目标"],
+      "location": ["location", "place", "where", "site", "地点", "位置", "场所"],
+      "time": ["time", "when", "timestamp", "moment", "时间", "时刻"]
+    },
+    "value_synonyms": {
+      "action": {
+        "close": ["close", "shut", "close the window", "shut the window", "关", "关闭", "关上", "关好"],
+        "off": ["off", "turn off", "shut off", "switch off", "power off", "关", "关闭", "关掉", "关上"],
+        "feed": ["feed", "give food", "喂", "喂食", "投喂", "给食物"],
+        "contact": ["contact", "call", "reach out", "notify maintenance", "call maintenance", "联系", "叫", "通知", "找"],
+        "dispatch": ["dispatch", "send", "send up", "deploy", "派", "派遣", "派出", "派人"],
+        "shutdown": ["shutdown", "shut down", "power off", "stop", "off", "turn off", "关闭", "关掉", "停机", "停止"],
+        "notify": ["notify", "inform", "alert", "call", "page", "通知", "告知", "联系", "呼叫"],
+        "open": ["open", "activate", "deploy", "打开", "开启", "启用"],
+        "organize": ["organize", "document", "sort", "compile", "collect", "整理", "梳理", "收集", "归整"],
+        "go": ["go", "visit", "head to", "head over", "dine at", "去", "前往", "到"],
+        "take": ["take", "ride", "catch", "board", "坐", "乘坐", "搭", "搭乘", "乘"]
+      },
+      "target": {
+        "window": ["window", "the window", "windows", "窗", "窗户", "窗子"],
+        "stove": ["stove", "the stove", "burner", "炉子", "炉灶", "灶", "灶台"],
+        "dog": ["dog", "the dog", "puppy", "狗", "狗狗", "小狗"],
+        "lights": ["lights", "light", "the lights", "all lights", "灯", "电灯", "灯光", "所有灯"],
+        "maintenance": ["maintenance", "maintenance worker", "maintenance team", "technician", "repair technician", "repair worker", "repair", "repairman", "service technician", "维修", "维修工", "维修人员", "维修员"],
+        "security": ["security", "security guard", "guard", "guards", "保安", "保安人员", "安保"],
+        "backup_nodes": ["backup nodes", "backup_nodes", "all backup nodes", "the backup nodes", "备份节点", "所有备份节点", "备份服务器"],
+        "physician": ["physician", "doctor", "on-call physician", "on call physician", "on-call doctor", "attending physician", "医生", "值班医生", "值班医师", "主治医生"],
+        "registers": ["registers", "register", "backup registers", "backup register", "back-up registers", "back-up register", "extra registers", "extra register", "checkout counters", "checkout counter", "backup checkout counters", "backup checkout counter", "back-up checkout counters", "back-up checkout counter", "extra checkout counters", "extra checkout counter", "收银台", "备用收银台", "收银机", "备用收银机"],
+        "evidence": ["evidence", "the evidence", "all evidence", "all the evidence", "证据", "所有证据", "全部证据"],
+        "italian_restaurant": ["italian restaurant", "italian place", "the italian", "italian", "意大利餐厅", "意大利菜馆", "意大利饭店"],
+        "bullet_train": ["bullet train", "shinkansen", "high-speed train", "新干线", "高铁", "子弹头列车"]
+      },
+      "location": {
+        "5F_conference_room": ["5f conference room", "5th floor conference room", "5f_conference_room", "grand conference room on the 5th floor", "large conference room on the 5th floor", "conference room on the 5th floor", "5f grand conference room", "the 5f conference room", "5th floor grand conference room", "5th floor large conference room", "fifth floor conference room", "fifth floor grand conference room", "fifth floor large conference room", "5楼大会议室", "5楼会议室", "五楼大会议室", "五楼会议室"],
+        "3F_pantry": ["3f pantry", "3rd floor pantry", "3f_pantry", "third floor pantry", "the 3f pantry", "3楼茶水间", "三楼茶水间", "3F 茶水间"],
+        "suite_502": ["suite 502", "room 502", "502", "502号套房", "502 套房", "502 号"],
+        "east_wing": ["east wing", "east_wing", "east wing server room", "east wing of the server room", "the east wing", "east wing of server room", "东翼", "东翼机房", "东翼服务器机房"],
+        "bed_7": ["bed 7", "bed_7", "the patient in bed 7", "bed 7 patient", "patient in bed 7", "7床", "7号床", "七床"],
+        "2F": ["2f", "second floor", "the second floor", "2楼", "二楼"],
+        "home": ["home", "house", "at home", "my home", "家", "家里", "我家"],
+        "5th_avenue": ["5th avenue", "5th ave", "fifth avenue", "5th avenue location", "on 5th avenue", "第五大道", "5 大道", "5th avenue 那家"],
+        "kyoto": ["kyoto", "京都"]
+      },
+      "time": {
+        "18:00": ["18:00", "6 pm", "6:00 pm", "6pm", "today 6 pm", "today at 6 pm", "today 6:00 pm", "today at 6:00 pm", "6 pm today", "6:00 pm today", "at 6 pm today", "this evening 6", "this evening at 6", "18点", "下午6点", "今天下午6点", "今晚6点", "18:00 today"],
+        "tomorrow_morning": ["tomorrow morning", "tomorrow am", "tomorrow a.m.", "next morning", "the next morning", "明天早上", "明早", "明天上午"],
+        "23:00": ["23:00", "11 pm", "11:00 pm", "tonight 11 pm", "tonight at 11", "tonight at 11 pm", "tonight at 11:00 pm", "tonight 11:00 pm", "11 pm tonight", "11:00 pm tonight", "at 11 pm tonight", "晚上11点", "今晚11点", "23点", "23:00 today"],
+        "14:15": ["14:15", "2:15 pm", "2:15pm", "14:15 today", "at 14:15", "today at 14:15", "today 14:15", "14点15分", "下午2点15分", "下午两点一刻"],
+        "within_1_hour": ["within 1 hour", "within an hour", "within one hour", "in the next hour", "within the next hour", "in the next 1 hour", "next hour", "within the hour", "in an hour", "in one hour", "一小时内", "1小时内", "一个小时内"],
+        "15:00": ["15:00", "3 pm", "3:00 pm", "by 3 pm", "before 3 pm", "by 3:00 pm", "before 3:00 pm", "today by 3 pm", "before 3 pm today", "by 3 pm today", "today before 3 pm", "today by 3:00 pm", "下午3点", "下午3点前", "今天下午3点前", "今天3点前", "今天下午3点", "15点"],
+        "tonight": ["tonight", "this evening", "later tonight", "today tonight", "今晚", "今天晚上", "晚上"],
+        "19:00": ["19:00", "7 pm", "7:00 pm", "tonight 7 pm", "tonight at 7", "tonight at 7 pm", "tonight at 7:00 pm", "tonight 7:00 pm", "7 pm tonight", "7:00 pm tonight", "at 7 pm tonight", "晚上7点", "今晚7点", "19点"],
+        "friday_morning": ["friday morning", "friday am", "friday a.m.", "this friday morning", "on friday morning", "周五早上", "周五上午", "星期五早上", "星期五上午"]
+      }
+    }
   },
   "test_cases": [
     {
@@ -11,11 +71,35 @@
       "level": 1,
       "language": "en",
       "category": "Home Automation",
-      "control": "Please close the window because it is raining outside.",
-      "experimental": "[CORE] Close window, [REASON] because raining.",
+      "utterance_control": "It is raining outside, please close the window.",
+      "utterance_cflt": "Please close the window, because it is raining outside.",
       "ground_truth": {
         "action": "close",
         "target": "window"
+      }
+    },
+    {
+      "id": "EN_L1_02",
+      "level": 1,
+      "language": "en",
+      "category": "Kitchen",
+      "utterance_control": "The water is boiling, please turn off the stove.",
+      "utterance_cflt": "Please turn off the stove, the water is boiling.",
+      "ground_truth": {
+        "action": "off",
+        "target": "stove"
+      }
+    },
+    {
+      "id": "EN_L1_03",
+      "level": 1,
+      "language": "en",
+      "category": "Pet Care",
+      "utterance_control": "The dog is hungry, please feed it.",
+      "utterance_cflt": "Please feed the dog, it is hungry.",
+      "ground_truth": {
+        "action": "feed",
+        "target": "dog"
       }
     },
     {
@@ -23,11 +107,35 @@
       "level": 1,
       "language": "zh",
       "category": "Home Automation",
-      "control": "外面下雨了，请把窗户关上。",
-      "experimental": "[CORE] 关窗户, [REASON] 下雨.",
+      "utterance_control": "外面下雨了，请把窗户关上。",
+      "utterance_cflt": "请把窗户关上，因为外面下雨了。",
       "ground_truth": {
         "action": "close",
         "target": "window"
+      }
+    },
+    {
+      "id": "ZH_L1_02",
+      "level": 1,
+      "language": "zh",
+      "category": "Kitchen",
+      "utterance_control": "水开了，请把炉子关掉。",
+      "utterance_cflt": "请把炉子关掉，水开了。",
+      "ground_truth": {
+        "action": "off",
+        "target": "stove"
+      }
+    },
+    {
+      "id": "ZH_L1_03",
+      "level": 1,
+      "language": "zh",
+      "category": "Pet Care",
+      "utterance_control": "狗饿了，请给它喂食。",
+      "utterance_cflt": "请给狗喂食，它饿了。",
+      "ground_truth": {
+        "action": "feed",
+        "target": "dog"
       }
     },
     {
@@ -35,13 +143,41 @@
       "level": 2,
       "language": "en",
       "category": "Office Management",
-      "control": "Since the meeting has concluded, please turn off all the lights in the grand conference room on the 5th floor at 6:00 PM today.",
-      "experimental": "[CORE] Turn off lights, [REASON] meeting concluded, [SPACE] 5F Grand Conference Room, [TIME] Today 18:00.",
+      "utterance_control": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+      "utterance_cflt": "Please turn off all the lights, because the meeting has concluded, in the 5th floor grand conference room, today at 6 PM.",
       "ground_truth": {
         "action": "off",
         "target": "lights",
         "location": "5F_conference_room",
         "time": "18:00"
+      }
+    },
+    {
+      "id": "EN_L2_02",
+      "level": 2,
+      "language": "en",
+      "category": "Office Management",
+      "utterance_control": "The coffee machine is broken, please contact maintenance to come to the 3rd floor pantry tomorrow morning.",
+      "utterance_cflt": "Please contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+      "ground_truth": {
+        "action": "contact",
+        "target": "maintenance",
+        "location": "3F_pantry",
+        "time": "tomorrow_morning"
+      }
+    },
+    {
+      "id": "EN_L2_03",
+      "level": 2,
+      "language": "en",
+      "category": "Hotel Operations",
+      "utterance_control": "The guest in suite 502 has complained about noise, please dispatch security up there tonight at 11 PM.",
+      "utterance_cflt": "Please dispatch security, because the guest has complained about noise, to suite 502, tonight at 11 PM.",
+      "ground_truth": {
+        "action": "dispatch",
+        "target": "security",
+        "location": "suite_502",
+        "time": "23:00"
       }
     },
     {
@@ -49,8 +185,8 @@
       "level": 2,
       "language": "zh",
       "category": "Office Management",
-      "control": "会议已经结束了，请在今天下午6点把5楼大会议室的所有灯都关掉。",
-      "experimental": "[CORE] 关灯, [REASON] 会议结束, [SPACE] 5楼大会议室, [TIME] 今天 18:00.",
+      "utterance_control": "会议已经结束，请在今天下午6点把5楼大会议室的所有灯都关掉。",
+      "utterance_cflt": "请把所有灯都关掉，因为会议已经结束，在5楼大会议室，今天下午6点。",
       "ground_truth": {
         "action": "off",
         "target": "lights",
@@ -59,16 +195,73 @@
       }
     },
     {
+      "id": "ZH_L2_02",
+      "level": 2,
+      "language": "zh",
+      "category": "Office Management",
+      "utterance_control": "咖啡机坏了，请明天早上联系维修工到3楼茶水间。",
+      "utterance_cflt": "请联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+      "ground_truth": {
+        "action": "contact",
+        "target": "maintenance",
+        "location": "3F_pantry",
+        "time": "tomorrow_morning"
+      }
+    },
+    {
+      "id": "ZH_L2_03",
+      "level": 2,
+      "language": "zh",
+      "category": "Hotel Operations",
+      "utterance_control": "502号套房的客人投诉吵闹，请今晚11点派保安上去。",
+      "utterance_cflt": "请派保安上去，因为客人投诉吵闹，到502号套房，今晚11点。",
+      "ground_truth": {
+        "action": "dispatch",
+        "target": "security",
+        "location": "suite_502",
+        "time": "23:00"
+      }
+    },
+    {
       "id": "EN_L3_01",
       "level": 3,
       "language": "en",
       "category": "IT Operations",
-      "control": "We've been seeing some weird temperature spikes in the server room all week. Even though the HVAC guys are working on it, the East Wing sensor just hit red at 14:15. To stop any hardware from frying and losing our data, we need to shut down every single backup node immediately.",
-      "experimental": "[CORE] Shutdown backup nodes, [REASON] prevent hardware damage, [SPACE] East Wing Server Room, [TIME] 14:15.",
+      "utterance_control": "Server room temperatures have been spiking all week. Although the HVAC team is working on it, the east wing sensor went red again at 14:15. To prevent hardware damage and data loss, we need to shut down all backup nodes immediately.",
+      "utterance_cflt": "Shut down all backup nodes immediately, because we need to prevent hardware damage and data loss, in the east wing server room, at 14:15 — although the HVAC team is working on it, temperatures have been spiking all week.",
       "ground_truth": {
         "action": "shutdown",
         "target": "backup_nodes",
-        "priority": "high"
+        "location": "east_wing",
+        "time": "14:15"
+      }
+    },
+    {
+      "id": "EN_L3_02",
+      "level": 3,
+      "language": "en",
+      "category": "Healthcare",
+      "utterance_control": "The patient in bed 7 has been stable since admission, but the latest blood test shows elevated white cells. The lab tech mentioned the sample might be contaminated, but to be safe, please notify the on-call physician within the next hour.",
+      "utterance_cflt": "Please notify the on-call physician within the next hour, because the latest blood test shows elevated white cells, for the patient in bed 7 — the sample might be contaminated, but the patient has been stable since admission.",
+      "ground_truth": {
+        "action": "notify",
+        "target": "physician",
+        "location": "bed_7",
+        "time": "within_1_hour"
+      }
+    },
+    {
+      "id": "EN_L3_03",
+      "level": 3,
+      "language": "en",
+      "category": "Retail Operations",
+      "utterance_control": "Black Friday traffic is overwhelming the checkout counters. Even though we added two extra staff this morning, the queue at register 4 keeps growing through the afternoon. Please open the backup registers on the second floor by 3 PM.",
+      "utterance_cflt": "Please open the backup registers by 3 PM, because the queue at register 4 keeps growing, on the second floor — extra staff was added this morning, but Black Friday traffic keeps overwhelming the counters.",
+      "ground_truth": {
+        "action": "open",
+        "target": "registers",
+        "location": "2F",
+        "time": "15:00"
       }
     },
     {
@@ -76,96 +269,124 @@
       "level": 3,
       "language": "zh",
       "category": "IT Operations",
-      "control": "这周服务器机房温度一直异常波动。虽然空调维修工正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
-      "experimental": "[CORE] 关闭备份节点, [REASON] 防止硬件损坏, [SPACE] 东翼服务器机房, [TIME] 14:15.",
+      "utterance_control": "这周服务器机房温度一直异常波动。虽然空调维修团队正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
+      "utterance_cflt": "立即关闭所有备份节点，因为要防止硬件损坏和数据丢失，在东翼服务器机房，14:15——虽然空调维修团队正在处理，但本周温度一直异常波动。",
       "ground_truth": {
         "action": "shutdown",
         "target": "backup_nodes",
-        "priority": "high"
+        "location": "east_wing",
+        "time": "14:15"
+      }
+    },
+    {
+      "id": "ZH_L3_02",
+      "level": 3,
+      "language": "zh",
+      "category": "Healthcare",
+      "utterance_control": "7床的病人入院以来一直稳定，但最新血检显示白细胞偏高。化验员说样本可能被污染了，但为了安全起见，请在一小时内通知值班医生。",
+      "utterance_cflt": "请在一小时内通知值班医生，因为最新血检显示白细胞偏高，是7床的病人——样本可能被污染，但病人入院以来一直稳定。",
+      "ground_truth": {
+        "action": "notify",
+        "target": "physician",
+        "time": "within_1_hour"
+      }
+    },
+    {
+      "id": "ZH_L3_03",
+      "level": 3,
+      "language": "zh",
+      "category": "Retail Operations",
+      "utterance_control": "黑五客流把收银台挤爆了。虽然今天早上加了两个人手，但4号收银台的队伍整个下午都在变长。请在下午3点前把二楼的备用收银台都打开。",
+      "utterance_cflt": "请在下午3点前打开备用收银台，因为4号收银台的队伍一直在变长，在二楼——虽然今早加了两个人手，但黑五客流持续超载。",
+      "ground_truth": {
+        "action": "open",
+        "target": "registers",
+        "location": "2F",
+        "time": "15:00"
       }
     },
     {
       "id": "EN_L4_01",
       "level": 4,
       "language": "en",
-      "category": "Decision Logic",
-      "control": "I was thinking about calling the police to report the break-in, but then I figured it might be too much hassle. So I've decided I'm just going to stay home and organize all the evidence myself tonight, and then maybe I'll go to the insurance company tomorrow to fill out a claim form, because I really don't want to escalate things right now.",
-      "experimental": "[CORE] Organize evidence, [REASON] avoid escalation, [SPACE] home, [TIME] tonight.",
+      "category": "Decision (multi-action)",
+      "utterance_control": "I was thinking about calling the police to report the break-in, but it seemed like too much hassle. I also considered going to the insurance company tomorrow to file a claim. In the end, I have decided to stay home tonight and organize all the evidence myself.",
+      "utterance_cflt": "I have decided to organize all the evidence myself, at home, tonight — I was thinking about calling the police but it seemed like too much hassle, and I also considered filing an insurance claim tomorrow.",
       "ground_truth": {
-        "primary_action": "document_evidence",
-        "status": "decided"
+        "action": "organize",
+        "target": "evidence",
+        "location": "home",
+        "time": "tonight"
+      }
+    },
+    {
+      "id": "EN_L4_02",
+      "level": 4,
+      "language": "en",
+      "category": "Decision (multi-action)",
+      "utterance_control": "We could try the new sushi place, or maybe the steakhouse downtown. Actually, my friend just texted recommending the Italian restaurant on 5th Avenue, so let's go there at 7 PM tonight.",
+      "utterance_cflt": "Let's go to the Italian restaurant on 5th Avenue at 7 PM tonight — we could have tried the new sushi place, or the steakhouse downtown, but my friend just recommended the Italian one.",
+      "ground_truth": {
+        "action": "go",
+        "target": "italian_restaurant",
+        "location": "5th_avenue",
+        "time": "19:00"
+      }
+    },
+    {
+      "id": "EN_L4_03",
+      "level": 4,
+      "language": "en",
+      "category": "Decision (multi-action)",
+      "utterance_control": "I was originally going to fly to Tokyo next week. Then I almost booked the train to Osaka. But thinking it over, I will just take the bullet train to Kyoto Friday morning.",
+      "utterance_cflt": "I will take the bullet train to Kyoto Friday morning — I was originally going to fly to Tokyo, and then I almost booked the train to Osaka, but I changed my mind.",
+      "ground_truth": {
+        "action": "take",
+        "target": "bullet_train",
+        "location": "kyoto",
+        "time": "friday_morning"
       }
     },
     {
       "id": "ZH_L4_01",
       "level": 4,
       "language": "zh",
-      "category": "Decision Logic",
-      "control": "我本来想报警报案的，但后来觉得太麻烦了。所以我决定今晚留在家里自己整理所有证据，明天再去保险公司填索赔单，因为我现在真的不想把事情闹大。",
-      "experimental": "[CORE] 整理证据, [REASON] 避免扩大事态, [SPACE] 家里, [TIME] 今晚.",
+      "category": "Decision (multi-action)",
+      "utterance_control": "我本来想报警报案，但觉得太麻烦。也考虑过明天去保险公司填索赔单。最后我决定今晚留在家里自己整理所有证据。",
+      "utterance_cflt": "我决定整理所有证据，在家里，今晚——本来想报警觉得太麻烦，保险公司索赔也考虑过，明天再说。",
       "ground_truth": {
-        "primary_action": "document_evidence",
-        "status": "decided"
+        "action": "organize",
+        "target": "evidence",
+        "location": "home",
+        "time": "tonight"
       }
     },
     {
-      "id": "EN_L5_01",
-      "level": 5,
-      "language": "en",
-      "category": "Data Analysis",
-      "control": "Here are the server logs from the last hour: [10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]. Since memory over 30GB triggers a hard reset, I need you to calculate the average CPU load for this period and find if any entries have both CPU > 80% and a non-None error. If found, list the error type and the peak memory for those specific logs.",
-      "experimental": "[CORE] Calculate avg CPU & extract high-load error logs (ERR!=None & CPU>80%), [REASON] prevent memory reset (Limit:30GB), [SPACE] Log Data, [TIME] past hour. Source: [10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]",
-      "ground_truth": {
-        "avg_cpu": "75.0%",
-        "high_load_errors": [
-          {
-            "error": "Timeout",
-            "mem": "28GB"
-          },
-          {
-            "error": "Overflow",
-            "mem": "31GB"
-          }
-        ],
-        "reset_triggered": true
-      }
-    },
-    {
-      "id": "ZH_L5_01",
-      "level": 5,
+      "id": "ZH_L4_02",
+      "level": 4,
       "language": "zh",
-      "category": "Data Analysis",
-      "control": "这是过去一小时的服务器日志：[10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]。由于内存超过30GB会触发硬重启，我需要你计算这段时间的平均CPU负载，并找出CPU > 80%且错误不为None的条目。如果找到了，列出错误类型和对应的内存峰值。",
-      "experimental": "[CORE] 计算平均CPU并提取高负载错误日志 (ERR!=None & CPU>80%), [REASON] 防止内存重启 (限制:30GB), [SPACE] 日志数据, [TIME] 过去一小时. 数据源: [10:00 CPU:45% MEM:12GB ERR:None, 10:15 CPU:88% MEM:28GB ERR:Timeout, 10:30 CPU:92% MEM:31GB ERR:Overflow]",
+      "category": "Decision (multi-action)",
+      "utterance_control": "可以试试新开的寿司店，或者市中心的牛排店。不过我朋友刚发消息推荐第五大道的意大利餐厅，那就今晚7点去那里吧。",
+      "utterance_cflt": "今晚7点去第五大道的意大利餐厅吧——新开的寿司店可以试试，市中心的牛排店也想过，但朋友刚推荐的意大利餐厅更好。",
       "ground_truth": {
-        "avg_cpu": "75.0%",
-        "high_load_errors": [
-          {
-            "error": "Timeout",
-            "mem": "28GB"
-          },
-          {
-            "error": "Overflow",
-            "mem": "31GB"
-          }
-        ],
-        "reset_triggered": true
+        "action": "go",
+        "target": "italian_restaurant",
+        "location": "5th_avenue",
+        "time": "19:00"
       }
     },
     {
-      "id": "EN_L5_02",
-      "level": 5,
-      "language": "en",
-      "category": "Financial Logic",
-      "control": "Transaction list: [ID:001 AMT:$500 CAT:Travel, ID:002 AMT:$1200 CAT:Tech, ID:003 AMT:$300 CAT:Travel]. Our policy flags Travel expenses over $400 or any Tech over $1000 for manual audit. Please sum the total amount of flagged transactions and tell me how many items need an audit.",
-      "experimental": "[CORE] Sum flagged transactions & count audit items (Travel>$400 or Tech>$1000), [REASON] compliance policy, [SPACE] Transaction List, [TIME] current period. Source: [ID:001 AMT:$500 CAT:Travel, ID:002 AMT:$1200 CAT:Tech, ID:003 AMT:$300 CAT:Travel]",
+      "id": "ZH_L4_03",
+      "level": 4,
+      "language": "zh",
+      "category": "Decision (multi-action)",
+      "utterance_control": "我本来打算下周飞东京。后来又差点订了去大阪的火车。但想了想，周五早上就坐新干线去京都吧。",
+      "utterance_cflt": "周五早上坐新干线去京都吧——本来打算飞东京，又差点订了去大阪的火车，但最后还是决定去京都。",
       "ground_truth": {
-        "flagged_total": 1700,
-        "audit_count": 2,
-        "flagged_ids": [
-          "001",
-          "002"
-        ]
+        "action": "take",
+        "target": "bullet_train",
+        "location": "kyoto",
+        "time": "friday_morning"
       }
     }
   ]

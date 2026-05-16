@@ -35,7 +35,21 @@ MODELS_CONFIG = {
     "google/gemini-1.5-pro": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
     "google/gemini-3.1-flash-lite": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
     "google/gemini-3.1-pro": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
+    "google/gemini-3-flash-preview": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
+    "google/gemini-3-flash": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
     "ollama/qwen2.5:7b": {"api_key": "ollama", "base_url": "http://localhost:11434/v1", "provider": "ollama"},
+    "ollama/qwen3:8b": {"api_key": "ollama", "base_url": "http://localhost:11434/v1", "provider": "ollama"},
+    # DeepSeek (OpenAI-compatible). Set DEEPSEEK_API_KEY (https://platform.deepseek.com/api_keys).
+    "deepseek/deepseek-chat":     {"api_key": os.getenv("DEEPSEEK_API_KEY"), "base_url": "https://api.deepseek.com/v1", "provider": "deepseek"},
+    "deepseek/deepseek-v4-pro": {"api_key": os.getenv("DEEPSEEK_API_KEY"), "base_url": "https://api.deepseek.com/v1", "provider": "deepseek"},
+    # Qwen via Alibaba DashScope (OpenAI-compatible). Set QWEN_API_KEY (申请: https://dashscope.console.aliyun.com/apiKey).
+    # International endpoint: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+    "qwen/qwen3.6-max": {"api_key": os.getenv("QWEN_API_KEY"), "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "provider": "qwen"},
+    "qwen/qwen3.5-plus": {"api_key": os.getenv("QWEN_API_KEY"), "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "provider": "qwen"},
+    "qwen/qwen-flash": {"api_key": os.getenv("QWEN_API_KEY"), "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "provider": "qwen"},
+    "qwen/qwen-max": {"api_key": os.getenv("QWEN_API_KEY"), "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "provider": "qwen"},
+    "qwen/qwen-plus": {"api_key": os.getenv("QWEN_API_KEY"), "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "provider": "qwen"},
+    "qwen/qwen-turbo": {"api_key": os.getenv("QWEN_API_KEY"), "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "provider": "qwen"},
 }
 
 SYSTEM_PROMPT_TEMPLATE = """
@@ -135,77 +149,123 @@ def load_dataset():
     with open(DATASET_PATH, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def compare_json(actual: Any, expected: Any) -> bool:
-    """Recursively compare two JSON objects for structural and semantic equality."""
-    if isinstance(actual, dict) and isinstance(expected, dict):
-        # Key semantic mapping
-        key_synonyms = {
-            "error": ["error_type", "err", "type"],
-            "mem": ["peak_memory", "mem_peak", "memory", "peak_mem"],
-            "time": ["timestamp", "at"]
-        }
-        
-        # Check if expected keys exist in actual (or their synonyms)
-        for ek, ev in expected.items():
-            found_key = ek
-            if ek not in actual:
-                # Try synonyms
-                if ek in key_synonyms:
-                    for syn in key_synonyms[ek]:
-                        if syn in actual:
-                            found_key = syn
-                            break
-                if found_key == ek: # Still not found
-                    return False
-            
-            if not compare_json(actual[found_key], ev):
-                return False
-        return True
-    elif isinstance(actual, list) and isinstance(expected, list):
-        if len(actual) != len(expected): return False
-        return all(compare_json(a, e) for a, e in zip(actual, expected))
-    elif isinstance(actual, str) and isinstance(expected, dict):
-        # Fuzzy match: check if string contains all expected values
-        for ek, ev in expected.items():
-            if isinstance(ev, str) and ev.lower() not in actual.lower():
-                return False
-        return True
-    else:
-        if isinstance(actual, str) and isinstance(expected, str):
-            a_clean = actual.strip().lower()
-            e_clean = expected.strip().lower()
-            if a_clean == e_clean: return True
-            
-            # ID prefix removal (e.g., "ID:001" matches "001")
-            if a_clean.replace("id:", "").strip() == e_clean.replace("id:", "").strip():
-                return True
-            
-            # Semantic mapping for common evaluation values
-            synonyms = {
-                "off": ["turn off", "shutdown", "关", "关闭", "power off", "关掉"],
-                "on": ["turn on", "start", "开", "开启", "power on", "打开"],
-                "close": ["shut", "关", "关闭", "关上"],
-                "window": ["windows", "窗户", "窗"],
-                "lights": ["light", "灯", "电灯"],
-                "5f_conference_room": ["5楼大会议室", "grand conference room on the 5th floor", "5f grand conference room", "5f_grand_conference_room", "5f_large_conference_room"],
-                "decided": ["scheduled", "planned", "confirmed", "决定", "已决定"],
-                "document_evidence": ["organize_evidence", "collect_evidence", "整理证据", "整理所有证据"],
-                "error": ["error_type", "err", "error", "错误类型"],
-                "mem": ["peak_memory", "mem_peak", "memory", "内存峰值", "峰值内存"]
-            }
-            if e_clean in synonyms and a_clean in synonyms[e_clean]:
-                return True
-            # Also check reverse mapping for symmetric synonyms
-            for canon, syns in synonyms.items():
-                if a_clean == canon and e_clean in syns:
-                    return True
+import re as _re
 
-            # Partial match for longer values (e.g., "5f grand conference room" matches "5f conference room")
-            if len(e_clean) > 5 and (e_clean in a_clean or a_clean in e_clean):
-                return True
-            
-            # Key-based synonym check for lists of dicts
-            # (handled by recursive call if keys match, but sometimes keys themselves are synonyms)
-            # This is handled in the dict comparison above but for values here.
-                
-        return actual == expected
+_PUNCT_STRIP = ".,;:!?。，；：！？\"'`()[]{}（）【】「」"
+
+# Leading determiners / quantifiers that don't change semantic identity.
+# "all the lights" ≡ "lights"; "所有备份节点" ≡ "备份节点".
+_LEADING_DETERMINERS_EN = ("all the ", "all ", "the ", "a ", "an ", "my ", "our ", "this ", "that ")
+_LEADING_DETERMINERS_ZH = ("所有", "那些", "这些", "全部")
+
+# H:00 → H (so "6:00 pm" ≡ "6 pm"). Preserves non-zero minutes (14:15 stays as-is).
+_HOUR_ZERO_MINUTE = _re.compile(r"(\b\d{1,2}):00(?!\d)")
+
+# Models sometimes prepend today's ISO date to time fields ("2026-05-16 18:00" ≡ "18:00").
+_ISO_DATE_PREFIX = _re.compile(r"^\d{4}-\d{2}-\d{2}[T ]?")
+
+# Collapse spaces between digits and CJK characters (Qwen3 style: "5 楼" → "5楼").
+# Non-raw strings so Python processes \uXXXX escapes into the actual Unicode codepoints
+# before handing the pattern to the regex engine.
+_CJK_DIGIT_SPACE = _re.compile("(\\d)\\s+([一-鿿㐀-䶿豈-﫿])")
+_DIGIT_CJK_SPACE = _re.compile("([一-鿿㐀-䶿豈-﫿])\\s+(\\d)")
+
+
+def _normalize(s: str) -> str:
+    if not isinstance(s, str):
+        s = str(s)
+    s = s.strip().lower()
+    # Strip leading ISO date prefix on time-like values BEFORE hyphen→space.
+    s = _ISO_DATE_PREFIX.sub("", s)
+    # Treat hyphens as spaces: "5th-floor" ≡ "5th floor", "on-call" ≡ "on call".
+    s = s.replace("-", " ").replace("—", " ").replace("–", " ")
+    # Drop ":00" minute suffix BEFORE punctuation stripping wipes the colon.
+    s = _HOUR_ZERO_MINUTE.sub(r"\1", s)
+    # Collapse spaces between digits and CJK characters (Qwen3 style):
+    # "5 楼" → "5楼", "今晚 7 点" → "今晚7点", "502 号" → "502号"
+    s = _CJK_DIGIT_SPACE.sub(r"\1\2", s)
+    s = _DIGIT_CJK_SPACE.sub(r"\1\2", s)
+    for ch in _PUNCT_STRIP:
+        s = s.replace(ch, "")
+    s = " ".join(s.split())
+    # Strip a single leading determiner/quantifier.
+    for d in _LEADING_DETERMINERS_EN:
+        if s.startswith(d):
+            s = s[len(d):]
+            break
+    for d in _LEADING_DETERMINERS_ZH:
+        if s.startswith(d):
+            s = s[len(d):]
+            break
+    return s
+
+
+def _resolve_key(canonical_key: str, actual_keys, key_aliases) -> Optional[str]:
+    """Find the actual dict key that matches a canonical expected key."""
+    if canonical_key in actual_keys:
+        return canonical_key
+    aliases = key_aliases.get(canonical_key, []) if key_aliases else []
+    norm_aliases = {_normalize(a) for a in aliases}
+    norm_aliases.add(_normalize(canonical_key))
+    for ak in actual_keys:
+        if _normalize(ak) in norm_aliases:
+            return ak
+    return None
+
+
+def _value_matches(actual_value, canonical_value: str, field: str, value_synonyms) -> bool:
+    """Check whether actual_value is an acceptable surface form of canonical_value."""
+    if actual_value is None:
+        return False
+    # Booleans / numbers: stringify and compare via normalized equality.
+    if not isinstance(actual_value, str):
+        actual_value = str(actual_value)
+
+    accepted = []
+    if value_synonyms and field in value_synonyms:
+        accepted = list(value_synonyms[field].get(canonical_value, []))
+    accepted.append(canonical_value)
+    accepted_norm = {_normalize(a) for a in accepted}
+
+    return _normalize(actual_value) in accepted_norm
+
+
+def compare_extraction(actual, expected, key_aliases=None, value_synonyms=None) -> bool:
+    """Compare an extracted JSON object against a ground-truth dict.
+
+    Rules:
+      - Every expected key must have a matching key (or alias) in actual.
+      - Every expected value must match (after normalization) one of the
+        declared synonyms for that (field, canonical_value) pair, or the
+        canonical itself.
+      - Extra keys in actual are ignored (the model may volunteer more).
+      - No fuzzy substring fallback; no string-to-dict coercion.
+    """
+    if not isinstance(actual, dict) or not isinstance(expected, dict):
+        return False
+    for canon_key, canon_val in expected.items():
+        ak = _resolve_key(canon_key, list(actual.keys()), key_aliases or {})
+        if ak is None:
+            return False
+        if not _value_matches(actual[ak], canon_val, canon_key, value_synonyms or {}):
+            return False
+    return True
+
+
+# Back-compat shim: the old name pointed at a recursive compare with hidden
+# synonym tables. New callers should use compare_extraction with metadata.
+def compare_json(actual: Any, expected: Any) -> bool:
+    """Deprecated: strict structural equality only. Use compare_extraction."""
+    if isinstance(actual, dict) and isinstance(expected, dict):
+        if set(actual.keys()) != set(expected.keys()):
+            # Allow extras in actual.
+            if not set(expected.keys()).issubset(actual.keys()):
+                return False
+        return all(compare_json(actual[k], expected[k]) for k in expected)
+    if isinstance(actual, list) and isinstance(expected, list):
+        return len(actual) == len(expected) and all(
+            compare_json(a, e) for a, e in zip(actual, expected)
+        )
+    if isinstance(actual, str) and isinstance(expected, str):
+        return _normalize(actual) == _normalize(expected)
+    return actual == expected

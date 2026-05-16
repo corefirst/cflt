@@ -37,11 +37,12 @@ def run_benchmark(target_model_tag: Optional[str] = None):
         model_results = {"model": tag, "cases": []}
         
         for case in dataset["test_cases"]:
-            res = call_transformer(client, model_name, case["control"])
+            source_text = case.get("utterance_control") or case.get("control")
+            res = call_transformer(client, model_name, source_text)
             metrics = validate_cflt_compliance(res)
             model_results["cases"].append({
                 "id": case["id"],
-                "input": case["control"],
+                "input": source_text,
                 "metrics": metrics,
                 "response": res
             })

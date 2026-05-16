@@ -78,7 +78,7 @@ The choice between the two architectures is **empirical, not doctrinal** — set
 
 ## 4. Computational Efficiency: Token & Cache Optimization
 
-Beyond reasoning stability, CFLT provides measurable performance gains in production environments.
+Beyond reasoning stability, CFLT provides measurable performance gains in specific scenarios; see §5.2 for empirical results.
 
 ### 4.1 Token Reduction via Structural Flattening
 Natural language often uses complex nesting (relative clauses, parentheticals) that requires significant token overhead for syntactic markers. 
@@ -127,20 +127,46 @@ Modern inference frameworks (e.g., vLLM's APC, SGLang's RadixAttention) provide 
 
 In short: §5.1 establishes that *some* fixed-prefix protocol pays. §5.2 specifies what CFLT must demonstrate to claim it is *the right one*.
 
-### 5.2 CFLT-Specific Projections (Subject to Validation)
-We propose the following metrics for future **Ablation Studies** to validate CFLT's specific increments:
-- **Token Economy:** By converting natural language into linear CFLT slots, we project a **30%–50% reduction** in "syntactic fluff" tokens (based on structured prompt benchmarks like TOON and CSV).
-- **Accuracy Boost:** We anticipate a **15%–20% improvement** in instruction-following for long-context tasks by aligning the Core with the high-attention prefix region (driven by primacy; see [`../foundations/llm.md`](../foundations/llm.md) §2.3 for the careful disambiguation between primacy and the softmax-stability sink artifact, [Xiao et al. 2024](https://doi.org/10.48550/arXiv.2309.17453)).
+### 5.2 CFLT-Specific Validation Results (Completed, 2026-05-16)
+
+The following results come from a controlled ablation across 4 frontier models (GPT-5, Gemini 3 Flash Preview, Qwen3.5-Plus, DeepSeek V4 Pro) on 24 cases (N=3 runs per arm). Full data: [`llm-part2-verification.md`](./llm-part2-verification.md).
+
+**Accuracy on distractor cases (L3 — the only informative level):**
+
+| Model | Control | CFLT | Δ | vs Prediction |
+| :-- | :-- | :-- | :-- | :-- |
+| GPT-5 | 61% | 100% | **+39pp** | ✅ Exceeds +15–20pp |
+| Gemini 3 Flash | 78% | 100% | **+22pp** | ✅ Exceeds |
+| Qwen3.5-Plus | 61% | 100% | **+39pp** | ✅ Exceeds |
+| DeepSeek V4 Pro | 56% | 100% | **+44pp** | ✅ Exceeds |
+
+All 4 models reach 100% accuracy under CFLT on distractor-heavy cases, versus 56–78% under natural word order. Simple cases (L1/L2) are ceiling-saturated in both arms; multi-action decision cases (L4) show CFLT is mildly harmful (see [`llm-part2-verification.md`](./llm-part2-verification.md) §2.3).
+
+**Token economy (mechanism differs from original prediction):**
+
+- **Prompt token savings: ~−1%** (not significant). This dataset uses identical lexical content in both arms, making prompt compression untestable. The original −30–50% projection assumed prompt compression, which does not apply here.
+- **Thinking model completion savings: −12% to −38%.** CFLT's core-first structure lets thinking models (Qwen3.5-Plus: −38.4%, DeepSeek V4 Pro: −12.5%) converge faster, shortening reasoning traces. Qwen's total token reduction (−37.1%) falls within the projected range, but the saving comes from completion, not prompt tokens.
+
+> **Note:** To test the prompt-compression claim directly, a third "compressed CFLT" arm (with NULL fillers and slot labels) is required — not supported by the current dataset design.
 
 ---
 
-## 6. Proposed Validation: The CFLT Ablation Study
+## 6. Completed Validation: The CFLT Ablation Study (2026-05-16)
 
-To move from projection to proof, we recommend the following experimental setup:
-1. **Control Group:** Natural language prompts with variable word order.
-2. **Experimental Group:** The same semantic intent transformed into strict CFLT sequence.
-3. **Metric A (Precision):** Instruction following accuracy on the "Needle-in-a-Haystack" test.
-4. **Metric B (Efficiency):** Average tokens per successful execution.
+The §5.2 projections have been tested in a controlled ablation (see [`llm-part2-verification.md`](./llm-part2-verification.md)):
+
+1. **Control Group:** Natural language prompts with variable word order (typically reason-first).
+2. **Experimental Group:** Same lexical content reordered into strict CFLT sequence (Core → Reason → Space → Time), with no literal slot tags.
+3. **Metric A (Accuracy):** JSON extraction accuracy under a metadata-driven synonym judge (N=3, temperature=0).
+4. **Metric B (Efficiency):** `prompt_tokens` and `completion_tokens` reported independently — never merged.
+
+**Core findings (4 models, 24 cases, 96 repetitions):**
+
+- On distractor-heavy cases (L3), CFLT raised accuracy from 56–78% to **100%** across all 4 models, Δ +22 to +44pp — exceeding the predicted +15–20pp.
+- On multi-action decision cases (L4), CFLT is mildly harmful for non-ceiling models (DeepSeek V4 Pro −11pp); deploy cautiously in this scenario type.
+- Thinking models (Qwen3.5-Plus) saw completion-token reduction of **−38.4%** via reduced reasoning overhead, not prompt compression.
+
+Full per-case tables, cross-model comparison, and methodology notes: [`llm-part2-verification.md`](./llm-part2-verification.md).
 
 ---
 
@@ -182,6 +208,14 @@ graph LR
 
 ## 9. Summary
 
-CFLT is the **"Assembly Language" of LLM prompting**. By treating discourse as a structured sequence, you move away from "Prompt Magic" and toward **Prompt Engineering**.
+CFLT is a **structured prompting protocol** whose core claims have been validated in a controlled ablation across 4 frontier models (see [`llm-part2-verification.md`](./llm-part2-verification.md)):
 
-**Predictable Order = Predictable Output.**
+**CFLT has clear benefits in:**
+- **Distractor-heavy contexts** (noise, background clauses, competing information): placing the core action at position 0 raises accuracy to 100% across all tested models, Δ +22 to +44pp.
+- **Thinking model efficiency**: CFLT reduces completion tokens by 12%–38% by shortening confused reasoning traces on distractor-heavy inputs.
+
+**CFLT is neutral or mildly harmful in:**
+- **Simple, direct instructions**: models already handle these reliably — no gain.
+- **Multi-option, narrative-order-dependent scenarios**: the natural "alternatives → final decision" sequence is a reasoning scaffold; front-loading the conclusion removes it, causing mild accuracy drops.
+
+> CFLT is a **reliable gain in high-noise, distractor-heavy tasks** — not a universal prompt optimizer.
