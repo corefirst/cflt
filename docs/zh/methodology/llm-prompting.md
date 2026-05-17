@@ -127,11 +127,11 @@ CFLT 的有效性得到了现代推理引擎的行业基准测试和近期提示
 
 简而言之：§5.1 确立了某种固定前缀协议是有回报的。§5.2 则指定了 CFLT 必须展示什么才能声称它是*正确的那一个*。
 
-### 5.2 CFLT 特有的验证结果（已完成，2026-05-16）
+### 5.2 CFLT 特有的验证结果（2026-05-17，扩展自 2026-05-16 4 模型基线）
 
-以下为跨 4 个前沿模型（GPT-5、Gemini 3 Flash、Qwen3.5-Plus、DeepSeek V4 Pro）在 24 个受控案例上的实测结果。完整数据见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
+以下为跨 **5 个前沿模型**（GPT-5、Gemini 3 Flash Preview、Qwen3.5-Plus、DeepSeek V4 Pro、Claude Sonnet 4.6 经 OpenRouter）在 24 个受控案例上的实测结果（N=3 runs / arm）。完整数据见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
 
-**准确率提升（干扰信息场景 L3）：**
+**准确率提升（干扰信息场景 L3——主要信息层级）：**
 
 | 模型 | Control | CFLT | Δ | vs 预测 |
 | :-- | :-- | :-- | :-- | :-- |
@@ -139,19 +139,21 @@ CFLT 的有效性得到了现代推理引擎的行业基准测试和近期提示
 | Gemini 3 Flash | 78% | 100% | **+22pp** | ✅ 超过预测 |
 | Qwen3.5-Plus | 61% | 100% | **+39pp** | ✅ 超过预测 |
 | DeepSeek V4 Pro | 56% | 100% | **+44pp** | ✅ 超过预测 |
+| Claude Sonnet 4.6 | 72% | 100% | **+28pp** | ✅ 超过预测 |
 
-4/4 模型在含干扰信息的场景下，CFLT 均将准确率提升至 100%（见首因假设 §2.1）。简单场景（L1/L2）两组均饱和，无区分度；多候选决策场景（L4）CFLT 略微有害（详见 [`llm-part2-verification.md`](./llm-part2-verification.md) §2.3）。
+**全部 5 个前沿模型在 L3 distractor-heavy 场景下精确达到 100%** 准确率，而自然语序 control 组为 56–78%（均值 65.6%）。简单场景（L1/L4）多数模型两组均饱和；L2 在五分之三模型上饱和（GPT-5、Gemini、DeepSeek），在另两个上呈噪声区行为（Qwen +6pp；Claude −6pp，详见 [`llm-part2-verification.md`](./llm-part2-verification.md) §5.5）。多候选决策场景（L4）CFLT *仅* 在 DeepSeek V4 Pro 上呈回归（−11pp）；其他四个模型 L4 在两组上都接近或处于天花板。
 
 **令牌经济（实测机制与原始预测不同）：**
 
 - **Prompt token 节省：约 -1%**（不显著）。本数据集两组词汇相同，无法测试 prompt 压缩效果。原文 -30–50% 预测基于 prompt 压缩机制，在此场景不适用。
-- **Thinking model 的 completion token 节省：-12% ~ -38%**。CFLT 把 core action 前置后，thinking model 在干扰信息中的”搜索困惑”减少，推理 trace 显著缩短（Qwen3.5-Plus -38.4%，DeepSeek V4 Pro -12.5%）。总 token 降幅（Qwen -37.1%）落在原预测区间内，但节省来自 completion 而非 prompt。
+- **Reasoning-capable 模型的 completion token 节省：-12% ~ -38%**。CFLT 的 core-first 结构让显式 chain-of-thought 模型（Qwen3.5-Plus -38.4%，DeepSeek V4 Pro -12.5%）更快收敛，缩短推理 trace。Qwen 总 token 降幅（-37.1%）落在原预测区间内，但节省来自 completion 而非 prompt。
+- **短输出 / 隐式 reasoning 模型无 token 效应**。GPT-5（+0.7%）、Gemini Flash（+1.4%）、Claude Sonnet 4.6（+0.9%）的 completion token Δ 都在 ±1.5% 噪声范围内。这确认了一个干净的双簇模式：**token 节省取决于可见 reasoning trace**。
 
-> **注：** 若要测试 prompt 压缩主张，需加入第三组”压缩 CFLT”（含 NULL 填充的紧凑形式），本数据集设计不支持该测试。
+> **注：** 若要测试 prompt 压缩主张，需加入第三组"压缩 CFLT"（含 NULL 填充和显式槽位标签的紧凑形式），本数据集设计不支持该测试。
 
 ---
 
-## 6. 已完成的验证：CFLT 消融实验（2026-05-16）
+## 6. 已完成的验证：CFLT 消融实验（2026-05-17，5 模型）
 
 §5.2 的预测已通过受控消融实验进行验证。实验遵循以下设置（详见 [`llm-part2-verification.md`](./llm-part2-verification.md)）：
 
@@ -160,13 +162,13 @@ CFLT 的有效性得到了现代推理引擎的行业基准测试和近期提示
 3. **指标 A（精度）：** JSON 结构化抽取的指令遵循准确率（N=3，temperature=0）。
 4. **指标 B（效率）：** prompt_tokens 和 completion_tokens 分别报告。
 
-**核心结论（4 模型，24 case，96 次重复）：**
+**核心结论（5 模型，24 case，每模型 144 calls，共 720 次试验）：**
 
-- 在含干扰信息的场景（L3）下，CFLT 将 4/4 模型的准确率从 56–78% 提升至 **100%**，Δ +22 ~ +44pp，超过预测的 +15–20pp。
-- 在多候选决策场景（L4）下，CFLT 对部分模型轻微有害（DeepSeek V4 Pro -11pp），建议在该类场景实测后再部署。
-- Thinking model（Qwen3.5-Plus）的 completion token 减少 **38.4%**，机制为减少推理搜索开销而非 prompt 压缩。
+- 在含干扰信息的场景（L3）下，CFLT 将 **5/5 前沿模型** 的准确率从 56–78% 提升至 **100%**（L3 control 均值 65.6%；Δ 范围 +22 ~ +44pp）。L3 CFLT 在所有 5 个不同模型家族（4 家前沿厂商 + 1 家经 OpenRouter；覆盖隐式 reasoning、显式 chain-of-thought 和短输出三种输出模式）上一致饱和至 100%，是本实验最有力的证据。
+- 在多候选决策场景（L4）下，−11pp 的 CFLT 回归**仅限于 DeepSeek V4 Pro 一家**；其他四个模型 L4 都饱和。L4 异常因此是**模型特异**而非通用模式（修正自加入 Claude 前的 4 模型解读）。
+- Reasoning-capable 模型（Qwen3.5-Plus、DeepSeek V4 Pro）的 completion token 分别减少 −38.4% 和 −12.5%，机制为推理开销减少。三个短输出 / 隐式 reasoning 模型（GPT-5、Gemini Flash、Claude Sonnet 4.6）的 completion token Δ 都在 ±1.5%（无效应）——确认 token 经济收益**取决于可见 reasoning trace**，而非通用。
 
-完整数据表、per-case 结果与方法论说明见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
+完整数据表、per-case 结果、方法论说明，以及 Claude 集成适配器（OpenRouter gateway + 容错 JSON 解析器）见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
 
 ---
 
@@ -208,14 +210,16 @@ graph LR
 
 ## 9. 总结
 
-CFLT 是一种**结构化提示词协议**，其核心主张已获得跨 4 个前沿模型的受控实验支持（参见 [`llm-part2-verification.md`](./llm-part2-verification.md)）：
+CFLT 是一种**结构化提示词协议**，其核心主张已获得跨 5 个前沿模型的受控实验支持（参见 [`llm-part2-verification.md`](./llm-part2-verification.md)）：
 
 **CFLT 在以下场景有明确益处：**
-- **干扰信息场景**（context 中包含干扰项、修饰从句、背景噪声）：将核心动作置于 position 0 可将准确率提升至 100%，Δ +22~+44pp。
-- **Thinking model 的推理效率**：CFLT 减少模型在干扰信息中的搜索困惑，completion token 可减少 12%–38%。
+- **干扰信息场景**（context 中包含干扰项、修饰从句、背景噪声）：将核心动作置于 position 0 在所有 5 个被测前沿模型上将准确率提升至 100%，Δ +22~+44pp。
+- **Reasoning-capable 模型的推理效率**：CFLT 在显式 chain-of-thought 模型（Qwen、DeepSeek）上减少 completion token 12%–38%，机制为缩短在干扰信息中的搜索困惑。**对短输出 / 隐式 reasoning 模型（GPT-5、Gemini Flash、Claude Sonnet 4.6）无 token 效应**。
 
-**CFLT 在以下场景无效或有害：**
+**CFLT 在以下场景无效：**
 - **简单直接的指令**：模型已能可靠完成，CFLT 无增益。
-- **多候选选项、叙事顺序有信息价值的场景**：自然的”备选→决策”叙事结构是推理脚手架，CFLT 前置结论后该脚手架消失，准确率可能小幅下降。
 
-> CFLT 是**信息密度高、干扰场景**下的稳定增益工具，不是对所有提示词都适用的通用优化。
+**CFLT 在以下场景有模型特异问题：**
+- **DeepSeek V4 Pro 在多候选决策（L4）上**（−11pp）。其他四个被测前沿模型（GPT-5、Gemini Flash、Qwen3.5、Claude Sonnet 4.6）不出现该回归。先前"CFLT 在多候选场景下普遍轻微有害"的解读已撤回，更准确的表述为："DeepSeek V4 Pro 在该类场景下显示模型特异的指令遵从异常；在该模型上部署 CFLT 处理该任务类型前需 A/B 测试。"
+
+> CFLT 是**信息密度高、干扰场景**下**与模型无关的可靠增益**工具——不是对所有提示词都适用的通用优化，也不是对所有任务类型在所有模型上都安全的。L3 通用性（5/5 模型）是最有力的单一发现；DeepSeek L4 异常（1/5 模型）是最有力的反例，作为诚实证据保留在文档中。

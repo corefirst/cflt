@@ -90,6 +90,40 @@ def _infer_runs_for_block(block: Dict[str, Any]) -> int:
     return n or DEFAULT_RUNS
 
 
+def _parse_json_lenient(text: str):
+    """Parse JSON from text, tolerating markdown code fences and surrounding prose.
+
+    Some providers (notably Anthropic Claude via OpenRouter) return JSON wrapped
+    in ```json ... ``` or with leading/trailing commentary, even when the OpenAI
+    response_format parameter is honored. This helper tries three escalating
+    strategies: direct parse → strip markdown fences → extract first {...} block.
+    Returns the parsed dict or None if no valid JSON could be extracted.
+    """
+    if not text:
+        return None
+    import re
+    # Strategy 1: direct parse (works for OpenAI / Gemini / Qwen / DeepSeek).
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    # Strategy 2: strip markdown code fence (```json ... ``` or ``` ... ```).
+    fence_match = re.search(r"```(?:json)?\s*\n?(.*?)\n?```", text, re.DOTALL)
+    if fence_match:
+        try:
+            return json.loads(fence_match.group(1))
+        except json.JSONDecodeError:
+            pass
+    # Strategy 3: extract the first balanced {...} block (handles leading prose).
+    brace_match = re.search(r"\{.*\}", text, re.DOTALL)
+    if brace_match:
+        try:
+            return json.loads(brace_match.group(0))
+        except json.JSONDecodeError:
+            pass
+    return None
+
+
 def call_extract(
     client,
     model: str,
@@ -114,15 +148,19 @@ def call_extract(
             # Reasoning models (o-series, some gpt-5 variants) reject temperature; retry without it.
             if any(tok in msg for tok in ("temperature", "unsupported", "not supported")):
                 response = client.chat.completions.create(**base_kwargs)
+            # Some providers (Anthropic via OpenRouter) reject response_format; retry without it.
+            # The lenient JSON parser below recovers JSON from markdown-wrapped output.
+            elif any(tok in msg for tok in ("response_format", "json_object", "json mode")):
+                base_kwargs.pop("response_format", None)
+                response = client.chat.completions.create(temperature=temperature, **base_kwargs)
             else:
                 raise
 
         usage = response.usage
         content_text = response.choices[0].message.content
-        try:
-            content = json.loads(content_text) if content_text else {}
-        except json.JSONDecodeError:
-            return {"error": f"Non-JSON output: {content_text[:200]}"}
+        content = _parse_json_lenient(content_text)
+        if content is None:
+            return {"error": f"Non-JSON output: {(content_text or '')[:200]}"}
 
         return {
             "content": content,

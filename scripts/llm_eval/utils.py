@@ -25,12 +25,49 @@ LANG_MAP = {
     "es": "Spanish"
 }
 
+# --- Gateway Routing ---
+# Provider-to-gateway mapping, parsed from `LLM_GATEWAYS` env var.
+# Format: "provider1:gateway1,provider2:gateway2"
+# Example:  LLM_GATEWAYS=anthropic:openrouter,google:openrouter
+# When a provider is in this map, the model is routed through the gateway's
+# OpenAI-compatible endpoint instead of the provider's direct API.
+def _parse_gateways() -> Dict[str, str]:
+    raw = os.getenv("LLM_GATEWAYS", "")
+    mapping: Dict[str, str] = {}
+    for entry in raw.split(","):
+        entry = entry.strip()
+        if ":" in entry:
+            provider, gateway = entry.split(":", 1)
+            mapping[provider.strip()] = gateway.strip()
+    return mapping
+
+LLM_GATEWAYS = _parse_gateways()
+
+# Gateway endpoint registry. Each gateway must expose an OpenAI-compatible /chat/completions endpoint.
+# Adding a new gateway (e.g., litellm, fireworks, together) only requires registering it here.
+GATEWAY_CONFIGS = {
+    "openrouter": {
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env": "OPENROUTER_API_KEY",
+    },
+    # Add other gateways here as needed:
+    # "litellm":   {"base_url": "http://localhost:4000/v1", "api_key_env": "LITELLM_API_KEY"},
+    # "fireworks": {"base_url": "https://api.fireworks.ai/inference/v1", "api_key_env": "FIREWORKS_API_KEY"},
+}
+
 # Unified Model Registry
 # Format: provider/model-name
+# Notes:
+#   - Entries with concrete `api_key` and `base_url` represent direct-provider routing.
+#   - Entries with `api_key=None` and `base_url=None` are placeholders that ONLY work
+#     when a gateway is configured via LLM_GATEWAYS (e.g., anthropic/*).
 MODELS_CONFIG = {
     "openai/gpt-5": {"api_key": os.getenv("OPENAI_API_KEY"), "base_url": "https://api.openai.com/v1", "provider": "openai"},
     "openai/gpt-5-mini": {"api_key": os.getenv("OPENAI_API_KEY"), "base_url": "https://api.openai.com/v1", "provider": "openai"},
-    "anthropic/claude-4-sonnet": {"api_key": os.getenv("ANTHROPIC_API_KEY"), "base_url": "https://api.anthropic.com", "provider": "anthropic"},
+    # Anthropic — direct API is NOT OpenAI-compatible. Use the gateway mechanism instead (set LLM_GATEWAYS=anthropic:openrouter in .env).
+    "anthropic/claude-sonnet-4-6": {"api_key": None, "base_url": None, "provider": "anthropic"},
+    "anthropic/claude-opus-4-7":   {"api_key": None, "base_url": None, "provider": "anthropic"},
+    "anthropic/claude-haiku-4-5":  {"api_key": None, "base_url": None, "provider": "anthropic"},
     "google/gemini-1.5-flash": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
     "google/gemini-1.5-pro": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
     "google/gemini-3.1-flash-lite": {"api_key": os.getenv("GOOGLE_API_KEY"), "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "provider": "google"},
@@ -254,14 +291,39 @@ def get_client_and_model(model_tag: str):
         actual_model = model_tag
     else:
         provider, actual_model = model_tag.split("/", 1)
-        config = MODELS_CONFIG.get(model_tag)
-        if not config:
-            raise ValueError(f"Model tag '{model_tag}' not found in registry.")
+
+        # Gateway override: if LLM_GATEWAYS maps this provider to a gateway, route through it.
+        # Gateways receive the FULL provider/model tag as the model identifier.
+        gateway_name = LLM_GATEWAYS.get(provider)
+        if gateway_name:
+            if gateway_name not in GATEWAY_CONFIGS:
+                raise ValueError(
+                    f"Gateway '{gateway_name}' configured for provider '{provider}' is not registered. "
+                    f"Available gateways: {list(GATEWAY_CONFIGS.keys())}"
+                )
+            gw = GATEWAY_CONFIGS[gateway_name]
+            config = {
+                "api_key": os.getenv(gw["api_key_env"]),
+                "base_url": gw["base_url"],
+                "provider": gateway_name,
+            }
+            actual_model = model_tag  # Gateway expects the full provider/model tag
+        else:
+            config = MODELS_CONFIG.get(model_tag)
+            if not config:
+                raise ValueError(f"Model tag '{model_tag}' not found in registry (and no gateway configured for provider '{provider}').")
 
     if not config["api_key"] and config["provider"] != "ollama":
+        # Direct-provider entries with api_key=None are placeholders that require a gateway.
+        if config.get("base_url") is None:
+            raise ValueError(
+                f"Model '{model_tag}' has no direct API configured. "
+                f"Set a gateway in .env, e.g.: LLM_GATEWAYS={model_tag.split('/')[0]}:openrouter "
+                f"(and OPENROUTER_API_KEY=...)."
+            )
         raise ValueError(f"API key for {model_tag} is not set in environment.")
 
-    # For Google provider, models usually need the 'models/' prefix in the OpenAI-compatible endpoint
+    # For Google provider (DIRECT API, not via gateway), models need 'models/' prefix
     if config["provider"] == "google" and not actual_model.startswith("models/"):
         actual_model = f"models/{actual_model}"
 

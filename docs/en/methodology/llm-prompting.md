@@ -127,11 +127,11 @@ Modern inference frameworks (e.g., vLLM's APC, SGLang's RadixAttention) provide 
 
 In short: §5.1 establishes that *some* fixed-prefix protocol pays. §5.2 specifies what CFLT must demonstrate to claim it is *the right one*.
 
-### 5.2 CFLT-Specific Validation Results (Completed, 2026-05-16)
+### 5.2 CFLT-Specific Validation Results (Completed, 2026-05-17 expansion of 2026-05-16 baseline)
 
-The following results come from a controlled ablation across 4 frontier models (GPT-5, Gemini 3 Flash Preview, Qwen3.5-Plus, DeepSeek V4 Pro) on 24 cases (N=3 runs per arm). Full data: [`llm-part2-verification.md`](./llm-part2-verification.md).
+The following results come from a controlled ablation across **5 frontier models** (GPT-5, Gemini 3 Flash Preview, Qwen3.5-Plus, DeepSeek V4 Pro, Claude Sonnet 4.6 via OpenRouter) on 24 cases (N=3 runs per arm). Full data: [`llm-part2-verification.md`](./llm-part2-verification.md).
 
-**Accuracy on distractor cases (L3 — the only informative level):**
+**Accuracy on distractor cases (L3 — the primary informative level):**
 
 | Model | Control | CFLT | Δ | vs Prediction |
 | :-- | :-- | :-- | :-- | :-- |
@@ -139,19 +139,21 @@ The following results come from a controlled ablation across 4 frontier models (
 | Gemini 3 Flash | 78% | 100% | **+22pp** | ✅ Exceeds |
 | Qwen3.5-Plus | 61% | 100% | **+39pp** | ✅ Exceeds |
 | DeepSeek V4 Pro | 56% | 100% | **+44pp** | ✅ Exceeds |
+| Claude Sonnet 4.6 | 72% | 100% | **+28pp** | ✅ Exceeds |
 
-All 4 models reach 100% accuracy under CFLT on distractor-heavy cases, versus 56–78% under natural word order. Simple cases (L1/L2) are ceiling-saturated in both arms; multi-action decision cases (L4) show CFLT is mildly harmful (see [`llm-part2-verification.md`](./llm-part2-verification.md) §2.3).
+All **5 frontier models reach exactly 100%** accuracy under CFLT on distractor-heavy cases, versus 56–78% (mean 65.6%) under natural word order. Simple cases (L1/L4) are ceiling-saturated in both arms for most models; L2 saturates for three of five (GPT-5, Gemini, DeepSeek) and shows noise-zone behavior on two (Qwen +6pp; Claude −6pp, see [`llm-part2-verification.md`](./llm-part2-verification.md) §5.5). Multi-action decision cases (L4) show CFLT regression *only* on DeepSeek V4 Pro (−11pp); the other four are at or near ceiling under both arms.
 
 **Token economy (mechanism differs from original prediction):**
 
 - **Prompt token savings: ~−1%** (not significant). This dataset uses identical lexical content in both arms, making prompt compression untestable. The original −30–50% projection assumed prompt compression, which does not apply here.
-- **Thinking model completion savings: −12% to −38%.** CFLT's core-first structure lets thinking models (Qwen3.5-Plus: −38.4%, DeepSeek V4 Pro: −12.5%) converge faster, shortening reasoning traces. Qwen's total token reduction (−37.1%) falls within the projected range, but the saving comes from completion, not prompt tokens.
+- **Reasoning-capable model completion savings: −12% to −38%.** CFLT's core-first structure lets visible-chain-of-thought models (Qwen3.5-Plus: −38.4%, DeepSeek V4 Pro: −12.5%) converge faster, shortening reasoning traces. Qwen's total token reduction (−37.1%) falls within the projected range, but the saving comes from completion, not prompt tokens.
+- **Short-output / concealed-reasoning models show no token effect.** GPT-5 (+0.7%), Gemini Flash (+1.4%), and Claude Sonnet 4.6 (+0.9%) are all within ±1.5% noise. This confirms a clean two-cluster pattern: the token saving is **visible-reasoning-trace-conditional**.
 
 > **Note:** To test the prompt-compression claim directly, a third "compressed CFLT" arm (with NULL fillers and slot labels) is required — not supported by the current dataset design.
 
 ---
 
-## 6. Completed Validation: The CFLT Ablation Study (2026-05-16)
+## 6. Completed Validation: The CFLT Ablation Study (2026-05-17, 5 models)
 
 The §5.2 projections have been tested in a controlled ablation (see [`llm-part2-verification.md`](./llm-part2-verification.md)):
 
@@ -160,13 +162,13 @@ The §5.2 projections have been tested in a controlled ablation (see [`llm-part2
 3. **Metric A (Accuracy):** JSON extraction accuracy under a metadata-driven synonym judge (N=3, temperature=0).
 4. **Metric B (Efficiency):** `prompt_tokens` and `completion_tokens` reported independently — never merged.
 
-**Core findings (4 models, 24 cases, 96 repetitions):**
+**Core findings (5 models, 24 cases, 144 calls per model = 720 trials total):**
 
-- On distractor-heavy cases (L3), CFLT raised accuracy from 56–78% to **100%** across all 4 models, Δ +22 to +44pp — exceeding the predicted +15–20pp.
-- On multi-action decision cases (L4), CFLT is mildly harmful for non-ceiling models (DeepSeek V4 Pro −11pp); deploy cautiously in this scenario type.
-- Thinking models (Qwen3.5-Plus) saw completion-token reduction of **−38.4%** via reduced reasoning overhead, not prompt compression.
+- On distractor-heavy cases (L3), CFLT raised accuracy from 56–78% to **100% across all 5 frontier models** (mean L3 control 65.6%; Δ ranges +22pp to +44pp). The universal saturation at L3 CFLT = 100% across 5 different model families (4 frontier providers + 1 via OpenRouter; spanning concealed-reasoning, visible chain-of-thought, and short-output regimes) is the strongest evidence the experiment produces.
+- On multi-action decision cases (L4), the −11pp CFLT regression is **confined to DeepSeek V4 Pro alone**; the other four models all saturate at L4 ceiling. The L4 anomaly is therefore model-specific rather than a general pattern (revised from the earlier 4-model reading before Claude was added).
+- Reasoning-capable models (Qwen3.5-Plus, DeepSeek V4 Pro) saw completion-token reductions of −38.4% and −12.5% respectively via reduced reasoning overhead. The three short-output / concealed-reasoning models (GPT-5, Gemini Flash, Claude Sonnet 4.6) showed completion-token Δ within ±1.5% (no effect) — confirming the token economy benefit is **visible-reasoning-trace-conditional**, not general.
 
-Full per-case tables, cross-model comparison, and methodology notes: [`llm-part2-verification.md`](./llm-part2-verification.md).
+Full per-case tables, cross-model comparison, methodology notes, and the Claude integration adapter (OpenRouter gateway + lenient JSON parser) are documented in [`llm-part2-verification.md`](./llm-part2-verification.md).
 
 ---
 
@@ -208,14 +210,16 @@ graph LR
 
 ## 9. Summary
 
-CFLT is a **structured prompting protocol** whose core claims have been validated in a controlled ablation across 4 frontier models (see [`llm-part2-verification.md`](./llm-part2-verification.md)):
+CFLT is a **structured prompting protocol** whose core claims have been validated in a controlled ablation across 5 frontier models (see [`llm-part2-verification.md`](./llm-part2-verification.md)):
 
 **CFLT has clear benefits in:**
-- **Distractor-heavy contexts** (noise, background clauses, competing information): placing the core action at position 0 raises accuracy to 100% across all tested models, Δ +22 to +44pp.
-- **Thinking model efficiency**: CFLT reduces completion tokens by 12%–38% by shortening confused reasoning traces on distractor-heavy inputs.
+- **Distractor-heavy contexts** (noise, background clauses, competing information): placing the core action at position 0 raises accuracy to 100% across all 5 frontier models tested, Δ +22 to +44pp.
+- **Reasoning-capable model efficiency**: CFLT reduces completion tokens by 12%–38% on visible-chain-of-thought models (Qwen, DeepSeek) by shortening confused reasoning traces on distractor-heavy inputs. **No token effect on short-output / concealed-reasoning models** (GPT-5, Gemini Flash, Claude Sonnet 4.6).
 
-**CFLT is neutral or mildly harmful in:**
+**CFLT is neutral in:**
 - **Simple, direct instructions**: models already handle these reliably — no gain.
-- **Multi-option, narrative-order-dependent scenarios**: the natural "alternatives → final decision" sequence is a reasoning scaffold; front-loading the conclusion removes it, causing mild accuracy drops.
 
-> CFLT is a **reliable gain in high-noise, distractor-heavy tasks** — not a universal prompt optimizer.
+**CFLT is model-specifically problematic in:**
+- **DeepSeek V4 Pro on multi-option decision cases** (−11pp on L4). The four other frontier models surveyed (GPT-5, Gemini Flash, Qwen3.5, Claude Sonnet 4.6) show no such regression. The earlier reading "CFLT mildly harmful on multi-option scenarios in general" has been retracted in favor of "DeepSeek V4 Pro shows a model-specific instruction-following anomaly on these cases; A/B-test before deploying CFLT on this model for this task type".
+
+> CFLT is a **reliable, model-agnostic gain in high-noise, distractor-heavy tasks** — not a universal prompt optimizer, and not uniformly safe on every task type for every model. The L3 universality (5/5 models) is the strongest single finding; the DeepSeek L4 anomaly (1/5 models) is the strongest counter-example and is retained in the documentation as honest evidence.
