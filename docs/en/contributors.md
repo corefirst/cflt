@@ -11,4 +11,4 @@ This document tracks the researchers, engineers, and contributors who have helpe
 - **CFLT Core Team** (General Attribution)
 
 ---
-*Last Updated: 2026-05-08*
+*Last Updated: 2026-05-17*
