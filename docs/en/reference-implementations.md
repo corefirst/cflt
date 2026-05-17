@@ -18,7 +18,7 @@ CFLT itself is theory and specification — the implementations are where the pr
 - **Repository:** [github.com/corefirst/corefirst](https://github.com/corefirst/corefirst)
 - **Purpose:** Reference implementation of CFLT for human L2 learners. Next.js web application providing a Logic Transformer, AI Courseware Generator, Voice Challenge with phonetic scoring, gamified CFLT Builder, and progress analytics.
 - **Audience:** Adult L2 learners (initial v1 target), with planned expansion to all age groups via the Visual CFLT delivery model.
-- **License:** MIT (code) / CC BY 4.0 (in-app educational content where applicable)
+- **License:** Apache 2.0 (code) / CC BY 4.0 (in-app educational content where applicable)
 - **Status:** Active development
 
 ---
