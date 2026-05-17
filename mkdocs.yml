@@ -104,9 +104,15 @@ plugins:
             Ecosystem: 生态
             Reference Implementations: 参考实现
             Contributors: 贡献者
+            Validation (Experiments): 验证与实验
+            Verification Plan: 验证计划
+            Part 1: Human-CFLT Alignment: 第一部分：人类-CFLT 对齐
+            Part 2: LLM Self-Consistency: 第二部分：LLM 自我一致性
+            Experiment Log: 实验日志
             Appendix: 附录
             Glossary: 术语表
             Bibliography: 参考文献
+            Project Source (GitHub): 项目源码 (GitHub)
 
 extra_css:
   - assets/extra.css
@@ -167,12 +173,18 @@ nav:
           - English ↔ Chinese: methodology/language-pair-guides/en-zh.md
           - Chinese ↔ English: methodology/language-pair-guides/zh-en.md
           - English ↔ Japanese: methodology/language-pair-guides/en-ja.md
+  - Validation (Experiments):
+      - Verification Plan: methodology/llm-verification-plan.md
+      - Part 1: Human-CFLT Alignment: methodology/llm-part1-verification.md
+      - Part 2: LLM Self-Consistency: methodology/llm-part2-verification.md
+      - Experiment Log: methodology/experiment-log.md
   - Ecosystem:
       - Reference Implementations: reference-implementations.md
       - Contributors: contributors.md
   - Appendix:
       - Bibliography: bibliography.md
       - Glossary: glossary.md
+      - Project Source (GitHub): https://github.com/corefirst/cflt
 
 extra:
   social:
