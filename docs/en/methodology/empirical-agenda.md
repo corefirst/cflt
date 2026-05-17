@@ -7,6 +7,26 @@
 
 As a normative protocol for cognitive ergonomics, CFLT makes several high-stakes claims about information processing efficiency and language acquisition speed. To transition from a theoretical framework to an evidence-based science, these claims must be subjected to rigorous empirical testing. This agenda outlines three pillars of research: **Computational Performance**, **Psycholinguistic Validation**, and **SLA (Second Language Acquisition) Outcomes**.
 
+### 1.1 The Cross-Domain Single-Currency Premise
+
+The framework's framing claim — that human L2 production and LLM prompting share a common "linearization cost" that a single protocol can address — is a **load-bearing cross-domain analogy**. We engage it as such, because the analogy is the load-bearing premise of the entire research agenda below, and treating it as self-evident would be intellectually dishonest.
+
+**The challenge.** Guest & Martin (2023, "On Logical Inference over Brains, Behaviour, and Artificial Neural Networks") and the earlier critique tradition (McCloskey 1991) argue that surface analogies between cognitive architectures and neural-network behavior routinely smuggle in unjustified mechanistic identifications. The fact that two systems produce similar surface behavior under similar surface manipulations does **not** entail that the underlying mechanisms are the same. Specifically: the human "Prefrontal Tax" (Levelt's Formulator-stage bottleneck; Kormos 2006) is a working-memory-and-control phenomenon mediated by DLPFC / LIFG / ACC (`foundations/neuroscience.md` §3), while the LLM "Lost in the Middle" curve (Liu et al. 2023) is a softmax-attention-over-positional-encoding phenomenon mediated by causal masking and learned positional priors. These are not the same mechanism in any deep sense.
+
+**Slobin (1996) "Thinking for Speaking"** raises a second, partially-orthogonal challenge: even *within* human cognition, the language-neutral Conceptualizer (Levelt 1989) may be weaker than it appears. Slobin argues that linguistic encoding shapes which conceptual distinctions speakers habitually mark — i.e., the preverbal message is not as language-neutral as the Levelt architecture suggests. If Slobin is right, CFLT's "shared Conceptualizer scaffold" loses some of its load-bearing power: the L1-shaped scaffold may not transfer cleanly to L2 production even with CFLT training.
+
+**CFLT's response — joint, not unitary, currency.**
+
+We accept the Guest & Martin / Slobin critique and revise the framing claim accordingly:
+
+1. **CFLT does *not* claim a single shared mechanism** between human production and LLM prompting. The two systems pay linearization cost in *different mechanistic currencies* — DLPFC metabolic load in one case, attention-distribution-over-positions in the other. The cross-domain claim is not that the mechanisms are identical; it is the weaker claim that **a single normative protocol — Core-first linearization — happens to be a useful intervention in both systems**, for partially distinct reasons.
+2. **The "shared currency" is the *intervention*, not the *cost*.** What CFLT actually proposes is a single piece of engineering — the `Core → R → S → T` protocol — and predicts (testably) that it reduces both DLPFC restructuring cost in humans (P3, `core-concept.md` §8.5) *and* attention-drift in LLMs (P2). These are two independent predictions that can be falsified independently. Falsifying one does not falsify the other.
+3. **The Slobin challenge is partial.** Slobin's "thinking for speaking" suggests the Conceptualizer is influenced by L1-shaped habits; it does not suggest the Conceptualizer is *fully* L1-determined. The middle-ground reading is that CFLT scaffolds the linearization stage explicitly, which may *attenuate* (not eliminate) L1-shaped Conceptualizer biases. This is testable: a CFLT-trained Mandarin-L1 / English-L2 speaker should show *less* L1-shaped time-fronting than an untrained matched control (P1, `core-concept.md` §8.5).
+
+**Falsification condition for the unification claim.** If both P2 (LLM-side) and P1 (human-side) are individually falsified, the "joint currency" claim collapses — CFLT becomes either a human-side scaffold without LLM benefit, an LLM-side prompt protocol without pedagogical benefit, or neither. The two-pillar structure of this agenda (§2 LLM, §3 human, §4 SLA) is **designed to allow that separation to be observed**: we do not pretend a single experiment can validate the unification; we run independent experiments in each pillar and let the cross-domain claim survive or fall based on their joint result.
+
+This is a deliberately weaker framing than the manifesto's "TCP/IP for thought" metaphor. The metaphor is rhetorically useful; the load-bearing scientific claim is the conjunction of the testable per-pillar predictions, with the single-currency reading retracted to the *strategic positioning* layer.
+
 ---
 
 ## 2. Pillar I: Computational Performance (LLM Prompting)

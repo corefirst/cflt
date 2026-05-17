@@ -28,7 +28,16 @@
 - **Benmamoun, E.** (2000). *The Feature Structure of Functional Categories: A Comparative Study of Arabic Dialects.* New York: Oxford University Press.
 - **Birner, B. J. & Ward, G.** (1998). *Information Status and Noncanonical Word Order in English.* Amsterdam: John Benjamins.
 - **Bobaljik, J. D.** (2003). "Floating Quantifiers: Handle with Care." In *The Second Glot International State-of-the-Article Book*, Cheng & Sybesma (eds). Berlin: Mouton de Gruyter, 107–148. *(Cited in `core-concept.md` §2.2 for the position that Cinque's (1999) hierarchy is better read as a set of preferences than as strict universal syntax.)*
+- **Boroditsky, L.** (2000). "Metaphoric Structuring: Understanding Time Through Spatial Metaphors." *Cognition* 75(1), 1–28. DOI: [10.1016/S0010-0277(99)00073-6](https://doi.org/10.1016/S0010-0277(99)00073-6)
 - **Boroditsky, L.** (2001). "Does Language Shape Thought? Mandarin and English Speakers' Conceptions of Time." *Cognitive Psychology* 43(1), 1–22.
+- **Casasanto, D. & Boroditsky, L.** (2008). "Time in the Mind: Using Space to Think About Time." *Cognition* 106(2), 579–593. DOI: [10.1016/j.cognition.2007.03.004](https://doi.org/10.1016/j.cognition.2007.03.004)
+- **Clark, H. H.** (1973). "Space, Time, Semantics, and the Child." In *Cognitive Development and the Acquisition of Language*, Moore (ed.). New York: Academic Press, 27–63.
+- **Evans, V.** (2004). *The Structure of Time: Language, Meaning and Temporal Cognition.* Amsterdam: John Benjamins.
+- **Everett, D. L.** (2005). "Cultural Constraints on Grammar and Cognition in Pirahã: Another Look at the Design Features of Human Language." *Current Anthropology* 46(4), 621–646. DOI: [10.1086/431525](https://doi.org/10.1086/431525)
+- **Foley, W. A. & Van Valin, R. D. Jr.** (1984). *Functional Syntax and Universal Grammar.* Cambridge: Cambridge University Press. *(Cited in `linguistics.md` §6.2 for Tagalog topic-prominence as a counter-typology to event-anchored Core.)*
+- **Labov, W.** (1972). *Language in the Inner City: Studies in the Black English Vernacular.* Philadelphia: University of Pennsylvania Press. *(Chapter 9 on narrative analysis, cited in `linguistics.md` §4.3 for the temporal-organization-of-narrative tradition that Reinhart 1984 extends.)*
+- **Lakoff, G. & Johnson, M.** (1980). *Metaphors We Live By.* Chicago: University of Chicago Press.
+- **Núñez, R. E. & Sweetser, E.** (2006). "With the Future Behind Them: Convergent Evidence From Aymara Language and Gesture in the Crosslinguistic Comparison of Spatial Construals of Time." *Cognitive Science* 30(3), 401–450. DOI: [10.1207/s15516709cog0000_62](https://doi.org/10.1207/s15516709cog0000_62)
 - **Bresnan, J.** (2001). *Lexical-Functional Syntax.* Oxford: Blackwell.
 - **Büring, D.** (1997). *The Meaning of Topic and Focus: The 59th Street Bridge Accent.* London: Routledge.
 - **Carlson, G. N.** (1977). *Reference to Kinds in English.* PhD dissertation, University of Massachusetts Amherst.
@@ -116,6 +125,8 @@
 ## Logic and Philosophy of Language
 
 - **Austin, J. L.** (1962). *How to Do Things with Words.* Oxford: Clarendon Press.
+- **Guest, O. & Martin, A. E.** (2023). "On Logical Inference over Brains, Behaviour, and Artificial Neural Networks." *Computational Brain & Behavior* 6, 213–227. DOI: [10.1007/s42113-022-00166-x](https://doi.org/10.1007/s42113-022-00166-x) *(Cited in `methodology/empirical-agenda.md` §1.1 for the analogy-methodology critique that constrains CFLT's cross-domain "shared linearization cost" framing.)*
+- **McCloskey, M.** (1991). "Networks and Theories: The Place of Connectionism in Cognitive Science." *Psychological Science* 2(6), 387–395. *(Earlier critique tradition cited alongside Guest & Martin 2023 in `methodology/empirical-agenda.md` §1.1.)*
 - **Church, A.** (1936). "An Unsolvable Problem of Elementary Number Theory." *American Journal of Mathematics* 58(2), 345–363.
 - **Frege, G.** (1879). *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens.* Halle: Louis Nebert.
 - **Grice, H. P.** (1975). "Logic and Conversation." In *Syntax and Semantics, Vol. 3: Speech Acts*, Cole & Morgan (eds). New York: Academic Press.
@@ -143,6 +154,7 @@
 ## Large Language Models and NLP
 
 - **Abnar, S. & Zuidema, W.** (2020). "Quantifying Attention Flow in Transformers." *ACL*. DOI: [10.18653/v1/2020.acl-main.385](https://doi.org/10.18653/v1/2020.acl-main.385)
+- **Berglund, L., Tong, M., Kaufmann, M., Balesni, M., Stickland, A. C., Korbak, T. & Evans, O.** (2024). "The Reversal Curse: LLMs Trained on 'A is B' Fail to Learn 'B is A'." *ICLR*. arXiv: [2309.12288](https://arxiv.org/abs/2309.12288) *(Cited in `llm.md` §10.5 as a partial counter to CFLT-as-alignment-constraint — order-sensitivity is structurally entangled with learned representations, not just with prompt-time formatting.)*
 - **Bang, Y. et al.** (2023). "A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity." *arXiv*:2302.04023. [Link](https://arxiv.org/abs/2302.04023)
 - **Habba, E., Arviv, O., Itzhak, I., Perlitz, Y., Bandel, E., Choshen, L., Shmueli-Scheuer, M. & Stanovsky, G.** (2025). "DOVE: A Large-Scale Multi-Dimensional Predictions Dataset Towards Meaningful LLM Evaluation." *Findings of ACL*. DOI: [10.18653/v1/2025.findings-acl.611](https://doi.org/10.18653/v1/2025.findings-acl.611)
 - **Hendrycks, D. et al.** (2021). "Measuring Massive Multitask Language Understanding (MMLU)." *ICLR*. [Link](https://openreview.net/forum?id=d7KBjmI3GmQ)
@@ -157,6 +169,7 @@
 - **Maynez, J., Narayan, S., Bohnet, B. & McDonald, R.** (2020). "On Faithfulness and Factuality in Abstractive Summarization." *ACL*. DOI: [10.18653/v1/2020.acl-main.173](https://doi.org/10.18653/v1/2020.acl-main.173)
 - **Min, S., Lyu, X., Holtzman, A., Artetxe, M., Lewis, M., Hajishirzi, H. & Zettlemoyer, L.** (2022). "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?" *EMNLP*. DOI: [10.18653/v1/2022.emnlp-main.759](https://doi.org/10.18653/v1/2022.emnlp-main.759)
 - **Ouyang, L. et al.** (2022). "Training Language Models to Follow Instructions with Human Feedback." *NeurIPS*. [Official Link](https://papers.nips.cc/paper_files/paper/2022/hash/b1efde53be36b95607451731cfad1409-Abstract-Conference.html)
+- **Pezeshkpour, P. & Hruschka, E.** (2024). "Large Language Models Sensitivity to the Order of Options in Multiple-Choice Questions." *Findings of NAACL*. arXiv: [2308.11483](https://arxiv.org/abs/2308.11483) *(Cited in `llm.md` §2.4 and §10.4 for non-monotonic LLM position bias — first-position is not uniformly advantaged across models or tasks.)*
 - **Post, M. & Vilar, D.** (2018). "Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation." *NAACL*. DOI: [10.18653/v1/N18-1119](https://doi.org/10.18653/v1/N18-1119)
 - **Sclar, M., Choi, Y., Tsvetkov, Y. & Suhr, A.** (2024). "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design." *ICLR*. [OpenReview Link](https://openreview.net/forum?id=9M2V6nB1e3)
 - **Shaw, P., Uszkoreit, J. & Vaswani, A.** (2018). "Self-Attention with Relative Position Representations." *NAACL*. DOI: [10.18653/v1/N18-2074](https://doi.org/10.18653/v1/N18-2074)
