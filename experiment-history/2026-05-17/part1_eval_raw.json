@@ -1,0 +1,1833 @@
+[
+  {
+    "transformer": "deepseek/deepseek-v4-pro",
+    "extractor": "openai/gpt-5",
+    "cases": [
+      {
+        "id": "EN_L1_01",
+        "level": 1,
+        "language": "en",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "cflt_text": "close the window, because it is raining outside, inside, now.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "close the window, because it is raining outside, inside, now.",
+          "cflt_l2": "close the window, because it is raining outside, inside, now.",
+          "standard_l2": "Please close the window because it's raining outside.",
+          "standard_l1": "Please close the window because it's raining outside.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "It is raining outside, please close the window",
+              "replacement": "close the window... because it is raining outside",
+              "reason": "CFLT requires the core action (close the window) to precede the reason (raining)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "close the window",
+              "content_l2": "close the window",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because it is raining outside",
+              "content_l2": "because it is raining outside",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "inside",
+              "content_l2": "inside",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "inside",
+                  "value_l2": "inside",
+                  "rationale": "Closing a window is typically done from inside."
+                },
+                {
+                  "value_l1": "at the window",
+                  "value_l2": "at the window",
+                  "rationale": "The action is performed near the window."
+                },
+                {
+                  "value_l1": "in the room",
+                  "value_l2": "in the room",
+                  "rationale": "The window is located in a room."
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "now",
+              "content_l2": "now",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "now",
+                  "value_l2": "now",
+                  "rationale": "The imperative 'please close' implies immediate action."
+                },
+                {
+                  "value_l1": "right away",
+                  "value_l2": "right away",
+                  "rationale": "Urgent situation due to rain."
+                },
+                {
+                  "value_l1": "immediately",
+                  "value_l2": "immediately",
+                  "rationale": "To prevent rain from coming in."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L1_02",
+        "level": 1,
+        "language": "en",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "cflt_text": "turn off the stove, because the water is boiling, in the kitchen, right now.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "turn off the stove, because the water is boiling, in the kitchen, right now.",
+          "cflt_l2": "turn off the stove, because the water is boiling, in the kitchen, right now.",
+          "standard_l2": "Please turn off the stove because the water is boiling in the kitchen right now.",
+          "standard_l1": "Please turn off the stove because the water is boiling in the kitchen right now.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "The water is boiling, please turn off the stove.",
+              "replacement": "turn off the stove, because the water is boiling, in the kitchen, right now.",
+              "reason": "CFLT requires the core action (turn off the stove) to precede the reason (water boiling). Space and time are missing in the original and have been inferred."
+            },
+            {
+              "type": "grammar",
+              "original": "please turn off the stove",
+              "replacement": "turn off the stove",
+              "reason": "Politeness markers are omitted from the canonical CFLT core slot."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "turn off the stove",
+              "content_l2": "turn off the stove",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because the water is boiling",
+              "content_l2": "because the water is boiling",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "in the kitchen",
+              "content_l2": "in the kitchen",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "in the kitchen",
+                  "value_l2": "in the kitchen",
+                  "rationale": "Stoves are commonly found in kitchens."
+                },
+                {
+                  "value_l1": "at home",
+                  "value_l2": "at home",
+                  "rationale": "Boiling water typically occurs in a domestic setting."
+                },
+                {
+                  "value_l1": "on the stove",
+                  "value_l2": "on the stove",
+                  "rationale": "The water is boiling on the stove itself, though this overlaps with the core object."
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "right now",
+              "content_l2": "right now",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "right now",
+                  "value_l2": "right now",
+                  "rationale": "The water is currently boiling, demanding immediate action."
+                },
+                {
+                  "value_l1": "immediately",
+                  "value_l2": "immediately",
+                  "rationale": "Boiling water requires prompt attention to avoid overflow."
+                },
+                {
+                  "value_l1": "as soon as possible",
+                  "value_l2": "as soon as possible",
+                  "rationale": "Turning off the stove needs to happen quickly."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L1_03",
+        "level": 1,
+        "language": "en",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "cflt_text": "feed it, because the dog is hungry, at home, now.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "feed it, because the dog is hungry, at home, now.",
+          "cflt_l2": "feed it, because the dog is hungry, at home, now.",
+          "standard_l2": "Please feed the dog because it is hungry right now.",
+          "standard_l1": "Please feed the dog because it is hungry right now.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "The dog is hungry, please feed it.",
+              "replacement": "feed it... because the dog is hungry",
+              "reason": "CFLT requires the core action (feed it) to precede the reason (the dog is hungry)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "feed it",
+              "content_l2": "feed it",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because the dog is hungry",
+              "content_l2": "because the dog is hungry",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "because the dog is hungry",
+                  "value_l2": "because the dog is hungry",
+                  "rationale": "The user explicitly stated the dog is hungry, so this is the most direct reason."
+                },
+                {
+                  "value_l1": "because it's the dog's mealtime",
+                  "value_l2": "because it's the dog's mealtime",
+                  "rationale": "Dogs are typically fed at regular mealtimes, and the dog's hunger could indicate that it's time to eat."
+                },
+                {
+                  "value_l1": "because the dog hasn't been fed yet",
+                  "value_l2": "because the dog hasn't been fed yet",
+                  "rationale": "The request might imply that the dog has not eaten recently, hence it is hungry."
+                }
+              ]
+            },
+            {
+              "type": "space",
+              "content_l1": "at home",
+              "content_l2": "at home",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "at home",
+                  "value_l2": "at home",
+                  "rationale": "Feeding a pet usually takes place at home."
+                },
+                {
+                  "value_l1": "in the kitchen",
+                  "value_l2": "in the kitchen",
+                  "rationale": "Dog food is often stored in the kitchen."
+                },
+                {
+                  "value_l1": "in the backyard",
+                  "value_l2": "in the backyard",
+                  "rationale": "Some owners feed their dogs outside."
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "now",
+              "content_l2": "now",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "now",
+                  "value_l2": "now",
+                  "rationale": "The dog is currently hungry, so immediate action is implied."
+                },
+                {
+                  "value_l1": "immediately",
+                  "value_l2": "immediately",
+                  "rationale": "The imperative mood suggests urgency."
+                },
+                {
+                  "value_l1": "as soon as possible",
+                  "value_l2": "as soon as possible",
+                  "rationale": "Feeding should be done promptly to address the dog's hunger."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L1_01",
+        "level": 1,
+        "language": "zh",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "cflt_text": "把窗户关上，因为外面下雨了，在屋里，现在。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "把窗户关上，因为外面下雨了，在屋里，现在。",
+          "cflt_l2": "把窗户关上，因为外边下雨了，在屋里，现在。",
+          "standard_l2": "外面下雨了，请把窗户关上。",
+          "standard_l1": "外面下雨了，请把窗户关上。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "外面下雨了，请把窗户关上。",
+              "replacement": "把窗户关上，因为外面下雨了",
+              "reason": "CFLT 要求核心动作（关窗户）位于原因（下雨）之前。"
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "把窗户关上",
+              "content_l2": "把窗户关上",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为外面下雨了",
+              "content_l2": "因为外边下雨了",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在屋里",
+              "content_l2": "在屋里",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "在家里",
+                  "value_l2": "在家里",
+                  "rationale": "关窗户的动作通常发生在居住空间内。"
+                },
+                {
+                  "value_l1": "在房间",
+                  "value_l2": "在房间",
+                  "rationale": "房间是关闭窗户最常见的场所。"
+                },
+                {
+                  "value_l1": "在办公室",
+                  "value_l2": "在办公室",
+                  "rationale": "如果说话人在工作场所，也可能指办公室的窗户。"
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "现在",
+              "content_l2": "现在",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "现在",
+                  "value_l2": "现在",
+                  "rationale": "下雨时通常需要立即关窗。"
+                },
+                {
+                  "value_l1": "立刻",
+                  "value_l2": "立刻",
+                  "rationale": "命令暗示即时行动。"
+                },
+                {
+                  "value_l1": "马上",
+                  "value_l2": "马上",
+                  "rationale": "口语中强调快速响应。"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L1_02",
+        "level": 1,
+        "language": "zh",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "cflt_text": "关掉炉子，因为水开了，在厨房，现在。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "关掉炉子，因为水开了，在厨房，现在。",
+          "cflt_l2": "Turn off the stove, because the water is boiling, in the kitchen, now.",
+          "standard_l2": "Turn off the stove now because the water is boiling in the kitchen.",
+          "standard_l1": "水开了，快去厨房把炉子关掉。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "水开了，请把炉子关掉",
+              "replacement": "关掉炉子，因为水开了",
+              "reason": "CFLT requires the core action (关掉炉子) to precede the reason (水开了)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "关掉炉子",
+              "content_l2": "Turn off the stove",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为水开了",
+              "content_l2": "because the water is boiling",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在厨房",
+              "content_l2": "in the kitchen",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "在厨房",
+                  "value_l2": "in the kitchen",
+                  "rationale": "炉子通常放在厨房里，水开了需要关火。"
+                },
+                {
+                  "value_l1": "在灶台旁",
+                  "value_l2": "by the stove",
+                  "rationale": "关火的动作通常发生在灶台旁边。"
+                },
+                {
+                  "value_l1": "在家里",
+                  "value_l2": "at home",
+                  "rationale": "烧水一般是在家里的场景。"
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "现在",
+              "content_l2": "now",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "现在",
+                  "value_l2": "now",
+                  "rationale": "水已经沸腾，需要马上关火，避免溢出或烧干。"
+                },
+                {
+                  "value_l1": "尽快",
+                  "value_l2": "as soon as possible",
+                  "rationale": "水开了后应立即处理，否则会有安全隐患。"
+                },
+                {
+                  "value_l1": "当听到水开声时",
+                  "value_l2": "when you hear the water boiling",
+                  "rationale": "通常人们通过声音判断水沸，然后行动。"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L1_03",
+        "level": 1,
+        "language": "zh",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "cflt_text": "给它喂食，因为狗饿了，在家里，现在。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "给它喂食，因为狗饿了，在家里，现在。",
+          "cflt_l2": "Feed it, because the dog is hungry, at home, now.",
+          "standard_l2": "The dog is hungry; please feed it now.",
+          "standard_l1": "狗饿了，请给它喂食。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "狗饿了，请给它喂食。",
+              "replacement": "给它喂食，因为狗饿了，在家里，现在。",
+              "reason": "CFLT requires the core action (feed it) to precede the reason (dog is hungry)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "给它喂食",
+              "content_l2": "Feed it",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为狗饿了",
+              "content_l2": "because the dog is hungry",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在家里",
+              "content_l2": "at home",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "在家里",
+                  "value_l2": "at home",
+                  "rationale": "大多数宠物狗都在家里进食，这是最常见的喂食地点。"
+                },
+                {
+                  "value_l1": "在狗窝旁",
+                  "value_l2": "by the doghouse",
+                  "rationale": "如果狗养在室外，通常会在狗窝附近喂食。"
+                },
+                {
+                  "value_l1": "在厨房",
+                  "value_l2": "in the kitchen",
+                  "rationale": "许多主人习惯在厨房准备狗粮并直接喂食。"
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "现在",
+              "content_l2": "now",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "现在",
+                  "value_l2": "now",
+                  "rationale": "狗饿了需要立即喂食，所以最直接的时间就是现在。"
+                },
+                {
+                  "value_l1": "马上",
+                  "value_l2": "immediately",
+                  "rationale": "强调紧迫性，适合饥饿的宠物。"
+                },
+                {
+                  "value_l1": "到饭点了",
+                  "value_l2": "it's mealtime",
+                  "rationale": "可能正好是日常喂食的时间。"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L2_01",
+        "level": 2,
+        "language": "en",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "cflt_text": "turn off all the lights, since the meeting has concluded, in the 5th floor grand conference room, at 6 PM today.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "turn off all the lights, since the meeting has concluded, in the 5th floor grand conference room, at 6 PM today.",
+          "cflt_l2": "turn off all the lights, since the meeting has concluded, in the 5th floor grand conference room, at 6 PM today.",
+          "standard_l2": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+          "standard_l1": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "Since the meeting has concluded, please turn off all the lights...",
+              "replacement": "turn off all the lights... since the meeting has concluded",
+              "reason": "CFLT requires the core action (turn off lights) to precede the reason (meeting concluded)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "turn off all the lights",
+              "content_l2": "turn off all the lights",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "since the meeting has concluded",
+              "content_l2": "since the meeting has concluded",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "in the 5th floor grand conference room",
+              "content_l2": "in the 5th floor grand conference room",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "at 6 PM today",
+              "content_l2": "at 6 PM today",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L2_02",
+        "level": 2,
+        "language": "en",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "cflt_text": "contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+          "cflt_l2": "contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+          "standard_l2": "Please contact maintenance to come to the 3rd floor pantry tomorrow morning because the coffee machine is broken.",
+          "standard_l1": "Please contact maintenance to come to the 3rd floor pantry tomorrow morning because the coffee machine is broken.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "The coffee machine is broken, please contact maintenance to come to the 3rd floor pantry tomorrow morning.",
+              "replacement": "contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+              "reason": "CFLT requires the core imperative (contact maintenance) to precede the reason (broken machine) and the destination (3rd floor pantry) to be separated into the space slot."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "contact maintenance",
+              "content_l2": "contact maintenance",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because the coffee machine is broken",
+              "content_l2": "because the coffee machine is broken",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "to the 3rd floor pantry",
+              "content_l2": "to the 3rd floor pantry",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "tomorrow morning",
+              "content_l2": "tomorrow morning",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L2_03",
+        "level": 2,
+        "language": "en",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "cflt_text": "dispatch security, because the guest complained about noise, to suite 502, tonight at 11 PM.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "dispatch security, because the guest complained about noise, to suite 502, tonight at 11 PM.",
+          "cflt_l2": "Dispatch security, because the guest complained about noise, to suite 502, tonight at 11 PM.",
+          "standard_l2": "Please dispatch security to suite 502 tonight at 11 PM because the guest complained about noise.",
+          "standard_l1": "Please dispatch security to suite 502 tonight at 11 PM because the guest complained about noise.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "The guest... has complained... dispatch security...",
+              "replacement": "dispatch security... because the guest complained...",
+              "reason": "CFLT requires the core result (dispatch security) to precede the reason (complaint)."
+            },
+            {
+              "type": "redundancy",
+              "original": "in suite 502 within reason clause",
+              "replacement": "to suite 502 in space slot",
+              "reason": "Slot exclusivity: location information (suite 502) is moved to the space slot to avoid duplication and keep slots distinct."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "dispatch security",
+              "content_l2": "Dispatch security",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because the guest complained about noise",
+              "content_l2": "because the guest complained about noise",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "to suite 502",
+              "content_l2": "to suite 502",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "tonight at 11 PM",
+              "content_l2": "tonight at 11 PM",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L2_01",
+        "level": 2,
+        "language": "zh",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "cflt_text": "关掉所有灯，因为会议已经结束，在5楼大会议室，今天下午6点。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "关掉所有灯，因为会议已经结束，在5楼大会议室，今天下午6点。",
+          "cflt_l2": "Turn off all the lights, because the meeting has ended, in the large conference room on the 5th floor, at 6 PM today.",
+          "standard_l2": "Please turn off all the lights in the large conference room on the 5th floor at 6 PM today, because the meeting has ended.",
+          "standard_l1": "请在今天下午6点关掉5楼大会议室的所有灯，因为会议已经结束了。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "会议已经结束，请...把...灯都关掉",
+              "replacement": "关掉所有灯，因为会议已经结束，在5楼大会议室，今天下午6点",
+              "reason": "CFLT requires the core action (turn off the lights) to be mentioned first, followed by the reason, space, and time."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "关掉所有灯",
+              "content_l2": "Turn off all the lights",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为会议已经结束",
+              "content_l2": "because the meeting has ended",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在5楼大会议室",
+              "content_l2": "in the large conference room on the 5th floor",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "今天下午6点",
+              "content_l2": "at 6 PM today",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L2_02",
+        "level": 2,
+        "language": "zh",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "cflt_text": "联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 0.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+          "cflt_l2": "Contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+          "standard_l2": "Please contact maintenance tomorrow morning to come to the 3rd floor pantry, as the coffee machine is broken.",
+          "standard_l1": "咖啡机坏了，请明天早上联系维修工到3楼茶水间。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "咖啡机坏了，请明天早上联系维修工到3楼茶水间",
+              "replacement": "联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上",
+              "reason": "CFLT requires the core action (contact maintenance) to precede the reason (coffee machine broken)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "联系维修工",
+              "content_l2": "Contact maintenance",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为咖啡机坏了",
+              "content_l2": "because the coffee machine is broken",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "到3楼茶水间",
+              "content_l2": "to the 3rd floor pantry",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "明天早上",
+              "content_l2": "tomorrow morning",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L2_03",
+        "level": 2,
+        "language": "zh",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "cflt_text": "派保安上去，因为客人投诉吵闹，在502号套房，今晚11点。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "派保安上去，因为客人投诉吵闹，在502号套房，今晚11点。",
+          "cflt_l2": "派保安上去，因为客人投诉吵闹，在502号套房，今晚11点。",
+          "standard_l2": "502号套房的客人投诉噪音，请今晚11点派保安上去处理。",
+          "standard_l1": "502号套房的客人投诉噪音，请今晚11点派保安上去处理。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "502号套房的客人投诉吵闹，请今晚11点派保安上去",
+              "replacement": "派保安上去，因为客人投诉吵闹",
+              "reason": "CFLT requires the core imperative action (派保安上去) to precede the reason (客人投诉吵闹)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "派保安上去",
+              "content_l2": "派保安上去",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为客人投诉吵闹",
+              "content_l2": "因为客人投诉吵闹",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在502号套房",
+              "content_l2": "在502号套房",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "今晚11点",
+              "content_l2": "今晚11点",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L3_01",
+        "level": 3,
+        "language": "en",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "cflt_text": "we shut down all backup nodes, to prevent hardware damage and data loss, in the east wing server room, at 14:15.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "we shut down all backup nodes, to prevent hardware damage and data loss, in the east wing server room, at 14:15.",
+          "cflt_l2": "我们关闭所有备份节点，为了防止硬件损坏和数据丢失，在东翼服务器机房，14:15。",
+          "standard_l2": "我们需要在14:15关闭东翼服务器机房的所有备份节点，以防止硬件损坏和数据丢失。",
+          "standard_l1": "To prevent hardware damage and data loss, we need to shut down all backup nodes in the east wing server room at 14:15.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "Server room temperatures have been spiking all week. Although the HVAC team is working on it, the east wing sensor went red again at 14:15. To prevent hardware damage and data loss, we need to shut down all backup nodes immediately.",
+              "replacement": "we shut down all backup nodes, to prevent hardware damage and data loss, in the east wing server room, at 14:15.",
+              "reason": "CFLT restructures into core-first sequence, extracting the primary action and discarding extraneous contextual clauses."
+            },
+            {
+              "type": "specificity",
+              "original": "immediately",
+              "replacement": "at 14:15",
+              "reason": "Prefer specific timestamp over generic urgency qualifier per Specific-Value Rule."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "we shut down all backup nodes",
+              "content_l2": "我们关闭所有备份节点",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "to prevent hardware damage and data loss",
+              "content_l2": "为了防止硬件损坏和数据丢失",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "in the east wing server room",
+              "content_l2": "在东翼服务器机房",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "at 14:15",
+              "content_l2": "14:15",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L3_02",
+        "level": 3,
+        "language": "en",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "location": "bed_7",
+          "time": "within_1_hour"
+        },
+        "cflt_text": "notify the on-call physician, to be safe, in the hospital, within the next hour.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 0.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "notify the on-call physician, to be safe, in the hospital, within the next hour.",
+          "cflt_l2": "通知值班医生，为了安全起见，在医院里，在接下来的一小时内。",
+          "standard_l2": "请在接下来的一小时内通知值班医生以确保安全。",
+          "standard_l1": "Please notify the on-call physician within the next hour to be safe.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "The patient in bed 7 has been stable since admission, but the latest blood test shows elevated white cells. The lab tech mentioned the sample might be contaminated, but to be safe, please notify the on-call physician within the next hour.",
+              "replacement": "notify the on-call physician, to be safe, in the hospital, within the next hour.",
+              "reason": "CFLT requires the core imperative (notify) to precede the reason (to be safe), followed by space and time. Background information is omitted from the canonical slots."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "notify the on-call physician",
+              "content_l2": "通知值班医生",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "to be safe",
+              "content_l2": "为了安全起见",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "in the hospital",
+              "content_l2": "在医院里",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "in the hospital",
+                  "value_l2": "在医院里",
+                  "rationale": "The notification likely takes place within the hospital where the patient is located."
+                },
+                {
+                  "value_l1": "at the nurses' station",
+                  "value_l2": "在护士站",
+                  "rationale": "Notifications are often made from the nurses' station where the on-call physician can be reached."
+                },
+                {
+                  "value_l1": "on the ward",
+                  "value_l2": "在病房",
+                  "rationale": "The patient is in bed 7, so the doctor may need to come to the ward."
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "within the next hour",
+              "content_l2": "在接下来的一小时内",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L3_03",
+        "level": 3,
+        "language": "en",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "cflt_text": "Open the backup registers, because Black Friday traffic is overwhelming and the queue keeps growing despite extra staff, on the second floor, by 3 PM.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "Open the backup registers, because Black Friday traffic is overwhelming and the queue keeps growing despite extra staff, on the second floor, by 3 PM.",
+          "cflt_l2": "Open the backup registers, because Black Friday traffic is overwhelming and the queue keeps growing despite extra staff, on the second floor, by 3 PM.",
+          "standard_l2": "Please open the backup registers on the second floor by 3 PM to handle the overwhelming Black Friday traffic and the growing queue.",
+          "standard_l1": "Due to the overwhelming Black Friday traffic and the growing queue, please open the backup registers on the second floor by 3 PM.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "Black Friday traffic is overwhelming... Please open the backup registers...",
+              "replacement": "Open the backup registers... because Black Friday traffic is overwhelming...",
+              "reason": "CFLT requires the core action to be stated first, followed by the reason."
+            },
+            {
+              "type": "structure",
+              "original": "time phrase 'by 3 PM' placed early",
+              "replacement": "moved 'by 3 PM' to the end",
+              "reason": "CFLT sequence places time after space."
+            },
+            {
+              "type": "structure",
+              "original": "'Even though we added extra staff' clause",
+              "replacement": "integrated into reason as 'despite extra staff'",
+              "reason": "The concessive clause provides context for the reason and is merged for conciseness."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "Open the backup registers",
+              "content_l2": "Open the backup registers",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because Black Friday traffic is overwhelming and the queue keeps growing despite extra staff",
+              "content_l2": "because Black Friday traffic is overwhelming and the queue keeps growing despite extra staff",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "because of the overwhelming Black Friday traffic and growing queue",
+                  "value_l2": "because of the overwhelming Black Friday traffic and growing queue",
+                  "rationale": "The user explicitly describes these conditions as the motivation for the request."
+                },
+                {
+                  "value_l1": "to serve customers faster",
+                  "value_l2": "to serve customers faster",
+                  "rationale": "Opening backup registers is a typical measure to reduce customer wait times."
+                },
+                {
+                  "value_l1": "to prevent customer overload",
+                  "value_l2": "to prevent customer overload",
+                  "rationale": "The overwhelming traffic suggests a need to distribute the customer load."
+                }
+              ]
+            },
+            {
+              "type": "space",
+              "content_l1": "on the second floor",
+              "content_l2": "on the second floor",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "by 3 PM",
+              "content_l2": "by 3 PM",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L3_01",
+        "level": 3,
+        "language": "zh",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "cflt_text": "我们关闭所有备份节点，为了防止硬件损坏和数据丢失，在东翼服务器机房，14:15。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "我们关闭所有备份节点，为了防止硬件损坏和数据丢失，在东翼服务器机房，14:15。",
+          "cflt_l2": "We shut down all backup nodes, to prevent hardware damage and data loss, in the east wing server room, at 14:15.",
+          "standard_l2": "We need to shut down all backup nodes in the east wing server room at 14:15 to prevent hardware damage and data loss.",
+          "standard_l1": "我们需要在14:15关闭东翼服务器机房的所有备份节点，以防止硬件损坏和数据丢失。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "服务器机房温度一直异常波动...请立即关闭所有备份节点",
+              "replacement": "关闭所有备份节点...为了防止硬件损坏和数据丢失",
+              "reason": "CFLT requires the core result (shut down nodes) to precede the reason. The background context is dropped; only the explicit 为了 clause is the canonical reason. The urgency qualifier 立即 is dropped because the specific timestamp 14:15 is present."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "我们关闭所有备份节点",
+              "content_l2": "We shut down all backup nodes",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "为了防止硬件损坏和数据丢失",
+              "content_l2": "to prevent hardware damage and data loss",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在东翼服务器机房",
+              "content_l2": "in the east wing server room",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "14:15",
+              "content_l2": "at 14:15",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L3_02",
+        "level": 3,
+        "language": "zh",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "time": "within_1_hour"
+        },
+        "cflt_text": "通知值班医生，为了安全起见，在病房，一小时内。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "通知值班医生，为了安全起见，在病房，一小时内。",
+          "cflt_l2": "通知值班医生，为了安全起见，在病房，一小时内。",
+          "standard_l2": "为了安全起见，请在一小时内通知值班医生。",
+          "standard_l1": "为了安全起见，请在一小时内通知值班医生。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "7床的病人入院以来一直稳定，但最新血检显示白细胞偏高。化验员说样本可能被污染了，但为了安全起见...",
+              "replacement": "通知值班医生，为了安全起见",
+              "reason": "CFLT uses only the explicit reason clause ('为了安全起见'); background context (blood test results, contamination possibility) is omitted from canonical slots."
+            },
+            {
+              "type": "logic",
+              "original": "为了安全起见，请在一小时内通知值班医生",
+              "replacement": "通知值班医生，为了安全起见",
+              "reason": "CFLT requires the core action (notify the doctor) to precede the reason (for safety)."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "通知值班医生",
+              "content_l2": "通知值班医生",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "为了安全起见",
+              "content_l2": "为了安全起见",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在病房",
+              "content_l2": "在病房",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "在病房",
+                  "value_l2": "在病房",
+                  "rationale": "七床病人所在的病房是通知值班医生的常见地点。"
+                },
+                {
+                  "value_l1": "在护士站",
+                  "value_l2": "在护士站",
+                  "rationale": "护士站是联系值班医生的重要枢纽。"
+                },
+                {
+                  "value_l1": "在医生办公室",
+                  "value_l2": "在医生办公室",
+                  "rationale": "值班医生可能在自己的办公室待命。"
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "content_l1": "一小时内",
+              "content_l2": "一小时内",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L3_03",
+        "level": 3,
+        "language": "zh",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "cflt_text": "打开所有备用收银台，因为黑五客流过大，在二楼，下午3点前。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 0.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "打开所有备用收银台，因为黑五客流过大，在二楼，下午3点前。",
+          "cflt_l2": "Open all backup checkouts, because the Black Friday crowd is too large, on the second floor, before 3pm.",
+          "standard_l2": "Please open all the backup checkouts on the second floor before 3pm to handle the Black Friday crowd.",
+          "standard_l1": "请于下午3点前打开二楼的所有备用收银台，以应对黑五客流。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "上下文在先，指令在后",
+              "replacement": "核心动作为首，时间/空间置后",
+              "reason": "CFLT要求核心动作最先出现，原因紧随其后，然后是空间和时间。"
+            },
+            {
+              "type": "slot",
+              "original": "二楼的备用收银台",
+              "replacement": "空间独立为“在二楼”",
+              "reason": "位置信息“二楼”应从核心宾语中分离，放入独立的空间槽位。"
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "打开所有备用收银台",
+              "content_l2": "Open all backup checkouts",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为黑五客流过大",
+              "content_l2": "because the Black Friday crowd is too large",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "因为黑五客流过大",
+                  "value_l2": "because the Black Friday crowd is too large",
+                  "rationale": "黑色星期五通常导致客流量激增，收银台不堪重负。"
+                },
+                {
+                  "value_l1": "为了缓解排队情况",
+                  "value_l2": "to alleviate the queue",
+                  "rationale": "长队会导致顾客不满，打开更多收银台是直接解决方式。"
+                },
+                {
+                  "value_l1": "因为需要加快结账速度",
+                  "value_l2": "because checkout speed needs to be increased",
+                  "rationale": "提高结账效率是应对大客流的关键。"
+                }
+              ]
+            },
+            {
+              "type": "space",
+              "content_l1": "在二楼",
+              "content_l2": "on the second floor",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "下午3点前",
+              "content_l2": "before 3pm",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L4_01",
+        "level": 4,
+        "language": "en",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "cflt_text": "I organize all the evidence myself, because calling the police was too much hassle, at home, tonight.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "I organize all the evidence myself, because calling the police was too much hassle, at home, tonight.",
+          "cflt_l2": "I organize all the evidence myself, because calling the police was too much hassle, at home, tonight.",
+          "standard_l2": "I've decided to stay home tonight and organize all the evidence myself because calling the police seemed like too much hassle.",
+          "standard_l1": "I've decided to stay home tonight and organize all the evidence myself because calling the police seemed like too much hassle.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "I have decided to stay home tonight and organize all the evidence myself. I was thinking about calling the police to report the break-in, but it seemed like too much hassle.",
+              "replacement": "I organize all the evidence myself, because calling the police was too much hassle, at home, tonight.",
+              "reason": "CFLT requires the core result (organize evidence) to come first, followed by reason, space, time."
+            },
+            {
+              "type": "omission",
+              "original": "I also considered going to the insurance company tomorrow to file a claim.",
+              "replacement": "omitted",
+              "reason": "Only the final chosen action is included in the CFLT sequence."
+            },
+            {
+              "type": "paraphrase",
+              "original": "it seemed like too much hassle",
+              "replacement": "because calling the police was too much hassle",
+              "reason": "Clarified that the hassle refers to calling the police, making the reason explicit."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "I organize all the evidence myself",
+              "content_l2": "I organize all the evidence myself",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because calling the police was too much hassle",
+              "content_l2": "because calling the police was too much hassle",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "at home",
+              "content_l2": "at home",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "tonight",
+              "content_l2": "tonight",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L4_02",
+        "level": 4,
+        "language": "en",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "cflt_text": "We go to the Italian restaurant, because my friend recommended it, on 5th Avenue, at 7 PM tonight.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "We go to the Italian restaurant, because my friend recommended it, on 5th Avenue, at 7 PM tonight.",
+          "cflt_l2": "我们去意大利餐厅，因为朋友推荐了，在第五大道，今晚7点。",
+          "standard_l2": "既然朋友推荐了第五大道的意大利餐厅，我们今晚7点就去那里吧。",
+          "standard_l1": "My friend recommended the Italian restaurant on 5th Avenue, so we'll go there at 7 PM tonight.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "We could try the new sushi place, or maybe the steakhouse downtown. Actually, my friend just texted recommending the Italian restaurant on 5th Avenue, so let's go there at 7 PM tonight.",
+              "replacement": "We go to the Italian restaurant, because my friend recommended it, on 5th Avenue, at 7 PM tonight.",
+              "reason": "CFLT reorders the core action (going to the Italian restaurant) first, followed by the reason (friend's recommendation), space (5th Avenue), and time (7 PM tonight). Irrelevant alternatives (sushi, steakhouse) are omitted."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "We go to the Italian restaurant",
+              "content_l2": "我们去意大利餐厅",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "because my friend recommended it",
+              "content_l2": "因为朋友推荐了",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "on 5th Avenue",
+              "content_l2": "在第五大道",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "at 7 PM tonight",
+              "content_l2": "今晚7点",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "EN_L4_03",
+        "level": 4,
+        "language": "en",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "cflt_text": "I take the bullet train, to save time, to Kyoto, on Friday morning.",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "I take the bullet train, to save time, to Kyoto, on Friday morning.",
+          "cflt_l2": "I take the bullet train, to save time, to Kyoto, on Friday morning.",
+          "standard_l2": "I will take the bullet train to Kyoto on Friday morning to save time.",
+          "standard_l1": "I will take the bullet train to Kyoto on Friday morning to save time.",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "I was originally going to fly to Tokyo next week... I will just take the bullet train to Kyoto Friday morning.",
+              "replacement": "I take the bullet train, to save time, to Kyoto, on Friday morning.",
+              "reason": "CFLT requires core action first (take the bullet train), followed by reason, space, and time. Earlier alternatives are dropped as they are not part of the final decision."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "I take the bullet train",
+              "content_l2": "I take the bullet train",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "to save time",
+              "content_l2": "to save time",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "to save time",
+                  "value_l2": "to save time",
+                  "rationale": "Bullet trains are faster than driving and more convenient than short-haul flights."
+                },
+                {
+                  "value_l1": "to enjoy the scenery",
+                  "value_l2": "to enjoy the scenery",
+                  "rationale": "The Shinkansen offers beautiful views of Mount Fuji and the countryside."
+                },
+                {
+                  "value_l1": "because it's more comfortable",
+                  "value_l2": "because it's more comfortable",
+                  "rationale": "Train seats are spacious and you can walk around, unlike on a plane."
+                }
+              ]
+            },
+            {
+              "type": "space",
+              "content_l1": "to Kyoto",
+              "content_l2": "to Kyoto",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "on Friday morning",
+              "content_l2": "on Friday morning",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L4_01",
+        "level": 4,
+        "language": "zh",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "cflt_text": "我决定自己整理所有证据，因为报警和索赔太麻烦，在家里，今晚。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "我决定自己整理所有证据，因为报警和索赔太麻烦，在家里，今晚。",
+          "cflt_l2": "I decided to organize all evidence by myself, because reporting and claiming were too troublesome, at home, tonight.",
+          "standard_l2": "I decided to stay home tonight and organize all the evidence myself, since reporting to the police and insurance seemed too troublesome.",
+          "standard_l1": "我本来想报警，但觉得太麻烦。也考虑过明天去保险公司填索赔单。最后我决定今晚留在家里自己整理所有证据。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "本来想报警…考虑过明天去保险公司…最后我决定…",
+              "replacement": "我决定自己整理所有证据，因为报警和索赔太麻烦",
+              "reason": "CFLT requires the core result to precede the reason. The past considerations are moved to the reason slot."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "我决定自己整理所有证据",
+              "content_l2": "I decided to organize all evidence by myself",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为报警和索赔太麻烦",
+              "content_l2": "because reporting and claiming were too troublesome",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "因为报警和索赔太麻烦",
+                  "value_l2": "because reporting and claiming were too troublesome",
+                  "rationale": "用户明确提到觉得报警太麻烦，这也解释了为何不选择保险索赔。"
+                },
+                {
+                  "value_l1": "为了防止进一步损失",
+                  "value_l2": "to prevent further loss",
+                  "rationale": "自己整理证据可能是为了快速处理以防止损失扩大。"
+                },
+                {
+                  "value_l1": "因为想省事",
+                  "value_l2": "to save hassle",
+                  "rationale": "避免与多个机构打交道，自己处理可能更直接。"
+                }
+              ]
+            },
+            {
+              "type": "space",
+              "content_l1": "在家里",
+              "content_l2": "at home",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "今晚",
+              "content_l2": "tonight",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L4_02",
+        "level": 4,
+        "language": "zh",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "cflt_text": "去意大利餐厅，因为朋友推荐，在第五大道，今晚7点。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "去意大利餐厅，因为朋友推荐，在第五大道，今晚7点。",
+          "cflt_l2": "Go to the Italian restaurant, because friend recommended, on Fifth Avenue, tonight at 7pm.",
+          "standard_l2": "Let's go to the Italian restaurant on Fifth Avenue at 7pm tonight since my friend recommended it.",
+          "standard_l1": "既然朋友推荐了第五大道的意大利餐厅，我们今晚7点就去那里吧。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "可以试试新开的寿司店，或者市中心的牛排店。不过我朋友刚发消息推荐第五大道的意大利餐厅，那就今晚7点去那里吧。",
+              "replacement": "去意大利餐厅...因为朋友推荐...",
+              "reason": "CFLT requires the core result (go to Italian restaurant) to precede the reason (friend's recommendation). The alternative suggestions about sushi and steak are irrelevant and omitted."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "去意大利餐厅",
+              "content_l2": "Go to the Italian restaurant",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为朋友推荐",
+              "content_l2": "because friend recommended",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "space",
+              "content_l1": "在第五大道",
+              "content_l2": "on Fifth Avenue",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "今晚7点",
+              "content_l2": "tonight at 7pm",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "ZH_L4_03",
+        "level": 4,
+        "language": "zh",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "cflt_text": "坐新干线，因为想去京都旅行，在京都，周五早上。",
+        "sc": true,
+        "sr": true,
+        "iv": true,
+        "dx": 1.0,
+        "transformer_response": {
+          "is_cflt_compliant": false,
+          "cflt_l1": "坐新干线，因为想去京都旅行，在京都，周五早上。",
+          "cflt_l2": "Take the bullet train, to visit Kyoto, in Kyoto, on Friday morning.",
+          "standard_l2": "Take the bullet train to Kyoto on Friday morning.",
+          "standard_l1": "周五早上坐新干线去京都旅行。",
+          "corrections": [
+            {
+              "type": "logic",
+              "original": "坐新干线去京都",
+              "replacement": "坐新干线 / 在京都",
+              "reason": "Slot exclusivity: destination 京都 belongs in space, not bundled into core. Core captures the action (坐新干线 / take the bullet train); space captures the destination."
+            }
+          ],
+          "slots": [
+            {
+              "type": "core",
+              "content_l1": "坐新干线",
+              "content_l2": "Take the bullet train",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "reason",
+              "content_l1": "因为想去京都旅行",
+              "content_l2": "to visit Kyoto",
+              "is_inferred": true,
+              "suggestions": [
+                {
+                  "value_l1": "因为想去京都旅行",
+                  "value_l2": "to visit Kyoto",
+                  "rationale": "前往京都最直接的动机是旅行。"
+                },
+                {
+                  "value_l1": "因为京都有想去的寺庙",
+                  "value_l2": "to see temples in Kyoto",
+                  "rationale": "京都以寺庙闻名，可能是主要吸引点。"
+                },
+                {
+                  "value_l1": "因为京都比东京更近",
+                  "value_l2": "because Kyoto is closer than Tokyo",
+                  "rationale": "相比东京，京都距离更近，出行更方便。"
+                }
+              ]
+            },
+            {
+              "type": "space",
+              "content_l1": "在京都",
+              "content_l2": "in Kyoto",
+              "is_inferred": false,
+              "suggestions": []
+            },
+            {
+              "type": "time",
+              "content_l1": "周五早上",
+              "content_l2": "on Friday morning",
+              "is_inferred": false,
+              "suggestions": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

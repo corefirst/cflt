@@ -1,0 +1,6547 @@
+[
+  {
+    "model": "openai/gpt-5",
+    "cases": [
+      {
+        "id": "EN_L1_01",
+        "level": 1,
+        "language": "en",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "It is raining outside, please close the window.",
+        "utterance_cflt": "Please close the window, because it is raining outside.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 86,
+          "completion_tokens_mean": 295.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 87,
+          "completion_tokens_mean": 338,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_02",
+        "level": 1,
+        "language": "en",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "The water is boiling, please turn off the stove.",
+        "utterance_cflt": "Please turn off the stove, the water is boiling.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 87,
+          "completion_tokens_mean": 425.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 87,
+          "completion_tokens_mean": 276,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_03",
+        "level": 1,
+        "language": "en",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "The dog is hungry, please feed it.",
+        "utterance_cflt": "Please feed the dog, it is hungry.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 85,
+          "completion_tokens_mean": 274.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 85,
+          "completion_tokens_mean": 339,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "the dog"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_01",
+        "level": 1,
+        "language": "zh",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "外面下雨了，请把窗户关上。",
+        "utterance_cflt": "请把窗户关上，因为外面下雨了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 338,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 488,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_02",
+        "level": 1,
+        "language": "zh",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "水开了，请把炉子关掉。",
+        "utterance_cflt": "请把炉子关掉，水开了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 96,
+          "completion_tokens_mean": 340,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 97,
+          "completion_tokens_mean": 489.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_03",
+        "level": 1,
+        "language": "zh",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "狗饿了，请给它喂食。",
+        "utterance_cflt": "请给狗喂食，它饿了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 97,
+          "completion_tokens_mean": 252.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 97,
+          "completion_tokens_mean": 317.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_01",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+        "utterance_cflt": "Please turn off all the lights, because the meeting has concluded, in the 5th floor grand conference room, today at 6 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 103,
+          "completion_tokens_mean": 424.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 105,
+          "completion_tokens_mean": 511.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_02",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "The coffee machine is broken, please contact maintenance to come to the 3rd floor pantry tomorrow morning.",
+        "utterance_cflt": "Please contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 97,
+          "completion_tokens_mean": 372.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 398,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_03",
+        "level": 2,
+        "language": "en",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "The guest in suite 502 has complained about noise, please dispatch security up there tonight at 11 PM.",
+        "utterance_cflt": "Please dispatch security, because the guest has complained about noise, to suite 502, tonight at 11 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 353,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 438.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_01",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "会议已经结束，请在今天下午6点把5楼大会议室的所有灯都关掉。",
+        "utterance_cflt": "请把所有灯都关掉，因为会议已经结束，在5楼大会议室，今天下午6点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 108,
+          "completion_tokens_mean": 789,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "turn off",
+              "target": "all lights",
+              "location": "5th floor large conference room",
+              "time": "today 6:00 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all lights",
+              "location": "5th-floor large conference room",
+              "time": "2026-05-16 18:00"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 109,
+          "completion_tokens_mean": 659,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all lights",
+              "location": "5th floor large conference room",
+              "time": "today 6:00 PM"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_02",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "咖啡机坏了，请明天早上联系维修工到3楼茶水间。",
+        "utterance_cflt": "请联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 107,
+          "completion_tokens_mean": 741.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "contact",
+              "target": "repair technician",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 109,
+          "completion_tokens_mean": 886,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "contact",
+              "target": "repair technician",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance worker",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_03",
+        "level": 2,
+        "language": "zh",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "502号套房的客人投诉吵闹，请今晚11点派保安上去。",
+        "utterance_cflt": "请派保安上去，因为客人投诉吵闹，到502号套房，今晚11点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 108,
+          "completion_tokens_mean": 609,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派遣",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派遣",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派遣",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 110,
+          "completion_tokens_mean": 660.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "Suite 502",
+              "time": "tonight 11:00 PM"
+            },
+            {
+              "action": "send",
+              "target": "security guard",
+              "location": "Suite 502",
+              "time": "11:00 PM tonight"
+            },
+            {
+              "action": "send",
+              "target": "security",
+              "location": "Suite 502",
+              "time": "11:00 PM tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_01",
+        "level": 3,
+        "language": "en",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "Server room temperatures have been spiking all week. Although the HVAC team is working on it, the east wing sensor went red again at 14:15. To prevent hardware damage and data loss, we need to shut down all backup nodes immediately.",
+        "utterance_cflt": "Shut down all backup nodes immediately, because we need to prevent hardware damage and data loss, in the east wing server room, at 14:15 — although the HVAC team is working on it, temperatures have been spiking all week.",
+        "control": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 126,
+          "completion_tokens_mean": 816.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "time": "immediately"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 125,
+          "completion_tokens_mean": 717.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_02",
+        "level": 3,
+        "language": "en",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "location": "bed_7",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "The patient in bed 7 has been stable since admission, but the latest blood test shows elevated white cells. The lab tech mentioned the sample might be contaminated, but to be safe, please notify the on-call physician within the next hour.",
+        "utterance_cflt": "Please notify the on-call physician within the next hour, because the latest blood test shows elevated white cells, for the patient in bed 7 — the sample might be contaminated, but the patient has been stable since admission.",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 124,
+          "completion_tokens_mean": 713.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 120,
+          "completion_tokens_mean": 523.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_03",
+        "level": 3,
+        "language": "en",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "Black Friday traffic is overwhelming the checkout counters. Even though we added two extra staff this morning, the queue at register 4 keeps growing through the afternoon. Please open the backup registers on the second floor by 3 PM.",
+        "utterance_cflt": "Please open the backup registers by 3 PM, because the queue at register 4 keeps growing, on the second floor — extra staff was added this morning, but Black Friday traffic keeps overwhelming the counters.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 500.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 117,
+          "completion_tokens_mean": 500.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_01",
+        "level": 3,
+        "language": "zh",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "这周服务器机房温度一直异常波动。虽然空调维修团队正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
+        "utterance_cflt": "立即关闭所有备份节点，因为要防止硬件损坏和数据丢失，在东翼服务器机房，14:15——虽然空调维修团队正在处理，但本周温度一直异常波动。",
+        "control": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 140,
+          "completion_tokens_mean": 921.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "shut down",
+              "target": "所有备份节点",
+              "time": "立即"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "time": "立即"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "time": "立即"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 133,
+          "completion_tokens_mean": 982.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_02",
+        "level": 3,
+        "language": "zh",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "7床的病人入院以来一直稳定，但最新血检显示白细胞偏高。化验员说样本可能被污染了，但为了安全起见，请在一小时内通知值班医生。",
+        "utterance_cflt": "请在一小时内通知值班医生，因为最新血检显示白细胞偏高，是7床的病人——样本可能被污染，但病人入院以来一直稳定。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 132,
+          "completion_tokens_mean": 906,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call doctor",
+              "location": "Bed 7",
+              "time": "within one hour"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "location": "7床",
+              "time": "一小时内"
+            },
+            {
+              "action": "notify",
+              "target": "值班医生",
+              "location": "7床",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 126,
+          "completion_tokens_mean": 1120,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "location": "7床",
+              "time": "一小时内"
+            },
+            {
+              "action": "notify",
+              "target": "on-call doctor",
+              "location": "Bed 7",
+              "time": "within 1 hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call doctor",
+              "location": "Bed 7",
+              "time": "within one hour"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_03",
+        "level": 3,
+        "language": "zh",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "黑五客流把收银台挤爆了。虽然今天早上加了两个人手，但4号收银台的队伍整个下午都在变长。请在下午3点前把二楼的备用收银台都打开。",
+        "utterance_cflt": "请在下午3点前打开备用收银台，因为4号收银台的队伍一直在变长，在二楼——虽然今早加了两个人手，但黑五客流持续超载。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 141,
+          "completion_tokens_mean": 823.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "all backup checkout counters",
+              "location": "second floor",
+              "time": "before 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "all backup checkout counters",
+              "location": "second floor",
+              "time": "before 3 PM today"
+            },
+            {
+              "action": "打开",
+              "target": "所有备用收银台",
+              "location": "二楼",
+              "time": "今天下午3点前"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 131,
+          "completion_tokens_mean": 630.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "open",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_01",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "I was thinking about calling the police to report the break-in, but it seemed like too much hassle. I also considered going to the insurance company tomorrow to file a claim. In the end, I have decided to stay home tonight and organize all the evidence myself.",
+        "utterance_cflt": "I have decided to organize all the evidence myself, at home, tonight — I was thinking about calling the police but it seemed like too much hassle, and I also considered filing an insurance claim tomorrow.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 129,
+          "completion_tokens_mean": 712,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 116,
+          "completion_tokens_mean": 457.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "at home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "at home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_02",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "We could try the new sushi place, or maybe the steakhouse downtown. Actually, my friend just texted recommending the Italian restaurant on 5th Avenue, so let's go there at 7 PM tonight.",
+        "utterance_cflt": "Let's go to the Italian restaurant on 5th Avenue at 7 PM tonight — we could have tried the new sushi place, or the steakhouse downtown, but my friend just recommended the Italian one.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 118,
+          "completion_tokens_mean": 649.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 117,
+          "completion_tokens_mean": 611.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_03",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "I was originally going to fly to Tokyo next week. Then I almost booked the train to Osaka. But thinking it over, I will just take the bullet train to Kyoto Friday morning.",
+        "utterance_cflt": "I will take the bullet train to Kyoto Friday morning — I was originally going to fly to Tokyo, and then I almost booked the train to Osaka, but I changed my mind.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 541,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 112,
+          "completion_tokens_mean": 413,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_01",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "我本来想报警报案，但觉得太麻烦。也考虑过明天去保险公司填索赔单。最后我决定今晚留在家里自己整理所有证据。",
+        "utterance_cflt": "我决定整理所有证据，在家里，今晚——本来想报警觉得太麻烦，保险公司索赔也考虑过，明天再说。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 126,
+          "completion_tokens_mean": 477,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 120,
+          "completion_tokens_mean": 631,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "all evidence",
+              "location": "at home",
+              "time": "tonight"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "organize",
+              "target": "all evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_02",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "可以试试新开的寿司店，或者市中心的牛排店。不过我朋友刚发消息推荐第五大道的意大利餐厅，那就今晚7点去那里吧。",
+        "utterance_cflt": "今晚7点去第五大道的意大利餐厅吧——新开的寿司店可以试试，市中心的牛排店也想过，但朋友刚推荐的意大利餐厅更好。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 125,
+          "completion_tokens_mean": 650.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 129,
+          "completion_tokens_mean": 761.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "go",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "go",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_03",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "我本来打算下周飞东京。后来又差点订了去大阪的火车。但想了想，周五早上就坐新干线去京都吧。",
+        "utterance_cflt": "周五早上坐新干线去京都吧——本来打算飞东京，又差点订了去大阪的火车，但最后还是决定去京都。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 125,
+          "completion_tokens_mean": 862.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "Shinkansen",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "乘坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "take",
+              "target": "Shinkansen",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 734.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "乘坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "take",
+              "target": "Shinkansen",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "Shinkansen",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        }
+      }
+    ]
+  },
+  {
+    "model": "google/gemini-3-flash-preview",
+    "runs": 3,
+    "cases": [
+      {
+        "id": "EN_L1_01",
+        "level": 1,
+        "language": "en",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "It is raining outside, please close the window.",
+        "utterance_cflt": "Please close the window, because it is raining outside.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 80,
+          "completion_tokens_mean": 19,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 81,
+          "completion_tokens_mean": 19,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_02",
+        "level": 1,
+        "language": "en",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "The water is boiling, please turn off the stove.",
+        "utterance_cflt": "Please turn off the stove, the water is boiling.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 81,
+          "completion_tokens_mean": 20,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 81,
+          "completion_tokens_mean": 20,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_03",
+        "level": 1,
+        "language": "en",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "The dog is hungry, please feed it.",
+        "utterance_cflt": "Please feed the dog, it is hungry.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 79,
+          "completion_tokens_mean": 19.333333333333332,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 79,
+          "completion_tokens_mean": 19,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_01",
+        "level": 1,
+        "language": "zh",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "外面下雨了，请把窗户关上。",
+        "utterance_cflt": "请把窗户关上，因为外面下雨了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 80,
+          "completion_tokens_mean": 21,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 81,
+          "completion_tokens_mean": 21,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_02",
+        "level": 1,
+        "language": "zh",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "水开了，请把炉子关掉。",
+        "utterance_cflt": "请把炉子关掉，水开了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 78,
+          "completion_tokens_mean": 20.333333333333332,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 78,
+          "completion_tokens_mean": 21,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_03",
+        "level": 1,
+        "language": "zh",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "狗饿了，请给它喂食。",
+        "utterance_cflt": "请给狗喂食，它饿了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 78,
+          "completion_tokens_mean": 20,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 78,
+          "completion_tokens_mean": 20,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_01",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+        "utterance_cflt": "Please turn off all the lights, because the meeting has concluded, in the 5th floor grand conference room, today at 6 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 97,
+          "completion_tokens_mean": 45,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 48,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_02",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "The coffee machine is broken, please contact maintenance to come to the 3rd floor pantry tomorrow morning.",
+        "utterance_cflt": "Please contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 91,
+          "completion_tokens_mean": 39,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 92,
+          "completion_tokens_mean": 39,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_03",
+        "level": 2,
+        "language": "en",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "The guest in suite 502 has complained about noise, please dispatch security up there tonight at 11 PM.",
+        "utterance_cflt": "Please dispatch security, because the guest has complained about noise, to suite 502, tonight at 11 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 95,
+          "completion_tokens_mean": 45,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 96,
+          "completion_tokens_mean": 45,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_01",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "会议已经结束，请在今天下午6点把5楼大会议室的所有灯都关掉。",
+        "utterance_cflt": "请把所有灯都关掉，因为会议已经结束，在5楼大会议室，今天下午6点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 90,
+          "completion_tokens_mean": 44,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 93,
+          "completion_tokens_mean": 47.666666666666664,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all lights",
+              "location": "large conference room on the 5th floor",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all lights",
+              "location": "large conference room on the 5th floor",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all lights",
+              "location": "large conference room on the 5th floor",
+              "time": "6 PM today"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_02",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "咖啡机坏了，请明天早上联系维修工到3楼茶水间。",
+        "utterance_cflt": "请联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 86,
+          "completion_tokens_mean": 41,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 89,
+          "completion_tokens_mean": 40.666666666666664,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "contact",
+              "target": "repairman",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_03",
+        "level": 2,
+        "language": "zh",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "502号套房的客人投诉吵闹，请今晚11点派保安上去。",
+        "utterance_cflt": "请派保安上去，因为客人投诉吵闹，到502号套房，今晚11点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 90,
+          "completion_tokens_mean": 44,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 93,
+          "completion_tokens_mean": 44,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_01",
+        "level": 3,
+        "language": "en",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "Server room temperatures have been spiking all week. Although the HVAC team is working on it, the east wing sensor went red again at 14:15. To prevent hardware damage and data loss, we need to shut down all backup nodes immediately.",
+        "utterance_cflt": "Shut down all backup nodes immediately, because we need to prevent hardware damage and data loss, in the east wing server room, at 14:15 — although the HVAC team is working on it, temperatures have been spiking all week.",
+        "control": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 39,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing",
+              "time": "immediately"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 119,
+          "completion_tokens_mean": 45,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_02",
+        "level": 3,
+        "language": "en",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "location": "bed_7",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "The patient in bed 7 has been stable since admission, but the latest blood test shows elevated white cells. The lab tech mentioned the sample might be contaminated, but to be safe, please notify the on-call physician within the next hour.",
+        "utterance_cflt": "Please notify the on-call physician within the next hour, because the latest blood test shows elevated white cells, for the patient in bed 7 — the sample might be contaminated, but the patient has been stable since admission.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 119,
+          "completion_tokens_mean": 43,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 115,
+          "completion_tokens_mean": 43,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_03",
+        "level": 3,
+        "language": "en",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "Black Friday traffic is overwhelming the checkout counters. Even though we added two extra staff this morning, the queue at register 4 keeps growing through the afternoon. Please open the backup registers on the second floor by 3 PM.",
+        "utterance_cflt": "Please open the backup registers by 3 PM, because the queue at register 4 keeps growing, on the second floor — extra staff was added this morning, but Black Friday traffic keeps overwhelming the counters.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 115,
+          "completion_tokens_mean": 39.333333333333336,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "the backup registers",
+              "location": "the second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 111,
+          "completion_tokens_mean": 38,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_01",
+        "level": 3,
+        "language": "zh",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "这周服务器机房温度一直异常波动。虽然空调维修团队正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
+        "utterance_cflt": "立即关闭所有备份节点，因为要防止硬件损坏和数据丢失，在东翼服务器机房，14:15——虽然空调维修团队正在处理，但本周温度一直异常波动。",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 114,
+          "completion_tokens_mean": 41.666666666666664,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼",
+              "time": "立即"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 111,
+          "completion_tokens_mean": 45,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_02",
+        "level": 3,
+        "language": "zh",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "7床的病人入院以来一直稳定，但最新血检显示白细胞偏高。化验员说样本可能被污染了，但为了安全起见，请在一小时内通知值班医生。",
+        "utterance_cflt": "请在一小时内通知值班医生，因为最新血检显示白细胞偏高，是7床的病人——样本可能被污染，但病人入院以来一直稳定。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 112,
+          "completion_tokens_mean": 37,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "location": "7床",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "location": "7床",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 105,
+          "completion_tokens_mean": 34,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "location": "7床",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_03",
+        "level": 3,
+        "language": "zh",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "黑五客流把收银台挤爆了。虽然今天早上加了两个人手，但4号收银台的队伍整个下午都在变长。请在下午3点前把二楼的备用收银台都打开。",
+        "utterance_cflt": "请在下午3点前打开备用收银台，因为4号收银台的队伍一直在变长，在二楼——虽然今早加了两个人手，但黑五客流持续超载。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 120,
+          "completion_tokens_mean": 43,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 114,
+          "completion_tokens_mean": 41.666666666666664,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup checkout counter",
+              "location": "second floor",
+              "time": "before 3 PM"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "open",
+              "target": "backup checkout counter",
+              "location": "second floor",
+              "time": "before 3 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_01",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "I was thinking about calling the police to report the break-in, but it seemed like too much hassle. I also considered going to the insurance company tomorrow to file a claim. In the end, I have decided to stay home tonight and organize all the evidence myself.",
+        "utterance_cflt": "I have decided to organize all the evidence myself, at home, tonight — I was thinking about calling the police but it seemed like too much hassle, and I also considered filing an insurance claim tomorrow.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 124,
+          "completion_tokens_mean": 37,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 110,
+          "completion_tokens_mean": 37,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_02",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "We could try the new sushi place, or maybe the steakhouse downtown. Actually, my friend just texted recommending the Italian restaurant on 5th Avenue, so let's go there at 7 PM tonight.",
+        "utterance_cflt": "Let's go to the Italian restaurant on 5th Avenue at 7 PM tonight — we could have tried the new sushi place, or the steakhouse downtown, but my friend just recommended the Italian one.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 40,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 40,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_03",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "I was originally going to fly to Tokyo next week. Then I almost booked the train to Osaka. But thinking it over, I will just take the bullet train to Kyoto Friday morning.",
+        "utterance_cflt": "I will take the bullet train to Kyoto Friday morning — I was originally going to fly to Tokyo, and then I almost booked the train to Osaka, but I changed my mind.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 107,
+          "completion_tokens_mean": 38,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 106,
+          "completion_tokens_mean": 38,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_01",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "我本来想报警报案，但觉得太麻烦。也考虑过明天去保险公司填索赔单。最后我决定今晚留在家里自己整理所有证据。",
+        "utterance_cflt": "我决定整理所有证据，在家里，今晚——本来想报警觉得太麻烦，保险公司索赔也考虑过，明天再说。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 104,
+          "completion_tokens_mean": 36.333333333333336,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 37,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_02",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "可以试试新开的寿司店，或者市中心的牛排店。不过我朋友刚发消息推荐第五大道的意大利餐厅，那就今晚7点去那里吧。",
+        "utterance_cflt": "今晚7点去第五大道的意大利餐厅吧——新开的寿司店可以试试，市中心的牛排店也想过，但朋友刚推荐的意大利餐厅更好。",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 105,
+          "completion_tokens_mean": 40,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "eat",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 106,
+          "completion_tokens_mean": 40,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_03",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "我本来打算下周飞东京。后来又差点订了去大阪的火车。但想了想，周五早上就坐新干线去京都吧。",
+        "utterance_cflt": "周五早上坐新干线去京都吧——本来打算飞东京，又差点订了去大阪的火车，但最后还是决定去京都。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 103,
+          "completion_tokens_mean": 39,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "乘坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "乘坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 100,
+          "completion_tokens_mean": 39.666666666666664,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "坐新干线去",
+              "target": "京都",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            }
+          ],
+          "errors": []
+        }
+      }
+    ]
+  },
+  {
+    "model": "qwen/qwen3.5-plus",
+    "runs": 3,
+    "cases": [
+      {
+        "id": "EN_L1_01",
+        "level": 1,
+        "language": "en",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "It is raining outside, please close the window.",
+        "utterance_cflt": "Please close the window, because it is raining outside.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 94,
+          "completion_tokens_mean": 978.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 95,
+          "completion_tokens_mean": 782.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_02",
+        "level": 1,
+        "language": "en",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "The water is boiling, please turn off the stove.",
+        "utterance_cflt": "Please turn off the stove, the water is boiling.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 95,
+          "completion_tokens_mean": 526.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 95,
+          "completion_tokens_mean": 832.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_03",
+        "level": 1,
+        "language": "en",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "The dog is hungry, please feed it.",
+        "utterance_cflt": "Please feed the dog, it is hungry.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 93,
+          "completion_tokens_mean": 465.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 93,
+          "completion_tokens_mean": 559.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_01",
+        "level": 1,
+        "language": "zh",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "外面下雨了，请把窗户关上。",
+        "utterance_cflt": "请把窗户关上，因为外面下雨了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 90,
+          "completion_tokens_mean": 699.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 91,
+          "completion_tokens_mean": 1054,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_02",
+        "level": 1,
+        "language": "zh",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "水开了，请把炉子关掉。",
+        "utterance_cflt": "请把炉子关掉，水开了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 90,
+          "completion_tokens_mean": 630.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 90,
+          "completion_tokens_mean": 683.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_03",
+        "level": 1,
+        "language": "zh",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "狗饿了，请给它喂食。",
+        "utterance_cflt": "请给狗喂食，它饿了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 89,
+          "completion_tokens_mean": 620.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 90,
+          "completion_tokens_mean": 875,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_01",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+        "utterance_cflt": "Please turn off all the lights, because the meeting has concluded, in the 5th floor grand conference room, today at 6 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 111,
+          "completion_tokens_mean": 558.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 14857.666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {},
+            {
+              "action": "turn off",
+              "target": "lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_02",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "The coffee machine is broken, please contact maintenance to come to the 3rd floor pantry tomorrow morning.",
+        "utterance_cflt": "Please contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 105,
+          "completion_tokens_mean": 2273.6666666666665,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 106,
+          "completion_tokens_mean": 1176,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_03",
+        "level": 2,
+        "language": "en",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "The guest in suite 502 has complained about noise, please dispatch security up there tonight at 11 PM.",
+        "utterance_cflt": "Please dispatch security, because the guest has complained about noise, to suite 502, tonight at 11 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 109,
+          "completion_tokens_mean": 859,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 110,
+          "completion_tokens_mean": 911,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_01",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "会议已经结束，请在今天下午6点把5楼大会议室的所有灯都关掉。",
+        "utterance_cflt": "请把所有灯都关掉，因为会议已经结束，在5楼大会议室，今天下午6点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 948,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5 楼大会议室",
+              "time": "今天下午 6 点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5 楼大会议室",
+              "time": "今天下午 6 点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5 楼大会议室",
+              "time": "今天下午 6 点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 102,
+          "completion_tokens_mean": 721,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5 楼大会议室",
+              "time": "今天下午 6 点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5 楼大会议室",
+              "time": "今天下午 6 点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5 楼大会议室",
+              "time": "今天下午 6 点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_02",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "咖啡机坏了，请明天早上联系维修工到3楼茶水间。",
+        "utterance_cflt": "请联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+        "control": {
+          "acc_mean": 0.3333333333333333,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 7975,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "维修",
+              "target": "咖啡机",
+              "location": "3 楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3 楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "维修",
+              "target": "咖啡机",
+              "location": "3 楼茶水间",
+              "time": "明天早上"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 100,
+          "completion_tokens_mean": 1043.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3 楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3 楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3 楼茶水间",
+              "time": "明天早上"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_03",
+        "level": 2,
+        "language": "zh",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "502号套房的客人投诉吵闹，请今晚11点派保安上去。",
+        "utterance_cflt": "请派保安上去，因为客人投诉吵闹，到502号套房，今晚11点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 101,
+          "completion_tokens_mean": 1473.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502 号套房",
+              "time": "今晚 11 点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502 号套房",
+              "time": "今晚 11 点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502 号套房",
+              "time": "今晚 11 点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 104,
+          "completion_tokens_mean": 1244.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502 号套房",
+              "time": "今晚 11 点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502 号套房",
+              "time": "今晚 11 点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502 号套房",
+              "time": "今晚 11 点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_01",
+        "level": 3,
+        "language": "en",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "Server room temperatures have been spiking all week. Although the HVAC team is working on it, the east wing sensor went red again at 14:15. To prevent hardware damage and data loss, we need to shut down all backup nodes immediately.",
+        "utterance_cflt": "Shut down all backup nodes immediately, because we need to prevent hardware damage and data loss, in the east wing server room, at 14:15 — although the HVAC team is working on it, temperatures have been spiking all week.",
+        "control": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 136,
+          "completion_tokens_mean": 4212.333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "Server room",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "Server room",
+              "time": "immediately"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 135,
+          "completion_tokens_mean": 915.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_02",
+        "level": 3,
+        "language": "en",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "location": "bed_7",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "The patient in bed 7 has been stable since admission, but the latest blood test shows elevated white cells. The lab tech mentioned the sample might be contaminated, but to be safe, please notify the on-call physician within the next hour.",
+        "utterance_cflt": "Please notify the on-call physician within the next hour, because the latest blood test shows elevated white cells, for the patient in bed 7 — the sample might be contaminated, but the patient has been stable since admission.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 132,
+          "completion_tokens_mean": 3109,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 128,
+          "completion_tokens_mean": 902.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_03",
+        "level": 3,
+        "language": "en",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "Black Friday traffic is overwhelming the checkout counters. Even though we added two extra staff this morning, the queue at register 4 keeps growing through the afternoon. Please open the backup registers on the second floor by 3 PM.",
+        "utterance_cflt": "Please open the backup registers by 3 PM, because the queue at register 4 keeps growing, on the second floor — extra staff was added this morning, but Black Friday traffic keeps overwhelming the counters.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 129,
+          "completion_tokens_mean": 1094.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 125,
+          "completion_tokens_mean": 779.6666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_01",
+        "level": 3,
+        "language": "zh",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "这周服务器机房温度一直异常波动。虽然空调维修团队正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
+        "utterance_cflt": "立即关闭所有备份节点，因为要防止硬件损坏和数据丢失，在东翼服务器机房，14:15——虽然空调维修团队正在处理，但本周温度一直异常波动。",
+        "control": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 125,
+          "completion_tokens_mean": 5236.333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "服务器机房",
+              "time": "立即"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "服务器机房",
+              "time": "立即"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "服务器机房",
+              "time": "立即"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 949,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_02",
+        "level": 3,
+        "language": "zh",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "7床的病人入院以来一直稳定，但最新血检显示白细胞偏高。化验员说样本可能被污染了，但为了安全起见，请在一小时内通知值班医生。",
+        "utterance_cflt": "请在一小时内通知值班医生，因为最新血检显示白细胞偏高，是7床的病人——样本可能被污染，但病人入院以来一直稳定。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 118,
+          "completion_tokens_mean": 1463,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "location": "7 床",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 3602,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_03",
+        "level": 3,
+        "language": "zh",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "黑五客流把收银台挤爆了。虽然今天早上加了两个人手，但4号收银台的队伍整个下午都在变长。请在下午3点前把二楼的备用收银台都打开。",
+        "utterance_cflt": "请在下午3点前打开备用收银台，因为4号收银台的队伍一直在变长，在二楼——虽然今早加了两个人手，但黑五客流持续超载。",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 123,
+          "completion_tokens_mean": 17091.666666666668,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午 3 点前"
+            },
+            {},
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午 3 点前"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 119,
+          "completion_tokens_mean": 2821.3333333333335,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午 3 点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午 3 点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午 3 点前"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_01",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "I was thinking about calling the police to report the break-in, but it seemed like too much hassle. I also considered going to the insurance company tomorrow to file a claim. In the end, I have decided to stay home tonight and organize all the evidence myself.",
+        "utterance_cflt": "I have decided to organize all the evidence myself, at home, tonight — I was thinking about calling the police but it seemed like too much hassle, and I also considered filing an insurance claim tomorrow.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 137,
+          "completion_tokens_mean": 904.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 124,
+          "completion_tokens_mean": 1229.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_02",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "We could try the new sushi place, or maybe the steakhouse downtown. Actually, my friend just texted recommending the Italian restaurant on 5th Avenue, so let's go there at 7 PM tonight.",
+        "utterance_cflt": "Let's go to the Italian restaurant on 5th Avenue at 7 PM tonight — we could have tried the new sushi place, or the steakhouse downtown, but my friend just recommended the Italian one.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 127,
+          "completion_tokens_mean": 1214,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 126,
+          "completion_tokens_mean": 793,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_03",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "I was originally going to fly to Tokyo next week. Then I almost booked the train to Osaka. But thinking it over, I will just take the bullet train to Kyoto Friday morning.",
+        "utterance_cflt": "I will take the bullet train to Kyoto Friday morning — I was originally going to fly to Tokyo, and then I almost booked the train to Osaka, but I changed my mind.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 736,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 120,
+          "completion_tokens_mean": 539.3333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_01",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "我本来想报警报案，但觉得太麻烦。也考虑过明天去保险公司填索赔单。最后我决定今晚留在家里自己整理所有证据。",
+        "utterance_cflt": "我决定整理所有证据，在家里，今晚——本来想报警觉得太麻烦，保险公司索赔也考虑过，明天再说。",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 16129,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {},
+            {
+              "action": "整理",
+              "target": "证据",
+              "location": "家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 107,
+          "completion_tokens_mean": 1030,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_02",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "可以试试新开的寿司店，或者市中心的牛排店。不过我朋友刚发消息推荐第五大道的意大利餐厅，那就今晚7点去那里吧。",
+        "utterance_cflt": "今晚7点去第五大道的意大利餐厅吧——新开的寿司店可以试试，市中心的牛排店也想过，但朋友刚推荐的意大利餐厅更好。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 115,
+          "completion_tokens_mean": 1828.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚 7 点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚 7 点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚 7 点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 115,
+          "completion_tokens_mean": 2393.6666666666665,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚 7 点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚 7 点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚 7 点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_03",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "我本来打算下周飞东京。后来又差点订了去大阪的火车。但想了想，周五早上就坐新干线去京都吧。",
+        "utterance_cflt": "周五早上坐新干线去京都吧——本来打算飞东京，又差点订了去大阪的火车，但最后还是决定去京都。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 111,
+          "completion_tokens_mean": 6000.333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.5,
+          "acc_std": 0.5,
+          "prompt_tokens_mean": 111,
+          "completion_tokens_mean": 6775,
+          "n_success": 2,
+          "n_error": 1,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "京都",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            null
+          ],
+          "errors": [
+            "Error code: 403 - {'error': {'message': 'The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.', 'type': 'AllocationQuota.FreeTierOnly', 'param': None, 'code': 'AllocationQuota.FreeTierOnly'}, 'id': 'chatcmpl-5c865437-a671-9c8d-ab2e-e78e246a20b0', 'request_id': '5c865437-a671-9c8d-ab2e-e78e246a20b0'}"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "model": "deepseek/deepseek-v4-pro",
+    "runs": 3,
+    "cases": [
+      {
+        "id": "EN_L1_01",
+        "level": 1,
+        "language": "en",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "It is raining outside, please close the window.",
+        "utterance_cflt": "Please close the window, because it is raining outside.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 101,
+          "completion_tokens_mean": 252,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window",
+              "location": "outside"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 102,
+          "completion_tokens_mean": 230.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            },
+            {
+              "action": "close",
+              "target": "window"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_02",
+        "level": 1,
+        "language": "en",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "The water is boiling, please turn off the stove.",
+        "utterance_cflt": "Please turn off the stove, the water is boiling.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 102,
+          "completion_tokens_mean": 86.33333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 102,
+          "completion_tokens_mean": 82.33333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            },
+            {
+              "action": "turn off",
+              "target": "stove"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L1_03",
+        "level": 1,
+        "language": "en",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "The dog is hungry, please feed it.",
+        "utterance_cflt": "Please feed the dog, it is hungry.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 100,
+          "completion_tokens_mean": 79.66666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "the dog"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 100,
+          "completion_tokens_mean": 65.66666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_01",
+        "level": 1,
+        "language": "zh",
+        "category": "Home Automation",
+        "ground_truth": {
+          "action": "close",
+          "target": "window"
+        },
+        "utterance_control": "外面下雨了，请把窗户关上。",
+        "utterance_cflt": "请把窗户关上，因为外面下雨了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 139.33333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关",
+              "target": "窗户"
+            },
+            {
+              "action": "关",
+              "target": "窗户"
+            },
+            {
+              "action": "关上",
+              "target": "窗户"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 70,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关上",
+              "target": "窗户"
+            },
+            {
+              "action": "关",
+              "target": "窗户"
+            },
+            {
+              "action": "关",
+              "target": "窗户"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_02",
+        "level": 1,
+        "language": "zh",
+        "category": "Kitchen",
+        "ground_truth": {
+          "action": "off",
+          "target": "stove"
+        },
+        "utterance_control": "水开了，请把炉子关掉。",
+        "utterance_cflt": "请把炉子关掉，水开了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 102,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 99,
+          "completion_tokens_mean": 103,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            },
+            {
+              "action": "关掉",
+              "target": "炉子"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L1_03",
+        "level": 1,
+        "language": "zh",
+        "category": "Pet Care",
+        "ground_truth": {
+          "action": "feed",
+          "target": "dog"
+        },
+        "utterance_control": "狗饿了，请给它喂食。",
+        "utterance_cflt": "请给狗喂食，它饿了。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 97,
+          "completion_tokens_mean": 58.666666666666664,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "feed",
+              "target": "dog"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 98,
+          "completion_tokens_mean": 97,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            },
+            {
+              "action": "喂食",
+              "target": "狗"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_01",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "Since the meeting has concluded, please turn off all the lights in the 5th floor grand conference room at 6 PM today.",
+        "utterance_cflt": "Please turn off all the lights, because the meeting has concluded, in the 5th floor grand conference room, today at 6 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 118,
+          "completion_tokens_mean": 126.66666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "the 5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "6 PM today"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 120,
+          "completion_tokens_mean": 132,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            },
+            {
+              "action": "turn off",
+              "target": "all the lights",
+              "location": "5th floor grand conference room",
+              "time": "today at 6 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_02",
+        "level": 2,
+        "language": "en",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "The coffee machine is broken, please contact maintenance to come to the 3rd floor pantry tomorrow morning.",
+        "utterance_cflt": "Please contact maintenance, because the coffee machine is broken, to the 3rd floor pantry, tomorrow morning.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 112,
+          "completion_tokens_mean": 135.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 152,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance",
+              "location": "3rd floor pantry",
+              "time": "tomorrow morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L2_03",
+        "level": 2,
+        "language": "en",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "The guest in suite 502 has complained about noise, please dispatch security up there tonight at 11 PM.",
+        "utterance_cflt": "Please dispatch security, because the guest has complained about noise, to suite 502, tonight at 11 PM.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 113,
+          "completion_tokens_mean": 170.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 114,
+          "completion_tokens_mean": 135,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            },
+            {
+              "action": "dispatch",
+              "target": "security",
+              "location": "suite 502",
+              "time": "tonight at 11 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_01",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "off",
+          "target": "lights",
+          "location": "5F_conference_room",
+          "time": "18:00"
+        },
+        "utterance_control": "会议已经结束，请在今天下午6点把5楼大会议室的所有灯都关掉。",
+        "utterance_cflt": "请把所有灯都关掉，因为会议已经结束，在5楼大会议室，今天下午6点。",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 109,
+          "completion_tokens_mean": 174.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关闭",
+              "target": "大会议室的所有灯",
+              "location": "5楼",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 112,
+          "completion_tokens_mean": 135.33333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            },
+            {
+              "action": "关掉",
+              "target": "所有灯",
+              "location": "5楼大会议室",
+              "time": "今天下午6点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_02",
+        "level": 2,
+        "language": "zh",
+        "category": "Office Management",
+        "ground_truth": {
+          "action": "contact",
+          "target": "maintenance",
+          "location": "3F_pantry",
+          "time": "tomorrow_morning"
+        },
+        "utterance_control": "咖啡机坏了，请明天早上联系维修工到3楼茶水间。",
+        "utterance_cflt": "请联系维修工，因为咖啡机坏了，到3楼茶水间，明天早上。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 105,
+          "completion_tokens_mean": 128,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 107,
+          "completion_tokens_mean": 180.33333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            },
+            {
+              "action": "contact",
+              "target": "maintenance worker",
+              "location": "3rd floor tea room",
+              "time": "tomorrow morning"
+            },
+            {
+              "action": "联系",
+              "target": "维修工",
+              "location": "3楼茶水间",
+              "time": "明天早上"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L2_03",
+        "level": 2,
+        "language": "zh",
+        "category": "Hotel Operations",
+        "ground_truth": {
+          "action": "dispatch",
+          "target": "security",
+          "location": "suite_502",
+          "time": "23:00"
+        },
+        "utterance_control": "502号套房的客人投诉吵闹，请今晚11点派保安上去。",
+        "utterance_cflt": "请派保安上去，因为客人投诉吵闹，到502号套房，今晚11点。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 105,
+          "completion_tokens_mean": 183.33333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 108,
+          "completion_tokens_mean": 236.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            },
+            {
+              "action": "派",
+              "target": "保安",
+              "location": "502号套房",
+              "time": "今晚11点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_01",
+        "level": 3,
+        "language": "en",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "Server room temperatures have been spiking all week. Although the HVAC team is working on it, the east wing sensor went red again at 14:15. To prevent hardware damage and data loss, we need to shut down all backup nodes immediately.",
+        "utterance_cflt": "Shut down all backup nodes immediately, because we need to prevent hardware damage and data loss, in the east wing server room, at 14:15 — although the HVAC team is working on it, temperatures have been spiking all week.",
+        "control": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 141,
+          "completion_tokens_mean": 400,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "server room",
+              "time": "immediately"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "server room"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "server room",
+              "time": "immediately"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 140,
+          "completion_tokens_mean": 276.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "Shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            },
+            {
+              "action": "shut down",
+              "target": "all backup nodes",
+              "location": "east wing server room",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_02",
+        "level": 3,
+        "language": "en",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "location": "bed_7",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "The patient in bed 7 has been stable since admission, but the latest blood test shows elevated white cells. The lab tech mentioned the sample might be contaminated, but to be safe, please notify the on-call physician within the next hour.",
+        "utterance_cflt": "Please notify the on-call physician within the next hour, because the latest blood test shows elevated white cells, for the patient in bed 7 — the sample might be contaminated, but the patient has been stable since admission.",
+        "control": {
+          "acc_mean": 0.3333333333333333,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 140,
+          "completion_tokens_mean": 400.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "the on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "the on-call physician",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 136,
+          "completion_tokens_mean": 234.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            },
+            {
+              "action": "notify",
+              "target": "on-call physician",
+              "location": "bed 7",
+              "time": "within the next hour"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L3_03",
+        "level": 3,
+        "language": "en",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "Black Friday traffic is overwhelming the checkout counters. Even though we added two extra staff this morning, the queue at register 4 keeps growing through the afternoon. Please open the backup registers on the second floor by 3 PM.",
+        "utterance_cflt": "Please open the backup registers by 3 PM, because the queue at register 4 keeps growing, on the second floor — extra staff was added this morning, but Black Friday traffic keeps overwhelming the counters.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 136,
+          "completion_tokens_mean": 235,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "the backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 132,
+          "completion_tokens_mean": 260,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "backup registers",
+              "location": "second floor",
+              "time": "by 3 PM"
+            },
+            {
+              "action": "open",
+              "target": "the backup registers",
+              "location": "second floor",
+              "time": "3 PM"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_01",
+        "level": 3,
+        "language": "zh",
+        "category": "IT Operations",
+        "ground_truth": {
+          "action": "shutdown",
+          "target": "backup_nodes",
+          "location": "east_wing",
+          "time": "14:15"
+        },
+        "utterance_control": "这周服务器机房温度一直异常波动。虽然空调维修团队正在处理，但东翼传感器在14:15又报警了。为了防止硬件损坏和数据丢失，我们需要立即关闭所有备份节点。",
+        "utterance_cflt": "立即关闭所有备份节点，因为要防止硬件损坏和数据丢失，在东翼服务器机房，14:15——虽然空调维修团队正在处理，但本周温度一直异常波动。",
+        "control": {
+          "acc_mean": 0.3333333333333333,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 130,
+          "completion_tokens_mean": 329.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "备份节点",
+              "location": "东翼",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "服务器机房",
+              "time": "这周14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 126,
+          "completion_tokens_mean": 132.33333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            },
+            {
+              "action": "关闭",
+              "target": "所有备份节点",
+              "location": "东翼服务器机房",
+              "time": "14:15"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_02",
+        "level": 3,
+        "language": "zh",
+        "category": "Healthcare",
+        "ground_truth": {
+          "action": "notify",
+          "target": "physician",
+          "time": "within_1_hour"
+        },
+        "utterance_control": "7床的病人入院以来一直稳定，但最新血检显示白细胞偏高。化验员说样本可能被污染了，但为了安全起见，请在一小时内通知值班医生。",
+        "utterance_cflt": "请在一小时内通知值班医生，因为最新血检显示白细胞偏高，是7床的病人——样本可能被污染，但病人入院以来一直稳定。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 126,
+          "completion_tokens_mean": 158.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 375,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            },
+            {
+              "action": "通知",
+              "target": "值班医生",
+              "time": "一小时内"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L3_03",
+        "level": 3,
+        "language": "zh",
+        "category": "Retail Operations",
+        "ground_truth": {
+          "action": "open",
+          "target": "registers",
+          "location": "2F",
+          "time": "15:00"
+        },
+        "utterance_control": "黑五客流把收银台挤爆了。虽然今天早上加了两个人手，但4号收银台的队伍整个下午都在变长。请在下午3点前把二楼的备用收银台都打开。",
+        "utterance_cflt": "请在下午3点前打开备用收银台，因为4号收银台的队伍一直在变长，在二楼——虽然今早加了两个人手，但黑五客流持续超载。",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 135,
+          "completion_tokens_mean": 174.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "open",
+              "target": "backup cash registers",
+              "location": "second floor",
+              "time": "before 3 PM"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 129,
+          "completion_tokens_mean": 186,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "打开",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            },
+            {
+              "action": "open",
+              "target": "备用收银台",
+              "location": "二楼",
+              "time": "下午3点前"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_01",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "I was thinking about calling the police to report the break-in, but it seemed like too much hassle. I also considered going to the insurance company tomorrow to file a claim. In the end, I have decided to stay home tonight and organize all the evidence myself.",
+        "utterance_cflt": "I have decided to organize all the evidence myself, at home, tonight — I was thinking about calling the police but it seemed like too much hassle, and I also considered filing an insurance claim tomorrow.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 144,
+          "completion_tokens_mean": 462,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 131,
+          "completion_tokens_mean": 217.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "evidence",
+              "location": "home",
+              "time": "tonight"
+            },
+            {
+              "action": "organize",
+              "target": "all the evidence",
+              "location": "at home",
+              "time": "tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_02",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "We could try the new sushi place, or maybe the steakhouse downtown. Actually, my friend just texted recommending the Italian restaurant on 5th Avenue, so let's go there at 7 PM tonight.",
+        "utterance_cflt": "Let's go to the Italian restaurant on 5th Avenue at 7 PM tonight — we could have tried the new sushi place, or the steakhouse downtown, but my friend just recommended the Italian one.",
+        "control": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 134,
+          "completion_tokens_mean": 576,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "the Italian restaurant on 5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 133,
+          "completion_tokens_mean": 155,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "on 5th Avenue",
+              "time": "at 7 PM tonight"
+            },
+            {
+              "action": "go",
+              "target": "Italian restaurant",
+              "location": "5th Avenue",
+              "time": "7 PM tonight"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "EN_L4_03",
+        "level": 4,
+        "language": "en",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "I was originally going to fly to Tokyo next week. Then I almost booked the train to Osaka. But thinking it over, I will just take the bullet train to Kyoto Friday morning.",
+        "utterance_cflt": "I will take the bullet train to Kyoto Friday morning — I was originally going to fly to Tokyo, and then I almost booked the train to Osaka, but I changed my mind.",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 128,
+          "completion_tokens_mean": 267,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 127,
+          "completion_tokens_mean": 341.6666666666667,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "time": "Friday morning"
+            },
+            {
+              "action": "take",
+              "target": "bullet train",
+              "location": "Kyoto",
+              "time": "Friday morning"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_01",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "organize",
+          "target": "evidence",
+          "location": "home",
+          "time": "tonight"
+        },
+        "utterance_control": "我本来想报警报案，但觉得太麻烦。也考虑过明天去保险公司填索赔单。最后我决定今晚留在家里自己整理所有证据。",
+        "utterance_cflt": "我决定整理所有证据，在家里，今晚——本来想报警觉得太麻烦，保险公司索赔也考虑过，明天再说。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 121,
+          "completion_tokens_mean": 156.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.6666666666666666,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 115,
+          "completion_tokens_mean": 188.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "家里",
+              "time": "今晚"
+            },
+            {
+              "action": "整理",
+              "target": "所有证据",
+              "location": "在家里",
+              "time": "今晚"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_02",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "go",
+          "target": "italian_restaurant",
+          "location": "5th_avenue",
+          "time": "19:00"
+        },
+        "utterance_control": "可以试试新开的寿司店，或者市中心的牛排店。不过我朋友刚发消息推荐第五大道的意大利餐厅，那就今晚7点去那里吧。",
+        "utterance_cflt": "今晚7点去第五大道的意大利餐厅吧——新开的寿司店可以试试，市中心的牛排店也想过，但朋友刚推荐的意大利餐厅更好。",
+        "control": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 123,
+          "completion_tokens_mean": 165.33333333333334,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 1.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 123,
+          "completion_tokens_mean": 176.66666666666666,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            },
+            {
+              "action": "去",
+              "target": "意大利餐厅",
+              "location": "第五大道",
+              "time": "今晚7点"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "id": "ZH_L4_03",
+        "level": 4,
+        "language": "zh",
+        "category": "Decision (multi-action)",
+        "ground_truth": {
+          "action": "take",
+          "target": "bullet_train",
+          "location": "kyoto",
+          "time": "friday_morning"
+        },
+        "utterance_control": "我本来打算下周飞东京。后来又差点订了去大阪的火车。但想了想，周五早上就坐新干线去京都吧。",
+        "utterance_cflt": "周五早上坐新干线去京都吧——本来打算飞东京，又差点订了去大阪的火车，但最后还是决定去京都。",
+        "control": {
+          "acc_mean": 0.3333333333333333,
+          "acc_std": 0.4714045207910317,
+          "prompt_tokens_mean": 118,
+          "completion_tokens_mean": 260.3333333333333,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "坐",
+              "target": "新干线去京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "坐",
+              "target": "新干线",
+              "location": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "去",
+              "target": "京都",
+              "time": "周五早上"
+            }
+          ],
+          "errors": []
+        },
+        "cflt": {
+          "acc_mean": 0.0,
+          "acc_std": 0.0,
+          "prompt_tokens_mean": 118,
+          "completion_tokens_mean": 405,
+          "n_success": 3,
+          "n_error": 0,
+          "outputs": [
+            {
+              "action": "去",
+              "target": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "去",
+              "target": "京都",
+              "time": "周五早上"
+            },
+            {
+              "action": "go",
+              "target": "京都",
+              "time": "周五早上"
+            }
+          ],
+          "errors": []
+        }
+      }
+    ]
+  }
+]

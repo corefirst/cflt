@@ -179,4 +179,4 @@ Qwen3.5-Plus 在部分运行中出现 API 连接错误（首次运行的 EN_L3_0
 
 4. **§5.2 预测的 -30–50% token 节省在 prompt 层面不成立**（本数据集两组词汇相同，无法测试 prompt 压缩）；在 thinking model 的 completion 层面数值上成立（-37%），但机制是推理开销减少而非 prompt 压缩。
 
-> **复现：** `python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3`，报告生成于 `results/`（gitignored，本地运行后可见）。
+> **复现：** `python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3`，报告生成于 `results/`（gitignored，本地运行后可见）。历史快照归档于 [`experiment-history/`](https://github.com/corefirst/cflt/tree/main/experiment-history)。

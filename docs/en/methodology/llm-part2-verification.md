@@ -179,4 +179,4 @@ This experiment provides the first multi-model empirical evidence for the primac
 
 4. **The §5.2 −30–50% token saving claim does not hold at the prompt level** (untestable with identical-content design); it holds numerically at the completion level for thinking models (−37%), with a different mechanism than originally anticipated.
 
-> **Reproduce:** `python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3` — the report is generated into `results/` (gitignored; visible after running locally).
+> **Reproduce:** `python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3` — the report is generated into `results/` (gitignored; visible after running locally). Past snapshots are archived in [`experiment-history/`](https://github.com/corefirst/cflt/tree/main/experiment-history).
