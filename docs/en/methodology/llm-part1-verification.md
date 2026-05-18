@@ -143,6 +143,6 @@ python scripts/llm_eval/part1_human_cflt_eval.py \
   --model deepseek/deepseek-v4-pro --source zh --target en
 ```
 
-Results write to `results/part1_eval_report.md` and `results/part1_eval_raw.json`. See [`scripts/README.md`](../../../scripts/README.md) for full CLI reference.
+Results write to `results/part1_eval_report.md` and `results/part1_eval_raw.json`. See [`scripts/README.md`](https://github.com/corefirst/cflt/tree/main/scripts/README.md) for full CLI reference.
 
 Past snapshots are archived in [`experiment-history/`](https://github.com/corefirst/cflt/tree/main/experiment-history).

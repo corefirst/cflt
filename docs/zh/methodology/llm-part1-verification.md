@@ -143,6 +143,6 @@ python scripts/llm_eval/part1_human_cflt_eval.py \
   --model deepseek/deepseek-v4-pro --source zh --target en
 ```
 
-结果写入 `results/part1_eval_report.md` 和 `results/part1_eval_raw.json`。完整 CLI 参考见 [`scripts/README.md`](../../../scripts/README.md)。
+结果写入 `results/part1_eval_report.md` 和 `results/part1_eval_raw.json`。完整 CLI 参考见 [`scripts/README.md`](https://github.com/corefirst/cflt/tree/main/scripts/README.md)。
 
 历史快照归档于 [`experiment-history/`](https://github.com/corefirst/cflt/tree/main/experiment-history)。

@@ -8,9 +8,7 @@
 
 | 日期 / 标签 | 关注领域 | 关键结果 |
 | :--- | :--- | :--- |
-| **2026-05-17** | 人类-CFLT 对齐 | deepseek-v4-pro → gpt-5, DX 88% (稳定在 ~96%) |
-| **2026-05-17** | LLM 自我一致性 | 4 模型基准：gpt-5 / gemini-3-flash / qwen3.5-plus / deepseek-v4-pro, N=3, L3 +22–44pp |
-| **2026-05-17-claude** | Claude 扩展测试 | 5 模型扩展：基准 + claude-sonnet-4-6。L3 通用（5/5 达到 100% CFLT）。 |
+| **2026-05-17** | 全基准测试 | 第一阶段 (DX 88%): DeepSeek-v4-pro → GPT-5。第二阶段 (5 模型扩展): GPT-5, Gemini 3 Flash, Qwen 3.5 Plus, DeepSeek v4 Pro, Claude Sonnet 4.6。L3 通用（5/5 达到 100% CFLT）。 |
 
 ## 数据与可复现性
 

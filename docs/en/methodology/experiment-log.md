@@ -8,9 +8,7 @@ Detailed reports for each experiment run are archived in the project repository.
 
 | Date / Tag | Focus Area | Key Results |
 | :--- | :--- | :--- |
-| **2026-05-17** | Human-CFLT Alignment | deepseek-v4-pro → gpt-5, DX 88% (stable ~96%) |
-| **2026-05-17** | LLM Self-Consistency | 4-model baseline: gpt-5 / gemini-3-flash / qwen3.5-plus / deepseek-v4-pro, N=3, L3 +22–44pp |
-| **2026-05-17-claude** | Claude Extension | 5-model expansion: baseline + claude-sonnet-4-6. L3 universal (5/5 reach 100% CFLT). |
+| **2026-05-17** | Full Benchmark | Part I (DX 88%): DeepSeek-v4-pro → GPT-5. Part II (5-model expansion): GPT-5, Gemini 3 Flash, Qwen 3.5 Plus, DeepSeek v4 Pro, Claude 3.5 Sonnet. L3 universal (5/5 reach 100% CFLT). |
 
 ## Data & Reproducibility
 

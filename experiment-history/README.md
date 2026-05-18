@@ -34,8 +34,7 @@ Then commit the new directory.
 
 | Date / Tag | Part I — transformer (DX) | Part II — models (non-ceiling Δacc) |
 | :-- | :-- | :-- |
-| [2026-05-17](2026-05-17/part1_eval_report.md) | deepseek-v4-pro → gpt-5, DX 88% (stable ~96%) | 4-model baseline: gpt-5 / gemini-3-flash / qwen3.5-plus / deepseek-v4-pro, N=3, L3 +22–44pp |
-| [2026-05-17-claude](2026-05-17-claude/part2_llm_eval_report.md) | (Part II only — Part I unchanged from 2026-05-17 snapshot) | 5-model expansion: baseline + anthropic/claude-sonnet-4-6 via OpenRouter. L3 universal (5/5 reach 100% CFLT; +22 to +44pp). L4 −11pp regression now confined to DeepSeek alone. |
+| [2026-05-17](2026-05-17/) | [Part I (DX 88%)](2026-05-17/part1_eval_report.md): DeepSeek-v4-pro → GPT-5. | [Part II (+22–44pp)](2026-05-17/part2_llm_eval_report.md): 5-model expansion (GPT-5, Gemini 3 Flash, Qwen 3.5 Plus, DeepSeek v4 Pro, Claude Sonnet 4.6). L3 universal (5/5 reach 100% CFLT). L4 regression confined to DeepSeek alone. |
 
 ## Reproducing from a historical snapshot
 
