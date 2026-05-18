@@ -5,7 +5,7 @@
 
 ## 1. Introduction
 
-As a normative protocol for cognitive ergonomics, CFLT makes several high-stakes claims about information processing efficiency and language acquisition speed. To transition from a theoretical framework to an evidence-based science, these claims must be subjected to rigorous empirical testing. This agenda outlines three pillars of research: **Computational Performance**, **Psycholinguistic Validation**, and **SLA (Second Language Acquisition) Outcomes**.
+As a normative protocol for cognitive ergonomics, CFLT makes several high-stakes claims about information processing efficiency and language acquisition speed. To transition from a theoretical framework to an evidence-based science, these claims must be subjected to rigorous empirical testing. This agenda outlines three empirical tracks: **Computational Performance**, **Psycholinguistic Validation**, and **SLA (Second Language Acquisition) Outcomes**. (Terminology note: these are methodological research tracks of the empirical agenda; they are *not* the same numbering as the three Strategic Pillars in [`../vision.md`](../vision.md), which organize the project's high-level vision and includes Pillar III = Cognitive Translation Layer.)
 
 ### 1.1 The Cross-Domain Single-Currency Premise
 
@@ -23,13 +23,13 @@ We accept the Guest & Martin / Slobin critique and revise the framing claim acco
 2. **The "shared currency" is the *intervention*, not the *cost*.** What CFLT actually proposes is a single piece of engineering — the `Core → R → S → T` protocol — and predicts (testably) that it reduces both DLPFC restructuring cost in humans (P3, `core-concept.md` §8.5) *and* attention-drift in LLMs (P2). These are two independent predictions that can be falsified independently. Falsifying one does not falsify the other.
 3. **The Slobin challenge is partial.** Slobin's "thinking for speaking" suggests the Conceptualizer is influenced by L1-shaped habits; it does not suggest the Conceptualizer is *fully* L1-determined. The middle-ground reading is that CFLT scaffolds the linearization stage explicitly, which may *attenuate* (not eliminate) L1-shaped Conceptualizer biases. This is testable: a CFLT-trained Mandarin-L1 / English-L2 speaker should show *less* L1-shaped time-fronting than an untrained matched control (P1, `core-concept.md` §8.5).
 
-**Falsification condition for the unification claim.** If both P2 (LLM-side) and P1 (human-side) are individually falsified, the "joint currency" claim collapses — CFLT becomes either a human-side scaffold without LLM benefit, an LLM-side prompt protocol without pedagogical benefit, or neither. The two-pillar structure of this agenda (§2 LLM, §3 human, §4 SLA) is **designed to allow that separation to be observed**: we do not pretend a single experiment can validate the unification; we run independent experiments in each pillar and let the cross-domain claim survive or fall based on their joint result.
+**Falsification condition for the unification claim.** If both P2 (LLM-side) and P1 (human-side) are individually falsified, the "joint currency" claim collapses — CFLT becomes either a human-side scaffold without LLM benefit, an LLM-side prompt protocol without pedagogical benefit, or neither. The three-track structure of this agenda (§2 Computational, §3 Psycholinguistic, §4 SLA) is **designed to allow that separation to be observed**: we do not pretend a single experiment can validate the unification; we run independent experiments in each track and let the cross-domain claim survive or fall based on their joint result.
 
-This is a deliberately weaker framing than the manifesto's "TCP/IP for thought" metaphor. The metaphor is rhetorically useful; the load-bearing scientific claim is the conjunction of the testable per-pillar predictions, with the single-currency reading retracted to the *strategic positioning* layer.
+This is a deliberately weaker framing than the manifesto's "TCP/IP for thought" metaphor. The metaphor is rhetorically useful; the load-bearing scientific claim is the conjunction of the testable per-track predictions, with the single-currency reading retracted to the *strategic positioning* layer.
 
 ---
 
-## 2. Pillar I: Computational Performance (LLM Prompting)
+## 2. Computational Track: Computational Performance (LLM Prompting)
 
 Does the Core-First sequence actually improve Large Language Model (LLM) reasoning and accuracy?
 
@@ -48,7 +48,7 @@ Does the Core-First sequence actually improve Large Language Model (LLM) reasoni
 
 ---
 
-## 3. Pillar II: Psycholinguistic Validation (Human Processing)
+## 3. Psycholinguistic Track: Psycholinguistic Validation (Human Processing)
 
 Does the human brain process Core-First structures with lower metabolic/cognitive cost?
 
@@ -63,7 +63,7 @@ Does the human brain process Core-First structures with lower metabolic/cognitiv
 
 ---
 
-## 4. Pillar III: SLA Outcomes (Pedagogical Efficacy)
+## 4. SLA Track: SLA Outcomes (Pedagogical Efficacy)
 
 Does CFLT training lead to faster fluency and higher accuracy?
 

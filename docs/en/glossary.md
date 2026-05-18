@@ -28,7 +28,7 @@
 | Term | Status | Definition |
 |---|---|---|
 | **CoreFirst** ([corefirst.world](https://corefirst.world)) | Official reference experimental project | Next.js application implementing the CFLT Protocol for Pillar I (human bilingual education). Maintained by an organization separate from the CFLT specification body. Other implementations are welcome — see [`reference-implementations.md`](./reference-implementations.md). |
-| **apcore** ([github.com/aiperceivable/apcore](https://github.com/aiperceivable/apcore)) | Independent toolchain | Open-source library suite (apcore-mcp, apcore-cli, apcore-sdk, etc.) some teams may use to integrate CFLT into AI assistants, batch-process corpora, or synchronize learning state. **Independent of CFLT** — neither a dependency nor a deliverable. |
+| **apcore** ([github.com/aiperceivable](https://github.com/aiperceivable)) | Independent open standard (Apache 2.0, OpenSSF certified) | AI-Perceivable module standard enforcing the same Core-then-Frame organizing principle on tool descriptions for AI agents, with production SDKs in Python, TypeScript, and Rust. **Independently maintained** — neither a CFLT dependency nor a CFLT deliverable. CFLT references apcore as the **substrate-endpoint at the tool-call layer** for Pillar III's CTL bridge ([`vision.md`](./vision.md) §4 and [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)). |
 
 ### CFLT-defined evaluation metrics
 

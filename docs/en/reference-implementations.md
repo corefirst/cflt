@@ -27,11 +27,17 @@ CFLT itself is theory and specification — the implementations are where the pr
 
 The entries below are **directional sketches** of where third-party implementations could plausibly emerge. They are not commitments by the CFLT project — CFLT itself is a research/specification body and does not maintain implementation tooling. Any team is welcome to start work on these directions and register their project in the "Active" section above.
 
-### LLM Protocol Layer (Pillar II) — possible host: [apcore](https://github.com/aiperceivable/apcore) ecosystem or independent
+### LLM Protocol Layer (Pillar II) — possible host: [apcore](https://github.com/aiperceivable) ecosystem or independent
 - **Indicative scope:** CFLT as a standardized reasoning protocol for LLMs and AI agents. Could provide CFLT-aware MCP server, CLI tooling for corpus-level CFLT transformation, and SDKs for major language frameworks.
 - **Audience:** LLM/Agent developers, framework builders.
 - **Status:** No active implementation registered. The apcore library suite is one plausible host (CFLT does not commit to it), as are independent open-source efforts.
 - See [`vision.md`](./vision.md) §3 for the strategic case for this layer.
+
+### Cognitive Translation Layer (Pillar III) — planned doctoral research
+- **Indicative scope:** A bidirectional protocol bridge between CFLT-structured natural-language intent and apcore-structured AI-perceivable tool-call surfaces. Detailed in [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md) and §7.7 of the CFLT preprint.
+- **Substrate endpoints:** Both already deployed independently — CFLT (natural-language layer; this framework) and [apcore](https://github.com/aiperceivable) (tool-call layer; Apache 2.0, OpenSSF Best Practices certified, production SDKs in Python / TypeScript / Rust).
+- **Audience:** AI alignment researchers, applied linguistics researchers, human-AI interaction researchers.
+- **Status:** No CTL implementation exists at time of writing. Planned as the integrative doctoral-level contribution; the specification document is the public deliverable.
 
 ---
 
