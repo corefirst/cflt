@@ -27,7 +27,7 @@ If you use CFLT theory, methodology, or code in academic work, please cite:
 ```
 Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
 Linearization Protocol for Cross-Linguistic Communication and LLM
-Alignment. Zenodo. https://doi.org/[DOI pending Zenodo archival]
+Alignment. Zenodo. https://doi.org/10.5281/zenodo.20289504
 ```
 
 Theoretical documentation is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); reference-implementation code lives in sibling repositories under their own permissive licenses (Apache 2.0 / MIT). Both permit reuse with attribution.

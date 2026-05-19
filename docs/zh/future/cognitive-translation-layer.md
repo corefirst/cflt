@@ -11,7 +11,7 @@
 
 CFLT（Core-First Language Theory）与 apcore（AI-Perceivable Core）是两个**独立部署**的开源项目；细看之下，它们在**不同底物**上编码了**同一组织原则**。
 
-- **CFLT**（[cflt.center](https://cflt.center)；Zenodo 归档 DOI 待存档，届时链接发布于 [cflt.center](https://cflt.center)）是篇章层面的线性化协议。它把**"核心先于框架"（Core-then-Frame）** 原则应用于自然语言：强制的事件核心（槽位 0）先于可选的框架修饰（槽位 1–3：理由、空间、时间）。支柱 I 的参考实现（CoreFirst，Next.js + Electron）已落地部署；工作论文报告了 5 个前沿 LLM × 720 试次的实证 pilot。
+- **CFLT**（[cflt.center](https://cflt.center)；Zenodo concept DOI：[10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504)）是篇章层面的线性化协议。它把**"核心先于框架"（Core-then-Frame）** 原则应用于自然语言：强制的事件核心（槽位 0）先于可选的框架修饰（槽位 1–3：理由、空间、时间）。支柱 I 的参考实现（CoreFirst，Next.js + Electron）已落地部署；工作论文报告了 5 个前沿 LLM × 720 试次的实证 pilot。
 - **apcore**（[github.com/aiperceivable](https://github.com/aiperceivable)，Apache 2.0，OpenSSF Best Practices 认证）是面向 AI 可调用工具接口的模块标准。它把同一组织原则应用于工具描述：强制的核心层（`input_schema`、`output_schema`、`description`）先于可选的标注层（`readonly`、`destructive`、`requires_approval`、`idempotent`、`open_world`、`cacheable`、`paginated`）和可选的扩展层（`x-when-to-use`、`x-preconditions`、`x-postconditions`、`x-common-mistakes`、`x-cost-per-call`）。Python、TypeScript、Rust 的生产级 SDK 已发布；已有第三方采用。
 
 也就是说，两个项目在**不同表面**上部署了**相同的 Core-then-Frame 分层**。**缺失的是一个协议桥** —— 当人类用户发出 CFLT 一致的自然语言请求、AI agent 通过 apcore 可感知的工具调用来履行该请求时，**认知分层须在底物边界上双向保持**。
@@ -347,7 +347,7 @@ CTL 因此**不**与六个子计划正交 —— 它是要求它们**收敛**的
 - Schick, T. et al. (2023). Toolformer: Language Models Can Teach Themselves to Use Tools. *NeurIPS 2023.*
 - Talmy, L. (2000). *Toward a Cognitive Semantics, Vol. 1.* MIT Press.
 - apcore Project. (2026). *apcore POSITIONING.md.* <https://github.com/aiperceivable>
-- Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol.* Zenodo（归档 DOI 待存档）.
+- Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol.* Zenodo. https://doi.org/10.5281/zenodo.20289504
 
 ---
 

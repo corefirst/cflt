@@ -6,7 +6,7 @@
 
 > **跨语言通信、第二语言教学与人机认知对齐的统一理论框架。**
 >
-> 项目主页：[cflt.center](https://cflt.center) · 归档：Zenodo（DOI 待存档） · 许可：CC BY 4.0
+> 项目主页：[cflt.center](https://cflt.center) · 归档：[Zenodo · DOI 10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504) · 许可：CC BY 4.0
 >
 > *English version: [README.md](./README.md)*
 
@@ -19,7 +19,7 @@
 ```
 Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
 Linearization Protocol for Cross-Linguistic Communication and LLM
-Alignment. Zenodo. https://doi.org/[Zenodo DOI 待存档后回填]
+Alignment. Zenodo. https://doi.org/10.5281/zenodo.20289504
 ```
 
 ## 许可协议 (License)
@@ -50,7 +50,7 @@ Alignment. Zenodo. https://doi.org/[Zenodo DOI 待存档后回填]
 | 资源 | 状态 |
 |---|---|
 | **[cflt.center](https://cflt.center)** —— 完整文档站（mkdocs） | 已上线 |
-| **Zenodo 归档** —— *CFLT: 跨语言通信与 LLM 对齐的篇章级线性化协议* | release tag 待打；存档完成后 DOI 链接将在此处更新 |
+| **[Zenodo 归档](https://doi.org/10.5281/zenodo.20289504)** —— *CFLT: 跨语言通信与 LLM 对齐的篇章级线性化协议* | 已归档；concept DOI：[10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504) |
 | **[CoreFirst](https://github.com/corefirst/corefirst)**（[corefirst.world](https://corefirst.world)）—— 支柱 I MVP，Next.js + Electron，Apache 2.0 | 已部署 |
 | **[apcore](https://github.com/aiperceivable)** —— 工具调用底物侧的姊妹标准，Apache 2.0，OpenSSF Best Practices 认证 | 独立维护 |
 | **[CTL 白皮书](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III，**开放研究计划**（欢迎社区贡献） | 规范草案；尚无实现 |
@@ -166,7 +166,7 @@ CFLT 本身是理论与规范。具体实现位于独立项目中 —— 详见 
 
 引用归档预印本（Zenodo DOI 颁发后）：
 
-> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* Zenodo. \[DOI 链接待补\]
+> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* Zenodo. https://doi.org/10.5281/zenodo.20289504
 
 引用特定基础文档：
 
