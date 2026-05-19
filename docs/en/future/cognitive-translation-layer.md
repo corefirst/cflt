@@ -228,7 +228,7 @@ The CTL research program is structured around falsifiable sub-claims, each with 
 
 ## 7. Research Roadmap
 
-The CTL research program is structured as a multi-phase plan. The substrate endpoints (CFLT and apcore) being independently deployed and validated is the precondition that makes this scope credible. The phases below are presented in logical order; the actual execution timeline depends on the institutional setting (independent research, industry research lab, or graduate program) and on community participation. The phases are intentionally decoupled: any phase can be advanced by an interested party without depending on the author's pathway, and contributions to a single sub-claim (CTL-1 through CTL-5) are welcome on their own.
+The CTL research program is structured as a multi-phase plan. The substrate endpoints (CFLT and apcore) being independently deployed and validated is the precondition that makes this scope credible. The phases below are presented in logical order; the actual execution timeline depends on the institutional setting (independent research, industry research lab, or graduate program) and on community participation. The phases are intentionally decoupled: any phase can be advanced by an interested party without depending on the progress of any single contributor, and contributions to a single sub-claim (CTL-1 through CTL-5) are welcome on their own.
 
 ### Phase 1 — Theoretical formalization + benchmark design
 
@@ -264,7 +264,7 @@ The CTL research program does not aim to deliver any of the following:
 - **A new transport protocol** to compete with MCP, A2A, or OpenAI Tool Use. CTL is layered above whichever transport apcore adopts.
 - **A new LLM**. The parser and generator components are LLM-neutral; the LLM is one substitutable implementation.
 - **A productized SaaS bridge service.** Like CFLT itself, CTL is a protocol specification; productization is the work of independent organizations.
-- **An automated theorem prover for the slot-to-layer correspondence.** The correspondence is an empirically defended claim, not a logical derivation; its support comes from CTL-1 through CTL-4, not from formal proof.
+- **An automated theorem prover for the slot-to-layer correspondence.** The correspondence is an empirically defended claim, not a logical derivation; its support comes from CTL-1 through CTL-5, not from formal proof.
 
 ---
 
@@ -281,13 +281,15 @@ CTL is the integrative target (§7.7 in the CFLT OSF preprint) that ties togethe
 
 CTL is therefore not orthogonal to the six sub-programs — it is the protocol that requires them to converge.
 
+**Note on CTL-5.** Among the five falsifiable sub-claims of §6, CTL-5 (surface-adapter invariance) is the only one whose verification does **not** draw on any of the six CFLT sub-programs above. It tests an apcore-side structural property — that CTL's parser terminates cleanly at the apcore module layer without leaking into transport state — and is therefore evaluated against `apcore-mcp` / `apcore-a2a` / `apcore-cli` directly, not against CFLT empirical foundations. This asymmetry is by design: CTL's substrate-neutrality (§2) is a claim about its relationship to apcore, separate from CTL's grounding in CFLT.
+
 ---
 
 ## 10. Status
 
 This document describes a planned research program. **No implementation of CTL exists at the time of writing.** The two substrate endpoints (CFLT, apcore) are independently deployed and publicly inspectable; CTL is the bridge whose specification and empirical evaluation constitute the planned contribution. Execution pathways are open: independent researchers, industry teams, and graduate students are all welcome to advance the program — no pathway is privileged. The program is designed to be advanced by whoever finds it useful; participation at any phase or sub-claim is welcome.
 
-The author maintains this document, the CFLT framework (cflt.center), and the apcore standard (github.com/aiperceivable) as separate open-source efforts under permissive licenses. Inquiries about supervision, collaboration, or independent implementation are welcome — directly by email (tercel.yi@gmail.com; ORCID [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403)) or via the project channels listed at [cflt.center](https://cflt.center).
+The author maintains this document, the CFLT framework (cflt.center), and the apcore standard (github.com/aiperceivable) as separate open-source efforts under permissive licenses. Inquiries about mentorship, collaboration, or independent implementation are welcome — directly by email (tercel.yi@gmail.com; ORCID [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403)) or via the project channels listed at [cflt.center](https://cflt.center).
 
 ---
 
