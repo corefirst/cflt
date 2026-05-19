@@ -12,6 +12,13 @@
 
 ---
 
+## Academic Copyright Statement
+
+> All core theoretical frameworks, research paradigms and source code implementations are independently created by the author.
+> No part of this project (theory or code) may be used for academic dissertation or published work without official citation and authorization.
+
+---
+
 ## Quick links
 
 | Resource | Status |

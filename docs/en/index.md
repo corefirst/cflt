@@ -20,6 +20,13 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 
 ---
 
+## Academic Copyright Statement
+
+> All core theoretical frameworks, research paradigms and source code implementations are independently created by the author.
+> No part of this project (theory or code) may be used for academic dissertation or published work without official citation and authorization.
+
+---
+
 ## Where to start
 
 - **[Manifesto](manifesto.md)** — The canonical theoretical statement.
