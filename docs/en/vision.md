@@ -14,7 +14,7 @@
 By enforcing the universal sequencing principle — `[Core] → [Reason] → [Space] → [Time]` — we aim to achieve three strategic objectives:
 1. **Human Empowerment:** Accelerating bilingual acquisition by reshaping cognitive processing patterns (Pillar I).
 2. **Machine Alignment:** Standardizing the underlying "thinking" and "reasoning" logic of Large Language Models (LLMs) to enhance interoperability and efficiency (Pillar II).
-3. **Human–Agent Translation:** Bridging the natural-language layer and the AI-perceivable tool-call layer via the **Cognitive Translation Layer (CTL)**, so that human intent and AI agent execution share a single cognitive layering across the substrate boundary (Pillar III; planned doctoral-level focus — see [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)).
+3. **Human–Agent Translation:** Bridging the natural-language layer and the AI-perceivable tool-call layer via the **Cognitive Translation Layer (CTL)**, so that human intent and AI agent execution share a single cognitive layering across the substrate boundary (Pillar III; open research program — community-contributable — see [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)).
 
 > **The three-layer framing.** Pillars I and II together occupy the **natural-language substrate** (human production side and LLM input side respectively, both governed by the CFLT protocol). Pillar III's other substrate-endpoint — on the **tool-call side** — is the independently maintained [apcore](https://github.com/aiperceivable) standard (Apache 2.0, OpenSSF Best Practices certified). Both substrate endpoints are already deployed; CTL is the bridge that remains to be specified and empirically evaluated.
 
@@ -53,7 +53,7 @@ In the era of Agentic Workflows, the lack of a standardized logical protocol bet
 
 Pillars I and II address the Core-then-Frame organizing principle on the **natural-language substrate**, in two different processing contexts — human L2 learners on one side, autoregressive LLMs on the other. The *other* substrate — tool-call interfaces perceived by AI agents — is independently addressed by the [apcore](https://github.com/aiperceivable) standard. The integrative question that closes the loop is: **when a human user and an AI agent collaborate through tool invocation, what protocol carries discourse-level intent across the natural-language ↔ tool-call substrate boundary?**
 
-The **Cognitive Translation Layer (CTL)** is the planned bridge. CTL maps bidirectionally between CFLT-structured natural-language intent (Slot 0 / 1 / 2 / 3) and AI-perceivable tool-call surfaces structured by the apcore module standard (Core Layer / Annotation Layer / ACL / Extension Layer). Because both substrate endpoints are already independently deployed — CFLT through the empirical pilot reported in the OSF preprint and through the CoreFirst Pillar I MVP; apcore through its production SDKs in Python, TypeScript, and Rust — CTL is a tractable doctoral target rather than open-ended speculation.
+The **Cognitive Translation Layer (CTL)** is the planned bridge. CTL maps bidirectionally between CFLT-structured natural-language intent (Slot 0 / 1 / 2 / 3) and AI-perceivable tool-call surfaces structured by the apcore module standard (Core Layer / Annotation Layer / ACL / Extension Layer). Because both substrate endpoints are already independently deployed — CFLT through the empirical pilot reported in the OSF preprint and through the CoreFirst Pillar I MVP; apcore through its production SDKs in Python, TypeScript, and Rust — CTL is a tractable, finite research target rather than open-ended speculation.
 
 > **Scoping rule, consistent with §1.** CTL itself is a **protocol specification** and therefore in CFLT's research scope. CTL **implementations** (parser libraries, generator services, runtime hosts) are the work of independent organizations, consistent with the CFLT/apcore separation of concerns.
 
@@ -64,7 +64,7 @@ The **Cognitive Translation Layer (CTL)** is the planned bridge. CTL maps bidire
 - Slot 2 (Space) ↔ apcore ACL — permission boundary.
 - Slot 3 (Time) ↔ apcore Extension Layer — planning hints.
 
-The full specification, falsifiable sub-claims (CTL-1 through CTL-4), and four-year research roadmap are maintained at [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md). **No CTL implementation exists at the time of writing.**
+The full specification, falsifiable sub-claims (CTL-1 through CTL-5), and multi-phase research roadmap are maintained at [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md). **No CTL implementation exists at the time of writing.**
 
 ---
 

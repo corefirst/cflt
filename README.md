@@ -20,7 +20,7 @@
 | **SocArXiv preprint** — *CFLT: A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment* | Pending moderation; DOI will be linked here on approval |
 | **[CoreFirst](https://github.com/corefirst/corefirst)** ([corefirst.world](https://corefirst.world)) — Pillar I MVP, Next.js + Electron, Apache 2.0 | Deployed |
 | **[apcore](https://github.com/aiperceivable)** — sibling tool-call substrate standard, Apache 2.0, OpenSSF Best Practices certified | Independently maintained |
-| **[CTL whitepaper](./docs/en/future/cognitive-translation-layer.md)** — Pillar III, planned doctoral focus | Specification draft; no implementation yet |
+| **[CTL whitepaper](./docs/en/future/cognitive-translation-layer.md)** — Pillar III, open research program (community-contributable) | Specification draft; no implementation yet |
 
 ---
 
@@ -50,7 +50,7 @@ CFLT is the natural-language-layer component of a broader cross-substrate resear
 |---|---|---|---|
 | **Pillar I** — Human Bilingual Education | Natural-language (human side) | [CoreFirst app](https://github.com/corefirst/corefirst) (Logic-First, Grammar-Second pedagogy) | MVP deployed |
 | **Pillar II** — Machine Alignment | Natural-language (LLM side) | CFLT as standardized prompt protocol | Pilot validated (see §6 of preprint) |
-| **Pillar III** — Human–Agent Translation | Bridge between natural-language and tool-call substrates | **CTL** (Cognitive Translation Layer) — bridge to [apcore](https://github.com/aiperceivable) | **Planned doctoral focus** — no implementation yet, see [whitepaper](./docs/en/future/cognitive-translation-layer.md) |
+| **Pillar III** — Human–Agent Translation | Bridge between natural-language and tool-call substrates | **CTL** (Cognitive Translation Layer) — bridge to [apcore](https://github.com/aiperceivable) | **Open research program** — community-contributable. No implementation yet, see [whitepaper](./docs/en/future/cognitive-translation-layer.md) |
 
 The two substrate endpoints — CFLT (natural-language) and apcore (tool-call) — are independently deployed. The CTL bridge is the integrative target that remains to be specified and empirically evaluated.
 
@@ -94,7 +94,7 @@ For first-time readers:
 
 5. **[`docs/en/methodology/empirical-agenda.md`](./docs/en/methodology/empirical-agenda.md)** — The three empirical tracks: Computational (LLM), Psycholinguistic (human), SLA (pedagogy).
 
-6. **[`docs/en/future/cognitive-translation-layer.md`](./docs/en/future/cognitive-translation-layer.md)** — Pillar III. The CTL specification draft (planned doctoral focus): slot-to-layer correspondence, bidirectional mechanism, falsifiable sub-claims CTL-1 through CTL-4, four-year research roadmap.
+6. **[`docs/en/future/cognitive-translation-layer.md`](./docs/en/future/cognitive-translation-layer.md)** — Pillar III. The CTL specification draft: slot-to-layer correspondence, bidirectional mechanism, falsifiable sub-claims CTL-1 through CTL-5, multi-phase research roadmap.
 
 7. **[`docs/en/bibliography.md`](./docs/en/bibliography.md)** — Unified citations (~150 references across linguistics, philosophy of language, mathematics, LLM/NLP, SLA pedagogy).
 

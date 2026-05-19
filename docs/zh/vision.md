@@ -14,7 +14,7 @@
 通过强制采用普适排序原则 —— `[核心] → [理由] → [空间] → [时间]` —— 我们旨在达成**三个**战略目标：
 1. **人类赋能：** 通过重塑认知处理模式，加速双语习得（支柱 I）。
 2. **机器对齐：** 标准化大语言模型 (LLM) 底层的 "思维" 与 "推理" 逻辑，提升互操作性与效率（支柱 II）。
-3. **人-Agent 翻译：** 通过**认知翻译层（Cognitive Translation Layer, CTL）** 桥接自然语言层与 AI 可感知工具调用层，使人类意图与 AI agent 执行**在底物边界上共享同一认知分层**（支柱 III；规划中的博士级研究焦点 —— 详见 [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)）。
+3. **人-Agent 翻译：** 通过**认知翻译层（Cognitive Translation Layer, CTL）** 桥接自然语言层与 AI 可感知工具调用层，使人类意图与 AI agent 执行**在底物边界上共享同一认知分层**（支柱 III；**开放研究计划** —— 欢迎社区贡献 —— 详见 [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)）。
 
 > **三层框架。** 支柱 I 与支柱 II 共同占据**自然语言底物**（分别为人类产出侧与 LLM 输入侧，二者均由 CFLT 协议治理）。支柱 III 的另一端 —— **工具调用侧的底物端** —— 是**独立维护**的 [apcore](https://github.com/aiperceivable) 标准（Apache 2.0、OpenSSF Best Practices 认证）。两个底物端均已部署；CTL 是有待规范化与实证评估的桥接。
 
@@ -53,7 +53,7 @@
 
 支柱 I 与支柱 II 在**自然语言底物**上应用 Core-then-Frame 组织原则，分别覆盖两种不同的处理情境 —— 一侧是成人 L2 学习者，另一侧是自回归 LLM。**另一个底物** —— AI agent 感知的工具调用接口 —— 由 [apcore](https://github.com/aiperceivable) 标准独立覆盖。把回路**闭合**的整合性问题是：**当人类用户与 AI agent 通过工具调用协作时，什么协议在自然语言 ↔ 工具调用的底物边界上承载篇章级意图？**
 
-**认知翻译层（CTL）** 即规划中的桥接。CTL **双向映射** CFLT 结构化的自然语言意图（槽位 0/1/2/3）与 apcore 模块标准结构化的 AI 可感知工具调用面（Core Layer / Annotation Layer / ACL / Extension Layer）。由于两个底物端均已独立部署 —— CFLT 通过 OSF 预印本所报告的实证 pilot 以及 CoreFirst 支柱 I 的 MVP；apcore 通过其 Python、TypeScript、Rust 生产级 SDK —— CTL 是**有限可完成的博士目标**，而非开放式臆想。
+**认知翻译层（CTL）** 即规划中的桥接。CTL **双向映射** CFLT 结构化的自然语言意图（槽位 0/1/2/3）与 apcore 模块标准结构化的 AI 可感知工具调用面（Core Layer / Annotation Layer / ACL / Extension Layer）。由于两个底物端均已独立部署 —— CFLT 通过 OSF 预印本所报告的实证 pilot 以及 CoreFirst 支柱 I 的 MVP；apcore 通过其 Python、TypeScript、Rust 生产级 SDK —— CTL 是**有限可完成的研究目标**，而非开放式臆想。
 
 > **范围规则（与 §1 一致）。** CTL 本身是**协议规范**，因此属于 CFLT 的研究范围。CTL 的**实现**（解析器库、生成器服务、运行时宿主）则属于独立组织的工作，与 CFLT / apcore 的关注点分离一致。
 
@@ -64,7 +64,7 @@
 - 槽位 2（Space 空间）↔ apcore ACL —— 权限边界。
 - 槽位 3（Time 时间）↔ apcore Extension Layer —— 规划提示。
 
-完整规范、可证伪子主张（CTL-1 至 CTL-4）以及四年研究路线图维护在 [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)。**撰写时尚无 CTL 实现。**
+完整规范、可证伪子主张（CTL-1 至 CTL-5）以及多阶段研究路线图维护在 [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)。**撰写时尚无 CTL 实现。**
 
 ---
 

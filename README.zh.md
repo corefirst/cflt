@@ -28,7 +28,7 @@
 | **SocArXiv 预印本** —— *CFLT: 跨语言通信与 LLM 对齐的篇章级线性化协议* | 审核中；通过后 DOI 链接将在此处更新 |
 | **[CoreFirst](https://github.com/corefirst/corefirst)**（[corefirst.world](https://corefirst.world)）—— 支柱 I MVP，Next.js + Electron，Apache 2.0 | 已部署 |
 | **[apcore](https://github.com/aiperceivable)** —— 工具调用底物侧的姊妹标准，Apache 2.0，OpenSSF Best Practices 认证 | 独立维护 |
-| **[CTL 白皮书](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III，规划中的博士研究焦点 | 规范草案；尚无实现 |
+| **[CTL 白皮书](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III，**开放研究计划**（欢迎社区贡献） | 规范草案；尚无实现 |
 
 ---
 
@@ -58,7 +58,7 @@ CFLT 是更广泛的跨底物研究计划在**自然语言层**的组件：
 |---|---|---|---|
 | **支柱 I** —— 人类双语教育 | 自然语言（人类侧） | [CoreFirst 应用](https://github.com/corefirst/corefirst)（Logic-First, Grammar-Second 教学法） | MVP 已部署 |
 | **支柱 II** —— 机器对齐 | 自然语言（LLM 侧） | CFLT 作为标准化提示协议 | Pilot 已验证（详见预印本 §6） |
-| **支柱 III** —— 人-Agent 翻译 | 自然语言 ↔ 工具调用底物的桥 | **CTL**（认知翻译层）—— 桥接 [apcore](https://github.com/aiperceivable) | **规划中的博士焦点** —— 尚无实现，详见 [白皮书](./docs/zh/future/cognitive-translation-layer.md) |
+| **支柱 III** —— 人-Agent 翻译 | 自然语言 ↔ 工具调用底物的桥 | **CTL**（认知翻译层）—— 桥接 [apcore](https://github.com/aiperceivable) | **开放研究计划** —— 欢迎社区贡献。尚无实现，详见 [白皮书](./docs/zh/future/cognitive-translation-layer.md) |
 
 两个底物端点 —— CFLT（自然语言）和 apcore（工具调用）—— 已独立部署。CTL 桥是有待规范化与实证评估的**整合目标**。
 
@@ -102,7 +102,7 @@ python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3
 
 5. **[`docs/zh/methodology/empirical-agenda.md`](./docs/zh/methodology/empirical-agenda.md)** —— 三条实证 Track：计算（LLM）、心理语言学（人类）、SLA（教学法）。
 
-6. **[`docs/zh/future/cognitive-translation-layer.md`](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III。CTL 规范草案（规划中的博士研究焦点）：槽位 ↔ 层级对应、双向机制、可证伪子主张 CTL-1 至 CTL-4、四年研究路线图。
+6. **[`docs/zh/future/cognitive-translation-layer.md`](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III。CTL 规范草案：槽位 ↔ 层级对应、双向机制、可证伪子主张 CTL-1 至 CTL-5、多阶段研究路线图。
 
 7. **[`docs/zh/bibliography.md`](./docs/zh/bibliography.md)** —— 统一参考文献（覆盖语言学、语言哲学、数学、LLM/NLP、SLA 教育学等约 150 篇）。
 
