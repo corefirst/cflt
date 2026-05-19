@@ -57,7 +57,7 @@ In apcore's own terms (see [apcore POSITIONING.md](https://github.com/aiperceiva
 
 **Transport-agnosticism (precise position).** apcore's POSITIONING explicitly places apcore *beneath* MCP / A2A / CLI / REST as the foundational module standard, with `apcore-mcp`, `apcore-a2a`, `apcore-cli`, and framework adapters (`flask-apcore`, `fastapi-apcore`, `django-apcore`, `nestjs-apcore`, `axum-apcore`) acting as **Surface Adapters** that project the same canonical module definition onto each transport — including the annotation-to-transport-hint mappings (e.g., `destructive` → MCP `destructiveHint`). CTL therefore emits **apcore Registry-targeted invocations**, not transport-specific calls; the surface adapter is downstream of CTL and transparent to it. A single CTL implementation works whether the AI client reaches the module through MCP, A2A, CLI, or REST. The division of labor at the Annotation Layer is correspondingly sharp: CTL handles the **bidirectional natural-language ↔ annotation parsing** (Slot 1 ↔ `destructive` / `requires_approval` / …); the surface adapter handles the **annotation ↔ protocol-hint serialization** (`destructive` ↔ MCP `destructiveHint`, A2A skill descriptors, etc.). These are distinct translations at distinct layers.
 
-**Composition with apcore's 11-step execution pipeline.** apcore's normative pipeline (POSITIONING.md §"11-Step Execution Pipeline"; PROTOCOL_SPEC §runtime) runs: context processing → safety checks → module lookup → ACL enforcement → approval gate → input validation → middleware before → execution → output validation → middleware after → result return. CTL forward direction **terminates at the input to step 3** (module lookup): the parser's output is a Registry-targeted invocation with caller_id, target module, validated inputs, and any consent/approval pre-evidence. CTL reverse direction **begins at the output of step 11** (typed, trace-annotated result). The intervening steps (4–10) are apcore's responsibility and run unmodified — CTL composes with the pipeline, it does not intrude on it. This composition point is what makes CTL implementable as a library above apcore without requiring any change to apcore itself.
+**Composition with apcore's 11-step execution pipeline.** apcore's normative pipeline (POSITIONING.md §"11-Step Execution Pipeline"; PROTOCOL_SPEC §runtime) runs: context processing → safety checks → module lookup → ACL enforcement → approval gate → input validation → middleware before → execution → output validation → middleware after → result return. CTL forward direction **terminates at the input to step 3** (module lookup): the parser's output is a Registry-targeted invocation with caller_id, target module, validated inputs, and any consent/approval pre-evidence. CTL reverse direction **begins at the output of step 11** (typed, trace-annotated result). The intervening steps (4–10) are apcore's responsibility and run unmodified — CTL composes with the pipeline, it does not intrude on it. This composition point is what makes CTL implementable as a library above apcore without requiring any change to apcore itself. The apcore SDK already implements this composition point in `Executor.validate()`, which performs dry-run execution of the pure pipeline steps and returns `PreflightResult{ checks, requiresApproval, errors, predictedChanges }` — exactly the "construct a call without executing it" engineering artifact that the CTL forward direction requires. A CTL implementation can consume this API directly; no new apcore surface is needed.
 
 **Symmetry under apcore-a2a multi-agent flows.** The "user utterance" of §4.1 is a placeholder for *any CFLT-conformant linguistic source*. Under `apcore-a2a`, that source can be another agent invoking a skill through an Agent Card, not only a human. CTL applies symmetrically in this case: the calling agent emits a CFLT-conformant request; the receiving agent's CTL instance parses it into an apcore invocation. The slot-to-layer correspondence is invariant under this substitution because CFLT itself is a discourse-level protocol indifferent to whether the producer is human or artificial.
 
@@ -78,7 +78,17 @@ The empirical pre-condition that makes CTL tractable as a finite research target
 
 **Why this is non-trivial.** It would be unremarkable if Slot 0 mapped to the Core Layer and the remaining three slots all mapped to a single "metadata" bucket. The non-trivial observation is that the **three categories of CFLT ground-frame slots (Reason / Space / Time) map distinctly to three categories of apcore non-core metadata (Annotation Layer / ACL / Extension Layer)** — each pair sharing a functional family (governance, permission boundary, planning hints respectively) that pre-existed independently in both projects. This is the structural evidence that the same Core-then-Frame organizing principle is operating on both substrates.
 
-**Convergence with apcore's Cognitive Interface Lifecycle.** Independently of CFLT, apcore's POSITIONING.md decomposes AI-agent module use into a four-stage lifecycle: **Discovery** (description, schema) → **Strategy** (`x-when-to-use`, `x-common-mistakes`) → **Governance** (`requires_approval`, `destructive`, ACL) → **Recovery** (`ai_guidance`, `retryable`). Read against the CFLT slot scheme, this lifecycle factors into the same four functional categories: Discovery = Slot 0 resolution (what); Strategy = Slot 3 binding (when/in-what-workflow); Governance = Slot 1 (why) + Slot 2 (where); Recovery = the reverse-direction frame reconstruction. The two schemata were designed without knowledge of each other; their structural coincidence is itself part of the empirical evidence that a substrate-neutral organizing principle is operating.
+**Correspondence strength is not uniform.** The four entries in the table are **asymmetric in empirical strength** and should be read in tiers:
+
+- **Strong correspondence**: Slot 0 ↔ Core Layer — both are the mandatory functional contract, identical from either linguistic or tool-metadata perspective.
+- **Medium correspondence**: Slot 3 ↔ Extension Layer — both concern *when / in what workflow position*, naturally aligned with `x-when-to-use` / `x-preconditions`.
+- **Interpretive correspondence**: Slot 1 ↔ Annotation Layer and Slot 2 ↔ ACL — the linguistic Reason slot expresses user *motivation*, whereas Annotation expresses tool *operational properties*; the Space slot expresses event *scope of effect*, whereas ACL expresses *caller-on-target permission boundary*. These pairs sit in a "conceptually adjacent but axis-misaligned" relationship; the binding rests on a CTL-parser-side **category induction** rather than semantic isomorphism.
+
+Engineering implication: the CTL SDK should treat the slot-to-layer mapping as **configurable** (default table + user overrides) rather than as a hard correspondence. A single entry failing on a domain or module family should not invalidate the bridge as a whole; CTL-1 / CTL-2 are accordingly evaluated per correspondence, not as a single composite.
+
+**Convergence with apcore's Cognitive Interface Lifecycle.** apcore's POSITIONING.md decomposes AI-agent module use into a four-stage lifecycle: **Discovery** (description, schema) → **Strategy** (`x-when-to-use`, `x-common-mistakes`) → **Governance** (`requires_approval`, `destructive`, ACL) → **Recovery** (`ai_guidance`, `retryable`). Read against the CFLT slot scheme, this lifecycle factors into the same four functional categories: Discovery = Slot 0 resolution (what); Strategy = Slot 3 binding (when/in-what-workflow); Governance = Slot 1 (why) + Slot 2 (where); Recovery = the reverse-direction frame reconstruction.
+
+**Honest downgrade of the "independent convergence" claim.** The two schemata took shape at **different times in different code bases**, but both are deliberate instantiations of a shared Core-then-Frame prior held by overlapping designers — not the chance convergence of two independent observers. This relationship still constitutes valid engineering evidence that the prior **lands on the tool-metadata substrate independently of the natural-language substrate**, but it should not be invoked as "two independent discoveries coinciding". The principle's double appearance is a design choice; its cross-substrate validity ultimately rests on the empirical sub-claims of §6 — particularly CTL-6, which tests the correspondence against non-apcore tool surfaces.
 
 **Non-invasive extensibility via `Annotations.extra`.** apcore PROTOCOL_SPEC §4.4.1 normatively defines an `Annotations.extra.<namespace>.<name>` extension map for ecosystem-specific metadata (existing namespaces include `mcp.*`, `cli.*`, `a2a.*`). CTL-specific metadata — for example, custom Slot-1 consent phrasing templates or Slot-3 workflow positioning hints — can be carried in `extra.cflt.*` / `extra.ctl.*` without forking apcore or modifying the canonical Annotation surface. The slot-to-layer correspondence is therefore expressible inside apcore's already-deployed conformance envelope.
 
@@ -87,6 +97,8 @@ The empirical pre-condition that makes CTL tractable as a finite research target
 ## 4. Bidirectional Mechanism
 
 CTL is bidirectional. The two directions have asymmetric difficulty: forward parsing has a well-formed source representation (CFLT-conformant natural language) but a search space (the module Registry); reverse generation has a well-formed source representation (the structured tool result) but must navigate the constraints of producing fluent CFLT-conformant natural language.
+
+**Risk disclosure for the reverse direction.** The forward direction has the `CFLTTransformer` of the CoreFirst reference implementation (Zod-strict schema + templated system prompt + JSON salvage fallback) as a reusable precursor; the **reverse direction has no existing infrastructure on either substrate side**, and CTL-3 depends on a human-judgment rubric — making it the **single highest-risk component** of the CTL research program. Until Phase 3, design choices for the reverse direction (prompting paradigm, whether to mirror the forward Zod-schema shape, dimensions of the human-judgment rubric) should remain open and be validated via small-scale pilot first.
 
 ### 4.1 Forward direction: CFLT intent → apcore invocation
 
@@ -115,6 +127,8 @@ apcore invocation
   ▼
 Structured result
 ```
+
+**Note on Registry lookup capability.** The apcore Registry currently offers exact-ID lookup and prefix enumeration (see apcore-typescript `src/registry/registry.ts`: `get / has / list / iter / getDefinition`); it does **not** provide native semantic search. The "Slot 0 → module candidates (affinity match)" step above is implemented by a CTL-internal retrieval layer (embedding recall + LLM re-ranking), with results constrained to module IDs that exist in the Registry (Zod-validated). This layer is part of CTL's implementation responsibility, not an extension request to apcore — and it also means CTL's "LLM-neutral" claim has a known caveat at the embedding-model choice, which should be declared explicitly in SDK design (see §5.3).
 
 ### 4.2 Reverse direction: apcore result → CFLT-conformant response
 
@@ -158,6 +172,8 @@ apcore's foundation makes a parallel claim on a different substrate: that AI age
 
 The **cross-substrate hypothesis** is that these are not two independent observations but two consequences of a single substrate-neutral ergonomic principle: that any information-processing system whose throughput is bounded by sequential attention will benefit from Core-then-Frame organization of its input. CTL is the protocol that operationalizes this hypothesis at the bridge between the two substrates.
 
+**What "substrate-neutral" modifies.** To be precise: "substrate-neutral" qualifies the **Core-then-Frame principle itself**, not the CTL implementation. By definition, CTL is the concrete bridge between the **specific pair** of substrates CFLT ↔ apcore; it depends on both sides' concrete protocols. CTL **operationalizes** the substrate-neutral principle by *landing it on this specific substrate pair*, not by being *pluggable across arbitrary tool surfaces*. That CTL depends on apcore is not a counter-argument to the principle, just as HTTP/2 depending on TCP does not refute the abstraction of the transport layer. Bridging to other tool surfaces (raw MCP, A2A, OpenAI Tool Use, …) is the **extension experiment** proposed in §6 CTL-6, not part of the CTL 1.0 surface.
+
 ### 5.2 Relation to adjacent traditions
 
 - **Frame Semantics (Fillmore 1982; FrameNet, Baker, Fillmore & Lowe 1998)**: The CFLT four-slot scheme is compatible with — but not identical to — frame-semantic role structures. CTL leverages frame-semantic affinities for Slot 0 → module resolution (Slot 0 carries a predicate; modules are typed by predicate-like functional contracts).
@@ -170,7 +186,9 @@ The **cross-substrate hypothesis** is that these are not two independent observa
 - **Not an LLM invocation library.** CTL is LLM-neutral; the LLM is one possible implementation of the parser and generator components, but the protocol does not bind to a specific model.
 - **Not a transport protocol.** CTL is layered above the apcore module layer, which in turn is layered above the surface adapters (`apcore-mcp`, `apcore-a2a`, `apcore-cli`, framework adapters) that bridge to MCP, A2A, OpenAI Tool Use, etc.; it addresses the cognitive-layering question that those protocols delegate to ad-hoc prompting.
 - **Not a surface adapter.** The `xxx-apcore` adapter family already auto-projects apcore modules onto specific transports — including annotation-to-hint mappings, Agent Card generation, CLI argument parsing, and HTTP route generation. CTL operates strictly above this layer on the natural-language ↔ apcore-module-call boundary; it does not compete with surface adapters.
-- **Not a fork of apcore.** CTL-specific metadata is carried in apcore's existing `Annotations.extra.cflt.*` / `extra.ctl.*` namespace per apcore PROTOCOL_SPEC §4.4.1. No spec changes to apcore are required for CTL to be implementable.
+- **Not a fork of apcore.** CTL-specific metadata is carried in apcore's existing `Annotations.extra.cflt.*` / `extra.ctl.*` namespace per apcore PROTOCOL_SPEC §4.4.1; in apcore-typescript, `extra: Readonly<Record<string, unknown>>` (`src/module.ts`) is the canonical field with defined runtime merge semantics. No spec changes to apcore are required for CTL to be implementable.
+- **Not LLM-free.** "LLM-neutral" means **provider-neutral** (OpenAI / Anthropic / Gemini / local models are interchangeable); it does **not** mean LLM-less. Parser, module resolution, and reverse linearization are all LLM-driven. What distinguishes CTL from ad-hoc prompting is the **contract shape** (Zod-strict schema + templated prompt + JSON salvage), not avoiding the LLM. Embedding models (for Slot 0 → module recall) are likewise unavoidable and constitute the acknowledged discount on CTL's "model-neutral" claim.
+- **Not a cross-tool-surface universal bridge.** The CTL protocol specification currently defines the CFLT ↔ apcore substrate pair **completely** and no other. Bridging to other tool surfaces (raw MCP, A2A, OpenAI Tool Use, …) is the **extension experiment** of §6 CTL-6, not part of the CTL 1.0 surface — even if CTL-1 through CTL-5 all pass, that only demonstrates "CTL works on apcore"; cross-substrate neutrality must be supported separately by CTL-6.
 
 ---
 
@@ -183,6 +201,8 @@ The CTL research program is structured around falsifiable sub-claims, each with 
 **Claim.** A CFLT→apcore translation produced by a CTL parser yields higher first-attempt invocation success rates than an LLM-only baseline that lacks the CFLT slot-to-layer correspondence.
 
 **Measurement.** On a benchmark of *N* human-authored CFLT-conformant requests against a Registry of *M* apcore modules with mixed governance metadata, compare first-attempt success (defined as: correct module selected, input_schema satisfied, no governance violation, output validates against output_schema) for CTL-parsed invocations versus baseline.
+
+*On the distinction between "trials" and "requests".* The "720-trial pilot" referenced in the CFLT preprint denotes **24 human-authored CFLT-conformant requests × 5 frontier model families × 6 experimental conditions** (control / CFLT × distractor levels L1–L3). For CTL-1, *N* should be planned as the number of **independent requests** (we recommend *N* ≥ 200 to support *p* < .05 comparison of success rates) and must be **clearly distinguished** in papers and documentation from *trials* (= *N* × model families × conditions), so that readers do not misread "720 trials" as 720 independent requests.
 
 **Falsification condition.** If success rate fails to improve at *p* < .05 across at least three frontier model families, CTL collapses to "ordinary structured-intent parsing" and contributes no protocol-level value beyond existing tool-use scaffolding.
 
@@ -224,22 +244,36 @@ The CTL research program is structured around falsifiable sub-claims, each with 
 
 *Why this matters.* Surface-adapter invariance is the operational expression of the cross-substrate hypothesis (§5.1). If CTL emits different module invocations under different transports for the *same* CFLT input, then either (a) the parser is conditioning on transport-specific state it should not see, or (b) the slot-to-layer correspondence does not in fact reduce to the apcore canonical Module representation. Either outcome would falsify CTL's claim to be a substrate-neutral protocol bridge.
 
+### CTL-6: Cross-tool-surface external invariance
+
+**Claim.** The empirical benefit of the slot-to-layer correspondence is **substrate-neutral**: configuring CTL with equivalent rules over a **non-apcore** structured tool surface (e.g., raw MCP tool definitions, OpenAI Function descriptions, A2A skill free-text) still produces the core effects of CTL-1 / CTL-2.
+
+**Measurement.** Replicate the CTL-1 / CTL-2 benchmarks on an **equivalent-scale** non-apcore tool set (suggested construction: select *M* tools from public MCP servers, retaining only `name` / `description` / `input_schema` and **stripping** apcore's Annotation / ACL / Extension metadata); run CTL with a "no-apcore-metadata" version of its default slot-to-layer mapping (Core only mandatory; governance / extension information falls back to the free-text tool description). Compare effect sizes for CTL-on-apcore vs. CTL-on-raw-MCP within each frontier model family.
+
+**Falsification condition.** If on the non-apcore surface CTL-1 / CTL-2 effect sizes are **significantly smaller** than on the apcore surface (**model-family × surface** interaction at *p* < .05, with effect-size difference outside a pre-registered non-equivalence margin), then the empirical benefit of the slot-to-layer correspondence is **substrate-dependent** — driven by apcore's own already-optimized metadata layering rather than by a substrate-neutral principle. This refutes the cross-substrate hypothesis of §5.1.
+
+*Why this matters.* CTL-1 through CTL-5 are all validated **inside apcore**; even if all pass, they only demonstrate that "CTL works on apcore". CTL-6 is the only external experiment that tests **substrate-neutrality**. Failure of CTL-6 does not refute CTL's engineering value as a CFLT ↔ apcore bridge, but it does require the documentation to downgrade the §5.1 cross-substrate claim to "apcore-conditional".
+
 ---
 
 ## 7. Research Roadmap
 
 The CTL research program is structured as a multi-phase plan. The substrate endpoints (CFLT and apcore) being independently deployed and validated is the precondition that makes this scope credible. The phases below are presented in logical order; the actual execution timeline depends on the institutional setting (independent research, industry research lab, or graduate program) and on community participation. The phases are intentionally decoupled: any phase can be advanced by an interested party without depending on the progress of any single contributor, and contributions to a single sub-claim (CTL-1 through CTL-5) are welcome on their own.
 
-### Phase 1 — Theoretical formalization + benchmark design
+### Phase 1 — Theoretical formalization + benchmark design + package architecture proposal
 
-- Formalize the slot-to-layer correspondence (§3) as a typed mapping with stated edge-case behavior.
-- Design the CTL-1 / CTL-2 / CTL-3 benchmark: assemble the *N* CFLT-conformant request corpus, the *M*-module apcore Registry with controlled governance-metadata distributions, and the human-judgment rubric for CTL-3.
+- Formalize the slot-to-layer correspondence (§3) as a typed mapping with stated edge-case behavior; make the mapping **configurable** (default table + user overrides) to accommodate the strength asymmetry of "interpretive correspondences" identified in §3.
+- Design the CTL-1 / CTL-2 / CTL-3 / CTL-6 benchmarks: assemble the *N* CFLT-conformant request corpus, the *M*-module apcore Registry with controlled governance-metadata distributions, the *M*-module raw-MCP control set, and the human-judgment rubric for CTL-3.
+- Publish the **CTL spec package-architecture proposal** (three-package split: `ctl-spec` abstract types / `ctl` orchestrator + default adapters / `ctl-eval` evaluation harness), specifying:
+  - **Prototype phase**: both adapters (`ctl-adapter-corefirst`, `ctl-adapter-apcore`) live in CTL's own repository, **not** in either the CFLT or the apcore repository, preserving the §1 / §10 commitment that the two endpoint projects remain independently deployed.
+  - **Stabilization phase**: follow the `apcore-mcp` / `apcore-a2a` precedent and migrate native-side adapters into their respective ecosystems (`apcore-ctl` joins the apcore family; `corefirst-ctl` joins corefirst). Migration **trigger conditions**: spec 1.0.0 + ≥ 6 months without breaking changes + at least one sub-claim with positive evidence + the appearance of a second adopter.
 - Publish: one theoretical position paper (target venues: *Cognitive Science*, *Topics in Cognitive Science*, or a major AI alignment workshop).
 
-### Phase 2 — Forward-direction prototype + CTL-1, CTL-2 evaluation
+### Phase 2 — Forward-direction prototype + CTL-1, CTL-2, CTL-5 evaluation
 
-- Implement the CTL forward-direction parser as a model-neutral library, callable from any LLM provider.
+- Implement the CTL forward-direction parser as a model-neutral library, callable from any LLM provider; reuse the CoreFirst `CFLTTransformer` as the parser precursor and apcore's `Executor.validate()` as the governance-gate composition point.
 - Run CTL-1 and CTL-2 evaluations across at least five frontier model families.
+- **Deliver CTL-5 in the same phase**: surface-adapter invariance — for a fixed CFLT input and fixed Registry, byte-compare the invocations CTL emits across `apcore-mcp` / `apcore-a2a` / `apcore-cli` delivery configurations. This evaluation **does not depend on LLM-evaluation budget** and can serve as the program's first early engineering signal.
 - Publish: one empirical paper on forward-direction performance (target venues: ACL, EMNLP, NAACL, or NeurIPS Datasets & Benchmarks).
 
 ### Phase 3 — Reverse-direction prototype + CTL-3, CTL-4 evaluation
@@ -281,7 +315,12 @@ CTL is the integrative target (§7.7 in the CFLT OSF preprint) that ties togethe
 
 CTL is therefore not orthogonal to the six sub-programs — it is the protocol that requires them to converge.
 
-**Note on CTL-5.** Among the five falsifiable sub-claims of §6, CTL-5 (surface-adapter invariance) is the only one whose verification does **not** draw on any of the six CFLT sub-programs above. It tests an apcore-side structural property — that CTL's parser terminates cleanly at the apcore module layer without leaking into transport state — and is therefore evaluated against `apcore-mcp` / `apcore-a2a` / `apcore-cli` directly, not against CFLT empirical foundations. This asymmetry is by design: CTL's substrate-neutrality (§2) is a claim about its relationship to apcore, separate from CTL's grounding in CFLT.
+**Note on CTL-5 and CTL-6.** Among the six falsifiable sub-claims of §6, **CTL-5 and CTL-6 both** stand outside the six CFLT sub-programs:
+
+- **CTL-5** (surface-adapter invariance) tests an apcore-side **structural property** — that CTL's parser terminates cleanly at the apcore module layer without leaking into transport state — evaluated directly against `apcore-mcp` / `apcore-a2a` / `apcore-cli`.
+- **CTL-6** (cross-tool-surface external invariance) tests the **external support for the substrate-neutrality hypothesis** — whether the slot-to-layer correspondence still produces an effect on non-apcore tool surfaces — evaluated against raw MCP tools / OpenAI Function descriptions / A2A skills.
+
+This independence from CFLT empirical foundations is by design: CTL's cross-substrate claim has two legs — one pointing inward to apcore (CTL-5), one outward beyond apcore (CTL-6) — and both are separate from CTL's grounding on the CFLT side.
 
 ---
 
@@ -290,6 +329,8 @@ CTL is therefore not orthogonal to the six sub-programs — it is the protocol t
 This document describes a planned research program. **No implementation of CTL exists at the time of writing.** The two substrate endpoints (CFLT, apcore) are independently deployed and publicly inspectable; CTL is the bridge whose specification and empirical evaluation constitute the planned contribution. Execution pathways are open: independent researchers, industry teams, and graduate students are all welcome to advance the program — no pathway is privileged. The program is designed to be advanced by whoever finds it useful; participation at any phase or sub-claim is welcome.
 
 The author maintains this document, the CFLT framework (cflt.center), and the apcore standard (github.com/aiperceivable) as separate open-source efforts under permissive licenses. Inquiries about mentorship, collaboration, or independent implementation are welcome — directly by email (tercel.yi@gmail.com; ORCID [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403)) or via the project channels listed at [cflt.center](https://cflt.center).
+
+**On code-repository location.** The CTL implementation (including `ctl-spec`, `ctl`, `ctl-eval`, and the prototype-phase adapters `ctl-adapter-corefirst` and `ctl-adapter-apcore`) will live in a **third, independent repository** — **not** inside either the CFLT or the apcore repository — preserving both projects' "independently deployed open-source projects" commitment (§1, §5.3). Native-side adapters will be handed back to their respective ecosystems (following the `apcore-mcp` precedent) **only** once: spec 1.0.0 has been stable for ≥ 6 months without breaking changes, at least one sub-claim has positive evidence, and a second adopter has appeared. Until then, the CFLT and apcore repositories take **zero dependency** on CTL.
 
 ---
 
