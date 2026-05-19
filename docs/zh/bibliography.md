@@ -28,21 +28,27 @@
 - **Benmamoun, E.** (2000). *The Feature Structure of Functional Categories: A Comparative Study of Arabic Dialects.* New York: Oxford University Press.
 - **Birner, B. J. & Ward, G.** (1998). *Information Status and Noncanonical Word Order in English.* Amsterdam: John Benjamins.
 - **Bobaljik, J. D.** (2003). "Floating Quantifiers: Handle with Care." In *The Second Glot International State-of-the-Article Book*, Cheng & Sybesma (eds). Berlin: Mouton de Gruyter, 107–148.
+- **Boroditsky, L.** (2000). "Metaphoric Structuring: Understanding Time Through Spatial Metaphors." *Cognition* 75(1), 1–28. DOI: [10.1016/S0010-0277(99)00073-6](https://doi.org/10.1016/S0010-0277(99)00073-6)
 - **Boroditsky, L.** (2001). "Does Language Shape Thought? Mandarin and English Speakers' Conceptions of Time." *Cognitive Psychology* 43(1), 1–22.
 - **Bresnan, J.** (2001). *Lexical-Functional Syntax.* Oxford: Blackwell.
 - **Büring, D.** (1997). *The Meaning of Topic and Focus: The 59th Street Bridge Accent.* London: Routledge.
 - **Carlson, G. N.** (1977). *Reference to Kinds in English.* PhD dissertation, University of Massachusetts Amherst.
+- **Casasanto, D. & Boroditsky, L.** (2008). "Time in the Mind: Using Space to Think About Time." *Cognition* 106(2), 579–593. DOI: [10.1016/j.cognition.2007.03.004](https://doi.org/10.1016/j.cognition.2007.03.004)
 - **Chomsky, N.** (1981). *Lectures on Government and Binding.* Dordrecht: Foris.
 - **Chomsky, N.** (1986). *Knowledge of Language: Its Nature, Origin, and Use.* New York: Praeger.
 - **Christiansen, M. H. & Chater, N.** (2008). "Language as Shaped by the Brain." *Behavioral and Brain Sciences* 31(5), 489–509. DOI: [10.1017/S0140525X08004998](https://doi.org/10.1017/S0140525X08004998)
 - **Cinque, G.** (1999). *Adverbs and Functional Heads: A Cross-Linguistic Perspective.* Oxford: Oxford University Press.
+- **Clark, H. H.** (1973). "Space, Time, Semantics, and the Child." In *Cognitive Development and the Acquisition of Language*, Moore (ed.). New York: Academic Press, 27–63.
 - **Croft, W.** (1991). *Syntactic Categories and Grammatical Relations: The Cognitive Organization of Information.* Chicago: University of Chicago Press.
 - **Croft, W.** (2001). *Radical Construction Grammar: Syntactic Theory in Typological Perspective.* Oxford: Oxford University Press.
 - **Dowty, D. R.** (1979). *Word Meaning and Montague Grammar.* Dordrecht: Reidel.
 - **Dryer, M. S.** (2013). "Determiner precedes noun." In *The World Atlas of Language Structures Online*, Dryer & Haspelmath (eds). Leipzig: Max Planck Institute for Evolutionary Anthropology.
 - **Erteschik-Shir, N.** (2007). *Information Structure: The Syntax-Discourse Interface.* Oxford: Oxford University Press.
 - **Evans, N. & Levinson, S. C.** (2009). "The Myth of Language Universals: Language Diversity and Its Importance for Cognitive Science." *Behavioral and Brain Sciences* 32(5), 429–448. DOI: [10.1017/S0140525X0999094X](https://doi.org/10.1017/S0140525X0999094X)
+- **Evans, V.** (2004). *The Structure of Time: Language, Meaning and Temporal Cognition.* Amsterdam: John Benjamins.
+- **Everett, D. L.** (2005). "Cultural Constraints on Grammar and Cognition in Pirahã: Another Look at the Design Features of Human Language." *Current Anthropology* 46(4), 621–646. DOI: [10.1086/431525](https://doi.org/10.1086/431525)
 - **Firbas, J.** (1992). *Functional Sentence Perspective in Written and Spoken Communication.* Cambridge: Cambridge University Press.
+- **Foley, W. A. & Van Valin, R. D. Jr.** (1984). *Functional Syntax and Universal Grammar.* Cambridge: Cambridge University Press.
 - **Goddard, C. & Wierzbicka, A.** (2002). *Meaning and Universal Grammar: Theory and Empirical Case Studies.* Amsterdam: John Benjamins.
 - **Goldberg, A. E.** (1995). *Constructions: A Construction Grammar Approach to Argument Structure.* Chicago: University of Chicago Press.
 - **Goldberg, A. E.** (2006). *Constructions at Work: The Nature of Generalization in Language.* Oxford: Oxford University Press.
@@ -63,6 +69,8 @@
 - **Krifka, M.** (2008). "Basic Notions of Information Structure." *Acta Linguistica Hungarica* 55(3–4), 243–276.
 - **Kuno, S.** (1973). *The Structure of the Japanese Language.* Cambridge, MA: MIT Press.
 - **Kuroda, S.-Y.** (2005). "Focusing on the Matter of Topic: A Study of *Wa* and *Ga* in Japanese." *Journal of East Asian Linguistics* 14(1), 1–58. DOI: [10.1007/s10831-004-2335-2](https://doi.org/10.1007/s10831-004-2335-2)
+- **Labov, W.** (1972). *Language in the Inner City: Studies in the Black English Vernacular.* Philadelphia: University of Pennsylvania Press.
+- **Lakoff, G. & Johnson, M.** (1980). *Metaphors We Live By.* Chicago: University of Chicago Press.
 - **Lambrecht, K.** (1994). *Information Structure and Sentence Form: Topic, Focus, and the Mental Representations of Discourse Referents.* Cambridge: Cambridge University Press.
 - **Langacker, R. W.** (1987). *Foundations of Cognitive Grammar, Vol. 1: Theoretical Prerequisites.* Stanford: Stanford University Press.
 - **Langacker, R. W.** (2008). *Cognitive Grammar: A Basic Introduction.* Oxford: Oxford University Press.
@@ -76,6 +84,7 @@
 - **Miestamo, M.** (2005). *Standard Negation: The Negation of Declarative Verbal Main Clauses in a Typological Perspective.* Berlin: Mouton de Gruyter.
 - **Mithun, M.** (1992). "Is Basic Word Order Universal?" In *Pragmatics of Word Order Flexibility*, Payne (ed). Amsterdam: John Benjamins, 15–61.
 - **Mohammad, M. A.** (2000). *Word Order, Agreement and Pronominalization in Standard and Palestinian Arabic.* Amsterdam: John Benjamins.
+- **Núñez, R. E. & Sweetser, E.** (2006). "With the Future Behind Them: Convergent Evidence From Aymara Language and Gesture in the Crosslinguistic Comparison of Spatial Construals of Time." *Cognitive Science* 30(3), 401–450. DOI: [10.1207/s15516709cog0000_62](https://doi.org/10.1207/s15516709cog0000_62)
 - **Newmeyer, F. J.** (2005). *Possible and Probable Languages: A Generative Perspective on Linguistic Typology.* Oxford: Oxford University Press.
 - **Palmer, F. R.** (2001). *Mood and Modality* (2nd ed). Cambridge: Cambridge University Press.
 - **Pawley, A. & Syder, F. H.** (1983). "Two Puzzles for Linguistic Theory: Nativelike Selection and Nativelike Fluency." In *Language and Communication*, Richards & Schmidt (eds). London: Longman.
@@ -118,11 +127,13 @@
 - **Austin, J. L.** (1962). *How to Do Things with Words.* Oxford: Clarendon Press.
 - **Church, A.** (1936). "An Unsolvable Problem of Elementary Number Theory." *American Journal of Mathematics* 58(2), 345–363.
 - **Frege, G.** (1879). *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens.* Halle: Louis Nebert.
+- **Guest, O. & Martin, A. E.** (2023). "On Logical Inference over Brains, Behaviour, and Artificial Neural Networks." *Computational Brain & Behavior* 6, 213–227. DOI: [10.1007/s42113-022-00166-x](https://doi.org/10.1007/s42113-022-00166-x)
 - **Grice, H. P.** (1975). "Logic and Conversation." In *Syntax and Semantics, Vol. 3: Speech Acts*, Cole & Morgan (eds). New York: Academic Press.
 - **Kamp, H.** (1981). "A Theory of Truth and Semantic Representation." In *Formal Methods in the Study of Language*, Groenendijk et al. (eds). Amsterdam: Mathematical Centre Tracts.
 - **Kamp, H. & Reyle, U.** (1993). *From Discourse to Logic: Introduction to Modeltheoretic Semantics of Natural Language, Formal Logic and Discourse Representation Theory.* Dordrecht: Kluwer Academic Publishers.
 - **Landman, F.** (2000). *Events and Plurality: The Jerusalem Lectures.* Dordrecht: Kluwer Academic Publishers.
 - **Levinson, S. C.** (1983). *Pragmatics.* Cambridge: Cambridge University Press.
+- **McCloskey, M.** (1991). "Networks and Theories: The Place of Connectionism in Cognitive Science." *Psychological Science* 2(6), 387–395. DOI: [10.1111/j.1467-9280.1991.tb00173.x](https://doi.org/10.1111/j.1467-9280.1991.tb00173.x)
 - **Parsons, T.** (1990). *Events in the Semantics of English: A Study in Subatomic Semantics.* Cambridge, MA: MIT Press.
 - **Popper, K. R.** (1959). *The Logic of Scientific Discovery.* London: Hutchinson. (1934 年 *Logik der Forschung* 的英文译本。)
 - **Russell, B.** (1905). "On Denoting." *Mind* 14(56), 479–493.
@@ -144,6 +155,7 @@
 
 - **Abnar, S. & Zuidema, W.** (2020). "Quantifying Attention Flow in Transformers." *ACL*. DOI: [10.18653/v1/2020.acl-main.385](https://doi.org/10.18653/v1/2020.acl-main.385)
 - **Bang, Y. et al.** (2023). "A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity." *arXiv*:2302.04023. [链接](https://arxiv.org/abs/2302.04023)
+- **Berglund, L., Tong, M., Kaufmann, M., Balesni, M., Stickland, A. C., Korbak, T. & Evans, O.** (2024). "The Reversal Curse: LLMs Trained on 'A is B' Fail to Learn 'B is A'." *ICLR*. arXiv: [2309.12288](https://arxiv.org/abs/2309.12288)
 - **Habba, E., Arviv, O., Itzhak, I., Perlitz, Y., Bandel, E., Choshen, L., Shmueli-Scheuer, M. & Stanovsky, G.** (2025). "DOVE: A Large-Scale Multi-Dimensional Predictions Dataset Towards Meaningful LLM Evaluation." *Findings of ACL*. DOI: [10.18653/v1/2025.findings-acl.611](https://doi.org/10.18653/v1/2025.findings-acl.611)
 - **Hendrycks, D. et al.** (2021). "Measuring Massive Multitask Language Understanding (MMLU)." *ICLR*. [链接](https://openreview.net/forum?id=d7KBjmI3GmQ)
 - **Hokamp, C. & Liu, Q.** (2017). "Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search." *ACL*. DOI: [10.18653/v1/P17-1141](https://doi.org/10.18653/v1/P17-1141)
@@ -157,6 +169,7 @@
 - **Maynez, J., Narayan, S., Bohnet, B. & McDonald, R.** (2020). "On Faithfulness and Factuality in Abstractive Summarization." *ACL*. DOI: [10.18653/v1/2020.acl-main.173](https://doi.org/10.18653/v1/2020.acl-main.173)
 - **Min, S., Lyu, X., Holtzman, A., Artetxe, M., Lewis, M., Hajishirzi, H. & Zettlemoyer, L.** (2022). "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?" *EMNLP*. DOI: [10.18653/v1/2022.emnlp-main.759](https://doi.org/10.18653/v1/2022.emnlp-main.759)
 - **Ouyang, L. et al.** (2022). "Training Language Models to Follow Instructions with Human Feedback." *NeurIPS*. [官方链接](https://papers.nips.cc/paper_files/paper/2022/hash/b1efde53be36b95607451731cfad1409-Abstract-Conference.html)
+- **Pezeshkpour, P. & Hruschka, E.** (2024). "Large Language Models Sensitivity to the Order of Options in Multiple-Choice Questions." *Findings of NAACL*. arXiv: [2308.11483](https://arxiv.org/abs/2308.11483)
 - **Post, M. & Vilar, D.** (2018). "Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation." *NAACL*. DOI: [10.18653/v1/N18-1119](https://doi.org/10.18653/v1/N18-1119)
 - **Sclar, M., Choi, Y., Tsvetkov, Y. & Suhr, A.** (2024). "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design." *ICLR*. [OpenReview 链接](https://openreview.net/forum?id=9M2V6nB1e3)
 - **Shaw, P., Uszkoreit, J. & Vaswani, A.** (2018). "Self-Attention with Relative Position Representations." *NAACL*. DOI: [10.18653/v1/N18-2074](https://doi.org/10.18653/v1/N18-2074)

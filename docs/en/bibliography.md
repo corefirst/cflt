@@ -126,7 +126,7 @@
 
 - **Austin, J. L.** (1962). *How to Do Things with Words.* Oxford: Clarendon Press.
 - **Guest, O. & Martin, A. E.** (2023). "On Logical Inference over Brains, Behaviour, and Artificial Neural Networks." *Computational Brain & Behavior* 6, 213–227. DOI: [10.1007/s42113-022-00166-x](https://doi.org/10.1007/s42113-022-00166-x) *(Cited in `methodology/empirical-agenda.md` §1.1 for the analogy-methodology critique that constrains CFLT's cross-domain "shared linearization cost" framing.)*
-- **McCloskey, M.** (1991). "Networks and Theories: The Place of Connectionism in Cognitive Science." *Psychological Science* 2(6), 387–395. *(Earlier critique tradition cited alongside Guest & Martin 2023 in `methodology/empirical-agenda.md` §1.1.)*
+- **McCloskey, M.** (1991). "Networks and Theories: The Place of Connectionism in Cognitive Science." *Psychological Science* 2(6), 387–395. DOI: [10.1111/j.1467-9280.1991.tb00173.x](https://doi.org/10.1111/j.1467-9280.1991.tb00173.x) *(Earlier critique tradition cited alongside Guest & Martin 2023 in `methodology/empirical-agenda.md` §1.1.)*
 - **Church, A.** (1936). "An Unsolvable Problem of Elementary Number Theory." *American Journal of Mathematics* 58(2), 345–363.
 - **Frege, G.** (1879). *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens.* Halle: Louis Nebert.
 - **Grice, H. P.** (1975). "Logic and Conversation." In *Syntax and Semantics, Vol. 3: Speech Acts*, Cole & Morgan (eds). New York: Academic Press.
