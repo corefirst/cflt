@@ -6,16 +6,34 @@
 
 > **A unified theoretical framework for cross-linguistic communication, second-language pedagogy, and human-AI cognitive alignment.**
 >
-> Project home: [cflt.center](https://cflt.center) · Preprint: SocArXiv (DOI pending) · License: CC BY 4.0
+> Project home: [cflt.center](https://cflt.center) · Archival: Zenodo (DOI pending) · License: CC BY 4.0
 >
 > *中文版: [README.zh.md](./README.zh.md)*
 
 ---
 
-## Academic Copyright Statement
+## How to Cite
 
-> All core theoretical frameworks, research paradigms and source code implementations are independently created by the author.
-> No part of this project (theory or code) may be used for academic dissertation or published work without official citation and authorization.
+If you use CFLT theory, methodology, or code in academic work or derivative projects, please cite:
+
+```
+Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
+Linearization Protocol for Cross-Linguistic Communication and LLM
+Alignment. Zenodo. https://doi.org/[DOI pending Zenodo archival]
+```
+
+## License
+
+- **Theoretical documentation, research notes, and figures** — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [`LICENSE`](./LICENSE))
+- **Source code in sibling reference-implementation repos** (e.g. [CoreFirst](https://github.com/corefirst/corefirst), [apcore](https://github.com/aiperceivable)) — see each project's own `LICENSE` file (Apache 2.0 / MIT)
+
+Both license families permit reuse, adaptation, and redistribution provided that proper attribution is given to the original author.
+
+For collaboration, dataset access, or extended use beyond standard citation: tercel.yi@gmail.com
+
+## AI Use Disclosure
+
+The author is a non-native English speaker. AI tools (Claude, Gemini) were used for English translation, copy-editing, and reference formatting in the preparation of written materials. All theoretical claims, research design, empirical pilot data, and substantive arguments are the author's original work.
 
 ---
 
@@ -24,7 +42,7 @@
 | Resource | Status |
 |---|---|
 | **[cflt.center](https://cflt.center)** — full documentation site (mkdocs) | Live |
-| **SocArXiv preprint** — *CFLT: A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment* | Pending moderation; DOI will be linked here on approval |
+| **Zenodo archival** — *CFLT: A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment* | Release tag pending; DOI will be linked here on archival |
 | **[CoreFirst](https://github.com/corefirst/corefirst)** ([corefirst.world](https://corefirst.world)) — Pillar I MVP, Next.js + Electron, Apache 2.0 | Deployed |
 | **[apcore](https://github.com/aiperceivable)** — sibling tool-call substrate standard, Apache 2.0, OpenSSF Best Practices certified | Independently maintained |
 | **[CTL whitepaper](./docs/en/future/cognitive-translation-layer.md)** — Pillar III, open research program (community-contributable) | Specification draft; no implementation yet |
@@ -138,9 +156,9 @@ For the framework as a whole:
 
 > CFLT Core Team. (2026). *Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles.* [https://cflt.center](https://cflt.center)
 
-For the preprint (once DOI is issued):
+For the archived preprint (once Zenodo DOI is issued):
 
-> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* SocArXiv. \[DOI link to follow\]
+> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* Zenodo. \[DOI link to follow\]
 
 Specific foundation documents may be cited as:
 

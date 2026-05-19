@@ -20,10 +20,21 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 
 ---
 
-## Academic Copyright Statement
+## How to Cite
 
-> All core theoretical frameworks, research paradigms and source code implementations are independently created by the author.
-> No part of this project (theory or code) may be used for academic dissertation or published work without official citation and authorization.
+If you use CFLT theory, methodology, or code in academic work, please cite:
+
+```
+Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
+Linearization Protocol for Cross-Linguistic Communication and LLM
+Alignment. Zenodo. https://doi.org/[DOI pending Zenodo archival]
+```
+
+Theoretical documentation is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); reference-implementation code lives in sibling repositories under their own permissive licenses (Apache 2.0 / MIT). Both permit reuse with attribution.
+
+## AI Use Disclosure
+
+The author is a non-native English speaker. AI tools (Claude, Gemini) were used for English translation, copy-editing, and reference formatting. All theoretical claims, research design, empirical pilot data, and substantive arguments are the author's original work.
 
 ---
 

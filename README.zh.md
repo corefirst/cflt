@@ -6,17 +6,34 @@
 
 > **跨语言通信、第二语言教学与人机认知对齐的统一理论框架。**
 >
-> 项目主页：[cflt.center](https://cflt.center) · 预印本：SocArXiv（DOI 待审核通过） · 许可：CC BY 4.0
+> 项目主页：[cflt.center](https://cflt.center) · 归档：Zenodo（DOI 待存档） · 许可：CC BY 4.0
 >
 > *English version: [README.md](./README.md)*
 
 ---
 
-## 原创学术声明
+## 如何引用 (How to Cite)
 
-> 本项目含独立原创学术理论体系与配套实现源码。
-> 核心理论框架、研究范式、整体创新点均为作者独家原创。
-> 未经作者正式引用与授权，**严禁将本项目理论或源码用于学位论文、学术成果发表**。
+若在学术工作或衍生项目中使用 CFLT 的理论、方法或代码，请按以下格式引用：
+
+```
+Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
+Linearization Protocol for Cross-Linguistic Communication and LLM
+Alignment. Zenodo. https://doi.org/[Zenodo DOI 待存档后回填]
+```
+
+## 许可协议 (License)
+
+- **理论文档、研究笔记与图表** —— [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)（见 [`LICENSE`](./LICENSE)）
+- **配套参考实现仓库的源代码**（[CoreFirst](https://github.com/corefirst/corefirst)、[apcore](https://github.com/aiperceivable) 等）—— 见各自仓库的 `LICENSE` 文件（Apache 2.0 / MIT）
+
+以上两类许可均允许在**保留原作者署名**的前提下进行复用、改编与再分发。
+
+如需在标准引用之外开展合作、获取数据集或申请扩展使用授权，请联系：tercel.yi@gmail.com
+
+## AI 使用说明 (AI Use Disclosure)
+
+作者母语非英语。在英文书面材料的准备过程中，使用了 AI 工具（Claude、GPT）协助进行**英文翻译、文字校对与引用格式整理**。本项目所有理论主张、研究设计、实证试点数据及实质性论证均由作者独立完成。
 
 ---
 
@@ -33,7 +50,7 @@
 | 资源 | 状态 |
 |---|---|
 | **[cflt.center](https://cflt.center)** —— 完整文档站（mkdocs） | 已上线 |
-| **SocArXiv 预印本** —— *CFLT: 跨语言通信与 LLM 对齐的篇章级线性化协议* | 审核中；通过后 DOI 链接将在此处更新 |
+| **Zenodo 归档** —— *CFLT: 跨语言通信与 LLM 对齐的篇章级线性化协议* | release tag 待打；存档完成后 DOI 链接将在此处更新 |
 | **[CoreFirst](https://github.com/corefirst/corefirst)**（[corefirst.world](https://corefirst.world)）—— 支柱 I MVP，Next.js + Electron，Apache 2.0 | 已部署 |
 | **[apcore](https://github.com/aiperceivable)** —— 工具调用底物侧的姊妹标准，Apache 2.0，OpenSSF Best Practices 认证 | 独立维护 |
 | **[CTL 白皮书](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III，**开放研究计划**（欢迎社区贡献） | 规范草案；尚无实现 |
@@ -147,9 +164,9 @@ CFLT 本身是理论与规范。具体实现位于独立项目中 —— 详见 
 
 > CFLT Core Team. (2026). *Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles.* [https://cflt.center](https://cflt.center)
 
-引用预印本（DOI 颁发后）：
+引用归档预印本（Zenodo DOI 颁发后）：
 
-> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* SocArXiv. \[DOI 链接待补\]
+> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* Zenodo. \[DOI 链接待补\]
 
 引用特定基础文档：
 

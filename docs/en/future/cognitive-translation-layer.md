@@ -11,7 +11,7 @@
 
 CFLT (Core-First Language Theory) and apcore (AI-Perceivable Core) are two independently deployed open-source projects that, on inspection, encode the same organizing principle on disjoint substrates.
 
-- **CFLT** ([cflt.center](https://cflt.center); SocArXiv preprint DOI pending moderation, will be linked at [cflt.center](https://cflt.center)) is a discourse-level linearization protocol. It applies the **Core-then-Frame** principle to natural-language utterances: a mandatory event nucleus (Slot 0) precedes optional framing modifiers (Slots 1–3 — Reason, Space, Time). A reference Pillar I implementation (CoreFirst, Next.js + Electron) is operationally deployed; a 720-trial empirical pilot across five frontier LLMs is reported in the preprint.
+- **CFLT** ([cflt.center](https://cflt.center); Zenodo archival DOI pending, will be linked at [cflt.center](https://cflt.center)) is a discourse-level linearization protocol. It applies the **Core-then-Frame** principle to natural-language utterances: a mandatory event nucleus (Slot 0) precedes optional framing modifiers (Slots 1–3 — Reason, Space, Time). A reference Pillar I implementation (CoreFirst, Next.js + Electron) is operationally deployed; a 720-trial empirical pilot across five frontier LLMs is reported in the working paper.
 - **apcore** ([github.com/aiperceivable](https://github.com/aiperceivable), Apache 2.0, OpenSSF Best Practices certified) is a module standard for AI-invokable tool interfaces. It applies the same Core-then-Frame principle to tool descriptions: a mandatory Core Layer (`input_schema`, `output_schema`, `description`) precedes optional Annotation Layer (`readonly`, `destructive`, `requires_approval`, `idempotent`, `open_world`, `cacheable`, `paginated`) and optional Extension Layer (`x-when-to-use`, `x-preconditions`, `x-postconditions`, `x-common-mistakes`, `x-cost-per-call`). Production SDKs exist for Python, TypeScript, and Rust; third-party adoption is documented.
 
 Both projects, in other words, deploy the same Core-then-Frame layering on different surfaces. What is missing is a **protocol bridge** that maps between them — so that when a human user issues a CFLT-conformant natural-language request and an AI agent fulfills it through apcore-perceivable tool invocations, the cognitive layering is preserved across the substrate boundary, in both directions.
@@ -347,7 +347,7 @@ The author maintains this document, the CFLT framework (cflt.center), and the ap
 - Schick, T. et al. (2023). Toolformer: Language Models Can Teach Themselves to Use Tools. *NeurIPS 2023.*
 - Talmy, L. (2000). *Toward a Cognitive Semantics, Vol. 1.* MIT Press.
 - apcore Project. (2026). *apcore POSITIONING.md.* <https://github.com/aiperceivable>
-- Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol.* SocArXiv Preprint.
+- Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol.* Zenodo (archival DOI pending).
 
 ---
 
