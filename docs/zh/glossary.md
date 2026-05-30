@@ -28,8 +28,6 @@
 | 术语 | 状态 | 定义 |
 |---|---|---|
 | **CoreFirst**（[corefirst.world](https://corefirst.world)） | 官方参考实验项目 | 实现 CFLT 协议的 Next.js 应用，用于支柱 I（人类双语教育）。由独立于 CFLT 规范机构的组织维护。欢迎其他实现 —— 参见 [`reference-implementations.md`](./reference-implementations.md)。 |
-| **apcore**（[github.com/aiperceivable](https://github.com/aiperceivable)） | 独立开放标准（Apache 2.0、OpenSSF Best Practices 认证） | AI-Perceivable 模块标准，在工具描述上对 AI agent 强制同一 Core-then-Frame 组织原则；含 Python、TypeScript、Rust 生产级 SDK。**独立维护** —— 既不是 CFLT 的依赖也不是交付物。CFLT 将其引用为**支柱 III 中 CTL 桥在工具调用层的底物端**（详见 [`vision.md`](./vision.md) §4 与 [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md)）。 |
-
 ### CFLT 自定义评估指标
 
 | 术语 | 展开 | 定义 |

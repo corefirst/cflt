@@ -19,13 +19,13 @@
 ```
 Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
 Linearization Protocol for Cross-Linguistic Communication and LLM
-Alignment. Zenodo. https://doi.org/10.5281/zenodo.20289504
+Prompting. Zenodo. https://doi.org/10.5281/zenodo.20289504
 ```
 
 ## 许可协议 (License)
 
 - **理论文档、研究笔记与图表** —— [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)（见 [`LICENSE`](./LICENSE)）
-- **配套参考实现仓库的源代码**（[CoreFirst](https://github.com/corefirst/corefirst)、[apcore](https://github.com/aiperceivable) 等）—— 见各自仓库的 `LICENSE` 文件（Apache 2.0 / MIT）
+- **配套参考实现仓库的源代码**（[CoreFirst](https://github.com/corefirst/corefirst) 等）—— 见各自仓库的 `LICENSE` 文件（Apache 2.0 / MIT）
 
 以上两类许可均允许在**保留原作者署名**的前提下进行复用、改编与再分发。
 
@@ -50,10 +50,8 @@ Alignment. Zenodo. https://doi.org/10.5281/zenodo.20289504
 | 资源 | 状态 |
 |---|---|
 | **[cflt.center](https://cflt.center)** —— 完整文档站（mkdocs） | 已上线 |
-| **[Zenodo 归档](https://doi.org/10.5281/zenodo.20289504)** —— *CFLT: 跨语言通信与 LLM 对齐的篇章级线性化协议* | 已归档；concept DOI：[10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504) |
+| **[Zenodo 归档](https://doi.org/10.5281/zenodo.20289504)** —— *CFLT: 跨语言通信与 LLM 提示的篇章级线性化协议* | 已归档；concept DOI：[10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504) |
 | **[CoreFirst](https://github.com/corefirst/corefirst)**（[corefirst.world](https://corefirst.world)）—— 支柱 I MVP，Next.js + Electron，Apache 2.0 | 已部署 |
-| **[apcore](https://github.com/aiperceivable)** —— 工具调用底物侧的姊妹标准，Apache 2.0，OpenSSF Best Practices 认证 | 独立维护 |
-| **[CTL 白皮书](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III，**开放研究计划**（欢迎社区贡献） | 规范草案；尚无实现 |
 
 ---
 
@@ -75,17 +73,16 @@ CFLT 是**理论 + 方法**，不是产品。理论属于公共开源域（CC BY
 
 ---
 
-## 三支柱框架
+## 两支柱框架
 
-CFLT 是更广泛的跨底物研究计划在**自然语言层**的组件：
+CFLT 在**自然语言层**应用单一的 *Core-then-Frame* 组织原则，覆盖两种处理情境：
 
-| 支柱 | 底物 | 工程交付 | 状态 |
+| 支柱 | 情境 | 工程交付 | 状态 |
 |---|---|---|---|
 | **支柱 I** —— 人类双语教育 | 自然语言（人类侧） | [CoreFirst 应用](https://github.com/corefirst/corefirst)（Logic-First, Grammar-Second 教学法） | MVP 已部署 |
 | **支柱 II** —— 机器对齐 | 自然语言（LLM 侧） | CFLT 作为标准化提示协议 | Pilot 已验证（详见预印本 §6） |
-| **支柱 III** —— 人-Agent 翻译 | 自然语言 ↔ 工具调用底物的桥 | **CTL**（认知翻译层）—— 桥接 [apcore](https://github.com/aiperceivable) | **开放研究计划** —— 欢迎社区贡献。尚无实现，详见 [白皮书](./docs/zh/future/cognitive-translation-layer.md) |
 
-两个底物端点 —— CFLT（自然语言）和 apcore（工具调用）—— 已独立部署。CTL 桥是有待规范化与实证评估的**整合目标**。
+把用户*自然语言*意图按同样的核心优先排序，是否在下游任务为 agentic 工具调用（如 MCP 式工具调用接口）时也有助益，是一个开放问题 —— 它是支柱 II 的一个特例，而非独立底物。CFLT 的线性化成本机制作用于按序处理的语言，而非结构化的工具调用 schema；因此我们把人-Agent 工具调用边界视为支柱 II 内部的研究问题。
 
 ---
 
@@ -97,7 +94,7 @@ CFLT 是更广泛的跨底物研究计划在**自然语言层**的组件：
 - **Token 成本：** CFLT 在带可见思维链的推理型模型上降低完成 token 成本最多 **38%**；在短输出 / 隐藏推理模型上无 token 效应。
 - **Level 4（决策深埋条件）：** 一个模型出现 null-to-slightly-negative 效应（DeepSeek V4 Pro, −11pp）；其他四个模型在 L4 饱和，因此该回归被刻画为**模型特定异常**，而非 CFLT 的一般属性。
 
-Pilot 证据是**启示性的，非证实性的** —— 详见预印本 §6 的完整结果与 §7 的可证伪研究议程（六个按底物划分的子项目加 §7.7 的 CTL 整合目标）。
+Pilot 证据是**启示性的，非证实性的** —— 详见预印本 §6 的完整结果与 §7 的可证伪研究议程（六个子项目，§7.1–§7.6）。
 
 原始数据、提示词与评测脚本位于发布标签 `osf-pilot-2026-05`。完整消融实验单条命令可复现：
 
@@ -115,7 +112,7 @@ python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3
 
 2. **[`docs/zh/foundations/core-concept.md`](./docs/zh/foundations/core-concept.md)** —— **在读完宣言后立即阅读**。定义 CFLT 中"核心"的含义（显著性锚点 —— 动作、状态、身份或请求 —— **不是**动词或谓语），并驳斥最常见的误读。同时探讨 CFLT 如何作为无标记默认值，而非唯一允许的形式。
 
-3. **[`docs/zh/vision.md`](./docs/zh/vision.md)** —— 跨项目战略路线图：三支柱使命（支柱 I 人类教育、支柱 II LLM 协议、支柱 III CTL 桥接）。
+3. **[`docs/zh/vision.md`](./docs/zh/vision.md)** —— 跨项目战略路线图：两支柱使命（支柱 I 人类教育、支柱 II LLM 协议）。
 
 4. **选择最贴近您背景的基础文档：**
    - **[`pedagogy.md`](./docs/zh/foundations/pedagogy.md)** —— Krashen、维果茨基 ZPD、认知负荷理论、DeKeyser 技能习得、TBLT、Kroll 双语词汇存取。对教育者和 SLA 研究者最直接相关。
@@ -127,9 +124,7 @@ python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3
 
 5. **[`docs/zh/methodology/empirical-agenda.md`](./docs/zh/methodology/empirical-agenda.md)** —— 三条实证 Track：计算（LLM）、心理语言学（人类）、SLA（教学法）。
 
-6. **[`docs/zh/future/cognitive-translation-layer.md`](./docs/zh/future/cognitive-translation-layer.md)** —— 支柱 III。CTL 规范草案：槽位 ↔ 层级对应、双向机制、可证伪子主张 CTL-1 至 CTL-5、多阶段研究路线图。
-
-7. **[`docs/zh/bibliography.md`](./docs/zh/bibliography.md)** —— 统一参考文献（覆盖语言学、语言哲学、数学、LLM/NLP、SLA 教育学等约 150 篇）。
+6. **[`docs/zh/bibliography.md`](./docs/zh/bibliography.md)** —— 统一参考文献（覆盖语言学、语言哲学、数学、LLM/NLP、SLA 教育学等约 150 篇）。
 
 ---
 
@@ -138,8 +133,6 @@ python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3
 CFLT 本身是理论与规范。具体实现位于独立项目中 —— 详见 [`docs/zh/reference-implementations.md`](./docs/zh/reference-implementations.md)。
 
 - **[CoreFirst](https://github.com/corefirst/corefirst)**（[corefirst.world](https://corefirst.world)）—— 支柱 I（人类双语教育）的第一个参考实现。Next.js + Electron，Apache 2.0。
-- **[apcore](https://github.com/aiperceivable)** —— 工具调用底物侧的姊妹标准。**独立维护**（Apache 2.0、OpenSSF Best Practices 认证，含 Python / TypeScript / Rust 生产级 SDK）。CFLT 将 apcore 引用为支柱 III 中 CTL 桥在工具调用层的底物端 —— **不是 CFLT 的交付物**。
-
 ---
 
 ## 编辑立场
@@ -166,7 +159,7 @@ CFLT 本身是理论与规范。具体实现位于独立项目中 —— 详见 
 
 引用归档预印本（Zenodo DOI 颁发后）：
 
-> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* Zenodo. https://doi.org/10.5281/zenodo.20289504
+> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting.* Zenodo. https://doi.org/10.5281/zenodo.20289504
 
 引用特定基础文档：
 
@@ -181,8 +174,7 @@ CFLT 本身是理论与规范。具体实现位于独立项目中 —— 详见 
 - 完善理论基础（补充引用、反驳论证、新学科视角）
 - 翻译任意文档至其他语言
 - 在 `reference-implementations.md` 中添加采用 CFLT 的新项目
-- 提供支持或挑战 CFLT 主张的实证证据，特别是针对 §7 议程的按底物划分子项目
-- 对规划中的 CTL 规范（支柱 III）的贡献
+- 提供支持或挑战 CFLT 主张的实证证据，特别是针对 §7 议程的子项目
 
 ---
 
@@ -190,7 +182,7 @@ CFLT 本身是理论与规范。具体实现位于独立项目中 —— 详见 
 
 **Tercel Yi** · 独立研究者 · ORCID [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403) · [tercel.yi@gmail.com](mailto:tercel.yi@gmail.com)
 
-CFLT、[CoreFirst](https://github.com/corefirst/corefirst)、[apcore](https://github.com/aiperceivable) 的独立维护者。欢迎就指导、合作与独立实现进行联系。
+CFLT 与 [CoreFirst](https://github.com/corefirst/corefirst) 的独立维护者。欢迎就指导、合作与独立实现进行联系。
 
 ---
 

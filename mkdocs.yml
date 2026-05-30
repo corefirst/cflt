@@ -109,8 +109,6 @@ plugins:
             "Part 1: Human-CFLT Alignment": 第一部分：人类-CFLT 对齐
             "Part 2: LLM Self-Consistency": 第二部分：LLM 自我一致性
             Experiment Log: 实验日志
-            Future Work: 未来工作
-            Cognitive Translation Layer: 认知翻译层
             Appendix: 附录
             Glossary: 术语表
             Bibliography: 参考文献
@@ -180,8 +178,6 @@ nav:
       - "Part 1: Human-CFLT Alignment": methodology/llm-part1-verification.md
       - "Part 2: LLM Self-Consistency": methodology/llm-part2-verification.md
       - Experiment Log: methodology/experiment-log.md
-  - Future Work:
-      - Cognitive Translation Layer: future/cognitive-translation-layer.md
   - Ecosystem:
       - Reference Implementations: reference-implementations.md
       - Contributors: contributors.md

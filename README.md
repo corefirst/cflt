@@ -19,13 +19,13 @@ If you use CFLT theory, methodology, or code in academic work or derivative proj
 ```
 Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level
 Linearization Protocol for Cross-Linguistic Communication and LLM
-Alignment. Zenodo. https://doi.org/10.5281/zenodo.20289504
+Prompting. Zenodo. https://doi.org/10.5281/zenodo.20289504
 ```
 
 ## License
 
 - **Theoretical documentation, research notes, and figures** — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [`LICENSE`](./LICENSE))
-- **Source code in sibling reference-implementation repos** (e.g. [CoreFirst](https://github.com/corefirst/corefirst), [apcore](https://github.com/aiperceivable)) — see each project's own `LICENSE` file (Apache 2.0 / MIT)
+- **Source code in sibling reference-implementation repos** (e.g. [CoreFirst](https://github.com/corefirst/corefirst)) — see each project's own `LICENSE` file (Apache 2.0 / MIT)
 
 Both license families permit reuse, adaptation, and redistribution provided that proper attribution is given to the original author.
 
@@ -42,10 +42,8 @@ The author is a non-native English speaker. AI tools (Claude, Gemini) were used 
 | Resource | Status |
 |---|---|
 | **[cflt.center](https://cflt.center)** — full documentation site (mkdocs) | Live |
-| **[Zenodo archival](https://doi.org/10.5281/zenodo.20289504)** — *CFLT: A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment* | Archived; concept DOI: [10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504) |
+| **[Zenodo archival](https://doi.org/10.5281/zenodo.20289504)** — *CFLT: A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting* | Archived; concept DOI: [10.5281/zenodo.20289504](https://doi.org/10.5281/zenodo.20289504) |
 | **[CoreFirst](https://github.com/corefirst/corefirst)** ([corefirst.world](https://corefirst.world)) — Pillar I MVP, Next.js + Electron, Apache 2.0 | Deployed |
-| **[apcore](https://github.com/aiperceivable)** — sibling tool-call substrate standard, Apache 2.0, OpenSSF Best Practices certified | Independently maintained |
-| **[CTL whitepaper](./docs/en/future/cognitive-translation-layer.md)** — Pillar III, open research program (community-contributable) | Specification draft; no implementation yet |
 
 ---
 
@@ -67,17 +65,16 @@ CFLT is **theory + method**, not a product. The theory belongs to the open commo
 
 ---
 
-## The three-pillar framing
+## The two-pillar framing
 
-CFLT is the natural-language-layer component of a broader cross-substrate research program:
+CFLT applies a single *Core-then-Frame* organizing principle on the natural-language layer, in two processing contexts:
 
-| Pillar | Substrate | Engineering deliverable | Status |
+| Pillar | Context | Engineering deliverable | Status |
 |---|---|---|---|
 | **Pillar I** — Human Bilingual Education | Natural-language (human side) | [CoreFirst app](https://github.com/corefirst/corefirst) (Logic-First, Grammar-Second pedagogy) | MVP deployed |
 | **Pillar II** — Machine Alignment | Natural-language (LLM side) | CFLT as standardized prompt protocol | Pilot validated (see §6 of preprint) |
-| **Pillar III** — Human–Agent Translation | Bridge between natural-language and tool-call substrates | **CTL** (Cognitive Translation Layer) — bridge to [apcore](https://github.com/aiperceivable) | **Open research program** — community-contributable. No implementation yet, see [whitepaper](./docs/en/future/cognitive-translation-layer.md) |
 
-The two substrate endpoints — CFLT (natural-language) and apcore (tool-call) — are independently deployed. The CTL bridge is the integrative target that remains to be specified and empirically evaluated.
+Whether the same Core-First ordering of natural-language intent also helps when the downstream task is agentic tool use (e.g., MCP-style tool-call interfaces) is an open question — a special case of Pillar II, not a separate substrate. CFLT's linearization-cost mechanism applies to sequentially processed language, not to structured tool-call schemas; we therefore treat the human–agent tool-call boundary as a research question within Pillar II.
 
 ---
 
@@ -89,7 +86,7 @@ A pilot two-part study (720 trials: 24 cases × 4 levels × 2 languages × 5 fro
 - **Token cost:** CFLT reduces completion-token cost on reasoning-capable models with visible chain-of-thought traces by up to **38%**, while showing no token effect on short-output / concealed-reasoning models.
 - **Level 4 (buried-decision):** a null-to-slightly-negative effect on one model (DeepSeek V4 Pro, −11pp); the other four models saturate L4, so this regression is characterized as a model-specific anomaly rather than a general property of CFLT.
 
-The pilot evidence is **suggestive, not confirmatory** — see preprint §6 for full results and §7 for the falsifiable research agenda (six per-substrate sub-programs plus §7.7 integrative CTL target).
+The pilot evidence is **suggestive, not confirmatory** — see preprint §6 for full results and §7 for the falsifiable research agenda (six sub-programs, §7.1–§7.6).
 
 Raw data, prompts, and evaluation scripts at release tag `osf-pilot-2026-05`. The full ablation reproduces in a single command:
 
@@ -107,7 +104,7 @@ For first-time readers:
 
 2. **[`docs/en/foundations/core-concept.md`](./docs/en/foundations/core-concept.md)** — Read this *immediately after the manifesto*. It defines what "Core" means (a salience anchor — action, state, identity, or request — **not** a verb or predicate) and refutes the most common misreadings. Also explains how CFLT is the unmarked default, not the only permitted form.
 
-3. **[`docs/en/vision.md`](./docs/en/vision.md)** — Cross-project strategic roadmap: the three-pillar mission (Pillar I human education, Pillar II LLM protocol, Pillar III CTL bridge).
+3. **[`docs/en/vision.md`](./docs/en/vision.md)** — Cross-project strategic roadmap: the two-pillar mission (Pillar I human education, Pillar II LLM protocol).
 
 4. **Pick the foundation closest to your background:**
    - **[`pedagogy.md`](./docs/en/foundations/pedagogy.md)** — Krashen, Vygotsky's ZPD, Cognitive Load Theory, DeKeyser's Skill Acquisition, TBLT, Kroll's bilingual lexical access. For educators and SLA researchers.
@@ -119,9 +116,7 @@ For first-time readers:
 
 5. **[`docs/en/methodology/empirical-agenda.md`](./docs/en/methodology/empirical-agenda.md)** — The three empirical tracks: Computational (LLM), Psycholinguistic (human), SLA (pedagogy).
 
-6. **[`docs/en/future/cognitive-translation-layer.md`](./docs/en/future/cognitive-translation-layer.md)** — Pillar III. The CTL specification draft: slot-to-layer correspondence, bidirectional mechanism, falsifiable sub-claims CTL-1 through CTL-5, multi-phase research roadmap.
-
-7. **[`docs/en/bibliography.md`](./docs/en/bibliography.md)** — Unified citations (~150 references across linguistics, philosophy of language, mathematics, LLM/NLP, SLA pedagogy).
+6. **[`docs/en/bibliography.md`](./docs/en/bibliography.md)** — Unified citations (~150 references across linguistics, philosophy of language, mathematics, LLM/NLP, SLA pedagogy).
 
 ---
 
@@ -130,7 +125,6 @@ For first-time readers:
 CFLT itself is theory and specification. Concrete implementations live in independent projects — see [`docs/en/reference-implementations.md`](./docs/en/reference-implementations.md) for the up-to-date list.
 
 - **[CoreFirst](https://github.com/corefirst/corefirst)** ([corefirst.world](https://corefirst.world)) — first reference implementation for Pillar I (human bilingual education). Next.js + Electron, Apache 2.0.
-- **[apcore](https://github.com/aiperceivable)** — sibling standard at the tool-call substrate. Independently maintained (Apache 2.0, OpenSSF Best Practices certified, with production SDKs in Python / TypeScript / Rust). CFLT references apcore as the substrate-endpoint at the tool-call layer for Pillar III's CTL bridge — **not as a CFLT deliverable**.
 
 ---
 
@@ -158,7 +152,7 @@ For the framework as a whole:
 
 For the archived preprint (once Zenodo DOI is issued):
 
-> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Alignment.* Zenodo. \[DOI link to follow\]
+> Yi, W. (2026). *Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting.* Zenodo. https://doi.org/10.5281/zenodo.20289504
 
 Specific foundation documents may be cited as:
 
@@ -173,8 +167,7 @@ Contributions are welcome — open an issue or pull request:
 - Refinements to the foundations (additional citations, counter-arguments, new disciplines)
 - Translations of any document to other languages
 - New entries to `reference-implementations.md` for projects that adopt CFLT
-- Empirical evidence supporting or challenging CFLT's claims, particularly on the per-substrate sub-programs of the §7 agenda
-- Contributions to the planned CTL specification (Pillar III)
+- Empirical evidence supporting or challenging CFLT's claims, particularly on the sub-programs of the §7 agenda
 
 ---
 
@@ -182,7 +175,7 @@ Contributions are welcome — open an issue or pull request:
 
 **Tercel Yi** · Independent Researcher · ORCID [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403) · [tercel.yi@gmail.com](mailto:tercel.yi@gmail.com)
 
-Sole maintainer of CFLT, [CoreFirst](https://github.com/corefirst/corefirst), and [apcore](https://github.com/aiperceivable). The author welcomes correspondence on supervision, collaboration, and independent implementation.
+Sole maintainer of CFLT and [CoreFirst](https://github.com/corefirst/corefirst). The author welcomes correspondence on supervision, collaboration, and independent implementation.
 
 ---
 

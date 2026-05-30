@@ -27,23 +27,11 @@ CFLT itself is theory and specification — the implementations are where the pr
 
 The entries below are **directional sketches** of where third-party implementations could plausibly emerge. They are not commitments by the CFLT project — CFLT itself is a research/specification body and does not maintain implementation tooling. Any team is welcome to start work on these directions and register their project in the "Active" section above.
 
-### LLM Protocol Layer (Pillar II) — possible host: [apcore](https://github.com/aiperceivable) ecosystem or independent
-- **Indicative scope:** CFLT as a standardized reasoning protocol for LLMs and AI agents. Could provide CFLT-aware MCP server, CLI tooling for corpus-level CFLT transformation, and SDKs for major language frameworks.
+### LLM Protocol Layer (Pillar II) — possible host: independent open-source efforts
+- **Indicative scope:** CFLT as a standardized reasoning protocol for LLMs and AI agents. Could provide a CFLT-aware MCP server, CLI tooling for corpus-level CFLT transformation, and SDKs for major language frameworks.
 - **Audience:** LLM/Agent developers, framework builders.
-- **Status:** No active implementation registered. The apcore library suite is one plausible host (CFLT does not commit to it), as are independent open-source efforts.
+- **Status:** No active implementation registered. CFLT does not commit to any particular host; independent open-source efforts are the expected path.
 - See [`vision.md`](./vision.md) §3 for the strategic case for this layer.
-
-### Cognitive Translation Layer (Pillar III) — open research program
-- **Indicative scope:** A bidirectional protocol bridge between CFLT-structured natural-language intent and apcore-structured AI-perceivable tool-call surfaces. Detailed in [`future/cognitive-translation-layer.md`](./future/cognitive-translation-layer.md) and §7.7 of the CFLT preprint.
-- **Substrate endpoints:** Both already deployed independently — CFLT (natural-language layer; this framework) and [apcore](https://github.com/aiperceivable) (tool-call layer; Apache 2.0, OpenSSF Best Practices certified, production SDKs in Python / TypeScript / Rust).
-- **Audience:** AI alignment researchers, applied linguistics researchers, human-AI interaction researchers.
-- **Status:** No CTL implementation exists at time of writing. Planned as the integrative cross-substrate contribution; the specification document is the public deliverable. Open to community contribution; the program is not locked to any particular institutional pathway and contributions to any phase are welcome.
-- **Implementation packaging — considerations, not recommendation.** CFLT theory does not prescribe how CTL implementations should be packaged or named; this is the implementer's choice based on their organizational and ecosystem context. Some structural considerations future implementers may find useful:
-    - **Layer fit.** CTL is *runtime invocation* infrastructure — parse NL → resolve Registry → execute → linearize. It sits structurally at the same layer as existing surface adapters (`apcore-mcp`, `apcore-a2a`, `apcore-cli`) — above the apcore module standard rather than inside it. Folding NL/LLM dependencies into a substrate-level SDK is generally undesirable because it would force every consumer of that SDK to ship an LLM stack.
-    - **Ecosystem-side naming is a free choice.** Equally legitimate paths include CFLT-side branding (e.g., `cflt-ctl`, `cflt-bridge`, `ctl`), apcore-side branding (e.g., `apcore-ctl-{python,typescript,rust}` mirroring the existing surface-adapter naming convention), or fully independent naming. The choice depends on which ecosystem the implementer aligns with and on local engineering judgment. CFLT theory is neutral on this question.
-    - **Cross-cutting metadata convention.** Whichever package name is chosen, apcore-side CTL-specific metadata can be carried in the `Annotations.extra.cflt.*` / `extra.ctl.*` namespace per apcore PROTOCOL_SPEC §4.4.1 — analogous to existing `mcp.*` / `a2a.*` / `cli.*` namespaces. This convention is shared across packaging choices and does not require any change to apcore itself.
-    - **CFLT-side parser placement.** A natural-language → CFLT-slot parser may be embedded inside the CTL package or extracted as a reusable library (e.g., `cflt-parser-*`) if a second consumer emerges — for instance the Pillar I CoreFirst app or Pillar II prompt-shaping tooling. This decision is also left to the implementer; CFLT does not require either layout.
-- All implementation paths — including third-party variants under different naming, partitioning, language, or commercial model — are equally welcome.
 
 ---
 

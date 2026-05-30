@@ -5,7 +5,7 @@
 
 ## 1. Introduction
 
-As a normative protocol for cognitive ergonomics, CFLT makes several high-stakes claims about information processing efficiency and language acquisition speed. To transition from a theoretical framework to an evidence-based science, these claims must be subjected to rigorous empirical testing. This agenda outlines three empirical tracks: **Computational Performance**, **Psycholinguistic Validation**, and **SLA (Second Language Acquisition) Outcomes**. (Terminology note: these are methodological research tracks of the empirical agenda; they are *not* the same numbering as the three Strategic Pillars in [`../vision.md`](../vision.md), which organize the project's high-level vision and includes Pillar III = Cognitive Translation Layer.)
+As a normative protocol for cognitive ergonomics, CFLT makes several high-stakes claims about information processing efficiency and language acquisition speed. To transition from a theoretical framework to an evidence-based science, these claims must be subjected to rigorous empirical testing. This agenda outlines three empirical tracks: **Computational Performance**, **Psycholinguistic Validation**, and **SLA (Second Language Acquisition) Outcomes**. (Terminology note: these are methodological research tracks of the empirical agenda; they are *not* the same numbering as the two Strategic Pillars in [`../vision.md`](../vision.md), which organize the project's high-level vision.)
 
 ### 1.1 The Cross-Domain Single-Currency Premise
 

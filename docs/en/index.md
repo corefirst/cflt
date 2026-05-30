@@ -42,7 +42,7 @@ The author is a non-native English speaker. AI tools (Claude, Gemini) were used 
 
 - **[Manifesto](manifesto.md)** — The canonical theoretical statement.
 - **[Core Concept](foundations/core-concept.md)** — What "Core" means (a salience anchor, *not* a verb or predicate). Read immediately after the manifesto.
-- **[Strategic Vision](vision.md)** — Cross-project roadmap across Pillar I (human bilingual education), Pillar II (LLM protocol standardization), and Pillar III (the planned [Cognitive Translation Layer](future/cognitive-translation-layer.md) bridging the natural-language and tool-call substrates).
+- **[Strategic Vision](vision.md)** — Cross-project roadmap across Pillar I (human bilingual education) and Pillar II (LLM protocol standardization).
 
 ## Foundations
 

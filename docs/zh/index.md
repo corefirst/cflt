@@ -42,7 +42,7 @@ Alignment. Zenodo. https://doi.org/10.5281/zenodo.20289504
 
 - **[宣言 (Manifesto)](manifesto.md)** — 权威理论陈述。
 - **[核心概念](foundations/core-concept.md)** — "Core" 的定义（显著性锚点，**不是**动词或谓词）。请在阅读宣言后立即阅读此篇。
-- **[战略愿景](vision.md)** — 横跨人类双语教育（支柱 I）、大语言模型协议标准化（支柱 II）以及规划中的[认知翻译层](future/cognitive-translation-layer.md)（支柱 III，桥接自然语言底物与工具调用底物）的跨项目路线图。
+- **[战略愿景](vision.md)** — 横跨人类双语教育（支柱 I）与大语言模型协议标准化（支柱 II）的跨项目路线图。
 
 ## 理论基础 (Foundations)
 
