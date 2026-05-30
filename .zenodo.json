@@ -1,0 +1,28 @@
+{
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "title": "Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting",
+  "version": "2026-05b",
+  "language": "eng",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Yi, Weifeng (Tercel)",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0000-3742-4403"
+    }
+  ],
+  "keywords": [
+    "linearization",
+    "salience anchor",
+    "second language acquisition",
+    "prompt engineering",
+    "prompt order-sensitivity",
+    "Transformer primacy",
+    "cognitive ergonomics",
+    "discourse protocol"
+  ],
+  "description": "Core-First Language Theory (CFLT) is a normative discourse-level linearization protocol that fixes the relative order of two constituent tiers as [Core] → [Reason] → [Space] → [Time], operating above the morphosyntactic level: each language assembles the event nucleus (Slot 0) with its native syntax, while the protocol governs only the ground frame (Slots 1–3) and the boundary between the two. CFLT targets a bottleneck shared by adult second-language production and Large Language Model prompting — the cost of restructuring a multidimensional semantic representation into a sequential string under language-specific linearization rules. A pilot two-part study (720 trials: 24 cases × 4 levels × 2 languages × 5 frontier models × 3 runs, English + Mandarin) provides preliminary evidence on the LLM-prompting side; the human-side predictions are reserved for a falsifiable research agenda. Reproducible data, prompts, and evaluation scripts are included in the repository.",
+  "notes": "Version 2026-05b supersedes the 2026-05 snapshot (tag zenodo-2026-05). Title corrected (“LLM Alignment” → “LLM Prompting”); speculative cross-substrate material (the Cognitive Translation Layer and references to the apcore tool-call standard) removed; the framework restructured from three pillars to two (human L2 production; LLM prompting). No empirical results changed. The concept DOI 10.5281/zenodo.20289504 always resolves to the latest version."
+}
