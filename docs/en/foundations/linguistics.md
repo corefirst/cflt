@@ -69,7 +69,7 @@ Beyond conceptual salience, CFLT is supported by the psycholinguistic requiremen
 ### 3.1 Minimizing the Constituent Recognition Domain (CRD)
 The CRD is the word-count required to identify all ICs of a phrase. Efficiency is the ratio of ICs to the CRD.
 
-By placing the Core in position 0, CFLT ensures that the "anchoring" constituent of the main clause is identified immediately. This results in an **EIC ratio approaching 100%** for core recognition, drastically reducing the "look-ahead" load on working memory. This is particularly beneficial for L2 learners who have limited cognitive resources for managing incomplete syntactic trees.
+By placing the Core in position 0, CFLT ensures that the "anchoring" constituent of the main clause is identified early. This gives a **high IC-to-word ratio in the core-recognition window** — we avoid a specific "≈100%" figure, since Hawkins's EIC is a clause-internal word-count metric and transposing it to discourse-level slot ordering is an analogy, not a computed result — reducing the "look-ahead" load on working memory. This is particularly beneficial for L2 learners who have limited cognitive resources for managing incomplete syntactic trees.
 
 ### 3.2 Incremental Processing vs. the Modifier Trap
 

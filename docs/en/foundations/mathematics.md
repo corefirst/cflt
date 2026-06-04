@@ -82,7 +82,7 @@ John Hawkins (1994, 2004) proposes the **Early Immediate Constituents (EIC)** pr
 ### 3.1 Constituent Recognition Domain (CRD)
 The CRD is the word-count required to identify all ICs of a phrase. Hawkins quantifies efficiency as the ratio of ICs to the CRD. 
 
-By placing the Core in position 0, the CFLT Protocol minimizes the CRD for the main clause. The listener identifies the "anchoring" constituent immediately, achieving a high IC-to-word ratio (often approaching 100% for the core recognition). This reduces the **look-ahead buffer** required by the parser, directly lowering cognitive load.
+By placing the Core in position 0, the CFLT Protocol shortens the CRD for the main clause: the listener identifies the "anchoring" constituent early, giving a high IC-to-word ratio in the core-recognition window. (We give no specific figure — Hawkins's EIC ratio is defined over IC-to-CRD *word counts* within a phrase; applying it to *discourse-level* slot ordering is an analogical extension, not a computed value.) This reduces the **look-ahead buffer** required by the parser, lowering cognitive load.
 
 ### 3.2 Branching Direction and Incremental Processing
 CFLT effectively creates a **left-heavy (head-initial)** structure for the discourse-level core. This facilitates **incremental processing**: the listener can integrate information as it arrives rather than holding a sequence of modifiers in working memory while waiting for the core (a common "modifier trap" in head-final languages like Chinese).

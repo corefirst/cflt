@@ -141,7 +141,7 @@ CFLT ensures that the **illocutionary force** of the utterance is identified fir
 
 Relevance Theory posits that human communication is governed by the search for **optimal relevance**: achieving maximum cognitive effect with minimum processing effort.
 
-**CFLT as a relevance-maximizing strategy:** placing the Core at position 0 puts the highest-effect token where the listener's attention is greatest. The listener (or LLM, see `llm.md`) can begin computing inferences from the Core onward, rather than waiting through modifiers to discover what the utterance is about.
+**CFLT as a relevance-maximizing strategy:** placing the Core at position 0 puts the highest-effect token where the listener's attention is greatest. The listener (or LLM, see `llm.md`) can begin computing inferences from the Core onward, rather than waiting through modifiers to discover what the utterance is about. (Caveat: Relevance Theory **motivates** front-loading high-effect content but does **not entail** position-0 specifically — RT weighs *total* cognitive effect against *total* effort, and allows later-placed information to be optimally relevant. So RT is *consistent with*, not *proof of*, Core-first.)
 
 Native English's end-weight tendency (Quirk et al. 1985) competes with this principle: heavy NPs and given/new structuring often delay the new information. CFLT resolves the tension by treating end-weight as a **stylistic refinement** applied at the polishing stage (the Grammar Overlay in the product implementation), not at the conceptual scaffold stage.
 
@@ -160,7 +160,7 @@ Grice (1975) proposed four maxims for cooperative conversation: Quality, Quantit
 | Relation | Be relevant | Handled by selecting a salient Core |
 | **Manner** | **Be clear, brief, orderly** | **The fixed slot order is the orderliness condition** |
 
-The Maxim of Manner — *"Be orderly"* — explicitly requests predictable linearization. CFLT provides exactly one canonical order, fully satisfying this maxim. This makes the protocol unusually *Gricean-aligned*: native speakers improvise orderliness through context-sensitive heuristics; CFLT provides a single rule that achieves the same goal deterministically.
+The Maxim of Manner — *"Be orderly"* — motivates **having** a predictable linearization. CFLT provides one canonical order, which **satisfies** the orderliness maxim — but *any* fixed convention would equally satisfy it (Grice's own example of orderliness is temporal sequence). So Manner **motivates a fixed protocol; it does not by itself entail CFLT's *specific* order** (Core-first, R→S→T) — that specific order is argued from the cognitive/processing grounds elsewhere, not from Manner. With that caveat, the protocol is *Gricean-aligned*: native speakers improvise orderliness through context-sensitive heuristics; CFLT provides a single deterministic rule.
 
 ---
 

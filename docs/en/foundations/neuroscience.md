@@ -96,7 +96,7 @@ The **Early Immediate Constituents (EIC)** principle (Hawkins, 1994) suggests th
 Recent research in "StreamingLLM" (Xiao et al., 2024) identifies the very first tokens as **Attention Sinks**. As `llm.md` §2.3 carefully disambiguates, the sink is a *softmax-stability artifact* (Xiao et al. explicitly note these tokens are "not being semantically important"), distinct from the separate **Primacy Effect** under which causal masking compounds the influence of early tokens over later ones. Cognitive neuroscience identifies a partially parallel brain mechanism — sometimes informally called *"Primal Tokens"* (a project-internal term, not a standard cognitive-science label) — in which early-arriving information is weighted more heavily during stream comprehension.
 
 - **The Anchor Effect:** The brain uses stable reference frames (like the self-schema) as a salience anchor for incoming sensory data.
-- **Primacy Bias:** Early items in a sequence are integrated more deeply (Murdock 1962 *Serial Position Effect*; Baddeley working-memory primacy).
+- **Primacy Bias:** Early items in a sequence are integrated more deeply (Murdock 1962 *Serial Position Effect* — a *free-recall memory* phenomenon, whose transfer to online comprehension/production salience is **analogical**, not direct evidence; Baddeley working-memory primacy).
 - **CFLT Application:** Placing the Core at Position 0 leverages **brain primacy** (and is compatible with — but does not strictly depend on — the LLM attention-sink artifact). It ensures the most critical information occupies the high-attention prefix region of both human listeners and LLM contexts. CFLT's claim rests on primacy, not on sink; see `llm.md` §2.3 for the precise disambiguation.
 
 ---
