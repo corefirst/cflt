@@ -102,15 +102,15 @@ CFLT is thus not a refutation of UID; it is a **different optimization target** 
 
 ---
 
-## 5. Optimal Coding (Source Coding Theorem)
+## 5. Coding, Access Cost, and the Limits of the Source-Coding Analogy
 
-Shannon's source coding theorem (1948) and Huffman coding (1952) tell us that **frequently used or highly informative items should occupy short, easily accessible code positions**.
+A tempting analogy invokes Shannon's source-coding theorem (1948) and Huffman coding (1952). **But these concern code-*length* assignment — shorter codewords for more frequent symbols — not the *order* of constituents in a sequence.** There is no source-coding theorem stating that the highest-information constituent should be placed first; using one to justify Core-first linearization would be a category error, and CFLT does not rely on it.
 
-Translating this to clause linearization:
-- The Core Action is the **shortest path to disambiguating the speaker's intent**.
-- Putting it in position 1 (the most accessible position) minimizes the listener's expected lookup cost.
+What *is* defensible is kept separate:
+- The information-theoretic case for Core-first is the **early conditional-entropy** argument in §2 (front-loading the most-constraining constituent reduces the listener's expected residual uncertainty earliest), with the §2 caveat that *total joint entropy is permutation-invariant*.
+- The "front-load the most-accessed item" intuition *does* have a legitimate home — **access / search-cost minimization** (ordering items by access probability provably minimizes expected lookup cost). This is a *different* principle from source coding (which says nothing about order at all) and is *contingent* (it assumes the Core is the most-accessed element). It is **not** what Shannon/Huffman establish.
 
-This is analogous to placing the most frequently accessed instruction at the entry point of a function — the engineering principle of "front-load the dispatch."
+This section therefore **retracts** the earlier source-coding overclaim; §2 carries the information-theoretic weight.
 
 ---
 
