@@ -27,6 +27,10 @@ We accept the Guest & Martin / Slobin critique and revise the framing claim acco
 
 This is a deliberately weaker framing than the manifesto's "TCP/IP for thought" metaphor. The metaphor is rhetorically useful; the load-bearing scientific claim is the conjunction of the testable per-track predictions, with the single-currency reading retracted to the *strategic positioning* layer.
 
+### 1.2 Scope note — an open problem held separate
+
+This agenda tests the **position** of the Core (Core-first vs. Core-late; see §2.1's *Core-Modifier vs. Modifier-Core*). It does **not** yet settle the **internal architecture of the ground frame** — *why* the order is Reason → Space → Time, and *why* this particular set of slots. That tail-architecture justification is presented as an **open question under active investigation**, not as a settled result; its study design will be **pre-registered**. (The Core-position claim is supported separately in §2; the two should not be conflated.)
+
 ---
 
 ## 2. Computational Track: Computational Performance (LLM Prompting)
