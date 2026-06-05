@@ -424,7 +424,7 @@ This paper summarizes work developed within the CFLT framework (cflt.center). Th
 
 For the framework as a whole: *CFLT Core Team. (2026). Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles. https://cflt.center.*
 
-For this paper: *Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting. Manuscript, https://cflt.center.*
+For this paper: *Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting. Zenodo. https://doi.org/10.5281/zenodo.20289504*
 
 \noindent\rule{\textwidth}{0.4pt}
 
