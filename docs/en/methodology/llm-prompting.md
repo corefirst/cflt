@@ -129,7 +129,7 @@ In short: §5.1 establishes that *some* fixed-prefix protocol pays. §5.2 specif
 
 ### 5.2 CFLT-Specific Validation Results (Completed, 2026-05-17 expansion of 2026-05-16 baseline)
 
-The following results come from a controlled ablation across **5 frontier models** (GPT-5, Gemini 3 Flash Preview, Qwen3.5-Plus, DeepSeek V4 Pro, Claude Sonnet 4.6 via OpenRouter) on 24 cases (N=3 runs per arm). Full data: [`llm-part2-verification.md`](./llm-part2-verification.md).
+The following results come from a controlled ablation across **5 frontier models** (GPT-5, Gemini 3 Flash Preview, Qwen3.5-Plus, DeepSeek V4 Pro, Claude Sonnet 4.6) on 24 cases (N=3 runs per arm). Full data: [`llm-part2-verification.md`](./llm-part2-verification.md).
 
 **Accuracy on distractor cases (L3 — the primary informative level):**
 
@@ -164,11 +164,11 @@ The §5.2 projections have been tested in a controlled ablation (see [`llm-part2
 
 **Core findings (5 models, 24 cases, 144 calls per model = 720 trials total):**
 
-- On distractor-heavy cases (L3), CFLT raised accuracy from 56–78% to **100% across all 5 frontier models** (mean L3 control 65.6%; Δ ranges +22pp to +44pp). The universal saturation at L3 CFLT = 100% across 5 different model families (4 frontier providers + 1 via OpenRouter; spanning concealed-reasoning, visible chain-of-thought, and short-output regimes) is the strongest evidence the experiment produces.
+- On distractor-heavy cases (L3), CFLT raised accuracy from 56–78% to **100% across all 5 frontier models** (mean L3 control 65.6%; Δ ranges +22pp to +44pp). The universal saturation at L3 CFLT = 100% across 5 different model families (spanning concealed-reasoning, visible chain-of-thought, and short-output regimes) is the strongest evidence the experiment produces.
 - On multi-action decision cases (L4), the −11pp CFLT regression is **confined to DeepSeek V4 Pro alone**; the other four models all saturate at L4 ceiling. The L4 anomaly is therefore model-specific rather than a general pattern (revised from the earlier 4-model reading before Claude was added).
 - Reasoning-capable models (Qwen3.5-Plus, DeepSeek V4 Pro) saw completion-token reductions of −38.4% and −12.5% respectively via reduced reasoning overhead. The three short-output / concealed-reasoning models (GPT-5, Gemini Flash, Claude Sonnet 4.6) showed completion-token Δ within ±1.5% (no effect) — confirming the token economy benefit is **visible-reasoning-trace-conditional**, not general.
 
-Full per-case tables, cross-model comparison, methodology notes, and the Claude integration adapter (OpenRouter gateway + lenient JSON parser) are documented in [`llm-part2-verification.md`](./llm-part2-verification.md).
+Full per-case tables, cross-model comparison, methodology notes, and the Claude integration adapter (lenient JSON parser) are documented in [`llm-part2-verification.md`](./llm-part2-verification.md).
 
 ---
 

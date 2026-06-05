@@ -35,13 +35,13 @@ Each case runs N=3 times (temperature=0); report shows mean±std.
 
 ### 1.3 Models Tested
 
-| Tag | Type | Provider | Route |
-| :-- | :-- | :-- | :-- |
-| `openai/gpt-5` | Concealed reasoning (no exposed trace) | OpenAI | Direct |
-| `google/gemini-3-flash-preview` | Non-thinking (short output) | Google | Direct |
-| `qwen/qwen3.5-plus` | Visible chain-of-thought | Alibaba | Direct |
-| `deepseek/deepseek-v4-pro` | Visible chain-of-thought | DeepSeek | Direct |
-| `anthropic/claude-sonnet-4-6` | Non-thinking (short output) | Anthropic | Via OpenRouter (`LLM_GATEWAYS=anthropic:openrouter`) |
+| Tag | Type | Provider |
+| :-- | :-- | :-- |
+| `openai/gpt-5` | Concealed reasoning (no exposed trace) | OpenAI |
+| `google/gemini-3-flash-preview` | Non-thinking (short output) | Google |
+| `qwen/qwen3.5-plus` | Visible chain-of-thought | Alibaba |
+| `deepseek/deepseek-v4-pro` | Visible chain-of-thought | DeepSeek |
+| `anthropic/claude-sonnet-4-6` | Non-thinking (short output) | Anthropic |
 
 ---
 
@@ -184,16 +184,16 @@ All fixes were applied retroactively via `--rejudge` (no additional API calls).
 
 On the first Qwen run, EN_L3_01 and ZH_L3_01 control arms failed entirely due to API connection errors. The block was re-run with `--force` to obtain complete data; all figures in this report use the complete N=3 run.
 
-### 5.4 Claude via OpenRouter — Adapter Notes
+### 5.4 Claude Adapter Notes
 
 Adding `anthropic/claude-sonnet-4-6` required two adapter changes documented here for replication:
 
-1. **Routing**: Anthropic's native API is not OpenAI-compatible. The model is reached via OpenRouter (`https://openrouter.ai/api/v1`), configured by the gateway mechanism `LLM_GATEWAYS=anthropic:openrouter` in `.env` (see `scripts/llm_eval/utils.py` for the gateway router added in this iteration). The `OPENAI` Python SDK is unchanged.
-2. **JSON-mode tolerance**: Claude through OpenRouter occasionally honors `response_format={"type": "json_object"}` and occasionally wraps responses in ` ```json ... ``` ` markdown fences. `part2_llm_cflt_eval.py` now uses a `_parse_json_lenient()` helper that tries (a) direct `json.loads`, (b) markdown-fence stripping, (c) first-balanced-`{...}` extraction. The two upstream-API edge cases this fixed were:
+1. **Routing**: Anthropic's native API is not OpenAI-compatible. The model is reached through an OpenAI-compatible gateway configured in `.env` (see `scripts/llm_eval/utils.py` for the gateway router added in this iteration). The `OPENAI` Python SDK is unchanged.
+2. **JSON-mode tolerance**: Claude occasionally honors `response_format={"type": "json_object"}` and occasionally wraps responses in ` ```json ... ``` ` markdown fences. `part2_llm_cflt_eval.py` now uses a `_parse_json_lenient()` helper that tries (a) direct `json.loads`, (b) markdown-fence stripping, (c) first-balanced-`{...}` extraction. The two upstream-API edge cases this fixed were:
    - Claude returning text outside the JSON object (commentary) → strategy (c) recovers
    - Claude refusing `response_format` and returning markdown-wrapped JSON → strategy (b) recovers
 
-These adapter changes are non-Claude-specific and apply to any provider routed via OpenRouter or returning markdown-wrapped JSON.
+These adapter changes are non-Claude-specific and apply to any provider returning markdown-wrapped JSON.
 
 ### 5.5 Claude L2 Noise Observation
 
@@ -214,7 +214,7 @@ A confirmatory study would resolve this by (i) raising N per case to ≥ 10 to s
 
 ## 6. Conclusion
 
-This experiment provides multi-model empirical evidence for the primacy hypothesis in `llm-prompting.md §2.1`, expanded from 4 to **5 frontier models** (added `anthropic/claude-sonnet-4-6` via OpenRouter on 2026-05-17):
+This experiment provides multi-model empirical evidence for the primacy hypothesis in `llm-prompting.md §2.1`, expanded from 4 to **5 frontier models** (added `anthropic/claude-sonnet-4-6` on 2026-05-17):
 
 1. **On distractor cases (L3), CFLT raises accuracy to 100% across all five frontier models from five different providers**, while natural word-order control sits at 56–78% (mean 65.6%). This holds across a concealed-reasoning model (GPT-5), two visible-chain-of-thought models (Qwen3.5, DeepSeek V4 Pro), and two short-output models (Gemini Flash, Claude Sonnet 4.6). The universality of the L3 primacy effect across five distinct output regimes is the strongest single result of the experiment.
 

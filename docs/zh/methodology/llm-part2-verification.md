@@ -35,13 +35,13 @@
 
 ### 1.3 测试模型
 
-| Tag | 类型 | 提供方 | 路由 |
-| :-- | :-- | :-- | :-- |
-| `openai/gpt-5` | 隐式 reasoning（无暴露 trace）| OpenAI | 直连 |
-| `google/gemini-3-flash-preview` | 短输出（无 thinking） | Google | 直连 |
-| `qwen/qwen3.5-plus` | 显式 chain-of-thought | Alibaba | 直连 |
-| `deepseek/deepseek-v4-pro` | 显式 chain-of-thought | DeepSeek | 直连 |
-| `anthropic/claude-sonnet-4-6` | 短输出（无 thinking） | Anthropic | 经 OpenRouter（`LLM_GATEWAYS=anthropic:openrouter`）|
+| Tag | 类型 | 提供方 |
+| :-- | :-- | :-- |
+| `openai/gpt-5` | 隐式 reasoning（无暴露 trace）| OpenAI |
+| `google/gemini-3-flash-preview` | 短输出（无 thinking） | Google |
+| `qwen/qwen3.5-plus` | 显式 chain-of-thought | Alibaba |
+| `deepseek/deepseek-v4-pro` | 显式 chain-of-thought | DeepSeek |
+| `anthropic/claude-sonnet-4-6` | 短输出（无 thinking） | Anthropic |
 
 ---
 
@@ -184,16 +184,16 @@ _🔒 = control 已饱和，无法测试 CFLT 效果；📈 = 有信号的层级
 
 Qwen3.5-Plus 在部分运行中出现 API 连接错误（首次运行的 EN_L3_01、ZH_L3_01 ctrl 全部失败）。已通过 `--force` 重跑补全数据，本报告数据均来自完整的 N=3 运行。
 
-### 5.4 Claude 经 OpenRouter 路由——适配说明
+### 5.4 Claude 适配说明
 
 加入 `anthropic/claude-sonnet-4-6` 需要两处适配改动，记录在此供复现：
 
-1. **路由**：Anthropic 原生 API 不是 OpenAI-compatible。该模型通过 OpenRouter（`https://openrouter.ai/api/v1`）访问，由 `.env` 中的 gateway 机制 `LLM_GATEWAYS=anthropic:openrouter` 配置（参见 `scripts/llm_eval/utils.py` 本次迭代新增的 gateway 路由器）。`OPENAI` Python SDK 本身未变。
-2. **JSON-mode 容错**：Claude 经 OpenRouter 有时遵守 `response_format={"type": "json_object"}`，有时返回 ` ```json ... ``` ` markdown 包裹的响应。`part2_llm_cflt_eval.py` 现使用 `_parse_json_lenient()` 辅助函数，依次尝试：(a) 直接 `json.loads`，(b) 剥离 markdown 代码块，(c) 提取首个平衡的 `{...}` 子串。该改动修复的两个上游 API 边缘情况：
+1. **路由**：Anthropic 原生 API 不是 OpenAI-compatible。该模型通过一个 OpenAI-compatible 网关访问，由 `.env` 配置（参见 `scripts/llm_eval/utils.py` 本次迭代新增的 gateway 路由器）。`OPENAI` Python SDK 本身未变。
+2. **JSON-mode 容错**：Claude 有时遵守 `response_format={"type": "json_object"}`，有时返回 ` ```json ... ``` ` markdown 包裹的响应。`part2_llm_cflt_eval.py` 现使用 `_parse_json_lenient()` 辅助函数，依次尝试：(a) 直接 `json.loads`，(b) 剥离 markdown 代码块，(c) 提取首个平衡的 `{...}` 子串。该改动修复的两个上游 API 边缘情况：
    - Claude 在 JSON 对象外返回注释文本 → 策略 (c) 恢复
    - Claude 拒绝 `response_format` 并返回 markdown 包裹的 JSON → 策略 (b) 恢复
 
-这些适配改动**不限于 Claude**，对任何通过 OpenRouter 路由或返回 markdown 包裹 JSON 的 provider 都适用。
+这些适配改动**不限于 Claude**，对任何返回 markdown 包裹 JSON 的 provider 都适用。
 
 ### 5.5 Claude L2 噪声观察
 
@@ -214,7 +214,7 @@ Claude 是五个模型中唯一在 L2 上呈现信息层级（非饱和）但方
 
 ## 6. 结论
 
-本实验为 CFLT `llm-prompting.md §2.1` 首因假设提供了多模型经验证据，从 4 个模型扩展到 **5 个前沿模型**（2026-05-17 经 OpenRouter 加入 `anthropic/claude-sonnet-4-6`）：
+本实验为 CFLT `llm-prompting.md §2.1` 首因假设提供了多模型经验证据，从 4 个模型扩展到 **5 个前沿模型**（2026-05-17 加入 `anthropic/claude-sonnet-4-6`）：
 
 1. **在干扰信息场景（L3）中，CFLT 对所有五个来自不同公司的前沿模型都将准确率提升至 100%**，而自然语序 control 组在 56–78% 之间（均值 65.6%）。这一结论跨越了隐式 reasoning 模型（GPT-5）、两个显式 chain-of-thought 模型（Qwen3.5、DeepSeek V4 Pro）和两个短输出模型（Gemini Flash、Claude Sonnet 4.6）。L3 首因效应在五种不同输出模式上的普适性是本实验最强的单一结果。
 

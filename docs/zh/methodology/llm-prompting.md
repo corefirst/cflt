@@ -129,7 +129,7 @@ CFLT 的有效性得到了现代推理引擎的行业基准测试和近期提示
 
 ### 5.2 CFLT 特有的验证结果（2026-05-17，扩展自 2026-05-16 4 模型基线）
 
-以下为跨 **5 个前沿模型**（GPT-5、Gemini 3 Flash Preview、Qwen3.5-Plus、DeepSeek V4 Pro、Claude Sonnet 4.6 经 OpenRouter）在 24 个受控案例上的实测结果（N=3 runs / arm）。完整数据见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
+以下为跨 **5 个前沿模型**（GPT-5、Gemini 3 Flash Preview、Qwen3.5-Plus、DeepSeek V4 Pro、Claude Sonnet 4.6）在 24 个受控案例上的实测结果（N=3 runs / arm）。完整数据见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
 
 **准确率提升（干扰信息场景 L3——主要信息层级）：**
 
@@ -164,11 +164,11 @@ CFLT 的有效性得到了现代推理引擎的行业基准测试和近期提示
 
 **核心结论（5 模型，24 case，每模型 144 calls，共 720 次试验）：**
 
-- 在含干扰信息的场景（L3）下，CFLT 将 **5/5 前沿模型** 的准确率从 56–78% 提升至 **100%**（L3 control 均值 65.6%；Δ 范围 +22 ~ +44pp）。L3 CFLT 在所有 5 个不同模型家族（4 家前沿厂商 + 1 家经 OpenRouter；覆盖隐式 reasoning、显式 chain-of-thought 和短输出三种输出模式）上一致饱和至 100%，是本实验最有力的证据。
+- 在含干扰信息的场景（L3）下，CFLT 将 **5/5 前沿模型** 的准确率从 56–78% 提升至 **100%**（L3 control 均值 65.6%；Δ 范围 +22 ~ +44pp）。L3 CFLT 在所有 5 个不同模型家族（覆盖隐式 reasoning、显式 chain-of-thought 和短输出三种输出模式）上一致饱和至 100%，是本实验最有力的证据。
 - 在多候选决策场景（L4）下，−11pp 的 CFLT 回归**仅限于 DeepSeek V4 Pro 一家**；其他四个模型 L4 都饱和。L4 异常因此是**模型特异**而非通用模式（修正自加入 Claude 前的 4 模型解读）。
 - Reasoning-capable 模型（Qwen3.5-Plus、DeepSeek V4 Pro）的 completion token 分别减少 −38.4% 和 −12.5%，机制为推理开销减少。三个短输出 / 隐式 reasoning 模型（GPT-5、Gemini Flash、Claude Sonnet 4.6）的 completion token Δ 都在 ±1.5%（无效应）——确认 token 经济收益**取决于可见 reasoning trace**，而非通用。
 
-完整数据表、per-case 结果、方法论说明，以及 Claude 集成适配器（OpenRouter gateway + 容错 JSON 解析器）见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
+完整数据表、per-case 结果、方法论说明，以及 Claude 集成适配器（容错 JSON 解析器）见 [`llm-part2-verification.md`](./llm-part2-verification.md)。
 
 ---
 
