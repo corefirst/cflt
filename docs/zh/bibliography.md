@@ -178,8 +178,6 @@
 - **Vig, J.** (2019). "A Multiscale Visualization of Attention in the Transformer Model." *ACL System Demonstrations*. DOI: [10.18653/v1/P19-3007](https://doi.org/10.18653/v1/P19-3007)
 - **Wei, J. et al.** (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *NeurIPS*. [官方链接](https://papers.nips.cc/paper_files/paper/2022/hash/8bb0d291acd4acf06ef112099c16f326-Abstract-Conference.html)
 - **Xiao, G., Tian, Y., Chen, B., Han, S. & Lewis, M.** (2024). "Efficient Streaming Language Models with Attention Sinks." *ICLR*. DOI: [10.48550/arXiv.2309.17453](https://doi.org/10.48550/arXiv.2309.17453)
-- **Yao, S. et al.** (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." *NeurIPS*. [官方链接](https://papers.nips.cc/paper_files/paper/2023/hash/271db403056345464197479758782aee-Abstract-Conference.html)
-- **Zhang, T. et al.** (2023). "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models." *arXiv*:2309.01219. [链接](https://arxiv.org/abs/2309.01219)
 - **Zheng, L. et al.** (2024). "SGLang: Efficient Execution of Structured Language Model Programs." *NeurIPS*. [OpenReview 链接](https://openreview.net/forum?id=VqkAKQibpq)
 
 ## 教育学与第二语言习得
