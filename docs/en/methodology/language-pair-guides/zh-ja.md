@@ -3,7 +3,7 @@
 > **Version:** 1.0.0 (Internal Draft)
 > **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-> **Why this guide matters.** Most Chinese learners of Japanese (and vice versa) detour through English: 中文 → 英语 → 日语. This is a 2-hop translation with two layers of friction and two layers of error accumulation. CFLT lets the learner pivot **directly** through the protocol layer, no English required. This guide demonstrates that CFLT operates on a non-Indo-European pair without an English intermediate; the *full universality argument* — five languages, four families with reference-grammar citations — is in [`../../foundations/core-concept.md`](../../foundations/core-concept.md) §2.5. The narrower English-independence claim is what the zh↔ja pair actually demonstrates.
+> **Why this guide matters.** Some Chinese learners of Japanese (and vice versa) detour through English: 中文 → 英语 → 日语, a 2-hop translation. CFLT *hypothesizes* that such a detour adds layers of friction and error accumulation, and that pivoting **directly** through the protocol layer (no English required) reduces them — but the prevalence of the English detour and its comparative cost are not yet established by evidence; treat this as a motivation, not a measured result. What this guide does demonstrate is feasibility: that CFLT operates on a non-Indo-European pair without an English intermediate. The *full universality argument* — five languages, four families with reference-grammar citations — is in [`../../foundations/core-concept.md`](../../foundations/core-concept.md) §2.5. The narrower English-independence (feasibility) claim is what the zh↔ja pair actually demonstrates; an English-independence *learning advantage* remains a hypothesis to test.
 
 ---
 
@@ -20,7 +20,7 @@
 | **Tense morphology?** | None (relies on aspect particles 了, 过, 着 + time adverbs) | Rich (-た past, -る non-past, -ている progressive) |
 | **Pro-drop?** | Yes (subject often omitted) | Yes (subject often omitted, sometimes object too) |
 
-**Key implication for CFLT.** The two languages share *topic-prominence* (a major facilitating overlap) but diverge sharply in *event-nucleus assembly* (verb-final vs verb-medial, case-marked vs case-less). The CFLT protocol layer (Core-first, R-S-T) is identical for both; the event nucleus is built using each language's own machinery; the slot fillers translate token-by-token via NSM-like primes when needed.
+**Key implication for CFLT.** The two languages share *topic-prominence* (a major facilitating overlap) but diverge sharply in *event-nucleus assembly* (verb-final vs verb-medial, case-marked vs case-less). The CFLT protocol layer (Core-first, R-S-T) is identical for both; the event nucleus is built using each language's own machinery; where a slot filler is hard to map directly, CFLT proposes paraphrasing its meaning through a controlled semantic metalanguage inspired by NSM (Wierzbicka 1996) — NSM-style explication, not token-by-token translation (NSM primes are meanings, not directly substitutable tokens).
 
 ---
 
@@ -46,7 +46,9 @@ The same Core "I bought a book with money for my mom" assembles differently:
 
 ## 3. Pair-Specific Edge Cases
 
-These are the boundary calls that go differently in the zh-ja pair than the universal defaults in `slot-disambiguation.md`.
+These are the boundary calls that go differently in the zh-ja pair than the project-standard defaults in `slot-disambiguation.md`.
+
+> **Scope note.** The 把 construction, は/が, topic, contrast, grammatical subject, and focus are **context-dependent correspondences, not direct equivalents**. wa/ga selection in particular involves complex interactions among topic, contrast, focus, exhaustiveness, prosody, and clause type (Kuno 1973; Kuroda 2005; Heycock 2008), so a 把-patient, a topic, or a focused subject does not map onto a single Japanese or Chinese form by rule. Read the arrows below as default starting hypotheses to confirm against context and native-speaker judgment, not deterministic mappings.
 
 ### 3.1 Chinese 把 (bǎ) construction → Japanese topicalization
 
@@ -54,7 +56,7 @@ The Chinese **把** construction fronts a definite object before the verb: *我�
 
 The functional Japanese equivalent often uses topic marking: *本は私が買った* (literally "the book, I bought"). Same Core-internal foregrounding, achieved with は marker.
 
-**Rule for zh→ja**: If the Chinese 把-construction patient is the topical/given referent, render it with は in Japanese; if it's contrastive focus, render it with が or stay with default を-marked object.
+**Default for zh→ja** (context-dependent, confirm against context): If the Chinese 把-construction patient is the topical/given referent, は is often the natural rendering in Japanese; if it's contrastive focus, が or the default を-marked object may fit better. These are tendencies, not a one-to-one rule.
 
 ### 3.2 Japanese は (topic) vs が (subject) → Chinese topicalization vs SVO
 
@@ -64,7 +66,7 @@ Japanese systematically distinguishes topic (は) from grammatical subject (が)
 - 中: *这本书我读了* (literal topic-fronting)
 - 中: *我读了这本书* (default SVO; less topical)
 
-**Rule for ja→zh**: は-marked subjects → render as Chinese topic-fronted forms (often pre-Core). が-marked subjects → render in default SVO position. **Caution**: do not blindly translate は as 是 (the copula) — they are unrelated.
+**Default for ja→zh** (context-dependent, confirm against context): は-marked subjects often render as Chinese topic-fronted forms (frequently pre-Core); が-marked subjects often render in default SVO position. These are tendencies, not equivalences — selection still depends on topic/contrast/focus in context. **Caution**: do not blindly translate は as 是 (the copula) — they are unrelated.
 
 ### 3.3 Chinese 因为/所以 vs Japanese から/ので/から (Reason slot)
 

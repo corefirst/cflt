@@ -1,7 +1,7 @@
 # Pedagogical Foundations of CFLT
 
 > Companion to: [`manifesto.md`](../manifesto.md)
-> Purpose: Ground the **CFLT Protocol's** pedagogical design in the second-language acquisition (SLA) literature — Krashen, Vygotsky, Cognitive Load Theory, Skill Acquisition Theory, and Task-Based Language Teaching — and show why the Core-First scaffold is theoretically defensible as a learning intervention, not just as an output format.
+> Purpose: Ground the **CFLT Protocol's** pedagogical design in the second-language acquisition (SLA) literature — Krashen, Vygotsky, Cognitive Load Theory, Skill Acquisition Theory, and Task-Based Language Teaching. These sources motivate and constrain the design; the Core-First curriculum is **theory-inspired and experimentally testable**, and the learning claims below are CFLT predictions to be evaluated, not established results.
 
 ---
 
@@ -20,7 +20,7 @@ Krashen's (1982, 1985) model posits that humans acquire language through **compr
 **CFLT alignment:**
 - CFLT is designed as an **acquisition-friendly scaffold**, not a rule-memorization system. Learners are not asked to memorize the four-element protocol explicitly; they internalize it through repeated exposure and pattern completion (the gamified Builder, scenario-based courseware).
 - The fixed protocol *lowers the affective filter*: by making "what comes next" predictable, the protocol reduces the anxiety of having to plan a sentence in real time.
-- **CFLT Form** outputs are designed to be comprehensible (the +1 over the learner's current state) but not yet fully native — which is precisely the i+1 zone Krashen identifies.
+- **CFLT Form** outputs are designed to be comprehensible (the +1 over the learner's current state) but not yet fully native. Krashen's $i+1$ refers to comprehensible **input** that contains the next-stage structure, not an output format; CFLT treats comprehensibility as a design consideration rather than claiming CFLT Form *is* the $i+1$ zone.
 
 ```mermaid
 graph LR
@@ -47,7 +47,7 @@ CFLT operationalizes the interface position: the protocol is the explicit scaffo
 
 Vygotsky's (1978) **Zone of Proximal Development (ZPD)** is the distance between what a learner can do alone and what they can do with guidance.
 
-**CFLT as scaffold within the ZPD:** the four-element protocol is exactly a Vygotskyan **scaffold** — it gives the learner support to operate in the ZPD without doing the cognitive work for them. The learner still selects the Core, still chooses appropriate L2 vocabulary, still binds modifiers — but the *linearization decision* is offloaded to the protocol.
+**CFLT as a candidate scaffold within the ZPD:** CFLT proposes the four-element protocol as a candidate instructional support, compatible with the ZPD idea — it is intended to give the learner support to operate in the ZPD without doing the cognitive work for them. The learner still selects the Core, still chooses appropriate L2 vocabulary, still binds modifiers — but the *linearization decision* is offloaded to the protocol. Whether the protocol actually falls within a given learner's ZPD is an empirical question requiring per-learner, per-task assessment; "scaffolding" itself is later instructional terminology rather than Vygotsky's own.
 
 ```mermaid
 graph LR
@@ -62,7 +62,7 @@ graph LR
 ```
 *Three nested zones around the learner; ZPD is the middle band (per Vygotsky 1978). Connections are non-directional — these are bounded zones, not a progression.*
 
-**Operational implication:** as learners advance, the scaffold should be progressively withdrawn (Vygotsky's "fading"). Strict four-slot enforcement is appropriate at early stages; the system should relax constraints as the learner masters the protocol, eventually allowing native-idiomatic deviations as deliberate stylistic choices.
+**Operational implication:** as learners advance, CFLT proposes that the scaffold be progressively withdrawn (the "fading" idea from later scaffolding research, not Vygotsky himself). Strict four-slot enforcement is hypothesized to be appropriate at early stages; the system should relax constraints as the learner masters the protocol, eventually allowing native-idiomatic deviations as deliberate stylistic choices. The fading schedule is a CFLT design hypothesis to be tested, not a source-established prescription.
 
 ---
 
@@ -72,9 +72,9 @@ Sweller (1988, 2011) identifies three types of cognitive load on working memory:
 
 | Load type | Description | CFLT implication |
 |---|---|---|
-| **Intrinsic** | Inherent complexity of the task | Non-negotiable; fixed by the L2 complexity |
-| **Extraneous** | Distraction from the learning goal | CFLT reduces this by eliminating structural choices |
-| **Germane** | Load directed at building schemas | CFLT aims to convert extraneous load into germane load by giving learners one schema (the four-slot protocol) instead of dozens of rules |
+| **Intrinsic** | Inherent complexity of the task | A fixed design default (empirically open); set by the L2 complexity |
+| **Extraneous** | Distraction from the learning goal | CFLT *predicts* it reduces this by removing structural choices (an unmeasured CFLT-specific claim) |
+| **Germane** | Load directed at building schemas | CFLT aims to convert extraneous load into germane load by giving learners one schema (the four-slot protocol) instead of dozens of rules — a prediction, not an established result |
 
 **CFLT cognitive-load argument:** in a traditional curriculum, an adult learner producing an L2 sentence performs roughly:
 1. L1 thought formation
@@ -109,7 +109,7 @@ graph TD
 
 > See [`linguistics.md`](./linguistics.md) §3 for the canonical EIC introduction; this subsection gives the pedagogical refraction (the "Modifier Trap" as the learner-side face of EIC).
 
-A specific source of cognitive load is the **Modifier Trap** (derived from Hawkins' EIC principle). For learners from head-final backgrounds (like Chinese), the L1 habit of placing modifiers before the noun creates a high **look-ahead buffer** demand: the speaker must plan the entire noun phrase before uttering the head. 
+A hypothesized source of cognitive load is the **Modifier Trap** (motivated by analogy with Hawkins' EIC principle; EIC is primarily a parsing/ordering account, so the production-side transfer is a CFLT extrapolation that needs evidence). For learners from head-final backgrounds (like Chinese), the L1 habit of placing modifiers before the noun is predicted to create a high **look-ahead buffer** demand: the speaker must plan the entire noun phrase before uttering the head.
 
 CFLT's **head-initial discourse protocol** is **predicted to** eliminate this buffer. By asserting the Core first, the learner "unloads" the most important information immediately, predicted to free working memory to append modifiers (Reason, Space, Time) incrementally. This is the pedagogical application of incremental processing; the working-memory magnitude is an open empirical question (see §12.1 *Affective Filter Measurement* for the corresponding measurement protocol).
 
@@ -135,9 +135,11 @@ TBLT (Long 1985, 2015; Ellis 2003) argues that language learning should be organ
 
 **CFLT is *not* compatible with strong-TBLT.** Long (2015) explicitly rejects *synthetic syllabus* — any pre-defined sequence of linguistic items used as the spine of instruction — and treats *focus on form* (incidental, task-driven attention to form) as the only acceptable form-focus strategy. The CFLT Protocol, which prescribes a fixed `[Core] → [Reason] → [Space] → [Time]` template *before* tasks are encountered, is exactly the kind of synthetic / focus-on-forms scaffolding Long opposes.
 
-**CFLT *is* compatible with weak-TBLT (Ellis 2003) and with VanPatten's structured input.** Ellis treats explicit form-focused instruction and task-based practice as complementary; VanPatten's processing instruction explicitly trains learners on form-meaning mappings prior to communicative use. CFLT operationalizes both: the protocol is the explicit scaffold, the courseware delivers tasks.
+**CFLT is *potentially* compatible with weak-TBLT (Ellis 2003) and with VanPatten's structured input, contingent on activity design.** Ellis treats explicit form-focused instruction and task-based practice as complementary; VanPatten's processing instruction explicitly trains learners on form-meaning mappings prior to communicative use. CFLT *aims to* operationalize both — the protocol as the explicit scaffold, the courseware as the task delivery — but a CFLT activity counts as a "task" only if it satisfies the formal task criteria, and genuine structured-input activities (not output practice alone) are required before claiming a Processing-Instruction fit.
 
-**CFLT Courseware Generator as a weak-TBLT engine:** the Generator takes inputs `topic`, `industry_context`, `age_group`, `difficulty_level` and produces a sequence of scenario-based tasks where each task is a protocol-compliant communicative scenario with embedded vocabulary focus and audio-visual context. The IT-English module (manifesto §8.2) is the canonical example: tasks like "deploy a service, debug a latency issue, refactor a module" carry industry-appropriate vocabulary while the protocol provides the structural skeleton.
+> **Task checklist (audit before applying a TBLT label):** an activity qualifies as a task only if it (1) is primarily meaning-focused, (2) has a non-linguistic communicative outcome, (3) contains an information, reasoning, or opinion gap, and (4) requires learners to draw on their own linguistic resources. Scenario labels and vocabulary context alone do not establish taskness.
+
+**CFLT Courseware Generator as a candidate (weak-)TBLT engine:** the Generator takes inputs `topic`, `industry_context`, `age_group`, `difficulty_level` and produces a sequence of scenario-based activities, each a protocol-compliant communicative scenario with embedded vocabulary focus and audio-visual context. Whether these qualify as TBLT *tasks* must be demonstrated at the activity and outcome level against the checklist above, not asserted from scenario labels. The IT-English module (manifesto §8.2) is the canonical example: activities like "deploy a service, debug a latency issue, refactor a module" carry industry-appropriate vocabulary while the protocol provides the structural skeleton.
 
 **Honest summary**: CFLT positions itself as an *interface-position* (Ellis 2008) framework — explicit protocol + task practice → procedural automaticity — rather than as TBLT in Long's strict sense.
 
@@ -150,7 +152,7 @@ Levelt (1989) and Kormos (2006, 2014) model the speech production chain:
 
 Adult L2 production is often "disfluent" because the **Formulator** stage is bottlenecked. The brain is trying to decide *where* to put words while also trying to *find* the words.
 
-**CFLT intervention point:** by fixing the linearization sub-task (no more "where does the time go?" decision), the protocol frees working memory for the L2-specific demands Kormos identifies. Specifically:
+**CFLT intervention point:** by fixing the linearization sub-task (no more "where does the time go?" decision), CFLT *predicts* the protocol frees working memory for the L2-specific demands Kormos identifies. (Kormos describes constraints across multiple production stages and does not single out the Formulator or test fixed templates, so this is a testable extrapolation, not established evidence.) Specifically:
 1.  **Earlier articulation onset:** the learner starts speaking as soon as the Core is retrieved.
 2.  **Reduced repair rate:** because the sequence is fixed, there are fewer "re-starts" to correct word-order errors.
 
@@ -162,36 +164,36 @@ These are concrete, testable predictions about CFLT-trained learners' production
 
 Kroll's **Revised Hierarchical Model** (Kroll & Stewart 1994; Kroll et al. 2010) suggests that early L2 learners access meaning through their L1 (*word-association route*). As they advance, they access meaning directly from concepts (*concept-mediation route*).
 
-**CFLT as a concept-mediation accelerator:** by training learners to think in language-neutral linearization (concept → CFLT scaffold → L1 *or* L2 surface), the protocol short-circuits the word-association route. The learner's preverbal message exists in the scaffold *before* either L1 or L2 lexical access happens, encouraging direct concept-to-L2 retrieval.
+**CFLT as a proposed concept-mediation accelerator:** by training learners to think in language-neutral linearization (concept → CFLT scaffold → L1 *or* L2 surface), CFLT *hypothesizes* that the protocol short-circuits the word-association route. Neither Kroll study tests structural scaffolds or CFLT, and route strengths are graded, task-sensitive, and coexisting rather than discrete universal stages — so this acceleration is a CFLT hypothesis to be tested by a direct translation and picture-naming experiment.
 
-This is consistent with NSM's role (manifesto §2.5): semantic primes are the language-neutral atoms that fill the slots. Together, NSM + CFLT form a **language-neutral conceptual layer** that the learner accesses before committing to either L1 or L2 surface forms.
+CFLT *proposes* to pair this with NSM's role (manifesto §2.5): semantic primes as the language-neutral atoms that fill the slots. The idea that NSM + CFLT together form a **language-neutral conceptual layer** accessed before committing to either L1 or L2 surface forms is a CFLT pedagogical proposal, not an established result.
 
 ---
 
 ## 9. Critical Period and Developmental Stages
 
-Children are typically **better L2 acquirers** than adults; they are just worse at *explaining what they have learned*. The right question is therefore not "does CFLT work for children?" but **"what is the right delivery mechanism for each developmental stage?"**
+Children are often **assumed to be better long-term L2 acquirers** than adults (especially for native-like ultimate attainment), though the cited statistical-learning studies show infant success on controlled tasks rather than a general child-over-adult superiority. Children are also worse at *explaining what they have learned*. The right question is therefore not "does CFLT work for children?" but **"what is the right delivery mechanism for each developmental stage?"**
 
 The Core-First protocol operates at the **cognitive-conceptual level**, not at the metalinguistic level. A child internalizing the protocol does not need to *know* they are applying a four-element protocol; they only need to absorb the pattern through repeated exposure to conformant input. This is exactly how children acquire grammar in the first place — without rule lectures.
 
 | Learner Type | Delivery Method | Theoretical Basis |
 |---|---|---|
-| Early learners (~4–11) | **Visual CFLT**: animated icons for slot fillers, ~500 semantic primes, pattern absorption through play | Krashen's implicit acquisition; children's superior statistical-learning capacity (Saffran, Aslin & Newport 1996) |
+| Early learners (~4–11) | **Visual CFLT**: animated icons for slot fillers, ~500 semantic primes, pattern absorption through play | Krashen's implicit acquisition; infant statistical-learning capacity demonstrated within studied tasks (Saffran, Aslin & Newport 1996), not an established child-over-adult advantage |
 | Adults | **Efficiency CFLT**: explicit schema, industry tokens, complex connectors | Adult metalinguistic strengths (DeKeyser 2007); schema transfer; deliberate practice |
 
 The manifesto's §8.1 Cross-Age Adaptation already encodes this differentiation. The CoreFirst v1 PRD scopes the initial product to adult learners — but this is a **v1 product-scope decision** (UI/UX adaptation, content-moderation infrastructure, and child-appropriate courseware require significant additional investment), **not a theoretical claim that CFLT is unsuitable for children**.
 
 Several reasons CFLT may be especially well-suited to early learners — contrary to what an "adults learn explicitly" framing might naively suggest:
 
-1.  **Statistical-learning advantage.** Children are powerful pattern extractors (Saffran et al. 1996; Lany & Saffran 2010). CFLT-conformant input gives them a clean, consistent statistical signal to internalize, free of the variance that natural-language input usually carries.
-2.  **No L1-interference plateau.** Adults often plateau because entrenched L1 habits resist restructuring. Children acquiring L2 alongside or shortly after L1 can absorb the protocol directly, with less interference to overcome.
-3.  **Critical-period evidence is graded, not absolute.** Hartshorne, Tenenbaum & Pinker (2018) find that the L2 grammar-learning curve declines gradually with age of onset rather than dropping off a cliff at puberty. CFLT, by externalizing the linearization decision, narrows the part of the gap that is most age-sensitive (the structural-restructuring sub-task) while leaving age-neutral skills (vocabulary, pragmatics) to be developed normally.
+1.  **Hypothesized statistical-learning fit.** Infants are powerful pattern extractors within studied conditions (Saffran et al. 1996; Lany & Saffran 2010). CFLT *hypothesizes* that CFLT-conformant input would give learners a cleaner, more consistent statistical signal to internalize; no cited study tests CFLT or establishes that reduced natural-language variation actually benefits long-term acquisition, so this is a CFLT hypothesis to test.
+2.  **Hypothesized lower L1-interference plateau.** Adults often plateau because entrenched L1 habits resist restructuring. CFLT *proposes* that children acquiring L2 alongside or shortly after L1 could absorb the protocol more directly, with less interference to overcome — an untested CFLT prediction.
+3.  **Critical-period evidence is graded, not a puberty cliff.** Hartshorne, Tenenbaum & Pinker (2018) estimate that grammar-learning *ability* stays high until about age 17.4 and then declines, while native-like attainment generally requires starting by about age 10 because learning continues over years; onset and ability are distinct and should not be conflated. CFLT *proposes* that, by externalizing the linearization decision, it might narrow the part of the gap that is most age-sensitive (the structural-restructuring sub-task) while leaving age-neutral skills (vocabulary, pragmatics) to develop normally — a claim that requires a CFLT age-by-training experiment.
 
 ---
 
 ## 10. Honest Limitations
 
-1.  **Pedagogical "Artificiality" / fossilization risk.** Strict four-slot sentences can feel artificial to advanced learners. This is the precise risk Skehan's (1998) Trade-off Hypothesis warns about — formulaic templates can plateau learners on *fluency* at the cost of *complexity* and *accuracy* (the "Wes" case study tradition; Schmidt 1983). CFLT's response is the de-scaffolding path in §11.2 below: the system must manage the **transition to marked deviations** (manifesto §3.1) to avoid a fluency ceiling. The §11 scaffold-fading curriculum is CFLT-specific engagement with this risk, not a generic acknowledgment.
+1.  **Pedagogical "Artificiality" / fossilization risk.** Strict four-slot sentences can feel artificial to advanced learners. Skehan's (1998) Trade-off Hypothesis motivates *measuring* complexity, accuracy, and fluency together; the specific claim that fixed templates plateau learners on *fluency* at the cost of *complexity* and *accuracy* is a CFLT-specific hypothesis, and the "Wes" single-case tradition (Schmidt 1983) illustrates communicative-vs-grammatical divergence in one learner rather than testing a CFLT template. CFLT's proposed response is the de-scaffolding path in §11.2 below: the system aims to manage the **transition to marked deviations** (manifesto §3.1) to avoid a fluency ceiling. The §11 scaffold-fading curriculum is CFLT-specific engagement with this risk and a design hypothesis to test, not a source-established solution.
 2.  **Motivation vs. Method.** No protocol can solve for a lack of learner motivation. CFLT is a high-efficiency engine, but it still requires the learner to engage with the input.
 3.  **Vocabulary Breadth.** The protocol focuses on structure. Vocabulary acquisition remains a separate, though related, challenge that requires specialized modules.
 
@@ -199,7 +201,7 @@ Several reasons CFLT may be especially well-suited to early learners — contrar
 
 ## 11. The Advanced Frontier: Skehan’s Trade-off & Scaffold Fading
 
-A common criticism of fixed-sequence protocols is that they might lead to "linguistic fossilization" or "template-rigidity." To address this, CFLT incorporates **Skehan's Trade-off Hypothesis** (1998).
+A common criticism of fixed-sequence protocols is that they might lead to "linguistic fossilization" or "template-rigidity." Skehan's **Trade-off Hypothesis** (1998) does not establish that fixed-sequence templates cause fossilization or a fluency plateau; rather, it motivates *measuring* complexity, accuracy, and fluency simultaneously. CFLT uses it that way and frames the template-rigidity concern and the de-scaffolding response below as CFLT-specific hypotheses to test.
 
 ### 11.1 The Fluency-Accuracy-Complexity (FAC) Triad
 Skehan posits that learners have limited attentional resources that must be divided between:
@@ -207,9 +209,9 @@ Skehan posits that learners have limited attentional resources that must be divi
 - **Accuracy:** Grammatical correctness.
 - **Complexity:** Structural variety and use of marked forms.
 
-**CFLT’s Strategic Choice:**
-- **At A1–B1 levels**, CFLT prioritizes **Fluency** and **Accuracy** by fixing the sequence, thereby reducing the "Complexity" (planning) load. This allows the learner to achieve communicative success early.
-- **At B2+ levels**, the objective shifts. The learner has achieved automaticity in the unmarked sequence and must now re-introduce **Complexity**.
+**CFLT’s Strategic Choice** (the level thresholds are CFLT design defaults, empirically open, not Skehan-derived):
+- **At A1–B1 levels**, CFLT *aims to* prioritize **Fluency** (and, it predicts, **Accuracy**) by fixing the sequence, thereby reducing the "Complexity" (planning) load. Whether fluency and accuracy actually improve together is a measurement question, not a guaranteed outcome; the intent is to let the learner achieve communicative success early.
+- **At B2+ levels**, the objective shifts. Once the learner has automatized the unmarked sequence, CFLT proposes re-introducing **Complexity**.
 
 ### 11.2 De-scaffolding (The Cleft / Shift Mechanism)
 Mastery is defined not by strict adherence to the protocol, but by the ability to deviate from it *intentionally* based on **Information Structure** (Theme-Rheme). Advanced modules in CFLT (Phase 3: Expressive Mastery) explicitly teach the **Focus-Driven Shift**:

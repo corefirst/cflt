@@ -26,12 +26,12 @@ In standard first-order logic, an event is represented by a predicate applied to
 $$\text{Go}(\text{me}, \text{store}, \text{yesterday})$$
 
 **What CFLT borrows from this tradition:**
-1. **The order of disambiguation.** Identifying the predicate first reduces the ambiguity of the following terms. "Eat" restricts the likely arguments to edible things; "Go" restricts them to locations or paths.
+1. **The order of disambiguation.** First-order logic places the predicate first as a notational convention; CFLT *hypothesizes* (a prediction to test, not a first-order-logic result) that identifying the predicate first also reduces the processing ambiguity of the following terms in natural language. "Eat" plausibly restricts the likely arguments to edible things; "Go" to locations or paths.
 2. **The "Head" status.** The predicate is the logical head of the expression.
 
 **What CFLT does *not* borrow:**
 - The **notation** $P(a, b, c)$. CFLT produces "I went out, because it rained, at home, yesterday." — comprehensible English with structured ordering.
-- The reduction of "Core" to "predicate symbol." A copular construction ("That girl is my sister") has no obvious "predicate" in the action-verb sense, but it has a clear Core (the identity assertion). CFLT handles this; bare predicate logic does not.
+- The reduction of "Core" to "predicate symbol." A copular construction ("That girl is my sister") has no obvious "predicate" in the action-verb sense, but CFLT *assigns* it a Core (the identity assertion). Which constituent counts as the Core here is a project-internal identification that may vary by discourse, not a fact derived from logic; CFLT handles this case, whereas bare predicate logic does not.
 
 ---
 
@@ -86,11 +86,11 @@ In this view, **"I-Went"** is the base term, and each subsequent slot is a highe
 
 CCG (Steedman 2000) is a highly lexicalized grammar formalism where the "syntax" is largely contained within the lexical categories themselves. CCG is unique in allowing multiple equivalent derivations (linearizations) for the same semantic result.
 
-**CFLT as a CCG schedule choice:** CFLT does not invent a new combinatory grammar. It selects one canonical schedule from CCG's flexible space:
-1. The **Core** is the primary functor.
-2. It "looks" for its arguments in a fixed, predictable direction.
+**CFLT as a CCG analogy:** CFLT does not invent a new combinatory grammar, and CFLT's slots have **not** been shown to be CCG categories or its surface order to be a CCG derivation. We use CCG only as an analogy for the idea of committing to one canonical schedule out of a flexible space:
+1. The **Core** plays an analogous role to a primary functor.
+2. It is read as "looking" for its arguments in a fixed, predictable direction.
 
-By fixing the derivation path, the CFLT Protocol eliminates the "spurious ambiguity" that usually complicates CCG parsing, making it an ideal bridge for AI agents.
+The motivating intuition is that fixing a single derivation path would sidestep the kind of "spurious ambiguity" that complicates CCG parsing. Whether the CFLT Protocol actually reduces spurious ambiguity in any formal CCG sense is a CFLT-specific question to test, not a result that follows from CCG; the analogy is offered as a bridge for AI agents, not as a proof.
 
 ---
 
@@ -133,7 +133,7 @@ graph TD
 
 > **Note on Commissives and the four-class compression.** The mapping above omits two of Searle's five classes — **Commissives** (promises, e.g., *"I'll call you tomorrow"*; *"I promise I'll come"*) and **Declarations** (the performative class noted in the previous callout). In CFLT, Commissives are realized as a **sub-type of Action Core**: the predicate is a commit-action (*promise*, *commit*, *guarantee*, *will-do*), and the embedded propositional content is the committed action — so *"I promise I'll come"* parses as Core = *I promise I'll come*. Declarations, where they arise outside the narrow performative category, are a marked sub-type of Identity Core (typically a copular predicate with stipulative force). The CFLT four-way taxonomy is therefore a **deliberate pedagogical/operational aggregation** of Searle's five classes — consistent with the Declaration note above — not an implicit denial that Commissives and Declarations exist. This compression is documented here to prevent the reader from looking for a missing fifth Core type.
 
-CFLT ensures that the **illocutionary force** of the utterance is identified first, aligning with the listener's need to know whether they are being informed, requested, or addressed.
+The four-way compression of Searle's five classes, and the claim that identifying **illocutionary force** first benefits the listener, are **CFLT operational choices and predictions to test** — they are not derived from Searle or Sadock & Zwicky, who distinguish force from content but prescribe no linearization. With that caveat, CFLT *proposes* to place the illocutionary force first, on the hypothesis that this aligns with the listener's need to know whether they are being informed, requested, or addressed.
 
 ---
 
@@ -141,7 +141,7 @@ CFLT ensures that the **illocutionary force** of the utterance is identified fir
 
 Relevance Theory posits that human communication is governed by the search for **optimal relevance**: achieving maximum cognitive effect with minimum processing effort.
 
-**CFLT as a relevance-maximizing strategy:** placing the Core at position 0 puts the highest-effect token where the listener's attention is greatest. The listener (or LLM, see `llm.md`) can begin computing inferences from the Core onward, rather than waiting through modifiers to discover what the utterance is about. (Caveat: Relevance Theory **motivates** front-loading high-effect content but does **not entail** position-0 specifically — RT weighs *total* cognitive effect against *total* effort, and allows later-placed information to be optimally relevant. So RT is *consistent with*, not *proof of*, Core-first.)
+**CFLT as a relevance-maximizing strategy:** CFLT *predicts* that placing the Core at position 0 puts the highest-effect token where the listener's attention is greatest, so that the listener (or LLM, see `llm.md`) can begin computing inferences from the Core onward rather than waiting through modifiers to discover what the utterance is about. (Caveat: that position 0 holds the highest-effect content, and that this extends to LLM attention, is a **CFLT prediction, not a claim of Relevance Theory**. RT does not identify the first token as the highest-effect content. RT **motivates** front-loading high-effect content but does **not entail** position-0 specifically — it weighs *total* cognitive effect against *total* effort, and allows later-placed information to be optimally relevant. So RT is *consistent with*, not *proof of*, Core-first.)
 
 Native English's end-weight tendency (Quirk et al. 1985) competes with this principle: heavy NPs and given/new structuring often delay the new information. CFLT resolves the tension by treating end-weight as a **stylistic refinement** applied at the polishing stage (the Grammar Overlay in the product implementation), not at the conceptual scaffold stage.
 
@@ -168,7 +168,7 @@ The Maxim of Manner — *"Be orderly"* — motivates **having** a predictable li
 
 DRT (Kamp 1981) models how listeners build mental "maps" of a conversation as it unfolds.
 
-**CFLT mapping:** if the Core is introduced first, it instantly establishes the central discourse referent — the event variable, identity claim, state, or speech act — against which all subsequent contributions are anchored. Modifiers attach to a referent that already exists in the discourse representation, eliminating the temporary ambiguity that would arise if modifiers appeared before their target.
+**CFLT mapping (analogy, not derivation):** DRT provides a vocabulary for *how* a discourse representation is updated incrementally, but it does **not** derive a universal event-first update strategy — Core-first is a CFLT choice, not a DRT theorem. Using DRT as an analogy, CFLT *predicts* that introducing the Core first establishes the central discourse referent — the event variable, identity claim, state, or speech act — early, so that subsequent modifiers attach to a referent that already exists in the representation. CFLT hypothesizes that this reduces the temporary ambiguity that would arise if modifiers appeared before their target; the magnitude of that benefit is something to measure, not a result DRT establishes.
 
 ---
 

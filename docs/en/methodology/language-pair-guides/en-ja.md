@@ -60,12 +60,14 @@ The hardest hurdle: English speakers must hold the verb in working memory while 
 
 Japanese distinguishes topic-marked subject (は) from focus-marked subject (が). English has no morphological mark for this; it surfaces via word order, contrastive stress, or lexical choice (*as for X*).
 
-**Rule en→ja**:
+The correspondences below are **context-dependent defaults, not deterministic mappings**. は/が selection depends on topic/contrast/focus/exhaustiveness, prosody, and clause type (see the §3.2 caveat above); treat each arrow as a starting hypothesis to confirm against context and native-speaker judgment, not a rule that fires automatically.
+
+**Default correspondences en→ja** (context-dependent, not deterministic):
 - Default English subjects → Japanese は (when establishing topic) or が (when introducing new info)
 - English contrastive stress on subject → Japanese は with falling intonation, or が emphatic
 - "As for X..." → topic-fronted X-は
 
-**Rule ja→en**:
+**Default correspondences ja→en** (context-dependent, not deterministic):
 - は → English default subject in SVO; if contrastive, may add "as for"
 - が in non-emphatic context → default English subject
 - が in focus context (e.g., 私が書いた "It is I who wrote it") → cleft sentence in English
@@ -87,10 +89,10 @@ Japanese has rich verbal periphrasis encoding aspect/result/preparation. These a
 
 Japanese honorifics modify the entire utterance morphologically. English has no direct equivalent; politeness is achieved lexically (*could you*, *would you mind*) or modally.
 
-**Rule**: Honorifics are **partially dissociable** from the four-slot protocol — they do not change Core or ground-frame *assignments*, but neuroimaging shows Japanese-honorific processing engages the left IFG (Momo, Sakai & Sakai 2008, *Brain and Language* 107(1), 81–89) and, in socio-pragmatic agreement contexts, additionally recruits bilateral insula and dorsal medial prefrontal cortex when the addressee status varies (Cui, Jeong, Okamoto, Takahashi, Kawashima & Sugiura 2022, *Journal of Neurolinguistics* 62, 101041). The CFLT teaching guidance — apply slot work first, honorific layer second — is therefore valid as a *cognitive workflow* but should not be over-claimed as full neural independence; the social-cognitive network recruitment is sensitive to addressee status as well as form. See [`../../foundations/sociolinguistics.md`](../../foundations/sociolinguistics.md) for the full discussion.
+**Rule**: Honorifics are **partially dissociable** from the four-slot protocol — they do not change Core or ground-frame *assignments*, but neuroimaging shows Japanese-honorific processing engages the left IFG (Momo, Sakai & Sakai 2008, *Brain and Language* 107(1), 81–89) and, in socio-pragmatic agreement contexts, additionally recruits bilateral insula and dorsal medial prefrontal cortex when the addressee status varies (Cui, Jeong, Okamoto, Takahashi, Kawashima & Sugiura 2022, *Journal of Neurolinguistics* 62, 101041). CFLT *proposes* a two-stage teaching workflow — apply slot work first, honorific layer second — as a design hypothesis compatible with this partial dissociability; it has **not** been tested against an intervention comparison, so it should not be claimed as a validated workflow or as full neural independence (the social-cognitive network recruitment is sensitive to addressee status as well as form). See [`../../foundations/sociolinguistics.md`](../../foundations/sociolinguistics.md) for the full discussion.
 
 
-For learners: keep CFLT slot work and honorific work as separate cognitive tasks. CFLT structure first, honorific layer second.
+For learners: CFLT proposes keeping slot work and honorific work as separate cognitive tasks (CFLT structure first, honorific layer second) — a teaching hypothesis to test, not a result.
 
 ### 3.5 Particles で, に, と — multiple slot candidates
 

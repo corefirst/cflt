@@ -7,17 +7,17 @@
 
 ## 1. Executive Summary
 
-**Core-First Language Theory (CFLT)** is a unified theoretical and operational framework for cross-linguistic communication and bilingual education. It posits a single discourse-level principle — *the cognitive core of an utterance is also its universally-prioritized linear position, as an unmarked default within the surveyed typology* (see [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 for a five-language worked demonstration spanning Indo-European, Sino-Tibetan, Japonic, Koreanic, and Afro-Asiatic) — and defines a teachable, AI-supportable sequencing protocol (**CFLT Protocol**) that bridges language pairs within that typological range with minimum cognitive friction.
+**Core-First Language Theory (CFLT)** is a unified theoretical and operational framework for cross-linguistic communication and bilingual education. It posits a single discourse-level principle — *the cognitive core of an utterance is also its universally-prioritized linear position, as an unmarked default within the surveyed typology* (see [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 for a five-language worked demonstration spanning Indo-European, Sino-Tibetan, Japonic, Koreanic, and Afro-Asiatic) — and defines a teachable, AI-supportable sequencing protocol (**CFLT Protocol**) that bridges language pairs within that typological range with the goal of reduced cognitive friction.
 
 ### 1.1 The Nature of CFLT: Protocol vs. Description
 
 It is critical to distinguish between two levels of linguistic claim:
 1.  **Descriptive Observation:** Languages vary wildly in surface word order (e.g., English SVO vs. Japanese SOV). CFLT does *not* claim that all natural languages are naturally Core-First.
-2.  **Normative Protocol:** CFLT is an **engineering protocol for Cognitive Ergonomics**. It defines how information *should* be sequenced to achieve the lowest possible cognitive load during cross-linguistic transfer, L2 acquisition, and AI prompting.
+2.  **Normative Protocol:** CFLT is an **engineering protocol for Cognitive Ergonomics**. It defines how information *should* be sequenced with the goal of lowering cognitive load during cross-linguistic transfer, L2 acquisition, and AI prompting. The reduction is a **CFLT prediction to be measured against comparison conditions** — no comparative evidence yet establishes a cognitive-load optimum (see [`foundations/pedagogy.md`](foundations/pedagogy.md) on Cognitive Load Theory and the preregistered load measures).
 
 CFLT is to language what **TCP/IP** is to networking: it is a standardized packet-header format for human thought. By adopting a "Core-First" interlanguage protocol, learners bypass the massive metabolic cost of structural restructuring (e.g., waiting for the verb in German or planning a 10-word modifier in Japanese before uttering the noun). It is an **unmarked default**, not a descriptive universal.
 
-By targeting cognitive capacities widely shared across human language users (the universals of message-formation in Levelt's preverbal-message stage; see [`foundations/linguistics.md`](foundations/linguistics.md) §5–§6, and the typologically-distinct worked examples in [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 spanning Indo-European, Sino-Tibetan, Japonic, Koreanic, and Afro-Asiatic) and attenuating cross-linguistic structural-restructuring cost (a weak-Whorf scope, **not** a Whorf-elimination claim — see [`foundations/linguistics.md`](foundations/linguistics.md) §7), CFLT provides an AI-supported bridge between language pairs within that surveyed typological range.
+By targeting cognitive capacities broadly shared across human language users (message-formation in Levelt's preverbal-message stage; see [`foundations/linguistics.md`](foundations/linguistics.md) §5–§6, and the typologically-distinct worked examples in [`foundations/core-concept.md`](foundations/core-concept.md) §2.5 spanning Indo-European, Sino-Tibetan, Japonic, Koreanic, and Afro-Asiatic), CFLT provides an AI-supported bridge between language pairs within that surveyed typological range. **CFLT hypothesizes** that adopting the protocol attenuates cross-linguistic structural-restructuring cost (a weak-Whorf scope, **not** a Whorf-elimination claim — see [`foundations/linguistics.md`](foundations/linguistics.md) §7); this is a CFLT-specific intervention prediction to be tested, as no cited relativity study tests CFLT or production cost.
 
 > **A note on Universal Grammar.** Earlier drafts framed CFLT as an extension of Chomsky's Universal Grammar. The current framing is deliberately weaker: the load-bearing claim is that *message-formation* (Levelt 1989) is broadly shared, not that an innate language-specific UG is required. This makes CFLT compatible with the usage-based / construction-grammar tradition (Goldberg 1995, 2006; Tomasello 2003) as well as with strong-UG positions — see [`foundations/linguistics.md`](foundations/linguistics.md) §6 for the explicit non-dependence on UG and §6.2 for the engagement with the anti-UG opposition (Christiansen & Chater 2008; Evans & Levinson 2009).
 
@@ -67,7 +67,7 @@ graph LR
 
 **Figure-Ground (Talmy):** CFLT codifies a **Figure-First** linearization. The Core (Figure) is the salient event, while modifiers (Ground) provide the reference frame. This aligns with the cognitive expectation to locate salient events relative to stable frames.
 
-**Early Immediate Constituents (Hawkins):** CFLT optimizes for **parsing efficiency**. By placing the Core at position 0, it minimizes the "Constituent Recognition Domain," achieving an efficiency ratio near 100% and reducing the look-ahead buffer for both humans and machines.
+**Early Immediate Constituents (Hawkins):** CFLT draws a **CFLT-specific analogy inspired by EIC**. Placing the Core early is intended to shorten the discourse-level recognition domain; CFLT **predicts** a reduced look-ahead buffer in human parsing. Hawkins's EIC is a syntactic-domain metric for human parsing, so neither a specific efficiency figure nor generalization to machines follows from it — the discourse-level metric still has to be defined and measured (see [`foundations/linguistics.md`](foundations/linguistics.md) §3 and the magnitude caveat there).
 
 ### 2.3 Computational Foundations: Attention Sinks (Xiao et al.)
 
@@ -82,12 +82,12 @@ graph BT
     style W0 fill:#f96,stroke:#333,stroke-width:2px
 ```
 
-**Concept:** Transformer-based LLMs over-attend to the prefix region for two distinct reasons — (1) **Attention Sinks** (Xiao et al. 2024), a softmax-stability artifact in which initial tokens absorb attention regardless of semantic content, and (2) **Primacy / positional bias**, where causal masking compounds the influence of early tokens over later ones.
-**CFLT Application:** CFLT exploits (2), not (1). Placing the Core in the high-attention prefix region (typically positions just after `<bos>`) compounds its influence over generation — but this is a primacy argument, not a claim that attention sinks "prefer" semantic content. See [`foundations/llm.md`](foundations/llm.md) §2.3 for the careful disambiguation.
+**Concept:** Transformer-based LLMs over-attend to the prefix region. Xiao et al. (2024) establish one such mechanism — (1) **Attention Sinks**, in which initial tokens absorb attention regardless of semantic content. Separately, CFLT invokes (2) **observed primacy / position sensitivity**, where causal masking is hypothesized to compound the influence of early tokens over later ones. Xiao et al. establish the sink phenomenon, **not** this primacy mechanism or any semantic benefit from early placement.
+**CFLT Application:** CFLT's argument rests on (2), not (1). Placing the Core in the high-attention prefix region (typically positions just after `<bos>`) is **predicted** to compound its influence over generation — but this is a CFLT primacy hypothesis, not a claim that attention sinks "prefer" semantic content, and the primacy mechanism needs its own evidence. See [`foundations/llm.md`](foundations/llm.md) §2.3 for the careful disambiguation.
 
 ### 2.4 The Sapir-Whorf Hypothesis (Linguistic Relativity)
 **Concept:** Language structure influences habitual cognitive patterns.
-**CFLT Application:** For learners from "topic-prominent" backgrounds (e.g., Chinese), CFLT provides a **Neutral Buffer Sequence** to eliminate the mental cost of "thinking-for-speaking" in divergent L2 structures.
+**CFLT Application:** For learners from "topic-prominent" backgrounds (e.g., Chinese), CFLT proposes a **Neutral Buffer Sequence** that it **predicts** will reduce the mental cost of "thinking-for-speaking" in divergent L2 structures. This is a CFLT intervention hypothesis to test, not an established relativity finding; no cited relativity study tests CFLT or production cost.
 
 ### 2.5 Natural Semantic Metalanguage (Anna Wierzbicka)
 **Concept:** All meanings can be reduced to universal "Semantic Primes."
@@ -180,7 +180,7 @@ Once functional fluency is achieved via CFLT, the AI introduces culture-specific
 
 ## 6. Global Vision: Any-to-Any Bilingualism
 
-CFLT is not limited to Chinese-to-English. It is designed as a **Universal Protocol for Human Communication**. By adopting the Core-First sequence as the "Global Interlingua," we can scale bilingual education across any linguistic pair:
+CFLT is not limited to Chinese-to-English. It is designed as a **project-standard protocol for cross-linguistic communication** (proposed across the surveyed typological range, not an established cross-linguistic universal). By adopting the Core-First sequence as a shared interlingua, the framework aims to scale bilingual education across language pairs within that range:
 
 *   **Japanese (SOV) ↔ German (V2):** 
     - *Japanese habit:* [Modifiers] → [Object] → [Verb]. 
@@ -200,7 +200,7 @@ The official reference implementation is hosted at **corefirst.world**; the fram
 The section below describes **CoreFirst**, the official reference implementation of CFLT. It illustrates how the protocol can be operationalized as a product; it is **not** a prescription that all CFLT implementations must look this way.
 
 ### 7.1 The "Semantic Lego" Philosophy
-Instead of teaching grammar as rigid rules, CoreFirst treats language as a set of functional blocks. The goal is **Maximum Communicative Efficiency** with **Minimum Cognitive Load**.
+Instead of teaching grammar as rigid rules, CoreFirst treats language as a set of functional blocks. The design goal is **higher communicative efficiency** with **lower cognitive load** (a target to be measured against comparison conditions, not an established optimum).
 
 ### 7.2 Implementation of Core Linguistic Elements
 
@@ -228,7 +228,7 @@ Avoid nested clauses (e.g., relative clauses). Use linear, additive logic.
 
 ---
 
-## 8. The CFLT Content Ecosystem: Universal Pedagogy
+## 8. The CFLT Content Ecosystem: Project-Standard Pedagogy
 
 ### 8.1 Cross-Age Adaptation
 CFLT serves as the foundation for educational content across all age groups:
@@ -255,13 +255,13 @@ Leveraging LLMs, the CFLT framework can autonomously generate entire curricula b
 ## 9. Phonetic Migration: Leveraging Existing Knowledge Systems
 
 ### 9.1 The Pinyin-to-IPA Bridge
-For Asian learners, particularly those from Chinese-speaking backgrounds, CFLT leverages their existing mastery of **Pinyin** to accelerate pronunciation mastery.
+For Asian learners, particularly those from Chinese-speaking backgrounds, CFLT proposes leveraging their existing mastery of **Pinyin** as a pair-specific instructional bridge that it **predicts** will support faster pronunciation mastery. Accelerated mastery and lower resistance are CFLT-specific efficacy predictions to be tested against conventional instruction; the cited speech-learning models (Best, Flege) motivate the bridge but do not establish this advantage.
 - **Overlapping Sets:** Direct migration of sounds like /b/, /p/, /m/, /f/ (common to both systems).
 - **Modification Guidance:** Instead of abstract articulatory descriptions, the system provides "Relative Adjustments." (e.g., "To pronounce the English /v/, start with the Pinyin 'f' muscle position but vibrate your vocal cords.")
 - **Zero-to-One Phonemes:** For sounds entirely missing in the native system (like /θ/), AI generates analogies based on related native mouth positions.
 
 ### 9.2 Muscular Intelligence
-Language learning is a physical skill. By identifying the "Muscle Overlap" between L1 and L2, CFLT reduces the cognitive resistance of learning "new" sounds, treating them as variations of familiar movements. This complements the Core-First sequencing principle: where §3 reduces *syntactic* friction, §9 reduces *articulatory* friction. Both are derived from the same first-principles approach — leverage what the learner's brain and body already encode.
+Language learning is a physical skill. By identifying the "Muscle Overlap" between L1 and L2, CFLT is **predicted** to reduce the cognitive resistance of learning "new" sounds, treating them as variations of familiar movements (a pair-specific instructional prediction, not yet a measured outcome). This complements the Core-First sequencing principle: where §3 reduces *syntactic* friction, §9 reduces *articulatory* friction. Both are derived from the same first-principles approach — leverage what the learner's brain and body already encode.
 
 ---
 

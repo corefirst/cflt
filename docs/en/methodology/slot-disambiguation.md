@@ -31,6 +31,7 @@ For any word or phrase in an utterance, ask in order:
 
 1. **Is it the predicate or an essential argument of the predicate?** (subject, direct/indirect object) → **Inside Core**
 2. **Does it modify HOW the action is performed?** (manner, instrument, beneficiary, accompaniment, modal, negation) → **Inside Core**
+   > *Scope note.* For modals and negation the "how" question is a **CFLT operational heuristic**, not a typological test. Across languages the *semantic scope* and *syntactic attachment* of modal and negation operators vary substantially (Horn 1989; Palmer 2001; Miestamo 2005; van der Auwera & Plungian 1998) — sentence-internal vs sentence-final, predicate-level vs propositional. CFLT's convention of routing them inside Core is a project-defined placement to be tested against language-specific scope and morphology, not a claim that they universally "answer how" or attach to the predicate.
 3. **Does it answer WHY?** (cause / purpose / condition) → **Slot 1 [Reason]**
 4. **Does it answer WHERE?** (physical / domain / medium) → **Slot 2 [Space]**
 5. **Does it answer WHEN / HOW OFTEN / HOW LONG?** → **Slot 3 [Time]**
@@ -74,9 +75,9 @@ graph TD
 | 9 | *for my mom* | beneficiary | answers "for whom" |
 | 10 | *to my friend* | recipient | answers "to whom"; valence-bound |
 | 11 | *with John* | accompaniment | answers "together with whom" |
-| 12 | *probably* | epistemic modal | attaches to predicate |
-| 13 | *certainly* | epistemic modal | attaches to predicate |
-| 14 | *didn't / never* | negation | attaches to predicate |
+| 12 | *probably* | epistemic modal | routed inside Core by CFLT convention (scope/attachment is language-specific; see §2 step 2 scope note) |
+| 13 | *certainly* | epistemic modal | routed inside Core by CFLT convention (scope/attachment is language-specific; see §2 step 2 scope note) |
+| 14 | *didn't / never* | negation | routed inside Core by CFLT convention (scope/attachment is language-specific; see §2 step 2 scope note) |
 | 15 | *please* (in Request) | politeness marker | **CFLT pedagogical simplification** — attached to Request Core internally. Note: in standard speech-act theory (Searle 1975; Brown & Levinson 1987), *please* operates at the *illocutionary* level (modifying the request as a speech act), not at the propositional content level. CFLT bundles it inside Core for pedagogical convenience; the theoretically-precise position is that politeness markers are a separate illocutionary layer orthogonal to the four-slot protocol. See [`../foundations/sociolinguistics.md`](../foundations/sociolinguistics.md). |
 
 ### B. Slot 1 — Reason (Why?)
@@ -267,4 +268,4 @@ The following remain under-specified and are listed here so future work can addr
 1. **Quotation and reported speech.** *"He said 'I'm leaving' yesterday"* — does *"I'm leaving"* form a nested CFLT block, or stay as direct quotation?
 2. **Modal stacking.** *"He probably must have left"* — multiple modal layers all attach to Core, but their internal ordering is language-specific.
 3. **Discourse particles in Asian languages** (e.g., Chinese 吧, 呢, 啊; Japanese ね, よ, か). These attach to the utterance as a whole, not to any single slot. They are treated as **utterance-level** markers, outside the four-slot system.
-4. **Honorific and politeness systems** in Korean / Japanese. These pervade the entire utterance morphologically and are not slot-specific. Handled as a layer orthogonal to the four-slot protocol; see [`../foundations/sociolinguistics.md`](../foundations/sociolinguistics.md) for the politeness layer.
+4. **Honorific and politeness systems** in Korean / Japanese. These pervade the entire utterance morphologically and are not slot-specific. CFLT handles them as a **partially dissociable** layer rather than a fully orthogonal one: neuro- and processing evidence (Momo et al. 2008; Cui et al. 2022) shows honorific processing interacts with socio-pragmatic and grammatical factors rather than running as a detachable wrapper, so full independence from slot content is not established. The two-stage "CFLT structure first, honorific layer second" workflow is a CFLT **hypothesis to test**, not a validated procedure; see [`../foundations/sociolinguistics.md`](../foundations/sociolinguistics.md) for the partial-dissociation caveat on the politeness layer.

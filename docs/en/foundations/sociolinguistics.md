@@ -14,7 +14,7 @@
 
 A potential conflict exists between the **CFLT Protocol** (which mandates early commitment to the semantic Core) and many cultural norms of communication. In "high-context" or "collectivist" cultures, asserting a direct request or result at the start of an utterance can be perceived as aggressive, rude, or "face-threatening" (Brown & Levinson, 1987).
 
-CFLT does not ignore these social realities. It treats **Politeness** and **Register** as explicit logical modifiers that wrap the Core, rather than as forces that should obscure it.
+CFLT does not ignore these social realities. As a **design choice**, it *proposes* to treat **Politeness** and **Register** as explicit logical modifiers that wrap the Core, rather than as forces that should obscure it. We flag this as a CFLT strategy, not an empirical claim about politeness in general: cross-linguistically, politeness can also alter syntax, utterance sequence, and discourse strategy, so the "wrapper-without-restructuring" model is a hypothesis to test, not an established property of polite language.
 
 ## 2. Politeness as a Logical Wrapper
 
@@ -38,7 +38,7 @@ Languages with complex honorific systems (e.g., Japanese *keigo*) often use verb
 
 This aligns the **Social Salience** (who am I talking to? — a project-internal coinage covering speaker-hearer social relations; cf. Brown & Levinson 1987 *Politeness* on face and social distance) with the **Semantic Salience** (what am I asking for? — the CFLT Core; see [`./core-concept.md`](./core-concept.md) §1 for the *salience anchor* definition). The terms are paired project-internal labels for the two distinct salience-ranking systems CFLT documentation engages with; see [`../glossary.md`](../glossary.md) for the disambiguation between *salience anchor* (CFLT-internal), *Salience Network* (neuroscience import — see [`./neuroscience.md`](./neuroscience.md) §1), and the *Social/Semantic Salience* coinages here.
 
-> **Honest scope: "orthogonal" overstates the relationship.** CFLT documentation sometimes describes the honorific layer as **orthogonal** to the four-slot protocol. The more accurate framing is **partially dissociable**: Momo, Sakai & Sakai (2008, *Brain and Language* 107(1), 81–89) show that Japanese honorification judgment recruits the left inferior frontal gyrus, with activation modulated by individual performance. Cui, Jeong, Okamoto, Takahashi, Kawashima & Sugiura (2022, *Journal of Neurolinguistics* 62, 101041) extend this for socio-pragmatic honorific agreement: lower-status addressee conditions recruit additional bilateral insula and dorsal medial prefrontal cortex (the social-cognitive network) beyond left IFG. Honorific morphology also has known interactions with embedded-clause syntax (e.g., -masu cannot appear in certain embedded contexts; relative clauses host honorifics differently from main clauses). The CFLT pedagogical guidance — apply slot work first, honorific layer second — remains valid as a **cognitive workflow** for managing complexity, but should not be over-claimed as full neural or syntactic independence: the social-cognitive network recruitment is sensitive to addressee status as well as honorific form.
+> **Honest scope: "orthogonal" overstates the relationship.** CFLT documentation sometimes describes the honorific layer as **orthogonal** to the four-slot protocol. The more accurate framing is **partially dissociable**: Momo, Sakai & Sakai (2008, *Brain and Language* 107(1), 81–89) show that Japanese honorification judgment recruits the left inferior frontal gyrus, with activation modulated by individual performance. Cui, Jeong, Okamoto, Takahashi, Kawashima & Sugiura (2022, *Journal of Neurolinguistics* 62, 101041) extend this for socio-pragmatic honorific agreement: lower-status addressee conditions recruit additional bilateral insula and dorsal medial prefrontal cortex (the social-cognitive network) beyond left IFG. Honorific morphology also has known interactions with embedded-clause syntax (e.g., -masu cannot appear in certain embedded contexts; relative clauses host honorifics differently from main clauses). The CFLT pedagogical guidance — apply slot work first, honorific layer second — is *proposed* as a **cognitive workflow** for managing complexity and remains a hypothesis to test, not a validated procedure: the cited neural findings show that honorific processing is complex and interactive, which constrains rather than confirms a clean two-stage separation. It should not be over-claimed as full neural or syntactic independence: the social-cognitive network recruitment is sensitive to addressee status as well as honorific form, and honorific morphology interacts with syntax (above), so partial dissociability is itself bounded.
 
 ## 4. Register Scaling: From "Efficiency" to "Elegance"
 
@@ -54,7 +54,7 @@ CFLT methodology defines three levels of **Social Register**:
     - *Goal:* Face-saving and nuance.
     - *Form:* "I would like to inform you that I am deploying a fix, for the critical bug, in the production environment, at this time."
 
-Across all three levels, the **logical sequence remains identical**. The only variable that changes is the **Token Density** and **Lexical Sophistication** within each slot. This allows learners to "dial up" their politeness without ever having to restructure their underlying cognitive protocol.
+In the CFLT design, across all three levels the **logical sequence is kept identical by construction**; the variable that changes is the **Token Density** and **Lexical Sophistication** within each slot. The intent is to let learners "dial up" politeness without restructuring the underlying protocol. Whether real-world politeness can in fact be scaled this way — without altering order, sequence, or discourse strategy — is a CFLT hypothesis to test, since politeness is not always order-preserving.
 
 ## 5. Cultural Relativity and the Social Context Buffer
 
@@ -69,7 +69,7 @@ CFLT addresses this conflict through the **Social Context Buffer**, an optional 
 - *Pure CRST (Potentially blunt):* "Review this code, because it has bugs, in the main branch, now."
 - *With Social Buffer:* "**I know you are super busy today, but** [could you review this code] (Core)..."
 
-CFLT is **proposed** to act as a **Social Buffer** in international professional registers: we hypothesize that the standardized "Global Interlingua" logic creates a neutral context in which directness can be interpreted as **Efficiency** rather than **Rudeness** for speakers from circular-communication backgrounds. The proposed warrant: Hofstede's (2001) finding that low-context professional cultures rate directness positively predicts that, in such settings, CFLT-formatted production will be read through the local interpretive frame as Efficiency rather than Rudeness.
+CFLT is **proposed** to act as a **Social Buffer** in international professional registers: we hypothesize that the standardized "Global Interlingua" logic creates a neutral context in which directness can be interpreted as **Efficiency** rather than **Rudeness** for speakers from circular-communication backgrounds. This is a register-specific CFLT hypothesis whose outcome is untested; whether CFLT-formatted production is in fact read as Efficiency rather than Rudeness must be measured per register and culture, not assumed. (We make no claim that any specific cross-cultural framework establishes this "directness-as-efficiency" reading — that interpretive outcome is a CFLT prediction, not a cited finding.)
 
 ## 6. Honest Limitations
 
@@ -81,7 +81,7 @@ CFLT is **proposed** to act as a **Social Buffer** in international professional
 
 ## 7. Cited Works
 
-See [`bibliography.md`](../bibliography.md) (§ Sociolinguistics) for full references. Key works grounding this document include Brown & Levinson (1987) on politeness universals, Hofstede (2001) on cultural dimensions, and Scollon & Scollon (2001) on intercultural discourse.
+See [`bibliography.md`](../bibliography.md) (§ Sociolinguistics) for full references. Background works informing this document include Brown & Levinson (1987) on politeness, Hofstede (2001) on broad (and acknowledged-limited) country-level cultural dimensions, and Scollon & Scollon (2001) on intercultural discourse; none is cited as establishing a CFLT-specific outcome.
 
 ---
 

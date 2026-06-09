@@ -80,7 +80,7 @@ Control 组的准确率反映了各模型对干扰信息的不同内在脆弱程
 - Control：17,092 completion token（思考了 17K 仍答错）  
 - CFLT：2,821 completion token（思考了 2.8K 全对，减少 6 倍）
 
-Qwen 的总 token 降幅（-37.1%）落在 §5.2 预测的 -30–50% 区间内，但机制是 **reasoning 开销压缩**，而非原文假设的 prompt 压缩。§5.2 预测在数值上仍然成立，更准确的表述应为："**在 reasoning-capable 模型上 completion token 降低 -30–50%**"（而不是"所有模型的 prompt token"）。
+Qwen 的总 token 降幅（-37.1%）恰好落在 §5.2 预测的 -30–50% 区间内，但机制是 **reasoning 开销压缩**，而非原文假设的 prompt 压缩。匹配该数值区间**与** §5.2 的数字一致；但它**不能**验证原始的 prompt 压缩机制，也不能验证作为一般主张的预测 —— 一个不同的机制达到相近的数字是巧合，而非确证。诚实的表述应为："**在 reasoning-capable 模型上、经由 reasoning 开销压缩，completion token 降低 -30–50%**"（而不是"所有模型的 prompt token"）。
 
 ### 2.3 L4 边界条件：DeepSeek 特异异常，非通用模式
 
@@ -153,7 +153,7 @@ _🔒 = control 已饱和，无法测试 CFLT 效果；📈 = 有信号的层级
 | :-- | :-- | :-- | :-- |
 | §2.1 首因效应 | Core 前置 → 模型注意力对齐 → 更准确抽取 | **5/5 模型 L3**：+22 到 +44pp；**全部达到 100% CFLT** | ✅ **强烈确认（5 个前沿模型通用）** |
 | §5.2 准确率预测 | 长上下文/干扰场景 L3 +15–20pp | 5/5 模型仅看 L3 均超过 +15pp 门槛（Claude 仅 L3：+28pp） | ✅ **L3 层级全部 5 个模型确认** |
-| §5.2 Token 节省 | -30–50% "句法废话" 令牌 | Prompt：-1%（不成立）；**completion：-38%（Qwen）/-12%（DeepSeek）仅对 reasoning-capable 模型** | ⚠️ **机制不同；数值对 reasoning-capable 模型成立** |
+| §5.2 Token 节省 | -30–50% "句法废话" 令牌 | Prompt：-1%（不成立）；**completion：-38%（Qwen）/-12%（DeepSeek）仅对 reasoning-capable 模型** | ⚠️ **机制不同（reasoning 开销压缩，而非 prompt 压缩）；数值区间对 reasoning-capable 模型与 §5.2 一致，但不能验证原始机制或预测** |
 | §3.1 单次调用 vs 两步 | 现代前沿模型可能不需要预处理 | L3 强烈受益（5/5 模型）；L4 回归现仅限于 DeepSeek（1/5 模型）| ⚠️ **取决于任务类型和模型：L3 distractor 场景普遍受益；L4 多候选决策在 4/5 模型上安全部署 CFLT，仅在 DeepSeek 上需 A/B 测试** |
 
 ---
@@ -222,7 +222,7 @@ Claude 是五个模型中唯一在 L2 上呈现信息层级（非饱和）但方
 
 3. **在多候选决策场景（L4）中，先前报告的 -11pp 回归现在仅限于 DeepSeek V4 Pro 一家**（5 个模型中的 1 个）。其他四个（GPT-5、Gemini Flash、Qwen3.5、Claude Sonnet 4.6）的 L4 在两组上都接近或处于天花板。DeepSeek 的 L4 回归现在最适合刻画为**模型特异异常**，而非 CFLT-on-buried-decisions 的通用属性。操作建议：在其他四个模型上可自由部署 CFLT 处理多候选决策工作流；在 DeepSeek 上需 A/B 测试。
 
-4. **§5.2 预测的 -30–50% token 节省在 prompt 层面不成立**（本数据集两组词汇相同，无法测试 prompt 压缩）；在 reasoning-capable 模型的 completion 层面数值上成立（Qwen 总降幅 -37%），但机制不同。
+4. **§5.2 预测的 -30–50% token 节省在 prompt 层面不成立**（本数据集两组词汇相同，无法测试 prompt 压缩）；在 reasoning-capable 模型的 completion 层面，观测到的降幅（Qwen 总降幅 -37%）*与*预测区间一致，但来自**不同机制**（reasoning 开销压缩），因此匹配该数值并不验证原始的 prompt 压缩预测。
 
 5. **附带观察**：Claude Sonnet 4.6 是唯一 L2 进入信息层级（非饱和，83%/78%）的模型，但 −6pp 聚合是抽样噪声（per-case 方向相互抵消，详见 §5.5）。N=3 条件下不支持任何其他解读。
 

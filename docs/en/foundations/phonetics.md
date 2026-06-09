@@ -26,7 +26,7 @@ CFLT proposes to address this by utilizing **Phonetic Bridges** — identifying 
 ### 2.1 The Pinyin-to-IPA Bridge (Chinese to English)
 For Chinese learners, the existing mastery of Hanyu Pinyin provides a highly granular map of mouth positions that can be repurposed for English IPA.
 
-- **Direct Overlap (1:1 Mapping):** Consonants like /b/, /p/, /m/, /f/ share nearly identical articulation points in both Pinyin and English.
+- **Direct Overlap (Approximate Mapping):** Consonants like /b/, /p/, /m/, /f/ have closely related articulation points in Pinyin and English. CFLT treats them as a teaching anchor, not an identity: a precise comparison is variety-, aspiration-, and context-sensitive (e.g. Pinyin *b/p* and English /b/, /p/ differ in voicing and aspiration patterns), so the "1:1" framing is a pedagogical simplification to be validated per pair.
 - **Relative Adjustments (Delta Mapping):** Instead of teaching a sound from scratch, CFLT uses the L1 anchor. 
   - *Example:* To teach the English voiced labiodental fricative /v/, the instruction is not "place your top teeth on your bottom lip and voice it." It is: "Form the Pinyin 'f' mouth shape, but vibrate your vocal cords."
 
@@ -53,14 +53,14 @@ graph LR
 Drawing from Skill Acquisition Theory (see [`pedagogy.md`](./pedagogy.md)), articulatory fluency requires moving from *declarative knowledge* (knowing where the tongue goes) to *procedural memory* (automatic execution).
 
 ### 3.1 The Role of the Basal Ganglia
-Motor skills, including speech articulation, are proceduralized in the basal ganglia and cerebellum. CFLT's focus on **relative muscular adjustments** accelerates this proceduralization by tying new motor patterns to already established neural pathways. 
+Motor skills, including speech articulation, are proceduralized in the basal ganglia and cerebellum. CFLT *hypothesizes* that its focus on **relative muscular adjustments** could speed this proceduralization by tying new motor patterns to already established neural pathways. This is a CFLT teaching-design prediction to be tested by comparative intervention; no cited study yet compares bridge-based against abstract-articulatory instruction.
 
 ## 4. Integration with the CFLT Sequencing Protocol
 
 Phonetic mastery in CFLT is not taught in isolation; it is tightly coupled with the `[Core] → [Reason] → [Space] → [Time]` sequence.
 
 - **Prosodic Anchoring:** The `[Core]` slot is not just the semantic anchor; it is also the **prosodic anchor**. In CFLT vocal training, learners are taught to place the primary phrasal stress on the Core token. 
-- **Chunking:** The four-slot protocol naturally segments speech into breathable phonetic chunks. This prevents the learner from running out of breath, a common issue when trying to parse and pronounce complex, head-final sentences in real-time.
+- **Chunking:** The four-slot protocol segments speech into candidate phonetic chunks. CFLT *predicts* this could help learners manage breath, mitigating the running-out-of-breath issue common when parsing and pronouncing complex, head-final sentences in real-time. This breath benefit is a CFLT hypothesis to test, not a measured result.
 
 ```mermaid
 graph TD

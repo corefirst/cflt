@@ -142,7 +142,7 @@
 | **MLM** | Masked Language Modeling | Pre-training objective used by BERT (predict masked tokens). |
 | **ICL** | In-Context Learning | The ability of LLMs to learn a task from examples placed in the prompt without parameter updates. |
 | **RAG** | Retrieval-Augmented Generation | Workflow where an LLM is given retrieved documents as context (Lewis et al. 2020). |
-| **Attention Sink** | Attention Sink Mechanism | Phenomenon where initial tokens accumulate disproportionate attention weight (Xiao et al. 2024); fundamental to CFLT's Core-first claim at the LLM level. |
+| **Attention Sink** | Attention Sink Mechanism | Phenomenon where initial tokens accumulate disproportionate attention weight (Xiao et al. 2024); Xiao et al. note these tokens are not semantically important, so the sink is a softmax-stability artifact and not a basis for a semantic Core-first advantage (see `foundations/llm.md` §2.3). |
 | **Lost-in-the-Middle** | Lost-in-the-Middle Phenomenon | U-shaped accuracy curve in long-context tasks: information at start and end is recovered better than information in the middle (Liu et al. 2023). |
 | **Prefix caching** | Prompt Prefix Caching | LLM inference optimization: reusing computation for shared prompt prefixes (vLLM APC, SGLang RadixAttention). |
 | **APC** | Automatic Prefix Caching | vLLM's prefix-caching mechanism. |
@@ -156,7 +156,7 @@
 |---|---|
 | **MMLU** | Massive Multitask Language Understanding — broad LLM evaluation benchmark (Hendrycks et al. 2021). |
 | **TOON** | Token-Optimized Object Notation — a lightweight prompt-encoding format. |
-| **DOVE** | Diverse Optimization for the Verbalization Effect — study on prompt-linearization sensitivity (ACL Findings 2025). |
+| **DOVE** | Dataset Of Variation Evaluation — large-scale dataset on LLM sensitivity to multi-dimensional prompt variation (ACL Findings 2025). |
 | **ACL** / **NAACL** / **EMNLP** | Major NLP conferences (Association for Computational Linguistics; North American chapter; Empirical Methods in NLP). |
 | **ICLR** / **NeurIPS** | Major ML conferences (Int'l Conf. on Learning Representations; Neural Information Processing Systems). |
 

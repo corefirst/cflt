@@ -42,7 +42,7 @@
 - **Croft, W.** (1991). *Syntactic Categories and Grammatical Relations: The Cognitive Organization of Information.* Chicago: University of Chicago Press.
 - **Croft, W.** (2001). *Radical Construction Grammar: Syntactic Theory in Typological Perspective.* Oxford: Oxford University Press.
 - **Dowty, D. R.** (1979). *Word Meaning and Montague Grammar.* Dordrecht: Reidel.
-- **Dryer, M. S.** (2013). "Determiner precedes noun." In *The World Atlas of Language Structures Online*, Dryer & Haspelmath (eds). Leipzig: Max Planck Institute for Evolutionary Anthropology.
+- **Dryer, M. S.** (2013). "Order of Subject, Object and Verb." In *The World Atlas of Language Structures Online*, Dryer & Haspelmath (eds). Leipzig: Max Planck Institute for Evolutionary Anthropology.
 - **Erteschik-Shir, N.** (2007). *Information Structure: The Syntax-Discourse Interface.* Oxford: Oxford University Press.
 - **Evans, N. & Levinson, S. C.** (2009). "The Myth of Language Universals: Language Diversity and Its Importance for Cognitive Science." *Behavioral and Brain Sciences* 32(5), 429–448. DOI: [10.1017/S0140525X0999094X](https://doi.org/10.1017/S0140525X0999094X)
 - **Evans, V.** (2004). *The Structure of Time: Language, Meaning and Temporal Cognition.* Amsterdam: John Benjamins.

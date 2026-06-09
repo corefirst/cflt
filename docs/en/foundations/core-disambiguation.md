@@ -13,11 +13,11 @@ In CFLT, the **Core** (Slot 0) is the **Salience Anchor** of the utterance. It r
 
 The Core consists of:
 1.  **The Predicate** (Action, Identity, State, or Request).
-2.  **Valence-Bound Participants** licensed by the predicate (Subject, Object, Instrument, Beneficiary, Recipient, Accompaniment). Following Levin & Rappaport Hovav (2005) event-structure theory and the substitution test in [`core-concept.md`](./core-concept.md) §2.2, an argument is *valence-bound* when changing it changes event identity — Instrument and Beneficiary are valence-bound participants, not "internal modifiers", whenever they are licensed by the verb.
+2.  **Valence-Bound Participants** licensed by the predicate (Subject, Object, Instrument, Beneficiary, Recipient, Accompaniment). The rule that *an argument is valence-bound when changing it changes event identity* is a **CFLT-defined operational test** (the substitution test in [`core-concept.md`](./core-concept.md) §2.2), motivated by — but not derived from — Levin & Rappaport Hovav (2005) event-structure theory; that theory does not itself supply this event-identity argumenthood test. Note also that changing an adjunct can change the described event token without making it a verb-licensed argument, so CFLT treats the Instrument/Beneficiary placement below as a project convention to be tested per predicate and construction, not a result read off the source: CFLT classifies Instrument and Beneficiary as valence-bound (not "internal modifiers") whenever the verb licenses them.
 3.  **Nuclear / Core-Level Manner Adverbials** (manner-of-action, manner-of-motion).
 4.  **Scope-Internal Operators** that take the event as argument: Negation, Modality, Aspect, Degree.
 
-Any modifier that answers **"How?"**, **"With what?"**, **"For/to whom?"**, **"Together with whom?"**, **"In what mood?"**, **"Negated?"**, or **"To what degree?"** is fused into the Core (group 2–4 above). Any modifier that answers **"Why?"**, **"Where?"**, or **"When?"** is stripped into Slots 1, 2, or 3.
+By **CFLT convention**, any modifier that answers **"How?"**, **"With what?"**, **"For/to whom?"**, **"Together with whom?"**, **"In what mood?"**, **"Negated?"**, or **"To what degree?"** is assigned to the Core (group 2–4 above); any modifier that answers **"Why?"**, **"Where?"**, or **"When?"** is stripped into Slots 1, 2, or 3. This question-based partition is a **CFLT-defined boundary**, not a claim derived from the cited semantics: degree-semantic theory (e.g. Kennedy 1999) accounts for how degree composes locally with an adjective/predicate, but does not establish that degree, manner, and event-internal quality form one uniform category or that they occupy a single CFLT slot — that grouping is a CFLT operational definition requiring discourse-placement tests.
 
 ---
 
@@ -35,7 +35,7 @@ Any modifier that answers **"How?"**, **"With what?"**, **"For/to whom?"**, **"T
 ### 2.2 The "Weather and Manner" Rule
 *Problem Case:* "It's raining heavily in Tokyo."
 
-- **Rule:** Adverbs of degree or manner (e.g., *heavily, slightly, quickly*) describe the internal quality of the event, not its external frame.
+- **Rule (CFLT convention):** CFLT treats adverbs of degree or manner (e.g., *heavily, slightly, quickly*) as describing the internal quality of the event rather than its external frame, and therefore places them in the Core. This is a project placement convention, not a result derived from degree semantics.
 - **Decision:** "Heavily" is a Manner modifier → **Inside the Core**.
 - **Result:**
     - *Core:* "It's raining heavily"

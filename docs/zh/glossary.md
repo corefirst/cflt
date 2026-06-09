@@ -142,7 +142,7 @@
 | **MLM** | Masked Language Modeling（掩码语言建模） | BERT 使用的预训练目标（预测被掩盖的 token）。 |
 | **ICL** | In-Context Learning（上下文学习） | LLM 通过提示词中的示例学习任务，无需更新参数。 |
 | **RAG** | Retrieval-Augmented Generation（检索增强生成） | 将检索得到的文档作为上下文提供给 LLM 的工作流（Lewis et al. 2020）。 |
-| **注意力汇点（Attention Sink）** | 注意力汇点机制 | 初始 token 累积不成比例的注意力权重（Xiao et al. 2024）；CFLT "核心居首" 主张在 LLM 层的基础。 |
+| **注意力汇点（Attention Sink）** | 注意力汇点机制 | 初始 token 累积不成比例的注意力权重（Xiao et al. 2024）；Xiao 等指出这些 token 在语义上并不重要，因此汇点是 softmax 稳定性副产物，不能作为语义"核心居首"优势的依据（参见 `foundations/llm.md` §2.3）。 |
 | **Lost-in-the-Middle（迷失在中部）** | 迷失在中部现象 | 长上下文任务中的 U 型准确率曲线：开头与结尾的信息比中间的信息恢复得更好（Liu et al. 2023）。 |
 | **前缀缓存（Prefix caching）** | 提示词前缀缓存 | LLM 推理优化：复用共享提示词前缀的计算（vLLM APC、SGLang RadixAttention）。 |
 | **APC** | Automatic Prefix Caching（自动前缀缓存） | vLLM 的前缀缓存机制。 |
@@ -156,7 +156,7 @@
 |---|---|
 | **MMLU** | Massive Multitask Language Understanding —— 广泛的 LLM 评估基准（Hendrycks et al. 2021）。 |
 | **TOON** | Token-Optimized Object Notation —— 一种轻量提示词编码格式。 |
-| **DOVE** | Diverse Optimization for the Verbalization Effect —— 关于提示词线性化敏感性的研究（ACL Findings 2025）。 |
+| **DOVE** | Dataset Of Variation Evaluation —— 关于 LLM 对多维提示变化敏感性的大规模数据集（ACL Findings 2025）。 |
 | **ACL** / **NAACL** / **EMNLP** | 主要 NLP 会议（计算语言学协会；北美分会；自然语言处理实证方法）。 |
 | **ICLR** / **NeurIPS** | 主要机器学习会议（国际学习表征会议；神经信息处理系统）。 |
 

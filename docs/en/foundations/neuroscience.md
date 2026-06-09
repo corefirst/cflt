@@ -37,17 +37,17 @@ graph TD
 
 > See [`linguistics.md`](./linguistics.md) §2.1 for the canonical Figure-Ground introduction; this section gives the neural-correlates refraction.
 
-CFLT’s "Core-First" principle is a linguistic implementation of the **Figure-Ground** distinction (Talmy, 2000). The neural correlates of this distinction are found in the **posterior parietal cortex (PPC)** and the **fronto-parietal attention network**.
+CFLT’s "Core-First" principle is, by analogy, a linguistic implementation of the **Figure-Ground** distinction (Talmy, 2000). Talmy is a cognitive-semantic source and supplies no neuroimaging evidence; the **posterior parietal cortex (PPC)** and **fronto-parietal attention network** are invoked here only as the *attention-research* substrate CFLT finds motivating for foregrounding, not as neural correlates established by Talmy.
 
 - **Windowing of Attention:** The brain uses "windowing" to foreground a specific entity (the Figure) against a reference frame (the Ground).
-- **Neural Cost of Reversal:** Cross-linguistic neuroimaging (primarily Hashimoto, Yokoyama & Kawashima 2012, the full journal article from this lab) shows that processing non-canonical Figure–Ground assignments and non-canonical word orders elicits increased activity in left frontal regions (LIFG / DLPFC), consistent with the additional working-memory and conflict-monitoring load required when default salience expectations are violated. We interpret these findings as a *neural signature* of salience-mismatch cost, not as a direct measurement of CFLT's intervention. **Caveat**: subsequent LATL combinatorial findings (Bemis & Pylkkänen 2013; Pylkkänen 2019) show basic semantic composition is stable across word orders, so the observed cost likely reflects surface-level reanalysis rather than a deficit in core combinatorial processing. A CFLT-targeted fMRI study is listed as an open question in §7.
+- **Neural Cost of Reversal:** A cross-linguistic neurotypology survey (Hashimoto, Yokoyama & Kawashima 2012) reviews prior SVO/SOV sentence-comprehension studies and reports that canonical word-order typology is associated with differing activation distributions across frontal, temporal, and other regions, which the authors read as compatible with differing working-memory loads. This is a *literature survey*, not a controlled experiment: it does **not** test Figure–Ground reversal, does **not** compare canonical against non-canonical order within a unified design, and supplies **no** reusable protocol. CFLT therefore treats it as **indirect neurotypological motivation** for the hypothesis that violating default salience expectations carries a cost — a hypothesis CFLT must test directly, not as a measurement of CFLT's intervention. **Caveat**: minimal-composition LATL findings (Bemis & Pylkkänen 2013; Pylkkänen 2019) are sometimes cited for stability of basic semantic composition, but those experiments do not test broad word-order invariance; whether composition is stable across orders remains open. A CFLT-targeted fMRI study is listed as an open question in §7.
 - **CFLT Strategy:** By asserting the Core (Figure) first and modifiers (Ground) later, CFLT follows the path of least resistance for the brain's spatial and attentional processing.
 
 ---
 
 ## 3. Minimizing the "Prefrontal Tax" (Restructuring Cost)
 
-Adult L2 production is bottlenecked by the **Prefrontal Cortex (PFC)**. Producing a sentence in a new language requires high metabolic and computational costs in the **Dorsolateral PFC (DLPFC)** and **Broca's Area (LIFG)**.
+CFLT **hypothesizes** that adult L2 production is metabolically and computationally costly because it engages a **distributed bilingual-control network** (Abutalebi & Green 2007/2016) — including, among other regions, the **Dorsolateral PFC (DLPFC)** and **Broca's Area (LIFG)** — rather than being bottlenecked by any single region. We use "Prefrontal Tax" as shorthand for the cost CFLT is engineered to reduce; whether and where it falls is the empirical question of §7.1.
 
 | Source of Cost | Neural Mechanism | Predicted CFLT Effect |
 |---|---|---|
@@ -84,10 +84,10 @@ graph TD
 
 The **Early Immediate Constituents (EIC)** principle (Hawkins, 1994) suggests that the brain prefers structures that allow it to recognize the phrasal head as early as possible.
 
-- **Dependency Length:** Neuroimaging (fMRI) shows that activation in **BA 44 (Broca's area)** and the **lpSTG** increases linearly with the distance between related constituents.
-- **CFLT Implementation:** The Core-First protocol is a **Maximum EIC** strategy. By placing the "head" (the Core) at the very start, the distance to dependents is minimized, reducing the "look-ahead buffer" and the working memory load on the **parietal cortex**.
+- **Dependency Length:** Neuroimaging (fMRI) finds that activation in **BA 44 (Broca's area)** and the **lpSTG** tends to rise with the distance between related constituents — a dependency-length effect that motivates, but does not by itself confirm, EIC.
+- **CFLT Implementation:** By analogy to EIC, the Core-First protocol places the "head" (the Core) at the very start so the distance to dependents is short. CFLT **hypothesizes** this reduces the "look-ahead buffer" and working-memory load. Hawkins's EIC is a corpus-derived parsing metric and does not itself supply a "Maximum EIC" optimum or a parietal-load result; both the discourse-level efficiency claim and its localization are CFLT predictions, not derivations (see the honest-scope caveat below).
 
-> **Honest scope of "neural correlate" claim.** Neuroimaging research (Friederici 2017 *Language in Our Brain*; Bemis & Pylkkänen 2013 on LATL combinatorial activity; Pylkkänen 2019 *Science*) finds neural markers of **early syntactic/semantic composition** — ELAN ~150–250 ms, LATL composition signal stable across word orders. These findings provide **converging evidence** for EIC-style early constituent processing, but they are **not direct neural confirmations of the EIC efficiency metric itself**. EIC is a corpus-derived parsing efficiency measure (Hawkins 1994); its specific neural realization remains an open empirical question. CFLT's invocation of EIC at the linguistic level is well-grounded; the neural-efficiency framing in this section should be read as theoretically motivated, not as a tested neurobiological claim.
+> **Honest scope of "neural correlate" claim.** Neuroimaging research (Friederici 2017 *Language in Our Brain*; Bemis & Pylkkänen 2013 on LATL combinatorial activity; Pylkkänen 2019 *Science*) finds neural markers of **early syntactic/semantic composition** — e.g. ELAN ~150–250 ms and a left-anterior-temporal combinatory signal for minimal phrases. These findings **motivate** an EIC-style picture of early constituent processing, but they are **not direct neural confirmations of the EIC efficiency metric itself**, and they do **not** establish that minimal composition is invariant across word orders (the cited experiments do not test that contrast). EIC is a corpus-derived parsing efficiency measure (Hawkins 1994); its specific neural realization remains an open empirical question. CFLT's invocation of EIC at the linguistic level is well-grounded; the neural-efficiency framing in this section should be read as theoretically motivated, not as a tested neurobiological claim.
 
 ---
 
@@ -103,10 +103,10 @@ Recent research in "StreamingLLM" (Xiao et al., 2024) identifies the very first 
 
 ## 6. From PFC to Basal Ganglia: Proceduralization
 
-Language mastery is the transition from **Declarative Memory** (knowing that — PFC) to **Procedural Memory** (knowing how — Basal Ganglia/Cerebellum).
+Skill Acquisition Theory (Anderson; DeKeyser) describes a movement from **declarative** ("knowing that") toward increasingly **procedural, automatic** performance. CFLT borrows this as a learning-stage analogy. The declarative→procedural shift is **not** a simple location handoff from PFC to basal ganglia/cerebellum: the underlying neural systems are distributed, and a clean "PFC stores declarative, BG stores procedural" mapping is an oversimplification we use only for exposition.
 
-- **The "Muscle" of Language:** CFLT treats language as a physical skill. The rigid 4-slot protocol is designed to be **"proceduralized"** through repeated use.
-- **Bypassing the Formulator:** By training the brain to map concepts directly into the CFLT scaffold, we bypass the bottlenecked **Formulator stage** (Levelt, 1989), allowing for "instant" speech production.
+- **The "Muscle" of Language:** CFLT treats language as a skill and **hypothesizes** that the fixed 4-slot protocol can be **"proceduralized"** through repeated use — a prediction to be tested, not a demonstrated outcome.
+- **Reducing Formulator Demand:** By training the brain to map concepts directly into the CFLT scaffold, CFLT aims to **reduce selected planning demands at the Formulator stage** (Levelt, 1989). CFLT does **not** claim the Formulator can be bypassed — grammatical and phonological encoding still require formulation; the predicted gain is lower planning cost, to be measured empirically.
 
 ```mermaid
 graph LR

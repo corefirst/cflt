@@ -61,7 +61,7 @@ graph LR
     C -- "Constraint" --> T
 ```
 
-In the **CFLT Protocol**, the Core occupies $t_1$. Because the Core is the highest-information constituent (the salience anchor), it provides the strongest constraint on the probability distribution of all subsequent slots.
+In the **CFLT Protocol**, the Core occupies $t_1$. CFLT *defines* the Core as the salience anchor and *hypothesizes* that it is the highest-information / most-constraining constituent; on that hypothesis it provides the strongest constraint on the probability distribution of all subsequent slots. (That the Core is always the most informative or most constraining constituent is a CFLT prediction to measure, not a given.)
 
 > **Important caveat — chain rule and joint entropy.** By the chain rule of entropy (Cover & Thomas 2006, Ch. 2), the *joint* entropy $H(t_1, t_2, \dots, t_n)$ is **invariant** under permutation of the tokens — the total uncertainty of a sequence does not depend on the order in which we factor it. So CFLT does **not** claim to reduce total joint entropy by placing Core first.
 >
@@ -69,7 +69,7 @@ In the **CFLT Protocol**, the Core occupies $t_1$. Because the Core is the highe
 >
 > Mathematically: CFLT optimizes for **early prefix informativeness**, not total entropy. The right framing is "Core in $t_1$ minimizes the uncertainty of *what kind of utterance this is* by step 1," not "Core in $t_1$ minimizes joint entropy."
 
-Conditional entropy $H(\text{rest} \mid \text{core})$ is significantly lower than $H(\text{rest} \mid \text{some-modifier})$, which means the listener/model achieves **earlier disambiguation** even though total joint entropy is unchanged. This is the precise sense in which Core-first is information-theoretically motivated.
+CFLT *predicts* that conditional entropy $H(\text{rest} \mid \text{core})$ is lower than $H(\text{rest} \mid \text{some-modifier})$, which would mean the listener/model achieves **earlier disambiguation** even though total joint entropy is unchanged. This inequality is a **measurable, preregisterable CFLT hypothesis** — it is not a theorem and not a cited information-theoretic result (the chain rule and entropy do not establish it, and it need not hold for every token or context). This is the precise sense in which Core-first is information-theoretically *motivated*: it points to a quantity to measure, not an established gain.
 
 ---
 
@@ -95,10 +95,10 @@ Levy & Jaeger (2007), Jaeger (2010), and the broader UID literature propose that
 
 This is sometimes presented as a counter-argument to frontloading high-information tokens. We address the tension honestly:
 
-- **For native speakers**, UID predicts that within a fluent utterance, information density is roughly constant. End-focus and end-weight in English distribute heavy NPs to the right precisely to flatten density.
-- **For L2 learners and AI agents**, UID is a *production-side* optimization that presupposes the speaker can already plan globally. Learners cannot. CFLT therefore optimizes for **interpretation-side** parsing certainty by frontloading the core, accepting a less-flat density curve.
+- **For native speakers**, UID is associated with a tendency toward roughly constant information density within a fluent utterance. English end-focus and end-weight distribute heavy NPs to the right; whether they do so *precisely to flatten density* is a UID-flavored interpretation, not something Quirk et al. (1985) or FSP establish — the link between end-weight and UID flatness needs direct measurement.
+- **For L2 learners and AI agents**, UID is a *production-side* family of hypotheses. CFLT *conjectures* — it does not follow from UID — that fluent UID-style packaging presupposes more global planning than novice learners can perform, and therefore *proposes* to optimize instead for **interpretation-side** parsing certainty by frontloading the core, accepting a less-flat density curve. That learners cannot plan globally, and that interpretation-side frontloading is the right target for them or for AI, are CFLT claims to test, not consequences of UID.
 
-CFLT is thus not a refutation of UID; it is a **different optimization target** suited to a different speaker population.
+CFLT is thus not a refutation of UID; CFLT *proposes* a **different optimization target** that it hypothesizes suits a different speaker population.
 
 ---
 
@@ -212,7 +212,7 @@ with the gap maximized when the speaker is novice (high baseline branching facto
 
 ## 11. Honest Limitations
 
-1. **UID tension.** As noted in §4, native idiomatic English aims for flat information density (often via end-weight); strict CFLT produces lumpy density profiles. Idiomatic polishing must be applied at the surface stage.
+1. **UID tension.** As noted in §4, UID-flavored accounts associate native idiomatic English with a tendency toward flatter information density (often linked to end-weight), against which strict CFLT may produce lumpier density profiles. Both the "native English aims for flat density" reading and the "CFLT is lumpy" contrast are claims to **measure directly**, not facts established by Quirk et al. or FSP; if they hold, idiomatic polishing applied at the surface stage is the proposed remedy.
 2. **Empirical estimation of $c_i$.** The decision-theoretic argument depends on cognitive cost functions that are hard to measure directly; experimental validation is needed (eye tracking, articulation onset latency).
 3. **Non-eventive clauses.** The CFLT template assumes an event-denoting clause with a clear core action. Stative descriptions, generic statements, and identification clauses ("This is a chair") fit awkwardly and may need a separate template family.
 4. **Long-range dependencies.** When semantic modifiers depend on each other (nested causes, conditional times), the four-slot template flattens what is logically a tree. The Grammar Overlay must reconstruct nesting at the surface level.

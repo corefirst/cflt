@@ -59,7 +59,7 @@ CFLT operates *above* the morphosyntactic level: each language assembles the **e
 
 The Core is a **salience anchor** in the sense of Talmy's (2000) Figure / Langacker's (1987) profile — *not* a verb, *not* a value judgment about "the most important word."
 
-CFLT addresses a shared bottleneck: adult L2 production pays this restructuring cost as DLPFC working-memory overhead; LLM prompting pays it as semantic drift, order-sensitivity, and "Lost in the Middle" attention degradation. A single normative intervention — Core-first linearization — is useful in both systems for partially distinct mechanistic reasons.
+CFLT addresses a shared bottleneck: adult L2 production pays this restructuring cost as DLPFC working-memory overhead; LLM prompting pays it as semantic drift, order-sensitivity, and "Lost in the Middle" long-context performance degradation (a behavioral pattern; the underlying attention mechanism is not yet established). A single normative intervention — Core-first linearization — is useful in both systems for partially distinct mechanistic reasons.
 
 CFLT is **theory + method**, not a product. The theory belongs to the open commons (CC BY 4.0). Reference implementations live in independent projects.
 

@@ -80,7 +80,7 @@ Illustrative case (Qwen, ZH_L3_03):
 - Control: 17,092 completion tokens (lengthy confused reasoning, wrong answer)  
 - CFLT: 2,821 completion tokens (focused reasoning, correct — 6× reduction)
 
-Qwen's total reduction (−37.1%) falls within the §5.2 projected −30–50% range, but the mechanism is **reasoning-overhead compression**, not the originally hypothesized prompt-compression. The §5.2 prediction remains numerically supported, with the cleaner restatement: "**−30–50% completion tokens on reasoning-capable models**" (not "prompt tokens across all models").
+Qwen's total reduction (−37.1%) happens to fall within the §5.2 projected −30–50% range, but the mechanism is **reasoning-overhead compression**, not the originally hypothesized prompt-compression. Matching the numeric interval is **consistent with** the §5.2 figure; it does **not** validate the original prompt-compression mechanism or the prediction as a general claim — a different mechanism reaching a similar number is coincidental, not confirmatory. The honest restatement is: "**−30–50% completion tokens on reasoning-capable models, via reasoning-overhead compression**" (not "prompt tokens across all models").
 
 ### 2.3 L4 Boundary: DeepSeek-Specific Anomaly, Not a General Pattern
 
@@ -153,7 +153,7 @@ _🔒 = control already at ceiling, CFLT effect untestable; 📈 = informative l
 | :-- | :-- | :-- | :-- |
 | §2.1 Primacy effect | Core-first → attention aligned → more accurate extraction | **5/5 models on L3**: +22 to +44pp; **all reach 100% CFLT** | ✅ **Strongly confirmed (universal across 5 frontier models)** |
 | §5.2 Accuracy prediction | +15–20pp on long-context / distractor tasks (L3) | All 5 models exceed +15pp on L3 alone (Claude: +28pp on L3 specifically) | ✅ **Confirmed at L3-level for all 5 models** |
-| §5.2 Token saving | −30–50% "syntactic fluff" tokens | Prompt: −1% (not confirmed); **completion: −38% (Qwen) / −12% (DeepSeek) on reasoning-capable models only** | ⚠️ **Different mechanism; numerically holds for reasoning-capable models** |
+| §5.2 Token saving | −30–50% "syntactic fluff" tokens | Prompt: −1% (not confirmed); **completion: −38% (Qwen) / −12% (DeepSeek) on reasoning-capable models only** | ⚠️ **Different mechanism (reasoning-overhead, not prompt compression); the numeric interval is consistent with §5.2 for reasoning-capable models but does not validate the original mechanism or prediction** |
 | §3.1 Single-call vs two-step | Modern frontier models may not need a pre-processor | L3 strongly benefits from CFLT (5/5 models); L4 regression now confined to DeepSeek (1/5 models) | ⚠️ **Task-type and model-specific: L3 distractor tasks benefit universally; L4 multi-option decisions safe to deploy CFLT on 4/5 models, A/B-test on DeepSeek** |
 
 ---
@@ -222,7 +222,7 @@ This experiment provides multi-model empirical evidence for the primacy hypothes
 
 3. **On multi-action decision cases (L4), the previously-reported −11pp regression is now confined to DeepSeek V4 Pro alone** (1 of 5 models). The other four (GPT-5, Gemini Flash, Qwen3.5, Claude Sonnet 4.6) all show L4 at or near ceiling under both arms. The DeepSeek L4 regression is now best characterized as a **model-specific anomaly**, not a general property of CFLT-under-buried-decisions. Operationally: deploy CFLT freely on the other four for multi-option decision workflows; A/B-test on DeepSeek.
 
-4. **The §5.2 −30–50% token saving claim does not hold at the prompt level** (untestable with identical-content design); it holds numerically at the completion level for reasoning-capable models (−37% Qwen total), with a different mechanism than originally anticipated.
+4. **The §5.2 −30–50% token saving claim does not hold at the prompt level** (untestable with identical-content design); at the completion level for reasoning-capable models the observed reduction (−37% Qwen total) is *consistent with* the projected interval but arises from a **different mechanism** (reasoning-overhead compression) than originally anticipated, so matching the number does not validate the original prompt-compression prediction.
 
 5. **An incidental observation:** Claude Sonnet 4.6 is the only model where L2 became informative (non-saturated, 83%/78%), but the −6pp aggregate is sampling noise (per-case directions cancel; see §5.5). No other interpretation is licensed at N=3.
 
