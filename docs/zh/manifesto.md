@@ -281,7 +281,7 @@ CFLT 主张在 L1 和 L2 之间存在一个**语言中性逻辑层**。通过将
 通过采用 CFLT 协议，学习第二语言的任务从**复杂的结构重组**重新框定为**针对稳定支架的令牌置换**。CFLT 预测两项战略性结果（每项都在 [`foundations/core-concept.md`](foundations/core-concept.md) §8.5 中操作化为可证伪的预测）：
 
 - **对人类（预测，参见 §8.5 P1）：** 协议设计上旨在减少 L2 产出的重组延迟及随之而来的言语焦虑。*预测方向：* 在控制对比下对流利度（每分钟词数）有正向效应，犹豫停顿率下降。*预测量级：* 未测量——`pedagogy.md` §12.1 *情感过滤量度* 规定了可以确定这一点的协议；CFLT **不**承诺某个具体效应量。
-- **对 AI（预测，参见 §8.5 P2）：** 协议设计上旨在把显著性锚点放入 Transformer 模型的高注意力前缀区域，利用的是**首因效应**（而非注意力汇点伪影——见 [`foundations/llm.md`](foundations/llm.md) §2.3）。*预测方向：* 在以 Core 成分为答案承载元素的任务上，位置 0 注意力质量更高、下游任务准确率更高。*预测量级：* 未测量；跨 ≥3 个模型族的具体准确率与延迟差异是 P2 开放的实证内容（`llm.md` §10.1）。该机制预计会改善早期前缀的条件分布稳定性和指令遵循可靠性，**而非**让自回归推理变得确定，**也非**降低总联合熵。[`foundations/mathematics.md`](foundations/mathematics.md) §2 明确否定了上述两种更强的解读。
+- **对 AI（参见 §8.5 P2）：** 协议把显著性锚点放入 Transformer 模型的高注意力前缀区域。该预测目前处于两个不同的证据阶段。*任务准确率支——已初步证实：* 在五个前沿模型族（GPT-5、Gemini 3 Flash、Qwen3.5-Plus、DeepSeek V4 Pro、Claude Sonnet 4.6）上，Core 前置相比自然的"理由在前"语序，把干扰项密集的抽取准确率提升了 **+22–44pp**，并把每个被测模型在该条件下拉到 100%（见 [`methodology/llm-part2-verification.md`](methodology/llm-part2-verification.md)）。这是一个小样本、单数据集、作者自撰提示词的中试——属于初步支持，而非已确立的结果，仍待扩大规模与独立复现。*机制 / 注意力质量支——仍未测量：* 该增益究竟源自**位置 0 首因效应**，还是仅源自把 Core 与竞争性干扰项分离开，本次中试无法区分；专门用于隔离首因的"埋藏决策"探针（L4）欠功率，未能证实首因机制（[`foundations/llm.md`](foundations/llm.md) §2.4），且位置 0 的注意力质量尚未测量（这与注意力汇点伪影是两回事——`llm.md` §2.3）。该机制预计会改善早期前缀的条件分布稳定性和指令遵循可靠性，**而非**让自回归推理变得确定，**也非**降低总联合熵（[`foundations/mathematics.md`](foundations/mathematics.md) §2 明确否定了上述两种更强的解读）。
 
 CFLT 是桥梁。通过在协议层标准化思想序列，框架旨在拓宽人机协作带宽；对该目标的实证评估见 [`methodology/empirical-agenda.md`](methodology/empirical-agenda.md)。
 

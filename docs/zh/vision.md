@@ -38,10 +38,10 @@
 
 > **如何阅读本节。** 下面的要点使用高层战略性语言；具体的机制性主张以及哪些是有实证支持、哪些是预测，请参见基础文档——尤其是 [`foundations/llm.md`](foundations/llm.md) §2.3（首因 vs 注意力汇点的消歧）、§7（幻觉动力学）、§10（开放的实证问题）；以及 [`foundations/mathematics.md`](foundations/mathematics.md) §2（明确的链式法则告诫——CFLT **不**主张降低总联合熵）。
 >
-> 真实 LLM 中的推理是随机的（自回归采样），且下文所列效应的量级是开放的实证问题，而非已测量的结果。
+> 真实 LLM 中的推理是随机的（自回归采样）。下文多数量级是开放的实证问题而非已测量的结果；目前唯一已测量的例外是干扰项密集场景下的抽取准确率增益，五模型中试报告为 **+22–44pp**（见 [`foundations/llm.md`](foundations/llm.md) §3 与 [`methodology/llm-part2-verification.md`](methodology/llm-part2-verification.md)）。
 
 ### CFLT 协议为何是有前景的 LLM 协议：
-- **预测的注意力前缀效益：** 将 `[核心]` 置于序列开头，使显著性锚点位于高注意力前缀区域。依据 [`foundations/llm.md`](foundations/llm.md) §2.3 的首因效应论证——**而非** Xiao et al. (2024) 中已被明确排除的 softmax 稳定性注意力汇点伪影——我们预期这能降低长序列中模型与用户意图的漂移。量级是开放问题（`llm.md` §10.1）。
+- **注意力前缀效益（准确率增益已测；机制仍开放）：** 将 `[核心]` 置于序列开头，使显著性锚点位于高注意力前缀区域。五模型中试报告 Core 前置把干扰项密集的抽取准确率提升 **+22–44pp**（[`methodology/llm-part2-verification.md`](methodology/llm-part2-verification.md)）——属初步支持（小样本、单数据集）。这一增益究竟源自**位置 0 首因**（[`foundations/llm.md`](foundations/llm.md) §2.3 的论证——**而非** Xiao et al. 2024 中已被明确排除的 softmax 稳定性注意力汇点伪影），还是仅源自把 Core 与干扰项分离开，尚未被隔离，且位置 0 的注意力质量仍未测量（`llm.md` §2.4、§10.1）。
 - **智能体互操作性（设计目标）：** CFLT 协议**被设计为**跨智能体通信的 **"逻辑通用语 (Logical Lingua Franca)"**，使中文核心智能体与英文核心智能体在双方都遵循 CFLT 序列时，能以最小的协议层语义漂移交换复杂意图。这是**协议层**的次序不变性属性（见 [`foundations/mathematics.md`](foundations/mathematics.md) §9），**而非**零联合熵 / 无损编码主张——`mathematics.md` §2 明确否定了那种更强的解读。残余损失是一个开放的实证问题。
 - **思维链 (CoT) 兼容性（假设）：** CFLT 线性、非嵌套的特性旨在与现代 AI 的迭代推理方法互操作。**CFLT 假设** CFLT 与 CoT 充当互补的支架 —— 这种互操作性是一项有待用析因设计（CFLT/对照 × CoT/无 CoT）检验的预测，**而非**已确立的结果；Wei 等（2022）并未检验 CFLT 或 CoT 互补性（参见 [`foundations/llm.md`](foundations/llm.md) §9 的诚实范围声明：在复杂的数学 / 逻辑推理上，CFLT 不是 CoT 的替代品）。
 
