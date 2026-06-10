@@ -466,8 +466,8 @@ CFLT 明确**不**主张：
 >
 > 为了解决"内部修饰语陷阱"，槽位 0 的组装遵循确定性的 **4 步微组装线**：
 >
-> 1.  **步骤 0.1 意图与情态：** `[Must/Might/Not/Please]` (认知态度和言语行为缓和语)
-> 2.  **步骤 0.2 谓词：** `[Action/State/Identity]` (锚点本身：动词、系词 + 补足语，或静态中心词)
+> 1.  **步骤 0.1 辖域内算子：** `[Negation/Modality/Aspect/Degree/Illocution]` (例如 *not*、*might*、*already*、*very*、*please* —— 对整个事件核取辖域的算子；参见 §2.1 枚举)
+> 2.  **步骤 0.2 谓词：** `[Action/State/Identity/Request]` (锚点本身：动词、系词 + 补足语、静态中心词，或言语行为动词)
 > 3.  **步骤 0.3 价位绑定参与者：** `[Patient/Recipient/Beneficiary]` (由谓词直接允准的实体)
 > 4.  **步骤 0.4 核心状语：** `[Manner/Instrument]` (动作的即时机制/品质)
 >

@@ -80,7 +80,7 @@ graph TD
 
 ## 5. Honest Limitations
 
-1. **L1 Specificity:** Unlike the syntactic `[Core]` sequence which is largely universal, the Phonetic Bridge is highly specific to the L1-L2 pair. A Pinyin bridge is useless for a native Spanish speaker learning English. Scaling CFLT requires building distinct phonetic matrices for each major language pair.
+1. **L1 Specificity:** Unlike the syntactic `[Core]` sequence which is largely consistent across the surveyed typological range, the Phonetic Bridge is highly specific to the L1-L2 pair. A Pinyin bridge is useless for a native Spanish speaker learning English. Scaling CFLT requires building distinct phonetic matrices for each major language pair.
 2. **Fossilization:** While relative mapping gets learners to "comprehensible output" rapidly, it may result in a persistent, albeit understandable, accent if the learner never fully divorces the L2 sound from the L1 anchor.
 3. **Suprasegmentals:** Mapping individual phonemes does not solve intonation, rhythm, and stress across entire sentences, which require dedicated mimicry and shadowing practice beyond the basic muscular bridges.
 

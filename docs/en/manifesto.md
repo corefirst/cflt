@@ -91,7 +91,7 @@ graph BT
 
 ### 2.5 Natural Semantic Metalanguage (Anna Wierzbicka)
 **Concept:** All meanings can be reduced to universal "Semantic Primes."
-**CFLT Application:** AI utilizes these primes as an **Atomic Vocabulary** to fill CFLT slots, facilitating any-to-any cross-linguistic translation.
+**CFLT Application:** CFLT uses these primes as a cross-linguistically motivated vocabulary for naming the slot functions (Why / Where / When). The broader claim that NSM could serve as an operative translation layer is outside the scope of this document; see `foundations/linguistics.md` §9 for the scoped treatment.
 
 ---
 
@@ -189,7 +189,7 @@ CFLT is not limited to Chinese-to-English. It is designed as a **project-standar
 *   **Arabic (VSO) ↔ Spanish (SVO):**
     - *Arabic habit:* [Verb] → [Subject] → [Object]. 
     - *CFLT Pivot (scaffold form):* "Como una manzana (Core), porque tengo hambre (Reason), en la cocina (Space), ahora (Time)." 
-    - CFLT aligns the Arabic V-first tendency with the Spanish SVO core; **Natural Semantic Metalanguage (NSM) Primes** serve as the semantic bridge at the interlingual mediation layer to ensure the *intent* of the verb is preserved across divergent conjugation systems. The example above shows the Spanish L2 CFLT scaffold form (parallel to the Japanese ↔ German example above), not NSM notation itself.
+    - CFLT aligns the Arabic V-first tendency with the Spanish SVO core; the slot labels (Core, Reason, Space, Time) provide a shared cross-linguistic planning scaffold. The example above shows the Spanish L2 CFLT scaffold form (parallel to the Japanese ↔ German example above); the slot-function vocabulary has a Natural Semantic Metalanguage grounding (see §2.5), but NSM notation is not required to use the scaffold.
 
 The official reference implementation is hosted at **corefirst.world**; the framework itself is open for any team to implement independently.
 

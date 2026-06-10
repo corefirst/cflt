@@ -466,8 +466,8 @@ For the Logic Transformer engine and for any future AI agent extending the CFLT 
 >
 > To resolve the "internal modifier trap," the assembly of Slot 0 follows a deterministic **4-step Micro-Assembly Line**:
 >
-> 1.  **Step 0.1 Intent & Modal:** `[Must/Might/Not/Please]` (Cognitive attitude and illocutionary mitigators)
-> 2.  **Step 0.2 Predicate:** `[Action/State/Identity]` (The anchor itself: verb, copula + complement, or stative head)
+> 1.  **Step 0.1 Scope-Internal Operators:** `[Negation/Modality/Aspect/Degree/Illocution]` (e.g., *not*, *might*, *already*, *very*, *please* — operators that take scope over the event nucleus as a whole; cf. §2.1 enumeration)
+> 2.  **Step 0.2 Predicate:** `[Action/State/Identity/Request]` (The anchor itself: verb, copula + complement, stative head, or speech-act verb)
 > 3.  **Step 0.3 Valence-Bound Participants:** `[Patient/Recipient/Beneficiary]` (Entities licensed directly by the predicate)
 > 4.  **Step 0.4 Core-Adjuncts:** `[Manner/Instrument]` (The immediate mechanism/quality of the action)
 >

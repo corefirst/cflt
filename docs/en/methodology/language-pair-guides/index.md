@@ -12,10 +12,10 @@
 ## Why This Series Exists
 
 The two-tier model (`core-concept.md` §2.1) decouples:
-- the **universal protocol** (slot order, slot semantics) — applies to all language pairs
+- the **protocol layer** (slot order, slot semantics) — applies across the surveyed typological range (see `../../foundations/core-concept.md` §2.4)
 - the **language-specific assembly** (how the event nucleus is built syntactically) — delegated to native L1/L2 grammar
 
-The protocol works for any language pair, but learners of specific pairs need:
+The protocol works across the surveyed typological range, but learners of specific pairs need:
 - The list of edge cases that arise when *their* L1 syntax meets *their* L2 syntax
 - Worked examples that pivot through CFLT without unnecessary detours
 - A list of pitfalls common to that pair

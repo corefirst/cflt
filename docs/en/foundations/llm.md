@@ -81,7 +81,7 @@ By placing the **Core Action** at the very beginning, CFLT ensures the most crit
 
 ```mermaid
 graph LR
-    subgraph "U-Shape Information Retention"
+    subgraph "U-Shape Information Retention (document scale; Liu et al. 2023 — see scale caveat above)"
     Start[Start of Prompt] -- "High Accuracy" --> High1((.))
     Middle[Middle of Prompt] -- "Low Accuracy" --> Low((.))
     End[End of Prompt] -- "High Accuracy" --> High2((.))
