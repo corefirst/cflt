@@ -89,7 +89,7 @@ graph TD
     B1 --- NoteB[Low Working Memory Load: incremental attachment to anchor]
 ```
 
-CFLT imposes a **head-initial** structure at the discourse level. CFLT predicts this enables **incremental processing**: the brain can "attach" details to a known core as they arrive. In contrast, head-final (Topic-First) languages like Chinese often place complex modifiers before the head, forcing the listener to hold a string of descriptors in memory before knowing what is being described — the "modifier trap." CFLT is designed to avoid this trap for the L2 learner; whether it measurably does so is an open empirical question, since EIC is primarily a parsing/ordering account and its transfer to production needs direct evidence.
+CFLT imposes a **head-initial** structure at the discourse level. CFLT predicts this enables **incremental processing**: the brain can "attach" details to a known core as they arrive. In contrast, when complex modifiers are placed *before* the head — pre-nominal relative clauses and modifier strings in Chinese (a topic-prominent, broadly SVO / head-initial language, **not** head-final), or genuinely head-final structures like Japanese — the listener must hold a string of descriptors in memory before knowing what is being described — the "modifier trap." (The trap concerns NP-internal *pre-head modification*, not whole-language head-finality.) CFLT is designed to avoid this trap for the L2 learner; whether it measurably does so is an open empirical question, since EIC is primarily a parsing/ordering account and its transfer to production needs direct evidence.
 
 ---
 

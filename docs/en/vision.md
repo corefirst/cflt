@@ -60,9 +60,9 @@ CFLT's role is to keep the **specification, evaluation methodology, and referenc
 
 ## 5. Conclusion: The Synchronized Future
 
-The ultimate goal of CFLT is to build a **Human-AI Isomorphic Logic Field**.
+The strategic aim of CFLT is a **shared Core-First protocol** spanning human and machine.
 
-When humans train their minds to be "Core-First" (Pillar I) and LLMs adopt "Core-First" as their reasoning standard (Pillar II), the bandwidth of human–machine collaboration can grow substantially. We are moving beyond "Prompt Engineering" toward **Deep Cognitive Alignment**, where the way we think and the way we compute are governed by a single organizing principle.
+When humans train their minds to be "Core-First" (Pillar I) and LLMs adopt "Core-First" as a reasoning / prompt standard (Pillar II), the bandwidth of human–machine collaboration can grow. This is a claim about a **shared intervention, not a shared mechanism**: CFLT does **not** assert that human cognition and machine computation are isomorphic — only that the *same* Core-First protocol can be applied to **two independent systems**, each with its own distinct costs (see [`methodology/empirical-agenda.md`](methodology/empirical-agenda.md) §1.1, which explicitly drops the single-mechanism reading). "A single organizing principle" is therefore a strategic framing of the shared protocol, not an identity claim about how brains and models work.
 
 ---
 *Document Version: 1.0.0 (Internal Draft)*

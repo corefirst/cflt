@@ -197,7 +197,7 @@ graph BT
     style Core fill:#f96,stroke:#333,stroke-width:2px
 ```
 
-This is an **operator-stacking** reading: $C$ is the innermost commitment; reason, space, and time are progressively more "outer" modal-temporal operators wrapping it. Linearizing them outward-from-core gives exactly the protocol's order.
+This is an **operator-stacking** reading: $C$ is the innermost commitment; reason, space, and time can be read as progressively more "outer" modal-temporal operators wrapping it, and linearizing them outward-from-core is *consistent with* the protocol's order. **This is a motivating analogy, not a derivation:** standard modal-temporal logic does not fix a unique scope order over cause / location / time (their relative scope is language- and construction-dependent), so the specific R→S→T sequence is argued from cognitive / processing grounds, not from logic, and its status remains an open empirical question (see [`mathematics.md`](./mathematics.md) §12 and [`linguistics.md`](./linguistics.md) §4.3; cf. §7 above on the Manner maxim, which likewise motivates *having* an order without entailing *this* one).
 
 ---
 

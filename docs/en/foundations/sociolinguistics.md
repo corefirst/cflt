@@ -14,7 +14,7 @@
 
 A potential conflict exists between the **CFLT Protocol** (which mandates early commitment to the semantic Core) and many cultural norms of communication. In "high-context" or "collectivist" cultures, asserting a direct request or result at the start of an utterance can be perceived as aggressive, rude, or "face-threatening" (Brown & Levinson, 1987).
 
-CFLT does not ignore these social realities. As a **design choice**, it *proposes* to treat **Politeness** and **Register** as explicit logical modifiers that wrap the Core, rather than as forces that should obscure it. We flag this as a CFLT strategy, not an empirical claim about politeness in general: cross-linguistically, politeness can also alter syntax, utterance sequence, and discourse strategy, so the "wrapper-without-restructuring" model is a hypothesis to test, not an established property of polite language.
+CFLT does not ignore these social realities, but it is explicit about **scope**. The CFLT structure (Core + ground frame) encodes the **propositional–illocutionary skeleton** of an utterance — *what is asserted / requested / asked*. **Politeness, face, and honorifics — and, more broadly, non-literal pragmatic inference such as conversational implicature — sit *outside* that structural scope, as an optional social / pragmatic layer that CFLT does not claim to encode in the Core or the slots.** As a **design choice**, CFLT treats politeness / register as an explicit *wrapper around* the structural skeleton (rather than a force that obscures it) — but the wrapper is a **separate layer, not part of the structural Core**. We flag this as a CFLT strategy, not an empirical claim about politeness in general: cross-linguistically, politeness can also alter syntax, utterance sequence, and discourse strategy, so the "wrapper-without-restructuring" model is a hypothesis to test, not an established property of polite language.
 
 ## 2. Politeness as a Logical Wrapper
 
@@ -22,12 +22,12 @@ In the CFLT framework, a "polite" request is modeled as a **Request Core** wrapp
 
 | Element | Direct Form | Polite (CFLT) Form | Logical Role |
 |---|---|---|---|
-| **Core** | "Give me the salt." | "Could you pass the salt, **please**" | Illocutionary Act + Mitigator |
+| **Core** | "Give me the salt." | "Could you pass the salt, **please**" | Illocutionary Act (structural Core) + politeness wrapper (mitigator, **outside** the Core) |
 | **Reason** | "I need it." | "because I'm seasoning my food" | Contextual Justification |
 | **Space** | "On the table." | "on the table" | Spatial Reference |
 | **Time** | "Now." | "right now" | Temporal Reference |
 
-**CFLT Strategy:** Place the "Speech-Act Core" (the request) at position 0, but ensure the *form* of that Core includes the necessary cultural tokens for politeness. By doing so, the listener receives the "social signal" (politeness) and the "task signal" (the request) simultaneously, without the task being buried in a long preamble.
+**CFLT Strategy:** Place the "Speech-Act Core" (the request) at position 0, and carry politeness as a **social wrapper around** it — the mitigator *Could you … please* — **not** as part of the structural Core. By doing so, the listener receives the "social signal" (politeness) and the "task signal" (the request) simultaneously, without the task being buried in a long preamble.
 
 ## 3. Honorifics and Social Indexing (Japanese/Korean)
 
