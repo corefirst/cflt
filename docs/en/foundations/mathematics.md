@@ -32,11 +32,11 @@ graph TD
 
 where $\text{root}(G)$ is the Core. By fixing this function across the surveyed typology (see §9 line 191 below for the formal restatement of the "within CFLT's surveyed typology" scope), CFLT is designed to reduce the **computational complexity** of translation from structural transformation to lexical substitution. For the typological evidence supporting the "same flattening function across the surveyed typology" claim — five languages spanning four families with reference-grammar citations for each Core internal-assembly mechanism — see [`core-concept.md`](./core-concept.md) §2.5.
 
-### 1.1 Modeling Identity and Request Cores
+### 1.1 Modeling Copular and Directive Cores
 To prove CFLT is not merely "verb-first," we model the Core as the **highest-salience node** in the semantic DAG, regardless of its part-of-speech.
 
-- **Identity Core (Copular/Stative):** In "That girl is my sister," the semantic root is the identity relation $\{A=B\}$. The linearization remains $L([A=B], \text{modifier}) = [A=B, \text{modifier}]$. The mathematical benefit is the immediate resolution of the **reference frame** before any descriptive attributes are processed.
-- **Request Core (Illocutionary Force):** In a request, the illocutionary operator (e.g., `REQUEST(action)`) is the root. CFLT linearizes this as $[\text{Operator}, \text{Action}, \text{Context}]$. This minimizes the **illocutionary ambiguity** — the listener knows *why* they are listening before they hear *what* the task is.
+- **Copular Core (Copular/Stative):** In "That girl is my sister," the semantic root is the identity relation $\{A=B\}$. The linearization remains $L([A=B], \text{modifier}) = [A=B, \text{modifier}]$. The mathematical benefit is the immediate resolution of the **reference frame** before any descriptive attributes are processed.
+- **Directive Core (Illocutionary Force):** In a request, the illocutionary operator (e.g., `REQUEST(action)`) is the root. CFLT linearizes this as $[\text{Operator}, \text{Action}, \text{Context}]$. This minimizes the **illocutionary ambiguity** — the listener knows *why* they are listening before they hear *what* the task is.
 
 ---
 

@@ -7,12 +7,12 @@
 
 ## 1. 核心的操作化定义
 
-在 CFLT 中，**核心 (Core)** (槽位 0) 是话语的**显著性锚点 (Salience Anchor)**。它代表了说话者意图断言的主要事件、状态、身份或请求。
+在 CFLT 中，**核心 (Core)** (槽位 0) 是话语的**显著性锚点 (Salience Anchor)**。它代表了说话者意图断言的主要事件、状态、系属或指令。
 
 **正式边界规则**（规范性分类与 [`core-concept.md`](./core-concept.md) §9 的"为实现者准备的正式定义"一致；本节是其操作性复述）：
 
 核心由以下四组构成：
-1.  **谓词**（动作、身份、状态或请求）。
+1.  **谓词**（事件、状态、系属或指令）。
 2.  由谓词授权的**价位绑定参与者**（主语、宾语、工具、受益者、接受者、伴随对象）。"*当改变某个论元会改变事件身份时，该论元属于价位绑定*"这一规则是一项 **CFLT 自定义的操作性测试**（即 [`core-concept.md`](./core-concept.md) §2.2 的替换测试），它受到 Levin & Rappaport Hovav (2005) 事件结构理论的启发，但并非由其推导得出；该理论本身并未提供这种基于事件身份的论元判定测试。还需注意，改变一个附加语可能改变所描述的事件 token，却不使其成为动词授权的论元，因此 CFLT 将下文的工具/受益者归类视为一项需按谓词和构式逐一检验的项目约定，而非从来源直接读出的结论：只要动词授权工具和受益者，CFLT 就将它们归类为价位绑定（而非"内部修饰语"）。
 3.  **核内 / 核心层方式状语**（动作方式、运动方式）。
 4.  以事件为论元的**辖域内算子**：否定、情态、时体、程度。
@@ -83,7 +83,7 @@
 | 11 | I read the news on my phone. | *I read the news on my phone* | "On my phone" 是工具。 |
 | 12 | It's dark in this room. | *It's dark* [空间: in this room] | "In this room" 是空间 (槽位 2)。 |
 | 13 | I'll call you if I can. | *I'll call you* [理由: if I can] | "If I can" 是条件 (槽位 1)。 |
-| 14 | She's a doctor in Paris. | *She's a doctor* [空间: in Paris] | 身份核心 + 空间。 |
+| 14 | She's a doctor in Paris. | *She's a doctor* [空间: in Paris] | 系属核心 + 空间。 |
 | 15 | I'm definitely coming. | *I'm definitely coming* | "Definitely" 是情态。 |
 | 16 | I haven't eaten yet. | *I haven't eaten* [时间: yet] | "Yet" 是时间 (槽位 3)。 |
 | 17 | I'm walking with a cane. | *I'm walking with a cane* | "With a cane" 是工具。 |

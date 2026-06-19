@@ -18,7 +18,7 @@ CFLT does not ignore these social realities, but it is explicit about **scope**.
 
 ## 2. Politeness as a Logical Wrapper
 
-In the CFLT framework, a "polite" request is modeled as a **Request Core** wrapped in an illocutionary mitigator.
+In the CFLT framework, a "polite" request is modeled as a **Directive Core** wrapped in an illocutionary mitigator.
 
 | Element | Direct Form | Polite (CFLT) Form | Logical Role |
 |---|---|---|---|
@@ -89,5 +89,5 @@ See [`bibliography.md`](../bibliography.md) (§ Sociolinguistics) for full refer
 
 - [`linguistics.md`](./linguistics.md) §7 — Linguistic relativity and "thinking-for-speaking," the linguistic backdrop to §5 here.
 - [`logic.md`](./logic.md) §5 — Speech-act theory; politeness wrappers as illocutionary mitigators.
-- [`core-concept.md`](./core-concept.md) §2 — The Request core type, central to the politeness discussion in §2 here.
+- [`core-concept.md`](./core-concept.md) §2 — The Directive core type, central to the politeness discussion in §2 here.
 - [`../methodology/curriculum-engineering.md`](../methodology/curriculum-engineering.md) — How register levels (§4 here) plug into industry token packs.

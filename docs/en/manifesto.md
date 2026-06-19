@@ -122,14 +122,14 @@ All four elements are present in the **canonical (unmarked) sequence**. Implemen
 
 The Core in CFLT is a **salience anchor**, not a verb (see [`foundations/core-concept.md`](foundations/core-concept.md)). The four examples below illustrate the four kinds of Core that the protocol accommodates.
 
-#### Example 1 — Action Core
+#### Example 1 — Event Core
 **L1 (Chinese, context-heavy order):** *昨天下雨，我在家没出去。* — Time → Reason → Result
 **CFLT Reconstruction:** *我没出去，因为下雨，在家，昨天。* — Core → Reason → Space → Time
 **English (CFLT-L2):** *I didn't go out, because it rained, at home, yesterday.*
 
-#### Example 2 — Identity / Description Core
-**L1 (Chinese):** *那个穿红衣服的女孩是我妹妹。* — Modifier-heavy NP → Identity
-**CFLT Reconstruction:** *那个女孩是我妹妹，穿着红衣服，在照片里，去年夏天。* — Core (identity) → Description → Space → Time
+#### Example 2 — Copular / Description Core
+**L1 (Chinese):** *那个穿红衣服的女孩是我妹妹。* — Modifier-heavy NP → Copular
+**CFLT Reconstruction:** *那个女孩是我妹妹，穿着红衣服，在照片里，去年夏天。* — Core (copular) → Description → Space → Time
 **English (CFLT-L2):** *That girl is my sister, wearing a red dress, in the photo, from last summer.*
 
 #### Example 3 — State Core
@@ -137,9 +137,9 @@ The Core in CFLT is a **salience anchor**, not a verb (see [`foundations/core-co
 **CFLT Reconstruction:** *我累瘫了，因为开了一下午会，在办公室，刚才。* — Core (state) → Reason → Space → Time
 **English (CFLT-L2):** *I'm exhausted, because of the meeting, in the office, just now.*
 
-#### Example 4 — Request / Speech-Act Core
-**L1 (Chinese):** *现在能在桌上帮我递一下盐吗？* — Time → Space → Request
-**CFLT Reconstruction:** *请帮我递一下盐，在桌上，现在。* — Core (request) → Polite marker → Space → Time
+#### Example 4 — Directive / Speech-Act Core
+**L1 (Chinese):** *现在能在桌上帮我递一下盐吗？* — Time → Space → Directive
+**CFLT Reconstruction:** *请帮我递一下盐，在桌上，现在。* — Core (directive) → Polite marker → Space → Time
 **English (CFLT-L2):** *Could you please pass the salt, on the table, now?*
 
 **The CFLT Advantage:** Across all four core types, once the learner adopts Core-First sequencing in their native mind, producing the target language becomes a **token replacement** exercise rather than a structural reorganization. The protocol is uniform; what fills position 0 varies with the speaker's intent.

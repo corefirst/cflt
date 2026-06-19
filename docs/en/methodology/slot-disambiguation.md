@@ -78,7 +78,7 @@ graph TD
 | 12 | *probably* | epistemic modal | routed inside Core by CFLT convention (scope/attachment is language-specific; see §2 step 2 scope note) |
 | 13 | *certainly* | epistemic modal | routed inside Core by CFLT convention (scope/attachment is language-specific; see §2 step 2 scope note) |
 | 14 | *didn't / never* | negation | routed inside Core by CFLT convention (scope/attachment is language-specific; see §2 step 2 scope note) |
-| 15 | *please* (in Request) | politeness marker | **CFLT pedagogical simplification** — attached to Request Core internally. Note: in standard speech-act theory (Searle 1975; Brown & Levinson 1987), *please* operates at the *illocutionary* level (modifying the request as a speech act), not at the propositional content level. CFLT bundles it inside Core for pedagogical convenience; the theoretically-precise position is that politeness markers are a separate illocutionary layer orthogonal to the four-slot protocol. See [`../foundations/sociolinguistics.md`](../foundations/sociolinguistics.md). |
+| 15 | *please* (in Request) | politeness marker | **CFLT pedagogical simplification** — attached to Directive Core internally. Note: in standard speech-act theory (Searle 1975; Brown & Levinson 1987), *please* operates at the *illocutionary* level (modifying the request as a speech act), not at the propositional content level. CFLT bundles it inside Core for pedagogical convenience; the theoretically-precise position is that politeness markers are a separate illocutionary layer orthogonal to the four-slot protocol. See [`../foundations/sociolinguistics.md`](../foundations/sociolinguistics.md). |
 
 ### B. Slot 1 — Reason (Why?)
 

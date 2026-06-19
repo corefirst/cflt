@@ -7,12 +7,12 @@
 
 ## 1. The Operational Definition of Core
 
-In CFLT, the **Core** (Slot 0) is the **Salience Anchor** of the utterance. It represents the primary event, state, identity, or request the speaker intends to assert. 
+In CFLT, the **Core** (Slot 0) is the **Salience Anchor** of the utterance. It represents the primary event, state, copular, or directive the speaker intends to assert. 
 
 **Formal Boundary Rule** (canonical taxonomy mirrors [`core-concept.md`](./core-concept.md) §9 — the canonical Formal Definition for Implementers; this section is the operational restatement):
 
 The Core consists of:
-1.  **The Predicate** (Action, Identity, State, or Request).
+1.  **The Predicate** (Event, State, Copular, or Directive).
 2.  **Valence-Bound Participants** licensed by the predicate (Subject, Object, Instrument, Beneficiary, Recipient, Accompaniment). The rule that *an argument is valence-bound when changing it changes event identity* is a **CFLT-defined operational test** (the substitution test in [`core-concept.md`](./core-concept.md) §2.2), motivated by — but not derived from — Levin & Rappaport Hovav (2005) event-structure theory; that theory does not itself supply this event-identity argumenthood test. Note also that changing an adjunct can change the described event token without making it a verb-licensed argument, so CFLT treats the Instrument/Beneficiary placement below as a project convention to be tested per predicate and construction, not a result read off the source: CFLT classifies Instrument and Beneficiary as valence-bound (not "internal modifiers") whenever the verb licenses them.
 3.  **Nuclear / Core-Level Manner Adverbials** (manner-of-action, manner-of-motion).
 4.  **Scope-Internal Operators** that take the event as argument: Negation, Modality, Aspect, Degree.
@@ -83,7 +83,7 @@ Follow these steps to isolate the Core:
 | 11 | I read the news on my phone. | *I read the news on my phone* | "On my phone" is the tool (Instrument). |
 | 12 | It's dark in this room. | *It's dark* [Space: in this room] | "In this room" is Space (Slot 2). |
 | 13 | I'll call you if I can. | *I'll call you* [Reason: if I can] | "If I can" is Condition (Slot 1). |
-| 14 | She's a doctor in Paris. | *She's a doctor* [Space: in Paris] | Identity Core + Space. |
+| 14 | She's a doctor in Paris. | *She's a doctor* [Space: in Paris] | Copular Core + Space. |
 | 15 | I'm definitely coming. | *I'm definitely coming* | "Definitely" is Modal. |
 | 16 | I haven't eaten yet. | *I haven't eaten* [Time: yet] | "Yet" is Time (Slot 3). |
 | 17 | I'm walking with a cane. | *I'm walking with a cane* | "With a cane" is Instrument. |

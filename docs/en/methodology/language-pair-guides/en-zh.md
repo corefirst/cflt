@@ -80,7 +80,7 @@ The 把-construction (*我把书看完了*) is Core-internal — it foregrounds 
 - **English CFLT**: *Could you please pass the salt, on the table, now?*
 - **Chinese CFLT**: *请帮我递一下盐，在桌上，现在。*
 
-Politeness markers (*please* / *请*) are bundled inside the Core (Request type) at the CFLT teaching layer; in standard speech-act theory (Searle 1975) they operate at the *illocutionary* level rather than the propositional content level — see [`slot-disambiguation.md`](../slot-disambiguation.md) §3 entry 15 for the caveat.
+Politeness markers (*please* / *请*) are bundled inside the Core (Directive type) at the CFLT teaching layer; in standard speech-act theory (Searle 1975) they operate at the *illocutionary* level rather than the propositional content level — see [`slot-disambiguation.md`](../slot-disambiguation.md) §3 entry 15 for the caveat.
 
 ### Example 3 — conditional with future
 

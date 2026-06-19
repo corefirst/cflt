@@ -79,18 +79,18 @@ Every well-formed CFLT utterance commits to one of these four core types in posi
 
 | Type | Example (CFLT-L2 form) | What's foregrounded |
 |---|---|---|
-| **Action** | *I didn't go out*, because... | The event / change of state |
-| **Identity** | *That girl is my sister*, wearing... | The classification / naming |
+| **Event** | *I didn't go out*, because... | The event / change of state |
+| **Copular** | *That girl is my sister*, wearing... | The classification / naming |
 | **State** | *I'm exhausted*, because... | The condition / quality |
-| **Request** | *Could you pass the salt*, please... | The speech act / desired outcome |
+| **Directive** | *Could you pass the salt*, please... | The speech act / desired outcome |
 
 ```mermaid
 graph TD
     subgraph "Speaker Intents"
-    I1[Action: Event/Change]
-    I2[Identity: Classify/Name]
+    I1[Event: Event/Change]
+    I2[Copular: Classify/Name]
     I3[State: Quality/Condition]
-    I4[Request: Speech Act]
+    I4[Directive: Speech Act]
     end
     
     I1 -- "Protocol" --> P0[Pos 0: Core]
@@ -115,7 +115,7 @@ CFLT operates as a **two-tier model**:
 
 | Tier | Contents | Listener question it answers | Position |
 |---|---|---|---|
-| **Tier 1: Event Nucleus** | Predicate (Action/Identity/State/Request) + valence-bound participants (subject, object, instrument, beneficiary, recipient, accompaniment) + nuclear / core-level manner adverbials + scope-internal operators (negation, modality, aspect, degree) — see §9 for the canonical enumeration | *What happened?* (including who, to-whom, with-what, how, in-what-mood, negated, when-internal) | Slot 0 (Core) |
+| **Tier 1: Event Nucleus** | Predicate (Event/State/Copular/Directive) + valence-bound participants (subject, object, instrument, beneficiary, recipient, accompaniment) + nuclear / core-level manner adverbials + scope-internal operators (negation, modality, aspect, degree) — see §9 for the canonical enumeration | *What happened?* (including who, to-whom, with-what, how, in-what-mood, negated, when-internal) | Slot 0 (Core) |
 | **Tier 2: Ground Frame** | Reason / Space / Time | *Why? Where? When?* | Slots 1–3 |
 
 The event nucleus is a single salience unit because the listener processes it as one foregrounded chunk: *"I baked the cake with butter, slowly, for my mom"* presents **one event**, not five. Whereas *"in the kitchen, yesterday"* are scene-setters that are conceptually independent of the event.
@@ -209,24 +209,24 @@ CFLT's cross-language claim is a **project-standard / normative** one restricted
 
 ### 2.4 Formal Structure of the Four Core Types
 
-The taxonomy in §2 (Action / Identity / State / Request) is a *CFLT-defined* aggregation over speaker intents — not a natural class that any single cited source derives. This subsection gives each type a formal internal structure — the predicate, the participants, and the relation to existing predicate-typology and speech-act theory. The "theoretical anchor" column lists **theoretical neighbours that motivate the distinctions**; the cited sources (Vendler, Dowty, Carlson, Maienborn, Levin & Rappaport Hovav, Hengeveld, Higgins, Kennedy, Searle, Sadock & Zwicky, Brown & Levinson) supply analytic vocabulary and motivate the cuts, but do **not** define the four CFLT Core types or their position-0 placement. This is the canonical reference for Logic-Transformer-style implementations.
+The taxonomy in §2 (Event / State / Copular / Directive) is a *CFLT-defined* aggregation over speaker intents — not a natural class that any single cited source derives. This subsection gives each type a formal internal structure — the predicate, the participants, and the relation to existing predicate-typology and speech-act theory. The "theoretical anchor" column lists **theoretical neighbours that motivate the distinctions**; the cited sources (Vendler, Dowty, Carlson, Maienborn, Levin & Rappaport Hovav, Hengeveld, Higgins, Kennedy, Searle, Sadock & Zwicky, Brown & Levinson) supply analytic vocabulary and motivate the cuts, but do **not** define the four CFLT Core types or their position-0 placement. This is the canonical reference for Logic-Transformer-style implementations.
 
 | Core type | Predicate signature | Obligatory participants | Optional inside Core | Theoretical neighbour (motivates, not defines) |
 |---|---|---|---|---|
-| **Action** | Λx.Λy. *event*(x,y, ...) — eventive predicate with valence ≥ 1 | Agent / Patient (+ Instrument, Beneficiary, Recipient if licensed by the verb) | Manner adverbs; modal & negation operators; aspect | Vendler (1957) *event-types*; Dowty (1979) *event structure*; Levin & Rappaport Hovav (2005) |
-| **Identity** | Λx. *be*(x, P) — copular predication where P is a property/category/entity | Subject (the carrier); copular complement (the predicated property/identity) | Modal & negation; degree modifiers on complement | Hengeveld (1992) *non-verbal predication*; Higgins (1979) copular-clause taxonomy (predicational / specificational / identificational / identity) |
+| **Event** | Λx.Λy. *event*(x,y, ...) — eventive predicate with valence ≥ 1 | Agent / Patient (+ Instrument, Beneficiary, Recipient if licensed by the verb) | Manner adverbs; modal & negation operators; aspect | Vendler (1957) *event-types*; Dowty (1979) *event structure*; Levin & Rappaport Hovav (2005) |
+| **Copular** | Λx. *be*(x, P) — copular predication where P is a property/category/entity | Subject (the carrier); copular complement (the predicated property/identity) | Modal & negation; degree modifiers on complement | Hengeveld (1992) *non-verbal predication*; Higgins (1979) copular-clause taxonomy (predicational / specificational / identificational / identity) |
 | **State** | Λx. *state*(x) — stative predicate; non-progressive, durative | Experiencer / Theme | Degree adverbs (*very, extremely*); modal & negation; temporal scope-internal markers | Carlson (1977) *individual-level vs stage-level predicates*; Vendler (1957) *states*; Maienborn (2005) |
-| **Request** | DIR(s, h, P) — directive illocution where s = speaker, h = hearer, P = requested propositional content | Speaker (implicit); addressee (implicit or vocative); requested action (the embedded predicate) | Politeness markers; modal layering (*could you, would you, might you*) | Searle (1969, 1975) *directives*; Sadock & Zwicky (1985) *speech-act typology*; Brown & Levinson (1987) *politeness-as-redress* |
+| **Directive** | DIR(s, h, P) — directive illocution where s = speaker, h = hearer, P = requested propositional content | Speaker (implicit); addressee (implicit or vocative); requested action (the embedded predicate) | Politeness markers; modal layering (*could you, would you, might you*) | Searle (1969, 1975) *directives*; Sadock & Zwicky (1985) *speech-act typology*; Brown & Levinson (1987) *politeness-as-redress* |
 
 **Why this matters operationally.** Implementers (LLM prompt designers, pedagogical material authors, Logic Transformer engines) must know **what fills Slot 0** for each Core type, otherwise the protocol is under-determined. The above signatures resolve four routine ambiguities:
 
-1. **Identity Cores carry the copula.** *"That girl is my sister"* — the copula *is* belongs inside Slot 0 with the complement *my sister*, not as a separate predicate. Hengeveld's (1992) typology confirms that the predicating element in copular constructions is the complement together with the copula; the copula carries tense / agreement / polarity, while the complement supplies the predicational content. CFLT places **the entire copular predicate** (copula + complement) at position 0.
+1. **Copular Cores carry the copula.** *"That girl is my sister"* — the copula *is* belongs inside Slot 0 with the complement *my sister*, not as a separate predicate. Hengeveld's (1992) typology confirms that the predicating element in copular constructions is the complement together with the copula; the copula carries tense / agreement / polarity, while the complement supplies the predicational content. CFLT places **the entire copular predicate** (copula + complement) at position 0.
 
-2. **Request Cores foreground the directive, not the requested action.** *"Could you pass the salt"* — Slot 0 is the full directive predicate *could you pass the salt* (illocutionary force + embedded propositional content), **not** an extracted *pass-the-salt* action. Searle's (1975) classification motivates treating the illocution as the speech-act-defining element; that the *whole* request belongs in Slot 0 is CFLT's slot-placement decision, not a result Searle establishes. A learner who reduces *"Could you pass the salt"* to *"pass salt"* has discarded the politeness / modality structure that *makes it a request*, not a command.
+2. **Directive Cores foreground the directive act, not the bare requested action.** *"Could you pass the salt"* — Slot 0 is the full directive predicate *could you pass the salt* (illocutionary force + embedded propositional content), **not** an extracted *pass-the-salt* action. Searle's (1975) classification motivates treating the illocution as the speech-act-defining element; that the *whole* directive belongs in Slot 0 is CFLT's slot-placement decision, not a result Searle establishes. A learner who reduces *"Could you pass the salt"* to *"pass salt"* discards the politeness / modality marking that distinguishes a polite request from a bald command — both are directives, but the register is part of the Core.
 
 3. **State Cores include their degree (CFLT convention).** *"I'm extremely exhausted, because…"* — Slot 0 is *I'm extremely exhausted* (stative predicate + degree). Degree semantics supports the *local* composition of the degree modifier with the adjective (Kennedy 1999, *Projecting the Adjective*); placing that whole unit inside the event nucleus rather than the ground frame is a CFLT discourse-slot convention, which the source does not adjudicate.
 
-4. **Action Cores include licensed instruments and beneficiaries (predicate- and construction-dependent).** *"I baked the cake with butter for my mom"* — CFLT places the full predicate frame *baked the cake with butter for my mom* in Slot 0, not just *baked*. Levin & Rappaport Hovav's (2005) event-structure templates motivate the view that instruments and beneficiaries can be part of the event nucleus when the verb and construction license them — but whether *"with butter"* and *"for my mom"* are valence-licensed arguments of *bake* is construction-dependent, and the §2.2 substitution test is a **CFLT operational rule**, not Levin & Rappaport Hovav's argumenthood diagnostic. Under that CFLT test, changing *with butter* → *with margarine* counts as a different event (different recipe), whereas *in the kitchen* → *in the garden* does not.
+4. **Event Cores include licensed instruments and beneficiaries (predicate- and construction-dependent).** *"I baked the cake with butter for my mom"* — CFLT places the full predicate frame *baked the cake with butter for my mom* in Slot 0, not just *baked*. Levin & Rappaport Hovav's (2005) event-structure templates motivate the view that instruments and beneficiaries can be part of the event nucleus when the verb and construction license them — but whether *"with butter"* and *"for my mom"* are valence-licensed arguments of *bake* is construction-dependent, and the §2.2 substitution test is a **CFLT operational rule**, not Levin & Rappaport Hovav's argumenthood diagnostic. Under that CFLT test, changing *with butter* → *with margarine* counts as a different event (different recipe), whereas *in the kitchen* → *in the garden* does not.
 
 This formalization is **constituent-type-agnostic at the protocol layer** (all four types map to a single Slot 0 in the same canonical order Core → R → S → T) and **predicate-type-specific at the implementation layer** (the four types are assembled internally by different syntactic mechanisms in different languages — see §2.5).
 
@@ -387,7 +387,7 @@ CFLT is therefore best characterized as: **an unmarked default that can be delib
 | "CFLT contradicts language typology." | CFLT makes no descriptive claim about natural-language word order. It is a **pedagogical and computational protocol** that overlays a fixed conceptual order. |
 | "CFLT produces alien sentences." | CFLT-L2 is comprehensible (not idiomatic) English. The Grammar Overlay layer handles idiomaticity. |
 | "CFLT is formal-logic notation in disguise." | CFLT is **natural language with constrained linearization**. The notation `P(a,b,c)` is an analogy for one direction of the protocol, not the protocol itself. |
-| "CFLT only works for action sentences." | CFLT accommodates four core types (action, state, identity, request). The protocol is uniform; what fills position 0 varies. |
+| "CFLT only works for action sentences." | CFLT accommodates four core types (event, state, copular, directive). The protocol is uniform; what fills position 0 varies. |
 | "CFLT bypasses native idiom." | CFLT is a scaffold layer; native idiom is the surface layer that the Grammar Overlay produces. They coexist, they don't compete. |
 | "CFLT forbids saying things any other way." | No. CFLT is the **unmarked default**. Marked deviations (topicalization, fronting, clefts) are part of mature fluency and are explicitly accommodated — see §6. |
 | "CFLT is the endpoint of language learning." | CFLT is the **scaffold for the unmarked default**. Mastery includes deliberate departures from the protocol when the rhetorical context calls for them. |
@@ -464,12 +464,12 @@ These non-claims circumscribe the falsifiability frontier: P1–P3 are the subst
 
 For the Logic Transformer engine and for any future AI agent extending the CFLT Protocol:
 
-> **The Core is the event nucleus — the predicate together with all participants and scope-internal operators inseparable from the event itself.** Formally: it is the smallest constituent that, uttered alone, identifies the speaker's primary intent (Action, Identity, State, or Request).
+> **The Core is the event nucleus — the predicate together with all participants and scope-internal operators inseparable from the event itself.** Formally: it is the smallest constituent that, uttered alone, identifies the speaker's primary intent (Event, State, Copular, or Directive).
 >
 > To resolve the "internal modifier trap," the assembly of Slot 0 follows a deterministic **4-step Micro-Assembly Line**:
 >
 > 1.  **Step 0.1 Scope-Internal Operators:** `[Negation/Modality/Aspect/Degree/Illocution]` (e.g., *not*, *might*, *already*, *very*, *please* — operators that take scope over the event nucleus as a whole; cf. §2.1 enumeration)
-> 2.  **Step 0.2 Predicate:** `[Action/State/Identity/Request]` (The anchor itself: verb, copula + complement, stative head, or speech-act verb)
+> 2.  **Step 0.2 Predicate:** `[Event/State/Copular/Directive]` (The anchor itself: verb, copula + complement, stative head, or speech-act verb)
 > 3.  **Step 0.3 Valence-Bound Participants:** `[Patient/Recipient/Beneficiary]` (Entities licensed directly by the predicate)
 > 4.  **Step 0.4 Core-Adjuncts:** `[Manner/Instrument]` (The immediate mechanism/quality of the action)
 >
@@ -484,10 +484,10 @@ For implementers needing a procedural recipe to extract and assemble the Core:
 ```mermaid
 flowchart TD
     A[Input utterance] --> B{Step 1: Identify speaker intent}
-    B -->|Asserting an event/change| C1[Action Core]
-    B -->|Classifying / naming| C2[Identity Core]
+    B -->|Asserting an event/change| C1[Event Core]
+    B -->|Classifying / naming| C2[Copular Core]
     B -->|Describing a condition/quality| C3[State Core]
-    B -->|Performing a speech act / request| C4[Request Core]
+    B -->|Performing a speech act / request| C4[Directive Core]
 
     C1 --> D[Step 2: Assemble Slot 0 via Micro-Line]
     C2 --> D
@@ -546,6 +546,6 @@ Crucially, CFLT defines the **unmarked default**, not the only permitted form. H
 
 - [`linguistics.md`](./linguistics.md) §2 — Talmy's Figure-Ground and Langacker's profile-base, the cognitive-linguistic kin of "salience anchor."
 - [`logic.md`](./logic.md) §5 — How the four core types map onto Searle's illocutionary classes.
-- [`mathematics.md`](./mathematics.md) §1.1 — Formal modeling of Identity / Request / State Cores beyond action verbs.
-- [`llm.md`](./llm.md) §2.4 — How non-action Cores (Identity, Request) interact with the high-attention prefix region (primacy and sink combined).
+- [`mathematics.md`](./mathematics.md) §1.1 — Formal modeling of Copular / Directive / State Cores beyond action verbs.
+- [`llm.md`](./llm.md) §2.4 — How non-event Cores (Copular, Directive) interact with the high-attention prefix region (primacy and sink combined).
 - [`../methodology/human-learning.md`](../methodology/human-learning.md) §2 — The 3-step protocol that operationalizes "extract the Core."

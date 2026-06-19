@@ -102,7 +102,7 @@ For first-time readers:
 
 1. **[`docs/en/manifesto.md`](./docs/en/manifesto.md)** — Start here. The canonical theoretical statement: what CFLT claims, why, and how the four-element Core-First sequence is operationalized as CFLT.
 
-2. **[`docs/en/foundations/core-concept.md`](./docs/en/foundations/core-concept.md)** — Read this *immediately after the manifesto*. It defines what "Core" means (a salience anchor — action, state, identity, or request — **not** a verb or predicate) and refutes the most common misreadings. Also explains how CFLT is the unmarked default, not the only permitted form.
+2. **[`docs/en/foundations/core-concept.md`](./docs/en/foundations/core-concept.md)** — Read this *immediately after the manifesto*. It defines what "Core" means (a salience anchor — event, state, copular predication, or directive — **not** a verb or predicate) and refutes the most common misreadings. Also explains how CFLT is the unmarked default, not the only permitted form.
 
 3. **[`docs/en/vision.md`](./docs/en/vision.md)** — Cross-project strategic roadmap: the two-pillar mission (Pillar I human education, Pillar II LLM protocol).
 
@@ -135,7 +135,7 @@ The theory documents follow four rules:
 1. **Cite real scholarship.** Every named author and work is verifiable.
 2. **Acknowledge limits.** Each foundation document contains an "Honest Limitations" section. CFLT is partly normative (a pedagogical/computational protocol), not purely descriptive — and we say so.
 3. **Connect explicitly to CFLT claims.** Theory exists to support specific operational claims, not to decorate them.
-4. **Keep "Core" defined consistently.** Core = salience anchor (action / state / identity / request). Not a verb. Not a predicate symbol.
+4. **Keep "Core" defined consistently.** Core = salience anchor — **event** (something happened) / **state** (a condition holds) / **copular** (X is Y) / **directive** (asking someone to act). Not a verb. Not a predicate symbol.
 
 The preprint adds two further commitments:
 

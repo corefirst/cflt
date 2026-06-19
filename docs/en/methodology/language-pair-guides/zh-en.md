@@ -142,6 +142,6 @@ Chinese 过 → English present perfect.
 1. ☐ Core at position 0; ground frame in R-S-T order
 2. ☐ English Core has explicit subject (no pro-drop)
 3. ☐ Verb tense matches the Time slot's deixis (backward temporal constraint)
-4. ☐ State / Identity Cores have copula *be*
+4. ☐ State / Copular Cores have copula *be*
 5. ☐ Aspect particles 了/过/着 are NOT translated as adverbs to the Time slot — they trigger English tense/aspect on the verb
 6. ☐ Articles and plural marking checked at the Core-internal NP level

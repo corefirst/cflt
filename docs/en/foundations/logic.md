@@ -78,7 +78,7 @@ graph BT
 
 In this view, **"I-Went"** is the base term, and each subsequent slot is a higher-order function that takes the current state of the discourse and "wraps" it in a new layer of context. CFLT prioritizes the **base term** (the Core) in position 0 of the surface form.
 
-**Note on generality:** Lambda calculus is type-agnostic — the function $\lambda e.\,\text{COMMIT}(e)$ can wrap an action, a state, an identity, or a speech act. This generality is exactly why the function-application metaphor extends naturally to CFLT's four core types.
+**Note on generality:** Lambda calculus is type-agnostic — the function $\lambda e.\,\text{COMMIT}(e)$ can wrap an event, a state, a copular predication, or a directive. This generality is exactly why the function-application metaphor extends naturally to CFLT's four core types.
 
 ---
 
@@ -102,10 +102,10 @@ Language does not just describe the world; it performs actions (*illocutionary a
 
 | CFLT Core type | Searle's class | Example |
 |---|---|---|
-| **Action** | Representative (assertive) | "I went out" — asserts an event |
-| **Identity** | Representative (assertive, copular sub-type) | "That girl is my sister" — asserts a classification |
+| **Event** | Representative (assertive) | "I went out" — asserts an event |
+| **Copular** | Representative (assertive) | "That girl is my sister" — asserts a classification |
 | **State** | Expressive *or* Representative | "I'm exhausted" — expresses/asserts a condition |
-| **Request** | Directive | "Could you pass the salt" — directs the hearer to act |
+| **Directive** | Directive (Searle's directive class — coincides) | "Could you pass the salt" — directs the hearer to act |
 
 ```mermaid
 graph TD
@@ -116,10 +116,10 @@ graph TD
     end
     
     subgraph "CFLT Core Types"
-    C1[Action]
-    C2[Identity]
+    C1[Event]
+    C2[Copular]
     C3[State]
-    C4[Request]
+    C4[Directive]
     end
     
     C1 --> R
@@ -129,9 +129,9 @@ graph TD
     C4 --> D
 ```
 
-> **Note on Searle's "Declaration."** Searle's *Declaration* class is a narrow, performative category (e.g., "I hereby resign," "You're fired," "I now pronounce you…") whose utterance constitutes the act itself. It is **not** the same as a copular identity statement. CFLT's "Identity Core" is a Representative sub-type that asserts an identity claim; it is not a Searlean Declaration. The two are kept distinct here to avoid the easy terminological slip between *grammatical* declaration and *illocutionary* Declaration.
+> **Note on Searle's "Declaration."** Searle's *Declaration* class is a narrow, performative category (e.g., "I hereby resign," "You're fired," "I now pronounce you…") whose utterance constitutes the act itself. It is **not** the same as a copular identity statement. CFLT's "Copular Core" is a Representative sub-type that asserts an identity claim; it is not a Searlean Declaration. The two are kept distinct here to avoid the easy terminological slip between *grammatical* declaration and *illocutionary* Declaration.
 
-> **Note on Commissives and the four-class compression.** The mapping above omits two of Searle's five classes — **Commissives** (promises, e.g., *"I'll call you tomorrow"*; *"I promise I'll come"*) and **Declarations** (the performative class noted in the previous callout). In CFLT, Commissives are realized as a **sub-type of Action Core**: the predicate is a commit-action (*promise*, *commit*, *guarantee*, *will-do*), and the embedded propositional content is the committed action — so *"I promise I'll come"* parses as Core = *I promise I'll come*. Declarations, where they arise outside the narrow performative category, are a marked sub-type of Identity Core (typically a copular predicate with stipulative force). The CFLT four-way taxonomy is therefore a **deliberate pedagogical/operational aggregation** of Searle's five classes — consistent with the Declaration note above — not an implicit denial that Commissives and Declarations exist. This compression is documented here to prevent the reader from looking for a missing fifth Core type.
+> **Note on Commissives and the four-class compression.** The mapping above omits two of Searle's five classes — **Commissives** (promises, e.g., *"I'll call you tomorrow"*; *"I promise I'll come"*) and **Declarations** (the performative class noted in the previous callout). In CFLT, Commissives are realized as a **sub-type of Event Core**: the predicate is a commit-action (*promise*, *commit*, *guarantee*, *will-do*), and the embedded propositional content is the committed action — so *"I promise I'll come"* parses as Core = *I promise I'll come*. Declarations, where they arise outside the narrow performative category, are a marked sub-type of Copular Core (typically a copular predicate with stipulative force). The CFLT four-way taxonomy is therefore a **deliberate pedagogical/operational aggregation** of Searle's five classes — consistent with the Declaration note above — not an implicit denial that Commissives and Declarations exist. This compression is documented here to prevent the reader from looking for a missing fifth Core type.
 
 The four-way compression of Searle's five classes, and the claim that identifying **illocutionary force** first benefits the listener, are **CFLT operational choices and predictions to test** — they are not derived from Searle or Sadock & Zwicky, who distinguish force from content but prescribe no linearization. With that caveat, CFLT *proposes* to place the illocutionary force first, on the hypothesis that this aligns with the listener's need to know whether they are being informed, requested, or addressed.
 

@@ -80,7 +80,7 @@
 - **英语 CFLT**：*Could you please pass the salt, on the table, now?*
 - **汉语 CFLT**：*请帮我递一下盐，在桌上，现在。*
 
-礼貌标记（*please* / *请*）在 CFLT 教学层被打包进 Core（请求型）；在标准言语行为理论（Searle 1975）中它们运作在*施事力*层而非命题内容层 —— 警示参见 [`slot-disambiguation.md`](../slot-disambiguation.md) §3 第 15 条。
+礼貌标记（*please* / *请*）在 CFLT 教学层被打包进 Core（指令型）；在标准言语行为理论（Searle 1975）中它们运作在*施事力*层而非命题内容层 —— 警示参见 [`slot-disambiguation.md`](../slot-disambiguation.md) §3 第 15 条。
 
 ### 例 3 —— 条件带未来
 
