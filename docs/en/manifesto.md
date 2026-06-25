@@ -122,6 +122,8 @@ All four elements are present in the **canonical (unmarked) sequence**. Implemen
 
 The Core in CFLT is a **salience anchor**, not a verb (see [`foundations/core-concept.md`](foundations/core-concept.md)). The four examples below illustrate the four kinds of Core that the protocol accommodates.
 
+> **How to read these reconstructions.** Each *CFLT Reconstruction* below shows the **Core-first interlanguage (thinking) layer**, not idiomatic surface output in the source language. The target-language realization (the *English (CFLT-L2)* line) follows that language's **native** conventions; in particular the ground-frame **tail order is language-relative** — *Reason → Space → Time* here is **one illustrative ordering, not a prescription** (see [`methodology/empirical-agenda.md`](methodology/empirical-agenda.md) §1.2). Languages that front framing adjuncts (e.g. Chinese) reorder the tail accordingly.
+
 #### Example 1 — Event Core
 **L1 (Chinese, context-heavy order):** *昨天下雨，我在家没出去。* — Time → Reason → Result
 **CFLT Reconstruction:** *我没出去，因为下雨，在家，昨天。* — Core → Reason → Space → Time
@@ -142,7 +144,7 @@ The Core in CFLT is a **salience anchor**, not a verb (see [`foundations/core-co
 **CFLT Reconstruction:** *请帮我递一下盐，在桌上，现在。* — Core (directive) → Polite marker → Space → Time
 **English (CFLT-L2):** *Could you please pass the salt, on the table, now?*
 
-**The CFLT Advantage:** Across all four core types, once the learner adopts Core-First sequencing in their native mind, producing the target language becomes a **token replacement** exercise rather than a structural reorganization. The protocol is uniform; what fills position 0 varies with the speaker's intent.
+**The CFLT Advantage:** Across all four core types, once the learner adopts Core-First sequencing in their native mind, producing the target language becomes **largely** a **token replacement** exercise rather than a structural reorganization — with the ground-frame **tail ordered by the target language's native conventions** rather than a single fixed sequence. The invariant is Core-first; what fills position 0 varies with the speaker's intent.
 
 ---
 

@@ -194,7 +194,7 @@ A common confusion is whether CFLT prescribes the *same form* across all languag
 
 | Layer | Content | Project-standard across languages? | Role of any specific language (incl. English) |
 |---|---|---|---|
-| **L1: Protocol** | Core in position 0; ground frame in order Reason → Space → Time | **Project-standard (proposed to hold within the surveyed range; not an established descriptive universal)** | No language is privileged. The protocol is language-agnostic. |
+| **L1: Protocol** | Core in position 0; ground-frame tail assembled in the **target language's native order** (illustrative default: Reason → Space → Time) | **Core-first = project-standard unmarked default; the tail order is language-relative / open — not a descriptive universal** | No language is privileged. The protocol is language-agnostic. |
 | **L2: Slot semantics** | Which functional question each slot answers (Why → Reason; Where → Space; When → Time) | **Project-standard (within the surveyed range)** | These are functional categories, not surface syntax. |
 | **L3: Event-nucleus internal assembly** | How predicate + valence + manner are arranged inside Core (case marking, particles, prepositions, coverbs, word order within the nucleus) | **No — fully language-specific** | Each language uses its own native syntax. CFLT does not prescribe internal Core structure. |
 | **L4: Boundary edge cases** | Whether *"with X"* / *"in X"* / etc. attach inside Core or to a ground-frame slot | **Mostly project-standard, with language-specific edge cases** | English may serve as a *verification anchor* but is not the judge. Each language's functional analysis governs. |

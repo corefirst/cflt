@@ -15,7 +15,7 @@ This leads to the **Modifier Trap**: your working memory overflows as you try to
 
 ## 2. The Solution: Semantic Lego (The 3-Step Protocol)
 
-CFLT addresses this by treating language as "Semantic Lego" — the **protocol-layer** sequence (Core → Reason → Space → Time) is the same regardless of target language, while the **internal assembly** of the Core (case marking, particles, prepositions, word order within the nucleus) is delegated to each language's native syntax. See [`../foundations/core-concept.md`](../foundations/core-concept.md) §2.3 for the layer-by-layer split.
+CFLT addresses this by treating language as "Semantic Lego" — the **invariant** is **Core-first** (the speaker's commitment leads), while the rest — both the **internal assembly** of the Core (case marking, particles, prepositions, word order within the nucleus) **and the ground-frame tail order** — is delegated to each language's native conventions. We use *Core → Reason → Space → Time* as **one illustrative ordering**; the tail order itself is **language-relative and an open question** (see [`empirical-agenda.md`](empirical-agenda.md) §1.2). See [`../foundations/core-concept.md`](../foundations/core-concept.md) §2.3 for the layer-by-layer split.
 
 ### Step 1: Extract the Core (The Salience Anchor)
 Ignore the context, the time, and the reasons. Ask yourself: **"What is the one thing I am fundamentally asserting?"** 

@@ -14,7 +14,7 @@
 | 术语 | 展开 | 定义 |
 |---|---|---|
 | **CFLT** | Core-First Language Theory（核心优先语言理论） | 该框架的伞名 —— 同时涵盖学术理论与操作协议。参见 [`manifesto.md`](./manifesto.md)。 |
-| **CFLT 协议** | 核心优先语言协议 | 具体的操作排序规则：`[核心] → [理由] → [空间] → [时间]`。 |
+| **CFLT 协议** | 核心优先语言协议 | 操作排序规则：**核心在前**，其余场景框架的尾巴按目标语言的母语序排列。`[核心] → [理由] → [空间] → [时间]` 是全文使用的**示例默认排法**；尾巴序为语言相对 / 开放（参见 [`methodology/empirical-agenda.md`](./methodology/empirical-agenda.md) §1.2）。 |
 | **CFLT 形式** | 核心优先语言形式 | 在 CFLT 协议下产出的输出 —— 可理解（尚未地道）的目标语言话语。 |
 | **CFLT-L2** | L2 核心优先语言形式 | 用学习者 L2（目标语言）渲染的 CFLT 形式。 |
 | **事件核（Event Nucleus）** | 事件核 (结构化) | 核心槽的内部结构：谓词 + 价位绑定参与者 + 方式状语。参见 [`foundations/core-concept.md`](./foundations/core-concept.md) §2.1。 |

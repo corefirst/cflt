@@ -14,7 +14,7 @@
 | Term | Expansion | Definition |
 |---|---|---|
 | **CFLT** | Core-First Language Theory | The umbrella name for the framework — both the academic theory and the operational protocol. See [`manifesto.md`](./manifesto.md). |
-| **CFLT Protocol** | Core-First Language Protocol | The specific operational sequencing rule: `[Core] → [Reason] → [Space] → [Time]`. |
+| **CFLT Protocol** | Core-First Language Protocol | The operational sequencing rule: **Core first**, then the ground-frame tail in the target language's native order. `[Core] → [Reason] → [Space] → [Time]` is the **illustrative default ordering** used throughout; the tail order is language-relative / open (see [`methodology/empirical-agenda.md`](./methodology/empirical-agenda.md) §1.2). |
 | **CFLT Form** | Core-First Language Form | Output produced under the CFLT Protocol — comprehensible (not yet idiomatic) target-language utterance. |
 | **CFLT-L2** | Core-First Language Form in L2 | The CFLT Form rendered in the learner's L2 (target language). |
 | **Event Nucleus** | Nucleus of the Event (Structural) | The Core slot's internal structure: predicate + valence-bound participants + manner. See [`foundations/core-concept.md`](./foundations/core-concept.md) §2.1. |
