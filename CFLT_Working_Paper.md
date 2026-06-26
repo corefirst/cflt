@@ -8,7 +8,7 @@ header-includes:
   - \posttitle{\par\end{center}\vspace{1.5em}}
 ---
 
-ORCID: [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403) · Independent Researcher · tercel.yi@gmail.com · [cflt.center](https://cflt.center)\
+ORCID: [0009-0000-3742-4403](https://orcid.org/0009-0000-3742-4403) · Independent Researcher · tercel.yi@gmail.com · [github.com/corefirst/cflt](https://github.com/corefirst/cflt)\
 Version: Working paper · 2026-06 snapshot · License: CC BY 4.0
 
 \noindent\rule{\textwidth}{0.4pt}
@@ -37,7 +37,7 @@ Both bottlenecks are, at heart, linearization-cost problems, and CFLT is the sin
 
 The paper proceeds as follows. §2 defines the CFLT protocol and the Core/ground-frame partition. §3 motivates the protocol from human parsing and Transformer attention dynamics, with a deliberate primacy-versus-attention-sink disambiguation. §4 motivates the specific Reason → Space → Time adjunct ordering and labels it a convention with rationale, not a derivation. §5 illustrates operationalization across typologically distant languages. §6 reports a pilot two-part empirical evaluation that bears on the LLM-side prediction (P2) only; the human-side predictions (P1 psycholinguistic, P3 neural) and the typological / formal-semantic / human-AI-synchronization questions are reserved for the falsifiable research agenda in §7. §8 concludes. Readers from a cognitive-linguistic background should treat §6 as the LLM-side component of the broader research program introduced in §1.2; the human-side evidence is intentionally not in this paper, by the framing of §1.1.
 
-The framework described here is maintained as an open commons (CC BY 4.0) at https://cflt.center; this paper is a derivative scholarly summary intended for academic peer engagement, not a substitute for the canonical specification.
+The framework described here is maintained as an open commons (CC BY 4.0) at https://github.com/corefirst/cflt; this paper is a derivative scholarly summary intended for academic peer engagement, not a substitute for the canonical specification.
 
 ### 1.1 A note on the cross-domain framing
 
@@ -118,7 +118,7 @@ Four points of response, in order of strength:
 3. **Normative protocol vs. descriptive typology.** Even if Yup'ik's *current* default linearization is pragmatically driven, this is a fact about Yup'ik's descriptive grammar, not a verdict on whether a Yup'ik L2 learner of English would benefit from a CFLT scaffold. The Layer-1/2 universality claim concerns the L2-production scaffold layer, not the L1's descriptive surface grammar.
 4. **Terminological mismatch.** The word "Core" has eventive resonance and may mislead readers from non-event-prominent traditions. A possible future expansion of the taxonomy is a fifth Core type — Evidential/Stance Core — to cover the evidential-first languages explicitly. Until that work is done, we restrict the Layer-1/2 universality claim to the surveyed typological range and treat evidential-first and pragmatically-ordered languages as principled extensions pending empirical investigation, not refuting counterexamples.
 
-This response does not defend CFLT *outside* the surveyed range; it defends the *restricted* version against the *general* refutation. The deeper engagement with the anti-UG opposition (Tomasello 2003; Christiansen & Chater 2008; Evans & Levinson 2009; Newmeyer 2005) and with the Mithun/Aikhenvald typological literature is maintained in the canonical foundations document (cflt.center/foundations/linguistics §6.2).
+This response does not defend CFLT *outside* the surveyed range; it defends the *restricted* version against the *general* refutation. The deeper engagement with the anti-UG opposition (Tomasello 2003; Christiansen & Chater 2008; Evans & Levinson 2009; Newmeyer 2005) and with the Mithun/Aikhenvald typological literature is maintained in the canonical foundations document (`docs/en/foundations/linguistics.md` §6.2) at https://github.com/corefirst/cflt.
 
 \noindent\rule{\textwidth}{0.4pt}
 
@@ -179,7 +179,7 @@ Systemic Functional Linguistics (Halliday & Matthiessen 2014) decomposes circums
 | Accompaniment (*with John*) | Inside Core (valence extension) |
 | Matter (*about X*) / Angle (*according to X*) | Slot 2 [Space] (abstract domain) |
 
-The compression follows the two-tier model exactly: roles internal to the event (how, with-what, with-whom, for-whom) collapse into the event nucleus, while roles framing the event (why, where, when, in-what-respect) populate the ground frame. The compression we adopt is functional-level: Location:place, Matter, and Angle all answer the listener's "in what domain (physical, semantic, perspectival) does this hold?" question, so the compression is *functional-level lossless* and *SFL-experiential-level lossy* — a deliberate trade-off, because CFLT is a discourse-level production scaffold, not an SFL replacement.^[A reader familiar with SFL will rightly object that Halliday treats Matter (*about X*) and Angle (*according to X*) as distinct from Location:place precisely because the abstract/concrete cut is theoretically loaded; the lossy compression is adopted with that objection in view. A residual edge case (Halliday's *Role*, e.g., *acting as a teacher*) is handled case-by-case in the project's slot-disambiguation reference. The full SFL treatment, including the Matter/Angle classification basis, is maintained at cflt.center/foundations/linguistics §4.4.1.]
+The compression follows the two-tier model exactly: roles internal to the event (how, with-what, with-whom, for-whom) collapse into the event nucleus, while roles framing the event (why, where, when, in-what-respect) populate the ground frame. The compression we adopt is functional-level: Location:place, Matter, and Angle all answer the listener's "in what domain (physical, semantic, perspectival) does this hold?" question, so the compression is *functional-level lossless* and *SFL-experiential-level lossy* — a deliberate trade-off, because CFLT is a discourse-level production scaffold, not an SFL replacement.^[A reader familiar with SFL will rightly object that Halliday treats Matter (*about X*) and Angle (*according to X*) as distinct from Location:place precisely because the abstract/concrete cut is theoretically loaded; the lossy compression is adopted with that objection in view. A residual edge case (Halliday's *Role*, e.g., *acting as a teacher*) is handled case-by-case in the project's slot-disambiguation reference. The full SFL treatment, including the Matter/Angle classification basis, is maintained in `docs/en/foundations/linguistics.md` §4.4.1 at https://github.com/corefirst/cflt.]
 
 \noindent\rule{\textwidth}{0.4pt}
 
@@ -378,19 +378,19 @@ We have been careful to mark several things this paper does *not* claim:
 
 CFLT is best read not as a finished theory but as a research scaffold whose value will be determined by the open questions of §7 — across psycholinguistics, typology, LLM mechanistic interpretability, neuroscience, formal semantics, and human-AI interaction. Whether the specific protocol we have proposed is the correct one is, ultimately, an empirical question; what we hope this paper establishes is that the question is worth asking, and that the falsification conditions for asking it well are now on the table.
 
-The empirical agenda enumerated in §7 — six sub-programs (§7.1–§7.6) spanning psycholinguistic production, cross-linguistic corpus work, LLM mechanistic interpretability, bilingual neuroimaging, formal-semantic embedding, and human-AI multi-turn coordination — is intended as a coherent multi-phase open research program. Whether a single Core-then-Frame ordering can additionally carry intent into the structured tool-call interfaces through which LLM agents act is flagged as an open question in §7.6, not a contribution of this paper. The author is independently developing this program at <https://cflt.center> and welcomes correspondence from researchers whose work intersects any of the open sub-areas.
+The empirical agenda enumerated in §7 — six sub-programs (§7.1–§7.6) spanning psycholinguistic production, cross-linguistic corpus work, LLM mechanistic interpretability, bilingual neuroimaging, formal-semantic embedding, and human-AI multi-turn coordination — is intended as a coherent multi-phase open research program. Whether a single Core-then-Frame ordering can additionally carry intent into the structured tool-call interfaces through which LLM agents act is flagged as an open question in §7.6, not a contribution of this paper. The author is independently developing this program at <https://github.com/corefirst/cflt> and welcomes correspondence from researchers whose work intersects any of the open sub-areas.
 
 \noindent\rule{\textwidth}{0.4pt}
 
 ## Data and Code Availability
 
-Prompt templates, raw API responses, the dataset (`dataset.json` v2.0.0; 24 cases × 4 levels × 2 languages), the evaluation scripts (`scripts/llm_eval/`), and the May 2026 report archive (`experiment-history/2026-05-17/`) are deposited at https://cflt.center. The full ablation reproduces in a single command (`python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3`). A pre-registered protocol for the confirmatory study described in §7 will be filed at a public pre-registration registry prior to data collection.
+Prompt templates, raw API responses, the dataset (`dataset.json` v2.0.0; 24 cases × 4 levels × 2 languages), the evaluation scripts (`scripts/llm_eval/`), and the May 2026 report archive (`experiment-history/2026-05-17/`) are deposited at https://github.com/corefirst/cflt. The full ablation reproduces in a single command (`python scripts/llm_eval/part2_llm_cflt_eval.py --runs 3`). A pre-registered protocol for the confirmatory study described in §7 will be filed at a public pre-registration registry prior to data collection.
 
 A reference implementation (human bilingual education) is independently maintained as an open-source application (Next.js + Electron) at https://github.com/corefirst/corefirst (Apache 2.0). It runs fully locally given a valid LLM API key. The pilot empirical evaluation in §6 is independent of this implementation and relies only on the standalone scripts in `scripts/llm_eval/`; the implementation is referenced here as concrete evidence that the protocol is operationally deployable, not as part of §6's empirical evidence base.
 
 ## Conflict of Interest
 
-The author maintains the cflt.center project repository, which serves as the open materials site for this work and as the canonical specification of the CFLT framework. The framework itself is licensed CC BY 4.0 and is not a commercial product. The author declares no financial conflicts of interest.
+The author maintains the https://github.com/corefirst/cflt project repository, which serves as the open materials site for this work and as the canonical specification of the CFLT framework. The framework itself is licensed CC BY 4.0 and is not a commercial product. The author declares no financial conflicts of interest.
 
 ## Funding
 
@@ -408,11 +408,11 @@ The author, a non-native English speaker, conducted all core theoretical develop
 
 ## Acknowledgments
 
-This paper summarizes work developed within the CFLT framework (cflt.center). The framework integrates research across cognitive linguistics, formal semantics, psycholinguistics, second-language acquisition, neuroscience, and NLP; the full canonical specification, with bibliography of approximately 150 entries, is maintained at the project site. The author thanks the maintainers of the five frontier LLM platforms evaluated in this work. Any errors of theoretical framing or empirical interpretation remain the author's own.
+This paper summarizes work developed within the CFLT framework (https://github.com/corefirst/cflt). The framework integrates research across cognitive linguistics, formal semantics, psycholinguistics, second-language acquisition, neuroscience, and NLP; the full canonical specification, with bibliography of approximately 150 entries, is maintained in the project repository. The author thanks the maintainers of the five frontier LLM platforms evaluated in this work. Any errors of theoretical framing or empirical interpretation remain the author's own.
 
 ## How to cite
 
-For the framework as a whole: *CFLT Core Team. (2026). Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles. https://cflt.center.*
+For the framework as a whole: *CFLT Core Team. (2026). Core-First Language Theory (CFLT): Reconstructing Global Bilingual Education from First Principles. https://github.com/corefirst/cflt.*
 
 For this paper: *Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-Level Linearization Protocol for Cross-Linguistic Communication and LLM Prompting. Zenodo. https://doi.org/10.5281/zenodo.20289504*
 
@@ -493,4 +493,4 @@ For this paper: *Yi, W. (2026). Core-First Language Theory (CFLT): A Discourse-L
 - Xiao, G., Tian, Y., Chen, B., Han, S. & Lewis, M. (2024). Efficient Streaming Language Models with Attention Sinks. *ICLR 2024.*
 - Yokoyama, S., Fukushima, A., Riera, J. & Kawashima, R. (2006). Is There a Difference in the Brain Activation Patterns Between SVO and SOV Languages? *NeuroImage* 31(S1), S159 (OHBM conference abstract).
 
-A complete bibliography of approximately 150 entries spanning all eight foundational disciplines is maintained at https://cflt.center/bibliography.
+A complete bibliography of approximately 150 entries spanning all eight foundational disciplines is maintained in `docs/en/bibliography.md` at https://github.com/corefirst/cflt.
